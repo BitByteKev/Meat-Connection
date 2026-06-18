@@ -1,0 +1,179 @@
+/* Meat Connection — Webfonts
+   SUBSTITUTION NOTE: No brand font files were provided. Using closest Google Fonts:
+   - Oswald  : condensed butcher-signage display (wordmark + headings)
+   - Archivo : grotesque body / UI text
+   Replace these @import lines with local @font-face + .woff2 files when brand fonts arrive. */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&display=swap');
+
+/* Meat Connection — Color tokens
+   Brand: charcoal #1D1D1D (primary) + butcher red #C10F10 (secondary) */
+:root {
+  /* ---- Brand base ---- */
+  --mc-charcoal: #1D1D1D;   /* primary ink / surfaces */
+  --mc-red:      #C10F10;   /* butcher red — secondary / action */
+  --mc-red-deep: #9A0C0D;   /* pressed / hover-dark red */
+  --mc-red-bright:#E23A30;  /* highlight red */
+
+  /* ---- Charcoal / neutral scale (warm-cool neutral) ---- */
+  --mc-ink-900: #141414;
+  --mc-ink-800: #1D1D1D;
+  --mc-ink-700: #2A2A2A;
+  --mc-ink-600: #3A3A3A;
+  --mc-ink-500: #595959;
+  --mc-ink-400: #7C7C7C;
+  --mc-ink-300: #A6A6A6;
+  --mc-ink-200: #D2D0CC;
+  --mc-ink-100: #E7E4DE;
+  --mc-ink-50:  #F4F2ED;   /* warm paper tint */
+
+  /* ---- Warm neutrals: butcher paper / bone ---- */
+  --mc-paper:   #F4F2ED;   /* page background — warm off-white */
+  --mc-bone:    #FBFAF7;   /* card surface */
+  --mc-cream:   #EDE7DA;   /* tonal block */
+  --mc-kraft:   #C9A678;   /* kraft-paper accent */
+
+  /* ---- Support accents ---- */
+  --mc-amber:   #E8A13C;   /* aged / premium accent */
+  --mc-sage:    #6E7B5B;   /* herb / fresh accent */
+
+  /* ---- Semantic ---- */
+  --mc-success: #2F7D45;
+  --mc-warning: #E8A13C;
+  --mc-danger:  #C10F10;
+  --mc-info:    #2A5B8C;
+
+  /* ---- Semantic aliases (use these in components) ---- */
+  --surface-page:    var(--mc-paper);
+  --surface-card:    var(--mc-bone);
+  --surface-inverse: var(--mc-charcoal);
+  --surface-sunken:  var(--mc-cream);
+
+  --text-strong:   var(--mc-ink-900);
+  --text-body:     var(--mc-ink-700);
+  --text-muted:    var(--mc-ink-500);
+  --text-faint:    var(--mc-ink-400);
+  --text-on-dark:  var(--mc-paper);
+  --text-on-red:   #FFFFFF;
+
+  --action-primary:        var(--mc-red);
+  --action-primary-hover:  var(--mc-red-deep);
+  --action-ink:            var(--mc-charcoal);
+  --action-ink-hover:      #000000;
+
+  --border-strong:  var(--mc-ink-900);
+  --border-default: var(--mc-ink-200);
+  --border-subtle:  var(--mc-ink-100);
+
+  --focus-ring: var(--mc-red);
+}
+
+/* Meat Connection — Typography tokens */
+:root {
+  /* ---- Families ---- */
+  --font-display: 'Oswald', 'Arial Narrow', sans-serif;  /* condensed, uppercase headings */
+  --font-body:    'Archivo', system-ui, -apple-system, sans-serif;
+  --font-mono:    ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* ---- Weights ---- */
+  --fw-regular: 400; /* @kind other */
+  --fw-medium:  500; /* @kind other */
+  --fw-semibold:600; /* @kind other */
+  --fw-bold:    700; /* @kind other */
+
+  /* ---- Type scale (display uses condensed font, tight leading, uppercase) ---- */
+  --fs-display-xl: 72px;
+  --fs-display-l:  56px;
+  --fs-display-m:  40px;
+  --fs-display-s:  30px;
+
+  --fs-heading-l: 24px;
+  --fs-heading-m: 20px;
+  --fs-heading-s: 17px;
+
+  --fs-body-l: 18px;
+  --fs-body-m: 16px;
+  --fs-body-s: 14px;
+  --fs-caption:12px;
+
+  /* ---- Line heights ---- */
+  --lh-tight:   1.02; /* @kind other */
+  --lh-snug:    1.15; /* @kind other */
+  --lh-normal:  1.5; /* @kind other */
+  --lh-relaxed: 1.65; /* @kind other */
+
+  /* ---- Tracking ---- */
+  --ls-display: -0.01em; /* @kind other */
+  --ls-eyebrow: 0.18em; /* @kind other */
+  --ls-tight:   -0.02em; /* @kind other */
+}
+
+/* Meat Connection — Spacing & layout tokens (4px base grid) */
+:root {
+  --space-0: 0;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10:40px;
+  --space-12:48px;
+  --space-16:64px;
+  --space-20:80px;
+  --space-24:96px;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-pad: 24px;
+}
+
+/* Meat Connection — Radii, borders, shadows
+   The brand is industrial/butcher: corners are SHARP. Radii are minimal;
+   only pills (badges/tags) and avatars go fully round. */
+:root {
+  /* ---- Radii ---- */
+  --radius-0:  0px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-pill: 999px;
+
+  /* ---- Border widths ---- */
+  --bw-hair: 1px;
+  --bw-2:    2px;
+  --bw-heavy:3px;   /* butcher-block heavy rule */
+
+  /* ---- Shadows (low, grounded — no glow) ---- */
+  --shadow-sm: 0 1px 2px rgba(20,20,20,0.08);
+  --shadow-md: 0 2px 8px rgba(20,20,20,0.10);
+  --shadow-lg: 0 12px 32px rgba(20,20,20,0.16);
+  /* hard offset shadow — stamped / label feel */
+  --shadow-stamp: 4px 4px 0 var(--mc-charcoal);
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1); /* @kind other */
+  --ease-in-out: cubic-bezier(0.5, 0, 0.2, 1); /* @kind other */
+  --dur-fast: 120ms; /* @kind other */
+  --dur-med:  200ms; /* @kind other */
+  --dur-slow: 320ms; /* @kind other */
+}
+
+
+* { box-sizing:border-box; }
+body { margin:0; background:var(--surface-page); font-family:var(--font-body); -webkit-font-smoothing:antialiased; }
+a { color:inherit; }
+::-webkit-scrollbar { width:10px; } ::-webkit-scrollbar-thumb { background:var(--mc-ink-300); border-radius:999px; }
+@media (max-width:860px){
+  .mc-hero{ grid-template-columns:1fr !important; gap:28px !important; padding:48px 20px !important; }
+  .mc-h1{ font-size:54px !important; }
+  .mc-pdp{ grid-template-columns:1fr !important; gap:24px !important; }
+  .mc-foot{ grid-template-columns:1fr 1fr !important; gap:28px !important; }
+  .mc-nav,.mc-search{ display:none !important; }
+}
+@media (max-width:520px){
+  .mc-h1{ font-size:42px !important; }
+  .mc-stats{ flex-wrap:wrap; gap:18px !important; }
+  .mc-foot{ grid-template-columns:1fr !important; }
+  .mc-trust{ flex-direction:column; gap:8px !important; }
+}
