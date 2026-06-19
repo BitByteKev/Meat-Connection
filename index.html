@@ -525,8 +525,8 @@ function Button({
   }
   function out(e) {
     if (disabled) return;
-    e.currentTarget.style.background = variants[variant].background;
-    e.currentTarget.style.color = variants[variant].color;
+    e.currentTarget.style.background = base.background;
+    e.currentTarget.style.color = base.color;
   }
   function down(e) {
     if (!disabled) e.currentTarget.style.transform = 'translateY(1px)';
@@ -694,8 +694,8 @@ function IconButton({
   }
   function out(e) {
     if (disabled) return;
-    e.currentTarget.style.background = variants[variant].background;
-    e.currentTarget.style.color = variants[variant].color;
+    e.currentTarget.style.background = base.background;
+    e.currentTarget.style.color = base.color;
   }
   return /*#__PURE__*/React.createElement("button", _extends({
     "aria-label": ariaLabel,
