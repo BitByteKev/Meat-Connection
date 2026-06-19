@@ -6,6 +6,11 @@ const MC_IMG = {
   paleta: 'images/paleta.webp'
 };
 const MC_LOGO = 'assets/logo-white.webp';
+const WA_NUMBER = '5216643131945';
+const WA_DISPLAY = '+52 664 313 1945';
+const WA_LINK = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent('Hola Meat Connection, me interesa cotizar carne premium para mi negocio.');
+const IG_LINK = 'https://instagram.com/meatconnectionmx';
+const FB_LINK = 'https://facebook.com/meatconnectionmx';
 const DS = window.MeatConnectionDesignSystem_3e7a26;
 function Icon({
   name,
@@ -36,44 +41,44 @@ function Icon({
 const money = n => '$' + n.toFixed(2);
 const PRODUCTS = [{
   id: 'tritip',
-  name: 'A5 Wagyu Tri-Tip',
-  cat: 'Japanese A5',
+  name: 'Tri-Tip Wagyu Japonés A5',
+  cat: 'Wagyu Japonés',
   price: 89.0,
   weight: '300g',
-  badge: 'A5 · Japan',
-  desc: 'Authentic Japanese A5 — the ceiling of marbling. Buttery, rich, melts on contact.'
-}, {
-  id: 'ribeye',
-  name: 'Wagyu Ribeye',
-  cat: 'Australian',
-  price: 52.0,
-  weight: '400g',
-  badge: 'High Marble',
-  desc: 'Australian Wagyu ribeye, heavy marbling through the eye. The showpiece cut.'
-}, {
-  id: 'newyork',
-  name: 'Wagyu New York Strip',
-  cat: 'Australian',
-  price: 44.0,
-  weight: '350g',
-  badge: 'Best Seller',
-  desc: 'Firm bite, deep beef flavour, generous marbling. The steakhouse classic.'
+  badge: 'A5 · Japón',
+  desc: 'Wagyu japonés auténtico grado A5 — el máximo del marmoleo. Mantecoso, intenso, se deshace al contacto.'
 }, {
   id: 'topround',
-  name: 'Wagyu Top Round',
-  cat: 'Australian',
-  price: 28.0,
+  name: 'Top Round Wagyu Japonés',
+  cat: 'Wagyu Japonés',
+  price: 64.0,
   weight: '400g',
-  badge: null,
-  desc: 'Lean Wagyu top round — rare marbling at this value. Thin-slice, grill, or hot pot.'
+  badge: 'Más Vendido',
+  desc: 'Top round de wagyu japonés — marmoleo poco común en este corte. Ideal en finas láminas, parrilla o sukiyaki.'
+}, {
+  id: 'ribeye',
+  name: 'Rib Eye Wagyu Australiano',
+  cat: 'Wagyu Australiano',
+  price: 52.0,
+  weight: '400g',
+  badge: 'Alto Marmoleo',
+  desc: 'Rib eye de wagyu australiano, marmoleo intenso a través del ojo. El corte estrella de tu menú.'
+}, {
+  id: 'newyork',
+  name: 'New York Wagyu Australiano',
+  cat: 'Wagyu Australiano',
+  price: 44.0,
+  weight: '350g',
+  badge: 'Más Vendido',
+  desc: 'Mordida firme, sabor profundo y marmoleo generoso. El clásico de steakhouse.'
 }, {
   id: 'paleta',
-  name: 'Wagyu Paleta · Shoulder',
-  cat: 'Australian',
+  name: 'Paleta Wagyu Australiano',
+  cat: 'Wagyu Australiano',
   price: 26.0,
   weight: '500g',
-  badge: 'Value',
-  desc: 'Australian Wagyu shoulder, marbled and versatile. Braise, grill, or slice thin.'
+  badge: 'Versátil',
+  desc: 'Paleta de wagyu australiano, marmoleada y versátil. Para estofar, asar o cortar en finas láminas.'
 }];
 function ProductImage({
   product,
@@ -101,12 +106,28 @@ function ProductImage({
 function Header({
   cartCount,
   onCart,
-  onNav
+  onNav,
+  onAnchor
 }) {
   const {
     IconButton
   } = DS;
-  const links = ['Shop', 'Cuts', 'Sourcing', 'About'];
+  const links = [{
+    label: 'Catálogo',
+    go: () => onNav('shop')
+  }, {
+    label: 'Servicios',
+    go: () => onAnchor('servicios')
+  }, {
+    label: 'Marcas',
+    go: () => onAnchor('marcas')
+  }, {
+    label: 'Clientes',
+    go: () => onAnchor('clientes')
+  }, {
+    label: 'Contacto',
+    go: () => onAnchor('contacto')
+  }];
   return React.createElement("header", {
     style: {
       background: 'var(--mc-charcoal)',
@@ -142,8 +163,8 @@ function Header({
       flex: 1
     }
   }, links.map(l => React.createElement("button", {
-    key: l,
-    onClick: () => onNav('shop'),
+    key: l.label,
+    onClick: l.go,
     style: {
       border: 'none',
       background: 'transparent',
@@ -158,7 +179,7 @@ function Header({
     },
     onMouseOver: e => e.currentTarget.style.color = '#fff',
     onMouseOut: e => e.currentTarget.style.color = 'var(--mc-ink-200)'
-  }, l))), React.createElement("div", {
+  }, l.label))), React.createElement("div", {
     style: {
       display: 'flex',
       alignItems: 'center',
@@ -183,7 +204,7 @@ function Header({
     name: "Search",
     size: 16,
     color: "var(--mc-ink-200)"
-  }), " Search cuts…"), React.createElement("div", {
+  }), " Buscar cortes…"), React.createElement("div", {
     style: {
       position: 'relative'
     }
@@ -217,6 +238,7 @@ function Header({
 }
 function Hero({
   onShop,
+  onQuote,
   feature
 }) {
   const {
@@ -261,7 +283,7 @@ function Hero({
       fontSize: '13px',
       color: 'var(--mc-red-bright)'
     }
-  }, "Wagyu Specialist · Japan + Australia")), React.createElement("h1", {
+  }, "Wagyu Japón · Australia · Carne Americana")), React.createElement("h1", {
     className: "mc-h1",
     style: {
       fontFamily: 'var(--font-display)',
@@ -272,11 +294,11 @@ function Hero({
       letterSpacing: '-0.01em',
       margin: 0
     }
-  }, "Marbling You", React.createElement("br", null), React.createElement("span", {
+  }, "La Mejor Carne", React.createElement("br", null), React.createElement("span", {
     style: {
       color: 'var(--mc-red-bright)'
     }
-  }, "Can Taste.")), React.createElement("p", {
+  }, "Premium del Mundo")), React.createElement("p", {
     style: {
       fontFamily: 'var(--font-body)',
       fontSize: '18px',
@@ -285,7 +307,7 @@ function Hero({
       maxWidth: '460px',
       margin: '22px 0 32px'
     }
-  }, "Graded A5 Japanese and high-marble Australian Wagyu, cut to order and shipped cold across the San Diego–Tijuana border."), React.createElement("div", {
+  }, "Distribuimos wagyu japonés A5, wagyu australiano de alto marmoleo y carne americana selecta para tu negocio en México. Importación directa y envíos express con cadena de frío garantizada."), React.createElement("div", {
     className: "mc-hero-cta",
     style: {
       display: 'flex',
@@ -300,21 +322,27 @@ function Hero({
       size: 18,
       color: "#fff"
     })
-  }, "Shop the Counter"), React.createElement(Button, {
+  }, "Ver Catálogo"), React.createElement(Button, {
     variant: "secondary",
     size: "lg",
+    onClick: onQuote,
     style: {
       color: 'var(--mc-paper)',
       borderColor: 'var(--mc-ink-400)'
-    }
-  }, "Our Sourcing")), React.createElement("div", {
+    },
+    iconLeft: React.createElement(Icon, {
+      name: "MessageCircle",
+      size: 18,
+      color: "var(--mc-paper)"
+    })
+  }, "Cotizar por WhatsApp")), React.createElement("div", {
     className: "mc-stats",
     style: {
       display: 'flex',
       gap: '28px',
       marginTop: '40px'
     }
-  }, [['A5', 'japanese grade'], ['BMS 9–12', 'marble score'], ['Next-day', 'cold delivery']].map(([a, b]) => React.createElement("div", {
+  }, [['A5', 'grado japonés'], ['Directo', 'importación'], ['Express', 'envíos nacionales']].map(([a, b]) => React.createElement("div", {
     key: a
   }, React.createElement("div", {
     style: {
@@ -367,7 +395,7 @@ function Hero({
   }, React.createElement(Badge, {
     tone: "red",
     solid: true
-  }, "This Week's Cut")), React.createElement("div", {
+  }, "Destacado")), React.createElement("div", {
     style: {
       position: 'absolute',
       left: '24px',
@@ -493,7 +521,7 @@ function ProductCard({
       size: 15,
       color: "#fff"
     })
-  }, "Add"))));
+  }, "Agregar"))));
 }
 function ProductGrid({
   products,
@@ -538,10 +566,10 @@ function ProductDetail({
   const [tab, setTab] = React.useState('desc');
   const [qty, setQty] = React.useState(1);
   const tabBody = {
-    desc: product.desc + ' Hand-cut to order and vacuum-sealed for freshness.',
-    origin: product.cat === 'Japanese A5' ? 'Purebred Japanese Black, graded A5 — the highest yield and marbling grade Japan awards. Fully traceable to the prefecture.' : 'Australian Wagyu, grain-finished for deep, even marbling. Raised to strict marble-score standards and fully traceable.',
-    cooking: 'Wagyu cooks fast and hot. Bring to room temp, salt just before searing, and keep portions small — the fat does the work. Rest, then slice thin against the grain.',
-    reviews: '★★★★★ "Restaurant-grade marbling at home." — Verified buyer'
+    desc: product.desc + ' Porcionado a la medida y empacado al vacío para máxima frescura.',
+    origin: product.cat === 'Wagyu Japonés' ? 'Wagyu japonés de pura raza, grado A5 — el máximo rendimiento y marmoleo que otorga Japón. Totalmente trazable hasta la prefectura de origen.' : 'Wagyu australiano, terminado en grano para un marmoleo profundo y uniforme. Criado bajo estrictos estándares de marble score y totalmente trazable.',
+    cooking: 'El wagyu se cocina rápido y caliente. Atemperar, salar justo antes de sellar y mantener porciones pequeñas — la grasa hace el trabajo. Dejar reposar y cortar en finas láminas a contra hilo.',
+    reviews: '★★★★★ "Marmoleo de nivel restaurante, entrega impecable y siempre en frío." — Cliente verificado'
   };
   return React.createElement("div", {
     style: {
@@ -568,7 +596,7 @@ function ProductDetail({
     name: "ArrowLeft",
     size: 16,
     color: "var(--text-muted)"
-  }), " Back to the counter"), React.createElement("div", {
+  }), " Volver al catálogo"), React.createElement("div", {
     className: "mc-pdp",
     style: {
       display: 'grid',
@@ -596,7 +624,7 @@ function ProductDetail({
     solid: true
   }, product.badge), React.createElement(Badge, {
     tone: "success"
-  }, "In Stock")), React.createElement("h1", {
+  }, "Disponible")), React.createElement("h1", {
     style: {
       fontFamily: 'var(--font-display)',
       textTransform: 'uppercase',
@@ -633,8 +661,8 @@ function ProductDetail({
       width: '140px'
     }
   }, React.createElement(Select, {
-    label: "Weight"
-  }, React.createElement("option", null, product.weight), React.createElement("option", null, "2× ", product.weight), React.createElement("option", null, "Bulk box"))), React.createElement("div", {
+    label: "Presentación"
+  }, React.createElement("option", null, product.weight), React.createElement("option", null, "2× ", product.weight), React.createElement("option", null, "Caja mayoreo"))), React.createElement("div", {
     style: {
       display: 'flex',
       alignItems: 'center',
@@ -672,14 +700,14 @@ function ProductDetail({
       size: 18,
       color: "#fff"
     })
-  }, "Add ", qty, " to Cart · ", money(product.price * qty)), React.createElement("div", {
+  }, "Agregar ", qty, " al pedido · ", money(product.price * qty)), React.createElement("div", {
     className: "mc-trust",
     style: {
       display: 'flex',
       gap: '20px',
       margin: '20px 0 28px'
     }
-  }, [['Truck', 'Next-day cold delivery'], ['ShieldCheck', 'Traceable grading'], ['Snowflake', 'Insulated packaging']].map(([ic, t]) => React.createElement("div", {
+  }, [['Truck', 'Envíos express a todo México'], ['ShieldCheck', 'Grado y trazabilidad'], ['Snowflake', 'Cadena de frío garantizada']].map(([ic, t]) => React.createElement("div", {
     key: t,
     style: {
       display: 'flex',
@@ -697,16 +725,16 @@ function ProductDetail({
     onChange: setTab,
     items: [{
       id: 'desc',
-      label: 'Description'
+      label: 'Descripción'
     }, {
       id: 'origin',
-      label: 'Origin'
+      label: 'Origen'
     }, {
       id: 'cooking',
-      label: 'How to Cook'
+      label: 'Cómo Cocinar'
     }, {
       id: 'reviews',
-      label: 'Reviews'
+      label: 'Reseñas'
     }]
   }), React.createElement("p", {
     style: {
@@ -785,7 +813,7 @@ function CartDrawer({
       fontWeight: 700,
       fontSize: '20px'
     }
-  }, "Your Order"), React.createElement("button", {
+  }, "Tu Pedido"), React.createElement("button", {
     onClick: onClose,
     "aria-label": "Close",
     style: {
@@ -819,7 +847,7 @@ function CartDrawer({
       fontFamily: 'var(--font-body)',
       fontSize: '15px'
     }
-  }, "Your cart is empty.")) : React.createElement("div", {
+  }, "Tu pedido está vacío.")) : React.createElement("div", {
     style: {
       flex: 1,
       overflowY: 'auto',
@@ -936,11 +964,11 @@ function CartDrawer({
       marginBottom: '12px',
       textAlign: 'center'
     }
-  }, "Add ", React.createElement("strong", {
+  }, "Agrega ", React.createElement("strong", {
     style: {
       color: 'var(--mc-red)'
     }
-  }, money(remaining)), " more for free delivery"), React.createElement("div", {
+  }, money(remaining)), " más para envío gratis"), React.createElement("div", {
     style: {
       display: 'flex',
       justifyContent: 'space-between',
@@ -967,11 +995,21 @@ function CartDrawer({
     variant: "primary",
     size: "lg",
     fullWidth: true,
-    disabled: items.length === 0
-  }, "Checkout"))));
+    disabled: items.length === 0,
+    onClick: () => {
+      const lines = items.map(it => '• ' + it.qty + '× ' + it.name + ' (' + it.weight + ')').join('\n');
+      const msg = 'Hola Meat Connection, quiero solicitar este pedido:\n' + lines + '\n\nSubtotal: ' + money(subtotal);
+      window.open('https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(msg), '_blank');
+    },
+    iconLeft: React.createElement(Icon, {
+      name: "MessageCircle",
+      size: 18,
+      color: "#fff"
+    })
+  }, "Solicitar por WhatsApp"))));
 }
 function Footer() {
-  const cols = [['Shop', ['Japanese A5', 'Australian Wagyu', 'Bulk Boxes', 'Gift Cards']], ['Learn', ['Marble Scores', 'Sourcing', 'Cooking Wagyu', 'Journal']], ['Service', ['Delivery', 'Cross-Border', 'Contact', 'FAQ']]];
+  const cols = [['Catálogo', ['Wagyu Japonés A5', 'Wagyu Australiano', 'Carne Americana', 'Cajas de Mayoreo']], ['Servicios', ['Envíos Express', 'Importación Directa', 'Cadena de Frío', 'Porcionado al Vacío']], ['Contacto', ['WhatsApp', 'Instagram', 'Facebook', 'Cotizar / Catálogos']]];
   return React.createElement("footer", {
     style: {
       background: 'var(--mc-charcoal)',
@@ -1001,7 +1039,7 @@ function Footer() {
       color: 'var(--mc-ink-400)',
       maxWidth: '240px'
     }
-  }, "Wagyu specialist serving the San Diego–Tijuana border. Graded, cut to order, delivered cold.")), cols.map(([h, items]) => React.createElement("div", {
+  }, "Distribuidor de carne premium en México. Wagyu japonés, wagyu australiano y carne americana — importación directa con envíos express y cadena de frío garantizada.")), cols.map(([h, items]) => React.createElement("div", {
     key: h
   }, React.createElement("div", {
     style: {
@@ -1021,7 +1059,16 @@ function Footer() {
     }
   }, items.map(i => React.createElement("a", {
     key: i,
-    href: "#",
+    href: {
+      WhatsApp: WA_LINK,
+      Instagram: IG_LINK,
+      Facebook: FB_LINK
+    }[i] || '#',
+    target: ({
+      WhatsApp: 1,
+      Instagram: 1,
+      Facebook: 1
+    })[i] ? '_blank' : undefined,
     style: {
       color: 'var(--mc-ink-300)',
       textDecoration: 'none',
@@ -1038,7 +1085,7 @@ function Footer() {
       fontSize: '12px',
       color: 'var(--mc-ink-500)'
     }
-  }, React.createElement("span", null, "© 2026 Meat Connection"), React.createElement("span", null, "Privacy · Terms")));
+  }, React.createElement("span", null, "© 2026 Meat Connection · ", WA_DISPLAY), React.createElement("span", null, "Aviso de Privacidad · Términos")));
 }
 function ShopToolbar({
   active,
@@ -1047,7 +1094,7 @@ function ShopToolbar({
   const {
     Tag
   } = DS;
-  const cats = ['All', 'Japanese A5', 'Australian'];
+  const cats = ['Todos', 'Wagyu Japonés', 'Wagyu Australiano'];
   return React.createElement("div", {
     style: {
       display: 'flex',
@@ -1062,10 +1109,418 @@ function ShopToolbar({
     onClick: () => onPick(c)
   }, c)));
 }
+function SectionHead({
+  eyebrow,
+  title,
+  sub,
+  light
+}) {
+  return React.createElement("div", {
+    style: {
+      marginBottom: '36px',
+      maxWidth: '640px'
+    }
+  }, React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      textTransform: 'uppercase',
+      letterSpacing: '0.18em',
+      fontWeight: 600,
+      fontSize: '13px',
+      color: 'var(--mc-red-bright)'
+    }
+  }, eyebrow), React.createElement("h2", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      textTransform: 'uppercase',
+      fontWeight: 700,
+      fontSize: '40px',
+      lineHeight: 1.02,
+      margin: '8px 0 0',
+      color: light ? 'var(--mc-paper)' : 'var(--text-strong)'
+    }
+  }, title), sub && React.createElement("p", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: '16px',
+      lineHeight: 1.6,
+      margin: '14px 0 0',
+      color: light ? 'var(--mc-ink-200)' : 'var(--text-muted)'
+    }
+  }, sub));
+}
+function Services() {
+  const {
+    Card
+  } = DS;
+  const main = [['Truck', 'Envíos Express', 'Entregas a todo México con logística en frío y los tiempos que tu operación necesita.'], ['Plane', 'Importadores Directos', 'Traemos wagyu de Japón, Australia y carne selecta de Estados Unidos directo del origen, sin intermediarios.'], ['Snowflake', 'Conservación Total', 'Cadena de frío continua garantizada, desde el origen hasta la puerta de tu cocina.']];
+  const sub = [['Slice', 'Porcionado y etiquetado a la medida'], ['Package', 'Empacado al vacío profesional'], ['UtensilsCrossed', 'Presentación impecable en charolas']];
+  return React.createElement("section", {
+    id: "servicios",
+    style: {
+      background: 'var(--surface-sunken)',
+      scrollMarginTop: '72px'
+    }
+  }, React.createElement("div", {
+    style: {
+      maxWidth: 'var(--container-max)',
+      margin: '0 auto',
+      padding: '72px 24px'
+    }
+  }, React.createElement(SectionHead, {
+    eyebrow: "Por qué Meat Connection",
+    title: "Carne premium, lista para tu negocio",
+    sub: "Importación directa, logística en frío y servicio a la medida para restaurantes, hoteles y carnicerías en todo México."
+  }), React.createElement("div", {
+    className: "mc-services",
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(3, 1fr)',
+      gap: '24px'
+    }
+  }, main.map(([ic, t, d]) => React.createElement(Card, {
+    key: t,
+    variant: "default",
+    style: {
+      padding: '28px'
+    }
+  }, React.createElement("div", {
+    style: {
+      width: '52px',
+      height: '52px',
+      borderRadius: 'var(--radius-md)',
+      background: 'var(--mc-red)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginBottom: '18px'
+    }
+  }, React.createElement(Icon, {
+    name: ic,
+    size: 26,
+    color: "#fff"
+  })), React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      textTransform: 'uppercase',
+      fontWeight: 700,
+      fontSize: '22px',
+      color: 'var(--text-strong)'
+    }
+  }, t), React.createElement("p", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: '14px',
+      lineHeight: 1.6,
+      color: 'var(--text-muted)',
+      margin: '10px 0 0'
+    }
+  }, d)))), React.createElement("div", {
+    className: "mc-subservices",
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(3, 1fr)',
+      gap: '20px',
+      marginTop: '24px',
+      padding: '24px',
+      background: 'var(--mc-charcoal)',
+      borderRadius: 'var(--radius-md)'
+    }
+  }, sub.map(([ic, t]) => React.createElement("div", {
+    key: t,
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '12px'
+    }
+  }, React.createElement(Icon, {
+    name: ic,
+    size: 22,
+    color: "var(--mc-red-bright)"
+  }), React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: '14px',
+      color: 'var(--mc-paper)'
+    }
+  }, t))))));
+}
+function Partners() {
+  const brands = ['Wagyu Japanese Beef', 'Kobe Beef', "Jack's Creek", 'Stone Axe', 'Margaret River Wagyu', 'Masami Beef'];
+  return React.createElement("section", {
+    id: "marcas",
+    style: {
+      background: 'var(--surface-page)',
+      scrollMarginTop: '72px'
+    }
+  }, React.createElement("div", {
+    style: {
+      maxWidth: 'var(--container-max)',
+      margin: '0 auto',
+      padding: '64px 24px'
+    }
+  }, React.createElement(SectionHead, {
+    eyebrow: "Marcas que distribuimos",
+    title: "Las mejores ganaderías del mundo",
+    sub: "Trabajamos directo con productores certificados de Japón, Australia y Estados Unidos."
+  }), React.createElement("div", {
+    className: "mc-brands",
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(3, 1fr)',
+      gap: '16px'
+    }
+  }, brands.map(b => React.createElement("div", {
+    key: b,
+    style: {
+      border: '1px solid var(--border-default)',
+      borderRadius: 'var(--radius-md)',
+      background: 'var(--surface-card)',
+      padding: '28px 20px',
+      textAlign: 'center',
+      fontFamily: 'var(--font-display)',
+      textTransform: 'uppercase',
+      letterSpacing: '0.04em',
+      fontWeight: 600,
+      fontSize: '18px',
+      color: 'var(--text-strong)'
+    }
+  }, b)))));
+}
+function Clients() {
+  const list = [['UtensilsCrossed', 'Restaurantes de alta cocina'], ['BedDouble', 'Hoteles de lujo'], ['Store', 'Carnicerías gourmet'], ['Flag', 'Clubes privados y campos de golf'], ['ChefHat', 'Caterers corporativos'], ['PartyPopper', 'Organizadores de eventos exclusivos']];
+  return React.createElement("section", {
+    id: "clientes",
+    style: {
+      background: 'var(--mc-charcoal)',
+      color: 'var(--mc-paper)',
+      scrollMarginTop: '72px'
+    }
+  }, React.createElement("div", {
+    style: {
+      maxWidth: 'var(--container-max)',
+      margin: '0 auto',
+      padding: '72px 24px'
+    }
+  }, React.createElement(SectionHead, {
+    eyebrow: "Para quién",
+    title: "Aliados de los mejores del sector",
+    sub: "Abastecemos a negocios que no negocian la calidad de su carne.",
+    light: true
+  }), React.createElement("div", {
+    className: "mc-clients",
+    style: {
+      display: 'grid',
+      gridTemplateColumns: 'repeat(3, 1fr)',
+      gap: '16px'
+    }
+  }, list.map(([ic, t]) => React.createElement("div", {
+    key: t,
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '14px',
+      padding: '20px',
+      border: '1px solid var(--mc-ink-700)',
+      borderRadius: 'var(--radius-md)',
+      background: 'var(--mc-ink-900)'
+    }
+  }, React.createElement(Icon, {
+    name: ic,
+    size: 24,
+    color: "var(--mc-red-bright)"
+  }), React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: '15px',
+      color: 'var(--mc-paper)'
+    }
+  }, t))))));
+}
+function ContactSection({
+  onQuote
+}) {
+  const {
+    Button,
+    Input
+  } = DS;
+  const [sent, setSent] = React.useState(false);
+  function submit(e) {
+    e.preventDefault();
+    setSent(true);
+  }
+  return React.createElement("section", {
+    id: "contacto",
+    style: {
+      background: 'var(--surface-sunken)',
+      scrollMarginTop: '72px'
+    }
+  }, React.createElement("div", {
+    className: "mc-contact",
+    style: {
+      maxWidth: 'var(--container-max)',
+      margin: '0 auto',
+      padding: '72px 24px',
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr',
+      gap: '48px',
+      alignItems: 'start'
+    }
+  }, React.createElement("div", null, React.createElement(SectionHead, {
+    eyebrow: "Cotiza / Catálogos",
+    title: "Hablemos de tu negocio",
+    sub: "Solicita catálogos, precios de mayoreo y tiempos de entrega. Te atendemos de forma personalizada."
+  }), React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '14px',
+      marginTop: '8px'
+    }
+  }, [['MessageCircle', WA_DISPLAY, 'WhatsApp', WA_LINK], ['Instagram', '@meatconnectionmx', 'Instagram', IG_LINK], ['Facebook', '@meatconnectionmx', 'Facebook', FB_LINK]].map(([ic, label, name, href]) => React.createElement("a", {
+    key: name,
+    href: href,
+    target: "_blank",
+    rel: "noopener",
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '14px',
+      textDecoration: 'none',
+      color: 'var(--text-strong)'
+    }
+  }, React.createElement("span", {
+    style: {
+      width: '44px',
+      height: '44px',
+      borderRadius: 'var(--radius-md)',
+      background: 'var(--mc-charcoal)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      flex: 'none'
+    }
+  }, React.createElement(Icon, {
+    name: ic,
+    size: 20,
+    color: "#fff"
+  })), React.createElement("span", null, React.createElement("span", {
+    style: {
+      display: 'block',
+      fontFamily: 'var(--font-display)',
+      textTransform: 'uppercase',
+      letterSpacing: '0.06em',
+      fontSize: '12px',
+      color: 'var(--text-muted)'
+    }
+  }, name), React.createElement("span", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: '15px',
+      fontWeight: 600
+    }
+  }, label)))))), React.createElement("div", {
+    style: {
+      background: 'var(--surface-card)',
+      border: '1px solid var(--border-default)',
+      borderRadius: 'var(--radius-md)',
+      padding: '28px'
+    }
+  }, sent ? React.createElement("div", {
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      textAlign: 'center',
+      gap: '12px',
+      padding: '32px 0'
+    }
+  }, React.createElement(Icon, {
+    name: "CheckCircle2",
+    size: 44,
+    color: "var(--mc-success)"
+  }), React.createElement("div", {
+    style: {
+      fontFamily: 'var(--font-display)',
+      textTransform: 'uppercase',
+      fontWeight: 700,
+      fontSize: '22px',
+      color: 'var(--text-strong)'
+    }
+  }, "¡Gracias!"), React.createElement("p", {
+    style: {
+      fontFamily: 'var(--font-body)',
+      fontSize: '14px',
+      color: 'var(--text-muted)',
+      margin: 0
+    }
+  }, "Recibimos tu solicitud. Para atención inmediata, escríbenos por WhatsApp."), React.createElement(Button, {
+    variant: "primary",
+    onClick: onQuote,
+    iconLeft: React.createElement(Icon, {
+      name: "MessageCircle",
+      size: 16,
+      color: "#fff"
+    })
+  }, "Abrir WhatsApp")) : React.createElement("form", {
+    onSubmit: submit,
+    style: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '16px'
+    }
+  }, React.createElement(Input, {
+    label: "Nombre completo",
+    placeholder: "Tu nombre",
+    required: true
+  }), React.createElement(Input, {
+    label: "Nombre del negocio",
+    placeholder: "Restaurante, hotel, carnicería…",
+    required: true
+  }), React.createElement(Input, {
+    label: "WhatsApp / Teléfono",
+    placeholder: WA_DISPLAY,
+    required: true
+  }), React.createElement(Input, {
+    label: "¿Qué te interesa?",
+    placeholder: "Cuéntanos qué cortes o catálogos buscas"
+  }), React.createElement(Button, {
+    variant: "primary",
+    size: "lg",
+    fullWidth: true,
+    type: "submit"
+  }, "Enviar solicitud")))));
+}
+function WhatsAppFab() {
+  return React.createElement("a", {
+    href: WA_LINK,
+    target: "_blank",
+    rel: "noopener",
+    "aria-label": "Cotizar por WhatsApp",
+    style: {
+      position: 'fixed',
+      right: '22px',
+      bottom: '22px',
+      width: '58px',
+      height: '58px',
+      borderRadius: '999px',
+      background: '#25D366',
+      boxShadow: 'var(--shadow-lg)',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      zIndex: 45
+    }
+  }, React.createElement(Icon, {
+    name: "MessageCircle",
+    size: 28,
+    color: "#fff"
+  }));
+}
 function App() {
   const [view, setView] = React.useState('home');
   const [active, setActive] = React.useState(null);
-  const [cat, setCat] = React.useState('All');
+  const [cat, setCat] = React.useState('Todos');
   const [cartOpen, setCartOpen] = React.useState(false);
   const [cart, setCart] = React.useState([]);
   function add(product, qty = 1) {
@@ -1100,8 +1555,20 @@ function App() {
     setView(v);
     window.scrollTo(0, 0);
   }
+  function goAnchor(id) {
+    setView('home');
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }, 60);
+  }
+  function quote() {
+    window.open(WA_LINK, '_blank');
+  }
   const count = cart.reduce((s, i) => s + i.qty, 0);
-  const filtered = cat === 'All' ? PRODUCTS : PRODUCTS.filter(p => p.cat === cat);
+  const filtered = cat === 'Todos' ? PRODUCTS : PRODUCTS.filter(p => p.cat === cat);
   return React.createElement("div", {
     style: {
       background: 'var(--surface-page)',
@@ -1110,11 +1577,13 @@ function App() {
   }, React.createElement(Header, {
     cartCount: count,
     onCart: () => setCartOpen(true),
-    onNav: nav
+    onNav: nav,
+    onAnchor: goAnchor
   }), view === 'home' && React.createElement(React.Fragment, null, React.createElement(Hero, {
     onShop: () => nav('shop'),
+    onQuote: quote,
     feature: PRODUCTS[0]
-  }), React.createElement("section", {
+  }), React.createElement(Services, null), React.createElement("section", {
     style: {
       maxWidth: 'var(--container-max)',
       margin: '0 auto',
@@ -1136,7 +1605,7 @@ function App() {
       fontSize: '13px',
       color: 'var(--mc-red)'
     }
-  }, "From the Counter"), React.createElement("h2", {
+  }, "Del mostrador"), React.createElement("h2", {
     style: {
       fontFamily: 'var(--font-display)',
       textTransform: 'uppercase',
@@ -1145,7 +1614,7 @@ function App() {
       margin: '6px 0 0',
       color: 'var(--text-strong)'
     }
-  }, "This Week's Cuts")), React.createElement("button", {
+  }, "Cortes Más Vendidos")), React.createElement("button", {
     onClick: () => nav('shop'),
     style: {
       border: 'none',
@@ -1161,14 +1630,16 @@ function App() {
       fontSize: '14px',
       color: 'var(--text-strong)'
     }
-  }, "View All ", React.createElement(Icon, {
+  }, "Ver Todo ", React.createElement(Icon, {
     name: "ArrowRight",
     size: 16
   }))), React.createElement(ProductGrid, {
     products: PRODUCTS.slice(0, 4),
     onAdd: add,
     onOpen: open
-  }))), view === 'shop' && React.createElement("section", {
+  })), React.createElement(Partners, null), React.createElement(Clients, null), React.createElement(ContactSection, {
+    onQuote: quote
+  })), view === 'shop' && React.createElement("section", {
     style: {
       maxWidth: 'var(--container-max)',
       margin: '0 auto',
@@ -1183,14 +1654,14 @@ function App() {
       margin: '0 0 8px',
       color: 'var(--text-strong)'
     }
-  }, "The Counter"), React.createElement("p", {
+  }, "El Catálogo"), React.createElement("p", {
     style: {
       fontFamily: 'var(--font-body)',
       fontSize: '16px',
       color: 'var(--text-muted)',
       margin: '0 0 28px'
     }
-  }, filtered.length, " cuts · hand-butchered to order"), React.createElement(ShopToolbar, {
+  }, filtered.length, " cortes · porcionados a tu medida"), React.createElement(ShopToolbar, {
     active: cat,
     onPick: setCat
   }), React.createElement(ProductGrid, {
@@ -1207,7 +1678,7 @@ function App() {
     onClose: () => setCartOpen(false),
     onQty: changeQty,
     onRemove: remove
-  }));
+  }), React.createElement(WhatsAppFab, null));
 }
 function mount() {
   if (window.React && window.ReactDOM && window.MeatConnectionDesignSystem_3e7a26 && window.lucide) {

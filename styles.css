@@ -170,10 +170,15 @@ a { color:inherit; }
   .mc-pdp{ grid-template-columns:1fr !important; gap:24px !important; }
   .mc-foot{ grid-template-columns:1fr 1fr !important; gap:28px !important; }
   .mc-nav,.mc-search{ display:none !important; }
+  .mc-services,.mc-brands,.mc-clients{ grid-template-columns:1fr 1fr !important; }
+  .mc-subservices{ grid-template-columns:1fr !important; }
+  .mc-contact{ grid-template-columns:1fr !important; gap:32px !important; }
 }
 @media (max-width:520px){
   .mc-h1{ font-size:42px !important; }
   .mc-stats{ flex-wrap:wrap; gap:18px !important; }
   .mc-foot{ grid-template-columns:1fr !important; }
   .mc-trust{ flex-direction:column; gap:8px !important; }
+  .mc-hero-cta{ flex-direction:column; }
+  .mc-services,.mc-brands,.mc-clients{ grid-template-columns:1fr !important; }
 }

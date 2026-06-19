@@ -1,0 +1,143 @@
+<!doctype html><html><head><meta charset='utf-8'><style>
+@page { size: A4; margin: 18mm 16mm 16mm 16mm;
+  @bottom-center { content: "Meat Connection — SEO Audit · 18 June 2026"; font-size:8px; color:#6b6b6b; }
+  @bottom-right { content: "Page " counter(page) " / " counter(pages); font-size:8px; color:#6b6b6b; }
+}
+@page :first { margin:0; @bottom-center{content:none} @bottom-right{content:none} }
+* { box-sizing:border-box; }
+body { font-family:'Helvetica Neue',Arial,sans-serif; color:#1a1a1a; font-size:10.5px; line-height:1.5; }
+h1,h2,h3 { color:#1a1a1a; }
+code { background:#f4f1ee; padding:1px 4px; border-radius:3px; font-size:9px; }
+.cover { height:297mm; padding:34mm 24mm; position:relative; }
+.cover .bar { position:absolute; top:0; left:0; right:0; height:14mm; background:#7a1f1f; }
+.cover .kicker { color:#7a1f1f; letter-spacing:3px; font-size:11px; font-weight:bold; text-transform:uppercase; }
+.cover h1 { font-size:40px; margin:8px 0 4px; line-height:1.05; }
+.cover .dom { font-size:18px; color:#6b6b6b; margin-bottom:30px; }
+.cover .scorewrap { display:flex; align-items:center; gap:26px; margin:24px 0; }
+.cover .verdict { font-size:22px; font-weight:bold; }
+.cover .meta { margin-top:40px; color:#6b6b6b; font-size:11px; line-height:1.9; border-top:1px solid #e2dcd6; padding-top:16px; }
+.cover .meta b { color:#1a1a1a; }
+section { page-break-before:always; }
+.h2 { font-size:19px; border-bottom:2px solid #7a1f1f; padding-bottom:5px; margin:0 0 14px; }
+table { width:100%; border-collapse:collapse; margin:8px 0 16px; }
+th,td { text-align:left; padding:6px 9px; border-bottom:1px solid #e7e2dd; vertical-align:top; }
+th { background:#f4f1ee; font-size:9px; text-transform:uppercase; letter-spacing:.5px; color:#6b6b6b; }
+td.num,th.num { text-align:center; white-space:nowrap; }
+.pill { color:#fff; padding:2px 9px; border-radius:10px; font-weight:bold; font-size:9.5px; }
+.scoretable td:first-child { font-weight:600; }
+ol.crit { padding-left:18px; }
+ol.crit li { margin-bottom:7px; }
+ol.crit li .d { color:#6b6b6b; display:block; font-size:9.5px; }
+ul.wins li { margin-bottom:6px; }
+.callout { background:#f4f1ee; border-left:3px solid #7a1f1f; padding:10px 14px; margin:12px 0; font-size:10px; }
+.ah { font-size:12px; margin:16px 0 4px; padding:4px 10px; color:#fff; border-radius:3px; }
+.ah.crit{background:#c0392b} .ah.high{background:#d97706} .ah.med{background:#2563eb} .ah.low{background:#6b7280}
+.atable th, .atable td { font-size:9.5px; }
+.img { width:100%; }
+.two { display:flex; gap:18px; }
+.two > div { flex:1; }
+.note { font-size:8.5px; color:#6b6b6b; font-style:italic; }
+</style></head><body>
+
+<div class='cover'>
+  <div class='bar'></div>
+  <div class='kicker'>Search Engine Optimization Audit</div>
+  <h1>SEO Health Report</h1>
+  <div class='dom'>meatconnection.mx</div>
+  <div class='scorewrap'>
+    <img src='chart_score.png' style='width:150px'>
+    <div>
+      <div class='verdict' style='color:#e6a700'>Fair &mdash; Needs Improvement</div>
+      <div style='color:#6b6b6b; margin-top:6px; max-width:230px'>Solid technical base, but structured data, thin content, and index bloat are capping visibility.</div>
+    </div>
+  </div>
+  <div class='meta'>
+    <b>Prepared:</b> 18 June 2026<br>
+    <b>Business type:</b> B2B premium Wagyu / Angus distributor (catalog &amp; quote model)<br>
+    <b>Platform:</b> WordPress + WooCommerce + Elementor &middot; LiteSpeed &middot; Hostinger<br>
+    <b>Language / market:</b> Spanish (es_MX) &middot; Mexico<br>
+    <b>Scope crawled:</b> 90 URLs (24 pages, 16 products, 6 categories, 44 tags) &mdash; all HTTP 200
+  </div>
+</div>
+
+<section>
+  <div class='h2'>Executive Summary</div>
+  <div class='two'>
+    <div>
+      <p>The site has a <b>healthy technical foundation</b> &mdash; clean crawl with no broken URLs, HTTPS, valid Yoast sitemaps, consistent non-www canonicals, properly noindexed cart/checkout/account, and LiteSpeed caching. Homepage and product copy are strong.</p>
+      <p>The <b>60/100</b> score is held back by four fixable themes: missing <b>Product/Offer structured data</b> on a commerce catalog, <b>thin pages with missing meta descriptions</b>, <b>index bloat</b> from 44 near-duplicate product tags, and <b>missing image alt text</b>. Most are sub-1-hour Yoast/WooCommerce changes.</p>
+      <p class='note'>* Performance is a lab/heuristic estimate &mdash; no Google CrUX field data was available (no API key configured).</p>
+    </div>
+    <div><img class='img' src='chart_score.png' style='width:62%; display:block; margin:0 auto'></div>
+  </div>
+
+  <h3 style='margin-top:6px'>Category Scores</h3>
+  <img class='img' src='chart_categories.png'>
+  <table class='scoretable'>
+    <thead><tr><th>Category</th><th class='num'>Weight</th><th class='num'>Score</th></tr></thead>
+    <tbody><tr><td>Technical SEO</td><td class='num'>22%</td>
+        <td class='num'><span class='pill' style='background:#e6a700'>72</span></td></tr><tr><td>Content Quality</td><td class='num'>23%</td>
+        <td class='num'><span class='pill' style='background:#c0392b'>58</span></td></tr><tr><td>On-Page SEO</td><td class='num'>20%</td>
+        <td class='num'><span class='pill' style='background:#e6a700'>62</span></td></tr><tr><td>Schema</td><td class='num'>10%</td>
+        <td class='num'><span class='pill' style='background:#c0392b'>48</span></td></tr><tr><td>Performance (CWV)*</td><td class='num'>10%</td>
+        <td class='num'><span class='pill' style='background:#e6a700'>60</span></td></tr><tr><td>AI Readiness</td><td class='num'>10%</td>
+        <td class='num'><span class='pill' style='background:#c0392b'>52</span></td></tr><tr><td>Images</td><td class='num'>5%</td>
+        <td class='num'><span class='pill' style='background:#c0392b'>50</span></td></tr></tbody>
+  </table>
+</section>
+
+<section>
+  <div class='h2'>Top 5 Critical Issues</div>
+  <ol class='crit'>
+    <li>No <b>Product schema</b> on product pages<span class='d'>Pages emit only generic <code>WebPage</code> JSON-LD — no <code>Product</code>, <code>Offer</code>, <code>AggregateRating</code>. Zero rich-result eligibility on a commerce catalog.</span></li><li><code>og:type=article</code> on products<span class='d'>Wrong Open Graph type for product links; should be <code>product</code>.</span></li><li>Index bloat — 44 product-tag pages<span class='d'>Mostly near-duplicates (<code>umami-concentrado/intenso/profundo/suave</code>, <code>marmoleo-alto</code> vs <code>alto-marmoleo</code>) with ~1 product each.</span></li><li>Missing meta descriptions<span class='d'><code>/nosotros/</code>, <code>/contacto/</code>, <code>/faq/</code>, the blog, and product-category pages.</span></li><li>Heading structure broken<span class='d'>Homepage renders a duplicate H1; product-category pages have <b>no H1</b> and default “Wagyu archivos” titles.</span></li>
+  </ol>
+
+  <div class='h2' style='margin-top:24px'>Top 5 Quick Wins</div>
+  <ul class='wins'>
+    <li>Add <b>FAQPage schema</b> to <code>/faq/</code> — already has 536 words of Q&amp;A.</li><li>Write the ~5 missing meta descriptions (Yoast field, ~15 min each).</li><li>Add <b>alt text</b> — homepage is missing it on 12 of 18 images (67%).</li><li>Set <b>product tags to noindex</b> in Yoast — kills index bloat in one toggle.</li><li>Fix category page title/H1 and add intro copy.</li>
+  </ul>
+
+  <div class='callout'><b>Projected outcome:</b> completing the Critical + High actions should lift the score to roughly <b>78&ndash;82 / 100</b>, with the largest gains from Product schema and removing tag-page index bloat.</div>
+</section>
+
+<section>
+  <div class='h2'>Prioritized Action Plan</div>
+  
+        <h3 class='ah crit'>CRITICAL</h3>
+        <table class='atable'>
+          <thead><tr><th>Action</th><th>How / where</th><th class='num'>Effort</th></tr></thead>
+          <tbody><tr><td>Add Product structured data (Product + Offer)</td><td>Yoast WooCommerce SEO / native WC schema</td><td class='num'>Dev</td></tr><tr><td>Fix og:type to 'product'</td><td>Yoast WooCommerce SEO</td><td class='num'><1h</td></tr><tr><td>Noindex product tags + uncategorized</td><td>Yoast → Taxonomies</td><td class='num'><1h</td></tr></tbody>
+        </table>
+        <h3 class='ah high'>HIGH — within 1 week</h3>
+        <table class='atable'>
+          <thead><tr><th>Action</th><th>How / where</th><th class='num'>Effort</th></tr></thead>
+          <tbody><tr><td>Add meta descriptions to ~5 pages</td><td>Yoast meta field</td><td class='num'><1h</td></tr><tr><td>Add FAQPage schema to /faq/</td><td>FAQ block / JSON-LD</td><td class='num'><1h</td></tr><tr><td>Fix homepage duplicate H1 + category H1</td><td>Elementor + Yoast templates</td><td class='num'>Few h</td></tr><tr><td>Add image alt text</td><td>WP Media Library</td><td class='num'><1h</td></tr><tr><td>Add security headers (HSTS, nosniff, etc.)</td><td>LiteSpeed / .htaccess</td><td class='num'>Few h</td></tr><tr><td>Resolve /shop/ vs /tienda/ duplication</td><td>301 + canonical</td><td class='num'>Few h</td></tr></tbody>
+        </table>
+        <h3 class='ah med'>MEDIUM — within 1 month</h3>
+        <table class='atable'>
+          <thead><tr><th>Action</th><th>How / where</th><th class='num'>Effort</th></tr></thead>
+          <tbody><tr><td>Build out About + blog + contact content</td><td>Content</td><td class='num'>Project</td></tr><tr><td>Add LocalBusiness/FoodEstablishment schema</td><td>JSON-LD</td><td class='num'>Few h</td></tr><tr><td>Performance pass: hero eager, WebP, defer JS</td><td>LiteSpeed + Elementor</td><td class='num'>Project</td></tr><tr><td>Internal linking + GEO content depth</td><td>Content</td><td class='num'>Few h</td></tr></tbody>
+        </table>
+        <h3 class='ah low'>LOW — backlog</h3>
+        <table class='atable'>
+          <thead><tr><th>Action</th><th>How / where</th><th class='num'>Effort</th></tr></thead>
+          <tbody><tr><td>Configure Google APIs (PSI/CrUX/GSC/GA4)</td><td>API key + GSC verify</td><td class='num'><1h</td></tr><tr><td>Backlink / authority building</td><td>Outreach + Moz/DataForSEO</td><td class='num'>Ongoing</td></tr><tr><td>Normalize EN system slugs</td><td>Migration only</td><td class='num'>Project</td></tr></tbody>
+        </table>
+  <p class='note'>Effort key: &lt;1h = single setting / quick edit &middot; Few h = a few hours &middot; Project = multi-step / dev or content work.</p>
+</section>
+
+<section>
+  <div class='h2'>Key Findings by Area</div>
+  <h3>Technical SEO &mdash; 72</h3>
+  <p>HTTPS + HTTP/2/3, clean robots.txt, valid split Yoast sitemaps, consistent non-www canonicals, all 90 URLs return 200, cart/checkout/account noindexed, LiteSpeed caching. <b>Gaps:</b> index bloat (44 tags + uncategorized), missing security headers (HSTS, X-Content-Type-Options, X-Frame-Options, Referrer-Policy), and duplicate shop surfaces (/shop/ vs /tienda/).</p>
+  <h3>Content &amp; On-Page &mdash; 58 / 62</h3>
+  <p>Strong homepage (~1,034 words) and product copy. <b>Gaps:</b> thin/empty pages (blog 77 words, category 191, About 224, Contact 270), missing meta descriptions, duplicate homepage H1, and missing category H1s with default archive titles. E-E-A-T trust signals (provenance, team, certifications) are underdeveloped.</p>
+  <h3>Schema &mdash; 48</h3>
+  <p>Clean Yoast graph (Organization, WebSite+SearchAction, BreadcrumbList, WebPage, CollectionPage). <b>Critical gaps:</b> no Product/Offer on products, og:type=article, no FAQPage on a 536-word FAQ, no LocalBusiness despite local delivery.</p>
+  <h3>Performance &amp; Images &mdash; 60 / 50</h3>
+  <p>Elementor + Swiper + jQuery + ~215KB HTML; LiteSpeed helps but mobile INP is the likely weak point. Confirm the hero/LCP image is eager + fetchpriority=high. Images: 67% of homepage images and several product images lack alt text; serve WebP/AVIF.</p>
+  <h3>AI Search Readiness &mdash; 52</h3>
+  <p>Clean schema and clear es_MX content help, but thin editorial content and missing Product/FAQ/LocalBusiness schema limit citability. Build out the Wagyu education pages and add an llms.txt.</p>
+</section>
+
+</body></html>
