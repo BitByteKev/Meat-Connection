@@ -1663,6 +1663,18 @@ function Clients() {
 function ContactSection({ onQuote }) {
   const { Button, Input } = window.MeatConnectionDesignSystem_3e7a26;
   const [sent, setSent] = React.useState(false);
+  const [form, setForm] = React.useState({ nombre:'', negocio:'', telefono:'', interes:'' });
+  const setField = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
+  const submit = (e) => {
+    e.preventDefault();
+    const msg = 'Hola Meat Connection, quiero cotizar.\n'
+      + '• Nombre: ' + form.nombre + '\n'
+      + '• Negocio: ' + form.negocio + '\n'
+      + '• WhatsApp/Teléfono: ' + form.telefono
+      + (form.interes ? '\n• Me interesa: ' + form.interes : '');
+    openWhatsApp(msg);
+    setSent(true);
+  };
   const channels = [
     ['MessageCircle','WhatsApp',WA_DISPLAY,WA_LINK],
     ['Instagram','Instagram','@meatconnectionmx',IG_LINK],
@@ -1697,11 +1709,11 @@ function ContactSection({ onQuote }) {
               <Button variant="primary" onClick={onQuote} iconLeft={<Icon name="MessageCircle" size={16} color="#fff" />}>Abrir WhatsApp</Button>
             </div>
           ) : (
-            <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} style={{ display:'flex', flexDirection:'column', gap:'16px' }}>
-              <Input label="Nombre completo" placeholder="Tu nombre" required />
-              <Input label="Nombre del negocio" placeholder="Restaurante, hotel, carnicería…" required />
-              <Input label="WhatsApp / Teléfono" placeholder={WA_DISPLAY} required />
-              <Input label="¿Qué te interesa?" placeholder="Cuéntanos qué cortes o catálogos buscas" />
+            <form onSubmit={submit} style={{ display:'flex', flexDirection:'column', gap:'16px' }}>
+              <Input label="Nombre completo" placeholder="Tu nombre" required value={form.nombre} onChange={setField('nombre')} />
+              <Input label="Nombre del negocio" placeholder="Restaurante, hotel, carnicería…" required value={form.negocio} onChange={setField('negocio')} />
+              <Input label="WhatsApp / Teléfono" placeholder={WA_DISPLAY} required type="tel" value={form.telefono} onChange={setField('telefono')} />
+              <Input label="¿Qué te interesa?" placeholder="Cuéntanos qué cortes o catálogos buscas" value={form.interes} onChange={setField('interes')} />
               <Button variant="primary" size="lg" fullWidth type="submit">Enviar solicitud</Button>
             </form>
           )}
