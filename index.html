@@ -578,7 +578,8 @@ function Button({
     cursor: disabled ? 'not-allowed' : 'pointer',
     opacity: disabled ? 0.45 : 1,
     width: fullWidth ? '100%' : 'auto',
-    transition: 'background var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out)',
+    transition: 'background var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out)',
+    boxShadow: 'none',
     boxSizing: 'border-box',
     lineHeight: 1,
     ...sizes[size],
@@ -598,17 +599,21 @@ function Button({
     if (disabled) return;
     e.currentTarget.style.background = hoverBg[variant];
     if (hoverColor[variant]) e.currentTarget.style.color = hoverColor[variant];
+    e.currentTarget.style.transform = 'translateY(-2px)';
+    e.currentTarget.style.boxShadow = 'var(--shadow-md)';
   }
   function out(e) {
     if (disabled) return;
     e.currentTarget.style.background = base.background;
     e.currentTarget.style.color = base.color;
+    e.currentTarget.style.transform = 'translateY(0)';
+    e.currentTarget.style.boxShadow = 'none';
   }
   function down(e) {
     if (!disabled) e.currentTarget.style.transform = 'translateY(1px)';
   }
   function up(e) {
-    if (!disabled) e.currentTarget.style.transform = 'translateY(0)';
+    if (!disabled) e.currentTarget.style.transform = 'translateY(-2px)';
   }
   return /*#__PURE__*/React.createElement("button", _extends({
     type: type,
@@ -1198,7 +1203,7 @@ const openWhatsApp = (msg) => window.open('https://wa.me/' + WA_NUMBER + (msg ? 
 
 /* Catálogo de wagyu — cortes más vendidos (meatconnection.mx). Precios de referencia: edita `price`/`weight`. */
 const PRODUCTS = [
-  { id:'tritip',  name:'Tri-Tip Wagyu Japonés A5', cat:'Wagyu Japonés', price:850, weight:'1 kg', badge:'A5 · Japón', tone:'charcoal',
+  { id:'tritip',  name:'Tri-Tip Wagyu Japonés A5', cat:'Wagyu Japonés', price:850, weight:'1 kg', badge:'A5 · Japón', tone:'charcoal', img:'images/tritip-a5.webp',
     desc:'Wagyu japonés auténtico grado A5 — la cima del marmoleo. Mantecoso, intenso, se deshace al contacto.' },
   { id:'topround',name:'Top Round Wagyu Japonés', cat:'Wagyu Japonés', price:830, weight:'1 kg', badge:'Más Vendido', tone:'kraft',
     desc:'Top Round de wagyu japonés — marmoleo poco común en este corte. Ideal en finas láminas, a la parrilla o sukiyaki.' },
@@ -1214,13 +1219,12 @@ const TONE_FG = { charcoal:'var(--mc-paper)', kraft:'var(--mc-ink-900)', cream:'
 
 /* Real-photo product image (replaces menu-board tile). fit: cover|contain */
 function ProductImage({ product, height = 220, big = false, fit = 'cover' }) {
-  const src = window.MC_IMG[product.id];
+  const src = product.img || window.MC_IMG[product.id];
   if (src) {
     return (
-      <div style={{ height: height + 'px', overflow:'hidden', background:'var(--mc-charcoal)' }}>
-        <img src={src} alt={product.name} loading="lazy"
-          style={{ width:'100%', height:'100%', objectFit: fit, display:'block' }} />
-      </div>
+      <RevealImg src={src} alt={product.name} loading="lazy"
+        frameStyle={{ height: height + 'px', background:'var(--mc-charcoal)' }}
+        imgStyle={{ width:'100%', height:'100%', objectFit: fit, display:'block' }} />
     );
   }
   // fallback menu-board tile
@@ -1340,8 +1344,9 @@ function Hero({ onShop, onQuote, feature }) {
           </div>
         </div>
         <div style={{ position:'relative', display:'flex', alignItems:'center', justifyContent:'center' }}>
-          <img src={window.MC_PALETA} alt="Paleta de wagyu australiano de alto marmoleo, empacada al vacío" fetchpriority="high" decoding="async"
-            style={{ width:'100%', height:'auto', display:'block' }} />
+          <RevealImg src={window.MC_PALETA} alt="Paleta de wagyu australiano de alto marmoleo, empacada al vacío" fetchpriority="high" decoding="async"
+            frameStyle={{ width:'100%' }}
+            imgStyle={{ width:'100%', height:'auto', display:'block' }} />
         </div>
       </div>
     </section>
@@ -1462,7 +1467,7 @@ function CartDrawer({ open, items, onClose, onQty, onRemove }) {
             {items.map((it) => (
               <div key={it.id} style={{ display:'flex', gap:'14px', padding:'16px 22px', borderBottom:'1px solid var(--border-subtle)' }}>
                 <div style={{ width:'64px', height:'64px', flex:'none', overflow:'hidden', borderRadius:'var(--radius-sm)', background:'var(--mc-charcoal)' }}>
-                  <img src={window.MC_IMG[it.id]} alt={it.name} loading="lazy" decoding="async" style={{ width:'100%', height:'100%', objectFit:'cover' }} />
+                  <img src={it.img || window.MC_IMG[it.id]} alt={it.name} loading="lazy" decoding="async" style={{ width:'100%', height:'100%', objectFit:'cover' }} />
                 </div>
                 <div style={{ flex:1 }}>
                   <div style={{ fontFamily:'var(--font-display)', textTransform:'uppercase', fontWeight:600, fontSize:'15px', color:'var(--text-strong)', lineHeight:1.1 }}>{it.name}</div>
@@ -1562,7 +1567,7 @@ function Services() {
   ];
   return (
     <section id="servicios" style={{ background:'var(--surface-sunken)', scrollMarginTop:'72px' }}>
-      <div style={{ maxWidth:'var(--container-max)', margin:'0 auto', padding:'72px 24px' }}>
+      <Reveal style={{ maxWidth:'var(--container-max)', margin:'0 auto', padding:'72px 24px' }}>
         <SectionHead eyebrow="Por qué Meat Connection" title="Carne premium, lista para tu negocio"
           sub="Importación directa, logística en frío y servicio a la medida para restaurantes, hoteles y carnicerías en todo México." />
         <div className="mc-services" style={{ display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap:'24px' }}>
@@ -1584,7 +1589,7 @@ function Services() {
             </div>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }
@@ -1604,7 +1609,7 @@ function Partners() {
   const hoverOut = (e) => { e.currentTarget.style.borderColor='var(--border-default)'; e.currentTarget.style.boxShadow='none'; e.currentTarget.style.transform='translateY(0)'; };
   return (
     <section id="marcas" style={{ background:'var(--surface-page)', scrollMarginTop:'72px' }}>
-      <div style={{ maxWidth:'var(--container-max)', margin:'0 auto', padding:'64px 24px' }}>
+      <Reveal style={{ maxWidth:'var(--container-max)', margin:'0 auto', padding:'64px 24px' }}>
         <SectionHead eyebrow="Marcas que distribuimos" title="Las mejores ganaderías del mundo"
           sub="Trabajamos directo con productores certificados de Japón, Australia y Estados Unidos." />
         <div className="mc-brands" style={{ display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap:'16px' }}>
@@ -1618,7 +1623,7 @@ function Partners() {
             );
           })}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }
@@ -1635,7 +1640,7 @@ function Clients() {
   ];
   return (
     <section id="clientes" style={{ background:'var(--mc-charcoal)', color:'var(--mc-paper)', scrollMarginTop:'72px' }}>
-      <div style={{ maxWidth:'var(--container-max)', margin:'0 auto', padding:'72px 24px' }}>
+      <Reveal style={{ maxWidth:'var(--container-max)', margin:'0 auto', padding:'72px 24px' }}>
         <SectionHead light eyebrow="Para quién" title="Aliados de los mejores del sector"
           sub="Abastecemos a negocios que no negocian la calidad de su carne." />
         <div className="mc-clients" style={{ display:'grid', gridTemplateColumns:'repeat(3, 1fr)', gap:'16px' }}>
@@ -1646,7 +1651,7 @@ function Clients() {
             </div>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }
@@ -1662,7 +1667,7 @@ function ContactSection({ onQuote }) {
   ];
   return (
     <section id="contacto" style={{ background:'var(--surface-sunken)', scrollMarginTop:'72px' }}>
-      <div className="mc-contact" style={{ maxWidth:'var(--container-max)', margin:'0 auto', padding:'72px 24px', display:'grid', gridTemplateColumns:'1fr 1fr', gap:'48px', alignItems:'start' }}>
+      <Reveal className="mc-contact" style={{ maxWidth:'var(--container-max)', margin:'0 auto', padding:'72px 24px', display:'grid', gridTemplateColumns:'1fr 1fr', gap:'48px', alignItems:'start' }}>
         <div>
           <SectionHead eyebrow="Cotiza / Catálogos" title="Hablemos de tu negocio"
             sub="Solicita catálogos, precios de mayoreo y tiempos de entrega. Te atendemos de forma personalizada." />
@@ -1698,7 +1703,7 @@ function ContactSection({ onQuote }) {
             </form>
           )}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }
@@ -1748,15 +1753,17 @@ function WhatsAppFab() {
   return (
     <button type="button" aria-label="Cotizar por WhatsApp" title="Cotizar por WhatsApp — arrastra para mover"
       onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp}
+      onMouseEnter={(e) => { if (!dragging) { e.currentTarget.style.transform='scale(1.1)'; e.currentTarget.style.background='#1ebe5a'; e.currentTarget.style.boxShadow='0 10px 28px rgba(37,211,102,0.45)'; } }}
+      onMouseLeave={(e) => { e.currentTarget.style.transform='scale(1)'; e.currentTarget.style.background='#25D366'; e.currentTarget.style.boxShadow='var(--shadow-lg)'; }}
       onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open(WA_LINK, '_blank', 'noopener'); } }}
-      style={{ position:'fixed', left:pos.x+'px', top:pos.y+'px', width:SIZE+'px', height:SIZE+'px', borderRadius:'999px', border:'none', padding:0, background:'#25D366', boxShadow:'var(--shadow-lg)', display:'flex', alignItems:'center', justifyContent:'center', zIndex:45, cursor: dragging ? 'grabbing' : 'grab', touchAction:'none', userSelect:'none', WebkitTapHighlightColor:'transparent' }}>
+      style={{ position:'fixed', left:pos.x+'px', top:pos.y+'px', width:SIZE+'px', height:SIZE+'px', borderRadius:'999px', border:'none', padding:0, background:'#25D366', boxShadow:'var(--shadow-lg)', display:'flex', alignItems:'center', justifyContent:'center', zIndex:45, cursor: dragging ? 'grabbing' : 'grab', touchAction:'none', userSelect:'none', WebkitTapHighlightColor:'transparent', transition:'transform var(--dur-fast) var(--ease-out), background var(--dur-fast) var(--ease-out), box-shadow var(--dur-fast) var(--ease-out)' }}>
       <Icon name="MessageCircle" size={28} color="#fff" />
     </button>
   );
 }
 
 /* ===== Scroll reveal: slides up from below as it enters the viewport ===== */
-function Reveal({ children, style }) {
+function Reveal({ children, style, className }) {
   const ref = React.useRef(null);
   const [shown, setShown] = React.useState(false);
   React.useEffect(() => {
@@ -1769,12 +1776,36 @@ function Reveal({ children, style }) {
     return () => io.disconnect();
   }, []);
   return (
-    <div ref={ref} style={{ ...style,
+    <div ref={ref} className={className} style={{ ...style,
       transform: shown ? 'translateY(0)' : 'translateY(56px)',
       opacity: shown ? 1 : 0,
       transition: 'transform 0.8s var(--ease-out), opacity 0.8s var(--ease-out)',
       willChange: 'transform, opacity' }}>
       {children}
+    </div>
+  );
+}
+
+/* ===== Image scroll reveal: gentle zoom-out + fade as it enters the viewport ===== */
+function RevealImg({ src, alt, imgStyle = {}, frameStyle = {}, ...rest }) {
+  const ref = React.useRef(null);
+  const [shown, setShown] = React.useState(false);
+  React.useEffect(() => {
+    const el = ref.current;
+    if (!el || typeof IntersectionObserver === 'undefined') { setShown(true); return; }
+    const io = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) { setShown(true); io.disconnect(); }
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+  return (
+    <div ref={ref} style={{ overflow:'hidden', ...frameStyle }}>
+      <img src={src} alt={alt} {...rest} style={{ ...imgStyle,
+        transform: shown ? 'scale(1)' : 'scale(1.12)',
+        opacity: shown ? 1 : 0,
+        transition: 'transform 1s var(--ease-out), opacity 0.7s var(--ease-out)',
+        willChange: 'transform, opacity' }} />
     </div>
   );
 }
@@ -1786,12 +1817,12 @@ function MarbleShowcase({ onShop }) {
     <section style={{ background:'var(--surface-page)' }}>
       <div className="mc-showcase" style={{ maxWidth:'var(--container-max)', margin:'0 auto', padding:'72px 24px', display:'grid', gridTemplateColumns:'0.95fr 1.05fr', gap:'48px', alignItems:'center' }}>
         <Reveal>
-          <img src={window.MC_IMG['tritip']} alt="Tri-Tip de wagyu japonés A5 de alto marmoleo, empacado al vacío" loading="lazy" decoding="async"
+          <img src={window.MC_IMG['tritip']} alt="King River MB4-5, wagyu australiano de marmoleo MB4-5, empacado al vacío" loading="lazy" decoding="async"
             style={{ width:'100%', height:'auto', display:'block', borderRadius:'var(--radius-md)', boxShadow:'var(--shadow-md)' }} />
         </Reveal>
         <div>
-          <SectionHead eyebrow="Corte destacado" title="Tri-Tip Wagyu Japonés A5"
-            sub="Wagyu japonés auténtico grado A5 — la cima del marmoleo. Mantecoso e intenso, se deshace al contacto. Ideal para sellado y cortes finos. Porcionado a tu medida y empacado al vacío." />
+          <SectionHead eyebrow="Corte destacado" title="King River MB4-5"
+            sub="Wagyu australiano King River con marmoleo MB4-5 — equilibrio perfecto entre grasa y sabor a res. Jugoso, untuoso y versátil, rinde excelente en parrilla, sellado y cortes finos. Porcionado a tu medida y empacado al vacío." />
           <Button variant="primary" size="lg" onClick={onShop} iconRight={<Icon name="ArrowRight" size={18} color="#fff" />}>Ver Catálogo</Button>
         </div>
       </div>
@@ -1826,7 +1857,7 @@ function App() {
         <Hero onShop={() => nav('shop')} onQuote={quote} feature={PRODUCTS[0]} />
         <Services />
         <MarbleShowcase onShop={() => nav('shop')} />
-        <section style={{ maxWidth:'var(--container-max)', margin:'0 auto', padding:'64px 24px' }}>
+        <Reveal style={{ maxWidth:'var(--container-max)', margin:'0 auto', padding:'64px 24px' }}>
           <div className="mc-feature-head" style={{ display:'flex', alignItems:'flex-end', justifyContent:'space-between', marginBottom:'28px' }}>
             <div>
               <div style={{ fontFamily:'var(--font-display)', textTransform:'uppercase', letterSpacing:'0.18em', fontWeight:600, fontSize:'13px', color:'var(--mc-red)' }}>Del Mostrador</div>
@@ -1835,7 +1866,7 @@ function App() {
             <button onClick={() => nav('shop')} style={{ border:'none', background:'transparent', cursor:'pointer', display:'flex', alignItems:'center', gap:'8px', fontFamily:'var(--font-display)', textTransform:'uppercase', letterSpacing:'0.06em', fontWeight:600, fontSize:'14px', color:'var(--text-strong)' }}>Ver Todo <Icon name="ArrowRight" size={16} /></button>
           </div>
           <ProductGrid products={PRODUCTS.slice(0,4)} onAdd={add} onOpen={open} />
-        </section>
+        </Reveal>
         <Partners />
         <Clients />
         <ContactSection onQuote={quote} />
