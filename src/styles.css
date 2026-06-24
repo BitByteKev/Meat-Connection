@@ -1,3 +1,4 @@
+
 /* Meat Connection — Webfonts
    SUBSTITUTION NOTE: No brand font files were provided. Using closest Google Fonts:
    - Oswald  : condensed butcher-signage display (wordmark + headings)
@@ -159,26 +160,64 @@
   --dur-slow: 320ms; /* @kind other */
 }
 
-
 * { box-sizing:border-box; }
 body { margin:0; background:var(--surface-page); font-family:var(--font-body); -webkit-font-smoothing:antialiased; }
 a { color:inherit; }
 ::-webkit-scrollbar { width:10px; } ::-webkit-scrollbar-thumb { background:var(--mc-ink-300); border-radius:999px; }
-@media (max-width:860px){
+
+/* ===== Fluid type (applies at every width; !important beats inline styles) ===== */
+.mc-h1{ font-size:clamp(40px, 8.5vw, 76px) !important; }
+.mc-section-title{ font-size:clamp(28px, 5vw, 40px) !important; line-height:1.04 !important; }
+.mc-page-title{ font-size:clamp(32px, 6.5vw, 48px) !important; line-height:1.0 !important; }
+
+/* ===== Guard against horizontal overflow ===== */
+html, body{ overflow-x:hidden; max-width:100%; }
+img{ max-width:100%; }
+
+/* ===== Visible keyboard focus ===== */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, [tabindex]:focus-visible{
+  outline:3px solid var(--focus-ring); outline-offset:2px; border-radius:2px;
+}
+
+/* mobile menu button hidden by default (shown in tablet/mobile breakpoints) */
+.mc-menu-btn{ display:none; }
+
+/* ===== Tablet ===== */
+@media (max-width: 1024px){
+  .mc-services, .mc-subservices, .mc-brands, .mc-clients{ grid-template-columns:repeat(2, 1fr) !important; }
+}
+
+/* ===== Large phone / small tablet ===== */
+@media (max-width: 860px){
+  .mc-nav{ display:none !important; }
+  .mc-menu-btn{ display:flex !important; }
   .mc-hero{ grid-template-columns:1fr !important; gap:28px !important; padding:48px 20px !important; }
-  .mc-h1{ font-size:54px !important; }
   .mc-pdp{ grid-template-columns:1fr !important; gap:24px !important; }
-  .mc-foot{ grid-template-columns:1fr 1fr !important; gap:28px !important; }
-  .mc-nav,.mc-search{ display:none !important; }
-  .mc-services,.mc-brands,.mc-clients{ grid-template-columns:1fr 1fr !important; }
-  .mc-subservices{ grid-template-columns:1fr !important; }
   .mc-contact{ grid-template-columns:1fr !important; gap:32px !important; }
+  .mc-showcase{ grid-template-columns:1fr !important; gap:28px !important; padding:48px 20px !important; }
+  .mc-foot{ grid-template-columns:1fr 1fr !important; gap:28px !important; }
+  .mc-feature-head{ flex-direction:column !important; align-items:flex-start !important; gap:16px !important; }
 }
-@media (max-width:520px){
-  .mc-h1{ font-size:42px !important; }
-  .mc-stats{ flex-wrap:wrap; gap:18px !important; }
+
+/* ===== Phone ===== */
+@media (max-width: 600px){
+  .mc-services, .mc-subservices, .mc-brands, .mc-clients{ grid-template-columns:1fr !important; }
+  .mc-hero{ padding:40px 20px !important; }
+  .mc-hero-cta{ flex-direction:column !important; }
+  .mc-hero-cta > *{ width:100% !important; }
+  .mc-stats{ flex-wrap:wrap !important; gap:18px !important; }
   .mc-foot{ grid-template-columns:1fr !important; }
-  .mc-trust{ flex-direction:column; gap:8px !important; }
-  .mc-hero-cta{ flex-direction:column; }
-  .mc-services,.mc-brands,.mc-clients{ grid-template-columns:1fr !important; }
+  .mc-foot-legal{ flex-direction:column !important; gap:6px !important; text-align:center !important; }
+  .mc-trust{ flex-direction:column !important; gap:8px !important; align-items:flex-start !important; }
+  .mc-pdp-actions{ flex-wrap:wrap !important; }
 }
+
+/* ===== Respect reduced motion ===== */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation-duration:0.01ms !important;
+    transition-duration:0.01ms !important;
+    scroll-behavior:auto !important;
+  }
+}
+
