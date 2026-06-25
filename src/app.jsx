@@ -60,7 +60,7 @@ const PRODUCTS = [
   { id: 'tbone',    cat: 'au', tone: 'kraft' },
   { id: 'paleta',   cat: 'au', tone: 'cream' },
   { id: 'denver',   cat: 'au', tone: 'charcoal' },
-  { id: 'topround', cat: 'au', tone: 'kraft' },
+  { id: 'topround', cat: 'jp', tone: 'kraft' },
   { id: 'lengua',   cat: 'au', tone: 'red' },
   // Carne Americana
   { id: 'nyangus',   cat: 'us', tone: 'charcoal' },
@@ -282,43 +282,52 @@ function ProductGrid({ products, onOpen }) {
 }
 
 /* ===== Product detail ===== */
-/* Rich, per-product long description. Each section: { h, p?:[], list?:[], methods?:[{h, p?:[], list?:[]}] }. */
-function ProductDetails({ sections }) {
-  if (!sections || !sections.length) return null;
+/* Rich, per-product content. Each section: { h, p?:[], list?:[], methods?:[{h, p?:[], list?:[]}] }.
+   bucketDetails() splits a product's `details` across the Descripción / Origen / Cómo Cocinar tabs. */
+function bucketDetails(sections) {
+  const origin = [], cooking = [], description = [];
+  for (const s of (sections || [])) {
+    if (/^orig/i.test(s.h)) origin.push(s);
+    else if (/cocci|cooking/i.test(s.h)) cooking.push(s);
+    else description.push(s);
+  }
+  return { origin, cooking, description };
+}
+/* Renders rich detail sections (used inside the product tabs). `lead` is an optional intro paragraph. */
+function Sections({ sections, lead }) {
+  if (!lead && (!sections || !sections.length)) return null;
   const para = (txt, key) => <p key={key} style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.65, color: 'var(--text-body)', margin: '0 0 10px' }}>{txt}</p>;
   const bullets = (items, key) => <ul key={key} style={{ margin: '4px 0 10px', paddingLeft: '20px' }}>{items.map((li, i) => <li key={i} style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.6, color: 'var(--text-body)', margin: '5px 0' }}>{li}</li>)}</ul>;
   return (
-    <section style={{ maxWidth: '860px', margin: '52px 0 0', borderTop: '1px solid var(--border-subtle)', paddingTop: '36px' }}>
-      {sections.map((s, i) => (
-        <div key={i} style={{ marginTop: i ? '30px' : 0 }}>
-          <h2 style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 700, fontSize: '22px', lineHeight: 1.1, color: 'var(--text-strong)', margin: '0 0 12px' }}>{s.h}</h2>
-          {(s.p || []).map((t, j) => para(t, j))}
+    <div>
+      {lead && <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.65, color: 'var(--text-body)', margin: '0 0 16px' }}>{lead}</p>}
+      {(sections || []).map((s, i) => (
+        <div key={i} style={{ marginTop: i ? '22px' : 0 }}>
+          <h3 style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 700, fontSize: '16px', lineHeight: 1.15, color: 'var(--text-strong)', margin: '0 0 8px' }}>{s.h}</h3>
+          {(s.p || []).map((tx, j) => para(tx, j))}
           {s.list && bullets(s.list, 'l')}
           {(s.methods || []).map((m, j) => (
-            <div key={j} style={{ marginTop: '14px' }}>
-              <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 600, fontSize: '14px', color: 'var(--mc-red)', margin: '0 0 6px' }}>{m.h}</div>
-              {(m.p || []).map((t, k) => para(t, k))}
+            <div key={j} style={{ marginTop: '12px' }}>
+              <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 600, fontSize: '13px', color: 'var(--mc-red)', margin: '0 0 5px' }}>{m.h}</div>
+              {(m.p || []).map((tx, k) => para(tx, k))}
               {m.list && bullets(m.list, 'ml')}
             </div>
           ))}
         </div>
       ))}
-    </section>
+    </div>
   );
 }
 const qtyBtn = { width: '40px', height: '40px', border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--mc-charcoal)' };
+const tabPara = { fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.65, color: 'var(--text-body)', margin: 0 };
 function ProductDetail({ product, onAdd, onBack }) {
   const { Button, Badge, Tabs } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
   const p = t.products[product.id];
   const [tab, setTab] = React.useState('desc');
   const [qty, setQty] = React.useState(5);
-  const tabBody = {
-    desc: p.desc + t.pdp.descSuffix,
-    origin: product.cat === 'jp' ? t.pdp.originJP : product.cat === 'us' ? t.pdp.originUS : t.pdp.originAU,
-    cooking: t.pdp.cooking,
-    reviews: t.pdp.reviews,
-  };
+  const buckets = p.details ? bucketDetails(p.details) : null;
+  const genericOrigin = product.cat === 'jp' ? t.pdp.originJP : product.cat === 'us' ? t.pdp.originUS : t.pdp.originAU;
   return (
     <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '32px 24px 80px' }}>
       <button onClick={onBack} style={{ border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-muted)', fontFamily: 'var(--font-body)', fontSize: '14px', marginBottom: '24px', padding: 0 }}>
@@ -353,7 +362,11 @@ function ProductDetail({ product, onAdd, onBack }) {
             ))}
           </div>
           <Tabs value={tab} onChange={setTab} items={t.pdp.tabs} />
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.65, color: 'var(--text-body)', marginTop: '18px' }}>{tabBody[tab]}</p>
+          <div style={{ marginTop: '18px' }}>
+            {tab === 'desc' && (buckets ? <Sections lead={p.desc} sections={buckets.description} /> : <p style={tabPara}>{p.desc + t.pdp.descSuffix}</p>)}
+            {tab === 'origin' && (buckets && buckets.origin.length ? <Sections sections={buckets.origin} /> : <p style={tabPara}>{genericOrigin}</p>)}
+            {tab === 'cooking' && (buckets && buckets.cooking.length ? <Sections sections={buckets.cooking} /> : <p style={tabPara}>{t.pdp.cooking}</p>)}
+          </div>
           <div style={{ marginTop: '22px', padding: '16px 18px', background: 'var(--surface-sunken)', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-md)' }}>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '13.5px', lineHeight: 1.6, color: 'var(--text-body)', margin: 0 }}>{t.notice.processed}</p>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '12.5px', lineHeight: 1.55, color: 'var(--text-muted)', margin: '10px 0 0' }}>{t.notice.extraCost}</p>
@@ -361,7 +374,6 @@ function ProductDetail({ product, onAdd, onBack }) {
           </div>
         </div>
       </div>
-      {p.details && <ProductDetails sections={p.details} />}
     </div>
   );
 }
@@ -732,7 +744,7 @@ function MarbleShowcase({ onShop }) {
     <section style={{ background: 'var(--surface-page)' }}>
       <div className="mc-showcase" style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '72px 24px', display: 'grid', gridTemplateColumns: '0.95fr 1.05fr', gap: '48px', alignItems: 'center' }}>
         <Reveal>
-          <img src={window.MC_IMG['tritip']} alt={t.showcase.alt} loading="lazy" decoding="async"
+          <img src={window.MC_DESTACADO} alt={t.showcase.alt} loading="lazy" decoding="async"
             style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-md)' }} />
         </Reveal>
         <div>

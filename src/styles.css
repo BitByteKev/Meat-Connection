@@ -168,7 +168,7 @@ a { color:inherit; }
 /* ===== Fluid type (applies at every width; !important beats inline styles) ===== */
 .mc-h1{ font-size:clamp(40px, 8.5vw, 76px) !important; }
 .mc-section-title{ font-size:clamp(28px, 5vw, 40px) !important; line-height:1.04 !important; }
-.mc-page-title{ font-size:clamp(32px, 6.5vw, 48px) !important; line-height:1.0 !important; }
+.mc-page-title{ font-size:clamp(26px, 6.5vw, 48px) !important; line-height:1.04 !important; overflow-wrap:anywhere; }
 
 /* ===== Guard against horizontal overflow ===== */
 html, body{ overflow-x:hidden; max-width:100%; }
@@ -191,12 +191,15 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 @media (max-width: 860px){
   .mc-nav{ display:none !important; }
   .mc-menu-btn{ display:flex !important; }
-  .mc-hero{ grid-template-columns:1fr !important; gap:28px !important; padding:48px 20px !important; }
-  .mc-pdp{ grid-template-columns:1fr !important; gap:24px !important; }
-  .mc-contact{ grid-template-columns:1fr !important; gap:32px !important; }
-  .mc-showcase{ grid-template-columns:1fr !important; gap:28px !important; padding:48px 20px !important; }
+  .mc-hero{ grid-template-columns:minmax(0,1fr) !important; gap:28px !important; padding:48px 20px !important; }
+  .mc-pdp{ grid-template-columns:minmax(0,1fr) !important; gap:24px !important; }
+  .mc-contact{ grid-template-columns:minmax(0,1fr) !important; gap:32px !important; }
+  .mc-showcase{ grid-template-columns:minmax(0,1fr) !important; gap:28px !important; padding:48px 20px !important; }
   .mc-foot{ grid-template-columns:1fr 1fr !important; gap:28px !important; }
   .mc-feature-head{ flex-direction:column !important; align-items:flex-start !important; gap:16px !important; }
+  /* Let the design-system tab row wrap instead of overflowing the screen */
+  [role="tablist"]{ flex-wrap:wrap !important; }
+  .mc-pdp > div{ min-width:0 !important; }
 }
 
 /* ===== Phone ===== */
