@@ -184,7 +184,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 /* ===== Tablet ===== */
 @media (max-width: 1024px){
-  .mc-services, .mc-subservices, .mc-brands, .mc-clients{ grid-template-columns:repeat(2, 1fr) !important; }
+  .mc-services, .mc-subservices, .mc-brands, .mc-clients, .mc-testimonials{ grid-template-columns:repeat(2, 1fr) !important; }
 }
 
 /* ===== Large phone / small tablet ===== */
@@ -201,7 +201,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 /* ===== Phone ===== */
 @media (max-width: 600px){
-  .mc-services, .mc-subservices, .mc-brands, .mc-clients{ grid-template-columns:1fr !important; }
+  .mc-services, .mc-subservices, .mc-brands, .mc-clients, .mc-testimonials{ grid-template-columns:1fr !important; }
+  .mc-reorder-label{ display:none !important; }
+  .mc-langtoggle{ display:none !important; } /* stays available in the mobile menu */
   .mc-hero{ padding:40px 20px !important; }
   .mc-hero-cta{ flex-direction:column !important; }
   .mc-hero-cta > *{ width:100% !important; }

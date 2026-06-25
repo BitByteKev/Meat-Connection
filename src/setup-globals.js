@@ -10,7 +10,7 @@ import {
   ArrowLeft, ArrowRight, BedDouble, CheckCircle2, ChefHat, Facebook, Flag,
   Instagram, Menu, MessageCircle, Minus, Package, PartyPopper, Plane, Plus,
   ShieldCheck, ShoppingCart, Slice, Snowflake, Store, Trash2, Truck,
-  UtensilsCrossed, X,
+  UtensilsCrossed, X, RotateCcw, Quote,
 } from 'lucide'
 
 // Product / showcase / hero / logo images (decoded from the former base64 globals)
@@ -36,7 +36,7 @@ window.lucide = {
   ArrowLeft, ArrowRight, BedDouble, CheckCircle2, ChefHat, Facebook, Flag,
   Instagram, Menu, MessageCircle, Minus, Package, PartyPopper, Plane, Plus,
   ShieldCheck, ShoppingCart, Slice, Snowflake, Store, Trash2, Truck,
-  UtensilsCrossed, X,
+  UtensilsCrossed, X, RotateCcw, Quote,
 }
 
 window.MC_LOGO = mc_logo
