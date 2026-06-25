@@ -28,7 +28,8 @@ import img_tritip   from '../images/TRI-TIP-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.web
 import img_filete   from '../images/FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp'
 import img_ribeyeJp from '../images/RIB-EYE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp'
 import img_picana   from '../images/PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp'
-import img_ribeye   from '../images/RIB-EYE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-3.webp'
+import img_ribeye   from '../images/RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp'
+import img_ribeyeLow from '../images/RIB-EYE-WAGYU-AUSTRALIANO-BAJO-MARMOLEO-3-1.webp'
 import img_newyork  from '../images/NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp'
 import img_tbone    from '../images/T-BONE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp'
 import img_paleta   from '../images/PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp'
@@ -58,6 +59,7 @@ window.MC_IMG = {
   picana: img_picana,
   // Wagyu Australiano
   ribeye: img_ribeye,
+  ribeyeLow: img_ribeyeLow,
   newyork: img_newyork,
   tbone: img_tbone,
   paleta: img_paleta,

@@ -54,7 +54,8 @@ const PRODUCTS = [
   { id: 'ribeyeJp', cat: 'jp', tone: 'red' },
   { id: 'picana',   cat: 'jp', tone: 'cream' },
   // Wagyu Australiano
-  { id: 'ribeye',   cat: 'au', tone: 'red' },
+  { id: 'ribeye',    cat: 'au', tone: 'red' },
+  { id: 'ribeyeLow', cat: 'au', tone: 'kraft' },
   { id: 'newyork',  cat: 'au', tone: 'charcoal' },
   { id: 'tbone',    cat: 'au', tone: 'kraft' },
   { id: 'paleta',   cat: 'au', tone: 'cream' },
@@ -281,13 +282,37 @@ function ProductGrid({ products, onOpen }) {
 }
 
 /* ===== Product detail ===== */
+/* Rich, per-product long description. Each section: { h, p?:[], list?:[], methods?:[{h, p?:[], list?:[]}] }. */
+function ProductDetails({ sections }) {
+  if (!sections || !sections.length) return null;
+  const para = (txt, key) => <p key={key} style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.65, color: 'var(--text-body)', margin: '0 0 10px' }}>{txt}</p>;
+  const bullets = (items, key) => <ul key={key} style={{ margin: '4px 0 10px', paddingLeft: '20px' }}>{items.map((li, i) => <li key={i} style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.6, color: 'var(--text-body)', margin: '5px 0' }}>{li}</li>)}</ul>;
+  return (
+    <section style={{ maxWidth: '860px', margin: '52px 0 0', borderTop: '1px solid var(--border-subtle)', paddingTop: '36px' }}>
+      {sections.map((s, i) => (
+        <div key={i} style={{ marginTop: i ? '30px' : 0 }}>
+          <h2 style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 700, fontSize: '22px', lineHeight: 1.1, color: 'var(--text-strong)', margin: '0 0 12px' }}>{s.h}</h2>
+          {(s.p || []).map((t, j) => para(t, j))}
+          {s.list && bullets(s.list, 'l')}
+          {(s.methods || []).map((m, j) => (
+            <div key={j} style={{ marginTop: '14px' }}>
+              <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 600, fontSize: '14px', color: 'var(--mc-red)', margin: '0 0 6px' }}>{m.h}</div>
+              {(m.p || []).map((t, k) => para(t, k))}
+              {m.list && bullets(m.list, 'ml')}
+            </div>
+          ))}
+        </div>
+      ))}
+    </section>
+  );
+}
 const qtyBtn = { width: '40px', height: '40px', border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--mc-charcoal)' };
 function ProductDetail({ product, onAdd, onBack }) {
-  const { Button, Badge, Tabs, Select } = window.MeatConnectionDesignSystem_3e7a26;
+  const { Button, Badge, Tabs } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
   const p = t.products[product.id];
   const [tab, setTab] = React.useState('desc');
-  const [qty, setQty] = React.useState(1);
+  const [qty, setQty] = React.useState(5);
   const tabBody = {
     desc: p.desc + t.pdp.descSuffix,
     origin: product.cat === 'jp' ? t.pdp.originJP : product.cat === 'us' ? t.pdp.originUS : t.pdp.originAU,
@@ -309,13 +334,11 @@ function ProductDetail({ product, onAdd, onBack }) {
             <Badge tone="success">{t.pdp.available}</Badge>
           </div>
           <h1 className="mc-page-title" style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: '48px', lineHeight: 0.98, margin: '0 0 16px', color: 'var(--text-strong)' }}>{p.name}</h1>
-          <div className="mc-pdp-actions" style={{ display: 'flex', gap: '14px', alignItems: 'flex-end', margin: '24px 0' }}>
-            <div style={{ width: '170px' }}>
-              <Select label={t.pdp.presentation}><option>{t.pdp.optVacuum}</option><option>{t.pdp.optBulk}</option></Select>
-            </div>
-            <div style={{ display: 'flex', alignItems: 'center', border: '2px solid var(--mc-charcoal)', borderRadius: 'var(--radius-md)', height: '44px' }}>
-              <button onClick={() => setQty(Math.max(1, qty - 1))} style={qtyBtn}><Icon name="Minus" size={16} /></button>
-              <span style={{ width: '40px', textAlign: 'center', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '18px' }}>{qty}</span>
+          <div className="mc-pdp-actions" style={{ margin: '24px 0' }}>
+            <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{t.pdp.qtyLabel}</div>
+            <div style={{ display: 'inline-flex', alignItems: 'center', border: '2px solid var(--mc-charcoal)', borderRadius: 'var(--radius-md)', height: '44px' }}>
+              <button onClick={() => setQty(Math.max(5, qty - 1))} style={qtyBtn}><Icon name="Minus" size={16} /></button>
+              <span style={{ width: '48px', textAlign: 'center', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '18px' }}>{qty}</span>
               <button onClick={() => setQty(qty + 1)} style={qtyBtn}><Icon name="Plus" size={16} /></button>
             </div>
           </div>
@@ -338,6 +361,7 @@ function ProductDetail({ product, onAdd, onBack }) {
           </div>
         </div>
       </div>
+      {p.details && <ProductDetails sections={p.details} />}
     </div>
   );
 }
