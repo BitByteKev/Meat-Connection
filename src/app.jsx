@@ -30,14 +30,18 @@ const openWhatsApp = (msg) => window.open(waHref(msg), '_blank');
    Falls back to a generic reorder message until a first order is placed on this device. */
 const LAST_ORDER_KEY = 'mc_last_order';
 function saveLastOrder(items) {
-  try { localStorage.setItem(LAST_ORDER_KEY, JSON.stringify(items.map((i) => ({ id: i.id, qty: i.qty })))); } catch (e) {}
+  try { localStorage.setItem(LAST_ORDER_KEY, JSON.stringify(items.map((i) => ({ id: i.id, qty: i.qty, saleType: i.saleType })))); } catch (e) {}
 }
 function loadLastOrder() {
   try { const s = JSON.parse(localStorage.getItem(LAST_ORDER_KEY)); return Array.isArray(s) && s.length ? s : null; } catch (e) { return null; }
 }
 const productName = (id) => (getStrings().products[id] ? getStrings().products[id].name : id);
 function orderLines(items) {
-  return items.map((it) => '• ' + productName(it.id) + ' — ' + it.qty + ' kg').join('\n');
+  const S = getStrings().pdp;
+  return items.map((it) => {
+    const tipo = it.saleType === 'menudeo' ? S.menudeo : S.mayoreo;
+    return '• ' + productName(it.id) + ' — ' + it.qty + ' kg (' + tipo + ')';
+  }).join('\n');
 }
 function reorderWhatsApp() {
   const wa = getStrings().wa;
@@ -63,7 +67,7 @@ const PRODUCTS = [
   { id: 'topround', cat: 'jp', tone: 'kraft' },
   { id: 'lengua',   cat: 'au', tone: 'red' },
   // Carne Americana
-  { id: 'nyangus',   cat: 'us', tone: 'charcoal' },
+  { id: 'nyangus',   cat: 'au', tone: 'charcoal' },
   { id: 'salchicha', cat: 'us', tone: 'cream' },
 ];
 const TONE_BG = { charcoal: 'var(--mc-charcoal)', kraft: 'var(--mc-kraft)', cream: 'var(--mc-cream)', red: 'var(--mc-red)' };
@@ -325,7 +329,10 @@ function ProductDetail({ product, onAdd, onBack }) {
   const { t } = useLang();
   const p = t.products[product.id];
   const [tab, setTab] = React.useState('desc');
+  const [saleType, setSaleType] = React.useState('mayoreo');
   const [qty, setQty] = React.useState(5);
+  const minQty = saleType === 'mayoreo' ? 5 : 1;
+  const pickType = (val) => { setSaleType(val); if (val === 'mayoreo' && qty < 5) setQty(5); };
   const buckets = p.details ? bucketDetails(p.details) : null;
   const genericOrigin = product.cat === 'jp' ? t.pdp.originJP : product.cat === 'us' ? t.pdp.originUS : t.pdp.originAU;
   return (
@@ -343,15 +350,29 @@ function ProductDetail({ product, onAdd, onBack }) {
             <Badge tone="success">{t.pdp.available}</Badge>
           </div>
           <h1 className="mc-page-title" style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: '48px', lineHeight: 0.98, margin: '0 0 16px', color: 'var(--text-strong)' }}>{p.name}</h1>
-          <div className="mc-pdp-actions" style={{ margin: '24px 0' }}>
-            <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{t.pdp.qtyLabel}</div>
-            <div style={{ display: 'inline-flex', alignItems: 'center', border: '2px solid var(--mc-charcoal)', borderRadius: 'var(--radius-md)', height: '44px' }}>
-              <button onClick={() => setQty(Math.max(5, qty - 1))} style={qtyBtn}><Icon name="Minus" size={16} /></button>
-              <span style={{ width: '48px', textAlign: 'center', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '18px' }}>{qty}</span>
-              <button onClick={() => setQty(qty + 1)} style={qtyBtn}><Icon name="Plus" size={16} /></button>
+          <div className="mc-pdp-actions" style={{ margin: '24px 0', display: 'flex', flexWrap: 'wrap', gap: '20px', alignItems: 'flex-end' }}>
+            <div>
+              <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{t.pdp.saleType}</div>
+              <div role="group" aria-label={t.pdp.saleType} style={{ display: 'inline-flex', border: '2px solid var(--mc-charcoal)', borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
+                {[['mayoreo', t.pdp.mayoreo], ['menudeo', t.pdp.menudeo]].map(([val, label]) => {
+                  const on = saleType === val;
+                  return (
+                    <button key={val} onClick={() => pickType(val)} aria-pressed={on}
+                      style={{ border: 'none', cursor: 'pointer', padding: '0 16px', height: '44px', fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 700, fontSize: '13px', background: on ? 'var(--mc-charcoal)' : 'transparent', color: on ? 'var(--mc-paper)' : 'var(--text-strong)' }}>{label}</button>
+                  );
+                })}
+              </div>
+            </div>
+            <div>
+              <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{t.pdp.qtyLabel}</div>
+              <div style={{ display: 'inline-flex', alignItems: 'center', border: '2px solid var(--mc-charcoal)', borderRadius: 'var(--radius-md)', height: '44px' }}>
+                <button onClick={() => setQty(Math.max(minQty, qty - 1))} style={qtyBtn}><Icon name="Minus" size={16} /></button>
+                <span style={{ width: '48px', textAlign: 'center', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '18px' }}>{qty}</span>
+                <button onClick={() => setQty(qty + 1)} style={qtyBtn}><Icon name="Plus" size={16} /></button>
+              </div>
             </div>
           </div>
-          <Button variant="primary" size="lg" fullWidth onClick={() => onAdd(product, qty)} iconLeft={<Icon name="ShoppingCart" size={18} color="#fff" />}>
+          <Button variant="primary" size="lg" fullWidth onClick={() => onAdd(product, qty, saleType)} iconLeft={<Icon name="ShoppingCart" size={18} color="#fff" />}>
             {fmt(t.pdp.addToOrder, { qty })}
           </Button>
           <div className="mc-trust" style={{ display: 'flex', gap: '20px', margin: '20px 0 28px' }}>
@@ -370,7 +391,6 @@ function ProductDetail({ product, onAdd, onBack }) {
           <div style={{ marginTop: '22px', padding: '16px 18px', background: 'var(--surface-sunken)', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-md)' }}>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '13.5px', lineHeight: 1.6, color: 'var(--text-body)', margin: 0 }}>{t.notice.processed}</p>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '12.5px', lineHeight: 1.55, color: 'var(--text-muted)', margin: '10px 0 0' }}>{t.notice.extraCost}</p>
-            <p style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 700, fontSize: '13px', color: 'var(--mc-red)', margin: '12px 0 0' }}>{t.notice.wholesale}</p>
           </div>
         </div>
       </div>
@@ -406,7 +426,8 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
                   <img src={it.img || window.MC_IMG[it.id]} alt={t.products[it.id].name} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <div style={{ flex: 1 }}>
-                  <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 600, fontSize: '15px', color: 'var(--text-strong)', lineHeight: 1.1, marginBottom: '8px' }}>{t.products[it.id].name}</div>
+                  <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 600, fontSize: '15px', color: 'var(--text-strong)', lineHeight: 1.1, marginBottom: '3px' }}>{t.products[it.id].name}</div>
+                  <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--text-muted)', marginBottom: '8px' }}>{it.saleType === 'menudeo' ? t.pdp.menudeo : t.pdp.mayoreo}</div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-sm)' }}>
                       <button onClick={() => onQty(it, -1)} style={miniBtn}><Icon name="Minus" size={13} /></button>
@@ -421,7 +442,6 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
           </div>
         )}
         <div style={{ padding: '18px 22px', borderTop: '2px solid var(--mc-charcoal)', background: 'var(--mc-bone)' }}>
-          <p style={{ fontSize: '12px', color: 'var(--text-muted)', margin: '0 0 12px', textAlign: 'center' }}>{t.notice.wholesale}</p>
           <Button variant="primary" size="lg" fullWidth disabled={items.length === 0}
             onClick={() => { saveLastOrder(items); openWhatsApp(t.wa.orderIntro + '\n' + orderLines(items)); }}
             iconLeft={<Icon name="MessageCircle" size={18} color="#fff" />}>{t.cart.requestWhatsApp}</Button>
@@ -790,10 +810,10 @@ function App() {
   const [cat, setCat] = React.useState('all');
   const [cartOpen, setCartOpen] = React.useState(false);
   const [cart, setCart] = React.useState([]);
-  function add(product, qty = 1) {
+  function add(product, qty = 1, saleType = 'mayoreo') {
     setCart((c) => { const ex = c.find((i) => i.id === product.id);
-      if (ex) return c.map((i) => i.id === product.id ? { ...i, qty: i.qty + qty } : i);
-      return [...c, { ...product, qty }]; });
+      if (ex) return c.map((i) => i.id === product.id ? { ...i, qty: i.qty + qty, saleType } : i);
+      return [...c, { ...product, qty, saleType }]; });
     setCartOpen(true);
   }
   function changeQty(item, d) { setCart((c) => c.map((i) => i.id === item.id ? { ...i, qty: Math.max(1, i.qty + d) } : i)); }

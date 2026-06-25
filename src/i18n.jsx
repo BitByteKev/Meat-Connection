@@ -300,7 +300,31 @@ export const STRINGS = {
           ] },
         ] },
       // Carne Americana
-      nyangus:  { name: 'New York Black Angus', desc: 'New York Black Angus americano — sabor robusto y jugosidad clásica. El steak americano por excelencia.' },
+      nyangus:  { name: 'New York Black Angus Australiano · Marmoleo Medio', desc: 'New York Black Angus australiano de marmoleo medio — carne roja fresca con jugosidad sedosa.',
+        details: [
+          { h: 'Origen y crianza', p: ['Este New York Black Angus Australiano proviene de ganado criado en pasturas seleccionadas de Australia, siguiendo protocolos de bienestar animal y alimentación balanceada. Su marmoleo medio resulta de un control preciso en la fase de engorda, ofreciendo la combinación perfecta de sabor y textura.'] },
+          { h: 'Características del corte', list: [
+            'Corte New York (entrecot): extraído de la parte alta del lomo, con fibra definida y superficie amplia para un sellado óptimo.',
+            'Marmoleo medio: vetas de grasa intramuscular equilibradas que aportan jugosidad sin enmascarar el sabor natural de la carne.',
+            'Grosor homogéneo: pieza pareja que facilita tiempos de cocción consistentes.',
+          ] },
+          { h: 'Perfil sensorial', p: ['Al paladar despliega notas a carne roja fresca, con matices a nuez ligera y un delicado retrogusto dulce. La grasa intramuscular se funde de manera gradual, potenciando la sensación de jugosidad y dando un acabado sedoso.'] },
+          { h: 'Recomendaciones de cocción', methods: [
+            { h: 'Plancha o sartén de hierro fundido', list: ['Calienta a fuego medio-alto hasta que empiece a humear.', 'Sazona con sal gruesa y pimienta al momento de colocar la pieza.', 'Cocina 2–3 minutos por lado para término medio.'] },
+            { h: 'Parrilla directa', list: ['Sella cada lado 1–2 minutos a fuego fuerte.', 'Tras sellar, mueve a zona de calor indirecto y cocina 2 minutos adicionales por lado.'] },
+            { h: 'Reposo', p: ['Deja reposar 4–5 minutos cubierto con papel aluminio ligero para redistribuir jugos.'] },
+          ] },
+          { h: 'Valor nutricional', p: ['Con un marmoleo medio, este corte aporta proteínas de alta calidad, hierro y zinc, manteniendo un perfil razonable de grasas que incluyen ácidos grasos monoinsaturados, los cuales favorecen una experiencia más saludable sin sacrificar sabor.'] },
+          { h: 'Puntos clave', list: [
+            'Corte: New York (entrecot)',
+            'Raza: Black Angus Australiano',
+            'Marmoleo: Medio, equilibrio perfecto entre sabor y jugosidad',
+            'Textura: Firme pero jugosa, con acabado sedoso',
+            'Sabor: Carne roja fresca con matices a nuez y retrogusto dulce',
+            'Cocción: Ideal en sartén de hierro, plancha o parrilla',
+            'Reposo: 4–5 minutos para máxima jugosidad',
+          ] },
+        ] },
       salchicha:{ name: 'Salchicha Wagyu Americano · 4 Pack', badge: '4 Pack', desc: 'Salchicha de wagyu americano, paquete de 4. Jugosa y sabrosa, elaborada con recortes de wagyu premium.',
         details: [
           { h: 'Origen y calidad superior', p: ['La Salchicha Wagyu Americano se elabora con carne de res Wagyu criada en EE. UU. bajo altos estándares de bienestar animal y alimentación controlada. Cada paquete de 4 piezas combina cortes selectos para ofrecer un producto procesado de nivel gourmet.'] },
@@ -334,7 +358,7 @@ export const STRINGS = {
     },
     pdp: {
       back: 'Volver al catálogo', available: 'Disponible', presentation: 'Presentación',
-      qtyLabel: 'Cantidad (kg) · mínimo 5',
+      qtyLabel: 'Cantidad (kg)', saleType: 'Tipo de venta', mayoreo: 'Mayoreo', menudeo: 'Menudeo',
       addToOrder: 'Agregar {qty} kg a la cotización',
       trust: [['Truck', 'Envíos express a todo México'], ['ShieldCheck', 'Grado y trazabilidad'], ['Snowflake', 'Cadena de frío garantizada']],
       tabs: [{ id: 'desc', label: 'Descripción' }, { id: 'origin', label: 'Origen' }, { id: 'cooking', label: 'Cómo Cocinar' }],
@@ -394,7 +418,7 @@ export const STRINGS = {
       cta: 'Ver Catálogo', alt: 'King River MB4-5, wagyu australiano de marmoleo MB4-5, empacado al vacío',
     },
     bestsellers: { eyebrow: 'Del Mostrador', title: 'Cortes Más Vendidos', seeAll: 'Ver Todo' },
-    shop: { title: 'El Catálogo', count: '{n} cortes · solo ventas mayoristas' },
+    shop: { title: 'El Catálogo', count: '{n} cortes · mayoreo y menudeo' },
     footer: {
       catalogTitle: 'Catálogo', catalogItems: ['Wagyu Japonés A5', 'Wagyu Australiano', 'Carne Americana', 'Cajas de Mayoreo'],
       servicesTitle: 'Servicios', servicesItems: ['Envíos Express', 'Importación Directa', 'Cadena de Frío', 'Porcionado al Vacío'],
@@ -705,7 +729,31 @@ export const STRINGS = {
           ] },
         ] },
       // American Beef
-      nyangus:  { name: 'New York Black Angus', desc: 'American Black Angus New York — robust flavor and classic juiciness. The quintessential American steak.' },
+      nyangus:  { name: 'Australian Black Angus New York · Medium Marbling', desc: 'Australian Black Angus New York with medium marbling — fresh red meat with silky juiciness.',
+        details: [
+          { h: 'Origin & rearing', p: ['This Australian Black Angus New York comes from cattle raised on select Australian pastures, following animal-welfare protocols and balanced feeding. Its medium marbling results from precise control during the finishing phase, offering the perfect combination of flavor and texture.'] },
+          { h: 'Cut characteristics', list: [
+            'New York cut (strip loin): taken from the upper loin, with defined grain and a broad surface for an optimal sear.',
+            'Medium marbling: balanced intramuscular fat veins that add juiciness without masking the natural meat flavor.',
+            'Even thickness: a uniform piece that enables consistent cooking times.',
+          ] },
+          { h: 'Sensory profile', p: ['On the palate it unfolds notes of fresh red meat, with light nutty nuances and a delicate sweet aftertaste. The intramuscular fat melts gradually, boosting juiciness and giving a silky finish.'] },
+          { h: 'Cooking recommendations', methods: [
+            { h: 'Griddle or cast-iron skillet', list: ['Heat over medium-high until it begins to smoke.', 'Season with coarse salt and pepper as you place the cut.', 'Cook 2–3 minutes per side for medium.'] },
+            { h: 'Direct grilling', list: ['Sear each side 1–2 minutes over high heat.', 'After searing, move to an indirect-heat zone and cook 2 minutes more per side.'] },
+            { h: 'Rest', p: ['Rest 4–5 minutes loosely tented with foil to redistribute the juices.'] },
+          ] },
+          { h: 'Nutritional value', p: ['With medium marbling, this cut provides high-quality protein, iron and zinc, keeping a reasonable fat profile that includes monounsaturated fatty acids, which support a healthier experience without sacrificing flavor.'] },
+          { h: 'Key points', list: [
+            'Cut: New York (strip loin)',
+            'Breed: Australian Black Angus',
+            'Marbling: Medium, perfect balance of flavor and juiciness',
+            'Texture: Firm yet juicy, with a silky finish',
+            'Flavor: Fresh red meat with nutty notes and a sweet aftertaste',
+            'Cooking: Ideal in cast-iron skillet, griddle or grill',
+            'Rest: 4–5 minutes for maximum juiciness',
+          ] },
+        ] },
       salchicha:{ name: 'American Wagyu Sausage · 4-Pack', badge: '4-Pack', desc: 'American wagyu sausage, 4-pack. Juicy and flavorful, made from premium wagyu trim.',
         details: [
           { h: 'Origin & superior quality', p: ['The American Wagyu Sausage is made with Wagyu beef raised in the USA under high animal-welfare standards and controlled feeding. Each 4-piece pack combines select cuts to deliver a gourmet-level processed product.'] },
@@ -739,7 +787,7 @@ export const STRINGS = {
     },
     pdp: {
       back: 'Back to catalog', available: 'Available', presentation: 'Format',
-      qtyLabel: 'Quantity (kg) · 5 min',
+      qtyLabel: 'Quantity (kg)', saleType: 'Sale type', mayoreo: 'Wholesale', menudeo: 'Retail',
       addToOrder: 'Add {qty} kg to quote',
       trust: [['Truck', 'Express shipping nationwide'], ['ShieldCheck', 'Grade & traceability'], ['Snowflake', 'Guaranteed cold chain']],
       tabs: [{ id: 'desc', label: 'Description' }, { id: 'origin', label: 'Origin' }, { id: 'cooking', label: 'How to Cook' }],
@@ -799,7 +847,7 @@ export const STRINGS = {
       cta: 'View Catalog', alt: 'King River MB4-5, Australian MB4-5 marbled wagyu, vacuum-packed',
     },
     bestsellers: { eyebrow: 'From the Counter', title: 'Best-Selling Cuts', seeAll: 'View All' },
-    shop: { title: 'The Catalog', count: '{n} cuts · wholesale only' },
+    shop: { title: 'The Catalog', count: '{n} cuts · wholesale & retail' },
     footer: {
       catalogTitle: 'Catalog', catalogItems: ['Japanese Wagyu A5', 'Australian Wagyu', 'American Beef', 'Wholesale Boxes'],
       servicesTitle: 'Services', servicesItems: ['Express Shipping', 'Direct Import', 'Cold Chain', 'Vacuum Portioning'],
