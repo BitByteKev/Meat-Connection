@@ -251,7 +251,30 @@ export const STRINGS = {
             'Beneficios: Alto contenido de ácidos grasos monoinsaturados y vitaminas B.',
           ] },
         ] },
-      topround: { name: 'Top Round Wagyu Japonés · Marmoleo Alto', desc: 'Top Round de wagyu japonés, marmoleo poco común en este corte. Ideal en finas láminas o sukiyaki.' },
+      topround: { name: 'Top Round Wagyu Japonés A5 · Marmoleo Alto', desc: 'Top Round de wagyu japonés A5, marmoleo poco común en este corte. Ideal en finas láminas o sukiyaki.',
+        details: [
+          { h: 'Origen y excelencia A5', p: ['El Top Round Wagyu Japonés A5 proviene de reses criadas en granjas certificadas de Japón, donde se combinan técnicas ancestrales y estándares modernos de alimentación para lograr un marmoleo alto. Este grado A5 asegura un perfil de sabor y textura inigualable.'] },
+          { h: 'Características del corte', list: [
+            'Top Round (nalga): pieza magra con fibras largas y consistentes.',
+            'Marmoleo alto: vetas finas de grasa intramuscular que se funden durante la cocción, aportando jugosidad y riqueza de sabor.',
+            'Grosor parejo: facilita cocciones uniformes y resultados reproducibles.',
+          ] },
+          { h: 'Perfil sensorial', p: ['En cada rebanada emerge un umami concentrado con matices a nuez y un ligero dulzor natural. La textura se percibe suave y delicada al paladar, equilibrando la firmeza de la nalga con la jugosidad del marmoleo.'] },
+          { h: 'Recomendaciones de cocción', methods: [
+            { h: 'Sellado en sartén de hierro fundido', list: ['Precalienta a fuego medio-alto hasta que humee ligeramente.', 'Sazona con sal gruesa antes de colocar la pieza.', 'Sella 1–2 minutos por lado para marcar la superficie.'] },
+            { h: 'Cocción al horno a baja temperatura', list: ['Tras sellar, lleva al horno a 130 °C durante 10–12 minutos según grosor.', 'Alcanza término medio (55 °C) para mantener jugosidad.'] },
+            { h: 'Reposo', p: ['Deja reposar 4–5 minutos cubierto con papel aluminio para redistribuir jugos.'] },
+          ] },
+          { h: 'Valor nutricional', p: ['Este corte aporta proteínas de alta calidad, vitaminas del complejo B y minerales como hierro y zinc. Su grasa, mayormente monoinsaturada, contribuye a un perfil más saludable sin sacrificar sabor.'] },
+          { h: 'Puntos clave', list: [
+            'Corte: Top Round Wagyu Japonés A5',
+            'Marmoleo: Alto',
+            'Textura: Suave y jugosa',
+            'Sabor: Umami profundo con toques a nuez',
+            'Cocción: Sellado y horno a baja temperatura',
+            'Reposo: 4–5 minutos para máxima jugosidad',
+          ] },
+        ] },
       lengua:   { name: 'Lengua Wagyu Australiano · Marmoleo Alto', desc: 'Lengua de wagyu australiano de alto marmoleo. Una especialidad tersa y jugosa, perfecta para platillos de autor.',
         details: [
           { h: 'Origen y distinción', p: ['La Lengua Wagyu Australiano proviene de ganado criado en pasturas controladas de Australia, donde cada ejemplar recibe una alimentación balanceada que propicia un marmoleo excepcional. Con grado de marmoleo alto, este corte destaca por su riqueza de vetas intramusculares que aportan jugosidad y sabor concentrado.'] },
@@ -278,7 +301,30 @@ export const STRINGS = {
         ] },
       // Carne Americana
       nyangus:  { name: 'New York Black Angus', desc: 'New York Black Angus americano — sabor robusto y jugosidad clásica. El steak americano por excelencia.' },
-      salchicha:{ name: 'Salchicha Wagyu Americano · 4 Pack', badge: '4 Pack', desc: 'Salchicha de wagyu americano, paquete de 4. Jugosa y sabrosa, elaborada con recortes de wagyu premium.' },
+      salchicha:{ name: 'Salchicha Wagyu Americano · 4 Pack', badge: '4 Pack', desc: 'Salchicha de wagyu americano, paquete de 4. Jugosa y sabrosa, elaborada con recortes de wagyu premium.',
+        details: [
+          { h: 'Origen y calidad superior', p: ['La Salchicha Wagyu Americano se elabora con carne de res Wagyu criada en EE. UU. bajo altos estándares de bienestar animal y alimentación controlada. Cada paquete de 4 piezas combina cortes selectos para ofrecer un producto procesado de nivel gourmet.'] },
+          { h: 'Características del producto', list: [
+            'Paquete de 4 piezas: formato práctico para tu cocina o servicio.',
+            'Carne Wagyu: alto contenido de grasa intramuscular que aporta jugosidad y riqueza de sabor.',
+            'Condimentos artesanales: mezcla equilibrada de especias que realza el perfil umami sin opacar la carne.',
+          ] },
+          { h: 'Perfil sensorial', p: ['Cada bocado revela un umami suave con matices a carne asada y ligeros toques herbales. La emulsión de grasa Wagyu ofrece textura jugosa y un retrogusto delicado que distingue a estas salchichas de las convencionales.'] },
+          { h: 'Recomendaciones de cocción', methods: [
+            { h: 'Parrilla o sartén antiadherente', list: ['Calienta a fuego medio para evitar quemar la piel.', 'Cocina 4–5 minutos por lado, girando con frecuencia para un dorado parejo.'] },
+            { h: 'Horno', list: ['Precalienta a 180 °C.', 'Hornea 12–15 minutos sobre rejilla, volteando a la mitad del tiempo.'] },
+            { h: 'Evitar pinchazos', p: ['No perforar la piel para conservar los jugos en su interior.'] },
+          ] },
+          { h: 'Valor nutricional', p: ['Ricas en proteínas de alta calidad y con grasa Wagyu rica en ácido oleico (monoinsaturados), estas salchichas aportan además vitaminas B y minerales como hierro y zinc, ideales para opciones de menú con valor añadido.'] },
+          { h: 'Puntos clave', list: [
+            'Formato: Pack de 4 salchichas',
+            'Tipo de carne: Wagyu Americano',
+            'Textura: Jugosa y aterciopelada',
+            'Sabor: Umami suave con especias artesanales',
+            'Cocción: Parrilla, sartén u horno',
+            'Uso: Menús gourmet, eventos y servicios premium',
+          ] },
+        ] },
     },
     card: { readMore: 'Leer más' },
     notice: {
@@ -610,7 +656,30 @@ export const STRINGS = {
             'Benefits: high in monounsaturated fatty acids and B vitamins.',
           ] },
         ] },
-      topround: { name: 'Japanese Wagyu Top Round · High Marbling', desc: 'Japanese wagyu Top Round — rare marbling for this cut. Ideal thinly sliced or in sukiyaki.' },
+      topround: { name: 'Japanese Wagyu Top Round A5 · High Marbling', desc: 'Japanese A5 wagyu Top Round — rare marbling for this cut. Ideal thinly sliced or in sukiyaki.',
+        details: [
+          { h: 'Origin & A5 excellence', p: ['The Top Round Japanese Wagyu A5 comes from cattle raised on certified Japanese farms, combining traditional techniques with modern feeding standards to achieve high marbling. This A5 grade ensures an unmatched flavor and texture profile.'] },
+          { h: 'Cut characteristics', list: [
+            'Top Round: a lean cut with long, consistent grain.',
+            'High marbling: fine intramuscular fat threads that melt during cooking, adding juiciness and rich flavor.',
+            'Even thickness: enables uniform cooking and reproducible results.',
+          ] },
+          { h: 'Sensory profile', p: ['Each slice reveals concentrated umami with hints of nuts and a slight natural sweetness. The texture feels soft and delicate on the palate, balancing the firmness of the round with the juiciness of the marbling.'] },
+          { h: 'Cooking recommendations', methods: [
+            { h: 'Sear in a cast-iron skillet', list: ['Preheat over medium-high until lightly smoking.', 'Season with coarse salt before adding the cut.', 'Sear 1–2 minutes per side to mark the surface.'] },
+            { h: 'Low-temperature oven', list: ['After searing, transfer to a 130 °C oven for 10–12 minutes depending on thickness.', 'Reach medium (55 °C) to keep it juicy.'] },
+            { h: 'Rest', p: ['Rest 4–5 minutes tented with foil to redistribute the juices.'] },
+          ] },
+          { h: 'Nutritional value', p: ['This cut provides high-quality protein, B-complex vitamins and minerals such as iron and zinc. Its fat, mostly monounsaturated, contributes to a healthier profile without sacrificing flavor.'] },
+          { h: 'Key points', list: [
+            'Cut: Top Round Japanese Wagyu A5',
+            'Marbling: High',
+            'Texture: Soft and juicy',
+            'Flavor: Deep umami with hints of nuts',
+            'Cooking: Sear and low-temperature oven',
+            'Rest: 4–5 minutes for maximum juiciness',
+          ] },
+        ] },
       lengua:   { name: 'Australian Wagyu Tongue · High Marbling', desc: 'High-marbling Australian wagyu tongue. A tender, juicy specialty, perfect for signature dishes.',
         details: [
           { h: 'Origin & distinction', p: ['The Australian Wagyu Tongue comes from cattle raised on controlled Australian pastures, where each animal receives balanced feeding that promotes exceptional marbling. With a high marbling grade, this cut stands out for its rich intramuscular veining that brings juiciness and concentrated flavor.'] },
@@ -637,7 +706,30 @@ export const STRINGS = {
         ] },
       // American Beef
       nyangus:  { name: 'New York Black Angus', desc: 'American Black Angus New York — robust flavor and classic juiciness. The quintessential American steak.' },
-      salchicha:{ name: 'American Wagyu Sausage · 4-Pack', badge: '4-Pack', desc: 'American wagyu sausage, 4-pack. Juicy and flavorful, made from premium wagyu trim.' },
+      salchicha:{ name: 'American Wagyu Sausage · 4-Pack', badge: '4-Pack', desc: 'American wagyu sausage, 4-pack. Juicy and flavorful, made from premium wagyu trim.',
+        details: [
+          { h: 'Origin & superior quality', p: ['The American Wagyu Sausage is made with Wagyu beef raised in the USA under high animal-welfare standards and controlled feeding. Each 4-piece pack combines select cuts to deliver a gourmet-level processed product.'] },
+          { h: 'Product features', list: [
+            'Pack of 4: a practical format for your kitchen or service.',
+            'Wagyu beef: high intramuscular fat content that brings juiciness and rich flavor.',
+            'Artisan seasoning: a balanced spice blend that enhances the umami profile without overpowering the meat.',
+          ] },
+          { h: 'Sensory profile', p: ['Each bite reveals a mild umami with hints of grilled meat and light herbal touches. The Wagyu fat emulsion delivers a juicy texture and a delicate aftertaste that sets these sausages apart from conventional ones.'] },
+          { h: 'Cooking recommendations', methods: [
+            { h: 'Grill or non-stick pan', list: ['Heat over medium to avoid burning the casing.', 'Cook 4–5 minutes per side, turning often for even browning.'] },
+            { h: 'Oven', list: ['Preheat to 180 °C.', 'Bake 12–15 minutes on a rack, flipping halfway through.'] },
+            { h: 'Avoid piercing', p: ['Do not pierce the casing, to keep the juices inside.'] },
+          ] },
+          { h: 'Nutritional value', p: ['Rich in high-quality protein and with Wagyu fat high in oleic acid (monounsaturated), these sausages also provide B vitamins and minerals such as iron and zinc — ideal for value-added menu options.'] },
+          { h: 'Key points', list: [
+            'Format: pack of 4 sausages',
+            'Meat type: American Wagyu',
+            'Texture: Juicy and velvety',
+            'Flavor: Mild umami with artisan spices',
+            'Cooking: Grill, pan or oven',
+            'Use: Gourmet menus, events and premium service',
+          ] },
+        ] },
     },
     card: { readMore: 'Read more' },
     notice: {
