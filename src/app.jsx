@@ -325,6 +325,25 @@ function Sections({ sections, lead }) {
 }
 const qtyBtn = { width: '40px', height: '40px', border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--mc-charcoal)' };
 const tabPara = { fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.65, color: 'var(--text-body)', margin: 0 };
+/* Fullscreen image zoom (lightbox). Close on backdrop click, X, or Esc. */
+function Lightbox({ src, alt, onClose }) {
+  React.useEffect(() => {
+    const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+    document.addEventListener('keydown', onKey);
+    document.body.style.overflow = 'hidden';
+    return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
+  }, [onClose]);
+  return (
+    <div onClick={onClose} role="dialog" aria-modal="true" aria-label={alt}
+      style={{ position: 'fixed', inset: 0, background: 'rgba(15,15,15,0.93)', zIndex: 80, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', cursor: 'zoom-out' }}>
+      <button onClick={onClose} aria-label="Cerrar" style={{ position: 'absolute', top: '16px', right: '16px', width: '46px', height: '46px', border: 'none', background: 'rgba(255,255,255,0.12)', color: '#fff', borderRadius: '999px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <Icon name="X" size={24} color="#fff" />
+      </button>
+      <img src={src} alt={alt} onClick={(e) => e.stopPropagation()}
+        style={{ maxWidth: '95vw', maxHeight: '90vh', width: 'auto', height: 'auto', objectFit: 'contain', borderRadius: '6px', boxShadow: '0 12px 48px rgba(0,0,0,0.55)', cursor: 'default' }} />
+    </div>
+  );
+}
 function ProductDetail({ product, onAdd, onBack }) {
   const { Button, Badge, Tabs } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
@@ -334,6 +353,8 @@ function ProductDetail({ product, onAdd, onBack }) {
   const [qty, setQty] = React.useState(5);
   const minQty = saleType === 'mayoreo' ? 5 : 1;
   const pickType = (val) => { setSaleType(val); if (val === 'mayoreo' && qty < 5) setQty(5); };
+  const [zoom, setZoom] = React.useState(false);
+  const imgSrc = product.img || window.MC_IMG[product.id];
   const buckets = p.details ? bucketDetails(p.details) : null;
   const genericOrigin = product.cat === 'jp' ? t.pdp.originJP : product.cat === 'us' ? t.pdp.originUS : t.pdp.originAU;
   return (
@@ -342,8 +363,14 @@ function ProductDetail({ product, onAdd, onBack }) {
         <Icon name="ArrowLeft" size={16} color="var(--text-muted)" /> {t.pdp.back}
       </button>
       <div className="mc-pdp" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', alignItems: 'start' }}>
-        <div style={{ borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
+        <div style={{ borderRadius: 'var(--radius-md)', overflow: 'hidden', position: 'relative', cursor: imgSrc ? 'zoom-in' : 'default' }}
+          onClick={() => imgSrc && setZoom(true)} title={imgSrc ? 'Ampliar imagen' : undefined}>
           <ProductImage product={product} height={560} fit="contain" big />
+          {imgSrc && (
+            <div aria-hidden="true" style={{ position: 'absolute', bottom: '12px', right: '12px', width: '40px', height: '40px', borderRadius: '999px', background: 'rgba(20,20,20,0.62)', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
+              <Icon name="ZoomIn" size={20} color="#fff" />
+            </div>
+          )}
         </div>
         <div>
           <div style={{ display: 'flex', gap: '8px', marginBottom: '14px' }}>
@@ -395,6 +422,7 @@ function ProductDetail({ product, onAdd, onBack }) {
           </div>
         </div>
       </div>
+      {zoom && imgSrc && <Lightbox src={imgSrc} alt={p.name} onClose={() => setZoom(false)} />}
     </div>
   );
 }
