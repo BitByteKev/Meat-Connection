@@ -1,5 +1,6 @@
 import React from 'react'
 import * as ReactDOM from 'react-dom/client'
+import { Analytics } from '@vercel/analytics/react'
 import { LangProvider, useLang, getStrings, fmt } from './i18n.jsx'
 
 
@@ -861,4 +862,4 @@ function App() {
     </div>
   );
 }
-ReactDOM.createRoot(document.getElementById('root')).render(<LangProvider><App /></LangProvider>);
+ReactDOM.createRoot(document.getElementById('root')).render(<LangProvider><App /><Analytics /></LangProvider>);
