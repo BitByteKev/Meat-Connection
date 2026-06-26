@@ -49,7 +49,29 @@ export const STRINGS = {
             'Reposo: 4–5 minutos para máxima jugosidad',
           ] },
         ] },
-      filete:   { name: 'Filete Wagyu Japonés A5 · Marmoleo Alto', desc: 'Filete (lomo fino) de wagyu japonés A5. El corte más tierno, con marmoleo delicado y textura mantecosa.' },
+      filete:   { name: 'Filete Wagyu Japonés A5 · Marmoleo Alto', desc: 'Filete de wagyu japonés A5 — clasificación A5 y marmoleo BMS 8–12, en la cima de las carnes de lujo.',
+        details: [
+          { h: 'Origen y calidad insuperable', p: ['El Filete Wagyu Japonés A5 proviene de granjas certificadas en Japón, donde se cría bajo estrictos estándares de cuidado animal y alimentación balanceada. Con clasificación A5 y marmoleo BMS 8–12, este corte ofrece una consistencia y riqueza de sabor que lo ubican en la cima de las carnes de lujo.'] },
+          { h: 'Características del corte', list: [
+            'Filete de lomo bajo: pieza uniforme, con fibras finas y compactas.',
+            'Marmoleo extremo: finas vetas de grasa intramuscular que se funden al cocinar, aportando jugosidad y un perfil umami inigualable.',
+          ] },
+          { h: 'Perfil sensorial', p: ['Textura casi aterciopelada, con notas a nuez tostada, crema fresca y un delicado toque herbáceo. Su grasa intramuscular se derrite a baja temperatura, realzando el sabor de cada bocado.'] },
+          { h: 'Recomendaciones de cocción', methods: [
+            { h: 'Sartén de hierro fundido o plancha', list: ['Calentar hasta que humee ligeramente.', 'Sazonar con sal gruesa antes de sellar.', 'Cocinar 1–2 minutos por lado para término medio-rojo.'] },
+            { h: 'Parrilla de alta temperatura', list: ['Sellar 30–45 segundos por lado a fuego muy alto.', 'Retirar y dejar reposar 3–4 minutos cubierto con papel aluminio.'] },
+            { h: 'Reposo', p: ['Imprescindible: redistribuye jugos y mantiene la ternura.'] },
+          ] },
+          { h: 'Valor nutricional', p: ['Rico en ácidos grasos monoinsaturados (ácido oleico), aporta proteínas de alta biodisponibilidad, vitaminas B y minerales como hierro y zinc, ideal para propuestas de alto valor nutricional.'] },
+          { h: 'Puntos clave', list: [
+            'Grado: Wagyu Japonés A5 (BMS 8–12)',
+            'Corte: Filete de lomo bajo',
+            'Textura: Ultra-suave, jugosa y aterciopelada',
+            'Sabor: Umami profundo con matices a nuez y crema',
+            'Cocción: Sartén, plancha o parrilla de alta temperatura',
+            'Reposo: 3–4 minutos bajo papel aluminio para máxima jugosidad',
+          ] },
+        ] },
       ribeyeJp: { name: 'Rib Eye Wagyu Japonés A5 · Marmoleo Alto', desc: 'Rib eye de wagyu japonés A5 — marmoleo extremo y sabor profundo. La experiencia wagyu en su máxima expresión.',
         details: [
           { h: 'Origen y excelencia A5', p: ['El Rib Eye Wagyu Japonés A5 proviene de reses criadas en granjas certificadas de Japón, donde se combinan prácticas tradicionales y tecnología de punta para lograr un marmoleo BMS 8–12 excepcional. Este grado A5 representa la máxima calidad en textura y sabor.'] },
@@ -478,7 +500,29 @@ export const STRINGS = {
             'Rest: 4–5 minutes for maximum juiciness',
           ] },
         ] },
-      filete:   { name: 'Filet Japanese Wagyu A5 · High Marbling', desc: 'Japanese A5 wagyu filet (tenderloin). The most tender cut — delicate marbling, buttery texture.' },
+      filete:   { name: 'Filet Japanese Wagyu A5 · High Marbling', desc: 'Japanese A5 wagyu filet — A5 grading and BMS 8–12 marbling, at the very top of luxury meats.',
+        details: [
+          { h: 'Origin & unmatched quality', p: ['The Filet Japanese Wagyu A5 comes from certified farms in Japan, raised under strict animal-care standards and balanced feeding. With A5 grading and BMS 8–12 marbling, this cut offers a consistency and richness of flavor that place it at the very top of luxury meats.'] },
+          { h: 'Cut characteristics', list: [
+            'Striploin filet: a uniform piece with fine, compact grain.',
+            'Extreme marbling: fine intramuscular fat threads that melt as it cooks, adding juiciness and an unmatched umami profile.',
+          ] },
+          { h: 'Sensory profile', p: ['An almost velvety texture, with notes of toasted nuts, fresh cream and a delicate herbal touch. Its intramuscular fat melts at low temperature, enhancing the flavor of every bite.'] },
+          { h: 'Cooking recommendations', methods: [
+            { h: 'Cast-iron skillet or griddle', list: ['Heat until lightly smoking.', 'Season with coarse salt before searing.', 'Cook 1–2 minutes per side for medium-rare.'] },
+            { h: 'High-heat grill', list: ['Sear 30–45 seconds per side over very high heat.', 'Remove and rest 3–4 minutes tented with foil.'] },
+            { h: 'Rest', p: ['Essential: redistributes the juices and preserves tenderness.'] },
+          ] },
+          { h: 'Nutritional value', p: ['Rich in monounsaturated fatty acids (oleic acid), it provides highly bioavailable protein, B vitamins and minerals such as iron and zinc — ideal for high-nutritional-value offerings.'] },
+          { h: 'Key points', list: [
+            'Grade: Japanese Wagyu A5 (BMS 8–12)',
+            'Cut: striploin filet',
+            'Texture: ultra-soft, juicy and velvety',
+            'Flavor: deep umami with hints of nuts and cream',
+            'Cooking: skillet, griddle or high-heat grill',
+            'Rest: 3–4 minutes under foil for maximum juiciness',
+          ] },
+        ] },
       ribeyeJp: { name: 'Rib Eye Japanese Wagyu A5 · High Marbling', desc: 'Japanese A5 wagyu rib eye — extreme marbling and deep flavor. The wagyu experience at its peak.',
         details: [
           { h: 'Origin & A5 excellence', p: ['The Rib Eye Japanese Wagyu A5 comes from cattle raised on certified Japanese farms, combining traditional practices with cutting-edge technology to achieve exceptional BMS 8–12 marbling. This A5 grade represents the highest quality in texture and flavor.'] },
