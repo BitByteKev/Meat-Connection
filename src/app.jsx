@@ -253,7 +253,7 @@ function ProductCard({ product, onOpen }) {
       <div style={{ padding: '18px', display: 'flex', flexDirection: 'column', gap: '12px', flex: 1 }}>
         <div>
           <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 600, fontSize: '20px', lineHeight: 1.05, color: 'var(--text-strong)' }}>{p.name}</div>
-          <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '4px' }}>{p.desc}</div>
+          <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '4px' }}>{cardHook(p.description)}</div>
         </div>
         <div style={{ marginTop: 'auto' }}>
           <Button variant="secondary" size="sm" fullWidth onClick={(e) => { e.stopPropagation(); onOpen(product); }} iconRight={<Icon name="ArrowRight" size={15} color="currentColor" />}>{t.card.readMore}</Button>
@@ -271,39 +271,27 @@ function ProductGrid({ products, onOpen }) {
 }
 
 /* ===== Product detail ===== */
-/* Rich, per-product content. Each section: { h, p?:[], list?:[], methods?:[{h, p?:[], list?:[]}] }.
-   bucketDetails() splits a product's `details` across the Descripción / Origen / Cómo Cocinar tabs. */
-function bucketDetails(sections) {
-  const origin = [], cooking = [], description = [];
-  for (const s of (sections || [])) {
-    if (/^orig/i.test(s.h)) origin.push(s);
-    else if (/cocci|cooking/i.test(s.h)) cooking.push(s);
-    else description.push(s);
-  }
-  return { origin, cooking, description };
-}
-/* Renders rich detail sections (used inside the product tabs). `lead` is an optional intro paragraph. */
-function Sections({ sections, lead }) {
-  if (!lead && (!sections || !sections.length)) return null;
-  const para = (txt, key) => <p key={key} style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.65, color: 'var(--text-body)', margin: '0 0 10px' }}>{txt}</p>;
-  const bullets = (items, key) => <ul key={key} style={{ margin: '4px 0 10px', paddingLeft: '20px' }}>{items.map((li, i) => <li key={i} style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.6, color: 'var(--text-body)', margin: '5px 0' }}>{li}</li>)}</ul>;
+/* Per-product content is now plain text per language: description / origin / cooking.
+   The catalog card shows the first non-empty line of the description. */
+const cardHook = (text) => ((text || '').split('\n').find((l) => l.trim()) || '').trim();
+
+/* Renders one plain-text field as paragraphs + bullet lists. Blank lines separate
+   blocks; a block whose lines all start with `•` or `-` becomes a bullet list. */
+function TextBlock({ text }) {
+  if (!text || !text.trim()) return null;
+  const blocks = text.trim().split(/\n\s*\n/);
+  const para = { fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.65, color: 'var(--text-body)', margin: '0 0 12px', whiteSpace: 'pre-line' };
+  const li = { fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.6, color: 'var(--text-body)', margin: '5px 0' };
   return (
     <div>
-      {lead && <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.65, color: 'var(--text-body)', margin: '0 0 16px' }}>{lead}</p>}
-      {(sections || []).map((s, i) => (
-        <div key={i} style={{ marginTop: i ? '22px' : 0 }}>
-          <h3 style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 700, fontSize: '16px', lineHeight: 1.15, color: 'var(--text-strong)', margin: '0 0 8px' }}>{s.h}</h3>
-          {(s.p || []).map((tx, j) => para(tx, j))}
-          {s.list && bullets(s.list, 'l')}
-          {(s.methods || []).map((m, j) => (
-            <div key={j} style={{ marginTop: '12px' }}>
-              <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.05em', fontWeight: 600, fontSize: '13px', color: 'var(--mc-red)', margin: '0 0 5px' }}>{m.h}</div>
-              {(m.p || []).map((tx, k) => para(tx, k))}
-              {m.list && bullets(m.list, 'ml')}
-            </div>
-          ))}
-        </div>
-      ))}
+      {blocks.map((block, i) => {
+        const lines = block.split('\n').filter((l) => l.trim());
+        const allBullets = lines.length > 0 && lines.every((l) => /^\s*[•-]\s+/.test(l));
+        if (allBullets) {
+          return <ul key={i} style={{ margin: '4px 0 12px', paddingLeft: '20px' }}>{lines.map((l, j) => <li key={j} style={li}>{l.replace(/^\s*[•-]\s+/, '')}</li>)}</ul>;
+        }
+        return <p key={i} style={para}>{block}</p>;
+      })}
     </div>
   );
 }
@@ -339,7 +327,6 @@ function ProductDetail({ product, onAdd, onBack }) {
   const pickType = (val) => { setSaleType(val); if (val === 'mayoreo' && qty < 5) setQty(5); };
   const [zoom, setZoom] = React.useState(false);
   const imgSrc = product.img || window.MC_IMG[product.id];
-  const buckets = p.details ? bucketDetails(p.details) : null;
   const genericOrigin = product.cat === 'jp' ? t.pdp.originJP : product.cat === 'us' ? t.pdp.originUS : t.pdp.originAU;
   return (
     <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '32px 24px 80px' }}>
@@ -396,9 +383,9 @@ function ProductDetail({ product, onAdd, onBack }) {
           </div>
           <Tabs value={tab} onChange={setTab} items={t.pdp.tabs} />
           <div style={{ marginTop: '18px' }}>
-            {tab === 'desc' && (buckets ? <Sections lead={p.desc} sections={buckets.description} /> : <p style={tabPara}>{p.desc + t.pdp.descSuffix}</p>)}
-            {tab === 'origin' && (buckets && buckets.origin.length ? <Sections sections={buckets.origin} /> : <p style={tabPara}>{genericOrigin}</p>)}
-            {tab === 'cooking' && (buckets && buckets.cooking.length ? <Sections sections={buckets.cooking} /> : <p style={tabPara}>{t.pdp.cooking}</p>)}
+            {tab === 'desc' && (p.description ? <TextBlock text={p.description} /> : <p style={tabPara}>{t.pdp.descSuffix}</p>)}
+            {tab === 'origin' && (p.origin ? <TextBlock text={p.origin} /> : <p style={tabPara}>{genericOrigin}</p>)}
+            {tab === 'cooking' && (p.cooking ? <TextBlock text={p.cooking} /> : <p style={tabPara}>{t.pdp.cooking}</p>)}
           </div>
           <div style={{ marginTop: '22px', padding: '16px 18px', background: 'var(--surface-sunken)', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-md)' }}>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '13.5px', lineHeight: 1.6, color: 'var(--text-body)', margin: 0 }}>{t.notice.processed}</p>

@@ -63,28 +63,4 @@ const move = (arr, i, d) => {
   return next
 }
 
-// Editable list of plain strings (used for paragraphs `p[]` and bullets `list[]`).
-export function StringList({ label, items, onChange, rows = 2 }) {
-  const list = items || []
-  const set = (i, v) => onChange(list.map((x, k) => (k === i ? v : x)))
-  return (
-    <div style={{ marginBottom: '10px' }}>
-      {label && <span style={labelStyle}>{label}</span>}
-      {list.map((item, i) => (
-        <div key={i} style={{ display: 'flex', gap: '6px', alignItems: 'flex-start', marginBottom: '6px' }}>
-          <textarea style={{ ...inputBase, resize: 'vertical', lineHeight: 1.45 }} rows={rows} value={item}
-            onChange={(e) => set(i, e.target.value)} />
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
-            <button type="button" style={btn} title="Subir" onClick={() => onChange(move(list, i, -1))}>↑</button>
-            <button type="button" style={btn} title="Bajar" onClick={() => onChange(move(list, i, 1))}>↓</button>
-            <button type="button" style={btnDanger} title="Eliminar"
-              onClick={() => onChange(list.filter((_, k) => k !== i))}>✕</button>
-          </div>
-        </div>
-      ))}
-      <button type="button" style={btn} onClick={() => onChange([...list, ''])}>+ Agregar línea</button>
-    </div>
-  )
-}
-
 export { move }

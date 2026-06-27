@@ -46,8 +46,9 @@ function validateCatalog(products) {
       const L = p[lang]
       if (!L || typeof L !== 'object') return `${at}.${lang} object is required`
       if (typeof L.name !== 'string' || !L.name.trim()) return `${at}.${lang}.name is required`
-      if (typeof L.desc !== 'string') return `${at}.${lang}.desc must be a string`
-      if (!Array.isArray(L.details)) return `${at}.${lang}.details must be an array`
+      for (const field of ['description', 'origin', 'cooking']) {
+        if (typeof L[field] !== 'string') return `${at}.${lang}.${field} must be a string`
+      }
     }
   }
   return null
@@ -83,7 +84,8 @@ export default async function handler(req, res) {
   }
   const { password, products } = body || {}
 
-  if (!passwordMatches(password, process.env.ADMIN_PASSWORD)) {
+  // Trim the stored value so a stray pasted newline/space in the env var can't lock out the owner.
+  if (!passwordMatches(password, (process.env.ADMIN_PASSWORD || '').trim())) {
     return res.status(401).json({ error: 'unauthorized' })
   }
 

@@ -28,8 +28,9 @@ function stringsForLang(lang) {
     obj[p.id] = {
       name: p[lang].name,
       badge: p.badge[lang],
-      desc: p[lang].desc,
-      details: p[lang].details,
+      description: p[lang].description,
+      origin: p[lang].origin,
+      cooking: p[lang].cooking,
     }
   }
   return obj

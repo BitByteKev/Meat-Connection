@@ -10,141 +10,15 @@
     },
     "es": {
       "name": "Tri-Tip Wagyu Japonés A5 · Marmoleo Alto",
-      "desc": "Wagyu japonés auténtico grado A5 — la cima del marmoleo. Mantecoso, intenso, se deshace al contacto.",
-      "details": [
-        {
-          "h": "Origen y distinción A5",
-          "p": [
-            "El Tri-Tip Wagyu Japonés A5 proviene de reses criadas en granjas certificadas de Japón, donde técnicas ancestrales de alimentación y manejo animal dan lugar a un marmoleo BMS 8–12 excepcional. Su grado A5 garantiza la máxima expresión de sabor y ternura."
-          ]
-        },
-        {
-          "h": "Características del corte",
-          "list": [
-            "Tri-Tip (punta de cuadril): corte triangular con fibras consistentes y forma perfecta para lonchear.",
-            "Marmoleo alto: finas vetas de grasa intramuscular que se funden al cocinar, intensificando jugosidad y perfil umami.",
-            "Grosor parejo: facilita cocciones uniformes y resultados reproducibles en cada pieza."
-          ]
-        },
-        {
-          "h": "Perfil sensorial",
-          "p": [
-            "Cada rebanada ofrece un umami concentrado con matices a nuez tostada y crema fresca. La textura es suave y aterciopelada, con una jugosidad que se libera gradualmente al morder."
-          ]
-        },
-        {
-          "h": "Recomendaciones de cocción",
-          "methods": [
-            {
-              "h": "Sellado en sartén de hierro fundido",
-              "list": [
-                "Calienta a fuego medio-alto hasta que humee ligeramente.",
-                "Sazona con sal gruesa justo antes de sellar.",
-                "Sella 1–2 minutos por lado para crear costra."
-              ]
-            },
-            {
-              "h": "Cocción al horno",
-              "list": [
-                "Tras sellar, lleva al horno precalentado a 140 °C y cocina 8–10 minutos según grosor.",
-                "Busca término medio (55 °C) para conservar jugosidad."
-              ]
-            },
-            {
-              "h": "Reposo",
-              "p": [
-                "Deja reposar 4–5 minutos cubierto con papel aluminio para redistribuir jugos."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Valor nutricional",
-          "p": [
-            "Este corte aporta proteínas de alta calidad, vitaminas B y minerales como hierro y zinc. Su grasa rica en ácido oleico (monoinsaturados) contribuye a un perfil lipídico más saludable sin sacrificar sabor."
-          ]
-        },
-        {
-          "h": "Puntos clave",
-          "list": [
-            "Corte: Tri-Tip Wagyu Japonés A5",
-            "Marmoleo: Alto (BMS 8–12)",
-            "Textura: Suave y jugosa",
-            "Sabor: Umami intenso con matices a nuez",
-            "Cocción: Sellado y horno a baja temperatura",
-            "Reposo: 4–5 minutos para máxima jugosidad"
-          ]
-        }
-      ]
+      "description": "Wagyu japonés auténtico grado A5 — la cima del marmoleo. Mantecoso, intenso, se deshace al contacto.\n\nCaracterísticas del corte\n\n• Tri-Tip (punta de cuadril): corte triangular con fibras consistentes y forma perfecta para lonchear.\n• Marmoleo alto: finas vetas de grasa intramuscular que se funden al cocinar, intensificando jugosidad y perfil umami.\n• Grosor parejo: facilita cocciones uniformes y resultados reproducibles en cada pieza.\n\nPerfil sensorial\n\nCada rebanada ofrece un umami concentrado con matices a nuez tostada y crema fresca. La textura es suave y aterciopelada, con una jugosidad que se libera gradualmente al morder.\n\nValor nutricional\n\nEste corte aporta proteínas de alta calidad, vitaminas B y minerales como hierro y zinc. Su grasa rica en ácido oleico (monoinsaturados) contribuye a un perfil lipídico más saludable sin sacrificar sabor.\n\nPuntos clave\n\n• Corte: Tri-Tip Wagyu Japonés A5\n• Marmoleo: Alto (BMS 8–12)\n• Textura: Suave y jugosa\n• Sabor: Umami intenso con matices a nuez\n• Cocción: Sellado y horno a baja temperatura\n• Reposo: 4–5 minutos para máxima jugosidad",
+      "origin": "Origen y distinción A5\n\nEl Tri-Tip Wagyu Japonés A5 proviene de reses criadas en granjas certificadas de Japón, donde técnicas ancestrales de alimentación y manejo animal dan lugar a un marmoleo BMS 8–12 excepcional. Su grado A5 garantiza la máxima expresión de sabor y ternura.",
+      "cooking": "Recomendaciones de cocción\n\nSellado en sartén de hierro fundido\n• Calienta a fuego medio-alto hasta que humee ligeramente.\n• Sazona con sal gruesa justo antes de sellar.\n• Sella 1–2 minutos por lado para crear costra.\n\nCocción al horno\n• Tras sellar, lleva al horno precalentado a 140 °C y cocina 8–10 minutos según grosor.\n• Busca término medio (55 °C) para conservar jugosidad.\n\nReposo\nDeja reposar 4–5 minutos cubierto con papel aluminio para redistribuir jugos."
     },
     "en": {
       "name": "Tri-Tip Japanese Wagyu A5 · High Marbling",
-      "desc": "Authentic Japanese A5-grade wagyu — the peak of marbling. Buttery, intense, melts on contact.",
-      "details": [
-        {
-          "h": "Origin & A5 distinction",
-          "p": [
-            "The Tri-Tip Japanese Wagyu A5 comes from cattle raised on certified Japanese farms, where traditional feeding and animal-handling techniques produce exceptional BMS 8–12 marbling. Its A5 grade guarantees the fullest expression of flavor and tenderness."
-          ]
-        },
-        {
-          "h": "Cut characteristics",
-          "list": [
-            "Tri-Tip (sirloin cap): a triangular cut with consistent grain and the perfect shape for slicing.",
-            "High marbling: fine intramuscular fat threads that melt as it cooks, intensifying juiciness and the umami profile.",
-            "Even thickness: enables uniform cooking and reproducible results in every piece."
-          ]
-        },
-        {
-          "h": "Sensory profile",
-          "p": [
-            "Each slice offers concentrated umami with hints of toasted nuts and fresh cream. The texture is soft and velvety, with juiciness that releases gradually as you bite."
-          ]
-        },
-        {
-          "h": "Cooking recommendations",
-          "methods": [
-            {
-              "h": "Sear in a cast-iron skillet",
-              "list": [
-                "Heat over medium-high until lightly smoking.",
-                "Season with coarse salt just before searing.",
-                "Sear 1–2 minutes per side to build a crust."
-              ]
-            },
-            {
-              "h": "Finish in the oven",
-              "list": [
-                "After searing, transfer to an oven preheated to 140 °C and cook 8–10 minutes depending on thickness.",
-                "Aim for medium (55 °C) to keep it juicy."
-              ]
-            },
-            {
-              "h": "Rest",
-              "p": [
-                "Rest 4–5 minutes tented with foil to redistribute the juices."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Nutritional value",
-          "p": [
-            "This cut provides high-quality protein, B vitamins and minerals such as iron and zinc. Its oleic-acid-rich (monounsaturated) fat contributes to a healthier lipid profile without sacrificing flavor."
-          ]
-        },
-        {
-          "h": "Key points",
-          "list": [
-            "Cut: Tri-Tip Japanese Wagyu A5",
-            "Marbling: High (BMS 8–12)",
-            "Texture: Soft and juicy",
-            "Flavor: Intense umami with hints of nuts",
-            "Cooking: Sear and low-temperature oven",
-            "Rest: 4–5 minutes for maximum juiciness"
-          ]
-        }
-      ]
+      "description": "Authentic Japanese A5-grade wagyu — the peak of marbling. Buttery, intense, melts on contact.\n\nCut characteristics\n\n• Tri-Tip (sirloin cap): a triangular cut with consistent grain and the perfect shape for slicing.\n• High marbling: fine intramuscular fat threads that melt as it cooks, intensifying juiciness and the umami profile.\n• Even thickness: enables uniform cooking and reproducible results in every piece.\n\nSensory profile\n\nEach slice offers concentrated umami with hints of toasted nuts and fresh cream. The texture is soft and velvety, with juiciness that releases gradually as you bite.\n\nNutritional value\n\nThis cut provides high-quality protein, B vitamins and minerals such as iron and zinc. Its oleic-acid-rich (monounsaturated) fat contributes to a healthier lipid profile without sacrificing flavor.\n\nKey points\n\n• Cut: Tri-Tip Japanese Wagyu A5\n• Marbling: High (BMS 8–12)\n• Texture: Soft and juicy\n• Flavor: Intense umami with hints of nuts\n• Cooking: Sear and low-temperature oven\n• Rest: 4–5 minutes for maximum juiciness",
+      "origin": "Origin & A5 distinction\n\nThe Tri-Tip Japanese Wagyu A5 comes from cattle raised on certified Japanese farms, where traditional feeding and animal-handling techniques produce exceptional BMS 8–12 marbling. Its A5 grade guarantees the fullest expression of flavor and tenderness.",
+      "cooking": "Cooking recommendations\n\nSear in a cast-iron skillet\n• Heat over medium-high until lightly smoking.\n• Season with coarse salt just before searing.\n• Sear 1–2 minutes per side to build a crust.\n\nFinish in the oven\n• After searing, transfer to an oven preheated to 140 °C and cook 8–10 minutes depending on thickness.\n• Aim for medium (55 °C) to keep it juicy.\n\nRest\nRest 4–5 minutes tented with foil to redistribute the juices."
     }
   },
   {
@@ -158,139 +32,15 @@
     },
     "es": {
       "name": "Filete Wagyu Japonés A5 · Marmoleo Alto",
-      "desc": "Filete de wagyu japonés A5 — clasificación A5 y marmoleo BMS 8–12, en la cima de las carnes de lujo.",
-      "details": [
-        {
-          "h": "Origen y calidad insuperable",
-          "p": [
-            "El Filete Wagyu Japonés A5 proviene de granjas certificadas en Japón, donde se cría bajo estrictos estándares de cuidado animal y alimentación balanceada. Con clasificación A5 y marmoleo BMS 8–12, este corte ofrece una consistencia y riqueza de sabor que lo ubican en la cima de las carnes de lujo."
-          ]
-        },
-        {
-          "h": "Características del corte",
-          "list": [
-            "Filete de lomo bajo: pieza uniforme, con fibras finas y compactas.",
-            "Marmoleo extremo: finas vetas de grasa intramuscular que se funden al cocinar, aportando jugosidad y un perfil umami inigualable."
-          ]
-        },
-        {
-          "h": "Perfil sensorial",
-          "p": [
-            "Textura casi aterciopelada, con notas a nuez tostada, crema fresca y un delicado toque herbáceo. Su grasa intramuscular se derrite a baja temperatura, realzando el sabor de cada bocado."
-          ]
-        },
-        {
-          "h": "Recomendaciones de cocción",
-          "methods": [
-            {
-              "h": "Sartén de hierro fundido o plancha",
-              "list": [
-                "Calentar hasta que humee ligeramente.",
-                "Sazonar con sal gruesa antes de sellar.",
-                "Cocinar 1–2 minutos por lado para término medio-rojo."
-              ]
-            },
-            {
-              "h": "Parrilla de alta temperatura",
-              "list": [
-                "Sellar 30–45 segundos por lado a fuego muy alto.",
-                "Retirar y dejar reposar 3–4 minutos cubierto con papel aluminio."
-              ]
-            },
-            {
-              "h": "Reposo",
-              "p": [
-                "Imprescindible: redistribuye jugos y mantiene la ternura."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Valor nutricional",
-          "p": [
-            "Rico en ácidos grasos monoinsaturados (ácido oleico), aporta proteínas de alta biodisponibilidad, vitaminas B y minerales como hierro y zinc, ideal para propuestas de alto valor nutricional."
-          ]
-        },
-        {
-          "h": "Puntos clave",
-          "list": [
-            "Grado: Wagyu Japonés A5 (BMS 8–12)",
-            "Corte: Filete de lomo bajo",
-            "Textura: Ultra-suave, jugosa y aterciopelada",
-            "Sabor: Umami profundo con matices a nuez y crema",
-            "Cocción: Sartén, plancha o parrilla de alta temperatura",
-            "Reposo: 3–4 minutos bajo papel aluminio para máxima jugosidad"
-          ]
-        }
-      ]
+      "description": "Filete de wagyu japonés A5 — clasificación A5 y marmoleo BMS 8–12, en la cima de las carnes de lujo.\n\nCaracterísticas del corte\n\n• Filete de lomo bajo: pieza uniforme, con fibras finas y compactas.\n• Marmoleo extremo: finas vetas de grasa intramuscular que se funden al cocinar, aportando jugosidad y un perfil umami inigualable.\n\nPerfil sensorial\n\nTextura casi aterciopelada, con notas a nuez tostada, crema fresca y un delicado toque herbáceo. Su grasa intramuscular se derrite a baja temperatura, realzando el sabor de cada bocado.\n\nValor nutricional\n\nRico en ácidos grasos monoinsaturados (ácido oleico), aporta proteínas de alta biodisponibilidad, vitaminas B y minerales como hierro y zinc, ideal para propuestas de alto valor nutricional.\n\nPuntos clave\n\n• Grado: Wagyu Japonés A5 (BMS 8–12)\n• Corte: Filete de lomo bajo\n• Textura: Ultra-suave, jugosa y aterciopelada\n• Sabor: Umami profundo con matices a nuez y crema\n• Cocción: Sartén, plancha o parrilla de alta temperatura\n• Reposo: 3–4 minutos bajo papel aluminio para máxima jugosidad",
+      "origin": "Origen y calidad insuperable\n\nEl Filete Wagyu Japonés A5 proviene de granjas certificadas en Japón, donde se cría bajo estrictos estándares de cuidado animal y alimentación balanceada. Con clasificación A5 y marmoleo BMS 8–12, este corte ofrece una consistencia y riqueza de sabor que lo ubican en la cima de las carnes de lujo.",
+      "cooking": "Recomendaciones de cocción\n\nSartén de hierro fundido o plancha\n• Calentar hasta que humee ligeramente.\n• Sazonar con sal gruesa antes de sellar.\n• Cocinar 1–2 minutos por lado para término medio-rojo.\n\nParrilla de alta temperatura\n• Sellar 30–45 segundos por lado a fuego muy alto.\n• Retirar y dejar reposar 3–4 minutos cubierto con papel aluminio.\n\nReposo\nImprescindible: redistribuye jugos y mantiene la ternura."
     },
     "en": {
       "name": "Filet Japanese Wagyu A5 · High Marbling",
-      "desc": "Japanese A5 wagyu filet — A5 grading and BMS 8–12 marbling, at the very top of luxury meats.",
-      "details": [
-        {
-          "h": "Origin & unmatched quality",
-          "p": [
-            "The Filet Japanese Wagyu A5 comes from certified farms in Japan, raised under strict animal-care standards and balanced feeding. With A5 grading and BMS 8–12 marbling, this cut offers a consistency and richness of flavor that place it at the very top of luxury meats."
-          ]
-        },
-        {
-          "h": "Cut characteristics",
-          "list": [
-            "Striploin filet: a uniform piece with fine, compact grain.",
-            "Extreme marbling: fine intramuscular fat threads that melt as it cooks, adding juiciness and an unmatched umami profile."
-          ]
-        },
-        {
-          "h": "Sensory profile",
-          "p": [
-            "An almost velvety texture, with notes of toasted nuts, fresh cream and a delicate herbal touch. Its intramuscular fat melts at low temperature, enhancing the flavor of every bite."
-          ]
-        },
-        {
-          "h": "Cooking recommendations",
-          "methods": [
-            {
-              "h": "Cast-iron skillet or griddle",
-              "list": [
-                "Heat until lightly smoking.",
-                "Season with coarse salt before searing.",
-                "Cook 1–2 minutes per side for medium-rare."
-              ]
-            },
-            {
-              "h": "High-heat grill",
-              "list": [
-                "Sear 30–45 seconds per side over very high heat.",
-                "Remove and rest 3–4 minutes tented with foil."
-              ]
-            },
-            {
-              "h": "Rest",
-              "p": [
-                "Essential: redistributes the juices and preserves tenderness."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Nutritional value",
-          "p": [
-            "Rich in monounsaturated fatty acids (oleic acid), it provides highly bioavailable protein, B vitamins and minerals such as iron and zinc — ideal for high-nutritional-value offerings."
-          ]
-        },
-        {
-          "h": "Key points",
-          "list": [
-            "Grade: Japanese Wagyu A5 (BMS 8–12)",
-            "Cut: striploin filet",
-            "Texture: ultra-soft, juicy and velvety",
-            "Flavor: deep umami with hints of nuts and cream",
-            "Cooking: skillet, griddle or high-heat grill",
-            "Rest: 3–4 minutes under foil for maximum juiciness"
-          ]
-        }
-      ]
+      "description": "Japanese A5 wagyu filet — A5 grading and BMS 8–12 marbling, at the very top of luxury meats.\n\nCut characteristics\n\n• Striploin filet: a uniform piece with fine, compact grain.\n• Extreme marbling: fine intramuscular fat threads that melt as it cooks, adding juiciness and an unmatched umami profile.\n\nSensory profile\n\nAn almost velvety texture, with notes of toasted nuts, fresh cream and a delicate herbal touch. Its intramuscular fat melts at low temperature, enhancing the flavor of every bite.\n\nNutritional value\n\nRich in monounsaturated fatty acids (oleic acid), it provides highly bioavailable protein, B vitamins and minerals such as iron and zinc — ideal for high-nutritional-value offerings.\n\nKey points\n\n• Grade: Japanese Wagyu A5 (BMS 8–12)\n• Cut: striploin filet\n• Texture: ultra-soft, juicy and velvety\n• Flavor: deep umami with hints of nuts and cream\n• Cooking: skillet, griddle or high-heat grill\n• Rest: 3–4 minutes under foil for maximum juiciness",
+      "origin": "Origin & unmatched quality\n\nThe Filet Japanese Wagyu A5 comes from certified farms in Japan, raised under strict animal-care standards and balanced feeding. With A5 grading and BMS 8–12 marbling, this cut offers a consistency and richness of flavor that place it at the very top of luxury meats.",
+      "cooking": "Cooking recommendations\n\nCast-iron skillet or griddle\n• Heat until lightly smoking.\n• Season with coarse salt before searing.\n• Cook 1–2 minutes per side for medium-rare.\n\nHigh-heat grill\n• Sear 30–45 seconds per side over very high heat.\n• Remove and rest 3–4 minutes tented with foil.\n\nRest\nEssential: redistributes the juices and preserves tenderness."
     }
   },
   {
@@ -304,141 +54,15 @@
     },
     "es": {
       "name": "Rib Eye Wagyu Japonés A5 · Marmoleo Alto",
-      "desc": "Rib eye de wagyu japonés A5 — marmoleo extremo y sabor profundo. La experiencia wagyu en su máxima expresión.",
-      "details": [
-        {
-          "h": "Origen y excelencia A5",
-          "p": [
-            "El Rib Eye Wagyu Japonés A5 proviene de reses criadas en granjas certificadas de Japón, donde se combinan prácticas tradicionales y tecnología de punta para lograr un marmoleo BMS 8–12 excepcional. Este grado A5 representa la máxima calidad en textura y sabor."
-          ]
-        },
-        {
-          "h": "Características del corte",
-          "list": [
-            "Rib Eye (ojo de costilla): corte noble con equilibrio perfecto entre músculo y grasa.",
-            "Marmoleo alto: vetas de grasa intramuscular que se funden al cocinar, realzando el perfil umami.",
-            "Fibra fina y uniforme: garantiza cocción pareja y reproducción exacta de resultados."
-          ]
-        },
-        {
-          "h": "Perfil sensorial",
-          "p": [
-            "Cada bocado despliega un umami profundo con toques a nuez y crema fresca. La grasa intramuscular se derrite de forma homogénea, dejando la carne suave y jugosa, con una sensación aterciopelada en el paladar."
-          ]
-        },
-        {
-          "h": "Recomendaciones de cocción",
-          "methods": [
-            {
-              "h": "Sartén de hierro fundido",
-              "list": [
-                "Precalienta a fuego medio-alto hasta que humee ligeramente.",
-                "Sazona con sal gruesa justo antes de sellar.",
-                "Cocina 1–2 minutos por lado para término medio-rojo."
-              ]
-            },
-            {
-              "h": "Parrilla directa",
-              "list": [
-                "Sella 30–45 segundos por lado a fuego muy fuerte.",
-                "Mueve a calor medio y cocina 1–2 minutos adicionales por lado."
-              ]
-            },
-            {
-              "h": "Reposo",
-              "p": [
-                "Deja reposar 3–4 minutos cubierto con papel aluminio para redistribuir jugos."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Valor nutricional",
-          "p": [
-            "Este corte aporta proteínas de alta calidad, vitaminas del complejo B y minerales como hierro y zinc. Su grasa, rica en ácidos grasos monoinsaturados (ácido oleico), contribuye a un perfil lipídico más saludable sin comprometer el sabor."
-          ]
-        },
-        {
-          "h": "Puntos clave",
-          "list": [
-            "Corte: Rib Eye Wagyu Japonés A5",
-            "Marmoleo: Alto (BMS 8–12)",
-            "Textura: Aterciopelada y jugosa",
-            "Sabor: Umami intenso con matices a nuez y crema",
-            "Cocción: Sartén, plancha o parrilla de alta temperatura",
-            "Reposo: 3–4 minutos bajo papel aluminio"
-          ]
-        }
-      ]
+      "description": "Rib eye de wagyu japonés A5 — marmoleo extremo y sabor profundo. La experiencia wagyu en su máxima expresión.\n\nCaracterísticas del corte\n\n• Rib Eye (ojo de costilla): corte noble con equilibrio perfecto entre músculo y grasa.\n• Marmoleo alto: vetas de grasa intramuscular que se funden al cocinar, realzando el perfil umami.\n• Fibra fina y uniforme: garantiza cocción pareja y reproducción exacta de resultados.\n\nPerfil sensorial\n\nCada bocado despliega un umami profundo con toques a nuez y crema fresca. La grasa intramuscular se derrite de forma homogénea, dejando la carne suave y jugosa, con una sensación aterciopelada en el paladar.\n\nValor nutricional\n\nEste corte aporta proteínas de alta calidad, vitaminas del complejo B y minerales como hierro y zinc. Su grasa, rica en ácidos grasos monoinsaturados (ácido oleico), contribuye a un perfil lipídico más saludable sin comprometer el sabor.\n\nPuntos clave\n\n• Corte: Rib Eye Wagyu Japonés A5\n• Marmoleo: Alto (BMS 8–12)\n• Textura: Aterciopelada y jugosa\n• Sabor: Umami intenso con matices a nuez y crema\n• Cocción: Sartén, plancha o parrilla de alta temperatura\n• Reposo: 3–4 minutos bajo papel aluminio",
+      "origin": "Origen y excelencia A5\n\nEl Rib Eye Wagyu Japonés A5 proviene de reses criadas en granjas certificadas de Japón, donde se combinan prácticas tradicionales y tecnología de punta para lograr un marmoleo BMS 8–12 excepcional. Este grado A5 representa la máxima calidad en textura y sabor.",
+      "cooking": "Recomendaciones de cocción\n\nSartén de hierro fundido\n• Precalienta a fuego medio-alto hasta que humee ligeramente.\n• Sazona con sal gruesa justo antes de sellar.\n• Cocina 1–2 minutos por lado para término medio-rojo.\n\nParrilla directa\n• Sella 30–45 segundos por lado a fuego muy fuerte.\n• Mueve a calor medio y cocina 1–2 minutos adicionales por lado.\n\nReposo\nDeja reposar 3–4 minutos cubierto con papel aluminio para redistribuir jugos."
     },
     "en": {
       "name": "Rib Eye Japanese Wagyu A5 · High Marbling",
-      "desc": "Japanese A5 wagyu rib eye — extreme marbling and deep flavor. The wagyu experience at its peak.",
-      "details": [
-        {
-          "h": "Origin & A5 excellence",
-          "p": [
-            "The Rib Eye Japanese Wagyu A5 comes from cattle raised on certified Japanese farms, combining traditional practices with cutting-edge technology to achieve exceptional BMS 8–12 marbling. This A5 grade represents the highest quality in texture and flavor."
-          ]
-        },
-        {
-          "h": "Cut characteristics",
-          "list": [
-            "Rib Eye: a noble cut with a perfect balance of muscle and fat.",
-            "High marbling: intramuscular fat veins that melt as it cooks, enhancing the umami profile.",
-            "Fine, uniform grain: ensures even cooking and exact reproduction of results."
-          ]
-        },
-        {
-          "h": "Sensory profile",
-          "p": [
-            "Each bite unfolds deep umami with hints of nuts and fresh cream. The intramuscular fat melts evenly, leaving the meat soft and juicy, with a velvety sensation on the palate."
-          ]
-        },
-        {
-          "h": "Cooking recommendations",
-          "methods": [
-            {
-              "h": "Cast-iron skillet",
-              "list": [
-                "Preheat over medium-high until lightly smoking.",
-                "Season with coarse salt just before searing.",
-                "Cook 1–2 minutes per side for medium-rare."
-              ]
-            },
-            {
-              "h": "Direct grilling",
-              "list": [
-                "Sear 30–45 seconds per side over very high heat.",
-                "Move to medium heat and cook 1–2 minutes more per side."
-              ]
-            },
-            {
-              "h": "Rest",
-              "p": [
-                "Rest 3–4 minutes tented with foil to redistribute the juices."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Nutritional value",
-          "p": [
-            "This cut provides high-quality protein, B-complex vitamins and minerals such as iron and zinc. Its fat, rich in monounsaturated fatty acids (oleic acid), contributes to a healthier lipid profile without compromising flavor."
-          ]
-        },
-        {
-          "h": "Key points",
-          "list": [
-            "Cut: Rib Eye Japanese Wagyu A5",
-            "Marbling: High (BMS 8–12)",
-            "Texture: Velvety and juicy",
-            "Flavor: Intense umami with hints of nuts and cream",
-            "Cooking: Skillet, griddle or high-heat grill",
-            "Rest: 3–4 minutes under foil"
-          ]
-        }
-      ]
+      "description": "Japanese A5 wagyu rib eye — extreme marbling and deep flavor. The wagyu experience at its peak.\n\nCut characteristics\n\n• Rib Eye: a noble cut with a perfect balance of muscle and fat.\n• High marbling: intramuscular fat veins that melt as it cooks, enhancing the umami profile.\n• Fine, uniform grain: ensures even cooking and exact reproduction of results.\n\nSensory profile\n\nEach bite unfolds deep umami with hints of nuts and fresh cream. The intramuscular fat melts evenly, leaving the meat soft and juicy, with a velvety sensation on the palate.\n\nNutritional value\n\nThis cut provides high-quality protein, B-complex vitamins and minerals such as iron and zinc. Its fat, rich in monounsaturated fatty acids (oleic acid), contributes to a healthier lipid profile without compromising flavor.\n\nKey points\n\n• Cut: Rib Eye Japanese Wagyu A5\n• Marbling: High (BMS 8–12)\n• Texture: Velvety and juicy\n• Flavor: Intense umami with hints of nuts and cream\n• Cooking: Skillet, griddle or high-heat grill\n• Rest: 3–4 minutes under foil",
+      "origin": "Origin & A5 excellence\n\nThe Rib Eye Japanese Wagyu A5 comes from cattle raised on certified Japanese farms, combining traditional practices with cutting-edge technology to achieve exceptional BMS 8–12 marbling. This A5 grade represents the highest quality in texture and flavor.",
+      "cooking": "Cooking recommendations\n\nCast-iron skillet\n• Preheat over medium-high until lightly smoking.\n• Season with coarse salt just before searing.\n• Cook 1–2 minutes per side for medium-rare.\n\nDirect grilling\n• Sear 30–45 seconds per side over very high heat.\n• Move to medium heat and cook 1–2 minutes more per side.\n\nRest\nRest 3–4 minutes tented with foil to redistribute the juices."
     }
   },
   {
@@ -452,139 +76,15 @@
     },
     "es": {
       "name": "Picaña Wagyu Japonés A5 · Marmoleo Alto",
-      "desc": "Picaña de wagyu japonés A5 con su capa de grasa característica. Jugosa y llena de sabor, ideal a la parrilla.",
-      "details": [
-        {
-          "h": "Origen y excelencia del A5",
-          "p": [
-            "La Picanha Wagyu Japonés A5 proviene de reses criadas en granjas certificadas de Japón, donde métodos tradicionales de alimentación y cuidados estrictos garantizan un marmoleo BMS 8–12. Este nivel superior de grasa intramuscular es sinónimo de calidad y consistencia excepcionales."
-          ]
-        },
-        {
-          "h": "Características del corte",
-          "list": [
-            "Picanha (tapa de cuadril): corte icónico por su forma triangular y capa de grasa uniforme que protege la carne durante la cocción.",
-            "Marmoleo alto: finas vetas de grasa distribuidas homogéneamente que se funden durante el calor, aportando jugosidad y realce de sabor.",
-            "Fibra fina y pareja: permite porcionados consistentes y tiempos de cocción precisos."
-          ]
-        },
-        {
-          "h": "Perfil sensorial",
-          "p": [
-            "Cada rebanada ofrece una explosión de umami con toques a nuez y un ligero dulzor. La grasa que se incorpora al tejido muscular al cocinarse brinda una textura casi aterciopelada que se deshace en el paladar."
-          ]
-        },
-        {
-          "h": "Recomendaciones de cocción",
-          "methods": [
-            {
-              "h": "Parrilla directa",
-              "list": [
-                "Sellar a fuego alto 1–2 minutos por lado para formar costra dorada.",
-                "Pasar a zona de calor medio y cocinar 2–3 minutos adicionales por lado para término medio."
-              ]
-            },
-            {
-              "h": "Sartén de hierro fundido",
-              "list": [
-                "Precalentar hasta que humee ligeramente, colocar la picanha con la grasa hacia abajo primero.",
-                "Sellar 2 minutos por lado y dejar reposar 4 minutos antes de cortar."
-              ]
-            },
-            {
-              "h": "Reposo obligado",
-              "p": [
-                "Cubrir con papel aluminio suave y esperar 4–5 minutos. Esta pausa redistribuye los jugos y conserva toda la ternura."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Valor nutricional",
-          "p": [
-            "La grasa del Wagyu A5 es rica en ácido oleico (monoinsaturados), favoreciendo un perfil lipídico más saludable. Además, aporta proteínas de alta calidad, vitaminas B y minerales como hierro y zinc, ideales para una propuesta de alto valor nutricional."
-          ]
-        },
-        {
-          "h": "Puntos clave",
-          "list": [
-            "Corte: Picanha Wagyu Japonés A5 (tapa de cuadril)",
-            "Marmoleo: BMS 8–12 (alto)",
-            "Textura: Jugosa y aterciopelada",
-            "Sabor: Umami profundo con matices a nuez y crema",
-            "Cocción: Parrilla, plancha o sartén de hierro fundido",
-            "Reposo: 4–5 minutos para máxima retención de jugos"
-          ]
-        }
-      ]
+      "description": "Picaña de wagyu japonés A5 con su capa de grasa característica. Jugosa y llena de sabor, ideal a la parrilla.\n\nCaracterísticas del corte\n\n• Picanha (tapa de cuadril): corte icónico por su forma triangular y capa de grasa uniforme que protege la carne durante la cocción.\n• Marmoleo alto: finas vetas de grasa distribuidas homogéneamente que se funden durante el calor, aportando jugosidad y realce de sabor.\n• Fibra fina y pareja: permite porcionados consistentes y tiempos de cocción precisos.\n\nPerfil sensorial\n\nCada rebanada ofrece una explosión de umami con toques a nuez y un ligero dulzor. La grasa que se incorpora al tejido muscular al cocinarse brinda una textura casi aterciopelada que se deshace en el paladar.\n\nValor nutricional\n\nLa grasa del Wagyu A5 es rica en ácido oleico (monoinsaturados), favoreciendo un perfil lipídico más saludable. Además, aporta proteínas de alta calidad, vitaminas B y minerales como hierro y zinc, ideales para una propuesta de alto valor nutricional.\n\nPuntos clave\n\n• Corte: Picanha Wagyu Japonés A5 (tapa de cuadril)\n• Marmoleo: BMS 8–12 (alto)\n• Textura: Jugosa y aterciopelada\n• Sabor: Umami profundo con matices a nuez y crema\n• Cocción: Parrilla, plancha o sartén de hierro fundido\n• Reposo: 4–5 minutos para máxima retención de jugos",
+      "origin": "Origen y excelencia del A5\n\nLa Picanha Wagyu Japonés A5 proviene de reses criadas en granjas certificadas de Japón, donde métodos tradicionales de alimentación y cuidados estrictos garantizan un marmoleo BMS 8–12. Este nivel superior de grasa intramuscular es sinónimo de calidad y consistencia excepcionales.",
+      "cooking": "Recomendaciones de cocción\n\nParrilla directa\n• Sellar a fuego alto 1–2 minutos por lado para formar costra dorada.\n• Pasar a zona de calor medio y cocinar 2–3 minutos adicionales por lado para término medio.\n\nSartén de hierro fundido\n• Precalentar hasta que humee ligeramente, colocar la picanha con la grasa hacia abajo primero.\n• Sellar 2 minutos por lado y dejar reposar 4 minutos antes de cortar.\n\nReposo obligado\nCubrir con papel aluminio suave y esperar 4–5 minutos. Esta pausa redistribuye los jugos y conserva toda la ternura."
     },
     "en": {
       "name": "Picanha Japanese Wagyu A5 · High Marbling",
-      "desc": "Japanese A5 wagyu picanha with its signature fat cap. Juicy and full-flavored, ideal on the grill.",
-      "details": [
-        {
-          "h": "Origin & A5 excellence",
-          "p": [
-            "The Picanha Japanese Wagyu A5 comes from cattle raised on certified Japanese farms, where traditional feeding methods and strict care guarantee BMS 8–12 marbling. This superior level of intramuscular fat means exceptional quality and consistency."
-          ]
-        },
-        {
-          "h": "Cut characteristics",
-          "list": [
-            "Picanha (rump cap): an iconic cut for its triangular shape and uniform fat cap that protects the meat during cooking.",
-            "High marbling: fine, evenly distributed fat threads that melt under heat, adding juiciness and enhancing flavor.",
-            "Fine, even grain: allows consistent portioning and precise cooking times."
-          ]
-        },
-        {
-          "h": "Sensory profile",
-          "p": [
-            "Each slice offers a burst of umami with hints of nuts and a slight sweetness. As the fat renders into the muscle while cooking, it gives an almost velvety texture that melts on the palate."
-          ]
-        },
-        {
-          "h": "Cooking recommendations",
-          "methods": [
-            {
-              "h": "Direct grilling",
-              "list": [
-                "Sear over high heat 1–2 minutes per side to form a golden crust.",
-                "Move to a medium-heat zone and cook 2–3 minutes more per side for medium."
-              ]
-            },
-            {
-              "h": "Cast-iron skillet",
-              "list": [
-                "Preheat until lightly smoking, place the picanha fat-side down first.",
-                "Sear 2 minutes per side and rest 4 minutes before slicing."
-              ]
-            },
-            {
-              "h": "Mandatory rest",
-              "p": [
-                "Cover loosely with foil and wait 4–5 minutes. This pause redistributes the juices and preserves all the tenderness."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Nutritional value",
-          "p": [
-            "A5 Wagyu fat is rich in oleic acid (monounsaturated), supporting a healthier lipid profile. It also provides high-quality protein, B vitamins and minerals such as iron and zinc — ideal for a high-nutritional-value offering."
-          ]
-        },
-        {
-          "h": "Key points",
-          "list": [
-            "Cut: Picanha Japanese Wagyu A5 (rump cap)",
-            "Marbling: BMS 8–12 (high)",
-            "Texture: Juicy and velvety",
-            "Flavor: Deep umami with hints of nuts and cream",
-            "Cooking: Grill, griddle or cast-iron skillet",
-            "Rest: 4–5 minutes for maximum juice retention"
-          ]
-        }
-      ]
+      "description": "Japanese A5 wagyu picanha with its signature fat cap. Juicy and full-flavored, ideal on the grill.\n\nCut characteristics\n\n• Picanha (rump cap): an iconic cut for its triangular shape and uniform fat cap that protects the meat during cooking.\n• High marbling: fine, evenly distributed fat threads that melt under heat, adding juiciness and enhancing flavor.\n• Fine, even grain: allows consistent portioning and precise cooking times.\n\nSensory profile\n\nEach slice offers a burst of umami with hints of nuts and a slight sweetness. As the fat renders into the muscle while cooking, it gives an almost velvety texture that melts on the palate.\n\nNutritional value\n\nA5 Wagyu fat is rich in oleic acid (monounsaturated), supporting a healthier lipid profile. It also provides high-quality protein, B vitamins and minerals such as iron and zinc — ideal for a high-nutritional-value offering.\n\nKey points\n\n• Cut: Picanha Japanese Wagyu A5 (rump cap)\n• Marbling: BMS 8–12 (high)\n• Texture: Juicy and velvety\n• Flavor: Deep umami with hints of nuts and cream\n• Cooking: Grill, griddle or cast-iron skillet\n• Rest: 4–5 minutes for maximum juice retention",
+      "origin": "Origin & A5 excellence\n\nThe Picanha Japanese Wagyu A5 comes from cattle raised on certified Japanese farms, where traditional feeding methods and strict care guarantee BMS 8–12 marbling. This superior level of intramuscular fat means exceptional quality and consistency.",
+      "cooking": "Cooking recommendations\n\nDirect grilling\n• Sear over high heat 1–2 minutes per side to form a golden crust.\n• Move to a medium-heat zone and cook 2–3 minutes more per side for medium.\n\nCast-iron skillet\n• Preheat until lightly smoking, place the picanha fat-side down first.\n• Sear 2 minutes per side and rest 4 minutes before slicing.\n\nMandatory rest\nCover loosely with foil and wait 4–5 minutes. This pause redistributes the juices and preserves all the tenderness."
     }
   },
   {
@@ -598,141 +98,15 @@
     },
     "es": {
       "name": "Rib Eye Wagyu Australiano · Marmoleo Medio",
-      "desc": "Rib eye de wagyu australiano de marmoleo medio — la riqueza del wagyu sin exceso de grasa, con sabor equilibrado y auténtico.",
-      "details": [
-        {
-          "h": "Origen y calidad equilibrada",
-          "p": [
-            "El Rib Eye Wagyu Australiano de marmoleo medio procede de ganados criados en pasturas cuidadas de Australia. Su veteado moderado ofrece la riqueza del Wagyu sin exceso de grasa, manteniendo un perfil de sabor equilibrado y auténtico."
-          ]
-        },
-        {
-          "h": "Características del corte",
-          "list": [
-            "Rib Eye (ojo de costilla): corte noble con proporción ideal entre músculo y grasa.",
-            "Marmoleo medio: vetas moderadas que garantizan jugosidad y potencia de sabor sin ser invasivas.",
-            "Grosor parejo: facilita un cocinado uniforme y resultados consistentes."
-          ]
-        },
-        {
-          "h": "Perfil sensorial",
-          "p": [
-            "En cada bocado destaca un umami delicado con notas ligeras a nuez y crema. La textura es jugosa y ligeramente firme, ofreciendo una experiencia equilibrada que resalta la calidad Wagyu."
-          ]
-        },
-        {
-          "h": "Recomendaciones de cocción",
-          "methods": [
-            {
-              "h": "Plancha o sartén de hierro fundido",
-              "list": [
-                "Precalienta a fuego medio-alto hasta que humee.",
-                "Sazona con sal al gusto justo antes de sellar.",
-                "Cocina 2–3 minutos por lado para término medio."
-              ]
-            },
-            {
-              "h": "Parrilla directa",
-              "list": [
-                "Sella 1–2 minutos por lado a fuego fuerte.",
-                "Reduce a calor medio y cocina 1–2 minutos adicionales."
-              ]
-            },
-            {
-              "h": "Reposo",
-              "p": [
-                "Deja reposar 3–4 minutos cubierto con papel aluminio para redistribuir jugos."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Valor nutricional",
-          "p": [
-            "Este corte aporta proteínas de alta calidad, vitaminas del complejo B y minerales esenciales como hierro y zinc. Su grasa monoinsaturada ofrece un perfil más ligero sin renunciar al sabor característico del Wagyu."
-          ]
-        },
-        {
-          "h": "Puntos clave",
-          "list": [
-            "Corte: Rib Eye Wagyu Australiano",
-            "Marmoleo: Medio",
-            "Textura: Jugosa y ligeramente firme",
-            "Sabor: Umami suave con toques a nuez",
-            "Cocción: Plancha, sartén o parrilla",
-            "Reposo: 3–4 minutos para máxima jugosidad"
-          ]
-        }
-      ]
+      "description": "Rib eye de wagyu australiano de marmoleo medio — la riqueza del wagyu sin exceso de grasa, con sabor equilibrado y auténtico.\n\nCaracterísticas del corte\n\n• Rib Eye (ojo de costilla): corte noble con proporción ideal entre músculo y grasa.\n• Marmoleo medio: vetas moderadas que garantizan jugosidad y potencia de sabor sin ser invasivas.\n• Grosor parejo: facilita un cocinado uniforme y resultados consistentes.\n\nPerfil sensorial\n\nEn cada bocado destaca un umami delicado con notas ligeras a nuez y crema. La textura es jugosa y ligeramente firme, ofreciendo una experiencia equilibrada que resalta la calidad Wagyu.\n\nValor nutricional\n\nEste corte aporta proteínas de alta calidad, vitaminas del complejo B y minerales esenciales como hierro y zinc. Su grasa monoinsaturada ofrece un perfil más ligero sin renunciar al sabor característico del Wagyu.\n\nPuntos clave\n\n• Corte: Rib Eye Wagyu Australiano\n• Marmoleo: Medio\n• Textura: Jugosa y ligeramente firme\n• Sabor: Umami suave con toques a nuez\n• Cocción: Plancha, sartén o parrilla\n• Reposo: 3–4 minutos para máxima jugosidad",
+      "origin": "Origen y calidad equilibrada\n\nEl Rib Eye Wagyu Australiano de marmoleo medio procede de ganados criados en pasturas cuidadas de Australia. Su veteado moderado ofrece la riqueza del Wagyu sin exceso de grasa, manteniendo un perfil de sabor equilibrado y auténtico.",
+      "cooking": "Recomendaciones de cocción\n\nPlancha o sartén de hierro fundido\n• Precalienta a fuego medio-alto hasta que humee.\n• Sazona con sal al gusto justo antes de sellar.\n• Cocina 2–3 minutos por lado para término medio.\n\nParrilla directa\n• Sella 1–2 minutos por lado a fuego fuerte.\n• Reduce a calor medio y cocina 1–2 minutos adicionales.\n\nReposo\nDeja reposar 3–4 minutos cubierto con papel aluminio para redistribuir jugos."
     },
     "en": {
       "name": "Australian Wagyu Rib Eye · Medium Marbling",
-      "desc": "Australian wagyu rib eye with medium marbling — wagyu richness without excess fat, balanced and authentic flavor.",
-      "details": [
-        {
-          "h": "Origin & balanced quality",
-          "p": [
-            "The medium-marbled Australian Wagyu Rib Eye comes from cattle raised on well-tended Australian pastures. Its moderate marbling offers wagyu richness without excess fat, keeping a balanced, authentic flavor profile."
-          ]
-        },
-        {
-          "h": "Cut characteristics",
-          "list": [
-            "Rib Eye: a noble cut with an ideal muscle-to-fat ratio.",
-            "Medium marbling: moderate veining that ensures juiciness and bold flavor without being overwhelming.",
-            "Even thickness: allows uniform cooking and consistent results."
-          ]
-        },
-        {
-          "h": "Sensory profile",
-          "p": [
-            "Each bite highlights a delicate umami with light notes of nuts and cream. The texture is juicy and slightly firm, offering a balanced experience that showcases wagyu quality."
-          ]
-        },
-        {
-          "h": "Cooking recommendations",
-          "methods": [
-            {
-              "h": "Griddle or cast-iron skillet",
-              "list": [
-                "Preheat over medium-high heat until smoking.",
-                "Season with salt to taste just before searing.",
-                "Cook 2–3 minutes per side for medium."
-              ]
-            },
-            {
-              "h": "Direct grilling",
-              "list": [
-                "Sear 1–2 minutes per side over high heat.",
-                "Reduce to medium heat and cook 1–2 minutes more."
-              ]
-            },
-            {
-              "h": "Rest",
-              "p": [
-                "Rest 3–4 minutes tented with foil to redistribute the juices."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Nutritional value",
-          "p": [
-            "This cut provides high-quality protein, B-complex vitamins and essential minerals such as iron and zinc. Its monounsaturated fat offers a lighter profile without giving up the characteristic wagyu flavor."
-          ]
-        },
-        {
-          "h": "Key points",
-          "list": [
-            "Cut: Australian Wagyu Rib Eye",
-            "Marbling: Medium",
-            "Texture: Juicy and slightly firm",
-            "Flavor: Mild umami with hints of nuts",
-            "Cooking: Griddle, skillet or grill",
-            "Rest: 3–4 minutes for maximum juiciness"
-          ]
-        }
-      ]
+      "description": "Australian wagyu rib eye with medium marbling — wagyu richness without excess fat, balanced and authentic flavor.\n\nCut characteristics\n\n• Rib Eye: a noble cut with an ideal muscle-to-fat ratio.\n• Medium marbling: moderate veining that ensures juiciness and bold flavor without being overwhelming.\n• Even thickness: allows uniform cooking and consistent results.\n\nSensory profile\n\nEach bite highlights a delicate umami with light notes of nuts and cream. The texture is juicy and slightly firm, offering a balanced experience that showcases wagyu quality.\n\nNutritional value\n\nThis cut provides high-quality protein, B-complex vitamins and essential minerals such as iron and zinc. Its monounsaturated fat offers a lighter profile without giving up the characteristic wagyu flavor.\n\nKey points\n\n• Cut: Australian Wagyu Rib Eye\n• Marbling: Medium\n• Texture: Juicy and slightly firm\n• Flavor: Mild umami with hints of nuts\n• Cooking: Griddle, skillet or grill\n• Rest: 3–4 minutes for maximum juiciness",
+      "origin": "Origin & balanced quality\n\nThe medium-marbled Australian Wagyu Rib Eye comes from cattle raised on well-tended Australian pastures. Its moderate marbling offers wagyu richness without excess fat, keeping a balanced, authentic flavor profile.",
+      "cooking": "Cooking recommendations\n\nGriddle or cast-iron skillet\n• Preheat over medium-high heat until smoking.\n• Season with salt to taste just before searing.\n• Cook 2–3 minutes per side for medium.\n\nDirect grilling\n• Sear 1–2 minutes per side over high heat.\n• Reduce to medium heat and cook 1–2 minutes more.\n\nRest\nRest 3–4 minutes tented with foil to redistribute the juices."
     }
   },
   {
@@ -746,141 +120,15 @@
     },
     "es": {
       "name": "Rib Eye Wagyu Australiano · Marmoleo Bajo",
-      "desc": "Rib eye de wagyu australiano de bajo marmoleo — la esencia pura del wagyu con un veteado sutil y un sabor más limpio.",
-      "details": [
-        {
-          "h": "Origen y calidad excepcional",
-          "p": [
-            "El Rib Eye Wagyu Australiano de bajo marmoleo proviene de ganado criado en pasturas seleccionadas de Australia, donde se combinan prácticas de bienestar animal y alimentación balanceada. Este corte ofrece la esencia pura de la carne Wagyu con un veteado sutil que aporta sabor sin exceso de grasa."
-          ]
-        },
-        {
-          "h": "Características del corte",
-          "list": [
-            "Rib Eye (ojo de costilla): pieza con la proporción ideal entre músculo y grasa, manteniendo su perfil robusto.",
-            "Marmoleo bajo: vetas finas y moderadas que aseguran jugosidad controlada y un sabor más limpio.",
-            "Grosor uniforme: facilita cocciones homogéneas y resultados consistentes en cada pieza."
-          ]
-        },
-        {
-          "h": "Perfil sensorial",
-          "p": [
-            "Al primer bocado, destaca un sabor a carne roja bien definido, con notas terrosas y un ligero dulzor natural. La textura se siente firme pero jugosa, ofreciendo una experiencia más ligera sin renunciar al carácter Wagyu."
-          ]
-        },
-        {
-          "h": "Recomendaciones de cocción",
-          "methods": [
-            {
-              "h": "Plancha o sartén de hierro fundido",
-              "list": [
-                "Precalienta a fuego medio-alto hasta que humee ligeramente.",
-                "Sazona con sal al gusto justo antes de sellar.",
-                "Cocina 2–3 minutos por lado para término medio."
-              ]
-            },
-            {
-              "h": "Parrilla directa",
-              "list": [
-                "Sella 1–2 minutos por lado a fuego fuerte.",
-                "Reduce a calor medio y cocina 1–2 minutos adicionales."
-              ]
-            },
-            {
-              "h": "Reposo",
-              "p": [
-                "Deja reposar 3–4 minutos cubierto con papel aluminio para redistribuir jugos."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Valor nutricional",
-          "p": [
-            "Con un contenido de grasa controlado, este corte proporciona proteínas de alta calidad, vitaminas del complejo B y minerales esenciales como hierro y zinc. Ideal para menús que requieren opciones más ligeras sin sacrificar sabor."
-          ]
-        },
-        {
-          "h": "Puntos clave",
-          "list": [
-            "Corte: Rib Eye Wagyu Australiano",
-            "Marmoleo: Bajo",
-            "Textura: Firme y jugosa",
-            "Sabor: Carne roja definida con notas terrosas",
-            "Cocción: Plancha, sartén o parrilla",
-            "Reposo: 3–4 minutos para máxima jugosidad"
-          ]
-        }
-      ]
+      "description": "Rib eye de wagyu australiano de bajo marmoleo — la esencia pura del wagyu con un veteado sutil y un sabor más limpio.\n\nCaracterísticas del corte\n\n• Rib Eye (ojo de costilla): pieza con la proporción ideal entre músculo y grasa, manteniendo su perfil robusto.\n• Marmoleo bajo: vetas finas y moderadas que aseguran jugosidad controlada y un sabor más limpio.\n• Grosor uniforme: facilita cocciones homogéneas y resultados consistentes en cada pieza.\n\nPerfil sensorial\n\nAl primer bocado, destaca un sabor a carne roja bien definido, con notas terrosas y un ligero dulzor natural. La textura se siente firme pero jugosa, ofreciendo una experiencia más ligera sin renunciar al carácter Wagyu.\n\nValor nutricional\n\nCon un contenido de grasa controlado, este corte proporciona proteínas de alta calidad, vitaminas del complejo B y minerales esenciales como hierro y zinc. Ideal para menús que requieren opciones más ligeras sin sacrificar sabor.\n\nPuntos clave\n\n• Corte: Rib Eye Wagyu Australiano\n• Marmoleo: Bajo\n• Textura: Firme y jugosa\n• Sabor: Carne roja definida con notas terrosas\n• Cocción: Plancha, sartén o parrilla\n• Reposo: 3–4 minutos para máxima jugosidad",
+      "origin": "Origen y calidad excepcional\n\nEl Rib Eye Wagyu Australiano de bajo marmoleo proviene de ganado criado en pasturas seleccionadas de Australia, donde se combinan prácticas de bienestar animal y alimentación balanceada. Este corte ofrece la esencia pura de la carne Wagyu con un veteado sutil que aporta sabor sin exceso de grasa.",
+      "cooking": "Recomendaciones de cocción\n\nPlancha o sartén de hierro fundido\n• Precalienta a fuego medio-alto hasta que humee ligeramente.\n• Sazona con sal al gusto justo antes de sellar.\n• Cocina 2–3 minutos por lado para término medio.\n\nParrilla directa\n• Sella 1–2 minutos por lado a fuego fuerte.\n• Reduce a calor medio y cocina 1–2 minutos adicionales.\n\nReposo\nDeja reposar 3–4 minutos cubierto con papel aluminio para redistribuir jugos."
     },
     "en": {
       "name": "Australian Wagyu Rib Eye · Low Marbling",
-      "desc": "Australian wagyu rib eye with low marbling — the pure essence of wagyu with subtle veining and a cleaner flavor.",
-      "details": [
-        {
-          "h": "Origin & exceptional quality",
-          "p": [
-            "The low-marbled Australian Wagyu Rib Eye comes from cattle raised on select Australian pastures, combining animal-welfare practices with balanced feeding. This cut offers the pure essence of wagyu with subtle marbling that adds flavor without excess fat."
-          ]
-        },
-        {
-          "h": "Cut characteristics",
-          "list": [
-            "Rib Eye: a piece with the ideal muscle-to-fat ratio, keeping its robust profile.",
-            "Low marbling: fine, moderate veining that ensures controlled juiciness and a cleaner flavor.",
-            "Uniform thickness: enables even cooking and consistent results in every piece."
-          ]
-        },
-        {
-          "h": "Sensory profile",
-          "p": [
-            "At first bite, a well-defined red-meat flavor stands out, with earthy notes and a slight natural sweetness. The texture feels firm yet juicy, offering a lighter experience without giving up wagyu character."
-          ]
-        },
-        {
-          "h": "Cooking recommendations",
-          "methods": [
-            {
-              "h": "Griddle or cast-iron skillet",
-              "list": [
-                "Preheat over medium-high heat until lightly smoking.",
-                "Season with salt to taste just before searing.",
-                "Cook 2–3 minutes per side for medium."
-              ]
-            },
-            {
-              "h": "Direct grilling",
-              "list": [
-                "Sear 1–2 minutes per side over high heat.",
-                "Reduce to medium heat and cook 1–2 minutes more."
-              ]
-            },
-            {
-              "h": "Rest",
-              "p": [
-                "Rest 3–4 minutes tented with foil to redistribute the juices."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Nutritional value",
-          "p": [
-            "With a controlled fat content, this cut provides high-quality protein, B-complex vitamins and essential minerals such as iron and zinc. Ideal for menus that call for lighter options without sacrificing flavor."
-          ]
-        },
-        {
-          "h": "Key points",
-          "list": [
-            "Cut: Australian Wagyu Rib Eye",
-            "Marbling: Low",
-            "Texture: Firm and juicy",
-            "Flavor: Defined red meat with earthy notes",
-            "Cooking: Griddle, skillet or grill",
-            "Rest: 3–4 minutes for maximum juiciness"
-          ]
-        }
-      ]
+      "description": "Australian wagyu rib eye with low marbling — the pure essence of wagyu with subtle veining and a cleaner flavor.\n\nCut characteristics\n\n• Rib Eye: a piece with the ideal muscle-to-fat ratio, keeping its robust profile.\n• Low marbling: fine, moderate veining that ensures controlled juiciness and a cleaner flavor.\n• Uniform thickness: enables even cooking and consistent results in every piece.\n\nSensory profile\n\nAt first bite, a well-defined red-meat flavor stands out, with earthy notes and a slight natural sweetness. The texture feels firm yet juicy, offering a lighter experience without giving up wagyu character.\n\nNutritional value\n\nWith a controlled fat content, this cut provides high-quality protein, B-complex vitamins and essential minerals such as iron and zinc. Ideal for menus that call for lighter options without sacrificing flavor.\n\nKey points\n\n• Cut: Australian Wagyu Rib Eye\n• Marbling: Low\n• Texture: Firm and juicy\n• Flavor: Defined red meat with earthy notes\n• Cooking: Griddle, skillet or grill\n• Rest: 3–4 minutes for maximum juiciness",
+      "origin": "Origin & exceptional quality\n\nThe low-marbled Australian Wagyu Rib Eye comes from cattle raised on select Australian pastures, combining animal-welfare practices with balanced feeding. This cut offers the pure essence of wagyu with subtle marbling that adds flavor without excess fat.",
+      "cooking": "Cooking recommendations\n\nGriddle or cast-iron skillet\n• Preheat over medium-high heat until lightly smoking.\n• Season with salt to taste just before searing.\n• Cook 2–3 minutes per side for medium.\n\nDirect grilling\n• Sear 1–2 minutes per side over high heat.\n• Reduce to medium heat and cook 1–2 minutes more.\n\nRest\nRest 3–4 minutes tented with foil to redistribute the juices."
     }
   },
   {
@@ -894,139 +142,15 @@
     },
     "es": {
       "name": "New York Wagyu Australiano · Marmoleo Alto",
-      "desc": "Mordida firme, sabor profundo a res y marmoleo generoso. El clásico de steakhouse.",
-      "details": [
-        {
-          "h": "Origen y calidad excepcional",
-          "p": [
-            "El New York Wagyu Australiano proviene de ganado criado en praderas selectas de Australia, con un manejo de alimentación y bienestar animal que favorece un desarrollo óptimo de la grasa intramuscular. Su marmoleo alto le otorga una jugosidad y sabor únicos en cada bocado."
-          ]
-        },
-        {
-          "h": "Características del corte",
-          "list": [
-            "Corte New York (entrecot): pieza noble de la parte alta del lomo, con superficie amplia que permite un sellado perfecto.",
-            "Marmoleo BMS 8–12: finas vetas de grasa que se funden al cocinar, impregnando la carne de una riqueza umami sin igual.",
-            "Grosor uniforme: facilita tiempos de cocción constantes y resultados reproducibles."
-          ]
-        },
-        {
-          "h": "Perfil sensorial",
-          "p": [
-            "Al primer bocado, despierta notas a umami intenso, con matices a nuez tostada y crema fresca. La textura se percibe casi aterciopelada, mientras la grasa intramuscular se funde lentamente, intensificando la experiencia gourmet."
-          ]
-        },
-        {
-          "h": "Recomendaciones de cocción",
-          "methods": [
-            {
-              "h": "Parrilla o plancha caliente",
-              "list": [
-                "Sella 1–2 minutos por lado a fuego alto para lograr corteza dorada.",
-                "Baja a fuego medio y cocina 2–3 minutos más para un término medio."
-              ]
-            },
-            {
-              "h": "Sartén de hierro fundido",
-              "list": [
-                "Calienta hasta que humee ligeramente, sazona con sal gruesa al poner la pieza.",
-                "Cocina 2 minutos por lado y deja reposar 3 minutos cubierto con aluminio."
-              ]
-            },
-            {
-              "h": "Reposo",
-              "p": [
-                "Fundamental para redistribuir jugos: 3–5 minutos antes de cortar."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Valor nutricional",
-          "p": [
-            "Aunque posee un marmoleo generoso, buena parte de su grasa es monoinsaturada (ácido oleico), que aporta un perfil lipídico más saludable. Además, ofrece proteínas de alta biodisponibilidad, vitaminas B y minerales como hierro y zinc."
-          ]
-        },
-        {
-          "h": "Puntos clave",
-          "list": [
-            "Corte: New York Wagyu Australiano",
-            "Marmoleo: Alto (BMS 8–12)",
-            "Textura: Sedosa y jugosa",
-            "Sabor: Umami profundo con notas a nuez y crema",
-            "Cocción: Parrilla, plancha o sartén de hierro",
-            "Reposo: 3–5 min para máxima jugosidad"
-          ]
-        }
-      ]
+      "description": "Mordida firme, sabor profundo a res y marmoleo generoso. El clásico de steakhouse.\n\nCaracterísticas del corte\n\n• Corte New York (entrecot): pieza noble de la parte alta del lomo, con superficie amplia que permite un sellado perfecto.\n• Marmoleo BMS 8–12: finas vetas de grasa que se funden al cocinar, impregnando la carne de una riqueza umami sin igual.\n• Grosor uniforme: facilita tiempos de cocción constantes y resultados reproducibles.\n\nPerfil sensorial\n\nAl primer bocado, despierta notas a umami intenso, con matices a nuez tostada y crema fresca. La textura se percibe casi aterciopelada, mientras la grasa intramuscular se funde lentamente, intensificando la experiencia gourmet.\n\nValor nutricional\n\nAunque posee un marmoleo generoso, buena parte de su grasa es monoinsaturada (ácido oleico), que aporta un perfil lipídico más saludable. Además, ofrece proteínas de alta biodisponibilidad, vitaminas B y minerales como hierro y zinc.\n\nPuntos clave\n\n• Corte: New York Wagyu Australiano\n• Marmoleo: Alto (BMS 8–12)\n• Textura: Sedosa y jugosa\n• Sabor: Umami profundo con notas a nuez y crema\n• Cocción: Parrilla, plancha o sartén de hierro\n• Reposo: 3–5 min para máxima jugosidad",
+      "origin": "Origen y calidad excepcional\n\nEl New York Wagyu Australiano proviene de ganado criado en praderas selectas de Australia, con un manejo de alimentación y bienestar animal que favorece un desarrollo óptimo de la grasa intramuscular. Su marmoleo alto le otorga una jugosidad y sabor únicos en cada bocado.",
+      "cooking": "Recomendaciones de cocción\n\nParrilla o plancha caliente\n• Sella 1–2 minutos por lado a fuego alto para lograr corteza dorada.\n• Baja a fuego medio y cocina 2–3 minutos más para un término medio.\n\nSartén de hierro fundido\n• Calienta hasta que humee ligeramente, sazona con sal gruesa al poner la pieza.\n• Cocina 2 minutos por lado y deja reposar 3 minutos cubierto con aluminio.\n\nReposo\nFundamental para redistribuir jugos: 3–5 minutos antes de cortar."
     },
     "en": {
       "name": "Australian Wagyu New York · High Marbling",
-      "desc": "Firm bite, deep beef flavor and generous marbling. The steakhouse classic.",
-      "details": [
-        {
-          "h": "Origin & exceptional quality",
-          "p": [
-            "The Australian Wagyu New York comes from cattle raised on select Australian pastures, with feeding and animal-welfare practices that favor optimal intramuscular fat development. Its high marbling gives it unique juiciness and flavor in every bite."
-          ]
-        },
-        {
-          "h": "Cut characteristics",
-          "list": [
-            "New York cut (strip loin): a noble cut from the upper loin, with a broad surface that allows a perfect sear.",
-            "BMS 8–12 marbling: fine fat threads that melt as it cooks, infusing the meat with unmatched umami richness.",
-            "Uniform thickness: enables consistent cooking times and reproducible results."
-          ]
-        },
-        {
-          "h": "Sensory profile",
-          "p": [
-            "At first bite, it awakens intense umami notes with hints of toasted nuts and fresh cream. The texture feels almost velvety as the intramuscular fat slowly melts, intensifying the gourmet experience."
-          ]
-        },
-        {
-          "h": "Cooking recommendations",
-          "methods": [
-            {
-              "h": "Grill or hot griddle",
-              "list": [
-                "Sear 1–2 minutes per side over high heat for a golden crust.",
-                "Lower to medium heat and cook 2–3 minutes more for medium."
-              ]
-            },
-            {
-              "h": "Cast-iron skillet",
-              "list": [
-                "Heat until lightly smoking, season with coarse salt as you lay the steak down.",
-                "Cook 2 minutes per side and rest 3 minutes tented with foil."
-              ]
-            },
-            {
-              "h": "Rest",
-              "p": [
-                "Essential to redistribute the juices: 3–5 minutes before slicing."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Nutritional value",
-          "p": [
-            "Although it has generous marbling, much of its fat is monounsaturated (oleic acid), which contributes a healthier lipid profile. It also offers highly bioavailable protein, B vitamins and minerals such as iron and zinc."
-          ]
-        },
-        {
-          "h": "Key points",
-          "list": [
-            "Cut: Australian Wagyu New York",
-            "Marbling: High (BMS 8–12)",
-            "Texture: Silky and juicy",
-            "Flavor: Deep umami with notes of nuts and cream",
-            "Cooking: Grill, griddle or cast-iron skillet",
-            "Rest: 3–5 min for maximum juiciness"
-          ]
-        }
-      ]
+      "description": "Firm bite, deep beef flavor and generous marbling. The steakhouse classic.\n\nCut characteristics\n\n• New York cut (strip loin): a noble cut from the upper loin, with a broad surface that allows a perfect sear.\n• BMS 8–12 marbling: fine fat threads that melt as it cooks, infusing the meat with unmatched umami richness.\n• Uniform thickness: enables consistent cooking times and reproducible results.\n\nSensory profile\n\nAt first bite, it awakens intense umami notes with hints of toasted nuts and fresh cream. The texture feels almost velvety as the intramuscular fat slowly melts, intensifying the gourmet experience.\n\nNutritional value\n\nAlthough it has generous marbling, much of its fat is monounsaturated (oleic acid), which contributes a healthier lipid profile. It also offers highly bioavailable protein, B vitamins and minerals such as iron and zinc.\n\nKey points\n\n• Cut: Australian Wagyu New York\n• Marbling: High (BMS 8–12)\n• Texture: Silky and juicy\n• Flavor: Deep umami with notes of nuts and cream\n• Cooking: Grill, griddle or cast-iron skillet\n• Rest: 3–5 min for maximum juiciness",
+      "origin": "Origin & exceptional quality\n\nThe Australian Wagyu New York comes from cattle raised on select Australian pastures, with feeding and animal-welfare practices that favor optimal intramuscular fat development. Its high marbling gives it unique juiciness and flavor in every bite.",
+      "cooking": "Cooking recommendations\n\nGrill or hot griddle\n• Sear 1–2 minutes per side over high heat for a golden crust.\n• Lower to medium heat and cook 2–3 minutes more for medium.\n\nCast-iron skillet\n• Heat until lightly smoking, season with coarse salt as you lay the steak down.\n• Cook 2 minutes per side and rest 3 minutes tented with foil.\n\nRest\nEssential to redistribute the juices: 3–5 minutes before slicing."
     }
   },
   {
@@ -1040,139 +164,15 @@
     },
     "es": {
       "name": "T-Bone Wagyu Australiano · Marmoleo Alto",
-      "desc": "T-Bone de wagyu australiano — lomo y filete en un solo corte, con hueso para máximo sabor.",
-      "details": [
-        {
-          "h": "Origen y calidad suprema",
-          "p": [
-            "El T-Bone Wagyu Australiano procede de ganado criado en pasturas selectas de Australia, con un manejo de alimentación y bienestar animal que promueven un marmoleo excepcional. Este corte combina el lomo y el solomillo, ofreciendo dos texturas en un mismo filete."
-          ]
-        },
-        {
-          "h": "Características del corte",
-          "list": [
-            "Corte T-Bone: filete con hueso en “T” que une dos músculos: lomo (striploin) y solomillo (tenderloin).",
-            "Marmoleo alto: finas vetas de grasa intramuscular (alto BMS) que se funden al cocinar, realzando jugosidad y sabor.",
-            "Formato generoso: pieza amplia y uniforme, ideal para presentaciones imponentes."
-          ]
-        },
-        {
-          "h": "Perfil sensorial",
-          "p": [
-            "Al primer bocado, sorprende un umami concentrado con matices a nuez y crema. La combinación de dos músculos ofrece un contraste de texturas: el lomo firme y el solomillo suave, unidos por la grasa intramuscular que aporta un acabado aterciopelado."
-          ]
-        },
-        {
-          "h": "Recomendaciones de cocción",
-          "methods": [
-            {
-              "h": "Parrilla a fuego alto",
-              "list": [
-                "Sella cada lado 1–2 minutos para costra dorada.",
-                "Cocina en zona de calor medio 3–4 minutos por lado para término medio."
-              ]
-            },
-            {
-              "h": "Sartén de hierro fundido",
-              "list": [
-                "Calienta hasta que humee, sazona con sal gruesa.",
-                "Cocina 3 minutos por lado y deja reposar 4 minutos antes de cortar."
-              ]
-            },
-            {
-              "h": "Reposo",
-              "p": [
-                "Fundamental: cubre con aluminio 4–5 minutos para conservar jugos."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Valor nutricional",
-          "p": [
-            "Este corte aporta proteínas de alta calidad, vitaminas B y minerales esenciales como hierro y zinc. Su grasa monoinsaturada (ácido oleico) favorece un perfil lipídico más saludable sin comprometer el sabor."
-          ]
-        },
-        {
-          "h": "Puntos clave",
-          "list": [
-            "Corte: T-Bone Wagyu Australiano",
-            "Marmoleo: Alto (alto BMS)",
-            "Textura: Contraste entre lomo firme y solomillo suave",
-            "Sabor: Umami profundo con notas a nuez y crema",
-            "Cocción: Parrilla o sartén de hierro a fuego alto",
-            "Reposo: 4–5 minutos para máxima jugosidad"
-          ]
-        }
-      ]
+      "description": "T-Bone de wagyu australiano — lomo y filete en un solo corte, con hueso para máximo sabor.\n\nCaracterísticas del corte\n\n• Corte T-Bone: filete con hueso en “T” que une dos músculos: lomo (striploin) y solomillo (tenderloin).\n• Marmoleo alto: finas vetas de grasa intramuscular (alto BMS) que se funden al cocinar, realzando jugosidad y sabor.\n• Formato generoso: pieza amplia y uniforme, ideal para presentaciones imponentes.\n\nPerfil sensorial\n\nAl primer bocado, sorprende un umami concentrado con matices a nuez y crema. La combinación de dos músculos ofrece un contraste de texturas: el lomo firme y el solomillo suave, unidos por la grasa intramuscular que aporta un acabado aterciopelado.\n\nValor nutricional\n\nEste corte aporta proteínas de alta calidad, vitaminas B y minerales esenciales como hierro y zinc. Su grasa monoinsaturada (ácido oleico) favorece un perfil lipídico más saludable sin comprometer el sabor.\n\nPuntos clave\n\n• Corte: T-Bone Wagyu Australiano\n• Marmoleo: Alto (alto BMS)\n• Textura: Contraste entre lomo firme y solomillo suave\n• Sabor: Umami profundo con notas a nuez y crema\n• Cocción: Parrilla o sartén de hierro a fuego alto\n• Reposo: 4–5 minutos para máxima jugosidad",
+      "origin": "Origen y calidad suprema\n\nEl T-Bone Wagyu Australiano procede de ganado criado en pasturas selectas de Australia, con un manejo de alimentación y bienestar animal que promueven un marmoleo excepcional. Este corte combina el lomo y el solomillo, ofreciendo dos texturas en un mismo filete.",
+      "cooking": "Recomendaciones de cocción\n\nParrilla a fuego alto\n• Sella cada lado 1–2 minutos para costra dorada.\n• Cocina en zona de calor medio 3–4 minutos por lado para término medio.\n\nSartén de hierro fundido\n• Calienta hasta que humee, sazona con sal gruesa.\n• Cocina 3 minutos por lado y deja reposar 4 minutos antes de cortar.\n\nReposo\nFundamental: cubre con aluminio 4–5 minutos para conservar jugos."
     },
     "en": {
       "name": "Australian Wagyu T-Bone · High Marbling",
-      "desc": "Australian wagyu T-bone — strip and tenderloin in one cut, bone-in for maximum flavor.",
-      "details": [
-        {
-          "h": "Origin & supreme quality",
-          "p": [
-            "The Australian Wagyu T-Bone comes from cattle raised on select Australian pastures, with feeding and animal-welfare practices that promote exceptional marbling. This cut combines the strip loin and the tenderloin, offering two textures in a single steak."
-          ]
-        },
-        {
-          "h": "Cut characteristics",
-          "list": [
-            "T-Bone cut: a bone-in “T”-shaped steak joining two muscles — strip loin (striploin) and tenderloin.",
-            "High marbling: fine threads of intramuscular fat (high BMS) that melt as it cooks, enhancing juiciness and flavor.",
-            "Generous format: a wide, uniform piece, ideal for striking presentations."
-          ]
-        },
-        {
-          "h": "Sensory profile",
-          "p": [
-            "At first bite, it surprises with concentrated umami and hints of nuts and cream. The combination of two muscles offers a contrast of textures: the firm strip loin and the tender tenderloin, joined by intramuscular fat that delivers a velvety finish."
-          ]
-        },
-        {
-          "h": "Cooking recommendations",
-          "methods": [
-            {
-              "h": "Grill over high heat",
-              "list": [
-                "Sear each side 1–2 minutes for a golden crust.",
-                "Cook over medium heat 3–4 minutes per side for medium."
-              ]
-            },
-            {
-              "h": "Cast-iron skillet",
-              "list": [
-                "Heat until smoking, season with coarse salt.",
-                "Cook 3 minutes per side and rest 4 minutes before slicing."
-              ]
-            },
-            {
-              "h": "Rest",
-              "p": [
-                "Essential: tent with foil 4–5 minutes to retain the juices."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Nutritional value",
-          "p": [
-            "This cut provides high-quality protein, B vitamins and essential minerals such as iron and zinc. Its monounsaturated fat (oleic acid) supports a healthier lipid profile without compromising flavor."
-          ]
-        },
-        {
-          "h": "Key points",
-          "list": [
-            "Cut: Australian Wagyu T-Bone",
-            "Marbling: High (high BMS)",
-            "Texture: Contrast between firm strip loin and tender tenderloin",
-            "Flavor: Deep umami with notes of nuts and cream",
-            "Cooking: Grill or cast-iron skillet over high heat",
-            "Rest: 4–5 minutes for maximum juiciness"
-          ]
-        }
-      ]
+      "description": "Australian wagyu T-bone — strip and tenderloin in one cut, bone-in for maximum flavor.\n\nCut characteristics\n\n• T-Bone cut: a bone-in “T”-shaped steak joining two muscles — strip loin (striploin) and tenderloin.\n• High marbling: fine threads of intramuscular fat (high BMS) that melt as it cooks, enhancing juiciness and flavor.\n• Generous format: a wide, uniform piece, ideal for striking presentations.\n\nSensory profile\n\nAt first bite, it surprises with concentrated umami and hints of nuts and cream. The combination of two muscles offers a contrast of textures: the firm strip loin and the tender tenderloin, joined by intramuscular fat that delivers a velvety finish.\n\nNutritional value\n\nThis cut provides high-quality protein, B vitamins and essential minerals such as iron and zinc. Its monounsaturated fat (oleic acid) supports a healthier lipid profile without compromising flavor.\n\nKey points\n\n• Cut: Australian Wagyu T-Bone\n• Marbling: High (high BMS)\n• Texture: Contrast between firm strip loin and tender tenderloin\n• Flavor: Deep umami with notes of nuts and cream\n• Cooking: Grill or cast-iron skillet over high heat\n• Rest: 4–5 minutes for maximum juiciness",
+      "origin": "Origin & supreme quality\n\nThe Australian Wagyu T-Bone comes from cattle raised on select Australian pastures, with feeding and animal-welfare practices that promote exceptional marbling. This cut combines the strip loin and the tenderloin, offering two textures in a single steak.",
+      "cooking": "Cooking recommendations\n\nGrill over high heat\n• Sear each side 1–2 minutes for a golden crust.\n• Cook over medium heat 3–4 minutes per side for medium.\n\nCast-iron skillet\n• Heat until smoking, season with coarse salt.\n• Cook 3 minutes per side and rest 4 minutes before slicing.\n\nRest\nEssential: tent with foil 4–5 minutes to retain the juices."
     }
   },
   {
@@ -1186,139 +186,15 @@
     },
     "es": {
       "name": "Paleta Wagyu Australiano · Marmoleo Alto",
-      "desc": "Paleta de wagyu australiano, marmoleada y versátil. Para estofar, asar o cortar en finas láminas.",
-      "details": [
-        {
-          "h": "Origen y calidad premium",
-          "p": [
-            "La Paleta Wagyu Australiano se obtiene de ejemplares criados en pasturas controladas de Australia, donde la alimentación balanceada y el bienestar animal propician un desarrollo óptimo de grasa intramuscular. Su marmoleo alto garantiza una jugosidad y textura excepcionales."
-          ]
-        },
-        {
-          "h": "Características del corte",
-          "list": [
-            "Paleta (espaldilla): pieza de fibra fina y uniforme, con un marmoleo intenso que aporta terneza y capacidad de retención de jugos.",
-            "Marmoleo BMS 8–12: vetas de grasa distribuidas homogéneamente que se funden al cocinar, impregnando la carne de ricos matices umami.",
-            "Grosor adaptable: permite cocciones lentas o sellados rápidos, según el estilo de preparación."
-          ]
-        },
-        {
-          "h": "Perfil sensorial",
-          "p": [
-            "Cada porción despliega un umami concentrado acompañado de notas a nuez y crema fresca. La textura se percibe suave y aterciopelada, con un deshielo de grasa que enriquece cada bocado."
-          ]
-        },
-        {
-          "h": "Recomendaciones de cocción",
-          "methods": [
-            {
-              "h": "Braseado lento",
-              "list": [
-                "Cocinar a fuego bajo en caldo ligero o vino tinto durante 2–3 horas, hasta obtener ternura óptima.",
-                "Finalizar con un sellado rápido en sartén caliente para crear ligera costra."
-              ]
-            },
-            {
-              "h": "Selladura y horno",
-              "list": [
-                "Sellar la pieza 1–2 minutos por lado en sartén bien caliente.",
-                "Terminar en horno a 160 °C durante 45–60 minutos, según el grosor."
-              ]
-            },
-            {
-              "h": "Reposo",
-              "p": [
-                "Dejar reposar 5–7 minutos tapado con aluminio para redistribuir jugos y mantener la jugosidad."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Valor nutricional",
-          "p": [
-            "La grasa del Wagyu es rica en ácidos grasos monoinsaturados (ácido oleico), que favorecen un perfil lipídico equilibrado. Este corte aporta proteínas de alta calidad, vitaminas del complejo B y minerales como hierro y zinc."
-          ]
-        },
-        {
-          "h": "Puntos clave",
-          "list": [
-            "Corte: Paleta Wagyu Australiano (espaldilla)",
-            "Marmoleo: Alto (BMS 8–12)",
-            "Textura: Suave, jugosa y aterciopelada",
-            "Sabor: Umami intenso con matices a nuez y crema",
-            "Cocción: Braseado lento, sellado y horno",
-            "Reposo: 5–7 min bajo aluminio para máxima jugosidad"
-          ]
-        }
-      ]
+      "description": "Paleta de wagyu australiano, marmoleada y versátil. Para estofar, asar o cortar en finas láminas.\n\nCaracterísticas del corte\n\n• Paleta (espaldilla): pieza de fibra fina y uniforme, con un marmoleo intenso que aporta terneza y capacidad de retención de jugos.\n• Marmoleo BMS 8–12: vetas de grasa distribuidas homogéneamente que se funden al cocinar, impregnando la carne de ricos matices umami.\n• Grosor adaptable: permite cocciones lentas o sellados rápidos, según el estilo de preparación.\n\nPerfil sensorial\n\nCada porción despliega un umami concentrado acompañado de notas a nuez y crema fresca. La textura se percibe suave y aterciopelada, con un deshielo de grasa que enriquece cada bocado.\n\nValor nutricional\n\nLa grasa del Wagyu es rica en ácidos grasos monoinsaturados (ácido oleico), que favorecen un perfil lipídico equilibrado. Este corte aporta proteínas de alta calidad, vitaminas del complejo B y minerales como hierro y zinc.\n\nPuntos clave\n\n• Corte: Paleta Wagyu Australiano (espaldilla)\n• Marmoleo: Alto (BMS 8–12)\n• Textura: Suave, jugosa y aterciopelada\n• Sabor: Umami intenso con matices a nuez y crema\n• Cocción: Braseado lento, sellado y horno\n• Reposo: 5–7 min bajo aluminio para máxima jugosidad",
+      "origin": "Origen y calidad premium\n\nLa Paleta Wagyu Australiano se obtiene de ejemplares criados en pasturas controladas de Australia, donde la alimentación balanceada y el bienestar animal propician un desarrollo óptimo de grasa intramuscular. Su marmoleo alto garantiza una jugosidad y textura excepcionales.",
+      "cooking": "Recomendaciones de cocción\n\nBraseado lento\n• Cocinar a fuego bajo en caldo ligero o vino tinto durante 2–3 horas, hasta obtener ternura óptima.\n• Finalizar con un sellado rápido en sartén caliente para crear ligera costra.\n\nSelladura y horno\n• Sellar la pieza 1–2 minutos por lado en sartén bien caliente.\n• Terminar en horno a 160 °C durante 45–60 minutos, según el grosor.\n\nReposo\nDejar reposar 5–7 minutos tapado con aluminio para redistribuir jugos y mantener la jugosidad."
     },
     "en": {
       "name": "Australian Wagyu Shoulder · High Marbling",
-      "desc": "Australian wagyu shoulder, marbled and versatile. For braising, roasting or thin slicing.",
-      "details": [
-        {
-          "h": "Origin & premium quality",
-          "p": [
-            "The Australian Wagyu Shoulder comes from animals raised on controlled Australian pastures, where balanced feeding and animal welfare promote optimal intramuscular fat development. Its high marbling ensures exceptional juiciness and texture."
-          ]
-        },
-        {
-          "h": "Cut characteristics",
-          "list": [
-            "Shoulder (paleta): a fine, uniform-grained cut with intense marbling that brings tenderness and juice retention.",
-            "BMS 8–12 marbling: evenly distributed fat veins that melt as it cooks, infusing the meat with rich umami notes.",
-            "Adaptable thickness: allows slow cooking or quick searing, depending on your preparation style."
-          ]
-        },
-        {
-          "h": "Sensory profile",
-          "p": [
-            "Each portion unfolds a concentrated umami accompanied by notes of nuts and fresh cream. The texture feels soft and velvety, with melting fat that enriches every bite."
-          ]
-        },
-        {
-          "h": "Cooking recommendations",
-          "methods": [
-            {
-              "h": "Slow braise",
-              "list": [
-                "Cook over low heat in a light broth or red wine for 2–3 hours, until optimal tenderness.",
-                "Finish with a quick sear in a hot pan to create a light crust."
-              ]
-            },
-            {
-              "h": "Sear & oven",
-              "list": [
-                "Sear the piece 1–2 minutes per side in a very hot pan.",
-                "Finish in the oven at 160 °C for 45–60 minutes, depending on thickness."
-              ]
-            },
-            {
-              "h": "Rest",
-              "p": [
-                "Rest 5–7 minutes covered with foil to redistribute the juices and keep it juicy."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Nutritional value",
-          "p": [
-            "Wagyu fat is rich in monounsaturated fatty acids (oleic acid), which support a balanced lipid profile. This cut provides high-quality protein, B-complex vitamins and minerals such as iron and zinc."
-          ]
-        },
-        {
-          "h": "Key points",
-          "list": [
-            "Cut: Australian Wagyu Shoulder (paleta)",
-            "Marbling: High (BMS 8–12)",
-            "Texture: Soft, juicy and velvety",
-            "Flavor: Intense umami with hints of nuts and cream",
-            "Cooking: Slow braise, sear and oven",
-            "Rest: 5–7 min under foil for maximum juiciness"
-          ]
-        }
-      ]
+      "description": "Australian wagyu shoulder, marbled and versatile. For braising, roasting or thin slicing.\n\nCut characteristics\n\n• Shoulder (paleta): a fine, uniform-grained cut with intense marbling that brings tenderness and juice retention.\n• BMS 8–12 marbling: evenly distributed fat veins that melt as it cooks, infusing the meat with rich umami notes.\n• Adaptable thickness: allows slow cooking or quick searing, depending on your preparation style.\n\nSensory profile\n\nEach portion unfolds a concentrated umami accompanied by notes of nuts and fresh cream. The texture feels soft and velvety, with melting fat that enriches every bite.\n\nNutritional value\n\nWagyu fat is rich in monounsaturated fatty acids (oleic acid), which support a balanced lipid profile. This cut provides high-quality protein, B-complex vitamins and minerals such as iron and zinc.\n\nKey points\n\n• Cut: Australian Wagyu Shoulder (paleta)\n• Marbling: High (BMS 8–12)\n• Texture: Soft, juicy and velvety\n• Flavor: Intense umami with hints of nuts and cream\n• Cooking: Slow braise, sear and oven\n• Rest: 5–7 min under foil for maximum juiciness",
+      "origin": "Origin & premium quality\n\nThe Australian Wagyu Shoulder comes from animals raised on controlled Australian pastures, where balanced feeding and animal welfare promote optimal intramuscular fat development. Its high marbling ensures exceptional juiciness and texture.",
+      "cooking": "Cooking recommendations\n\nSlow braise\n• Cook over low heat in a light broth or red wine for 2–3 hours, until optimal tenderness.\n• Finish with a quick sear in a hot pan to create a light crust.\n\nSear & oven\n• Sear the piece 1–2 minutes per side in a very hot pan.\n• Finish in the oven at 160 °C for 45–60 minutes, depending on thickness.\n\nRest\nRest 5–7 minutes covered with foil to redistribute the juices and keep it juicy."
     }
   },
   {
@@ -1332,163 +208,15 @@
     },
     "es": {
       "name": "Denver Wagyu Australiano · Marmoleo Alto",
-      "desc": "Denver de wagyu australiano — corte jugoso de alto marmoleo, tierno y con gran sabor. Excelente a la parrilla.",
-      "details": [
-        {
-          "h": "Origen y calidad excepcional",
-          "p": [
-            "El Denver Wagyu Australiano proviene de ganado criado en praderas seleccionadas de Australia, donde se cuida cada detalle de la alimentación y el bienestar animal. Gracias a técnicas de crianza ancestrales combinadas con tecnología moderna, obtenemos un corte de alto marmoleo que se traduce en jugosidad y sabor inigualable."
-          ]
-        },
-        {
-          "h": "¿Qué hace único al corte Denver?",
-          "list": [
-            "Ubicado en la parte baja del costillar, el Denver es un corte tierno y versátil.",
-            "Su alta infiltración de grasa intramuscular garantiza una textura suave, casi cremosa, que se derrite en el paladar.",
-            "Ideal para quienes buscan un equilibrio perfecto entre sabor intenso y jugosidad máxima."
-          ]
-        },
-        {
-          "h": "Sabor y experiencia gastronómica",
-          "p": [
-            "Este corte de Wagyu Australiano despliega notas umami profundas y un retrogusto ligeramente dulce. Al cocinarlo a la parrilla o en plancha, la grasa se funde lentamente, impregnando la carne de aromas a nuez tostada y mantequilla. Cada bocado es un deleite para los amantes de la carne premium."
-          ]
-        },
-        {
-          "h": "Recomendaciones de cocción",
-          "methods": [
-            {
-              "h": "Parrilla a fuego medio-alto",
-              "list": [
-                "Sella cada lado 1–2 minutos para lograr un dorado perfecto.",
-                "Reduce a fuego medio y cocina 3–4 minutos más según término deseado (recomendado a término medio o medio-rojo)."
-              ]
-            },
-            {
-              "h": "Plancha o sartén de hierro fundido",
-              "list": [
-                "Calienta sin aceite hasta que humee ligeramente.",
-                "Coloca el corte, sazona con sal gruesa al inicio y pimienta al final para resaltar su sabor natural.",
-                "Cocina 3 minutos por lado para término medio."
-              ]
-            },
-            {
-              "h": "Reposo final",
-              "p": [
-                "Deja reposar la pieza 5 minutos antes de cortar. Esto maximiza la retención de jugos y garantiza una textura consistente."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Beneficios nutricionales",
-          "p": [
-            "Aunque el marmoleo aporta grasa, gran parte es insaturada (ácidos oleicos) que contribuyen a un perfil lipídico más saludable en comparación con cortes convencionales. Además, el Wagyu se caracteriza por sus niveles equilibrados de vitaminas B y minerales esenciales como zinc y hierro, ideales para una dieta balanceada sin sacrificar sabor."
-          ]
-        },
-        {
-          "h": "¿Por qué comprar en Meat Connection?",
-          "list": [
-            "Frescura garantizada: entregamos cortes refrigerados desde nuestro centro de distribución, manteniendo la cadena de frío.",
-            "Envío a domicilio en México: recibe tu pedido en menos de 48 horas.",
-            "Atención personalizada: nuestro equipo de carniceros expertos te orienta sobre la mejor forma de conservación y preparación.",
-            "Satisfacción asegurada: si no quedas satisfecho, te asesoramos para tu próxima compra o reembolsamos sin complicaciones."
-          ]
-        },
-        {
-          "h": "Puntos clave",
-          "list": [
-            "Corte: Denver (parte baja del costillar) con alto marmoleo.",
-            "Origen: Wagyu Australiano certificado.",
-            "Textura: Suave, jugosa y de sabor umami profundo.",
-            "Peso sugerido: 200–300 g por porción individual.",
-            "Término recomendado: Medio o medio-rojo para apreciar el marmoleo sin sobrecocinar.",
-            "Preparación: Ideal a la parrilla, plancha o sartén de hierro fundido.",
-            "Envío: Refrigerado a domicilio en México.",
-            "Beneficios: Alto contenido de ácidos grasos monoinsaturados y vitaminas B."
-          ]
-        }
-      ]
+      "description": "Denver de wagyu australiano — corte jugoso de alto marmoleo, tierno y con gran sabor. Excelente a la parrilla.\n\n¿Qué hace único al corte Denver?\n\n• Ubicado en la parte baja del costillar, el Denver es un corte tierno y versátil.\n• Su alta infiltración de grasa intramuscular garantiza una textura suave, casi cremosa, que se derrite en el paladar.\n• Ideal para quienes buscan un equilibrio perfecto entre sabor intenso y jugosidad máxima.\n\nSabor y experiencia gastronómica\n\nEste corte de Wagyu Australiano despliega notas umami profundas y un retrogusto ligeramente dulce. Al cocinarlo a la parrilla o en plancha, la grasa se funde lentamente, impregnando la carne de aromas a nuez tostada y mantequilla. Cada bocado es un deleite para los amantes de la carne premium.\n\nBeneficios nutricionales\n\nAunque el marmoleo aporta grasa, gran parte es insaturada (ácidos oleicos) que contribuyen a un perfil lipídico más saludable en comparación con cortes convencionales. Además, el Wagyu se caracteriza por sus niveles equilibrados de vitaminas B y minerales esenciales como zinc y hierro, ideales para una dieta balanceada sin sacrificar sabor.\n\n¿Por qué comprar en Meat Connection?\n\n• Frescura garantizada: entregamos cortes refrigerados desde nuestro centro de distribución, manteniendo la cadena de frío.\n• Envío a domicilio en México: recibe tu pedido en menos de 48 horas.\n• Atención personalizada: nuestro equipo de carniceros expertos te orienta sobre la mejor forma de conservación y preparación.\n• Satisfacción asegurada: si no quedas satisfecho, te asesoramos para tu próxima compra o reembolsamos sin complicaciones.\n\nPuntos clave\n\n• Corte: Denver (parte baja del costillar) con alto marmoleo.\n• Origen: Wagyu Australiano certificado.\n• Textura: Suave, jugosa y de sabor umami profundo.\n• Peso sugerido: 200–300 g por porción individual.\n• Término recomendado: Medio o medio-rojo para apreciar el marmoleo sin sobrecocinar.\n• Preparación: Ideal a la parrilla, plancha o sartén de hierro fundido.\n• Envío: Refrigerado a domicilio en México.\n• Beneficios: Alto contenido de ácidos grasos monoinsaturados y vitaminas B.",
+      "origin": "Origen y calidad excepcional\n\nEl Denver Wagyu Australiano proviene de ganado criado en praderas seleccionadas de Australia, donde se cuida cada detalle de la alimentación y el bienestar animal. Gracias a técnicas de crianza ancestrales combinadas con tecnología moderna, obtenemos un corte de alto marmoleo que se traduce en jugosidad y sabor inigualable.",
+      "cooking": "Recomendaciones de cocción\n\nParrilla a fuego medio-alto\n• Sella cada lado 1–2 minutos para lograr un dorado perfecto.\n• Reduce a fuego medio y cocina 3–4 minutos más según término deseado (recomendado a término medio o medio-rojo).\n\nPlancha o sartén de hierro fundido\n• Calienta sin aceite hasta que humee ligeramente.\n• Coloca el corte, sazona con sal gruesa al inicio y pimienta al final para resaltar su sabor natural.\n• Cocina 3 minutos por lado para término medio.\n\nReposo final\nDeja reposar la pieza 5 minutos antes de cortar. Esto maximiza la retención de jugos y garantiza una textura consistente."
     },
     "en": {
       "name": "Australian Wagyu Denver · High Marbling",
-      "desc": "Australian wagyu Denver — a juicy, high-marbling cut, tender and full-flavored. Excellent on the grill.",
-      "details": [
-        {
-          "h": "Origin & exceptional quality",
-          "p": [
-            "The Australian Wagyu Denver comes from cattle raised on select Australian pastures, where every detail of feeding and animal welfare is cared for. Thanks to traditional rearing techniques combined with modern technology, we obtain a high-marbling cut that translates into unmatched juiciness and flavor."
-          ]
-        },
-        {
-          "h": "What makes the Denver cut unique?",
-          "list": [
-            "Located in the lower rib section, the Denver is a tender, versatile cut.",
-            "Its high intramuscular fat infiltration ensures a soft, almost creamy texture that melts on the palate.",
-            "Ideal for those seeking a perfect balance between intense flavor and maximum juiciness."
-          ]
-        },
-        {
-          "h": "Flavor & dining experience",
-          "p": [
-            "This Australian Wagyu cut unfolds deep umami notes and a slightly sweet aftertaste. Cooked on the grill or griddle, the fat melts slowly, infusing the meat with aromas of toasted nuts and butter. Every bite is a delight for premium-meat lovers."
-          ]
-        },
-        {
-          "h": "Cooking recommendations",
-          "methods": [
-            {
-              "h": "Grill over medium-high heat",
-              "list": [
-                "Sear each side 1–2 minutes for a perfect golden crust.",
-                "Reduce to medium heat and cook 3–4 minutes more to the desired doneness (medium or medium-rare recommended)."
-              ]
-            },
-            {
-              "h": "Griddle or cast-iron skillet",
-              "list": [
-                "Heat with no oil until lightly smoking.",
-                "Add the cut, season with coarse salt at the start and pepper at the end to highlight its natural flavor.",
-                "Cook 3 minutes per side for medium."
-              ]
-            },
-            {
-              "h": "Final rest",
-              "p": [
-                "Rest the piece 5 minutes before slicing. This maximizes juice retention and ensures a consistent texture."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Nutritional benefits",
-          "p": [
-            "Although marbling adds fat, much of it is unsaturated (oleic acids) that contribute to a healthier lipid profile than conventional cuts. Wagyu is also known for its balanced levels of B vitamins and essential minerals such as zinc and iron — ideal for a balanced diet without sacrificing flavor."
-          ]
-        },
-        {
-          "h": "Why buy from Meat Connection?",
-          "list": [
-            "Guaranteed freshness: we deliver refrigerated cuts from our distribution center, keeping the cold chain intact.",
-            "Home delivery in Mexico: receive your order in under 48 hours.",
-            "Personalized service: our team of expert butchers guides you on the best way to store and prepare it.",
-            "Satisfaction assured: if you are not satisfied, we advise you for your next purchase or sort it out hassle-free."
-          ]
-        },
-        {
-          "h": "Key points",
-          "list": [
-            "Cut: Denver (lower rib section) with high marbling.",
-            "Origin: certified Australian Wagyu.",
-            "Texture: soft, juicy, deep umami flavor.",
-            "Suggested weight: 200–300 g per individual portion.",
-            "Recommended doneness: medium or medium-rare to appreciate the marbling without overcooking.",
-            "Preparation: ideal on the grill, griddle or cast-iron skillet.",
-            "Shipping: refrigerated home delivery in Mexico.",
-            "Benefits: high in monounsaturated fatty acids and B vitamins."
-          ]
-        }
-      ]
+      "description": "Australian wagyu Denver — a juicy, high-marbling cut, tender and full-flavored. Excellent on the grill.\n\nWhat makes the Denver cut unique?\n\n• Located in the lower rib section, the Denver is a tender, versatile cut.\n• Its high intramuscular fat infiltration ensures a soft, almost creamy texture that melts on the palate.\n• Ideal for those seeking a perfect balance between intense flavor and maximum juiciness.\n\nFlavor & dining experience\n\nThis Australian Wagyu cut unfolds deep umami notes and a slightly sweet aftertaste. Cooked on the grill or griddle, the fat melts slowly, infusing the meat with aromas of toasted nuts and butter. Every bite is a delight for premium-meat lovers.\n\nNutritional benefits\n\nAlthough marbling adds fat, much of it is unsaturated (oleic acids) that contribute to a healthier lipid profile than conventional cuts. Wagyu is also known for its balanced levels of B vitamins and essential minerals such as zinc and iron — ideal for a balanced diet without sacrificing flavor.\n\nWhy buy from Meat Connection?\n\n• Guaranteed freshness: we deliver refrigerated cuts from our distribution center, keeping the cold chain intact.\n• Home delivery in Mexico: receive your order in under 48 hours.\n• Personalized service: our team of expert butchers guides you on the best way to store and prepare it.\n• Satisfaction assured: if you are not satisfied, we advise you for your next purchase or sort it out hassle-free.\n\nKey points\n\n• Cut: Denver (lower rib section) with high marbling.\n• Origin: certified Australian Wagyu.\n• Texture: soft, juicy, deep umami flavor.\n• Suggested weight: 200–300 g per individual portion.\n• Recommended doneness: medium or medium-rare to appreciate the marbling without overcooking.\n• Preparation: ideal on the grill, griddle or cast-iron skillet.\n• Shipping: refrigerated home delivery in Mexico.\n• Benefits: high in monounsaturated fatty acids and B vitamins.",
+      "origin": "Origin & exceptional quality\n\nThe Australian Wagyu Denver comes from cattle raised on select Australian pastures, where every detail of feeding and animal welfare is cared for. Thanks to traditional rearing techniques combined with modern technology, we obtain a high-marbling cut that translates into unmatched juiciness and flavor.",
+      "cooking": "Cooking recommendations\n\nGrill over medium-high heat\n• Sear each side 1–2 minutes for a perfect golden crust.\n• Reduce to medium heat and cook 3–4 minutes more to the desired doneness (medium or medium-rare recommended).\n\nGriddle or cast-iron skillet\n• Heat with no oil until lightly smoking.\n• Add the cut, season with coarse salt at the start and pepper at the end to highlight its natural flavor.\n• Cook 3 minutes per side for medium.\n\nFinal rest\nRest the piece 5 minutes before slicing. This maximizes juice retention and ensures a consistent texture."
     }
   },
   {
@@ -1502,141 +230,15 @@
     },
     "es": {
       "name": "Top Round Wagyu Japonés A5 · Marmoleo Alto",
-      "desc": "Top Round de wagyu japonés A5, marmoleo poco común en este corte. Ideal en finas láminas o sukiyaki.",
-      "details": [
-        {
-          "h": "Origen y excelencia A5",
-          "p": [
-            "El Top Round Wagyu Japonés A5 proviene de reses criadas en granjas certificadas de Japón, donde se combinan técnicas ancestrales y estándares modernos de alimentación para lograr un marmoleo alto. Este grado A5 asegura un perfil de sabor y textura inigualable."
-          ]
-        },
-        {
-          "h": "Características del corte",
-          "list": [
-            "Top Round (nalga): pieza magra con fibras largas y consistentes.",
-            "Marmoleo alto: vetas finas de grasa intramuscular que se funden durante la cocción, aportando jugosidad y riqueza de sabor.",
-            "Grosor parejo: facilita cocciones uniformes y resultados reproducibles."
-          ]
-        },
-        {
-          "h": "Perfil sensorial",
-          "p": [
-            "En cada rebanada emerge un umami concentrado con matices a nuez y un ligero dulzor natural. La textura se percibe suave y delicada al paladar, equilibrando la firmeza de la nalga con la jugosidad del marmoleo."
-          ]
-        },
-        {
-          "h": "Recomendaciones de cocción",
-          "methods": [
-            {
-              "h": "Sellado en sartén de hierro fundido",
-              "list": [
-                "Precalienta a fuego medio-alto hasta que humee ligeramente.",
-                "Sazona con sal gruesa antes de colocar la pieza.",
-                "Sella 1–2 minutos por lado para marcar la superficie."
-              ]
-            },
-            {
-              "h": "Cocción al horno a baja temperatura",
-              "list": [
-                "Tras sellar, lleva al horno a 130 °C durante 10–12 minutos según grosor.",
-                "Alcanza término medio (55 °C) para mantener jugosidad."
-              ]
-            },
-            {
-              "h": "Reposo",
-              "p": [
-                "Deja reposar 4–5 minutos cubierto con papel aluminio para redistribuir jugos."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Valor nutricional",
-          "p": [
-            "Este corte aporta proteínas de alta calidad, vitaminas del complejo B y minerales como hierro y zinc. Su grasa, mayormente monoinsaturada, contribuye a un perfil más saludable sin sacrificar sabor."
-          ]
-        },
-        {
-          "h": "Puntos clave",
-          "list": [
-            "Corte: Top Round Wagyu Japonés A5",
-            "Marmoleo: Alto",
-            "Textura: Suave y jugosa",
-            "Sabor: Umami profundo con toques a nuez",
-            "Cocción: Sellado y horno a baja temperatura",
-            "Reposo: 4–5 minutos para máxima jugosidad"
-          ]
-        }
-      ]
+      "description": "Top Round de wagyu japonés A5, marmoleo poco común en este corte. Ideal en finas láminas o sukiyaki.\n\nCaracterísticas del corte\n\n• Top Round (nalga): pieza magra con fibras largas y consistentes.\n• Marmoleo alto: vetas finas de grasa intramuscular que se funden durante la cocción, aportando jugosidad y riqueza de sabor.\n• Grosor parejo: facilita cocciones uniformes y resultados reproducibles.\n\nPerfil sensorial\n\nEn cada rebanada emerge un umami concentrado con matices a nuez y un ligero dulzor natural. La textura se percibe suave y delicada al paladar, equilibrando la firmeza de la nalga con la jugosidad del marmoleo.\n\nValor nutricional\n\nEste corte aporta proteínas de alta calidad, vitaminas del complejo B y minerales como hierro y zinc. Su grasa, mayormente monoinsaturada, contribuye a un perfil más saludable sin sacrificar sabor.\n\nPuntos clave\n\n• Corte: Top Round Wagyu Japonés A5\n• Marmoleo: Alto\n• Textura: Suave y jugosa\n• Sabor: Umami profundo con toques a nuez\n• Cocción: Sellado y horno a baja temperatura\n• Reposo: 4–5 minutos para máxima jugosidad",
+      "origin": "Origen y excelencia A5\n\nEl Top Round Wagyu Japonés A5 proviene de reses criadas en granjas certificadas de Japón, donde se combinan técnicas ancestrales y estándares modernos de alimentación para lograr un marmoleo alto. Este grado A5 asegura un perfil de sabor y textura inigualable.",
+      "cooking": "Recomendaciones de cocción\n\nSellado en sartén de hierro fundido\n• Precalienta a fuego medio-alto hasta que humee ligeramente.\n• Sazona con sal gruesa antes de colocar la pieza.\n• Sella 1–2 minutos por lado para marcar la superficie.\n\nCocción al horno a baja temperatura\n• Tras sellar, lleva al horno a 130 °C durante 10–12 minutos según grosor.\n• Alcanza término medio (55 °C) para mantener jugosidad.\n\nReposo\nDeja reposar 4–5 minutos cubierto con papel aluminio para redistribuir jugos."
     },
     "en": {
       "name": "Japanese Wagyu Top Round A5 · High Marbling",
-      "desc": "Japanese A5 wagyu Top Round — rare marbling for this cut. Ideal thinly sliced or in sukiyaki.",
-      "details": [
-        {
-          "h": "Origin & A5 excellence",
-          "p": [
-            "The Top Round Japanese Wagyu A5 comes from cattle raised on certified Japanese farms, combining traditional techniques with modern feeding standards to achieve high marbling. This A5 grade ensures an unmatched flavor and texture profile."
-          ]
-        },
-        {
-          "h": "Cut characteristics",
-          "list": [
-            "Top Round: a lean cut with long, consistent grain.",
-            "High marbling: fine intramuscular fat threads that melt during cooking, adding juiciness and rich flavor.",
-            "Even thickness: enables uniform cooking and reproducible results."
-          ]
-        },
-        {
-          "h": "Sensory profile",
-          "p": [
-            "Each slice reveals concentrated umami with hints of nuts and a slight natural sweetness. The texture feels soft and delicate on the palate, balancing the firmness of the round with the juiciness of the marbling."
-          ]
-        },
-        {
-          "h": "Cooking recommendations",
-          "methods": [
-            {
-              "h": "Sear in a cast-iron skillet",
-              "list": [
-                "Preheat over medium-high until lightly smoking.",
-                "Season with coarse salt before adding the cut.",
-                "Sear 1–2 minutes per side to mark the surface."
-              ]
-            },
-            {
-              "h": "Low-temperature oven",
-              "list": [
-                "After searing, transfer to a 130 °C oven for 10–12 minutes depending on thickness.",
-                "Reach medium (55 °C) to keep it juicy."
-              ]
-            },
-            {
-              "h": "Rest",
-              "p": [
-                "Rest 4–5 minutes tented with foil to redistribute the juices."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Nutritional value",
-          "p": [
-            "This cut provides high-quality protein, B-complex vitamins and minerals such as iron and zinc. Its fat, mostly monounsaturated, contributes to a healthier profile without sacrificing flavor."
-          ]
-        },
-        {
-          "h": "Key points",
-          "list": [
-            "Cut: Top Round Japanese Wagyu A5",
-            "Marbling: High",
-            "Texture: Soft and juicy",
-            "Flavor: Deep umami with hints of nuts",
-            "Cooking: Sear and low-temperature oven",
-            "Rest: 4–5 minutes for maximum juiciness"
-          ]
-        }
-      ]
+      "description": "Japanese A5 wagyu Top Round — rare marbling for this cut. Ideal thinly sliced or in sukiyaki.\n\nCut characteristics\n\n• Top Round: a lean cut with long, consistent grain.\n• High marbling: fine intramuscular fat threads that melt during cooking, adding juiciness and rich flavor.\n• Even thickness: enables uniform cooking and reproducible results.\n\nSensory profile\n\nEach slice reveals concentrated umami with hints of nuts and a slight natural sweetness. The texture feels soft and delicate on the palate, balancing the firmness of the round with the juiciness of the marbling.\n\nNutritional value\n\nThis cut provides high-quality protein, B-complex vitamins and minerals such as iron and zinc. Its fat, mostly monounsaturated, contributes to a healthier profile without sacrificing flavor.\n\nKey points\n\n• Cut: Top Round Japanese Wagyu A5\n• Marbling: High\n• Texture: Soft and juicy\n• Flavor: Deep umami with hints of nuts\n• Cooking: Sear and low-temperature oven\n• Rest: 4–5 minutes for maximum juiciness",
+      "origin": "Origin & A5 excellence\n\nThe Top Round Japanese Wagyu A5 comes from cattle raised on certified Japanese farms, combining traditional techniques with modern feeding standards to achieve high marbling. This A5 grade ensures an unmatched flavor and texture profile.",
+      "cooking": "Cooking recommendations\n\nSear in a cast-iron skillet\n• Preheat over medium-high until lightly smoking.\n• Season with coarse salt before adding the cut.\n• Sear 1–2 minutes per side to mark the surface.\n\nLow-temperature oven\n• After searing, transfer to a 130 °C oven for 10–12 minutes depending on thickness.\n• Reach medium (55 °C) to keep it juicy.\n\nRest\nRest 4–5 minutes tented with foil to redistribute the juices."
     }
   },
   {
@@ -1650,139 +252,15 @@
     },
     "es": {
       "name": "Lengua Wagyu Australiano · Marmoleo Alto",
-      "desc": "Lengua de wagyu australiano de alto marmoleo. Una especialidad tersa y jugosa, perfecta para platillos de autor.",
-      "details": [
-        {
-          "h": "Origen y distinción",
-          "p": [
-            "La Lengua Wagyu Australiano proviene de ganado criado en pasturas controladas de Australia, donde cada ejemplar recibe una alimentación balanceada que propicia un marmoleo excepcional. Con grado de marmoleo alto, este corte destaca por su riqueza de vetas intramusculares que aportan jugosidad y sabor concentrado."
-          ]
-        },
-        {
-          "h": "Características del corte",
-          "list": [
-            "Textura refinada: fibra suave y tersa que se deshace al paladar.",
-            "Marmoleo generoso: grasa intramuscular que se funde en boca, realzando la experiencia umami.",
-            "Tamaño uniforme: pieza de grosor parejo, ideal para cocciones consistentes."
-          ]
-        },
-        {
-          "h": "Perfil sensorial",
-          "p": [
-            "Notas profundas a umami con matices ligeramente dulces y toques a nuez. La grasa se funde de manera equilibrada, impregnando cada rebanada de una jugosidad aterciopelada."
-          ]
-        },
-        {
-          "h": "Recomendaciones de cocción",
-          "methods": [
-            {
-              "h": "Baño de agua y sello rápido",
-              "list": [
-                "Blanquear a 80 °C durante 10–15 min para ablandar.",
-                "Sellar en plancha o sartén caliente 1 min por lado para marcar la superficie."
-              ]
-            },
-            {
-              "h": "Braseado lento",
-              "list": [
-                "Cocinar a fuego bajo en caldo ligero durante 2–3 h hasta obtener ternura óptima.",
-                "Terminación rápida en sartén caliente para generar ligera costra."
-              ]
-            },
-            {
-              "h": "Reposo breve",
-              "p": [
-                "Dejar reposar 5 min antes de cortar para retener jugos."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Valor nutricional",
-          "p": [
-            "Aporta proteínas de alta calidad, vitaminas del complejo B y minerales como hierro y zinc. El marmoleo contribuye con ácidos grasos monoinsaturados (ácido oleico), favoreciendo un perfil lipídico más saludable."
-          ]
-        },
-        {
-          "h": "Puntos clave",
-          "list": [
-            "Corte: Lengua completa de Wagyu Australiano",
-            "Marmoleo: Alto nivel de grasa intramuscular",
-            "Textura: Ultra-fina y suave",
-            "Sabor: Umami intenso con toques a nuez y crema",
-            "Cocción: Blanqueo y sellado, o braseado lento",
-            "Reposo: 5 min bajo papel aluminio"
-          ]
-        }
-      ]
+      "description": "Lengua de wagyu australiano de alto marmoleo. Una especialidad tersa y jugosa, perfecta para platillos de autor.\n\nCaracterísticas del corte\n\n• Textura refinada: fibra suave y tersa que se deshace al paladar.\n• Marmoleo generoso: grasa intramuscular que se funde en boca, realzando la experiencia umami.\n• Tamaño uniforme: pieza de grosor parejo, ideal para cocciones consistentes.\n\nPerfil sensorial\n\nNotas profundas a umami con matices ligeramente dulces y toques a nuez. La grasa se funde de manera equilibrada, impregnando cada rebanada de una jugosidad aterciopelada.\n\nValor nutricional\n\nAporta proteínas de alta calidad, vitaminas del complejo B y minerales como hierro y zinc. El marmoleo contribuye con ácidos grasos monoinsaturados (ácido oleico), favoreciendo un perfil lipídico más saludable.\n\nPuntos clave\n\n• Corte: Lengua completa de Wagyu Australiano\n• Marmoleo: Alto nivel de grasa intramuscular\n• Textura: Ultra-fina y suave\n• Sabor: Umami intenso con toques a nuez y crema\n• Cocción: Blanqueo y sellado, o braseado lento\n• Reposo: 5 min bajo papel aluminio",
+      "origin": "Origen y distinción\n\nLa Lengua Wagyu Australiano proviene de ganado criado en pasturas controladas de Australia, donde cada ejemplar recibe una alimentación balanceada que propicia un marmoleo excepcional. Con grado de marmoleo alto, este corte destaca por su riqueza de vetas intramusculares que aportan jugosidad y sabor concentrado.",
+      "cooking": "Recomendaciones de cocción\n\nBaño de agua y sello rápido\n• Blanquear a 80 °C durante 10–15 min para ablandar.\n• Sellar en plancha o sartén caliente 1 min por lado para marcar la superficie.\n\nBraseado lento\n• Cocinar a fuego bajo en caldo ligero durante 2–3 h hasta obtener ternura óptima.\n• Terminación rápida en sartén caliente para generar ligera costra.\n\nReposo breve\nDejar reposar 5 min antes de cortar para retener jugos."
     },
     "en": {
       "name": "Australian Wagyu Tongue · High Marbling",
-      "desc": "High-marbling Australian wagyu tongue. A tender, juicy specialty, perfect for signature dishes.",
-      "details": [
-        {
-          "h": "Origin & distinction",
-          "p": [
-            "The Australian Wagyu Tongue comes from cattle raised on controlled Australian pastures, where each animal receives balanced feeding that promotes exceptional marbling. With a high marbling grade, this cut stands out for its rich intramuscular veining that brings juiciness and concentrated flavor."
-          ]
-        },
-        {
-          "h": "Cut characteristics",
-          "list": [
-            "Refined texture: soft, smooth fiber that melts on the palate.",
-            "Generous marbling: intramuscular fat that melts in the mouth, heightening the umami experience.",
-            "Uniform size: an even-thickness piece, ideal for consistent cooking."
-          ]
-        },
-        {
-          "h": "Sensory profile",
-          "p": [
-            "Deep umami notes with slightly sweet nuances and hints of nuts. The fat melts in a balanced way, infusing every slice with velvety juiciness."
-          ]
-        },
-        {
-          "h": "Cooking recommendations",
-          "methods": [
-            {
-              "h": "Water bath & quick sear",
-              "list": [
-                "Blanch at 80 °C for 10–15 min to tenderize.",
-                "Sear on a hot griddle or pan 1 minute per side to mark the surface."
-              ]
-            },
-            {
-              "h": "Slow braise",
-              "list": [
-                "Cook over low heat in a light broth for 2–3 h until optimal tenderness.",
-                "Finish quickly in a hot pan to create a light crust."
-              ]
-            },
-            {
-              "h": "Short rest",
-              "p": [
-                "Rest 5 minutes before slicing to retain the juices."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Nutritional value",
-          "p": [
-            "Provides high-quality protein, B-complex vitamins and minerals such as iron and zinc. The marbling contributes monounsaturated fatty acids (oleic acid), supporting a healthier lipid profile."
-          ]
-        },
-        {
-          "h": "Key points",
-          "list": [
-            "Cut: whole Australian Wagyu tongue",
-            "Marbling: high level of intramuscular fat",
-            "Texture: ultra-fine and soft",
-            "Flavor: intense umami with hints of nuts and cream",
-            "Cooking: blanch & sear, or slow braise",
-            "Rest: 5 min under foil"
-          ]
-        }
-      ]
+      "description": "High-marbling Australian wagyu tongue. A tender, juicy specialty, perfect for signature dishes.\n\nCut characteristics\n\n• Refined texture: soft, smooth fiber that melts on the palate.\n• Generous marbling: intramuscular fat that melts in the mouth, heightening the umami experience.\n• Uniform size: an even-thickness piece, ideal for consistent cooking.\n\nSensory profile\n\nDeep umami notes with slightly sweet nuances and hints of nuts. The fat melts in a balanced way, infusing every slice with velvety juiciness.\n\nNutritional value\n\nProvides high-quality protein, B-complex vitamins and minerals such as iron and zinc. The marbling contributes monounsaturated fatty acids (oleic acid), supporting a healthier lipid profile.\n\nKey points\n\n• Cut: whole Australian Wagyu tongue\n• Marbling: high level of intramuscular fat\n• Texture: ultra-fine and soft\n• Flavor: intense umami with hints of nuts and cream\n• Cooking: blanch & sear, or slow braise\n• Rest: 5 min under foil",
+      "origin": "Origin & distinction\n\nThe Australian Wagyu Tongue comes from cattle raised on controlled Australian pastures, where each animal receives balanced feeding that promotes exceptional marbling. With a high marbling grade, this cut stands out for its rich intramuscular veining that brings juiciness and concentrated flavor.",
+      "cooking": "Cooking recommendations\n\nWater bath & quick sear\n• Blanch at 80 °C for 10–15 min to tenderize.\n• Sear on a hot griddle or pan 1 minute per side to mark the surface.\n\nSlow braise\n• Cook over low heat in a light broth for 2–3 h until optimal tenderness.\n• Finish quickly in a hot pan to create a light crust.\n\nShort rest\nRest 5 minutes before slicing to retain the juices."
     }
   },
   {
@@ -1796,143 +274,15 @@
     },
     "es": {
       "name": "New York Black Angus Australiano · Marmoleo Medio",
-      "desc": "New York Black Angus australiano de marmoleo medio — carne roja fresca con jugosidad sedosa.",
-      "details": [
-        {
-          "h": "Origen y crianza",
-          "p": [
-            "Este New York Black Angus Australiano proviene de ganado criado en pasturas seleccionadas de Australia, siguiendo protocolos de bienestar animal y alimentación balanceada. Su marmoleo medio resulta de un control preciso en la fase de engorda, ofreciendo la combinación perfecta de sabor y textura."
-          ]
-        },
-        {
-          "h": "Características del corte",
-          "list": [
-            "Corte New York (entrecot): extraído de la parte alta del lomo, con fibra definida y superficie amplia para un sellado óptimo.",
-            "Marmoleo medio: vetas de grasa intramuscular equilibradas que aportan jugosidad sin enmascarar el sabor natural de la carne.",
-            "Grosor homogéneo: pieza pareja que facilita tiempos de cocción consistentes."
-          ]
-        },
-        {
-          "h": "Perfil sensorial",
-          "p": [
-            "Al paladar despliega notas a carne roja fresca, con matices a nuez ligera y un delicado retrogusto dulce. La grasa intramuscular se funde de manera gradual, potenciando la sensación de jugosidad y dando un acabado sedoso."
-          ]
-        },
-        {
-          "h": "Recomendaciones de cocción",
-          "methods": [
-            {
-              "h": "Plancha o sartén de hierro fundido",
-              "list": [
-                "Calienta a fuego medio-alto hasta que empiece a humear.",
-                "Sazona con sal gruesa y pimienta al momento de colocar la pieza.",
-                "Cocina 2–3 minutos por lado para término medio."
-              ]
-            },
-            {
-              "h": "Parrilla directa",
-              "list": [
-                "Sella cada lado 1–2 minutos a fuego fuerte.",
-                "Tras sellar, mueve a zona de calor indirecto y cocina 2 minutos adicionales por lado."
-              ]
-            },
-            {
-              "h": "Reposo",
-              "p": [
-                "Deja reposar 4–5 minutos cubierto con papel aluminio ligero para redistribuir jugos."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Valor nutricional",
-          "p": [
-            "Con un marmoleo medio, este corte aporta proteínas de alta calidad, hierro y zinc, manteniendo un perfil razonable de grasas que incluyen ácidos grasos monoinsaturados, los cuales favorecen una experiencia más saludable sin sacrificar sabor."
-          ]
-        },
-        {
-          "h": "Puntos clave",
-          "list": [
-            "Corte: New York (entrecot)",
-            "Raza: Black Angus Australiano",
-            "Marmoleo: Medio, equilibrio perfecto entre sabor y jugosidad",
-            "Textura: Firme pero jugosa, con acabado sedoso",
-            "Sabor: Carne roja fresca con matices a nuez y retrogusto dulce",
-            "Cocción: Ideal en sartén de hierro, plancha o parrilla",
-            "Reposo: 4–5 minutos para máxima jugosidad"
-          ]
-        }
-      ]
+      "description": "New York Black Angus australiano de marmoleo medio — carne roja fresca con jugosidad sedosa.\n\nCaracterísticas del corte\n\n• Corte New York (entrecot): extraído de la parte alta del lomo, con fibra definida y superficie amplia para un sellado óptimo.\n• Marmoleo medio: vetas de grasa intramuscular equilibradas que aportan jugosidad sin enmascarar el sabor natural de la carne.\n• Grosor homogéneo: pieza pareja que facilita tiempos de cocción consistentes.\n\nPerfil sensorial\n\nAl paladar despliega notas a carne roja fresca, con matices a nuez ligera y un delicado retrogusto dulce. La grasa intramuscular se funde de manera gradual, potenciando la sensación de jugosidad y dando un acabado sedoso.\n\nValor nutricional\n\nCon un marmoleo medio, este corte aporta proteínas de alta calidad, hierro y zinc, manteniendo un perfil razonable de grasas que incluyen ácidos grasos monoinsaturados, los cuales favorecen una experiencia más saludable sin sacrificar sabor.\n\nPuntos clave\n\n• Corte: New York (entrecot)\n• Raza: Black Angus Australiano\n• Marmoleo: Medio, equilibrio perfecto entre sabor y jugosidad\n• Textura: Firme pero jugosa, con acabado sedoso\n• Sabor: Carne roja fresca con matices a nuez y retrogusto dulce\n• Cocción: Ideal en sartén de hierro, plancha o parrilla\n• Reposo: 4–5 minutos para máxima jugosidad",
+      "origin": "Origen y crianza\n\nEste New York Black Angus Australiano proviene de ganado criado en pasturas seleccionadas de Australia, siguiendo protocolos de bienestar animal y alimentación balanceada. Su marmoleo medio resulta de un control preciso en la fase de engorda, ofreciendo la combinación perfecta de sabor y textura.",
+      "cooking": "Recomendaciones de cocción\n\nPlancha o sartén de hierro fundido\n• Calienta a fuego medio-alto hasta que empiece a humear.\n• Sazona con sal gruesa y pimienta al momento de colocar la pieza.\n• Cocina 2–3 minutos por lado para término medio.\n\nParrilla directa\n• Sella cada lado 1–2 minutos a fuego fuerte.\n• Tras sellar, mueve a zona de calor indirecto y cocina 2 minutos adicionales por lado.\n\nReposo\nDeja reposar 4–5 minutos cubierto con papel aluminio ligero para redistribuir jugos."
     },
     "en": {
       "name": "Australian Black Angus New York · Medium Marbling",
-      "desc": "Australian Black Angus New York with medium marbling — fresh red meat with silky juiciness.",
-      "details": [
-        {
-          "h": "Origin & rearing",
-          "p": [
-            "This Australian Black Angus New York comes from cattle raised on select Australian pastures, following animal-welfare protocols and balanced feeding. Its medium marbling results from precise control during the finishing phase, offering the perfect combination of flavor and texture."
-          ]
-        },
-        {
-          "h": "Cut characteristics",
-          "list": [
-            "New York cut (strip loin): taken from the upper loin, with defined grain and a broad surface for an optimal sear.",
-            "Medium marbling: balanced intramuscular fat veins that add juiciness without masking the natural meat flavor.",
-            "Even thickness: a uniform piece that enables consistent cooking times."
-          ]
-        },
-        {
-          "h": "Sensory profile",
-          "p": [
-            "On the palate it unfolds notes of fresh red meat, with light nutty nuances and a delicate sweet aftertaste. The intramuscular fat melts gradually, boosting juiciness and giving a silky finish."
-          ]
-        },
-        {
-          "h": "Cooking recommendations",
-          "methods": [
-            {
-              "h": "Griddle or cast-iron skillet",
-              "list": [
-                "Heat over medium-high until it begins to smoke.",
-                "Season with coarse salt and pepper as you place the cut.",
-                "Cook 2–3 minutes per side for medium."
-              ]
-            },
-            {
-              "h": "Direct grilling",
-              "list": [
-                "Sear each side 1–2 minutes over high heat.",
-                "After searing, move to an indirect-heat zone and cook 2 minutes more per side."
-              ]
-            },
-            {
-              "h": "Rest",
-              "p": [
-                "Rest 4–5 minutes loosely tented with foil to redistribute the juices."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Nutritional value",
-          "p": [
-            "With medium marbling, this cut provides high-quality protein, iron and zinc, keeping a reasonable fat profile that includes monounsaturated fatty acids, which support a healthier experience without sacrificing flavor."
-          ]
-        },
-        {
-          "h": "Key points",
-          "list": [
-            "Cut: New York (strip loin)",
-            "Breed: Australian Black Angus",
-            "Marbling: Medium, perfect balance of flavor and juiciness",
-            "Texture: Firm yet juicy, with a silky finish",
-            "Flavor: Fresh red meat with nutty notes and a sweet aftertaste",
-            "Cooking: Ideal in cast-iron skillet, griddle or grill",
-            "Rest: 4–5 minutes for maximum juiciness"
-          ]
-        }
-      ]
+      "description": "Australian Black Angus New York with medium marbling — fresh red meat with silky juiciness.\n\nCut characteristics\n\n• New York cut (strip loin): taken from the upper loin, with defined grain and a broad surface for an optimal sear.\n• Medium marbling: balanced intramuscular fat veins that add juiciness without masking the natural meat flavor.\n• Even thickness: a uniform piece that enables consistent cooking times.\n\nSensory profile\n\nOn the palate it unfolds notes of fresh red meat, with light nutty nuances and a delicate sweet aftertaste. The intramuscular fat melts gradually, boosting juiciness and giving a silky finish.\n\nNutritional value\n\nWith medium marbling, this cut provides high-quality protein, iron and zinc, keeping a reasonable fat profile that includes monounsaturated fatty acids, which support a healthier experience without sacrificing flavor.\n\nKey points\n\n• Cut: New York (strip loin)\n• Breed: Australian Black Angus\n• Marbling: Medium, perfect balance of flavor and juiciness\n• Texture: Firm yet juicy, with a silky finish\n• Flavor: Fresh red meat with nutty notes and a sweet aftertaste\n• Cooking: Ideal in cast-iron skillet, griddle or grill\n• Rest: 4–5 minutes for maximum juiciness",
+      "origin": "Origin & rearing\n\nThis Australian Black Angus New York comes from cattle raised on select Australian pastures, following animal-welfare protocols and balanced feeding. Its medium marbling results from precise control during the finishing phase, offering the perfect combination of flavor and texture.",
+      "cooking": "Cooking recommendations\n\nGriddle or cast-iron skillet\n• Heat over medium-high until it begins to smoke.\n• Season with coarse salt and pepper as you place the cut.\n• Cook 2–3 minutes per side for medium.\n\nDirect grilling\n• Sear each side 1–2 minutes over high heat.\n• After searing, move to an indirect-heat zone and cook 2 minutes more per side.\n\nRest\nRest 4–5 minutes loosely tented with foil to redistribute the juices."
     }
   },
   {
@@ -1946,139 +296,15 @@
     },
     "es": {
       "name": "Salchicha Wagyu Americano · 4 Pack",
-      "desc": "Salchicha de wagyu americano, paquete de 4. Jugosa y sabrosa, elaborada con recortes de wagyu premium.",
-      "details": [
-        {
-          "h": "Origen y calidad superior",
-          "p": [
-            "La Salchicha Wagyu Americano se elabora con carne de res Wagyu criada en EE. UU. bajo altos estándares de bienestar animal y alimentación controlada. Cada paquete de 4 piezas combina cortes selectos para ofrecer un producto procesado de nivel gourmet."
-          ]
-        },
-        {
-          "h": "Características del producto",
-          "list": [
-            "Paquete de 4 piezas: formato práctico para tu cocina o servicio.",
-            "Carne Wagyu: alto contenido de grasa intramuscular que aporta jugosidad y riqueza de sabor.",
-            "Condimentos artesanales: mezcla equilibrada de especias que realza el perfil umami sin opacar la carne."
-          ]
-        },
-        {
-          "h": "Perfil sensorial",
-          "p": [
-            "Cada bocado revela un umami suave con matices a carne asada y ligeros toques herbales. La emulsión de grasa Wagyu ofrece textura jugosa y un retrogusto delicado que distingue a estas salchichas de las convencionales."
-          ]
-        },
-        {
-          "h": "Recomendaciones de cocción",
-          "methods": [
-            {
-              "h": "Parrilla o sartén antiadherente",
-              "list": [
-                "Calienta a fuego medio para evitar quemar la piel.",
-                "Cocina 4–5 minutos por lado, girando con frecuencia para un dorado parejo."
-              ]
-            },
-            {
-              "h": "Horno",
-              "list": [
-                "Precalienta a 180 °C.",
-                "Hornea 12–15 minutos sobre rejilla, volteando a la mitad del tiempo."
-              ]
-            },
-            {
-              "h": "Evitar pinchazos",
-              "p": [
-                "No perforar la piel para conservar los jugos en su interior."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Valor nutricional",
-          "p": [
-            "Ricas en proteínas de alta calidad y con grasa Wagyu rica en ácido oleico (monoinsaturados), estas salchichas aportan además vitaminas B y minerales como hierro y zinc, ideales para opciones de menú con valor añadido."
-          ]
-        },
-        {
-          "h": "Puntos clave",
-          "list": [
-            "Formato: Pack de 4 salchichas",
-            "Tipo de carne: Wagyu Americano",
-            "Textura: Jugosa y aterciopelada",
-            "Sabor: Umami suave con especias artesanales",
-            "Cocción: Parrilla, sartén u horno",
-            "Uso: Menús gourmet, eventos y servicios premium"
-          ]
-        }
-      ]
+      "description": "Salchicha de wagyu americano, paquete de 4. Jugosa y sabrosa, elaborada con recortes de wagyu premium.\n\nCaracterísticas del producto\n\n• Paquete de 4 piezas: formato práctico para tu cocina o servicio.\n• Carne Wagyu: alto contenido de grasa intramuscular que aporta jugosidad y riqueza de sabor.\n• Condimentos artesanales: mezcla equilibrada de especias que realza el perfil umami sin opacar la carne.\n\nPerfil sensorial\n\nCada bocado revela un umami suave con matices a carne asada y ligeros toques herbales. La emulsión de grasa Wagyu ofrece textura jugosa y un retrogusto delicado que distingue a estas salchichas de las convencionales.\n\nValor nutricional\n\nRicas en proteínas de alta calidad y con grasa Wagyu rica en ácido oleico (monoinsaturados), estas salchichas aportan además vitaminas B y minerales como hierro y zinc, ideales para opciones de menú con valor añadido.\n\nPuntos clave\n\n• Formato: Pack de 4 salchichas\n• Tipo de carne: Wagyu Americano\n• Textura: Jugosa y aterciopelada\n• Sabor: Umami suave con especias artesanales\n• Cocción: Parrilla, sartén u horno\n• Uso: Menús gourmet, eventos y servicios premium",
+      "origin": "Origen y calidad superior\n\nLa Salchicha Wagyu Americano se elabora con carne de res Wagyu criada en EE. UU. bajo altos estándares de bienestar animal y alimentación controlada. Cada paquete de 4 piezas combina cortes selectos para ofrecer un producto procesado de nivel gourmet.",
+      "cooking": "Recomendaciones de cocción\n\nParrilla o sartén antiadherente\n• Calienta a fuego medio para evitar quemar la piel.\n• Cocina 4–5 minutos por lado, girando con frecuencia para un dorado parejo.\n\nHorno\n• Precalienta a 180 °C.\n• Hornea 12–15 minutos sobre rejilla, volteando a la mitad del tiempo.\n\nEvitar pinchazos\nNo perforar la piel para conservar los jugos en su interior."
     },
     "en": {
       "name": "American Wagyu Sausage · 4-Pack",
-      "desc": "American wagyu sausage, 4-pack. Juicy and flavorful, made from premium wagyu trim.",
-      "details": [
-        {
-          "h": "Origin & superior quality",
-          "p": [
-            "The American Wagyu Sausage is made with Wagyu beef raised in the USA under high animal-welfare standards and controlled feeding. Each 4-piece pack combines select cuts to deliver a gourmet-level processed product."
-          ]
-        },
-        {
-          "h": "Product features",
-          "list": [
-            "Pack of 4: a practical format for your kitchen or service.",
-            "Wagyu beef: high intramuscular fat content that brings juiciness and rich flavor.",
-            "Artisan seasoning: a balanced spice blend that enhances the umami profile without overpowering the meat."
-          ]
-        },
-        {
-          "h": "Sensory profile",
-          "p": [
-            "Each bite reveals a mild umami with hints of grilled meat and light herbal touches. The Wagyu fat emulsion delivers a juicy texture and a delicate aftertaste that sets these sausages apart from conventional ones."
-          ]
-        },
-        {
-          "h": "Cooking recommendations",
-          "methods": [
-            {
-              "h": "Grill or non-stick pan",
-              "list": [
-                "Heat over medium to avoid burning the casing.",
-                "Cook 4–5 minutes per side, turning often for even browning."
-              ]
-            },
-            {
-              "h": "Oven",
-              "list": [
-                "Preheat to 180 °C.",
-                "Bake 12–15 minutes on a rack, flipping halfway through."
-              ]
-            },
-            {
-              "h": "Avoid piercing",
-              "p": [
-                "Do not pierce the casing, to keep the juices inside."
-              ]
-            }
-          ]
-        },
-        {
-          "h": "Nutritional value",
-          "p": [
-            "Rich in high-quality protein and with Wagyu fat high in oleic acid (monounsaturated), these sausages also provide B vitamins and minerals such as iron and zinc — ideal for value-added menu options."
-          ]
-        },
-        {
-          "h": "Key points",
-          "list": [
-            "Format: pack of 4 sausages",
-            "Meat type: American Wagyu",
-            "Texture: Juicy and velvety",
-            "Flavor: Mild umami with artisan spices",
-            "Cooking: Grill, pan or oven",
-            "Use: Gourmet menus, events and premium service"
-          ]
-        }
-      ]
+      "description": "American wagyu sausage, 4-pack. Juicy and flavorful, made from premium wagyu trim.\n\nProduct features\n\n• Pack of 4: a practical format for your kitchen or service.\n• Wagyu beef: high intramuscular fat content that brings juiciness and rich flavor.\n• Artisan seasoning: a balanced spice blend that enhances the umami profile without overpowering the meat.\n\nSensory profile\n\nEach bite reveals a mild umami with hints of grilled meat and light herbal touches. The Wagyu fat emulsion delivers a juicy texture and a delicate aftertaste that sets these sausages apart from conventional ones.\n\nNutritional value\n\nRich in high-quality protein and with Wagyu fat high in oleic acid (monounsaturated), these sausages also provide B vitamins and minerals such as iron and zinc — ideal for value-added menu options.\n\nKey points\n\n• Format: pack of 4 sausages\n• Meat type: American Wagyu\n• Texture: Juicy and velvety\n• Flavor: Mild umami with artisan spices\n• Cooking: Grill, pan or oven\n• Use: Gourmet menus, events and premium service",
+      "origin": "Origin & superior quality\n\nThe American Wagyu Sausage is made with Wagyu beef raised in the USA under high animal-welfare standards and controlled feeding. Each 4-piece pack combines select cuts to deliver a gourmet-level processed product.",
+      "cooking": "Cooking recommendations\n\nGrill or non-stick pan\n• Heat over medium to avoid burning the casing.\n• Cook 4–5 minutes per side, turning often for even browning.\n\nOven\n• Preheat to 180 °C.\n• Bake 12–15 minutes on a rack, flipping halfway through.\n\nAvoid piercing\nDo not pierce the casing, to keep the juices inside."
     }
   }
 ]

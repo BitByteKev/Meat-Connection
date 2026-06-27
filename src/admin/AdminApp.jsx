@@ -1,43 +1,18 @@
 // Catalog admin (password-gated). Edits the product catalog and commits it to
 // GitHub via /api/save-products, which triggers a Vercel rebuild (~1 min to live).
-// Content admin only — not a CRM. See docs/superpowers/specs/2026-06-26-catalog-admin-design.md
+// Content admin only — not a CRM. See docs/superpowers/specs/2026-06-27-catalog-admin-simplify.md
 import React from 'react'
 import { RAW_CATALOG, CATEGORIES, TONES, IMAGE_FILES } from '../products.js'
 import { TextField, TextArea, Select, card, btn, btnDanger, labelStyle, move } from './fields.jsx'
-import DetailsEditor from './DetailsEditor.jsx'
 import ImagePicker from './ImagePicker.jsx'
 
 const PW_KEY = 'mc_admin_pw'
 const clone = (x) => JSON.parse(JSON.stringify(x))
 
-const page = { maxWidth: '820px', margin: '0 auto', padding: '28px 18px 120px', fontFamily: 'var(--font-body, sans-serif)', color: 'var(--mc-ink-900, #1a1a1a)' }
+const page = { maxWidth: '980px', margin: '0 auto', padding: '28px 18px 120px', fontFamily: 'var(--font-body, sans-serif)', color: 'var(--mc-ink-900, #1a1a1a)' }
+const LANG_LABEL = { es: 'Español', en: 'English' }
 
-// Drop blank lines and empty optional keys so the committed JSON stays clean and
-// keeps the original section shape ({ h, p?, list?, methods? }).
-function pruneSections(sections) {
-  return (sections || [])
-    .map((s) => {
-      const out = { h: (s.h || '').trim() }
-      const p = (s.p || []).map((x) => x.trim()).filter(Boolean)
-      const list = (s.list || []).map((x) => x.trim()).filter(Boolean)
-      const methods = (s.methods || [])
-        .map((m) => {
-          const mp = (m.p || []).map((x) => x.trim()).filter(Boolean)
-          const ml = (m.list || []).map((x) => x.trim()).filter(Boolean)
-          const mo = { h: (m.h || '').trim() }
-          if (mp.length) mo.p = mp
-          if (ml.length) mo.list = ml
-          return mo
-        })
-        .filter((m) => m.h || m.p || m.list)
-      if (p.length) out.p = p
-      if (list.length) out.list = list
-      if (methods.length) out.methods = methods
-      return out
-    })
-    .filter((s) => s.h || s.p || s.list || s.methods)
-}
-
+// Trim outer whitespace only — internal newlines are meaningful (paragraphs/bullets).
 function pruneCatalog(catalog) {
   return catalog.map((p) => ({
     id: p.id.trim(),
@@ -48,9 +23,17 @@ function pruneCatalog(catalog) {
       es: (p.badge.es || '').trim() || null,
       en: (p.badge.en || '').trim() || null,
     },
-    es: { name: p.es.name.trim(), desc: p.es.desc.trim(), details: pruneSections(p.es.details) },
-    en: { name: p.en.name.trim(), desc: p.en.desc.trim(), details: pruneSections(p.en.details) },
+    es: lang(p.es),
+    en: lang(p.en),
   }))
+  function lang(L) {
+    return {
+      name: L.name.trim(),
+      description: L.description.trim(),
+      origin: L.origin.trim(),
+      cooking: L.cooking.trim(),
+    }
+  }
 }
 
 function validate(catalog) {
@@ -60,18 +43,19 @@ function validate(catalog) {
     if (seen.has(p.id.trim())) return `Id duplicado: "${p.id.trim()}".`
     seen.add(p.id.trim())
     if (!CATEGORIES.includes(p.cat)) return `Categoría inválida en "${p.id}".`
-    if (!p.es.name.trim() || !p.en.name.trim()) return `Falta el nombre (ES y EN) en "${p.id}".`
+    if (!p.es.name.trim()) return `Falta el nombre en Español (ES) en "${p.id}".`
+    if (!p.en.name.trim()) return `Falta el nombre en Inglés (EN) en "${p.id}".`
     if (!IMAGE_FILES.includes(p.image)) return `Imagen no encontrada en "${p.id}".`
   }
   return null
 }
 
 function newProduct() {
+  const blank = () => ({ name: '', description: '', origin: '', cooking: '' })
   return {
     id: '', cat: 'jp', tone: 'charcoal', image: IMAGE_FILES[0] || '',
     badge: { es: null, en: null },
-    es: { name: '', desc: '', details: [] },
-    en: { name: '', desc: '', details: [] },
+    es: blank(), en: blank(),
   }
 }
 
@@ -89,11 +73,30 @@ function LoginGate({ onLogin }) {
   )
 }
 
-function ProductEditor({ product, index, total, lang, onChange, onMove, onRemove }) {
-  const [open, setOpen] = React.useState(false)
+// One language's editable content (name, badge, and the three text boxes).
+function LangColumn({ lang, product, onChange }) {
   const L = product[lang]
   const setL = (patch) => onChange({ ...product, [lang]: { ...L, ...patch } })
   const setBadge = (v) => onChange({ ...product, badge: { ...product.badge, [lang]: v } })
+  return (
+    <div style={{ flex: '1 1 340px', minWidth: 0, border: '1px solid var(--mc-ink-200, #e3e0da)', borderRadius: '8px', padding: '14px', background: 'var(--mc-cream, #faf8f4)' }}>
+      <div style={{ fontFamily: 'var(--font-display, sans-serif)', fontWeight: 700, fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--mc-red, #b3122a)', marginBottom: '10px' }}>
+        {LANG_LABEL[lang]}
+      </div>
+      <TextField label="Nombre" value={L.name} onChange={(v) => setL({ name: v })} />
+      <TextField label="Badge (opcional)" value={product.badge[lang] || ''} onChange={setBadge} />
+      <TextArea label="Descripción" rows={7} value={L.description} onChange={(v) => setL({ description: v })} />
+      <p style={{ fontSize: '11px', color: 'var(--mc-ink-600, #777)', margin: '-6px 0 12px' }}>
+        La primera línea se muestra como gancho en la tarjeta del catálogo.
+      </p>
+      <TextArea label="Origen" rows={4} value={L.origin} onChange={(v) => setL({ origin: v })} />
+      <TextArea label="Cómo cocinar" rows={5} value={L.cooking} onChange={(v) => setL({ cooking: v })} />
+    </div>
+  )
+}
+
+function ProductEditor({ product, index, total, onChange, onMove, onRemove }) {
+  const [open, setOpen] = React.useState(false)
   return (
     <div style={card}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -101,7 +104,7 @@ function ProductEditor({ product, index, total, lang, onChange, onMove, onRemove
           {open ? '▾' : '▸'}
         </button>
         <strong style={{ flex: 1, fontFamily: 'var(--font-display, sans-serif)' }}>
-          {L.name || product.id || '(sin nombre)'} <span style={{ color: 'var(--mc-ink-500, #888)', fontWeight: 400, fontSize: '12px' }}>· {product.id} · {product.cat}</span>
+          {product.es.name || product.id || '(sin nombre)'} <span style={{ color: 'var(--mc-ink-500, #888)', fontWeight: 400, fontSize: '12px' }}>· {product.id} · {product.cat}</span>
         </strong>
         <button type="button" style={btn} disabled={index === 0} onClick={() => onMove(-1)}>↑</button>
         <button type="button" style={btn} disabled={index === total - 1} onClick={() => onMove(1)}>↓</button>
@@ -116,13 +119,9 @@ function ProductEditor({ product, index, total, lang, onChange, onMove, onRemove
             <Select label="Tono" value={product.tone} options={TONES} onChange={(v) => onChange({ ...product, tone: v })} />
           </div>
           <ImagePicker value={product.image} onChange={(v) => onChange({ ...product, image: v })} />
-
-          <div style={{ marginTop: '6px', padding: '12px', border: '1px solid var(--mc-ink-200, #e3e0da)', borderRadius: '8px' }}>
-            <span style={labelStyle}>Contenido — {lang.toUpperCase()}</span>
-            <TextField label="Nombre" value={L.name} onChange={(v) => setL({ name: v })} />
-            <TextField label="Badge (opcional)" value={product.badge[lang] || ''} onChange={(v) => setBadge(v)} />
-            <TextArea label="Descripción corta" value={L.desc} onChange={(v) => setL({ desc: v })} rows={3} />
-            <DetailsEditor details={L.details} onChange={(v) => setL({ details: v })} />
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginTop: '6px' }}>
+            <LangColumn lang="es" product={product} onChange={onChange} />
+            <LangColumn lang="en" product={product} onChange={onChange} />
           </div>
         </div>
       )}
@@ -134,7 +133,6 @@ export default function AdminApp() {
   const [pw, setPw] = React.useState(() => { try { return sessionStorage.getItem(PW_KEY) || '' } catch { return '' } })
   const [authed, setAuthed] = React.useState(() => { try { return !!sessionStorage.getItem(PW_KEY) } catch { return false } })
   const [catalog, setCatalog] = React.useState(() => clone(RAW_CATALOG))
-  const [lang, setLang] = React.useState('es')
   const [status, setStatus] = React.useState(null) // { ok, msg }
   const [saving, setSaving] = React.useState(false)
 
@@ -184,26 +182,16 @@ export default function AdminApp() {
 
   return (
     <div style={page}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap', marginBottom: '16px' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap', marginBottom: '8px' }}>
         <h1 style={{ fontFamily: 'var(--font-display, sans-serif)', fontSize: '22px', margin: 0, flex: 1 }}>Catálogo · Admin</h1>
-        <div role="group" aria-label="Idioma de edición" style={{ display: 'inline-flex', border: '1px solid var(--mc-ink-300, #cfcbc4)', borderRadius: '6px', overflow: 'hidden' }}>
-          {['es', 'en'].map((l) => (
-            <button key={l} type="button" onClick={() => setLang(l)}
-              style={{ border: 'none', cursor: 'pointer', padding: '6px 12px', fontFamily: 'var(--font-display, sans-serif)', fontWeight: 700, fontSize: '12px',
-                background: lang === l ? 'var(--mc-red, #b3122a)' : '#fff', color: lang === l ? '#fff' : 'var(--mc-ink-800, #2a2a2a)' }}>
-              {l.toUpperCase()}
-            </button>
-          ))}
-        </div>
         <button type="button" style={btn} onClick={logout}>Salir</button>
       </div>
-
       <p style={{ fontSize: '13px', color: 'var(--mc-ink-700, #555)', marginTop: 0 }}>
-        Editando <strong>{lang === 'es' ? 'Español' : 'Inglés'}</strong>. Cambia el idioma para editar el otro. Las imágenes, ID, categoría y tono son compartidos.
+        Edita Español e Inglés lado a lado. ID, categoría, tono e imagen son compartidos.
       </p>
 
       {catalog.map((p, i) => (
-        <ProductEditor key={i} product={p} index={i} total={catalog.length} lang={lang}
+        <ProductEditor key={i} product={p} index={i} total={catalog.length}
           onChange={(next) => setProduct(i, next)} onMove={(d) => moveProduct(i, d)} onRemove={() => removeProduct(i)} />
       ))}
 
