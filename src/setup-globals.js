@@ -24,21 +24,9 @@ import brand_stone from './assets-img/mc_brand_stone.webp'
 import brand_margaret from './assets-img/mc_brand_margaret.webp'
 import brand_masami from './assets-img/mc_brand_masami.webp'
 
-// Product photos — the real cut images from /images. Keyed by product id (see PRODUCTS in app.jsx).
-import img_tritip   from '../images/TRI-TIP-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp'
-import img_filete   from '../images/FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp'
-import img_ribeyeJp from '../images/RIB-EYE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp'
-import img_picana   from '../images/PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp'
-import img_ribeye   from '../images/RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp'
-import img_ribeyeLow from '../images/RIB-EYE-WAGYU-AUSTRALIANO-BAJO-MARMOLEO-3-1.webp'
-import img_newyork  from '../images/NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp'
-import img_tbone    from '../images/T-BONE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp'
-import img_paleta   from '../images/PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp'
-import img_denver   from '../images/DENVER-WAGYU-AUSTRALIANO-ALTO-MARMOLEO2.webp'
-import img_topround from '../images/TOP-ROUND-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp'
-import img_lengua   from '../images/LENGUA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp'
-import img_nyangus  from '../images/new-york-black-angus.webp'
-import img_salchicha from '../images/SALSICHA-WAGYU-AMERICANO-4PACK.webp'
+// Product photos — derived from products.json + an images glob (see ./products.js),
+// so the admin can assign any photo in /images without touching code.
+import { MC_IMG } from './products.js'
 
 window.React = React
 window.ReactDOM = ReactDOMClient
@@ -53,25 +41,7 @@ window.lucide = {
 window.MC_LOGO = mc_logo
 window.MC_PALETA = mc_paleta
 window.MC_DESTACADO = mc_destacado
-window.MC_IMG = {
-  // Wagyu Japonés A5
-  tritip: img_tritip,
-  filete: img_filete,
-  ribeyeJp: img_ribeyeJp,
-  picana: img_picana,
-  // Wagyu Australiano
-  ribeye: img_ribeye,
-  ribeyeLow: img_ribeyeLow,
-  newyork: img_newyork,
-  tbone: img_tbone,
-  paleta: img_paleta,
-  denver: img_denver,
-  topround: img_topround,
-  lengua: img_lengua,
-  // Carne Americana
-  nyangus: img_nyangus,
-  salchicha: img_salchicha,
-}
+window.MC_IMG = MC_IMG
 window.MC_BRAND = {
   wagyu: brand_wagyu,
   kobe: brand_kobe,
