@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom/client'
 import { Analytics } from '@vercel/analytics/react'
 import { LangProvider, useLang, getStrings, fmt } from './i18n.jsx'
 import { PRODUCTS as PRODUCT_LIST } from './products.js'
+import AdminApp from './admin/AdminApp.jsx'
 
 
 /* ===== shared: Icon, money, catalog, ProductImage ===== */
@@ -873,4 +874,11 @@ function App() {
     </div>
   );
 }
-ReactDOM.createRoot(document.getElementById('root')).render(<LangProvider><App /><Analytics /></LangProvider>);
+/* The storefront and the catalog admin are mutually exclusive renders.
+   /admin is served the same index.html via a Vercel rewrite; admin is not linked publicly. */
+const isAdmin = typeof window !== 'undefined' && window.location.pathname.replace(/\/+$/, '').endsWith('/admin');
+ReactDOM.createRoot(document.getElementById('root')).render(
+  isAdmin
+    ? <LangProvider><AdminApp /></LangProvider>
+    : <LangProvider><App /><Analytics /></LangProvider>
+);

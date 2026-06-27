@@ -36,3 +36,16 @@ function stringsForLang(lang) {
 }
 
 export const PRODUCT_STRINGS = { es: stringsForLang('es'), en: stringsForLang('en') }
+
+// --- Admin helpers ---------------------------------------------------------
+// Every photo available in /images, sorted — the selectable pool for the admin
+// image picker. URLs resolve through the same glob the storefront uses.
+export const IMAGE_FILES = Object.keys(imageByFile).sort()
+export const imageUrl = (file) => imageByFile[file]
+
+// The full catalog as stored (deep-cloned so the admin can edit freely without
+// mutating the module's copy that the storefront renders from).
+export const RAW_CATALOG = JSON.parse(JSON.stringify(catalog))
+
+export const CATEGORIES = ['jp', 'au', 'us']
+export const TONES = ['charcoal', 'kraft', 'cream', 'red']
