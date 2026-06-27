@@ -2,6 +2,7 @@ import React from 'react'
 import * as ReactDOM from 'react-dom/client'
 import { Analytics } from '@vercel/analytics/react'
 import { LangProvider, useLang, getStrings, fmt } from './i18n.jsx'
+import { PRODUCTS as PRODUCT_LIST } from './products.js'
 
 
 /* ===== shared: Icon, money, catalog, ProductImage ===== */
@@ -50,27 +51,9 @@ function reorderWhatsApp() {
   openWhatsApp(last ? wa.reorderIntro + '\n' + orderLines(last) : wa.reorderGeneric);
 }
 
-/* Catálogo — cortes más vendidos. Display name/desc/badge come from i18n (by id).
-   Precios de referencia: edita `price`. `cat`: 'jp' | 'au'. */
-const PRODUCTS = [
-  // Wagyu Japonés A5
-  { id: 'tritip',   cat: 'jp', tone: 'charcoal' },
-  { id: 'filete',   cat: 'jp', tone: 'kraft' },
-  { id: 'ribeyeJp', cat: 'jp', tone: 'red' },
-  { id: 'picana',   cat: 'jp', tone: 'cream' },
-  // Wagyu Australiano
-  { id: 'ribeye',    cat: 'au', tone: 'red' },
-  { id: 'ribeyeLow', cat: 'au', tone: 'kraft' },
-  { id: 'newyork',  cat: 'au', tone: 'charcoal' },
-  { id: 'tbone',    cat: 'au', tone: 'kraft' },
-  { id: 'paleta',   cat: 'au', tone: 'cream' },
-  { id: 'denver',   cat: 'au', tone: 'charcoal' },
-  { id: 'topround', cat: 'jp', tone: 'kraft' },
-  { id: 'lengua',   cat: 'au', tone: 'red' },
-  // Carne Americana
-  { id: 'nyangus',   cat: 'au', tone: 'charcoal' },
-  { id: 'salchicha', cat: 'us', tone: 'cream' },
-];
+/* Catálogo — orden, categoría y tono vienen de products.json (ver ./products.js).
+   Nombre/desc/badge se leen por id desde i18n (que también deriva de products.json). */
+const PRODUCTS = PRODUCT_LIST;
 const TONE_BG = { charcoal: 'var(--mc-charcoal)', kraft: 'var(--mc-kraft)', cream: 'var(--mc-cream)', red: 'var(--mc-red)' };
 const TONE_FG = { charcoal: 'var(--mc-paper)', kraft: 'var(--mc-ink-900)', cream: 'var(--mc-ink-800)', red: '#fff' };
 
