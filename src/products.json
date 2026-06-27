@@ -2080,5 +2080,32 @@
         }
       ]
     }
+  },
+  {
+    "id": "King River",
+    "cat": "au",
+    "tone": "charcoal",
+    "image": "corte-destacado.webp",
+    "badge": {
+      "es": "Destacado",
+      "en": "Popular"
+    },
+    "es": {
+      "name": "King River",
+      "desc": "Nuevo en el menu, king river",
+      "details": [
+        {
+          "h": "Descripcion",
+          "p": [
+            "Test"
+          ]
+        }
+      ]
+    },
+    "en": {
+      "name": "King River",
+      "desc": "King River",
+      "details": []
+    }
   }
 ]
