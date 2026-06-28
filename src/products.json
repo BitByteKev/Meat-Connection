@@ -334,5 +334,29 @@
       "origin": "Origin & superior quality\n\nThe American Wagyu Sausage is made with Wagyu beef raised in the USA under high animal-welfare standards and controlled feeding. Each 4-piece pack combines select cuts to deliver a gourmet-level processed product.",
       "cooking": "Cooking recommendations\n\nGrill or non-stick pan\n• Heat over medium to avoid burning the casing.\n• Cook 4–5 minutes per side, turning often for even browning.\n\nOven\n• Preheat to 180 °C.\n• Bake 12–15 minutes on a rack, flipping halfway through.\n\nAvoid piercing\nDo not pierce the casing, to keep the juices inside."
     }
+  },
+  {
+    "id": "king-river",
+    "cat": "us",
+    "tone": "charcoal",
+    "images": [
+      "corte-destacado.webp"
+    ],
+    "badge": {
+      "es": null,
+      "en": null
+    },
+    "es": {
+      "name": "Rib Eye King River · Marmoleo Alto",
+      "description": "Cada rebanada despliega una red de grasa intramuscular tan densa que parece encaje sobre la carne.\n\nEste Rib Eye King River, en su corte americano, exhibe un marmoleo abundante (referencia MB4-5) que se traduce en jugosidad, terneza y un sabor profundo a mantequilla. La grasa fina y entreverada se funde con el calor para envolver cada bocado.\n\nUn corte pensado para quienes buscan una experiencia indulgente, donde el ojo central y la cresta exterior ofrecen dos texturas en una sola pieza.",
+      "origin": "King River, corte americano. Procedencia Black Angus (EE.UU.), con un marmoleo de referencia MB4-5 visible en la etiqueta de la pieza.",
+      "cooking": "Atempera la carne 30–40 minutos antes de cocinar y seca bien la superficie.\n\nSella en sartén de hierro o parrilla muy caliente, 2–3 minutos por lado, hasta formar costra dorada. Por su marmoleo alto, el término ideal es medio (54–57 °C al centro).\n\nDeja reposar 5 minutos antes de cortar. Sazona con sal en escamas y pimienta recién molida; el romero y el ajo realzan sin opacar."
+    },
+    "en": {
+      "name": "Rib Eye King River · High Marbling",
+      "description": "Each slice reveals a fat network so dense it looks like lace woven through the beef.\n\nThis King River Rib Eye, in its American cut, shows abundant marbling (MB4-5 reference) that delivers juiciness, tenderness and a deep, buttery flavor. The fine, interlaced fat melts with heat to coat every bite.\n\nA cut made for those seeking an indulgent experience, where the central eye and the outer cap offer two textures in a single piece.",
+      "origin": "King River, American cut. Sourced from Black Angus (USA), with an MB4-5 marbling reference visible on the cut's label.",
+      "cooking": "Let the steak come to room temperature 30–40 minutes before cooking and pat the surface dry.\n\nSear in a very hot cast iron pan or grill, 2–3 minutes per side, until a golden crust forms. With its high marbling, the ideal doneness is medium (54–57 °C / 129–135 °F at the center).\n\nRest for 5 minutes before slicing. Season with flaky salt and freshly ground pepper; rosemary and garlic enhance without overpowering."
+    }
   }
 ]
