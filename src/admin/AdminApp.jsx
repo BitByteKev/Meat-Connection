@@ -4,7 +4,7 @@
 import React from 'react'
 import { RAW_CATALOG, CATEGORIES, TONES, IMAGE_FILES } from '../products.js'
 import { TextField, TextArea, Select, card, btn, btnDanger, labelStyle, move } from './fields.jsx'
-import ImagePicker from './ImagePicker.jsx'
+import ImagesPicker from './ImagesPicker.jsx'
 
 const PW_KEY = 'mc_admin_pw'
 const clone = (x) => JSON.parse(JSON.stringify(x))
@@ -18,7 +18,7 @@ function pruneCatalog(catalog) {
     id: p.id.trim(),
     cat: p.cat,
     tone: p.tone,
-    image: p.image,
+    images: p.images,
     badge: {
       es: (p.badge.es || '').trim() || null,
       en: (p.badge.en || '').trim() || null,
@@ -45,7 +45,8 @@ function validate(catalog) {
     if (!CATEGORIES.includes(p.cat)) return `Categoría inválida en "${p.id}".`
     if (!p.es.name.trim()) return `Falta el nombre en Español (ES) en "${p.id}".`
     if (!p.en.name.trim()) return `Falta el nombre en Inglés (EN) en "${p.id}".`
-    if (!IMAGE_FILES.includes(p.image)) return `Imagen no encontrada en "${p.id}".`
+    if (!Array.isArray(p.images) || p.images.length === 0) return `Agrega al menos una imagen en "${p.id}".`
+    for (const f of p.images) if (!IMAGE_FILES.includes(f)) return `Imagen no encontrada en "${p.id}": ${f}.`
   }
   return null
 }
@@ -53,7 +54,7 @@ function validate(catalog) {
 function newProduct() {
   const blank = () => ({ name: '', description: '', origin: '', cooking: '' })
   return {
-    id: '', cat: 'jp', tone: 'charcoal', image: IMAGE_FILES[0] || '',
+    id: '', cat: 'jp', tone: 'charcoal', images: IMAGE_FILES[0] ? [IMAGE_FILES[0]] : [],
     badge: { es: null, en: null },
     es: blank(), en: blank(),
   }
@@ -118,7 +119,7 @@ function ProductEditor({ product, index, total, onChange, onMove, onRemove }) {
             <Select label="Categoría" value={product.cat} options={CATEGORIES} onChange={(v) => onChange({ ...product, cat: v })} />
             <Select label="Tono" value={product.tone} options={TONES} onChange={(v) => onChange({ ...product, tone: v })} />
           </div>
-          <ImagePicker value={product.image} onChange={(v) => onChange({ ...product, image: v })} />
+          <ImagesPicker images={product.images} onChange={(v) => onChange({ ...product, images: v })} />
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginTop: '6px' }}>
             <LangColumn lang="es" product={product} onChange={onChange} />
             <LangColumn lang="en" product={product} onChange={onChange} />

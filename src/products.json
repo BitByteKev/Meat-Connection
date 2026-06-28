@@ -3,7 +3,9 @@
     "id": "tritip",
     "cat": "jp",
     "tone": "charcoal",
-    "image": "TRI-TIP-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
+    "images": [
+      "TRI-TIP-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp"
+    ],
     "badge": {
       "es": "A5 · Japón",
       "en": "A5 · Japan"
@@ -25,7 +27,9 @@
     "id": "filete",
     "cat": "jp",
     "tone": "kraft",
-    "image": "FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp",
+    "images": [
+      "FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp"
+    ],
     "badge": {
       "es": null,
       "en": null
@@ -47,7 +51,9 @@
     "id": "ribeyeJp",
     "cat": "jp",
     "tone": "red",
-    "image": "RIB-EYE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
+    "images": [
+      "RIB-EYE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp"
+    ],
     "badge": {
       "es": null,
       "en": null
@@ -69,7 +75,9 @@
     "id": "picana",
     "cat": "jp",
     "tone": "cream",
-    "image": "PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
+    "images": [
+      "PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp"
+    ],
     "badge": {
       "es": null,
       "en": null
@@ -91,7 +99,9 @@
     "id": "ribeye",
     "cat": "au",
     "tone": "red",
-    "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
+    "images": [
+      "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp"
+    ],
     "badge": {
       "es": null,
       "en": null
@@ -113,7 +123,9 @@
     "id": "ribeyeLow",
     "cat": "au",
     "tone": "kraft",
-    "image": "RIB-EYE-WAGYU-AUSTRALIANO-BAJO-MARMOLEO-3-1.webp",
+    "images": [
+      "RIB-EYE-WAGYU-AUSTRALIANO-BAJO-MARMOLEO-3-1.webp"
+    ],
     "badge": {
       "es": null,
       "en": null
@@ -135,7 +147,9 @@
     "id": "newyork",
     "cat": "au",
     "tone": "charcoal",
-    "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+    "images": [
+      "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp"
+    ],
     "badge": {
       "es": "Más Vendido",
       "en": "Best Seller"
@@ -157,7 +171,9 @@
     "id": "tbone",
     "cat": "au",
     "tone": "kraft",
-    "image": "T-BONE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp",
+    "images": [
+      "T-BONE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp"
+    ],
     "badge": {
       "es": null,
       "en": null
@@ -179,7 +195,9 @@
     "id": "paleta",
     "cat": "au",
     "tone": "cream",
-    "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
+    "images": [
+      "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp"
+    ],
     "badge": {
       "es": null,
       "en": null
@@ -201,7 +219,9 @@
     "id": "denver",
     "cat": "au",
     "tone": "charcoal",
-    "image": "DENVER-WAGYU-AUSTRALIANO-ALTO-MARMOLEO2.webp",
+    "images": [
+      "DENVER-WAGYU-AUSTRALIANO-ALTO-MARMOLEO2.webp"
+    ],
     "badge": {
       "es": null,
       "en": null
@@ -223,7 +243,9 @@
     "id": "topround",
     "cat": "jp",
     "tone": "kraft",
-    "image": "TOP-ROUND-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp",
+    "images": [
+      "TOP-ROUND-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp"
+    ],
     "badge": {
       "es": null,
       "en": null
@@ -245,7 +267,9 @@
     "id": "lengua",
     "cat": "au",
     "tone": "red",
-    "image": "LENGUA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+    "images": [
+      "LENGUA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp"
+    ],
     "badge": {
       "es": null,
       "en": null
@@ -267,7 +291,9 @@
     "id": "nyangus",
     "cat": "au",
     "tone": "charcoal",
-    "image": "new-york-black-angus.webp",
+    "images": [
+      "new-york-black-angus.webp"
+    ],
     "badge": {
       "es": null,
       "en": null
@@ -289,7 +315,9 @@
     "id": "salchicha",
     "cat": "us",
     "tone": "cream",
-    "image": "SALSICHA-WAGYU-AMERICANO-4PACK.webp",
+    "images": [
+      "SALSICHA-WAGYU-AMERICANO-4PACK.webp"
+    ],
     "badge": {
       "es": "4 Pack",
       "en": "4-Pack"

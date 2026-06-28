@@ -16,10 +16,16 @@ for (const path in imageModules) {
   imageByFile[file] = imageModules[path]
 }
 
-export const PRODUCTS = catalog.map(({ id, cat, tone, image }) => ({ id, cat, tone, image }))
+export const PRODUCTS = catalog.map(({ id, cat, tone, images }) => ({ id, cat, tone, images }))
 
+// All photos for a product, resolved to bundled URLs (carousel source).
+export const MC_IMAGES = Object.fromEntries(
+  catalog.map((p) => [p.id, (p.images || []).map((f) => imageByFile[f]).filter(Boolean)]),
+)
+
+// Cover only (first image) — keeps single-image consumers (cards, hero) unchanged.
 export const MC_IMG = Object.fromEntries(
-  catalog.map((p) => [p.id, imageByFile[p.image]]),
+  catalog.map((p) => [p.id, imageByFile[(p.images || [])[0]]]),
 )
 
 function stringsForLang(lang) {

@@ -38,7 +38,8 @@ function validateCatalog(products) {
     ids.add(p.id)
     if (!CATEGORIES.has(p.cat)) return `${at}.cat must be one of jp|au|us`
     if (typeof p.tone !== 'string' || !p.tone) return `${at}.tone is required`
-    if (typeof p.image !== 'string' || !p.image) return `${at}.image is required`
+    if (!Array.isArray(p.images) || p.images.length === 0) return `${at}.images must be a non-empty array`
+    if (!p.images.every((f) => typeof f === 'string' && f)) return `${at}.images must be filenames`
     if (!p.badge || typeof p.badge !== 'object') return `${at}.badge object is required`
     for (const lang of ['es', 'en']) {
       const badge = p.badge[lang]

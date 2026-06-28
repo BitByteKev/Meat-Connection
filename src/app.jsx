@@ -316,6 +316,49 @@ function Lightbox({ src, alt, onClose }) {
     </div>
   );
 }
+/* Swipeable product gallery: one image at a time with arrows, dots, touch-swipe,
+   and click-to-zoom. A single image renders as a plain photo (no chrome). */
+function Carousel({ product, name, height = 560 }) {
+  const list = (window.MC_IMAGES && window.MC_IMAGES[product.id]) || [];
+  const imgs = list.length ? list : (window.MC_IMG[product.id] ? [window.MC_IMG[product.id]] : []);
+  const [idx, setIdx] = React.useState(0);
+  const [zoom, setZoom] = React.useState(false);
+  const touchX = React.useRef(null);
+  const n = imgs.length;
+  const i = Math.min(idx, Math.max(0, n - 1));
+  if (!n) return <div style={{ borderRadius: 'var(--radius-md)', overflow: 'hidden' }}><ProductImage product={product} height={height} fit="contain" big /></div>;
+  const go = (d) => setIdx((c) => (c + d + n) % n);
+  const src = imgs[i];
+  const navBtn = (side) => ({ position: 'absolute', top: '50%', transform: 'translateY(-50%)', [side]: '10px', width: '42px', height: '42px', borderRadius: '999px', border: 'none', background: 'rgba(20,20,20,0.55)', color: '#fff', fontSize: '24px', lineHeight: 1, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 2 });
+  return (
+    <div>
+      <div style={{ borderRadius: 'var(--radius-md)', overflow: 'hidden', position: 'relative', cursor: 'zoom-in', background: 'var(--mc-charcoal)' }}
+        onClick={() => setZoom(true)} title="Ampliar imagen"
+        onTouchStart={(e) => { touchX.current = e.touches[0].clientX; }}
+        onTouchEnd={(e) => { if (touchX.current == null) return; const dx = e.changedTouches[0].clientX - touchX.current; if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1); touchX.current = null; }}>
+        <img src={src} alt={name} style={{ width: '100%', height: height + 'px', objectFit: 'contain', display: 'block' }} />
+        {n > 1 && (
+          <>
+            <button onClick={(e) => { e.stopPropagation(); go(-1); }} aria-label="Anterior" style={navBtn('left')}>‹</button>
+            <button onClick={(e) => { e.stopPropagation(); go(1); }} aria-label="Siguiente" style={navBtn('right')}>›</button>
+          </>
+        )}
+        <div aria-hidden="true" style={{ position: 'absolute', bottom: '12px', right: '12px', width: '40px', height: '40px', borderRadius: '999px', background: 'rgba(20,20,20,0.62)', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
+          <Icon name="ZoomIn" size={20} color="#fff" />
+        </div>
+      </div>
+      {n > 1 && (
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', marginTop: '12px' }}>
+          {imgs.map((_, j) => (
+            <button key={j} onClick={() => setIdx(j)} aria-label={`Imagen ${j + 1}`}
+              style={{ width: '9px', height: '9px', padding: 0, borderRadius: '999px', border: 'none', cursor: 'pointer', background: j === i ? 'var(--mc-red)' : 'var(--mc-ink-300, #cfcbc4)' }} />
+          ))}
+        </div>
+      )}
+      {zoom && <Lightbox src={src} alt={name} onClose={() => setZoom(false)} />}
+    </div>
+  );
+}
 function ProductDetail({ product, onAdd, onBack }) {
   const { Button, Badge, Tabs } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
@@ -325,8 +368,6 @@ function ProductDetail({ product, onAdd, onBack }) {
   const [qty, setQty] = React.useState(5);
   const minQty = saleType === 'mayoreo' ? 5 : 1;
   const pickType = (val) => { setSaleType(val); if (val === 'mayoreo' && qty < 5) setQty(5); };
-  const [zoom, setZoom] = React.useState(false);
-  const imgSrc = product.img || window.MC_IMG[product.id];
   const genericOrigin = product.cat === 'jp' ? t.pdp.originJP : product.cat === 'us' ? t.pdp.originUS : t.pdp.originAU;
   return (
     <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '32px 24px 80px' }}>
@@ -334,15 +375,7 @@ function ProductDetail({ product, onAdd, onBack }) {
         <Icon name="ArrowLeft" size={16} color="var(--text-muted)" /> {t.pdp.back}
       </button>
       <div className="mc-pdp" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', alignItems: 'start' }}>
-        <div style={{ borderRadius: 'var(--radius-md)', overflow: 'hidden', position: 'relative', cursor: imgSrc ? 'zoom-in' : 'default' }}
-          onClick={() => imgSrc && setZoom(true)} title={imgSrc ? 'Ampliar imagen' : undefined}>
-          <ProductImage product={product} height={560} fit="contain" big />
-          {imgSrc && (
-            <div aria-hidden="true" style={{ position: 'absolute', bottom: '12px', right: '12px', width: '40px', height: '40px', borderRadius: '999px', background: 'rgba(20,20,20,0.62)', display: 'flex', alignItems: 'center', justifyContent: 'center', pointerEvents: 'none' }}>
-              <Icon name="ZoomIn" size={20} color="#fff" />
-            </div>
-          )}
-        </div>
+        <Carousel product={product} name={p.name} height={560} />
         <div>
           <div style={{ display: 'flex', gap: '8px', marginBottom: '14px' }}>
             {p.badge && <Badge tone="red" solid>{p.badge}</Badge>}
@@ -393,7 +426,6 @@ function ProductDetail({ product, onAdd, onBack }) {
           </div>
         </div>
       </div>
-      {zoom && imgSrc && <Lightbox src={imgSrc} alt={p.name} onClose={() => setZoom(false)} />}
     </div>
   );
 }

@@ -26,7 +26,7 @@ import brand_masami from './assets-img/mc_brand_masami.webp'
 
 // Product photos — derived from products.json + an images glob (see ./products.js),
 // so the admin can assign any photo in /images without touching code.
-import { MC_IMG } from './products.js'
+import { MC_IMG, MC_IMAGES } from './products.js'
 
 window.React = React
 window.ReactDOM = ReactDOMClient
@@ -42,6 +42,7 @@ window.MC_LOGO = mc_logo
 window.MC_PALETA = mc_paleta
 window.MC_DESTACADO = mc_destacado
 window.MC_IMG = MC_IMG
+window.MC_IMAGES = MC_IMAGES
 window.MC_BRAND = {
   wagyu: brand_wagyu,
   kobe: brand_kobe,
