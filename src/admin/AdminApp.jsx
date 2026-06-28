@@ -96,6 +96,67 @@ function LangColumn({ lang, product, onChange }) {
   )
 }
 
+// Shared, above both language columns: optional AI notes + a button that drafts
+// all six text boxes in ES + EN from the name/category/notes via /api/generate-product.
+function AiGenerate({ product, onChange }) {
+  const [notes, setNotes] = React.useState('')
+  const [busy, setBusy] = React.useState(false)
+  const [err, setErr] = React.useState(null)
+
+  async function generate() {
+    setErr(null)
+    const name = (product.es.name || product.en.name || '').trim()
+    if (!name) { setErr('Escribe primero el nombre del producto (ES o EN).'); return }
+    let pw = ''
+    try { pw = sessionStorage.getItem(PW_KEY) || '' } catch {}
+    setBusy(true)
+    try {
+      const res = await fetch('/api/generate-product', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: pw, name, cat: product.cat, notes }),
+      })
+      if (!res.ok) {
+        if (res.status === 401) { setErr('Sesión expirada, vuelve a entrar para usar la IA.'); return }
+        let detail = ''
+        try { const j = await res.json(); detail = j.detail || j.error || '' } catch {}
+        setErr('No se pudo generar, intenta de nuevo.' + (detail ? ` (${detail})` : ''))
+        return
+      }
+      const { es, en } = await res.json()
+      const hasText = ['description', 'origin', 'cooking'].some(
+        (f) => (product.es[f] || '').trim() || (product.en[f] || '').trim()
+      )
+      if (hasText && !window.confirm('¿Reemplazar el texto actual de Descripción / Origen / Cómo cocinar con lo generado?')) return
+      onChange({
+        ...product,
+        es: { ...product.es, description: es.description, origin: es.origin, cooking: es.cooking },
+        en: { ...product.en, description: en.description, origin: en.origin, cooking: en.cooking },
+      })
+    } catch {
+      setErr('Error de red, intenta de nuevo.')
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  return (
+    <div style={{ border: '1px dashed var(--mc-ink-300, #cfcbc4)', borderRadius: '8px', padding: '12px', margin: '6px 0 14px', background: 'var(--mc-paper, #fff)' }}>
+      <TextArea label="Notas para la IA (opcional)" rows={3} value={notes} onChange={setNotes} />
+      <p style={{ fontSize: '11px', color: 'var(--mc-ink-600, #777)', margin: '-6px 0 10px' }}>
+        Detalles del corte: marmoleo, alimentación, marca, peso… La IA los usa pero no se guardan.
+      </p>
+      <button type="button" disabled={busy} onClick={generate}
+        style={{ ...btn, background: busy ? 'var(--mc-ink-200, #e3e0da)' : 'var(--mc-cream, #faf8f4)', cursor: busy ? 'default' : 'pointer' }}>
+        {busy ? 'Generando…' : '✨ Generar con IA (ES + EN)'}
+      </button>
+      {err && (
+        <div style={{ marginTop: '8px', fontSize: '12px', color: '#9b1c1c' }}>{err}</div>
+      )}
+    </div>
+  )
+}
+
 function ProductEditor({ product, index, total, onChange, onMove, onRemove }) {
   const [open, setOpen] = React.useState(false)
   return (
@@ -120,6 +181,7 @@ function ProductEditor({ product, index, total, onChange, onMove, onRemove }) {
             <Select label="Tono" value={product.tone} options={TONES} onChange={(v) => onChange({ ...product, tone: v })} />
           </div>
           <ImagesPicker images={product.images} onChange={(v) => onChange({ ...product, images: v })} />
+          <AiGenerate product={product} onChange={onChange} />
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginTop: '6px' }}>
             <LangColumn lang="es" product={product} onChange={onChange} />
             <LangColumn lang="en" product={product} onChange={onChange} />
