@@ -17,22 +17,33 @@ const ORIGIN_LABEL = {
   us: 'Black Angus (Estados Unidos)',
 }
 
-// One language's three fields.
-const LANG = {
-  type: 'object',
-  properties: {
-    description: { type: 'string' },
-    origin: { type: 'string' },
-    cooking: { type: 'string' },
-  },
-  required: ['description', 'origin', 'cooking'],
-  additionalProperties: false,
+// Pull the JSON object out of the model's reply, tolerating a stray ```json
+// fence or surrounding prose. Returns the parsed object or null.
+function extractJson(text) {
+  if (typeof text !== 'string') return null
+  let s = text.trim()
+  const fence = s.match(/```(?:json)?\s*([\s\S]*?)```/i)
+  if (fence) s = fence[1].trim()
+  try { return JSON.parse(s) } catch {}
+  const first = s.indexOf('{')
+  const last = s.lastIndexOf('}')
+  if (first !== -1 && last > first) {
+    try { return JSON.parse(s.slice(first, last + 1)) } catch {}
+  }
+  return null
 }
-const SCHEMA = {
-  type: 'object',
-  properties: { es: LANG, en: LANG },
-  required: ['es', 'en'],
-  additionalProperties: false,
+
+// True only if the payload has both languages with all three string fields.
+function validShape(d) {
+  if (!d || typeof d !== 'object') return false
+  for (const lang of ['es', 'en']) {
+    const L = d[lang]
+    if (!L || typeof L !== 'object') return false
+    for (const f of ['description', 'origin', 'cooking']) {
+      if (typeof L[f] !== 'string') return false
+    }
+  }
+  return true
 }
 
 // Constant-time compare (same approach as save-products.js).
@@ -55,7 +66,11 @@ Para cada idioma entregas tres campos:
 - description: 2 o 3 párrafos cortos. La PRIMERA línea debe funcionar sola como un gancho de una sola oración (se muestra en la tarjeta del catálogo).
 - origin: procedencia — región o granja, raza, grado o alimentación cuando se conozca.
 - cooking: preparación práctica (calor, tiempos, reposo, término).
-Separa los párrafos con una línea en blanco. Si haces listas, inicia cada línea con "• ".`
+Separa los párrafos con una línea en blanco. Si haces listas, inicia cada línea con "• ".
+
+Responde ÚNICAMENTE con un objeto JSON válido, sin markdown ni texto adicional, con esta forma exacta:
+{"es":{"description":"...","origin":"...","cooking":"..."},"en":{"description":"...","origin":"...","cooking":"..."}}
+Cada valor es una sola cadena de texto; usa \\n para los saltos de línea dentro de un campo.`
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -94,16 +109,13 @@ export default async function handler(req, res) {
 
   try {
     const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
-    // Structured outputs guarantee the six fields come back schema-valid. In SDK
-    // 0.69 this lives on the beta path as top-level `output_format`; the
-    // structured-outputs beta header is only auto-added by .parse(), so pass it
-    // explicitly here on .create().
-    const response = await client.beta.messages.create({
+    // Plain Messages call — the model returns the JSON object directly (the
+    // system prompt fixes the shape). Avoids structured-output beta params that
+    // drift between SDK and API versions; extractJson tolerates fences/prose.
+    const response = await client.messages.create({
       model: 'claude-opus-4-8',
       max_tokens: 4000,
       system: SYSTEM,
-      output_format: { type: 'json_schema', schema: SCHEMA },
-      betas: ['structured-outputs-2025-09-17'],
       messages: [{ role: 'user', content: userMsg }],
     })
 
@@ -111,14 +123,14 @@ export default async function handler(req, res) {
       return res.status(502).json({ error: 'generate_refused', detail: 'El modelo rechazó la solicitud.' })
     }
     const textBlock = response.content.find((b) => b.type === 'text')
-    if (!textBlock) {
-      return res.status(502).json({ error: 'generate_failed', detail: 'Respuesta vacía del modelo.' })
-    }
-    let data
-    try { data = JSON.parse(textBlock.text) } catch {
+    const data = extractJson(textBlock && textBlock.text)
+    if (!validShape(data)) {
       return res.status(502).json({ error: 'generate_failed', detail: 'Respuesta no válida del modelo.' })
     }
-    return res.status(200).json({ es: data.es, en: data.en })
+    return res.status(200).json({
+      es: { description: data.es.description, origin: data.es.origin, cooking: data.es.cooking },
+      en: { description: data.en.description, origin: data.en.origin, cooking: data.en.cooking },
+    })
   } catch (e) {
     return res.status(502).json({ error: 'generate_failed', detail: String((e && e.message) || e) })
   }
