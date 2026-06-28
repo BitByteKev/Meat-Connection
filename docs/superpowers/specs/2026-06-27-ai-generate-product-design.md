@@ -1,7 +1,16 @@
 # AI Generate Product Copy — Design Spec
 
 **Date:** 2026-06-27
-**Status:** Approved
+**Status:** Approved (revised)
+
+## Revision (2026-06-27)
+
+No name is required up front. The admin sends the **cover photo** to Claude
+(vision); the model identifies the cut, estimates the marbling level, and also
+generates the bilingual **name** (catalog style: "{Cut} {origin} · Marbling
+{level}"). Generated output is now `{ es, en }` each with
+`{ name, description, origin, cooking }`, and the editor fills the name fields
+too. An existing name is passed as an optional hint and refined.
 
 ## Goal
 

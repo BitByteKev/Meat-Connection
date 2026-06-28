@@ -2,7 +2,7 @@
 // GitHub via /api/save-products, which triggers a Vercel rebuild (~1 min to live).
 // Content admin only — not a CRM. See docs/superpowers/specs/2026-06-27-catalog-admin-simplify.md
 import React from 'react'
-import { RAW_CATALOG, CATEGORIES, TONES, IMAGE_FILES } from '../products.js'
+import { RAW_CATALOG, CATEGORIES, TONES, IMAGE_FILES, imageUrl } from '../products.js'
 import { TextField, TextArea, Select, card, btn, btnDanger, labelStyle, move } from './fields.jsx'
 import ImagesPicker from './ImagesPicker.jsx'
 
@@ -96,8 +96,30 @@ function LangColumn({ lang, product, onChange }) {
   )
 }
 
+// Fetch a bundled product photo and return it as { media_type, data } base64,
+// so the serverless function can hand it to Claude's vision input. Returns null
+// if the file can't be read.
+async function imageToBase64(url) {
+  try {
+    const res = await fetch(url)
+    if (!res.ok) return null
+    const blob = await res.blob()
+    return await new Promise((resolve) => {
+      const fr = new FileReader()
+      fr.onload = () => {
+        const [meta, data] = String(fr.result).split(',')
+        const m = meta.match(/data:(.*?);base64/)
+        resolve(data ? { media_type: (m && m[1]) || blob.type || 'image/webp', data } : null)
+      }
+      fr.onerror = () => resolve(null)
+      fr.readAsDataURL(blob)
+    })
+  } catch { return null }
+}
+
 // Shared, above both language columns: optional AI notes + a button that drafts
-// all six text boxes in ES + EN from the name/category/notes via /api/generate-product.
+// the name and all six text boxes in ES + EN. Claude reads the cover photo to
+// identify the cut, so no name is needed first. Via /api/generate-product.
 function AiGenerate({ product, onChange }) {
   const [notes, setNotes] = React.useState('')
   const [busy, setBusy] = React.useState(false)
@@ -105,16 +127,18 @@ function AiGenerate({ product, onChange }) {
 
   async function generate() {
     setErr(null)
-    const name = (product.es.name || product.en.name || '').trim()
-    if (!name) { setErr('Escribe primero el nombre del producto (ES o EN).'); return }
     let pw = ''
     try { pw = sessionStorage.getItem(PW_KEY) || '' } catch {}
     setBusy(true)
     try {
+      const cover = (product.images || [])[0]
+      const url = cover && imageUrl(cover)
+      const image = url ? await imageToBase64(url) : null
+      const name = (product.es.name || product.en.name || '').trim()
       const res = await fetch('/api/generate-product', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ password: pw, name, cat: product.cat, notes }),
+        body: JSON.stringify({ password: pw, cat: product.cat, notes, name, image }),
       })
       if (!res.ok) {
         if (res.status === 401) { setErr('Sesión expirada, vuelve a entrar para usar la IA.'); return }
@@ -124,14 +148,14 @@ function AiGenerate({ product, onChange }) {
         return
       }
       const { es, en } = await res.json()
-      const hasText = ['description', 'origin', 'cooking'].some(
+      const hasText = ['name', 'description', 'origin', 'cooking'].some(
         (f) => (product.es[f] || '').trim() || (product.en[f] || '').trim()
       )
-      if (hasText && !window.confirm('¿Reemplazar el texto actual de Descripción / Origen / Cómo cocinar con lo generado?')) return
+      if (hasText && !window.confirm('¿Reemplazar el nombre y el texto actuales con lo generado por la IA?')) return
       onChange({
         ...product,
-        es: { ...product.es, description: es.description, origin: es.origin, cooking: es.cooking },
-        en: { ...product.en, description: en.description, origin: en.origin, cooking: en.cooking },
+        es: { ...product.es, name: es.name, description: es.description, origin: es.origin, cooking: es.cooking },
+        en: { ...product.en, name: en.name, description: en.description, origin: en.origin, cooking: en.cooking },
       })
     } catch {
       setErr('Error de red, intenta de nuevo.')
@@ -144,7 +168,7 @@ function AiGenerate({ product, onChange }) {
     <div style={{ border: '1px dashed var(--mc-ink-300, #cfcbc4)', borderRadius: '8px', padding: '12px', margin: '6px 0 14px', background: 'var(--mc-paper, #fff)' }}>
       <TextArea label="Notas para la IA (opcional)" rows={3} value={notes} onChange={setNotes} />
       <p style={{ fontSize: '11px', color: 'var(--mc-ink-600, #777)', margin: '-6px 0 10px' }}>
-        Detalles del corte: marmoleo, alimentación, marca, peso… La IA los usa pero no se guardan.
+        La IA lee la foto de portada para nombrar el corte. Agrega detalles si los tienes (marmoleo, alimentación, marca, peso) — se usan pero no se guardan.
       </p>
       <button type="button" disabled={busy} onClick={generate}
         style={{ ...btn, background: busy ? 'var(--mc-ink-200, #e3e0da)' : 'var(--mc-cream, #faf8f4)', cursor: busy ? 'default' : 'pointer' }}>
