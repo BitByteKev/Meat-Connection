@@ -220,7 +220,7 @@ function Hero({ onShop, onQuote }) {
         className="mc-hero-video"
         src="/hero.mp4" poster="/hero-poster.jpg"
         autoPlay muted loop playsInline preload="metadata"
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 72%', zIndex: 0 }}
       />
       <div style={{ position: 'absolute', inset: 0, zIndex: 1,
         background: 'linear-gradient(90deg, rgba(15,15,15,0.88) 0%, rgba(15,15,15,0.55) 48%, rgba(15,15,15,0.15) 100%)' }} />
