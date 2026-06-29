@@ -70,7 +70,7 @@ function LangToggle({ style, className }) {
           <button key={code} onClick={() => setLang(code)} aria-pressed={on}
             aria-label={code === 'es' ? 'Cambiar a español' : 'Switch to English'}
             style={{ border: 'none', cursor: 'pointer', padding: '0 10px', height: '40px', minWidth: '40px',
-              fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '13px', letterSpacing: '0.06em',
+              fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '13px', letterSpacing: '0.06em',
               background: on ? 'var(--mc-red)' : 'transparent', color: on ? '#fff' : 'var(--mc-ink-200)', transition: 'background var(--dur-fast), color var(--dur-fast)' }}>
             {label}
           </button>
@@ -121,15 +121,15 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder }) {
   }, [menuOpen]);
   const goMobile = (l) => { setMenuOpen(false); l.go(); };
   return (
-    <header style={{ background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', position: 'sticky', top: 0, zIndex: 30, borderBottom: '3px solid var(--mc-red)' }}>
-      <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 20px', height: '68px', display: 'flex', alignItems: 'center', gap: '24px' }}>
+    <header style={{ background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', position: 'sticky', top: 0, zIndex: 30, borderBottom: '1px solid var(--mc-ink-700)' }}>
+      <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 20px', height: '68px', display: 'flex', alignItems: 'center', gap: '24px', boxShadow: 'inset 0 -1px 0 var(--accent-gold)' }}>
         <img src={window.MC_LOGO} alt="Meat Connection" style={{ height: '32px', cursor: 'pointer' }} onClick={() => onNav('home')} />
         <nav className="mc-nav" style={{ display: 'flex', gap: '4px', flex: 1 }}>
           {links.map((l) => (
             <button key={l.label} onClick={l.go}
               style={{ border: 'none', background: 'transparent', color: 'var(--mc-ink-200)', cursor: 'pointer',
-                fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, fontSize: '14px', padding: '8px 12px' }}
-              onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--mc-ink-200)'}>
+                fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, fontSize: '14px', padding: '8px 12px' }}
+              onMouseOver={(e) => e.currentTarget.style.color = 'var(--accent-gold)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--mc-ink-200)'}>
               {l.label}
             </button>
           ))}
@@ -140,7 +140,7 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder }) {
             className="mc-reorder-btn"
             style={{ display: 'inline-flex', alignItems: 'center', gap: '7px', height: '40px', padding: '0 13px',
               border: '1px solid var(--mc-ink-700)', background: 'transparent', color: 'var(--mc-paper)', cursor: 'pointer',
-              borderRadius: 'var(--radius-md)', fontFamily: 'var(--font-display)', textTransform: 'uppercase',
+              borderRadius: 'var(--radius-md)', fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase',
               letterSpacing: '0.06em', fontWeight: 600, fontSize: '13px', whiteSpace: 'nowrap' }}
             onMouseOver={(e) => { e.currentTarget.style.borderColor = 'var(--mc-red)'; e.currentTarget.style.color = '#fff'; }}
             onMouseOut={(e) => { e.currentTarget.style.borderColor = 'var(--mc-ink-700)'; e.currentTarget.style.color = 'var(--mc-paper)'; }}>
@@ -151,7 +151,7 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder }) {
               <Icon name="ShoppingCart" size={18} color="#fff" />
             </IconButton>
             {cartCount > 0 && (
-              <span style={{ position: 'absolute', top: '-6px', right: '-6px', background: '#fff', color: 'var(--mc-charcoal)', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '11px', minWidth: '20px', height: '20px', borderRadius: '999px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 5px' }}>{cartCount}</span>
+              <span style={{ position: 'absolute', top: '-6px', right: '-6px', background: '#fff', color: 'var(--mc-charcoal)', fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '11px', minWidth: '20px', height: '20px', borderRadius: '999px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 5px' }}>{cartCount}</span>
             )}
           </div>
           <button className="mc-menu-btn" aria-label={t.header.openMenu} aria-expanded={menuOpen} onClick={() => setMenuOpen(true)}
@@ -180,7 +180,7 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder }) {
           {links.map((l) => (
             <button key={l.label} onClick={() => goMobile(l)}
               style={{ border: 'none', borderBottom: '1px solid var(--mc-ink-800)', background: 'transparent', color: 'var(--mc-paper)', cursor: 'pointer', textAlign: 'left',
-                fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '20px', padding: '18px 4px' }}>
+                fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '20px', padding: '18px 4px' }}>
               {l.label}
             </button>
           ))}
