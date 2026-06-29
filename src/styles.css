@@ -82,7 +82,7 @@
   --fw-semibold:600; /* @kind other */
   --fw-bold:    700; /* @kind other */
 
-  /* ---- Type scale (display uses condensed font, tight leading, uppercase) ---- */
+  /* ---- Type scale (display uses serif, tight leading, title case) ---- */
   --fs-display-xl: 72px;
   --fs-display-l:  56px;
   --fs-display-m:  40px;
