@@ -503,14 +503,14 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
 }
 
 /* ===== Footer + toolbar + App ===== */
-function Footer({ onCategory }) {
+function Footer({ onCategory, onAnchor }) {
   const { t } = useLang();
   // Catalog column items map positionally to catalog filter codes
   // (Japanese A5 → jp, Australian → au, American → us, Wholesale boxes → all).
   const catCodes = ['jp', 'au', 'us', 'all'];
   const cols = [
     [t.footer.catalogTitle, t.footer.catalogItems.map((label, i) => [label, null, null, () => onCategory(catCodes[i] || 'all')])],
-    [t.footer.servicesTitle, t.footer.servicesItems.map((label) => [label, '#'])],
+    [t.footer.servicesTitle, t.footer.servicesItems.map((label) => [label, null, null, () => onAnchor('servicios')])],
     [t.footer.contactTitle, [['WhatsApp', waHref(t.wa.quote), 'MessageCircle'], ['Instagram', IG_LINK, 'Instagram'], ['Facebook', FB_LINK, 'Facebook'], [t.footer.quoteCatalogs, '#contacto']]],
   ];
   const linkStyle = { display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--mc-ink-300)', textDecoration: 'none', fontSize: '13px' };
@@ -916,7 +916,7 @@ function App() {
         </section>
       )}
       {view === 'product' && active && (<ProductDetail product={active} onAdd={add} onBack={() => nav('shop')} />)}
-      <Footer onCategory={(c) => { setCat(c); nav('shop'); }} />
+      <Footer onCategory={(c) => { setCat(c); nav('shop'); }} onAnchor={goAnchor} />
       <CartDrawer open={cartOpen} items={cart} onClose={() => setCartOpen(false)} onQty={changeQty} onRemove={remove} onReorder={reorderWhatsApp} />
       <WhatsAppFab />
     </div>
