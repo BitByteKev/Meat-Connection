@@ -1,10 +1,7 @@
-
-/* Meat Connection — Webfonts
-   SUBSTITUTION NOTE: No brand font files were provided. Using closest Google Fonts:
-   - Oswald  : condensed butcher-signage display (wordmark + headings)
-   - Archivo : grotesque body / UI text
-   Replace these @import lines with local @font-face + .woff2 files when brand fonts arrive. */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&display=swap');
+/* Meat Connection — Webfonts (luxury redesign)
+   - Playfair Display : high-contrast serif for display/headings (Athelas stand-in)
+   - Inter            : calm humanist sans for body + small uppercase labels */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap');
 
 /* Meat Connection — Color tokens
    Brand: charcoal #1D1D1D (primary) + butcher red #C10F10 (secondary) */
@@ -66,14 +63,18 @@
   --border-subtle:  var(--mc-ink-100);
 
   --focus-ring: var(--mc-red);
+
+  --accent-gold:   var(--mc-kraft);   /* #C9A678 champagne gold — eyebrows, hairlines, labels */
+  --hairline-gold: 1px solid color-mix(in srgb, var(--mc-kraft) 55%, transparent);
 }
 
 /* Meat Connection — Typography tokens */
 :root {
   /* ---- Families ---- */
-  --font-display: 'Oswald', 'Arial Narrow', sans-serif;  /* condensed, uppercase headings */
-  --font-body:    'Archivo', system-ui, -apple-system, sans-serif;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;  /* serif display headings */
+  --font-body:    'Inter', system-ui, -apple-system, sans-serif;
   --font-mono:    ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-eyebrow: 'Inter', system-ui, sans-serif;  /* small uppercase labels / eyebrows / nav */
 
   /* ---- Weights ---- */
   --fw-regular: 400; /* @kind other */
