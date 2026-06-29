@@ -200,36 +200,39 @@ function Hero({ onShop, onQuote }) {
   const { Button } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
   return (
-    <section style={{ background: 'var(--mc-charcoal)', color: 'var(--mc-paper)' }}>
-      <div className="mc-hero" style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '72px 24px', display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: '48px', alignItems: 'center' }}>
-        <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-            <span style={{ height: '2px', width: '32px', background: 'var(--mc-red)' }}></span>
-            <span style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.18em', fontWeight: 600, fontSize: '13px', color: 'var(--mc-red-bright)' }}>{t.hero.tag}</span>
+    <section style={{ position: 'relative', background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', overflow: 'hidden' }}>
+      <video
+        className="mc-hero-video"
+        src="/hero.mp4" poster="/hero-poster.jpg"
+        autoPlay muted loop playsInline preload="metadata"
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', zIndex: 0 }}
+      />
+      <div style={{ position: 'absolute', inset: 0, zIndex: 1,
+        background: 'linear-gradient(90deg, rgba(15,15,15,0.88) 0%, rgba(15,15,15,0.55) 48%, rgba(15,15,15,0.15) 100%)' }} />
+      <div className="mc-hero" style={{ position: 'relative', zIndex: 2, maxWidth: 'var(--container-max)', margin: '0 auto', padding: '110px 24px' }}>
+        <div style={{ maxWidth: '600px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '22px' }}>
+            <span style={{ height: '1px', width: '32px', background: 'var(--accent-gold)' }}></span>
+            <span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.24em', fontWeight: 600, fontSize: '12px', color: 'var(--accent-gold)' }}>{t.hero.tag}</span>
           </div>
-          <h1 className="mc-h1" style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: '76px', lineHeight: 0.96, letterSpacing: '-0.01em', margin: 0 }}>
-            {t.hero.title1}<br /><span style={{ color: 'var(--mc-red-bright)' }}>{t.hero.title2}</span>
+          <h1 className="mc-h1" style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '64px', lineHeight: 1.04, letterSpacing: '-0.01em', margin: 0, textShadow: '0 2px 24px rgba(0,0,0,0.45)' }}>
+            {t.hero.title1} <span style={{ color: 'var(--accent-gold)', fontStyle: 'italic' }}>{t.hero.title2}</span>
           </h1>
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: '18px', lineHeight: 1.6, color: 'var(--mc-ink-200)', maxWidth: '460px', margin: '22px 0 32px' }}>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: '18px', lineHeight: 1.6, color: 'var(--mc-ink-100)', maxWidth: '460px', margin: '22px 0 32px', textShadow: '0 1px 12px rgba(0,0,0,0.5)' }}>
             {t.hero.para}
           </p>
           <div className="mc-hero-cta" style={{ display: 'flex', gap: '12px' }}>
-            <Button variant="primary" size="lg" onClick={onShop} iconRight={<Icon name="ArrowRight" size={18} color="#fff" />}>{t.hero.ctaCatalog}</Button>
-            <Button variant="secondary" size="lg" onClick={onQuote} style={{ color: 'var(--mc-paper)', borderColor: 'var(--mc-ink-400)' }} iconLeft={<Icon name="MessageCircle" size={18} color="var(--mc-paper)" />}>{t.hero.ctaQuote}</Button>
+            <Button variant="primary" size="lg" onClick={onQuote} iconLeft={<Icon name="MessageCircle" size={18} color="#fff" />}>{t.hero.ctaQuote}</Button>
+            <Button variant="secondary" size="lg" onClick={onShop} style={{ color: 'var(--mc-paper)', borderColor: 'var(--accent-gold)' }} iconRight={<Icon name="ArrowRight" size={18} color="var(--mc-paper)" />}>{t.hero.ctaCatalog}</Button>
           </div>
-          <div className="mc-stats" style={{ display: 'flex', gap: '28px', marginTop: '40px' }}>
+          <div className="mc-stats" style={{ display: 'flex', gap: '28px', marginTop: '44px' }}>
             {t.hero.stats.map(([a, b]) => (
               <div key={a}>
-                <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: '22px' }}>{a}</div>
-                <div style={{ fontSize: '12px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--mc-ink-400)' }}>{b}</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '26px' }}>{a}</div>
+                <div style={{ fontFamily: 'var(--font-eyebrow)', fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--accent-gold)', marginTop: '2px' }}>{b}</div>
               </div>
             ))}
           </div>
-        </div>
-        <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <RevealImg src={window.MC_PALETA} alt={t.hero.heroAlt} fetchpriority="high" decoding="async"
-            frameStyle={{ width: '100%' }}
-            imgStyle={{ width: '100%', height: 'auto', display: 'block' }} />
         </div>
       </div>
     </section>

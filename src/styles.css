@@ -192,7 +192,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 @media (max-width: 860px){
   .mc-nav{ display:none !important; }
   .mc-menu-btn{ display:flex !important; }
-  .mc-hero{ grid-template-columns:minmax(0,1fr) !important; gap:28px !important; padding:48px 20px !important; }
+  .mc-hero{ padding:48px 20px !important; }
   .mc-pdp{ grid-template-columns:minmax(0,1fr) !important; gap:24px !important; }
   .mc-contact{ grid-template-columns:minmax(0,1fr) !important; gap:32px !important; }
   .mc-showcase{ grid-template-columns:minmax(0,1fr) !important; gap:28px !important; padding:48px 20px !important; }
@@ -225,5 +225,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     transition-duration:0.01ms !important;
     scroll-behavior:auto !important;
   }
+}
+
+/* Hero video: respect reduced-motion and keep text readable on small screens */
+@media (prefers-reduced-motion: reduce) {
+  .mc-hero-video { display: none; }
+}
+@media (max-width: 640px) {
+  .mc-hero { padding: 72px 20px !important; }
+  .mc-h1 { font-size: 40px !important; }
 }
 
