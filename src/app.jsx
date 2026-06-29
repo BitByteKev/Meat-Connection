@@ -97,7 +97,7 @@ function ProductImage({ product, height = 220, big = false, fit = 'cover' }) {
   return (
     <div style={{ position: 'relative', height: height + 'px', background: bg, color: fg, display: 'flex',
       flexDirection: 'column', justifyContent: 'flex-end', padding: big ? '28px' : '18px', overflow: 'hidden' }}>
-      <div style={{ position: 'relative', fontFamily: 'var(--font-display)', textTransform: 'uppercase',
+      <div style={{ position: 'relative', fontFamily: 'var(--font-display)',
         lineHeight: 0.98, fontWeight: 700, fontSize: big ? '54px' : '30px' }}>{name}</div>
     </div>
   );
@@ -270,7 +270,7 @@ function ProductCard({ product, onOpen }) {
       </div>
       <div style={{ padding: '18px', display: 'flex', flexDirection: 'column', gap: '12px', flex: 1 }}>
         <div>
-          <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 600, fontSize: '20px', lineHeight: 1.05, color: 'var(--text-strong)' }}>{p.name}</div>
+          <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '20px', lineHeight: 1.05, color: 'var(--text-strong)' }}>{p.name}</div>
           <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '4px' }}>{cardHook(p.description)}</div>
         </div>
         <div style={{ marginTop: 'auto' }}>
@@ -399,7 +399,7 @@ function ProductDetail({ product, onAdd, onBack }) {
             {p.badge && <Badge tone="red" solid>{p.badge}</Badge>}
             <Badge tone="success">{t.pdp.available}</Badge>
           </div>
-          <h1 className="mc-page-title" style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: '48px', lineHeight: 0.98, margin: '0 0 16px', color: 'var(--text-strong)' }}>{p.name}</h1>
+          <h1 className="mc-page-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '48px', lineHeight: 0.98, margin: '0 0 16px', color: 'var(--text-strong)' }}>{p.name}</h1>
           <div className="mc-pdp-actions" style={{ margin: '24px 0', display: 'flex', flexWrap: 'wrap', gap: '20px', alignItems: 'flex-end' }}>
             <div>
               <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{t.pdp.saleType}</div>
@@ -458,7 +458,7 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
       <div onClick={onClose} style={{ position: 'fixed', inset: 0, background: 'rgba(20,20,20,0.5)', opacity: open ? 1 : 0, pointerEvents: open ? 'auto' : 'none', transition: 'opacity var(--dur-med)', zIndex: 40 }}></div>
       <aside style={{ position: 'fixed', top: 0, right: 0, height: '100%', width: '400px', maxWidth: '92vw', background: 'var(--surface-page)', boxShadow: 'var(--shadow-lg)', transform: open ? 'translateX(0)' : 'translateX(100%)', transition: 'transform var(--dur-slow) var(--ease-out)', zIndex: 50, display: 'flex', flexDirection: 'column' }}>
         <div style={{ background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', padding: '20px 22px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <span style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, fontSize: '20px' }}>{t.cart.title}</span>
+          <span style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.08em', fontWeight: 700, fontSize: '20px' }}>{t.cart.title}</span>
           <button onClick={onClose} aria-label={t.cart.close} style={{ border: 'none', background: 'transparent', color: 'var(--mc-ink-200)', cursor: 'pointer', display: 'flex' }}><Icon name="X" size={22} color="var(--mc-ink-200)" /></button>
         </div>
         {items.length === 0 ? (
@@ -476,7 +476,7 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
                   <img src={it.img || window.MC_IMG[it.id]} alt={t.products[it.id].name} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <div style={{ flex: 1 }}>
-                  <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 600, fontSize: '15px', color: 'var(--text-strong)', lineHeight: 1.1, marginBottom: '3px' }}>{t.products[it.id].name}</div>
+                  <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '15px', color: 'var(--text-strong)', lineHeight: 1.1, marginBottom: '3px' }}>{t.products[it.id].name}</div>
                   <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--text-muted)', marginBottom: '8px' }}>{it.saleType === 'menudeo' ? t.pdp.menudeo : t.pdp.mayoreo}</div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-sm)' }}>
@@ -546,7 +546,7 @@ function SectionHead({ eyebrow, title, sub, light }) {
   return (
     <div style={{ marginBottom: '36px', maxWidth: '640px' }}>
       <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.18em', fontWeight: 600, fontSize: '13px', color: 'var(--mc-red-bright)' }}>{eyebrow}</div>
-      <h2 className="mc-section-title" style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: '40px', lineHeight: 1.02, margin: '8px 0 0', color: light ? 'var(--mc-paper)' : 'var(--text-strong)' }}>{title}</h2>
+      <h2 className="mc-section-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '40px', lineHeight: 1.02, margin: '8px 0 0', color: light ? 'var(--mc-paper)' : 'var(--text-strong)' }}>{title}</h2>
       {sub && <p style={{ fontFamily: 'var(--font-body)', fontSize: '16px', lineHeight: 1.6, margin: '14px 0 0', color: light ? 'var(--mc-ink-200)' : 'var(--text-muted)' }}>{sub}</p>}
     </div>
   );
@@ -566,7 +566,7 @@ function Services() {
               <div style={{ width: '52px', height: '52px', borderRadius: 'var(--radius-md)', background: 'var(--mc-red)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '18px' }}>
                 <Icon name={ic} size={26} color="#fff" />
               </div>
-              <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: '22px', color: 'var(--text-strong)' }}>{title}</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '22px', color: 'var(--text-strong)' }}>{title}</div>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', lineHeight: 1.6, color: 'var(--text-muted)', margin: '10px 0 0' }}>{d}</p>
             </Card>
           ))}
@@ -684,7 +684,7 @@ function ContactSection({ onQuote }) {
           {sent ? (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '12px', padding: '32px 0' }}>
               <Icon name="CheckCircle2" size={44} color="var(--mc-success)" />
-              <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: '22px', color: 'var(--text-strong)' }}>{t.contact.thanksTitle}</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '22px', color: 'var(--text-strong)' }}>{t.contact.thanksTitle}</div>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--text-muted)', margin: 0 }}>{t.contact.thanksMsg}</p>
               <Button variant="primary" onClick={onQuote} iconLeft={<Icon name="MessageCircle" size={16} color="#fff" />}>{t.contact.thanksBtn}</Button>
             </div>
@@ -842,7 +842,7 @@ function Testimonials() {
               <div style={{ color: 'var(--mc-red)', letterSpacing: '2px', fontSize: '15px' }}>★★★★★</div>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.65, color: 'var(--text-body)', margin: 0, flex: 1 }}>“{item.quote}”</p>
               <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '14px' }}>
-                <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 700, fontSize: '14px', color: 'var(--text-strong)' }}>{item.who}</div>
+                <div style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.04em', fontWeight: 700, fontSize: '14px', color: 'var(--text-strong)' }}>{item.who}</div>
                 <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '2px' }}>{item.biz}</div>
               </div>
             </Card>
@@ -885,7 +885,7 @@ function App() {
           <div className="mc-feature-head" style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '28px' }}>
             <div>
               <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.18em', fontWeight: 600, fontSize: '13px', color: 'var(--mc-red)' }}>{t.bestsellers.eyebrow}</div>
-              <h2 className="mc-section-title" style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: '40px', margin: '6px 0 0', color: 'var(--text-strong)' }}>{t.bestsellers.title}</h2>
+              <h2 className="mc-section-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '40px', margin: '6px 0 0', color: 'var(--text-strong)' }}>{t.bestsellers.title}</h2>
             </div>
             <button onClick={() => nav('shop')} style={{ border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '14px', color: 'var(--text-strong)' }}>{t.bestsellers.seeAll} <Icon name="ArrowRight" size={16} /></button>
           </div>
@@ -898,7 +898,7 @@ function App() {
       </>)}
       {view === 'shop' && (
         <section style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '40px 24px 80px' }}>
-          <h1 className="mc-page-title" style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: '48px', margin: '0 0 8px', color: 'var(--text-strong)' }}>{t.shop.title}</h1>
+          <h1 className="mc-page-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '48px', margin: '0 0 8px', color: 'var(--text-strong)' }}>{t.shop.title}</h1>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: '16px', color: 'var(--text-muted)', margin: '0 0 28px' }}>{fmt(t.shop.count, { n: filtered.length })}</p>
           <ShopToolbar active={cat} onPick={setCat} />
           <ProductGrid products={filtered} onOpen={open} />
