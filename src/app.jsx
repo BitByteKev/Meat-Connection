@@ -70,7 +70,7 @@ function LangToggle({ style, className }) {
           <button key={code} onClick={() => setLang(code)} aria-pressed={on}
             aria-label={code === 'es' ? 'Cambiar a español' : 'Switch to English'}
             style={{ border: 'none', cursor: 'pointer', padding: '0 10px', height: '40px', minWidth: '40px',
-              fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '13px', letterSpacing: '0.06em',
+              fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '13px', letterSpacing: '0.06em',
               background: on ? 'var(--mc-red)' : 'transparent', color: on ? '#fff' : 'var(--mc-ink-200)', transition: 'background var(--dur-fast), color var(--dur-fast)' }}>
             {label}
           </button>
@@ -97,17 +97,25 @@ function ProductImage({ product, height = 220, big = false, fit = 'cover' }) {
   return (
     <div style={{ position: 'relative', height: height + 'px', background: bg, color: fg, display: 'flex',
       flexDirection: 'column', justifyContent: 'flex-end', padding: big ? '28px' : '18px', overflow: 'hidden' }}>
-      <div style={{ position: 'relative', fontFamily: 'var(--font-display)', textTransform: 'uppercase',
+      <div style={{ position: 'relative', fontFamily: 'var(--font-display)',
         lineHeight: 0.98, fontWeight: 700, fontSize: big ? '54px' : '30px' }}>{name}</div>
     </div>
   );
 }
 
 /* ===== Header ===== */
-function Header({ cartCount, onCart, onNav, onAnchor, onReorder }) {
+function Header({ cartCount, onCart, onNav, onAnchor, onReorder, overHero = false }) {
   const { IconButton, Button } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const [atTop, setAtTop] = React.useState(true);
+  React.useEffect(() => {
+    const onScroll = () => setAtTop(window.scrollY < 40);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  const transparent = overHero && atTop;
   const links = [
     { label: t.nav.catalog, go: () => onNav('shop') },
     { label: t.nav.services, go: () => onAnchor('servicios') },
@@ -121,15 +129,20 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder }) {
   }, [menuOpen]);
   const goMobile = (l) => { setMenuOpen(false); l.go(); };
   return (
-    <header style={{ background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', position: 'sticky', top: 0, zIndex: 30, borderBottom: '3px solid var(--mc-red)' }}>
-      <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 20px', height: '68px', display: 'flex', alignItems: 'center', gap: '24px' }}>
+    <header style={{
+      color: 'var(--mc-paper)', position: 'sticky', top: 0, zIndex: 30,
+      background: transparent ? 'linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.18) 100%)' : 'var(--mc-charcoal)',
+      borderBottom: transparent ? '1px solid transparent' : '1px solid var(--mc-ink-700)',
+      transition: 'background var(--dur-med) var(--ease-out), border-color var(--dur-med) var(--ease-out)'
+    }}>
+      <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 20px', height: '68px', display: 'flex', alignItems: 'center', gap: '24px', boxShadow: transparent ? 'none' : 'inset 0 -1px 0 var(--accent-gold)' }}>
         <img src={window.MC_LOGO} alt="Meat Connection" style={{ height: '32px', cursor: 'pointer' }} onClick={() => onNav('home')} />
         <nav className="mc-nav" style={{ display: 'flex', gap: '4px', flex: 1 }}>
           {links.map((l) => (
             <button key={l.label} onClick={l.go}
               style={{ border: 'none', background: 'transparent', color: 'var(--mc-ink-200)', cursor: 'pointer',
-                fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, fontSize: '14px', padding: '8px 12px' }}
-              onMouseOver={(e) => e.currentTarget.style.color = '#fff'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--mc-ink-200)'}>
+                fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, fontSize: '14px', padding: '8px 12px' }}
+              onMouseOver={(e) => e.currentTarget.style.color = 'var(--accent-gold)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--mc-ink-200)'}>
               {l.label}
             </button>
           ))}
@@ -140,7 +153,7 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder }) {
             className="mc-reorder-btn"
             style={{ display: 'inline-flex', alignItems: 'center', gap: '7px', height: '40px', padding: '0 13px',
               border: '1px solid var(--mc-ink-700)', background: 'transparent', color: 'var(--mc-paper)', cursor: 'pointer',
-              borderRadius: 'var(--radius-md)', fontFamily: 'var(--font-display)', textTransform: 'uppercase',
+              borderRadius: 'var(--radius-md)', fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase',
               letterSpacing: '0.06em', fontWeight: 600, fontSize: '13px', whiteSpace: 'nowrap' }}
             onMouseOver={(e) => { e.currentTarget.style.borderColor = 'var(--mc-red)'; e.currentTarget.style.color = '#fff'; }}
             onMouseOut={(e) => { e.currentTarget.style.borderColor = 'var(--mc-ink-700)'; e.currentTarget.style.color = 'var(--mc-paper)'; }}>
@@ -151,7 +164,7 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder }) {
               <Icon name="ShoppingCart" size={18} color="#fff" />
             </IconButton>
             {cartCount > 0 && (
-              <span style={{ position: 'absolute', top: '-6px', right: '-6px', background: '#fff', color: 'var(--mc-charcoal)', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '11px', minWidth: '20px', height: '20px', borderRadius: '999px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 5px' }}>{cartCount}</span>
+              <span style={{ position: 'absolute', top: '-6px', right: '-6px', background: '#fff', color: 'var(--mc-charcoal)', fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '11px', minWidth: '20px', height: '20px', borderRadius: '999px', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 5px' }}>{cartCount}</span>
             )}
           </div>
           <button className="mc-menu-btn" aria-label={t.header.openMenu} aria-expanded={menuOpen} onClick={() => setMenuOpen(true)}
@@ -180,7 +193,7 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder }) {
           {links.map((l) => (
             <button key={l.label} onClick={() => goMobile(l)}
               style={{ border: 'none', borderBottom: '1px solid var(--mc-ink-800)', background: 'transparent', color: 'var(--mc-paper)', cursor: 'pointer', textAlign: 'left',
-                fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '20px', padding: '18px 4px' }}>
+                fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '20px', padding: '18px 4px' }}>
               {l.label}
             </button>
           ))}
@@ -199,37 +212,42 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder }) {
 function Hero({ onShop, onQuote }) {
   const { Button } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
+  // marginTop tucks the hero under the 68px sticky header so the video fills behind it;
+  // mc-hero top padding (here + styles.css media queries) compensates to keep the headline clear.
   return (
-    <section style={{ background: 'var(--mc-charcoal)', color: 'var(--mc-paper)' }}>
-      <div className="mc-hero" style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '72px 24px', display: 'grid', gridTemplateColumns: '1.1fr 0.9fr', gap: '48px', alignItems: 'center' }}>
-        <div>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-            <span style={{ height: '2px', width: '32px', background: 'var(--mc-red)' }}></span>
-            <span style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.18em', fontWeight: 600, fontSize: '13px', color: 'var(--mc-red-bright)' }}>{t.hero.tag}</span>
+    <section style={{ position: 'relative', background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', overflow: 'hidden', marginTop: '-68px' }}>
+      <video
+        className="mc-hero-video"
+        src="/hero.mp4" poster="/hero-poster.jpg"
+        autoPlay muted loop playsInline preload="metadata"
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 72%', zIndex: 0 }}
+      />
+      <div style={{ position: 'absolute', inset: 0, zIndex: 1,
+        background: 'linear-gradient(90deg, rgba(15,15,15,0.88) 0%, rgba(15,15,15,0.55) 48%, rgba(15,15,15,0.15) 100%)' }} />
+      <div className="mc-hero" style={{ position: 'relative', zIndex: 2, maxWidth: 'var(--container-max)', margin: '0 auto', padding: '150px 24px 110px' }}>
+        <div style={{ maxWidth: '600px' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '22px' }}>
+            <span style={{ height: '1px', width: '32px', background: 'var(--accent-gold)' }}></span>
+            <span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.24em', fontWeight: 600, fontSize: '12px', color: 'var(--accent-gold)' }}>{t.hero.tag}</span>
           </div>
-          <h1 className="mc-h1" style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: '76px', lineHeight: 0.96, letterSpacing: '-0.01em', margin: 0 }}>
-            {t.hero.title1}<br /><span style={{ color: 'var(--mc-red-bright)' }}>{t.hero.title2}</span>
+          <h1 className="mc-h1" style={{ fontFamily: 'var(--font-display)', fontWeight: 600, lineHeight: 1.04, letterSpacing: '-0.01em', margin: 0, textShadow: '0 2px 24px rgba(0,0,0,0.45)' }}>
+            {t.hero.title1} <span style={{ color: 'var(--accent-gold)', fontStyle: 'italic' }}>{t.hero.title2}</span>
           </h1>
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: '18px', lineHeight: 1.6, color: 'var(--mc-ink-200)', maxWidth: '460px', margin: '22px 0 32px' }}>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: '18px', lineHeight: 1.6, color: 'var(--mc-ink-100)', maxWidth: '460px', margin: '22px 0 32px', textShadow: '0 1px 12px rgba(0,0,0,0.5)' }}>
             {t.hero.para}
           </p>
           <div className="mc-hero-cta" style={{ display: 'flex', gap: '12px' }}>
-            <Button variant="primary" size="lg" onClick={onShop} iconRight={<Icon name="ArrowRight" size={18} color="#fff" />}>{t.hero.ctaCatalog}</Button>
-            <Button variant="secondary" size="lg" onClick={onQuote} style={{ color: 'var(--mc-paper)', borderColor: 'var(--mc-ink-400)' }} iconLeft={<Icon name="MessageCircle" size={18} color="var(--mc-paper)" />}>{t.hero.ctaQuote}</Button>
+            <Button variant="primary" size="lg" onClick={onQuote} iconLeft={<Icon name="MessageCircle" size={18} color="#fff" />}>{t.hero.ctaQuote}</Button>
+            <Button variant="secondary" size="lg" onClick={onShop} style={{ color: 'var(--mc-paper)', borderColor: 'var(--accent-gold)' }} iconRight={<Icon name="ArrowRight" size={18} color="var(--mc-paper)" />}>{t.hero.ctaCatalog}</Button>
           </div>
-          <div className="mc-stats" style={{ display: 'flex', gap: '28px', marginTop: '40px' }}>
+          <div className="mc-stats" style={{ display: 'flex', gap: '28px', marginTop: '44px' }}>
             {t.hero.stats.map(([a, b]) => (
               <div key={a}>
-                <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: '22px' }}>{a}</div>
-                <div style={{ fontSize: '12px', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--mc-ink-400)' }}>{b}</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '26px' }}>{a}</div>
+                <div style={{ fontFamily: 'var(--font-eyebrow)', fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--accent-gold)', marginTop: '2px' }}>{b}</div>
               </div>
             ))}
           </div>
-        </div>
-        <div style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <RevealImg src={window.MC_PALETA} alt={t.hero.heroAlt} fetchpriority="high" decoding="async"
-            frameStyle={{ width: '100%' }}
-            imgStyle={{ width: '100%', height: 'auto', display: 'block' }} />
         </div>
       </div>
     </section>
@@ -252,7 +270,8 @@ function ProductCard({ product, onOpen }) {
       </div>
       <div style={{ padding: '18px', display: 'flex', flexDirection: 'column', gap: '12px', flex: 1 }}>
         <div>
-          <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 600, fontSize: '20px', lineHeight: 1.05, color: 'var(--text-strong)' }}>{p.name}</div>
+          <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.14em', fontSize: '11px', color: 'var(--accent-gold-ink)', marginBottom: '6px' }}>{t.categories[product.cat] || ''}</div>
+          <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '20px', lineHeight: 1.05, color: 'var(--text-strong)' }}>{p.name}</div>
           <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '4px' }}>{cardHook(p.description)}</div>
         </div>
         <div style={{ marginTop: 'auto' }}>
@@ -381,22 +400,22 @@ function ProductDetail({ product, onAdd, onBack }) {
             {p.badge && <Badge tone="red" solid>{p.badge}</Badge>}
             <Badge tone="success">{t.pdp.available}</Badge>
           </div>
-          <h1 className="mc-page-title" style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: '48px', lineHeight: 0.98, margin: '0 0 16px', color: 'var(--text-strong)' }}>{p.name}</h1>
+          <h1 className="mc-page-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '48px', lineHeight: 0.98, margin: '0 0 16px', color: 'var(--text-strong)' }}>{p.name}</h1>
           <div className="mc-pdp-actions" style={{ margin: '24px 0', display: 'flex', flexWrap: 'wrap', gap: '20px', alignItems: 'flex-end' }}>
             <div>
-              <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{t.pdp.saleType}</div>
+              <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{t.pdp.saleType}</div>
               <div role="group" aria-label={t.pdp.saleType} style={{ display: 'inline-flex', border: '2px solid var(--mc-charcoal)', borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
                 {[['mayoreo', t.pdp.mayoreo], ['menudeo', t.pdp.menudeo]].map(([val, label]) => {
                   const on = saleType === val;
                   return (
                     <button key={val} onClick={() => pickType(val)} aria-pressed={on}
-                      style={{ border: 'none', cursor: 'pointer', padding: '0 16px', height: '44px', fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 700, fontSize: '13px', background: on ? 'var(--mc-charcoal)' : 'transparent', color: on ? 'var(--mc-paper)' : 'var(--text-strong)' }}>{label}</button>
+                      style={{ border: 'none', cursor: 'pointer', padding: '0 16px', height: '44px', fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 700, fontSize: '13px', background: on ? 'var(--mc-charcoal)' : 'transparent', color: on ? 'var(--mc-paper)' : 'var(--text-strong)' }}>{label}</button>
                   );
                 })}
               </div>
             </div>
             <div>
-              <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{t.pdp.qtyLabel}</div>
+              <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{t.pdp.qtyLabel}</div>
               <div style={{ display: 'inline-flex', alignItems: 'center', border: '2px solid var(--mc-charcoal)', borderRadius: 'var(--radius-md)', height: '44px' }}>
                 <button onClick={() => setQty(Math.max(minQty, qty - 1))} style={qtyBtn}><Icon name="Minus" size={16} /></button>
                 <span style={{ width: '48px', textAlign: 'center', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '18px' }}>{qty}</span>
@@ -440,7 +459,7 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
       <div onClick={onClose} style={{ position: 'fixed', inset: 0, background: 'rgba(20,20,20,0.5)', opacity: open ? 1 : 0, pointerEvents: open ? 'auto' : 'none', transition: 'opacity var(--dur-med)', zIndex: 40 }}></div>
       <aside style={{ position: 'fixed', top: 0, right: 0, height: '100%', width: '400px', maxWidth: '92vw', background: 'var(--surface-page)', boxShadow: 'var(--shadow-lg)', transform: open ? 'translateX(0)' : 'translateX(100%)', transition: 'transform var(--dur-slow) var(--ease-out)', zIndex: 50, display: 'flex', flexDirection: 'column' }}>
         <div style={{ background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', padding: '20px 22px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <span style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, fontSize: '20px' }}>{t.cart.title}</span>
+          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '20px' }}>{t.cart.title}</span>
           <button onClick={onClose} aria-label={t.cart.close} style={{ border: 'none', background: 'transparent', color: 'var(--mc-ink-200)', cursor: 'pointer', display: 'flex' }}><Icon name="X" size={22} color="var(--mc-ink-200)" /></button>
         </div>
         {items.length === 0 ? (
@@ -458,7 +477,7 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
                   <img src={it.img || window.MC_IMG[it.id]} alt={t.products[it.id].name} loading="lazy" decoding="async" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 </div>
                 <div style={{ flex: 1 }}>
-                  <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 600, fontSize: '15px', color: 'var(--text-strong)', lineHeight: 1.1, marginBottom: '3px' }}>{t.products[it.id].name}</div>
+                  <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '15px', color: 'var(--text-strong)', lineHeight: 1.1, marginBottom: '3px' }}>{t.products[it.id].name}</div>
                   <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--text-muted)', marginBottom: '8px' }}>{it.saleType === 'menudeo' ? t.pdp.menudeo : t.pdp.mayoreo}</div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-sm)' }}>
@@ -500,7 +519,7 @@ function Footer() {
         </div>
         {cols.map(([h, links]) => (
           <div key={h}>
-            <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600, fontSize: '13px', color: '#fff', marginBottom: '14px' }}>{h}</div>
+            <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600, fontSize: '13px', color: '#fff', marginBottom: '14px' }}>{h}</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '9px' }}>
               {links.map(([label, href, icon]) => <a key={label} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener" aria-label={label} style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--mc-ink-300)', textDecoration: 'none', fontSize: '13px' }}>{icon && <Icon name={icon} size={16} color="currentColor" strokeWidth={1.75} />}{label}</a>)}
             </div>
@@ -527,8 +546,8 @@ function ShopToolbar({ active, onPick }) {
 function SectionHead({ eyebrow, title, sub, light }) {
   return (
     <div style={{ marginBottom: '36px', maxWidth: '640px' }}>
-      <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.18em', fontWeight: 600, fontSize: '13px', color: 'var(--mc-red-bright)' }}>{eyebrow}</div>
-      <h2 className="mc-section-title" style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: '40px', lineHeight: 1.02, margin: '8px 0 0', color: light ? 'var(--mc-paper)' : 'var(--text-strong)' }}>{title}</h2>
+      <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.18em', fontWeight: 600, fontSize: '13px', color: light ? 'var(--accent-gold)' : 'var(--accent-gold-ink)' }}>{eyebrow}</div>
+      <h2 className="mc-section-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '40px', lineHeight: 1.02, margin: '8px 0 0', color: light ? 'var(--mc-paper)' : 'var(--text-strong)' }}>{title}</h2>
       {sub && <p style={{ fontFamily: 'var(--font-body)', fontSize: '16px', lineHeight: 1.6, margin: '14px 0 0', color: light ? 'var(--mc-ink-200)' : 'var(--text-muted)' }}>{sub}</p>}
     </div>
   );
@@ -548,7 +567,7 @@ function Services() {
               <div style={{ width: '52px', height: '52px', borderRadius: 'var(--radius-md)', background: 'var(--mc-red)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '18px' }}>
                 <Icon name={ic} size={26} color="#fff" />
               </div>
-              <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: '22px', color: 'var(--text-strong)' }}>{title}</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '22px', color: 'var(--text-strong)' }}>{title}</div>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', lineHeight: 1.6, color: 'var(--text-muted)', margin: '10px 0 0' }}>{d}</p>
             </Card>
           ))}
@@ -556,7 +575,7 @@ function Services() {
         <div className="mc-subservices" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', marginTop: '24px', padding: '24px', background: 'var(--mc-charcoal)', borderRadius: 'var(--radius-md)' }}>
           {t.services.sub2.map(([ic, txt]) => (
             <div key={txt} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <Icon name={ic} size={22} color="var(--mc-red-bright)" />
+              <Icon name={ic} size={22} color="var(--accent-gold)" />
               <span style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--mc-paper)' }}>{txt}</span>
             </div>
           ))}
@@ -610,7 +629,7 @@ function Clients() {
         <div className="mc-clients" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
           {t.clients.list.map(([ic, txt]) => (
             <div key={txt} style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '20px', border: '1px solid var(--mc-ink-700)', borderRadius: 'var(--radius-md)', background: 'var(--mc-ink-900)' }}>
-              <Icon name={ic} size={24} color="var(--mc-red-bright)" />
+              <Icon name={ic} size={24} color="var(--accent-gold)" />
               <span style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--mc-paper)' }}>{txt}</span>
             </div>
           ))}
@@ -655,7 +674,7 @@ function ContactSection({ onQuote }) {
                   <Icon name={ic} size={20} color="#fff" />
                 </span>
                 <span>
-                  <span style={{ display: 'block', fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.06em', fontSize: '12px', color: 'var(--text-muted)' }}>{name}</span>
+                  <span style={{ display: 'block', fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontSize: '12px', color: 'var(--text-muted)' }}>{name}</span>
                   <span style={{ fontFamily: 'var(--font-body)', fontSize: '15px', fontWeight: 600 }}>{label}</span>
                 </span>
               </a>
@@ -666,7 +685,7 @@ function ContactSection({ onQuote }) {
           {sent ? (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '12px', padding: '32px 0' }}>
               <Icon name="CheckCircle2" size={44} color="var(--mc-success)" />
-              <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: '22px', color: 'var(--text-strong)' }}>{t.contact.thanksTitle}</div>
+              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '22px', color: 'var(--text-strong)' }}>{t.contact.thanksTitle}</div>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--text-muted)', margin: 0 }}>{t.contact.thanksMsg}</p>
               <Button variant="primary" onClick={onQuote} iconLeft={<Icon name="MessageCircle" size={16} color="#fff" />}>{t.contact.thanksBtn}</Button>
             </div>
@@ -824,7 +843,7 @@ function Testimonials() {
               <div style={{ color: 'var(--mc-red)', letterSpacing: '2px', fontSize: '15px' }}>★★★★★</div>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.65, color: 'var(--text-body)', margin: 0, flex: 1 }}>“{item.quote}”</p>
               <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '14px' }}>
-                <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 700, fontSize: '14px', color: 'var(--text-strong)' }}>{item.who}</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '14px', color: 'var(--text-strong)' }}>{item.who}</div>
                 <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '2px' }}>{item.biz}</div>
               </div>
             </Card>
@@ -858,7 +877,7 @@ function App() {
   const filtered = cat === 'all' ? PRODUCTS : PRODUCTS.filter((p) => p.cat === cat);
   return (
     <div style={{ background: 'var(--surface-page)', minHeight: '100vh' }}>
-      <Header cartCount={count} onCart={() => setCartOpen(true)} onNav={nav} onAnchor={goAnchor} onReorder={reorderWhatsApp} />
+      <Header cartCount={count} onCart={() => setCartOpen(true)} onNav={nav} onAnchor={goAnchor} onReorder={reorderWhatsApp} overHero={view === 'home'} />
       {view === 'home' && (<>
         <Hero onShop={() => nav('shop')} onQuote={quote} />
         <Services />
@@ -866,10 +885,10 @@ function App() {
         <Reveal style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '64px 24px' }}>
           <div className="mc-feature-head" style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '28px' }}>
             <div>
-              <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.18em', fontWeight: 600, fontSize: '13px', color: 'var(--mc-red)' }}>{t.bestsellers.eyebrow}</div>
-              <h2 className="mc-section-title" style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: '40px', margin: '6px 0 0', color: 'var(--text-strong)' }}>{t.bestsellers.title}</h2>
+              <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.18em', fontWeight: 600, fontSize: '13px', color: 'var(--accent-gold-ink)' }}>{t.bestsellers.eyebrow}</div>
+              <h2 className="mc-section-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '40px', margin: '6px 0 0', color: 'var(--text-strong)' }}>{t.bestsellers.title}</h2>
             </div>
-            <button onClick={() => nav('shop')} style={{ border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '14px', color: 'var(--text-strong)' }}>{t.bestsellers.seeAll} <Icon name="ArrowRight" size={16} /></button>
+            <button onClick={() => nav('shop')} style={{ border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '14px', color: 'var(--text-strong)' }}>{t.bestsellers.seeAll} <Icon name="ArrowRight" size={16} /></button>
           </div>
           <ProductGrid products={PRODUCTS.slice(0, 4)} onOpen={open} />
         </Reveal>
@@ -880,7 +899,7 @@ function App() {
       </>)}
       {view === 'shop' && (
         <section style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '40px 24px 80px' }}>
-          <h1 className="mc-page-title" style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', fontWeight: 700, fontSize: '48px', margin: '0 0 8px', color: 'var(--text-strong)' }}>{t.shop.title}</h1>
+          <h1 className="mc-page-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '48px', margin: '0 0 8px', color: 'var(--text-strong)' }}>{t.shop.title}</h1>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: '16px', color: 'var(--text-muted)', margin: '0 0 28px' }}>{fmt(t.shop.count, { n: filtered.length })}</p>
           <ShopToolbar active={cat} onPick={setCat} />
           <ProductGrid products={filtered} onOpen={open} />

@@ -15,7 +15,6 @@ import {
 
 // Brand / logo / hero images (decoded from the former base64 globals)
 import mc_logo from './assets-img/mc_logo.webp'
-import mc_paleta from './assets-img/mc_paleta.webp'
 import mc_destacado from '../images/corte-destacado.webp'
 import brand_wagyu from './assets-img/mc_brand_wagyu.webp'
 import brand_kobe from './assets-img/mc_brand_kobe.webp'
@@ -39,7 +38,6 @@ window.lucide = {
 }
 
 window.MC_LOGO = mc_logo
-window.MC_PALETA = mc_paleta
 window.MC_DESTACADO = mc_destacado
 window.MC_IMG = MC_IMG
 window.MC_IMAGES = MC_IMAGES

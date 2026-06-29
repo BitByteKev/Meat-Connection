@@ -52,7 +52,7 @@ function Badge({
     display: 'inline-flex',
     alignItems: 'center',
     gap: '5px',
-    fontFamily: 'var(--font-display)',
+    fontFamily: 'var(--font-eyebrow)',
     textTransform: 'uppercase',
     letterSpacing: '0.08em',
     fontWeight: 600,
@@ -187,7 +187,7 @@ function Toast({
     }
   }, title && /*#__PURE__*/React.createElement("div", {
     style: {
-      fontFamily: 'var(--font-display)',
+      fontFamily: 'var(--font-eyebrow)',
       textTransform: 'uppercase',
       letterSpacing: '0.06em',
       fontWeight: 600,
@@ -297,7 +297,7 @@ function Button({
     alignItems: 'center',
     justifyContent: 'center',
     gap: '8px',
-    fontFamily: 'var(--font-display)',
+    fontFamily: 'var(--font-eyebrow)',
     textTransform: 'uppercase',
     letterSpacing: '0.06em',
     fontWeight: 600,
@@ -554,7 +554,7 @@ function Input({
     fontFamily: 'var(--font-body)'
   };
   const lbl = {
-    fontFamily: 'var(--font-display)',
+    fontFamily: 'var(--font-eyebrow)',
     textTransform: 'uppercase',
     letterSpacing: '0.1em',
     fontSize: '11px',
@@ -634,7 +634,7 @@ function Select({
     fontFamily: 'var(--font-body)'
   };
   const lbl = {
-    fontFamily: 'var(--font-display)',
+    fontFamily: 'var(--font-eyebrow)',
     textTransform: 'uppercase',
     letterSpacing: '0.1em',
     fontSize: '11px',
@@ -788,7 +788,7 @@ function Tabs({
     display: 'flex',
     gap: '4px',
     borderBottom: '2px solid var(--border-default)',
-    fontFamily: 'var(--font-display)',
+    fontFamily: 'var(--font-eyebrow)',
     ...style
   };
   return /*#__PURE__*/React.createElement("div", {

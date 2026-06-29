@@ -1,10 +1,7 @@
-
-/* Meat Connection — Webfonts
-   SUBSTITUTION NOTE: No brand font files were provided. Using closest Google Fonts:
-   - Oswald  : condensed butcher-signage display (wordmark + headings)
-   - Archivo : grotesque body / UI text
-   Replace these @import lines with local @font-face + .woff2 files when brand fonts arrive. */
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Archivo:wght@400;500;600;700&display=swap');
+/* Meat Connection — Webfonts (luxury redesign)
+   - Playfair Display : high-contrast serif for display/headings (Athelas stand-in)
+   - Inter            : calm humanist sans for body + small uppercase labels */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap');
 
 /* Meat Connection — Color tokens
    Brand: charcoal #1D1D1D (primary) + butcher red #C10F10 (secondary) */
@@ -66,14 +63,19 @@
   --border-subtle:  var(--mc-ink-100);
 
   --focus-ring: var(--mc-red);
+
+  --accent-gold:     var(--mc-kraft);  /* #C9A678 champagne gold — eyebrows/labels on DARK surfaces */
+  --accent-gold-ink: #7E5F28;          /* antique gold — small labels on LIGHT surfaces (AA: 5.3:1 on page) */
+  --hairline-gold: 1px solid color-mix(in srgb, var(--mc-kraft) 55%, transparent);
 }
 
 /* Meat Connection — Typography tokens */
 :root {
   /* ---- Families ---- */
-  --font-display: 'Oswald', 'Arial Narrow', sans-serif;  /* condensed, uppercase headings */
-  --font-body:    'Archivo', system-ui, -apple-system, sans-serif;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;  /* serif display headings */
+  --font-body:    'Inter', system-ui, -apple-system, sans-serif;
   --font-mono:    ui-monospace, 'SF Mono', Menlo, monospace;
+  --font-eyebrow: 'Inter', system-ui, sans-serif;  /* small uppercase labels / eyebrows / nav */
 
   /* ---- Weights ---- */
   --fw-regular: 400; /* @kind other */
@@ -81,7 +83,7 @@
   --fw-semibold:600; /* @kind other */
   --fw-bold:    700; /* @kind other */
 
-  /* ---- Type scale (display uses condensed font, tight leading, uppercase) ---- */
+  /* ---- Type scale (display uses serif, tight leading, title case) ---- */
   --fs-display-xl: 72px;
   --fs-display-l:  56px;
   --fs-display-m:  40px;
@@ -191,7 +193,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 @media (max-width: 860px){
   .mc-nav{ display:none !important; }
   .mc-menu-btn{ display:flex !important; }
-  .mc-hero{ grid-template-columns:minmax(0,1fr) !important; gap:28px !important; padding:48px 20px !important; }
+  .mc-hero{ padding:110px 20px 48px !important; }
   .mc-pdp{ grid-template-columns:minmax(0,1fr) !important; gap:24px !important; }
   .mc-contact{ grid-template-columns:minmax(0,1fr) !important; gap:32px !important; }
   .mc-showcase{ grid-template-columns:minmax(0,1fr) !important; gap:28px !important; padding:48px 20px !important; }
@@ -207,7 +209,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .mc-services, .mc-subservices, .mc-brands, .mc-clients, .mc-testimonials{ grid-template-columns:1fr !important; }
   .mc-reorder-label{ display:none !important; }
   .mc-langtoggle{ display:none !important; } /* stays available in the mobile menu */
-  .mc-hero{ padding:40px 20px !important; }
+  .mc-hero{ padding:96px 20px 56px !important; }
   .mc-hero-cta{ flex-direction:column !important; }
   .mc-hero-cta > *{ width:100% !important; }
   .mc-stats{ flex-wrap:wrap !important; gap:18px !important; }
@@ -224,5 +226,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
     transition-duration:0.01ms !important;
     scroll-behavior:auto !important;
   }
+}
+
+/* Hero video: respect reduced-motion and keep text readable on small screens */
+@media (prefers-reduced-motion: reduce) {
+  .mc-hero-video { display: none; }
+}
+@media (max-width: 640px) {
+  .mc-hero { padding: 104px 20px 72px !important; }
+  .mc-h1 { font-size: 40px !important; }
 }
 
