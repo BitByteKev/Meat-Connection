@@ -131,7 +131,7 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder, overHero = fals
   return (
     <header style={{
       color: 'var(--mc-paper)', position: 'sticky', top: 0, zIndex: 30,
-      background: transparent ? 'linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%)' : 'var(--mc-charcoal)',
+      background: transparent ? 'linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.18) 100%)' : 'var(--mc-charcoal)',
       borderBottom: transparent ? '1px solid transparent' : '1px solid var(--mc-ink-700)',
       transition: 'background var(--dur-med) var(--ease-out), border-color var(--dur-med) var(--ease-out)'
     }}>
@@ -212,6 +212,8 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder, overHero = fals
 function Hero({ onShop, onQuote }) {
   const { Button } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
+  // marginTop tucks the hero under the 68px sticky header so the video fills behind it;
+  // mc-hero top padding (here + styles.css media queries) compensates to keep the headline clear.
   return (
     <section style={{ position: 'relative', background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', overflow: 'hidden', marginTop: '-68px' }}>
       <video

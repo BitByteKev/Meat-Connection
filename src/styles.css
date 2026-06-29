@@ -192,7 +192,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 @media (max-width: 860px){
   .mc-nav{ display:none !important; }
   .mc-menu-btn{ display:flex !important; }
-  .mc-hero{ padding:48px 20px !important; }
+  .mc-hero{ padding:110px 20px 48px !important; }
   .mc-pdp{ grid-template-columns:minmax(0,1fr) !important; gap:24px !important; }
   .mc-contact{ grid-template-columns:minmax(0,1fr) !important; gap:32px !important; }
   .mc-showcase{ grid-template-columns:minmax(0,1fr) !important; gap:28px !important; padding:48px 20px !important; }
@@ -208,7 +208,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .mc-services, .mc-subservices, .mc-brands, .mc-clients, .mc-testimonials{ grid-template-columns:1fr !important; }
   .mc-reorder-label{ display:none !important; }
   .mc-langtoggle{ display:none !important; } /* stays available in the mobile menu */
-  .mc-hero{ padding:40px 20px !important; }
+  .mc-hero{ padding:96px 20px 56px !important; }
   .mc-hero-cta{ flex-direction:column !important; }
   .mc-hero-cta > *{ width:100% !important; }
   .mc-stats{ flex-wrap:wrap !important; gap:18px !important; }
@@ -232,7 +232,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .mc-hero-video { display: none; }
 }
 @media (max-width: 640px) {
-  .mc-hero { padding: 72px 20px !important; }
+  .mc-hero { padding: 104px 20px 72px !important; }
   .mc-h1 { font-size: 40px !important; }
 }
 
