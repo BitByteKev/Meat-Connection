@@ -64,7 +64,8 @@
 
   --focus-ring: var(--mc-red);
 
-  --accent-gold:   var(--mc-kraft);   /* #C9A678 champagne gold — eyebrows, hairlines, labels */
+  --accent-gold:     var(--mc-kraft);  /* #C9A678 champagne gold — eyebrows/labels on DARK surfaces */
+  --accent-gold-ink: #7E5F28;          /* antique gold — small labels on LIGHT surfaces (AA: 5.3:1 on page) */
   --hairline-gold: 1px solid color-mix(in srgb, var(--mc-kraft) 55%, transparent);
 }
 

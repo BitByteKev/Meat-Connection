@@ -270,7 +270,7 @@ function ProductCard({ product, onOpen }) {
       </div>
       <div style={{ padding: '18px', display: 'flex', flexDirection: 'column', gap: '12px', flex: 1 }}>
         <div>
-          <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.14em', fontSize: '11px', color: 'var(--accent-gold)', marginBottom: '6px' }}>{t.categories[product.cat] || ''}</div>
+          <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.14em', fontSize: '11px', color: 'var(--accent-gold-ink)', marginBottom: '6px' }}>{t.categories[product.cat] || ''}</div>
           <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '20px', lineHeight: 1.05, color: 'var(--text-strong)' }}>{p.name}</div>
           <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '4px' }}>{cardHook(p.description)}</div>
         </div>
@@ -546,7 +546,7 @@ function ShopToolbar({ active, onPick }) {
 function SectionHead({ eyebrow, title, sub, light }) {
   return (
     <div style={{ marginBottom: '36px', maxWidth: '640px' }}>
-      <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.18em', fontWeight: 600, fontSize: '13px', color: 'var(--accent-gold)' }}>{eyebrow}</div>
+      <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.18em', fontWeight: 600, fontSize: '13px', color: light ? 'var(--accent-gold)' : 'var(--accent-gold-ink)' }}>{eyebrow}</div>
       <h2 className="mc-section-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '40px', lineHeight: 1.02, margin: '8px 0 0', color: light ? 'var(--mc-paper)' : 'var(--text-strong)' }}>{title}</h2>
       {sub && <p style={{ fontFamily: 'var(--font-body)', fontSize: '16px', lineHeight: 1.6, margin: '14px 0 0', color: light ? 'var(--mc-ink-200)' : 'var(--text-muted)' }}>{sub}</p>}
     </div>
@@ -885,7 +885,7 @@ function App() {
         <Reveal style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '64px 24px' }}>
           <div className="mc-feature-head" style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '28px' }}>
             <div>
-              <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.18em', fontWeight: 600, fontSize: '13px', color: 'var(--accent-gold)' }}>{t.bestsellers.eyebrow}</div>
+              <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.18em', fontWeight: 600, fontSize: '13px', color: 'var(--accent-gold-ink)' }}>{t.bestsellers.eyebrow}</div>
               <h2 className="mc-section-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '40px', margin: '6px 0 0', color: 'var(--text-strong)' }}>{t.bestsellers.title}</h2>
             </div>
             <button onClick={() => nav('shop')} style={{ border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '14px', color: 'var(--text-strong)' }}>{t.bestsellers.seeAll} <Icon name="ArrowRight" size={16} /></button>
