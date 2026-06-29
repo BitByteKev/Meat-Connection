@@ -503,13 +503,17 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
 }
 
 /* ===== Footer + toolbar + App ===== */
-function Footer() {
+function Footer({ onCategory }) {
   const { t } = useLang();
+  // Catalog column items map positionally to catalog filter codes
+  // (Japanese A5 → jp, Australian → au, American → us, Wholesale boxes → all).
+  const catCodes = ['jp', 'au', 'us', 'all'];
   const cols = [
-    [t.footer.catalogTitle, t.footer.catalogItems.map((label) => [label, '#'])],
+    [t.footer.catalogTitle, t.footer.catalogItems.map((label, i) => [label, null, null, () => onCategory(catCodes[i] || 'all')])],
     [t.footer.servicesTitle, t.footer.servicesItems.map((label) => [label, '#'])],
     [t.footer.contactTitle, [['WhatsApp', waHref(t.wa.quote), 'MessageCircle'], ['Instagram', IG_LINK, 'Instagram'], ['Facebook', FB_LINK, 'Facebook'], [t.footer.quoteCatalogs, '#contacto']]],
   ];
+  const linkStyle = { display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--mc-ink-300)', textDecoration: 'none', fontSize: '13px' };
   return (
     <footer style={{ background: 'var(--mc-charcoal)', color: 'var(--mc-ink-200)' }}>
       <div className="mc-foot" style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '56px 24px 32px', display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr', gap: '40px' }}>
@@ -521,7 +525,13 @@ function Footer() {
           <div key={h}>
             <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600, fontSize: '13px', color: '#fff', marginBottom: '14px' }}>{h}</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '9px' }}>
-              {links.map(([label, href, icon]) => <a key={label} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener" aria-label={label} style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--mc-ink-300)', textDecoration: 'none', fontSize: '13px' }}>{icon && <Icon name={icon} size={16} color="currentColor" strokeWidth={1.75} />}{label}</a>)}
+              {links.map(([label, href, icon, onClick]) => {
+                const hover = (e) => e.currentTarget.style.color = 'var(--accent-gold)';
+                const out = (e) => e.currentTarget.style.color = 'var(--mc-ink-300)';
+                return onClick
+                  ? <button key={label} type="button" onClick={onClick} onMouseOver={hover} onMouseOut={out} style={{ ...linkStyle, border: 'none', background: 'none', padding: 0, cursor: 'pointer', font: 'inherit', textAlign: 'left' }}>{icon && <Icon name={icon} size={16} color="currentColor" strokeWidth={1.75} />}{label}</button>
+                  : <a key={label} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener" aria-label={label} onMouseOver={hover} onMouseOut={out} style={linkStyle}>{icon && <Icon name={icon} size={16} color="currentColor" strokeWidth={1.75} />}{label}</a>;
+              })}
             </div>
           </div>
         ))}
@@ -906,7 +916,7 @@ function App() {
         </section>
       )}
       {view === 'product' && active && (<ProductDetail product={active} onAdd={add} onBack={() => nav('shop')} />)}
-      <Footer />
+      <Footer onCategory={(c) => { setCat(c); nav('shop'); }} />
       <CartDrawer open={cartOpen} items={cart} onClose={() => setCartOpen(false)} onQty={changeQty} onRemove={remove} onReorder={reorderWhatsApp} />
       <WhatsAppFab />
     </div>
