@@ -230,7 +230,7 @@ function Hero({ onShop, onQuote }) {
             <span style={{ height: '1px', width: '32px', background: 'var(--accent-gold)' }}></span>
             <span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.24em', fontWeight: 600, fontSize: '12px', color: 'var(--accent-gold)' }}>{t.hero.tag}</span>
           </div>
-          <h1 className="mc-h1" style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '64px', lineHeight: 1.04, letterSpacing: '-0.01em', margin: 0, textShadow: '0 2px 24px rgba(0,0,0,0.45)' }}>
+          <h1 className="mc-h1" style={{ fontFamily: 'var(--font-display)', fontWeight: 600, lineHeight: 1.04, letterSpacing: '-0.01em', margin: 0, textShadow: '0 2px 24px rgba(0,0,0,0.45)' }}>
             {t.hero.title1} <span style={{ color: 'var(--accent-gold)', fontStyle: 'italic' }}>{t.hero.title2}</span>
           </h1>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: '18px', lineHeight: 1.6, color: 'var(--mc-ink-100)', maxWidth: '460px', margin: '22px 0 32px', textShadow: '0 1px 12px rgba(0,0,0,0.5)' }}>
@@ -459,7 +459,7 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
       <div onClick={onClose} style={{ position: 'fixed', inset: 0, background: 'rgba(20,20,20,0.5)', opacity: open ? 1 : 0, pointerEvents: open ? 'auto' : 'none', transition: 'opacity var(--dur-med)', zIndex: 40 }}></div>
       <aside style={{ position: 'fixed', top: 0, right: 0, height: '100%', width: '400px', maxWidth: '92vw', background: 'var(--surface-page)', boxShadow: 'var(--shadow-lg)', transform: open ? 'translateX(0)' : 'translateX(100%)', transition: 'transform var(--dur-slow) var(--ease-out)', zIndex: 50, display: 'flex', flexDirection: 'column' }}>
         <div style={{ background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', padding: '20px 22px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <span style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.08em', fontWeight: 700, fontSize: '20px' }}>{t.cart.title}</span>
+          <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '20px' }}>{t.cart.title}</span>
           <button onClick={onClose} aria-label={t.cart.close} style={{ border: 'none', background: 'transparent', color: 'var(--mc-ink-200)', cursor: 'pointer', display: 'flex' }}><Icon name="X" size={22} color="var(--mc-ink-200)" /></button>
         </div>
         {items.length === 0 ? (
@@ -843,7 +843,7 @@ function Testimonials() {
               <div style={{ color: 'var(--mc-red)', letterSpacing: '2px', fontSize: '15px' }}>★★★★★</div>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.65, color: 'var(--text-body)', margin: 0, flex: 1 }}>“{item.quote}”</p>
               <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '14px' }}>
-                <div style={{ fontFamily: 'var(--font-display)', letterSpacing: '0.04em', fontWeight: 700, fontSize: '14px', color: 'var(--text-strong)' }}>{item.who}</div>
+                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '14px', color: 'var(--text-strong)' }}>{item.who}</div>
                 <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '2px' }}>{item.biz}</div>
               </div>
             </Card>
