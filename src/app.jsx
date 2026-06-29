@@ -104,10 +104,18 @@ function ProductImage({ product, height = 220, big = false, fit = 'cover' }) {
 }
 
 /* ===== Header ===== */
-function Header({ cartCount, onCart, onNav, onAnchor, onReorder }) {
+function Header({ cartCount, onCart, onNav, onAnchor, onReorder, overHero = false }) {
   const { IconButton, Button } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const [atTop, setAtTop] = React.useState(true);
+  React.useEffect(() => {
+    const onScroll = () => setAtTop(window.scrollY < 40);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+  const transparent = overHero && atTop;
   const links = [
     { label: t.nav.catalog, go: () => onNav('shop') },
     { label: t.nav.services, go: () => onAnchor('servicios') },
@@ -121,8 +129,13 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder }) {
   }, [menuOpen]);
   const goMobile = (l) => { setMenuOpen(false); l.go(); };
   return (
-    <header style={{ background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', position: 'sticky', top: 0, zIndex: 30, borderBottom: '1px solid var(--mc-ink-700)' }}>
-      <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 20px', height: '68px', display: 'flex', alignItems: 'center', gap: '24px', boxShadow: 'inset 0 -1px 0 var(--accent-gold)' }}>
+    <header style={{
+      color: 'var(--mc-paper)', position: 'sticky', top: 0, zIndex: 30,
+      background: transparent ? 'linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%)' : 'var(--mc-charcoal)',
+      borderBottom: transparent ? '1px solid transparent' : '1px solid var(--mc-ink-700)',
+      transition: 'background var(--dur-med) var(--ease-out), border-color var(--dur-med) var(--ease-out)'
+    }}>
+      <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 20px', height: '68px', display: 'flex', alignItems: 'center', gap: '24px', boxShadow: transparent ? 'none' : 'inset 0 -1px 0 var(--accent-gold)' }}>
         <img src={window.MC_LOGO} alt="Meat Connection" style={{ height: '32px', cursor: 'pointer' }} onClick={() => onNav('home')} />
         <nav className="mc-nav" style={{ display: 'flex', gap: '4px', flex: 1 }}>
           {links.map((l) => (
@@ -200,7 +213,7 @@ function Hero({ onShop, onQuote }) {
   const { Button } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
   return (
-    <section style={{ position: 'relative', background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', overflow: 'hidden' }}>
+    <section style={{ position: 'relative', background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', overflow: 'hidden', marginTop: '-68px' }}>
       <video
         className="mc-hero-video"
         src="/hero.mp4" poster="/hero-poster.jpg"
@@ -209,7 +222,7 @@ function Hero({ onShop, onQuote }) {
       />
       <div style={{ position: 'absolute', inset: 0, zIndex: 1,
         background: 'linear-gradient(90deg, rgba(15,15,15,0.88) 0%, rgba(15,15,15,0.55) 48%, rgba(15,15,15,0.15) 100%)' }} />
-      <div className="mc-hero" style={{ position: 'relative', zIndex: 2, maxWidth: 'var(--container-max)', margin: '0 auto', padding: '110px 24px' }}>
+      <div className="mc-hero" style={{ position: 'relative', zIndex: 2, maxWidth: 'var(--container-max)', margin: '0 auto', padding: '150px 24px 110px' }}>
         <div style={{ maxWidth: '600px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '22px' }}>
             <span style={{ height: '1px', width: '32px', background: 'var(--accent-gold)' }}></span>
@@ -861,7 +874,7 @@ function App() {
   const filtered = cat === 'all' ? PRODUCTS : PRODUCTS.filter((p) => p.cat === cat);
   return (
     <div style={{ background: 'var(--surface-page)', minHeight: '100vh' }}>
-      <Header cartCount={count} onCart={() => setCartOpen(true)} onNav={nav} onAnchor={goAnchor} onReorder={reorderWhatsApp} />
+      <Header cartCount={count} onCart={() => setCartOpen(true)} onNav={nav} onAnchor={goAnchor} onReorder={reorderWhatsApp} overHero={view === 'home'} />
       {view === 'home' && (<>
         <Hero onShop={() => nav('shop')} onQuote={quote} />
         <Services />
