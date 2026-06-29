@@ -402,19 +402,19 @@ function ProductDetail({ product, onAdd, onBack }) {
           <h1 className="mc-page-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '48px', lineHeight: 0.98, margin: '0 0 16px', color: 'var(--text-strong)' }}>{p.name}</h1>
           <div className="mc-pdp-actions" style={{ margin: '24px 0', display: 'flex', flexWrap: 'wrap', gap: '20px', alignItems: 'flex-end' }}>
             <div>
-              <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{t.pdp.saleType}</div>
+              <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{t.pdp.saleType}</div>
               <div role="group" aria-label={t.pdp.saleType} style={{ display: 'inline-flex', border: '2px solid var(--mc-charcoal)', borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
                 {[['mayoreo', t.pdp.mayoreo], ['menudeo', t.pdp.menudeo]].map(([val, label]) => {
                   const on = saleType === val;
                   return (
                     <button key={val} onClick={() => pickType(val)} aria-pressed={on}
-                      style={{ border: 'none', cursor: 'pointer', padding: '0 16px', height: '44px', fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 700, fontSize: '13px', background: on ? 'var(--mc-charcoal)' : 'transparent', color: on ? 'var(--mc-paper)' : 'var(--text-strong)' }}>{label}</button>
+                      style={{ border: 'none', cursor: 'pointer', padding: '0 16px', height: '44px', fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 700, fontSize: '13px', background: on ? 'var(--mc-charcoal)' : 'transparent', color: on ? 'var(--mc-paper)' : 'var(--text-strong)' }}>{label}</button>
                   );
                 })}
               </div>
             </div>
             <div>
-              <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{t.pdp.qtyLabel}</div>
+              <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{t.pdp.qtyLabel}</div>
               <div style={{ display: 'inline-flex', alignItems: 'center', border: '2px solid var(--mc-charcoal)', borderRadius: 'var(--radius-md)', height: '44px' }}>
                 <button onClick={() => setQty(Math.max(minQty, qty - 1))} style={qtyBtn}><Icon name="Minus" size={16} /></button>
                 <span style={{ width: '48px', textAlign: 'center', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '18px' }}>{qty}</span>
@@ -518,7 +518,7 @@ function Footer() {
         </div>
         {cols.map(([h, links]) => (
           <div key={h}>
-            <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600, fontSize: '13px', color: '#fff', marginBottom: '14px' }}>{h}</div>
+            <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600, fontSize: '13px', color: '#fff', marginBottom: '14px' }}>{h}</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '9px' }}>
               {links.map(([label, href, icon]) => <a key={label} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener" aria-label={label} style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--mc-ink-300)', textDecoration: 'none', fontSize: '13px' }}>{icon && <Icon name={icon} size={16} color="currentColor" strokeWidth={1.75} />}{label}</a>)}
             </div>
@@ -545,7 +545,7 @@ function ShopToolbar({ active, onPick }) {
 function SectionHead({ eyebrow, title, sub, light }) {
   return (
     <div style={{ marginBottom: '36px', maxWidth: '640px' }}>
-      <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.18em', fontWeight: 600, fontSize: '13px', color: 'var(--mc-red-bright)' }}>{eyebrow}</div>
+      <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.18em', fontWeight: 600, fontSize: '13px', color: 'var(--accent-gold)' }}>{eyebrow}</div>
       <h2 className="mc-section-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '40px', lineHeight: 1.02, margin: '8px 0 0', color: light ? 'var(--mc-paper)' : 'var(--text-strong)' }}>{title}</h2>
       {sub && <p style={{ fontFamily: 'var(--font-body)', fontSize: '16px', lineHeight: 1.6, margin: '14px 0 0', color: light ? 'var(--mc-ink-200)' : 'var(--text-muted)' }}>{sub}</p>}
     </div>
@@ -574,7 +574,7 @@ function Services() {
         <div className="mc-subservices" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', marginTop: '24px', padding: '24px', background: 'var(--mc-charcoal)', borderRadius: 'var(--radius-md)' }}>
           {t.services.sub2.map(([ic, txt]) => (
             <div key={txt} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <Icon name={ic} size={22} color="var(--mc-red-bright)" />
+              <Icon name={ic} size={22} color="var(--accent-gold)" />
               <span style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--mc-paper)' }}>{txt}</span>
             </div>
           ))}
@@ -628,7 +628,7 @@ function Clients() {
         <div className="mc-clients" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
           {t.clients.list.map(([ic, txt]) => (
             <div key={txt} style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '20px', border: '1px solid var(--mc-ink-700)', borderRadius: 'var(--radius-md)', background: 'var(--mc-ink-900)' }}>
-              <Icon name={ic} size={24} color="var(--mc-red-bright)" />
+              <Icon name={ic} size={24} color="var(--accent-gold)" />
               <span style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--mc-paper)' }}>{txt}</span>
             </div>
           ))}
@@ -673,7 +673,7 @@ function ContactSection({ onQuote }) {
                   <Icon name={ic} size={20} color="#fff" />
                 </span>
                 <span>
-                  <span style={{ display: 'block', fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.06em', fontSize: '12px', color: 'var(--text-muted)' }}>{name}</span>
+                  <span style={{ display: 'block', fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontSize: '12px', color: 'var(--text-muted)' }}>{name}</span>
                   <span style={{ fontFamily: 'var(--font-body)', fontSize: '15px', fontWeight: 600 }}>{label}</span>
                 </span>
               </a>
@@ -884,10 +884,10 @@ function App() {
         <Reveal style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '64px 24px' }}>
           <div className="mc-feature-head" style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '28px' }}>
             <div>
-              <div style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.18em', fontWeight: 600, fontSize: '13px', color: 'var(--mc-red)' }}>{t.bestsellers.eyebrow}</div>
+              <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.18em', fontWeight: 600, fontSize: '13px', color: 'var(--accent-gold)' }}>{t.bestsellers.eyebrow}</div>
               <h2 className="mc-section-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '40px', margin: '6px 0 0', color: 'var(--text-strong)' }}>{t.bestsellers.title}</h2>
             </div>
-            <button onClick={() => nav('shop')} style={{ border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '14px', color: 'var(--text-strong)' }}>{t.bestsellers.seeAll} <Icon name="ArrowRight" size={16} /></button>
+            <button onClick={() => nav('shop')} style={{ border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '14px', color: 'var(--text-strong)' }}>{t.bestsellers.seeAll} <Icon name="ArrowRight" size={16} /></button>
           </div>
           <ProductGrid products={PRODUCTS.slice(0, 4)} onOpen={open} />
         </Reveal>
