@@ -599,28 +599,29 @@ function Services() {
 function Partners() {
   const { t } = useLang();
   const brands = [
-    { name: 'Wagyu Japanese Beef', key: 'wagyu', url: null },
-    { name: 'Kobe Beef', key: 'kobe', url: 'https://www.kobe-niku.jp/' },
-    { name: "Jack's Creek", key: 'jacks', url: 'https://jackscreek.com.au/' },
-    { name: 'Stone Axe', key: 'stone', url: 'https://www.stoneaxewagyu.com/' },
-    { name: 'Margaret River Wagyu', key: 'margaret', url: 'https://www.stoneaxewagyu.com/' },
-    { name: 'Masami Beef', key: 'masami', url: 'https://masamiranch.com/' },
+    { name: 'King River', key: 'kingriver', url: null },
+    { name: 'Jewel', key: null, url: null },
+    { name: "L'grow", key: 'lgrow', url: null },
+    { name: "Macka's", key: 'mackas', url: null },
+    { name: 'A5 Japonés · Wagyu Japanese Beef', key: 'wagyu', url: null, whiten: true },
   ];
-  const tileStyle = { border: '1px solid var(--border-default)', borderRadius: 'var(--radius-md)', background: 'var(--surface-card)', padding: '28px 24px', minHeight: '132px', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', transition: 'border-color var(--dur-med), box-shadow var(--dur-med), transform var(--dur-med)' };
-  const hoverIn = (e) => { e.currentTarget.style.borderColor = 'var(--mc-red)'; e.currentTarget.style.boxShadow = 'var(--shadow-md)'; e.currentTarget.style.transform = 'translateY(-3px)'; };
-  const hoverOut = (e) => { e.currentTarget.style.borderColor = 'var(--border-default)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)'; };
+  const tileStyle = { border: '1px solid var(--mc-ink-700)', borderRadius: 'var(--radius-md)', background: 'var(--mc-charcoal)', padding: '28px 24px', minHeight: '132px', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', transition: 'border-color var(--dur-med), box-shadow var(--dur-med), transform var(--dur-med)' };
+  const hoverIn = (e) => { e.currentTarget.style.borderColor = 'var(--accent-gold)'; e.currentTarget.style.boxShadow = 'var(--shadow-md)'; e.currentTarget.style.transform = 'translateY(-3px)'; };
+  const hoverOut = (e) => { e.currentTarget.style.borderColor = 'var(--mc-ink-700)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)'; };
   return (
     <section id="marcas" style={{ background: 'var(--surface-page)', scrollMarginTop: '72px' }}>
       <Reveal style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '64px 24px' }}>
         <SectionHead eyebrow={t.partners.eyebrow} title={t.partners.title} sub={t.partners.sub} />
         <div className="mc-brands" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
           {brands.map((b) => {
-            const logo = <img src={window.MC_BRAND[b.key]} alt={b.name} loading="lazy" decoding="async" style={{ maxHeight: '84px', maxWidth: '100%', width: 'auto', objectFit: 'contain' }} />;
+            const inner = b.key
+              ? <img src={window.MC_BRAND[b.key]} alt={b.name} loading="lazy" decoding="async" style={{ maxHeight: '84px', maxWidth: '100%', width: 'auto', objectFit: 'contain', filter: b.whiten ? 'brightness(0) invert(1)' : undefined, opacity: b.whiten ? 0.92 : undefined }} />
+              : <span style={{ fontFamily: 'var(--font-display)', fontSize: '32px', letterSpacing: '0.02em', color: 'var(--mc-paper)' }}>{b.name}</span>;
             return b.url ? (
-              <a key={b.key} href={b.url} target="_blank" rel="noopener" title={b.name} aria-label={b.name}
-                style={tileStyle} onMouseOver={hoverIn} onMouseOut={hoverOut}>{logo}</a>
+              <a key={b.name} href={b.url} target="_blank" rel="noopener" title={b.name} aria-label={b.name}
+                style={tileStyle} onMouseOver={hoverIn} onMouseOut={hoverOut}>{inner}</a>
             ) : (
-              <div key={b.key} title={b.name} style={tileStyle}>{logo}</div>
+              <div key={b.name} title={b.name} style={tileStyle}>{inner}</div>
             );
           })}
         </div>

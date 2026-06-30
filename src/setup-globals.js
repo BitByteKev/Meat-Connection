@@ -17,11 +17,9 @@ import {
 import mc_logo from './assets-img/mc_logo.webp'
 import mc_destacado from '../images/corte-destacado.webp'
 import brand_wagyu from './assets-img/mc_brand_wagyu.webp'
-import brand_kobe from './assets-img/mc_brand_kobe.webp'
-import brand_jacks from './assets-img/mc_brand_jacks.webp'
-import brand_stone from './assets-img/mc_brand_stone.webp'
-import brand_margaret from './assets-img/mc_brand_margaret.webp'
-import brand_masami from './assets-img/mc_brand_masami.webp'
+import brand_kingriver from './assets-img/mc_brand_kingriver.png'
+import brand_lgrow from './assets-img/mc_brand_lgrow.png'
+import brand_mackas from './assets-img/mc_brand_mackas.png'
 
 // Product photos — derived from products.json + an images glob (see ./products.js),
 // so the admin can assign any photo in /images without touching code.
@@ -43,9 +41,7 @@ window.MC_IMG = MC_IMG
 window.MC_IMAGES = MC_IMAGES
 window.MC_BRAND = {
   wagyu: brand_wagyu,
-  kobe: brand_kobe,
-  jacks: brand_jacks,
-  stone: brand_stone,
-  margaret: brand_margaret,
-  masami: brand_masami,
+  kingriver: brand_kingriver,
+  lgrow: brand_lgrow,
+  mackas: brand_mackas,
 }
