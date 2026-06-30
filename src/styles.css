@@ -186,9 +186,14 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 /* mobile menu button hidden by default (shown in tablet/mobile breakpoints) */
 .mc-menu-btn{ display:none; }
 
+/* ===== Brand tiles: centered flex-wrap so an odd count (5) has no orphan gap ===== */
+.mc-brand-tile{ flex:0 1 calc((100% - 32px) / 3); }      /* 3 per row */
+@media (max-width: 1024px){ .mc-brand-tile{ flex-basis: calc((100% - 16px) / 2); } } /* 2 per row */
+@media (max-width: 600px){ .mc-brand-tile{ flex-basis: 100%; } }                     /* 1 per row */
+
 /* ===== Tablet ===== */
 @media (max-width: 1024px){
-  .mc-services, .mc-subservices, .mc-brands, .mc-clients, .mc-testimonials{ grid-template-columns:repeat(2, 1fr) !important; }
+  .mc-services, .mc-subservices, .mc-clients, .mc-testimonials{ grid-template-columns:repeat(2, 1fr) !important; }
 }
 
 /* ===== Large phone / small tablet ===== */
@@ -208,7 +213,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 /* ===== Phone ===== */
 @media (max-width: 600px){
-  .mc-services, .mc-subservices, .mc-brands, .mc-clients, .mc-testimonials{ grid-template-columns:1fr !important; }
+  .mc-services, .mc-subservices, .mc-clients, .mc-testimonials{ grid-template-columns:1fr !important; }
   .mc-reorder-label{ display:none !important; }
   .mc-langtoggle{ display:none !important; } /* stays available in the mobile menu */
   .mc-hero{ padding:96px 20px 56px !important; }

@@ -612,16 +612,16 @@ function Partners() {
     <section id="marcas" style={{ background: 'var(--surface-page)', scrollMarginTop: '72px' }}>
       <Reveal style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '64px 24px' }}>
         <SectionHead eyebrow={t.partners.eyebrow} title={t.partners.title} sub={t.partners.sub} />
-        <div className="mc-brands" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
+        <div className="mc-brands" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '16px' }}>
           {brands.map((b) => {
             const inner = b.key
               ? <img src={window.MC_BRAND[b.key]} alt={b.name} loading="lazy" decoding="async" style={{ maxHeight: '84px', maxWidth: '100%', width: 'auto', objectFit: 'contain', filter: b.whiten ? 'brightness(0) invert(1)' : undefined, opacity: b.whiten ? 0.92 : undefined }} />
               : <span style={{ fontFamily: 'var(--font-display)', fontSize: '32px', letterSpacing: '0.02em', color: 'var(--mc-paper)' }}>{b.name}</span>;
             return b.url ? (
-              <a key={b.name} href={b.url} target="_blank" rel="noopener" title={b.name} aria-label={b.name}
+              <a key={b.name} className="mc-brand-tile" href={b.url} target="_blank" rel="noopener" title={b.name} aria-label={b.name}
                 style={tileStyle} onMouseOver={hoverIn} onMouseOut={hoverOut}>{inner}</a>
             ) : (
-              <div key={b.name} title={b.name} style={tileStyle}>{inner}</div>
+              <div key={b.name} className="mc-brand-tile" title={b.name} style={tileStyle}>{inner}</div>
             );
           })}
         </div>
