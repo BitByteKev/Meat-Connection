@@ -215,7 +215,7 @@ function Hero({ onShop, onQuote }) {
   // marginTop tucks the hero under the 68px sticky header so the video fills behind it;
   // mc-hero top padding (here + styles.css media queries) compensates to keep the headline clear.
   return (
-    <section style={{ position: 'relative', background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', overflow: 'hidden', marginTop: '-68px' }}>
+    <section className="mc-hero-section" style={{ position: 'relative', background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', overflow: 'hidden', marginTop: '-68px' }}>
       <video
         className="mc-hero-video"
         src="/hero.mp4" poster="/hero-poster.jpg"
@@ -224,7 +224,7 @@ function Hero({ onShop, onQuote }) {
       />
       <div style={{ position: 'absolute', inset: 0, zIndex: 1,
         background: 'linear-gradient(90deg, rgba(15,15,15,0.88) 0%, rgba(15,15,15,0.55) 48%, rgba(15,15,15,0.15) 100%)' }} />
-      <div className="mc-hero" style={{ position: 'relative', zIndex: 2, maxWidth: 'var(--container-max)', margin: '0 auto', padding: '150px 24px 110px' }}>
+      <div className="mc-hero" style={{ position: 'relative', zIndex: 2, width: '100%', maxWidth: 'var(--container-max)', margin: '0 auto', padding: '88px 24px' }}>
         <div style={{ maxWidth: '600px' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '22px' }}>
             <span style={{ height: '1px', width: '32px', background: 'var(--accent-gold)' }}></span>

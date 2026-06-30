@@ -172,6 +172,11 @@ a { color:inherit; }
 .mc-section-title{ font-size:clamp(28px, 5vw, 40px) !important; line-height:1.04 !important; }
 .mc-page-title{ font-size:clamp(26px, 6.5vw, 48px) !important; line-height:1.04 !important; overflow-wrap:anywhere; }
 
+/* ===== Hero fills the full viewport height on any screen ===== */
+/* dvh tracks the *visible* viewport so mobile browser chrome doesn't clip it;
+   100vh is the fallback for browsers without dvh. Content is vertically centered. */
+.mc-hero-section{ min-height:100vh; min-height:100dvh; display:flex; flex-direction:column; justify-content:center; }
+
 /* ===== Guard against horizontal overflow ===== */
 /* overflow-x:clip (not hidden) prevents horizontal scroll WITHOUT making the
    page a scroll container, which would break the sticky header. */
@@ -200,7 +205,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 @media (max-width: 860px){
   .mc-nav{ display:none !important; }
   .mc-menu-btn{ display:flex !important; }
-  .mc-hero{ padding:110px 20px 48px !important; }
+  .mc-hero{ padding:88px 20px !important; }
   .mc-pdp{ grid-template-columns:minmax(0,1fr) !important; gap:24px !important; }
   .mc-contact{ grid-template-columns:minmax(0,1fr) !important; gap:32px !important; }
   .mc-showcase{ grid-template-columns:minmax(0,1fr) !important; gap:28px !important; padding:48px 20px !important; }
@@ -216,7 +221,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .mc-services, .mc-subservices, .mc-clients, .mc-testimonials{ grid-template-columns:1fr !important; }
   .mc-reorder-label{ display:none !important; }
   .mc-langtoggle{ display:none !important; } /* stays available in the mobile menu */
-  .mc-hero{ padding:96px 20px 56px !important; }
+  .mc-hero{ padding:80px 20px !important; }
   .mc-hero-cta{ flex-direction:column !important; }
   .mc-hero-cta > *{ width:100% !important; }
   .mc-stats{ flex-wrap:wrap !important; gap:18px !important; }
@@ -240,7 +245,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .mc-hero-video { display: none; }
 }
 @media (max-width: 640px) {
-  .mc-hero { padding: 104px 20px 72px !important; }
+  .mc-hero { padding: 84px 20px !important; }
   .mc-h1 { font-size: 40px !important; }
 }
 
