@@ -599,10 +599,10 @@ function Services() {
 function Partners() {
   const { t } = useLang();
   const brands = [
-    { name: 'King River', key: 'kingriver', url: null },
+    { name: 'King River', key: 'kingriver', url: 'https://kingriver.com.au/' },
     { name: 'Jewel', key: null, url: null },
-    { name: "L'grow", key: 'lgrow', url: null },
-    { name: "Macka's", key: 'mackas', url: null },
+    { name: "L'grow", key: 'lgrow', url: 'https://sandalwood.au/wagyu/' },
+    { name: "Macka's", key: 'mackas', url: 'https://mackasblackangus.com.au/' },
     { name: 'A5 Japonés · Wagyu Japanese Beef', key: 'wagyu', url: null, whiten: true },
   ];
   const tileStyle = { border: '1px solid var(--mc-ink-700)', borderRadius: 'var(--radius-md)', background: 'var(--mc-charcoal)', padding: '28px 24px', minHeight: '132px', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', transition: 'border-color var(--dur-med), box-shadow var(--dur-med), transform var(--dur-med)' };
