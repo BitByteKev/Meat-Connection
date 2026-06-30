@@ -22,7 +22,7 @@ export const STRINGS = {
       ctaCatalog: 'Ver Catálogo', ctaQuote: 'Cotizar por WhatsApp',
       stats: [['A5', 'grado japonés'], ['Directo', 'importación'], ['Express', 'envíos nacionales']],
     },
-    categories: { all: 'Todos', jp: 'Wagyu Japonés', au: 'Wagyu Australiano', us: 'Carne Americana' },
+    categories: { all: 'Todos', jp: 'A5 Japonés', mackas: "Black Angus Macka's", au: 'Wagyu Australiano', kingriver: 'Wagyu Australiano King River', us: 'Wagyu Cross Americano' },
     products: PRODUCT_STRINGS.es,
     card: { readMore: 'Leer más' },
     notice: {
@@ -94,7 +94,7 @@ export const STRINGS = {
     bestsellers: { eyebrow: 'Del Mostrador', title: 'Cortes Más Vendidos', seeAll: 'Ver Todo' },
     shop: { title: 'El Catálogo', count: '{n} cortes · mayoreo y menudeo' },
     footer: {
-      catalogTitle: 'Catálogo', catalogItems: ['Wagyu Japonés A5', 'Wagyu Australiano', 'Carne Americana', 'Cajas de Mayoreo'],
+      catalogTitle: 'Catálogo', catalogItems: ['A5 Japonés', "Black Angus Macka's", 'Wagyu Australiano', 'Wagyu Australiano King River', 'Wagyu Cross Americano'],
       servicesTitle: 'Servicios', servicesItems: ['Envíos Express', 'Importación Directa', 'Cadena de Frío', 'Porcionado al Vacío'],
       contactTitle: 'Contacto', quoteCatalogs: 'Cotizar / Catálogos',
       tagline: 'Distribuidor de carne premium en México. Wagyu japonés, wagyu australiano y carne americana — importación directa con envíos express y cadena de frío garantizada.',
@@ -124,7 +124,7 @@ export const STRINGS = {
       ctaCatalog: 'View Catalog', ctaQuote: 'Quote on WhatsApp',
       stats: [['A5', 'Japanese grade'], ['Direct', 'import'], ['Express', 'nationwide shipping']],
     },
-    categories: { all: 'All', jp: 'Japanese Wagyu', au: 'Australian Wagyu', us: 'American Beef' },
+    categories: { all: 'All', jp: 'A5 Japanese', mackas: "Macka's Black Angus", au: 'Australian Wagyu', kingriver: 'King River Australian Wagyu', us: 'American Wagyu Cross' },
     products: PRODUCT_STRINGS.en,
     card: { readMore: 'Read more' },
     notice: {
@@ -196,7 +196,7 @@ export const STRINGS = {
     bestsellers: { eyebrow: 'From the Counter', title: 'Best-Selling Cuts', seeAll: 'View All' },
     shop: { title: 'The Catalog', count: '{n} cuts · wholesale & retail' },
     footer: {
-      catalogTitle: 'Catalog', catalogItems: ['Japanese Wagyu A5', 'Australian Wagyu', 'American Beef', 'Wholesale Boxes'],
+      catalogTitle: 'Catalog', catalogItems: ['A5 Japanese', "Macka's Black Angus", 'Australian Wagyu', 'King River Australian Wagyu', 'American Wagyu Cross'],
       servicesTitle: 'Services', servicesItems: ['Express Shipping', 'Direct Import', 'Cold Chain', 'Vacuum Portioning'],
       contactTitle: 'Contact', quoteCatalogs: 'Quote / Catalogs',
       tagline: 'Premium meat distributor in Mexico. Japanese wagyu, Australian wagyu and American beef — direct import with express shipping and a guaranteed cold chain.',

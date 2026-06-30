@@ -507,7 +507,7 @@ function Footer({ onCategory, onAnchor }) {
   const { t } = useLang();
   // Catalog column items map positionally to catalog filter codes
   // (Japanese A5 → jp, Australian → au, American → us, Wholesale boxes → all).
-  const catCodes = ['jp', 'au', 'us', 'all'];
+  const catCodes = ['jp', 'mackas', 'au', 'kingriver', 'us'];
   const cols = [
     [t.footer.catalogTitle, t.footer.catalogItems.map((label, i) => [label, null, null, () => onCategory(catCodes[i] || 'all')])],
     [t.footer.servicesTitle, t.footer.servicesItems.map((label) => [label, null, null, () => onAnchor('servicios')])],
@@ -545,7 +545,7 @@ function Footer({ onCategory, onAnchor }) {
 function ShopToolbar({ active, onPick }) {
   const { Tag } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
-  const cats = [['all', t.categories.all], ['jp', t.categories.jp], ['au', t.categories.au], ['us', t.categories.us]];
+  const cats = [['all', t.categories.all], ['jp', t.categories.jp], ['mackas', t.categories.mackas], ['au', t.categories.au], ['kingriver', t.categories.kingriver], ['us', t.categories.us]];
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap', marginBottom: '28px' }}>
       {cats.map(([key, label]) => <Tag key={key} selected={active === key} onClick={() => onPick(key)}>{label}</Tag>)}

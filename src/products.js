@@ -54,5 +54,5 @@ export const imageUrl = (file) => imageByFile[file]
 // mutating the module's copy that the storefront renders from).
 export const RAW_CATALOG = JSON.parse(JSON.stringify(catalog))
 
-export const CATEGORIES = ['jp', 'au', 'us']
+export const CATEGORIES = ['jp', 'mackas', 'au', 'kingriver', 'us']
 export const TONES = ['charcoal', 'kraft', 'cream', 'red']

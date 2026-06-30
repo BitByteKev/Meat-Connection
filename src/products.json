@@ -289,7 +289,7 @@
   },
   {
     "id": "nyangus",
-    "cat": "au",
+    "cat": "mackas",
     "tone": "charcoal",
     "images": [
       "new-york-black-angus.webp"
@@ -337,7 +337,7 @@
   },
   {
     "id": "king-river",
-    "cat": "us",
+    "cat": "kingriver",
     "tone": "charcoal",
     "images": [
       "corte-destacado.webp"
