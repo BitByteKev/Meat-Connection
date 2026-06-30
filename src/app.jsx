@@ -600,7 +600,7 @@ function Partners() {
   const { t } = useLang();
   const brands = [
     { name: 'King River', key: 'kingriver', url: 'https://kingriver.com.au/' },
-    { name: 'Jewel', key: null, url: null },
+    { name: 'Jewel', key: 'jewel', url: 'https://jewelbykingriver.com.au/latest/' },
     { name: "L'grow", key: 'lgrow', url: 'https://sandalwood.au/wagyu/' },
     { name: "Macka's", key: 'mackas', url: 'https://mackasblackangus.com.au/' },
     { name: 'A5 Japonés · Wagyu Japanese Beef', key: 'wagyu', url: null, whiten: true },

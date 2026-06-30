@@ -17,6 +17,7 @@ import {
 import mc_logo from './assets-img/mc_logo.webp'
 import mc_destacado from '../images/corte-destacado.webp'
 import brand_wagyu from './assets-img/mc_brand_wagyu.webp'
+import brand_jewel from './assets-img/mc_brand_jewel.png'
 import brand_kingriver from './assets-img/mc_brand_kingriver.png'
 import brand_lgrow from './assets-img/mc_brand_lgrow.png'
 import brand_mackas from './assets-img/mc_brand_mackas.png'
@@ -41,6 +42,7 @@ window.MC_IMG = MC_IMG
 window.MC_IMAGES = MC_IMAGES
 window.MC_BRAND = {
   wagyu: brand_wagyu,
+  jewel: brand_jewel,
   kingriver: brand_kingriver,
   lgrow: brand_lgrow,
   mackas: brand_mackas,
