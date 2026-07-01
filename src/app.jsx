@@ -224,7 +224,7 @@ function Hero({ onShop, onQuote }) {
     <section className="mc-hero-section" style={{ position: 'relative', background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', overflow: 'hidden', marginTop: '-68px' }}>
       <video
         className="mc-hero-video"
-        src="https://res.cloudinary.com/dvukweh2u/video/upload/vc_h264,q_auto/v1782880837/wagyu_sl6p4t.mp4"
+        src="/hero.mp4"
         poster="/hero-poster.jpg"
         autoPlay muted loop playsInline preload="metadata"
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 72%', zIndex: 0 }}
