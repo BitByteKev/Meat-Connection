@@ -222,12 +222,12 @@ function Hero({ onShop, onQuote }) {
   // mc-hero top padding (here + styles.css media queries) compensates to keep the headline clear.
   return (
     <section className="mc-hero-section" style={{ position: 'relative', background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', overflow: 'hidden', marginTop: '-68px' }}>
-      <video
-        className="mc-hero-video"
-        src="/hero.mp4" poster="/hero-poster.jpg"
-        autoPlay muted loop playsInline preload="metadata"
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 72%', zIndex: 0 }}
-      />
+      <div className="mc-hero-embed" aria-hidden="true">
+        <iframe
+          src="https://streamable.com/e/8i5pac?autoplay=1&muted=1&loop=1&nocontrols=1"
+          title="Meat Connection" allow="autoplay; fullscreen" loading="eager"
+        />
+      </div>
       <div style={{ position: 'absolute', inset: 0, zIndex: 1,
         background: 'linear-gradient(90deg, rgba(15,15,15,0.88) 0%, rgba(15,15,15,0.55) 48%, rgba(15,15,15,0.15) 100%)' }} />
       <div className="mc-hero" style={{ position: 'relative', zIndex: 2, width: '100%', maxWidth: 'var(--container-max)', margin: '0 auto', padding: '88px 24px' }}>
