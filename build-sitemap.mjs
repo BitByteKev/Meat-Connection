@@ -12,8 +12,7 @@ function slugify(s) {
     .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 }
 const CAT_SLUG = {
-  jp: 'a5-japones', mackas: 'black-angus-mackas', au: 'wagyu-australiano',
-  kingriver: 'wagyu-australiano-king-river', us: 'wagyu-cross-americano',
+  jp: 'a5-japones', au: 'wagyu-australiano', us: 'wagyu-americano', mackas: 'black-angus',
 }
 
 // Product slugs — deduped in catalog order (matches app.jsx).
@@ -24,7 +23,7 @@ const productSlugs = catalog.map((p) => {
 })
 
 const urls = [['/', '1.0', 'weekly'], ['/catalogo', '0.9', 'weekly']]
-for (const c of ['jp', 'mackas', 'au', 'kingriver', 'us']) urls.push([`/catalogo/${CAT_SLUG[c]}`, '0.8', 'weekly'])
+for (const c of ['jp', 'au', 'us', 'mackas']) urls.push([`/catalogo/${CAT_SLUG[c]}`, '0.8', 'weekly'])
 for (const s of productSlugs) urls.push([`/producto/${s}`, '0.7', 'monthly'])
 
 const body = urls.map(([path, priority, freq]) =>
