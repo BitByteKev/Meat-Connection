@@ -42,6 +42,14 @@ export const STRINGS = {
       originUS: 'Carne americana selecta — Black Angus y wagyu americano, criados con altos estándares. Sabor robusto y gran versatilidad para tu cocina.',
       cooking: 'El Wagyu se cocina rápido y a fuego alto. Llévalo a temperatura ambiente, sálalo justo antes de sellar y mantén las porciones pequeñas — la grasa hace el trabajo. Deja reposar y córtalo fino en contra de la fibra.',
       reviews: '★★★★★ «Marmoleo de restaurante en casa.» — Comprador verificado',
+      marbling: {
+        title: 'Marmoleo', choose: 'Elige el grado de marmoleo', of: 'de',
+        systems: {
+          bms:   { name: 'Escala japonesa BMS', unit: 'BMS', lo: 'Menos', hi: 'Más' },
+          aus:   { name: 'Marble Score (Australia)', unit: 'MB', lo: 'Menos', hi: 'Más' },
+          angus: { name: 'Marble Score Angus', unit: 'MS', lo: 'Menos', hi: 'Más' },
+        },
+      },
     },
     cart: {
       title: 'Tu Cotización', empty: 'Tu cotización está vacía.', reorderPrev: 'Reordenar pedido anterior',
@@ -144,6 +152,14 @@ export const STRINGS = {
       originUS: 'Select American beef — Black Angus and American wagyu, raised to high standards. Robust flavor and great versatility for your kitchen.',
       cooking: 'Wagyu cooks fast and hot. Bring it to room temperature, salt just before searing and keep portions small — the fat does the work. Let it rest and slice thin against the grain.',
       reviews: '★★★★★ "Restaurant-grade marbling at home." — Verified buyer',
+      marbling: {
+        title: 'Marbling', choose: 'Choose the marbling grade', of: 'of',
+        systems: {
+          bms:   { name: 'Japanese BMS scale', unit: 'BMS', lo: 'Less', hi: 'More' },
+          aus:   { name: 'Marble Score (Australia)', unit: 'MB', lo: 'Less', hi: 'More' },
+          angus: { name: 'Angus Marble Score', unit: 'MS', lo: 'Less', hi: 'More' },
+        },
+      },
     },
     cart: {
       title: 'Your Quote', empty: 'Your quote is empty.', reorderPrev: 'Reorder previous order',

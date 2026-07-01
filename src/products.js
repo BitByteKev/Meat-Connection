@@ -16,7 +16,11 @@ for (const path in imageModules) {
   imageByFile[file] = imageModules[path]
 }
 
-export const PRODUCTS = catalog.map(({ id, cat, tone, images }) => ({ id, cat, tone, images }))
+export const PRODUCTS = catalog.map(({ id, cat, tone, images, marbling }) => ({ id, cat, tone, images, marbling: marbling || null }))
+
+// Marbling scale/variants by id (null when the cut has no grade). Consumed by the
+// storefront to render the marbling scale + per-grade photo switcher.
+export const MC_MARBLING = Object.fromEntries(catalog.map((p) => [p.id, p.marbling || null]))
 
 // All photos for a product, resolved to bundled URLs (carousel source).
 export const MC_IMAGES = Object.fromEntries(

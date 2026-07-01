@@ -63,7 +63,7 @@ function LangToggle({ style, className }) {
   const { lang, setLang } = useLang();
   const opts = [['es', 'ES'], ['en', 'EN']];
   return (
-    <div role="group" aria-label="Language" className={className} style={{ display: 'inline-flex', border: '1px solid color-mix(in srgb, currentColor 32%, transparent)', borderRadius: 'var(--radius-md)', overflow: 'hidden', flex: 'none', ...style }}>
+    <div role="group" aria-label="Language" className={className} style={{ display: 'inline-flex', border: '1px solid var(--mc-ink-700)', borderRadius: 'var(--radius-md)', overflow: 'hidden', flex: 'none', ...style }}>
       {opts.map(([code, label]) => {
         const on = lang === code;
         return (
@@ -71,7 +71,7 @@ function LangToggle({ style, className }) {
             aria-label={code === 'es' ? 'Cambiar a español' : 'Switch to English'}
             style={{ border: 'none', cursor: 'pointer', padding: '0 10px', height: '40px', minWidth: '40px',
               fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '13px', letterSpacing: '0.06em',
-              background: on ? 'var(--mc-red)' : 'transparent', color: on ? '#fff' : 'currentColor', transition: 'background var(--dur-fast), color var(--dur-fast)' }}>
+              background: on ? 'var(--mc-red)' : 'transparent', color: on ? '#fff' : 'var(--mc-ink-200)', transition: 'background var(--dur-fast), color var(--dur-fast)' }}>
             {label}
           </button>
         );
@@ -129,25 +129,20 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder, overHero = fals
   }, [menuOpen]);
   const goMobile = (l) => { setMenuOpen(false); l.go(); };
   return (
-    <header style={{ color: 'var(--text-strong)', position: 'sticky', top: 0, zIndex: 30 }}>
-      {/* Frosted bar lives on its own element (NOT the <header>): backdrop-filter
-          on an ancestor would make it the containing block for the fixed menu below,
-          collapsing the menu's height:100% at the top of the page. */}
-      <div style={{
-        background: transparent ? 'rgba(247,245,240,0.82)' : 'var(--mc-paper)',
-        backdropFilter: transparent ? 'saturate(1.3) blur(10px)' : 'none',
-        WebkitBackdropFilter: transparent ? 'saturate(1.3) blur(10px)' : 'none',
-        borderBottom: '1px solid var(--border-subtle)',
-        transition: 'background var(--dur-med) var(--ease-out), border-color var(--dur-med) var(--ease-out)'
-      }}>
-      <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 20px', height: '68px', display: 'flex', alignItems: 'center', gap: '24px', boxShadow: 'inset 0 -1px 0 var(--hairline-gold)' }}>
-        <img src={window.MC_LOGO_INK} alt="Meat Connection" style={{ height: '32px', cursor: 'pointer' }} onClick={() => onNav('home')} />
+    <header style={{
+      color: 'var(--mc-paper)', position: 'sticky', top: 0, zIndex: 30,
+      background: transparent ? 'linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.18) 100%)' : 'var(--mc-charcoal)',
+      borderBottom: transparent ? '1px solid transparent' : '1px solid var(--mc-ink-700)',
+      transition: 'background var(--dur-med) var(--ease-out), border-color var(--dur-med) var(--ease-out)'
+    }}>
+      <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 20px', height: '68px', display: 'flex', alignItems: 'center', gap: '24px', boxShadow: transparent ? 'none' : 'inset 0 -1px 0 var(--accent-gold)' }}>
+        <img src={window.MC_LOGO} alt="Meat Connection" style={{ height: '32px', cursor: 'pointer' }} onClick={() => onNav('home')} />
         <nav className="mc-nav" style={{ display: 'flex', gap: '4px', flex: 1 }}>
           {links.map((l) => (
             <button key={l.label} onClick={l.go}
-              style={{ border: 'none', background: 'transparent', color: 'var(--text-body)', cursor: 'pointer',
-                fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600, fontSize: '14px', padding: '8px 12px' }}
-              onMouseOver={(e) => e.currentTarget.style.color = 'var(--accent-gold-ink)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-body)'}>
+              style={{ border: 'none', background: 'transparent', color: 'var(--mc-ink-200)', cursor: 'pointer',
+                fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, fontSize: '14px', padding: '8px 12px' }}
+              onMouseOver={(e) => e.currentTarget.style.color = 'var(--accent-gold)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--mc-ink-200)'}>
               {l.label}
             </button>
           ))}
@@ -157,11 +152,11 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder, overHero = fals
           <button onClick={onReorder} aria-label={t.header.reorderAria} title={t.header.reorderTitle}
             className="mc-reorder-btn"
             style={{ display: 'inline-flex', alignItems: 'center', gap: '7px', height: '40px', padding: '0 13px',
-              border: '1px solid var(--border-default)', background: 'transparent', color: 'var(--text-strong)', cursor: 'pointer',
+              border: '1px solid var(--mc-ink-700)', background: 'transparent', color: 'var(--mc-paper)', cursor: 'pointer',
               borderRadius: 'var(--radius-md)', fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase',
               letterSpacing: '0.06em', fontWeight: 600, fontSize: '13px', whiteSpace: 'nowrap' }}
-            onMouseOver={(e) => { e.currentTarget.style.borderColor = 'var(--mc-red)'; e.currentTarget.style.color = 'var(--mc-red)'; }}
-            onMouseOut={(e) => { e.currentTarget.style.borderColor = 'var(--border-default)'; e.currentTarget.style.color = 'var(--text-strong)'; }}>
+            onMouseOver={(e) => { e.currentTarget.style.borderColor = 'var(--mc-red)'; e.currentTarget.style.color = '#fff'; }}
+            onMouseOut={(e) => { e.currentTarget.style.borderColor = 'var(--mc-ink-700)'; e.currentTarget.style.color = 'var(--mc-paper)'; }}>
             <Icon name="RotateCcw" size={16} color="currentColor" /><span className="mc-reorder-label">{t.header.reorder}</span>
           </button>
           <div style={{ position: 'relative' }}>
@@ -173,40 +168,39 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder, overHero = fals
             )}
           </div>
           <button className="mc-menu-btn" aria-label={t.header.openMenu} aria-expanded={menuOpen} onClick={() => setMenuOpen(true)}
-            style={{ width: '44px', height: '44px', alignItems: 'center', justifyContent: 'center', border: 'none', background: 'transparent', color: 'var(--text-strong)', cursor: 'pointer' }}>
-            <Icon name="Menu" size={24} color="var(--text-strong)" />
+            style={{ width: '44px', height: '44px', alignItems: 'center', justifyContent: 'center', border: 'none', background: 'transparent', color: 'var(--mc-paper)', cursor: 'pointer' }}>
+            <Icon name="Menu" size={24} color="var(--mc-paper)" />
           </button>
         </div>
-      </div>
       </div>
 
       {/* Mobile slide-in menu */}
       <div onClick={() => setMenuOpen(false)} aria-hidden="true"
         style={{ position: 'fixed', inset: 0, background: 'rgba(20,20,20,0.6)', opacity: menuOpen ? 1 : 0, pointerEvents: menuOpen ? 'auto' : 'none', transition: 'opacity var(--dur-med)', zIndex: 60 }}></div>
       <aside role="dialog" aria-label={t.header.navAria} aria-modal="true"
-        style={{ position: 'fixed', top: 0, right: 0, height: '100%', width: '84vw', maxWidth: '360px', background: 'var(--mc-paper)', color: 'var(--text-strong)', boxShadow: 'var(--shadow-lg)', transform: menuOpen ? 'translateX(0)' : 'translateX(100%)', transition: 'transform var(--dur-slow) var(--ease-out)', zIndex: 61, display: 'flex', flexDirection: 'column', padding: '18px 22px calc(22px + env(safe-area-inset-bottom))' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid var(--border-subtle)', paddingBottom: '16px' }}>
-          <img src={window.MC_LOGO_INK} alt="Meat Connection" style={{ height: '30px' }} />
+        style={{ position: 'fixed', top: 0, right: 0, height: '100%', width: '84vw', maxWidth: '360px', background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', boxShadow: 'var(--shadow-lg)', transform: menuOpen ? 'translateX(0)' : 'translateX(100%)', transition: 'transform var(--dur-slow) var(--ease-out)', zIndex: 61, display: 'flex', flexDirection: 'column', padding: '18px 22px calc(22px + env(safe-area-inset-bottom))' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid var(--mc-ink-700)', paddingBottom: '16px' }}>
+          <img src={window.MC_LOGO} alt="Meat Connection" style={{ height: '30px' }} />
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <LangToggle />
             <button onClick={() => setMenuOpen(false)} aria-label={t.header.closeMenu}
-              style={{ width: '44px', height: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: 'none', background: 'transparent', color: 'var(--text-body)', cursor: 'pointer' }}>
-              <Icon name="X" size={24} color="var(--text-body)" />
+              style={{ width: '44px', height: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: 'none', background: 'transparent', color: 'var(--mc-ink-200)', cursor: 'pointer' }}>
+              <Icon name="X" size={24} color="var(--mc-ink-200)" />
             </button>
           </div>
         </div>
         <nav style={{ display: 'flex', flexDirection: 'column', marginTop: '8px', flex: 1 }}>
           {links.map((l) => (
             <button key={l.label} onClick={() => goMobile(l)}
-              style={{ border: 'none', borderBottom: '1px solid var(--border-subtle)', background: 'transparent', color: 'var(--text-strong)', cursor: 'pointer', textAlign: 'left',
+              style={{ border: 'none', borderBottom: '1px solid var(--mc-ink-800)', background: 'transparent', color: 'var(--mc-paper)', cursor: 'pointer', textAlign: 'left',
                 fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '20px', padding: '18px 4px' }}>
               {l.label}
             </button>
           ))}
         </nav>
         <Button variant="secondary" size="lg" fullWidth onClick={() => { setMenuOpen(false); onReorder(); }}
-          iconLeft={<Icon name="RotateCcw" size={18} color="var(--text-strong)" />}
-          style={{ color: 'var(--text-strong)', borderColor: 'var(--border-default)', marginBottom: '10px' }}>{t.header.reorderOrder}</Button>
+          iconLeft={<Icon name="RotateCcw" size={18} color="var(--mc-paper)" />}
+          style={{ color: 'var(--mc-paper)', borderColor: 'var(--mc-ink-600)', marginBottom: '10px' }}>{t.header.reorderOrder}</Button>
         <Button variant="primary" size="lg" fullWidth onClick={() => { setMenuOpen(false); openWhatsApp(getStrings().wa.quote); }}
           iconLeft={<Icon name="MessageCircle" size={18} color="#fff" />}>{t.header.quoteWhatsApp}</Button>
       </aside>
@@ -279,6 +273,7 @@ function ProductCard({ product, onOpen }) {
           <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.14em', fontSize: '11px', color: 'var(--accent-gold-ink)', marginBottom: '6px' }}>{t.categories[product.cat] || ''}</div>
           <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '20px', lineHeight: 1.05, color: 'var(--text-strong)' }}>{p.name}</div>
           <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '4px' }}>{cardHook(p.description)}</div>
+          {product.marbling && <div style={{ marginTop: '10px' }}><MarblingPill marbling={product.marbling} /></div>}
         </div>
         <div style={{ marginTop: 'auto' }}>
           <Button variant="secondary" size="sm" fullWidth onClick={(e) => { e.stopPropagation(); onOpen(product); }} iconRight={<Icon name="ArrowRight" size={15} color="currentColor" />}>{t.card.readMore}</Button>
@@ -343,10 +338,17 @@ function Lightbox({ src, alt, onClose }) {
 }
 /* Swipeable product gallery: one image at a time with arrows, dots, touch-swipe,
    and click-to-zoom. A single image renders as a plain photo (no chrome). */
-function Carousel({ product, name, height = 560 }) {
+function Carousel({ product, name, height = 560, index, onIndex }) {
   const list = (window.MC_IMAGES && window.MC_IMAGES[product.id]) || [];
   const imgs = list.length ? list : (window.MC_IMG[product.id] ? [window.MC_IMG[product.id]] : []);
-  const [idx, setIdx] = React.useState(0);
+  const controlled = typeof index === 'number';
+  const [internal, setInternal] = React.useState(0);
+  const idx = controlled ? index : internal;
+  const setIdx = (updater) => {
+    const next = typeof updater === 'function' ? updater(idx) : updater;
+    if (!controlled) setInternal(next);
+    if (onIndex) onIndex(next);
+  };
   const [zoom, setZoom] = React.useState(false);
   const touchX = React.useRef(null);
   const n = imgs.length;
@@ -384,10 +386,77 @@ function Carousel({ product, name, height = 560 }) {
     </div>
   );
 }
+/* ===== Marbling scale (grade selector + visual scale + per-grade photo) ===== */
+function marblingMax(system) { return system === 'bms' ? 12 : system === 'angus' ? 9 : 10; }
+function hiText(system, hi) { const m = marblingMax(system); return system === 'bms' ? String(hi) : (hi >= m ? '9+' : String(hi)); }
+
+function MarblingPill({ marbling }) {
+  const { t } = useLang();
+  const s = t.pdp.marbling.systems[marbling.system] || t.pdp.marbling.systems.aus;
+  const lo = Math.min(...marbling.variants.map((v) => v.lo));
+  const hi = Math.max(...marbling.variants.map((v) => v.hi));
+  const range = lo === hi ? String(lo) : `${lo}\u2013${hiText(marbling.system, hi)}`;
+  return (
+    <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', alignSelf: 'flex-start',
+      fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '11px', letterSpacing: '0.04em',
+      color: 'var(--mc-red)', border: '1.5px solid var(--mc-red)', borderRadius: '999px', padding: '3px 9px' }}>
+      {s.unit} {range}
+    </span>
+  );
+}
+
+function MarblingScale({ marbling, vIdx, onSelect }) {
+  const { t } = useLang();
+  const cfg = t.pdp.marbling;
+  const s = cfg.systems[marbling.system] || cfg.systems.aus;
+  const max = marblingMax(marbling.system);
+  const v = marbling.variants[vIdx];
+  const pct = (n) => Math.max(0, Math.min(100, (n / max) * 100));
+  const left = pct(v.lo), width = Math.max(7, pct(v.hi) - pct(v.lo));
+  const eyebrow = { fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)' };
+  return (
+    <div style={{ margin: '2px 0 26px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '10px' }}>
+        <span style={eyebrow}>{cfg.title}</span>
+        <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '20px', color: 'var(--text-strong)' }}>{s.unit} {v.label}</span>
+      </div>
+      <div style={{ position: 'relative', height: '12px', borderRadius: '999px', background: 'linear-gradient(90deg,#f5ede7 0%,#e7b49f 55%,#b8371f 100%)' }}>
+        <div style={{ position: 'absolute', top: '-3px', bottom: '-3px', left: left + '%', width: width + '%',
+          border: '2.5px solid var(--mc-charcoal)', borderRadius: '999px', boxShadow: '0 0 0 2px #fff', transition: 'left var(--dur-fast), width var(--dur-fast)' }} />
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '7px', fontSize: '11px', color: 'var(--text-muted)' }}>
+        <span>{s.lo}</span><span>{s.name}</span><span>{s.hi} (9+)</span>
+      </div>
+      {marbling.variants.length > 1 && (
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '16px' }}>
+          <span style={{ ...eyebrow, width: '100%', marginBottom: '2px' }}>{cfg.choose}</span>
+          {marbling.variants.map((vt, i) => {
+            const on = i === vIdx;
+            return (
+              <button key={i} onClick={() => onSelect(i)} aria-pressed={on}
+                style={{ cursor: 'pointer', padding: '8px 15px', borderRadius: '999px', fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '13px', letterSpacing: '0.03em',
+                  border: '2px solid ' + (on ? 'var(--mc-red)' : 'var(--border-default)'), background: on ? 'var(--mc-red)' : 'transparent', color: on ? '#fff' : 'var(--text-strong)', transition: 'background var(--dur-fast), border-color var(--dur-fast)' }}>
+                {s.unit} {vt.label}
+              </button>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function ProductDetail({ product, onAdd, onBack }) {
   const { Button, Badge, Tabs } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
   const p = t.products[product.id];
+  const marbling = (window.MC_MARBLING && window.MC_MARBLING[product.id]) || null;
+  const [vIdx, setVIdx] = React.useState(0);
+  React.useEffect(() => { setVIdx(0); }, [product.id]);
+  const imgs = product.images || [];
+  const variants = (marbling && marbling.variants) || [];
+  const carouselIndex = variants.length ? Math.max(0, imgs.indexOf(variants[vIdx].image)) : undefined;
+  const onCarousel = variants.length ? (ci) => { const f = variants.findIndex((v) => imgs.indexOf(v.image) === ci); if (f >= 0) setVIdx(f); } : undefined;
   const [tab, setTab] = React.useState('desc');
   const [saleType, setSaleType] = React.useState('mayoreo');
   const [qty, setQty] = React.useState(5);
@@ -400,13 +469,14 @@ function ProductDetail({ product, onAdd, onBack }) {
         <Icon name="ArrowLeft" size={16} color="var(--text-muted)" /> {t.pdp.back}
       </button>
       <div className="mc-pdp" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', alignItems: 'start' }}>
-        <Carousel product={product} name={p.name} height={560} />
+        <Carousel product={product} name={p.name} height={560} index={carouselIndex} onIndex={onCarousel} />
         <div>
           <div style={{ display: 'flex', gap: '8px', marginBottom: '14px' }}>
             {p.badge && <Badge tone="red" solid>{p.badge}</Badge>}
             <Badge tone="success">{t.pdp.available}</Badge>
           </div>
           <h1 className="mc-page-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '48px', lineHeight: 0.98, margin: '0 0 16px', color: 'var(--text-strong)' }}>{p.name}</h1>
+          {marbling && <MarblingScale marbling={marbling} vIdx={vIdx} onSelect={setVIdx} />}
           <div className="mc-pdp-actions" style={{ margin: '24px 0', display: 'flex', flexWrap: 'wrap', gap: '20px', alignItems: 'flex-end' }}>
             <div>
               <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{t.pdp.saleType}</div>
@@ -519,21 +589,21 @@ function Footer({ onCategory, onAnchor }) {
     [t.footer.servicesTitle, t.footer.servicesItems.map((label) => [label, null, null, () => onAnchor('servicios')])],
     [t.footer.contactTitle, [['WhatsApp', waHref(t.wa.quote), 'MessageCircle'], ['Instagram', IG_LINK, 'Instagram'], ['Facebook', FB_LINK, 'Facebook'], [t.footer.quoteCatalogs, '#contacto']]],
   ];
-  const linkStyle = { display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--mc-ink-600)', textDecoration: 'none', fontSize: '13px' };
+  const linkStyle = { display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--mc-ink-300)', textDecoration: 'none', fontSize: '13px' };
   return (
-    <footer style={{ background: 'var(--mc-cream)', color: 'var(--text-body)', borderTop: '1px solid var(--border-default)' }}>
+    <footer style={{ background: 'var(--mc-charcoal)', color: 'var(--mc-ink-200)' }}>
       <div className="mc-foot" style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '56px 24px 32px', display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr', gap: '40px' }}>
         <div>
-          <img src={window.MC_LOGO_INK} alt="Meat Connection" style={{ height: '32px', marginBottom: '16px' }} />
-          <p style={{ fontSize: '13px', lineHeight: 1.6, color: 'var(--mc-ink-500)', maxWidth: '240px' }}>{t.footer.tagline}</p>
+          <img src={window.MC_LOGO} alt="Meat Connection" style={{ height: '32px', marginBottom: '16px' }} />
+          <p style={{ fontSize: '13px', lineHeight: 1.6, color: 'var(--mc-ink-400)', maxWidth: '240px' }}>{t.footer.tagline}</p>
         </div>
         {cols.map(([h, links]) => (
           <div key={h}>
-            <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600, fontSize: '13px', color: 'var(--text-strong)', marginBottom: '14px' }}>{h}</div>
+            <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600, fontSize: '13px', color: '#fff', marginBottom: '14px' }}>{h}</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '9px' }}>
               {links.map(([label, href, icon, onClick]) => {
-                const hover = (e) => e.currentTarget.style.color = 'var(--accent-gold-ink)';
-                const out = (e) => e.currentTarget.style.color = 'var(--mc-ink-600)';
+                const hover = (e) => e.currentTarget.style.color = 'var(--accent-gold)';
+                const out = (e) => e.currentTarget.style.color = 'var(--mc-ink-300)';
                 return onClick
                   ? <button key={label} type="button" onClick={onClick} onMouseOver={hover} onMouseOut={out} style={{ ...linkStyle, border: 'none', background: 'none', padding: 0, cursor: 'pointer', font: 'inherit', textAlign: 'left' }}>{icon && <Icon name={icon} size={16} color="currentColor" strokeWidth={1.75} />}{label}</button>
                   : <a key={label} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener" aria-label={label} onMouseOver={hover} onMouseOut={out} style={linkStyle}>{icon && <Icon name={icon} size={16} color="currentColor" strokeWidth={1.75} />}{label}</a>;
@@ -542,7 +612,7 @@ function Footer({ onCategory, onAnchor }) {
           </div>
         ))}
       </div>
-      <div className="mc-foot-legal" style={{ borderTop: '1px solid var(--border-subtle)', padding: '18px 24px', maxWidth: 'var(--container-max)', margin: '0 auto', display: 'flex', justifyContent: 'space-between', gap: '10px', fontSize: '12px', color: 'var(--mc-ink-500)' }}>
+      <div className="mc-foot-legal" style={{ borderTop: '1px solid var(--mc-ink-700)', padding: '18px 24px', maxWidth: 'var(--container-max)', margin: '0 auto', display: 'flex', justifyContent: 'space-between', gap: '10px', fontSize: '12px', color: 'var(--mc-ink-500)' }}>
         <span>© 2026 Meat Connection · {WA_DISPLAY}</span>
       </div>
     </footer>
