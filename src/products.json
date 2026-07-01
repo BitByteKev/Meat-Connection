@@ -249,6 +249,45 @@
     }
   },
   {
+    "id": "newyork-au-89",
+    "cat": "au",
+    "tone": "cream",
+    "images": [
+      "wagyu-australiano-newyork-89-1.webp",
+      "wagyu-australiano-newyork-89-2.webp",
+      "wagyu-australiano-newyork-89-3.webp",
+      "wagyu-australiano-newyork-89-4.webp",
+      "wagyu-australiano-newyork-89-5.webp"
+    ],
+    "badge": {
+      "es": "MB 8-9",
+      "en": "MB 8-9"
+    },
+    "es": {
+      "name": "Wagyu Australiano New York 8-9",
+      "description": "New York (entrecot / striploin) de wagyu australiano con Marble Score MB 8-9 — marmoleo abundante y parejo que se funde al cocinar. Mordida firme y sabor profundo a res, el clásico de steakhouse.\n\nCaracterísticas del corte\n\n• Corte New York de la parte alta del lomo, con superficie amplia para un sellado perfecto.\n• Marble Score MB 8-9: vetas finas y densas de grasa intramuscular.\n• Grosor uniforme para tiempos de cocción constantes.\n\nIdeal para parrilla, plancha o sartén de hierro fundido.",
+      "origin": "Origen australiano\n\nWagyu australiano de alto marmoleo, terminado con grano y criado bajo estrictos estándares de bienestar y trazabilidad. Su Marble Score 8-9 garantiza jugosidad y sabor excepcionales.",
+      "cooking": "Recomendaciones de cocción\n\nParrilla o plancha caliente\n• Sella 1–2 minutos por lado a fuego alto para lograr corteza dorada.\n• Baja a fuego medio y cocina 2–3 minutos más para término medio.\n\nSartén de hierro fundido\n• Calienta hasta que humee ligeramente y sazona con sal gruesa al poner la pieza.\n• Cocina 2 minutos por lado y reposa 3 minutos cubierto con aluminio.\n\nReposo\n3–5 minutos antes de cortar para máxima jugosidad."
+    },
+    "en": {
+      "name": "Australian Wagyu New York 8-9",
+      "description": "Australian wagyu New York (striploin) with Marble Score MB 8-9 — abundant, even marbling that melts as it cooks. Firm bite and deep beef flavor, the steakhouse classic.\n\nCut characteristics\n\n• New York cut from the upper loin, with a broad surface for a perfect sear.\n• Marble Score MB 8-9: fine, dense threads of intramuscular fat.\n• Uniform thickness for consistent cooking.\n\nGreat on the grill, griddle or cast-iron skillet.",
+      "origin": "Australian origin\n\nHigh-marbling Australian wagyu, grain-finished and raised to strict welfare and traceability standards. Its 8-9 Marble Score delivers exceptional juiciness and flavor.",
+      "cooking": "Cooking recommendations\n\nGrill or hot griddle\n• Sear 1–2 minutes per side over high heat for a golden crust.\n• Lower to medium heat and cook 2–3 minutes more for medium.\n\nCast-iron skillet\n• Heat until lightly smoking, season with coarse salt as you lay the steak down.\n• Cook 2 minutes per side and rest 3 minutes tented with foil.\n\nRest\n3–5 minutes before slicing for maximum juiciness."
+    },
+    "marbling": {
+      "system": "aus",
+      "variants": [
+        {
+          "label": "8-9",
+          "lo": 8,
+          "hi": 9,
+          "image": "wagyu-australiano-newyork-89-1.webp"
+        }
+      ]
+    }
+  },
+  {
     "id": "tbone",
     "cat": "au",
     "tone": "kraft",
