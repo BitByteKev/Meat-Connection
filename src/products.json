@@ -543,7 +543,7 @@
     "cat": "jp",
     "tone": "charcoal",
     "images": [
-      "paleta.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "A5 · Japón",
@@ -556,7 +556,7 @@
           "label": "10-12",
           "lo": 10,
           "hi": 12,
-          "image": "paleta.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "DIEZA5"
         }
       ]
@@ -579,7 +579,7 @@
     "cat": "jp",
     "tone": "kraft",
     "images": [
-      "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "A5 · Japón",
@@ -592,7 +592,7 @@
           "label": "11-12",
           "lo": 11,
           "hi": 12,
-          "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "FLAT"
         }
       ]
@@ -615,7 +615,7 @@
     "cat": "jp",
     "tone": "cream",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "A5 · Japón",
@@ -628,7 +628,7 @@
           "label": "10-12",
           "lo": 10,
           "hi": 12,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "FINGER"
         }
       ]
@@ -651,7 +651,7 @@
     "cat": "jp",
     "tone": "red",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "A5 · Japón",
@@ -664,7 +664,7 @@
           "label": "10-12",
           "lo": 10,
           "hi": 12,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "SHORTP"
         }
       ]
@@ -687,7 +687,7 @@
     "cat": "jp",
     "tone": "charcoal",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "A5 · Japón",
@@ -700,7 +700,7 @@
           "label": "10-12",
           "lo": 10,
           "hi": 12,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "SHORTA5"
         }
       ]
@@ -723,7 +723,7 @@
     "cat": "jp",
     "tone": "kraft",
     "images": [
-      "TOP-ROUND-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "A5 · Japón",
@@ -736,7 +736,7 @@
           "label": "10-12",
           "lo": 10,
           "hi": 12,
-          "image": "TOP-ROUND-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "SIRLOIN"
         }
       ]
@@ -759,7 +759,7 @@
     "cat": "jp",
     "tone": "cream",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "A5 · Japón",
@@ -772,7 +772,7 @@
           "label": "10-12",
           "lo": 10,
           "hi": 12,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "FLAP"
         }
       ]
@@ -795,7 +795,7 @@
     "cat": "jp",
     "tone": "red",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "A5 · Japón",
@@ -808,7 +808,7 @@
           "label": "11-12",
           "lo": 11,
           "hi": 12,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "CHUCK"
         }
       ]
@@ -831,7 +831,7 @@
     "cat": "jp",
     "tone": "charcoal",
     "images": [
-      "FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Kobe · Japón",
@@ -844,7 +844,7 @@
           "label": "10-12",
           "lo": 10,
           "hi": 12,
-          "image": "FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "TENDK"
         }
       ]
@@ -867,7 +867,7 @@
     "cat": "mackas",
     "tone": "kraft",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Black Angus",
@@ -892,7 +892,7 @@
     "cat": "mackas",
     "tone": "cream",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Black Angus",
@@ -905,7 +905,7 @@
           "label": "4+",
           "lo": 4,
           "hi": 9,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "390291"
         }
       ]
@@ -928,7 +928,7 @@
     "cat": "mackas",
     "tone": "red",
     "images": [
-      "paleta.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Black Angus",
@@ -941,7 +941,7 @@
           "label": "4+",
           "lo": 4,
           "hi": 9,
-          "image": "paleta.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "391648"
         }
       ]
@@ -964,7 +964,7 @@
     "cat": "mackas",
     "tone": "charcoal",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Black Angus",
@@ -989,7 +989,7 @@
     "cat": "mackas",
     "tone": "kraft",
     "images": [
-      "LENGUA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Black Angus",
@@ -1014,7 +1014,7 @@
     "cat": "mackas",
     "tone": "cream",
     "images": [
-      "PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Black Angus",
@@ -1027,14 +1027,14 @@
           "label": "4+",
           "lo": 4,
           "hi": 9,
-          "image": "PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "390288"
         },
         {
           "label": "6+",
           "lo": 6,
           "hi": 9,
-          "image": "PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "390295"
         }
       ]
@@ -1057,7 +1057,7 @@
     "cat": "mackas",
     "tone": "red",
     "images": [
-      "RIB-EYE-B.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Black Angus",
@@ -1070,14 +1070,14 @@
           "label": "4+",
           "lo": 4,
           "hi": 9,
-          "image": "RIB-EYE-B.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "390290"
         },
         {
           "label": "6+",
           "lo": 6,
           "hi": 9,
-          "image": "RIB-EYE-B.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "390293"
         }
       ]
@@ -1100,7 +1100,7 @@
     "cat": "mackas",
     "tone": "charcoal",
     "images": [
-      "T-BONE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Black Angus",
@@ -1113,7 +1113,7 @@
           "label": "2+",
           "lo": 2,
           "hi": 9,
-          "image": "T-BONE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "391644"
         }
       ]
@@ -1136,7 +1136,7 @@
     "cat": "au",
     "tone": "kraft",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Australia · L Grow",
@@ -1161,7 +1161,7 @@
     "cat": "au",
     "tone": "cream",
     "images": [
-      "FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Australia · L Grow",
@@ -1174,7 +1174,7 @@
           "label": "8-9",
           "lo": 8,
           "hi": 9,
-          "image": "FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "LF8-9"
         }
       ]
@@ -1197,7 +1197,7 @@
     "cat": "au",
     "tone": "red",
     "images": [
-      "FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "L Grow · Fullblood",
@@ -1210,7 +1210,7 @@
           "label": "9+",
           "lo": 9,
           "hi": 10,
-          "image": "FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "LF9+"
         }
       ]
@@ -1233,7 +1233,7 @@
     "cat": "au",
     "tone": "charcoal",
     "images": [
-      "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Australia · L Grow",
@@ -1246,7 +1246,7 @@
           "label": "8-9",
           "lo": 8,
           "hi": 9,
-          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "LN8-9"
         }
       ]
@@ -1269,7 +1269,7 @@
     "cat": "au",
     "tone": "kraft",
     "images": [
-      "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "L Grow · Fullblood",
@@ -1282,7 +1282,7 @@
           "label": "9+",
           "lo": 9,
           "hi": 10,
-          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "LN9+"
         }
       ]
@@ -1305,7 +1305,7 @@
     "cat": "au",
     "tone": "cream",
     "images": [
-      "PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Australia · L Grow",
@@ -1318,7 +1318,7 @@
           "label": "8-9",
           "lo": 8,
           "hi": 9,
-          "image": "PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "LP8-9"
         }
       ]
@@ -1341,8 +1341,7 @@
     "cat": "au",
     "tone": "red",
     "images": [
-      "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
-      "RIB-EYE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-3.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Australia · L Grow",
@@ -1355,14 +1354,14 @@
           "label": "6-7",
           "lo": 6,
           "hi": 7,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "343697"
         },
         {
           "label": "8-9",
           "lo": 8,
           "hi": 9,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-3.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "LR8-9"
         }
       ]
@@ -1385,7 +1384,7 @@
     "cat": "au",
     "tone": "charcoal",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Australia · L Grow",
@@ -1398,7 +1397,7 @@
           "label": "8-9",
           "lo": 8,
           "hi": 9,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "343682"
         }
       ]
@@ -1421,7 +1420,7 @@
     "cat": "kingriver",
     "tone": "kraft",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "King River · Australia",
@@ -1434,7 +1433,7 @@
           "label": "0-3",
           "lo": 0,
           "hi": 3,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448826"
         }
       ]
@@ -1457,7 +1456,7 @@
     "cat": "kingriver",
     "tone": "cream",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "King River · Australia",
@@ -1470,7 +1469,7 @@
           "label": "9+",
           "lo": 9,
           "hi": 10,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448740"
         }
       ]
@@ -1493,7 +1492,7 @@
     "cat": "kingriver",
     "tone": "red",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "King River · Australia",
@@ -1506,7 +1505,7 @@
           "label": "6-7",
           "lo": 6,
           "hi": 7,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448843"
         }
       ]
@@ -1529,7 +1528,7 @@
     "cat": "kingriver",
     "tone": "charcoal",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "King River · Australia",
@@ -1542,14 +1541,14 @@
           "label": "0-3",
           "lo": 0,
           "hi": 3,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448825"
         },
         {
           "label": "4-5",
           "lo": 4,
           "hi": 5,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448839"
         }
       ]
@@ -1572,7 +1571,7 @@
     "cat": "kingriver",
     "tone": "kraft",
     "images": [
-      "paleta.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "King River · Australia",
@@ -1585,21 +1584,21 @@
           "label": "0-3",
           "lo": 0,
           "hi": 3,
-          "image": "paleta.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448772"
         },
         {
           "label": "4-5",
           "lo": 4,
           "hi": 5,
-          "image": "paleta.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448731"
         },
         {
           "label": "6-7",
           "lo": 6,
           "hi": 7,
-          "image": "paleta.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448732"
         }
       ]
@@ -1622,7 +1621,7 @@
     "cat": "kingriver",
     "tone": "cream",
     "images": [
-      "FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "King River · Australia",
@@ -1635,7 +1634,7 @@
           "label": "0-3",
           "lo": 0,
           "hi": 3,
-          "image": "FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448729"
         }
       ]
@@ -1658,7 +1657,7 @@
     "cat": "kingriver",
     "tone": "red",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "King River · Australia",
@@ -1671,7 +1670,7 @@
           "label": "4-5",
           "lo": 4,
           "hi": 5,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448841"
         }
       ]
@@ -1694,7 +1693,7 @@
     "cat": "kingriver",
     "tone": "charcoal",
     "images": [
-      "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "King River · Australia",
@@ -1707,21 +1706,21 @@
           "label": "2-3",
           "lo": 2,
           "hi": 3,
-          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448721"
         },
         {
           "label": "4-5",
           "lo": 4,
           "hi": 5,
-          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448701"
         },
         {
           "label": "9+",
           "lo": 9,
           "hi": 10,
-          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "416171"
         }
       ]
@@ -1744,7 +1743,7 @@
     "cat": "kingriver",
     "tone": "kraft",
     "images": [
-      "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "King River · Australia",
@@ -1757,7 +1756,7 @@
           "label": "4-5",
           "lo": 4,
           "hi": 5,
-          "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448824"
         }
       ]
@@ -1780,7 +1779,7 @@
     "cat": "kingriver",
     "tone": "cream",
     "images": [
-      "PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "King River · Australia",
@@ -1793,14 +1792,14 @@
           "label": "0-3",
           "lo": 0,
           "hi": 3,
-          "image": "PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448827"
         },
         {
           "label": "9+",
           "lo": 9,
           "hi": 10,
-          "image": "PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448719"
         }
       ]
@@ -1823,7 +1822,7 @@
     "cat": "kingriver",
     "tone": "red",
     "images": [
-      "T-BONE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "King River · Australia",
@@ -1836,14 +1835,14 @@
           "label": "0-3",
           "lo": 0,
           "hi": 3,
-          "image": "T-BONE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448783"
         },
         {
           "label": "6-7",
           "lo": 6,
           "hi": 7,
-          "image": "T-BONE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448842"
         }
       ]
@@ -1866,7 +1865,7 @@
     "cat": "kingriver",
     "tone": "charcoal",
     "images": [
-      "TOP-ROUND-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "King River · Australia",
@@ -1879,21 +1878,21 @@
           "label": "2-3",
           "lo": 2,
           "hi": 3,
-          "image": "TOP-ROUND-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448699"
         },
         {
           "label": "4-5",
           "lo": 4,
           "hi": 5,
-          "image": "TOP-ROUND-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448700"
         },
         {
           "label": "6-7",
           "lo": 6,
           "hi": 7,
-          "image": "TOP-ROUND-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448703"
         }
       ]
@@ -1916,7 +1915,7 @@
     "cat": "kingriver",
     "tone": "kraft",
     "images": [
-      "topround.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "King River · Australia",
@@ -1929,14 +1928,14 @@
           "label": "4-5",
           "lo": 4,
           "hi": 5,
-          "image": "topround.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448714"
         },
         {
           "label": "6-7",
           "lo": 6,
           "hi": 7,
-          "image": "topround.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448716"
         }
       ]
@@ -1959,7 +1958,7 @@
     "cat": "kingriver",
     "tone": "cream",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "King River · Australia",
@@ -1972,7 +1971,7 @@
           "label": "0-3",
           "lo": 0,
           "hi": 3,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448840"
         }
       ]
@@ -1995,7 +1994,7 @@
     "cat": "kingriver",
     "tone": "red",
     "images": [
-      "T-BONE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "King River · Australia",
@@ -2008,7 +2007,7 @@
           "label": "0-3",
           "lo": 0,
           "hi": 3,
-          "image": "T-BONE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448741"
         }
       ]
@@ -2031,7 +2030,7 @@
     "cat": "kingriver",
     "tone": "charcoal",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "King River · Australia",
@@ -2044,7 +2043,7 @@
           "label": "9+",
           "lo": 9,
           "hi": 10,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448735"
         }
       ]
@@ -2067,7 +2066,7 @@
     "cat": "kingriver",
     "tone": "kraft",
     "images": [
-      "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "King River · Australia",
@@ -2080,7 +2079,7 @@
           "label": "9+",
           "lo": 9,
           "hi": 10,
-          "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448596"
         }
       ]
@@ -2103,7 +2102,7 @@
     "cat": "kingriver",
     "tone": "cream",
     "images": [
-      "paleta.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Jewel · Fullblood",
@@ -2116,7 +2115,7 @@
           "label": "9+",
           "lo": 9,
           "hi": 10,
-          "image": "paleta.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448593"
         }
       ]
@@ -2139,7 +2138,7 @@
     "cat": "kingriver",
     "tone": "red",
     "images": [
-      "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Jewel · Fullblood",
@@ -2152,7 +2151,7 @@
           "label": "9+",
           "lo": 9,
           "hi": 10,
-          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448577"
         }
       ]
@@ -2175,7 +2174,7 @@
     "cat": "kingriver",
     "tone": "charcoal",
     "images": [
-      "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Jewel · Fullblood",
@@ -2188,7 +2187,7 @@
           "label": "9+",
           "lo": 9,
           "hi": 10,
-          "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448594"
         }
       ]
@@ -2211,7 +2210,7 @@
     "cat": "kingriver",
     "tone": "kraft",
     "images": [
-      "RIB-EYE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-3.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Jewel · Fullblood",
@@ -2224,7 +2223,7 @@
           "label": "9+",
           "lo": 9,
           "hi": 10,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-3.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "448574"
         }
       ]
@@ -2247,7 +2246,7 @@
     "cat": "us",
     "tone": "cream",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Cross Americano",
@@ -2260,7 +2259,7 @@
           "label": "8+",
           "lo": 8,
           "hi": 10,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "62195-1"
         }
       ]
@@ -2283,7 +2282,7 @@
     "cat": "us",
     "tone": "red",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Cross Americano",
@@ -2296,14 +2295,14 @@
           "label": "6-7",
           "lo": 6,
           "hi": 7,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "71815-1"
         },
         {
           "label": "8+",
           "lo": 8,
           "hi": 10,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "61815-1"
         }
       ]
@@ -2326,7 +2325,7 @@
     "cat": "us",
     "tone": "charcoal",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Cross Americano",
@@ -2339,7 +2338,7 @@
           "label": "4-5",
           "lo": 4,
           "hi": 5,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "83045-1"
         }
       ]
@@ -2362,7 +2361,7 @@
     "cat": "us",
     "tone": "kraft",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Cross Americano",
@@ -2375,14 +2374,14 @@
           "label": "6-7",
           "lo": 6,
           "hi": 7,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "72395-1"
         },
         {
           "label": "8+",
           "lo": 8,
           "hi": 10,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "62395-1"
         }
       ]
@@ -2405,7 +2404,7 @@
     "cat": "us",
     "tone": "cream",
     "images": [
-      "paleta.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Cross Americano",
@@ -2418,7 +2417,7 @@
           "label": "8+",
           "lo": 8,
           "hi": 10,
-          "image": "paleta.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "61655-1"
         }
       ]
@@ -2441,7 +2440,7 @@
     "cat": "us",
     "tone": "red",
     "images": [
-      "FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Cross Americano",
@@ -2454,7 +2453,7 @@
           "label": "4-5",
           "lo": 4,
           "hi": 5,
-          "image": "FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "88935-1"
         }
       ]
@@ -2477,7 +2476,7 @@
     "cat": "us",
     "tone": "charcoal",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Cross Americano",
@@ -2490,7 +2489,7 @@
           "label": "8+",
           "lo": 8,
           "hi": 10,
-          "image": "corte-destacado.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "62435-3"
         }
       ]
@@ -2513,7 +2512,7 @@
     "cat": "us",
     "tone": "kraft",
     "images": [
-      "newyork.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Cross Americano",
@@ -2526,14 +2525,14 @@
           "label": "6-7",
           "lo": 6,
           "hi": 7,
-          "image": "newyork.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "78035-1-AB"
         },
         {
           "label": "8+",
           "lo": 8,
           "hi": 10,
-          "image": "newyork.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "68035-1"
         }
       ]
@@ -2556,7 +2555,7 @@
     "cat": "us",
     "tone": "cream",
     "images": [
-      "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Cross Americano",
@@ -2569,7 +2568,7 @@
           "label": "8+",
           "lo": 8,
           "hi": 10,
-          "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "61433-1"
         }
       ]
@@ -2592,7 +2591,7 @@
     "cat": "us",
     "tone": "red",
     "images": [
-      "PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Cross Americano",
@@ -2605,7 +2604,7 @@
           "label": "8+",
           "lo": 8,
           "hi": 10,
-          "image": "PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "68465-1"
         }
       ]
@@ -2628,7 +2627,7 @@
     "cat": "us",
     "tone": "charcoal",
     "images": [
-      "RIB-EYE-B.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Cross Americano",
@@ -2641,7 +2640,7 @@
           "label": "4-5",
           "lo": 4,
           "hi": 5,
-          "image": "RIB-EYE-B.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "82955-1"
         }
       ]
@@ -2664,7 +2663,7 @@
     "cat": "us",
     "tone": "kraft",
     "images": [
-      "RIB-EYE-B.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Cross Americano",
@@ -2677,14 +2676,14 @@
           "label": "6-7",
           "lo": 6,
           "hi": 7,
-          "image": "RIB-EYE-B.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "71285-1"
         },
         {
           "label": "8+",
           "lo": 8,
           "hi": 10,
-          "image": "RIB-EYE-B.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "61285-1"
         }
       ]
@@ -2707,7 +2706,7 @@
     "cat": "us",
     "tone": "cream",
     "images": [
-      "RIB-EYE-B.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Cross Americano",
@@ -2720,14 +2719,14 @@
           "label": "6-7",
           "lo": 6,
           "hi": 7,
-          "image": "RIB-EYE-B.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "71235-1"
         },
         {
           "label": "8+",
           "lo": 8,
           "hi": 10,
-          "image": "RIB-EYE-B.webp",
+          "image": "placeholder-coming-soon.webp",
           "sku": "RBABA"
         }
       ]
@@ -2750,7 +2749,7 @@
     "cat": "us",
     "tone": "red",
     "images": [
-      "corte-destacado.webp"
+      "placeholder-coming-soon.webp"
     ],
     "badge": {
       "es": "Cross Americano",
