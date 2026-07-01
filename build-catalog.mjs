@@ -279,6 +279,8 @@ const ITEMS = {
 
 // ---- Build ----------------------------------------------------------------
 const GEN = '__gen'
+// Generated cuts have no real photo yet — use a branded non-meat placeholder.
+const PLACEHOLDER = 'placeholder-coming-soon.webp'
 // strip previously generated entries so the script is idempotent
 const base = catalog.filter((p) => !String(p.id).endsWith(GEN))
 const existingIds = new Set(base.map((p) => p.id))
@@ -296,7 +298,7 @@ for (const cat of Object.keys(ITEMS)) {
       id,
       cat,
       tone,
-      images: [imageFor(cutKey, cat)],
+      images: [PLACEHOLDER],
       badge: { es: BADGE[cat].es, en: BADGE[cat].en },
       es: {
         name: nameES,
