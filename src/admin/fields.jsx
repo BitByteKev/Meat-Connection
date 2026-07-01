@@ -1,28 +1,42 @@
-// Small reusable form controls for the catalog admin. Plain inputs styled with
-// the site's CSS variables so the admin matches the storefront without pulling
-// in the design-system bundle.
+// Small reusable form controls for the catalog admin, in a neutral
+// Polaris-inspired look (gray canvas, white cards, near-black primary) that is
+// deliberately NOT the storefront brand — admin chrome should read as a tool.
 import React from 'react'
 
+export const ADMIN_FONT = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
+
 export const card = {
-  background: '#fff', border: '1px solid var(--mc-ink-200, #e3e0da)', borderRadius: '10px',
-  padding: '16px', marginBottom: '14px',
+  background: '#fff', border: '1px solid #e1e3e5', borderRadius: '12px',
+  boxShadow: '0 1px 2px rgba(0,0,0,0.05)', padding: '16px', marginBottom: '14px',
 }
 export const labelStyle = {
-  display: 'block', fontFamily: 'var(--font-display, sans-serif)', textTransform: 'uppercase',
-  letterSpacing: '0.04em', fontSize: '11px', fontWeight: 700, color: 'var(--mc-ink-700, #555)',
+  display: 'block', fontFamily: ADMIN_FONT, textTransform: 'uppercase',
+  letterSpacing: '0.04em', fontSize: '11px', fontWeight: 600, color: '#616a75',
   margin: '0 0 5px',
 }
 const inputBase = {
-  width: '100%', boxSizing: 'border-box', fontFamily: 'var(--font-body, sans-serif)', fontSize: '14px',
-  padding: '8px 10px', border: '1px solid var(--mc-ink-300, #cfcbc4)', borderRadius: '6px',
-  background: '#fff', color: 'var(--mc-ink-900, #1a1a1a)',
+  width: '100%', boxSizing: 'border-box', fontFamily: ADMIN_FONT, fontSize: '14px',
+  padding: '8px 10px', border: '1px solid #d0d3d6', borderRadius: '8px',
+  background: '#fff', color: '#1a1a1a',
 }
 export const btn = {
-  fontFamily: 'var(--font-display, sans-serif)', fontSize: '12px', fontWeight: 700, cursor: 'pointer',
-  border: '1px solid var(--mc-ink-300, #cfcbc4)', borderRadius: '6px', background: '#fff',
-  color: 'var(--mc-ink-800, #2a2a2a)', padding: '6px 10px',
+  fontFamily: ADMIN_FONT, fontSize: '13px', fontWeight: 600, cursor: 'pointer',
+  border: '1px solid #d0d3d6', borderRadius: '8px', background: '#fff',
+  color: '#1a1a1a', padding: '7px 12px',
 }
-export const btnDanger = { ...btn, color: 'var(--mc-red, #b3122a)', borderColor: 'var(--mc-red, #b3122a)' }
+export const btnPrimary = { ...btn, background: '#1a1a1a', borderColor: '#1a1a1a', color: '#fff' }
+export const btnDanger = { ...btn, color: '#c5280c', borderColor: '#e0b3ab' }
+
+// Status pill: green = active/available, gray = inactive/sold out.
+export function Pill({ ok, children }) {
+  return (
+    <span style={{ display: 'inline-block', padding: '2px 10px', borderRadius: '999px',
+      fontSize: '12px', fontWeight: 600, whiteSpace: 'nowrap',
+      background: ok ? '#d1f0d9' : '#e8eaec', color: ok ? '#0a6c2e' : '#616a75' }}>
+      {children}
+    </span>
+  )
+}
 
 export function TextField({ label, value, onChange, placeholder, type = 'text' }) {
   return (
