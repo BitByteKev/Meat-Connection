@@ -129,14 +129,17 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder, overHero = fals
   }, [menuOpen]);
   const goMobile = (l) => { setMenuOpen(false); l.go(); };
   return (
-    <header style={{
-      color: 'var(--text-strong)', position: 'sticky', top: 0, zIndex: 30,
-      background: transparent ? 'rgba(247,245,240,0.82)' : 'var(--mc-paper)',
-      backdropFilter: transparent ? 'saturate(1.3) blur(10px)' : 'none',
-      WebkitBackdropFilter: transparent ? 'saturate(1.3) blur(10px)' : 'none',
-      borderBottom: '1px solid var(--border-subtle)',
-      transition: 'background var(--dur-med) var(--ease-out), border-color var(--dur-med) var(--ease-out)'
-    }}>
+    <header style={{ color: 'var(--text-strong)', position: 'sticky', top: 0, zIndex: 30 }}>
+      {/* Frosted bar lives on its own element (NOT the <header>): backdrop-filter
+          on an ancestor would make it the containing block for the fixed menu below,
+          collapsing the menu's height:100% at the top of the page. */}
+      <div style={{
+        background: transparent ? 'rgba(247,245,240,0.82)' : 'var(--mc-paper)',
+        backdropFilter: transparent ? 'saturate(1.3) blur(10px)' : 'none',
+        WebkitBackdropFilter: transparent ? 'saturate(1.3) blur(10px)' : 'none',
+        borderBottom: '1px solid var(--border-subtle)',
+        transition: 'background var(--dur-med) var(--ease-out), border-color var(--dur-med) var(--ease-out)'
+      }}>
       <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 20px', height: '68px', display: 'flex', alignItems: 'center', gap: '24px', boxShadow: 'inset 0 -1px 0 var(--hairline-gold)' }}>
         <img src={window.MC_LOGO_INK} alt="Meat Connection" style={{ height: '32px', cursor: 'pointer' }} onClick={() => onNav('home')} />
         <nav className="mc-nav" style={{ display: 'flex', gap: '4px', flex: 1 }}>
@@ -174,6 +177,7 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder, overHero = fals
             <Icon name="Menu" size={24} color="var(--text-strong)" />
           </button>
         </div>
+      </div>
       </div>
 
       {/* Mobile slide-in menu */}
@@ -515,21 +519,21 @@ function Footer({ onCategory, onAnchor }) {
     [t.footer.servicesTitle, t.footer.servicesItems.map((label) => [label, null, null, () => onAnchor('servicios')])],
     [t.footer.contactTitle, [['WhatsApp', waHref(t.wa.quote), 'MessageCircle'], ['Instagram', IG_LINK, 'Instagram'], ['Facebook', FB_LINK, 'Facebook'], [t.footer.quoteCatalogs, '#contacto']]],
   ];
-  const linkStyle = { display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--mc-ink-300)', textDecoration: 'none', fontSize: '13px' };
+  const linkStyle = { display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--mc-ink-600)', textDecoration: 'none', fontSize: '13px' };
   return (
-    <footer style={{ background: 'var(--mc-charcoal)', color: 'var(--mc-ink-200)' }}>
+    <footer style={{ background: 'var(--mc-cream)', color: 'var(--text-body)', borderTop: '1px solid var(--border-default)' }}>
       <div className="mc-foot" style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '56px 24px 32px', display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr', gap: '40px' }}>
         <div>
-          <img src={window.MC_LOGO} alt="Meat Connection" style={{ height: '32px', marginBottom: '16px' }} />
-          <p style={{ fontSize: '13px', lineHeight: 1.6, color: 'var(--mc-ink-400)', maxWidth: '240px' }}>{t.footer.tagline}</p>
+          <img src={window.MC_LOGO_INK} alt="Meat Connection" style={{ height: '32px', marginBottom: '16px' }} />
+          <p style={{ fontSize: '13px', lineHeight: 1.6, color: 'var(--mc-ink-500)', maxWidth: '240px' }}>{t.footer.tagline}</p>
         </div>
         {cols.map(([h, links]) => (
           <div key={h}>
-            <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600, fontSize: '13px', color: '#fff', marginBottom: '14px' }}>{h}</div>
+            <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.1em', fontWeight: 600, fontSize: '13px', color: 'var(--text-strong)', marginBottom: '14px' }}>{h}</div>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '9px' }}>
               {links.map(([label, href, icon, onClick]) => {
-                const hover = (e) => e.currentTarget.style.color = 'var(--accent-gold)';
-                const out = (e) => e.currentTarget.style.color = 'var(--mc-ink-300)';
+                const hover = (e) => e.currentTarget.style.color = 'var(--accent-gold-ink)';
+                const out = (e) => e.currentTarget.style.color = 'var(--mc-ink-600)';
                 return onClick
                   ? <button key={label} type="button" onClick={onClick} onMouseOver={hover} onMouseOut={out} style={{ ...linkStyle, border: 'none', background: 'none', padding: 0, cursor: 'pointer', font: 'inherit', textAlign: 'left' }}>{icon && <Icon name={icon} size={16} color="currentColor" strokeWidth={1.75} />}{label}</button>
                   : <a key={label} href={href} target={href.startsWith('http') ? '_blank' : undefined} rel="noopener" aria-label={label} onMouseOver={hover} onMouseOut={out} style={linkStyle}>{icon && <Icon name={icon} size={16} color="currentColor" strokeWidth={1.75} />}{label}</a>;
@@ -538,7 +542,7 @@ function Footer({ onCategory, onAnchor }) {
           </div>
         ))}
       </div>
-      <div className="mc-foot-legal" style={{ borderTop: '1px solid var(--mc-ink-700)', padding: '18px 24px', maxWidth: 'var(--container-max)', margin: '0 auto', display: 'flex', justifyContent: 'space-between', gap: '10px', fontSize: '12px', color: 'var(--mc-ink-500)' }}>
+      <div className="mc-foot-legal" style={{ borderTop: '1px solid var(--border-subtle)', padding: '18px 24px', maxWidth: 'var(--container-max)', margin: '0 auto', display: 'flex', justifyContent: 'space-between', gap: '10px', fontSize: '12px', color: 'var(--mc-ink-500)' }}>
         <span>© 2026 Meat Connection · {WA_DISPLAY}</span>
       </div>
     </footer>
