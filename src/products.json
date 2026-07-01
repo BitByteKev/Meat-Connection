@@ -288,6 +288,43 @@
     }
   },
   {
+    "id": "filete-au-9plus",
+    "cat": "au",
+    "tone": "charcoal",
+    "images": [
+      "filete-australiano-9plus-1.webp",
+      "filete-australiano-9plus-2.webp",
+      "filete-australiano-9plus-3.webp"
+    ],
+    "badge": {
+      "es": "MB 9+",
+      "en": "MB 9+"
+    },
+    "es": {
+      "name": "Filete Australiano 9+",
+      "description": "Filete (tenderloin) de wagyu australiano con Marble Score MB 9+ — el máximo marmoleo en el corte más tierno de la res. Textura mantecosa que se deshace en el paladar.\n\nCaracterísticas del corte\n\n• Filete / solomillo: fibra fina, magro y uniforme, el corte más tierno.\n• Marble Score MB 9+: marmoleo extremo, vetas densas de grasa intramuscular.\n• Ideal para medallones y presentaciones donde la terneza manda.\n\nSella a fuego alto y no lo sobrecocines: término medio-rojo para máxima jugosidad.",
+      "origin": "Origen australiano\n\nWagyu australiano de marmoleo excepcional (Marble Score 9+), terminado con grano y criado bajo estrictos estándares de bienestar y trazabilidad.",
+      "cooking": "Recomendaciones de cocción\n\nAtempera la pieza y seca bien la superficie.\n• Sella 1–2 minutos por lado a fuego alto para una corteza dorada.\n• Término medio-rojo (52–54 °C) para respetar la terneza del filete.\n\nReposo\nDeja reposar 4 minutos antes de cortar para redistribuir los jugos."
+    },
+    "en": {
+      "name": "Australian Tenderloin 9+",
+      "description": "Australian wagyu tenderloin (filet) with Marble Score MB 9+ — peak marbling in the most tender cut of beef. A buttery texture that melts in the mouth.\n\nCut characteristics\n\n• Tenderloin / filet: fine grain, lean and uniform, the most tender cut.\n• Marble Score MB 9+: extreme marbling, dense threads of intramuscular fat.\n• Ideal for medallions and presentations where tenderness rules.\n\nSear over high heat and don't overcook: medium-rare for maximum juiciness.",
+      "origin": "Australian origin\n\nAustralian wagyu with exceptional marbling (Marble Score 9+), grain-finished and raised to strict welfare and traceability standards.",
+      "cooking": "Cooking recommendations\n\nTemper the steak and pat the surface dry.\n• Sear 1–2 minutes per side over high heat for a golden crust.\n• Medium-rare (52–54 °C) to respect the tenderloin's tenderness.\n\nRest\nRest 4 minutes before slicing to redistribute the juices."
+    },
+    "marbling": {
+      "system": "aus",
+      "variants": [
+        {
+          "label": "9+",
+          "lo": 9,
+          "hi": 10,
+          "image": "filete-australiano-9plus-1.webp"
+        }
+      ]
+    }
+  },
+  {
     "id": "tbone",
     "cat": "au",
     "tone": "kraft",

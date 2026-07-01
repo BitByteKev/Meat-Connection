@@ -437,14 +437,21 @@ function Carousel({ product, name, height = 560, index, onIndex }) {
 function marblingMax(system) { return system === 'bms' ? 12 : system === 'angus' ? 9 : 10; }
 function hiText(system, hi) { const m = marblingMax(system); return system === 'bms' ? String(hi) : (hi >= m ? '9+' : String(hi)); }
 // A single grade (lo === hi) shows a solid number, e.g. "9" — never "9-9". Ranges keep their label.
-function variantLabel(v) { return v.lo === v.hi ? String(v.lo) : v.label; }
+// A single grade renders as a solid number, except a top grade (9 in the aus/angus
+// scales) which reads as "9+". Ranges keep their explicit label (e.g. "4-5", "9+").
+function variantLabel(v, system) {
+  if (v.lo === v.hi) return (system !== 'bms' && v.hi >= 9) ? '9+' : String(v.lo);
+  return v.label;
+}
 
 function MarblingPill({ marbling }) {
   const { t } = useLang();
   const s = t.pdp.marbling.systems[marbling.system] || t.pdp.marbling.systems.aus;
-  const lo = Math.min(...marbling.variants.map((v) => v.lo));
-  const hi = Math.max(...marbling.variants.map((v) => v.hi));
-  const range = lo === hi ? String(lo) : `${lo}\u2013${hiText(marbling.system, hi)}`;
+  const vs = marbling.variants;
+  const lo = Math.min(...vs.map((v) => v.lo));
+  const hi = Math.max(...vs.map((v) => v.hi));
+  const range = vs.length === 1 ? variantLabel(vs[0], marbling.system)
+    : (lo === hi ? variantLabel({ lo, hi }, marbling.system) : `${lo}\u2013${hiText(marbling.system, hi)}`);
   return (
     <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', alignSelf: 'flex-start',
       fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '11px', letterSpacing: '0.04em',
@@ -467,7 +474,7 @@ function MarblingScale({ marbling, vIdx, onSelect }) {
     <div style={{ margin: '2px 0 26px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '10px' }}>
         <span style={eyebrow}>{cfg.title}</span>
-        <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '20px', color: 'var(--text-strong)' }}>{s.unit} {variantLabel(v)}</span>
+        <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '20px', color: 'var(--text-strong)' }}>{s.unit} {variantLabel(v, marbling.system)}</span>
       </div>
       <div style={{ position: 'relative', height: '12px', borderRadius: '999px', background: 'linear-gradient(90deg,#f5ede7 0%,#e7b49f 55%,#b8371f 100%)' }}>
         <div style={{ position: 'absolute', top: '-3px', bottom: '-3px', left: left + '%', width: width + '%',
@@ -485,7 +492,7 @@ function MarblingScale({ marbling, vIdx, onSelect }) {
               <button key={i} onClick={() => onSelect(i)} aria-pressed={on}
                 style={{ cursor: 'pointer', padding: '8px 15px', borderRadius: '999px', fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '13px', letterSpacing: '0.03em',
                   border: '2px solid ' + (on ? 'var(--mc-red)' : 'var(--border-default)'), background: on ? 'var(--mc-red)' : 'transparent', color: on ? '#fff' : 'var(--text-strong)', transition: 'background var(--dur-fast), border-color var(--dur-fast)' }}>
-                {s.unit} {variantLabel(vt)}
+                {s.unit} {variantLabel(vt, marbling.system)}
               </button>
             );
           })}
