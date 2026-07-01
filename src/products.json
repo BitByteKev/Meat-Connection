@@ -21,18 +21,6 @@
       "description": "Authentic Japanese A5-grade wagyu — the peak of marbling. Buttery, intense, melts on contact.\n\nCut characteristics\n\n• Tri-Tip (sirloin cap): a triangular cut with consistent grain and the perfect shape for slicing.\n• High marbling: fine intramuscular fat threads that melt as it cooks, intensifying juiciness and the umami profile.\n• Even thickness: enables uniform cooking and reproducible results in every piece.\n\nSensory profile\n\nEach slice offers concentrated umami with hints of toasted nuts and fresh cream. The texture is soft and velvety, with juiciness that releases gradually as you bite.\n\nNutritional value\n\nThis cut provides high-quality protein, B vitamins and minerals such as iron and zinc. Its oleic-acid-rich (monounsaturated) fat contributes to a healthier lipid profile without sacrificing flavor.\n\nKey points\n\n• Cut: Tri-Tip Japanese Wagyu A5\n• Marbling: High (BMS 8–12)\n• Texture: Soft and juicy\n• Flavor: Intense umami with hints of nuts\n• Cooking: Sear and low-temperature oven\n• Rest: 4–5 minutes for maximum juiciness",
       "origin": "Origin & A5 distinction\n\nThe Tri-Tip Japanese Wagyu A5 comes from cattle raised on certified Japanese farms, where traditional feeding and animal-handling techniques produce exceptional BMS 8–12 marbling. Its A5 grade guarantees the fullest expression of flavor and tenderness.",
       "cooking": "Cooking recommendations\n\nSear in a cast-iron skillet\n• Heat over medium-high until lightly smoking.\n• Season with coarse salt just before searing.\n• Sear 1–2 minutes per side to build a crust.\n\nFinish in the oven\n• After searing, transfer to an oven preheated to 140 °C and cook 8–10 minutes depending on thickness.\n• Aim for medium (55 °C) to keep it juicy.\n\nRest\nRest 4–5 minutes tented with foil to redistribute the juices."
-    },
-    "marbling": {
-      "system": "bms",
-      "variants": [
-        {
-          "label": "11-12",
-          "lo": 11,
-          "hi": 12,
-          "image": "TRI-TIP-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
-          "sku": "TRI TIP"
-        }
-      ]
     }
   },
   {
@@ -57,18 +45,6 @@
       "description": "Japanese A5 wagyu filet — A5 grading and BMS 8–12 marbling, at the very top of luxury meats.\n\nCut characteristics\n\n• Striploin filet: a uniform piece with fine, compact grain.\n• Extreme marbling: fine intramuscular fat threads that melt as it cooks, adding juiciness and an unmatched umami profile.\n\nSensory profile\n\nAn almost velvety texture, with notes of toasted nuts, fresh cream and a delicate herbal touch. Its intramuscular fat melts at low temperature, enhancing the flavor of every bite.\n\nNutritional value\n\nRich in monounsaturated fatty acids (oleic acid), it provides highly bioavailable protein, B vitamins and minerals such as iron and zinc — ideal for high-nutritional-value offerings.\n\nKey points\n\n• Grade: Japanese Wagyu A5 (BMS 8–12)\n• Cut: striploin filet\n• Texture: ultra-soft, juicy and velvety\n• Flavor: deep umami with hints of nuts and cream\n• Cooking: skillet, griddle or high-heat grill\n• Rest: 3–4 minutes under foil for maximum juiciness",
       "origin": "Origin & unmatched quality\n\nThe Filet Japanese Wagyu A5 comes from certified farms in Japan, raised under strict animal-care standards and balanced feeding. With A5 grading and BMS 8–12 marbling, this cut offers a consistency and richness of flavor that place it at the very top of luxury meats.",
       "cooking": "Cooking recommendations\n\nCast-iron skillet or griddle\n• Heat until lightly smoking.\n• Season with coarse salt before searing.\n• Cook 1–2 minutes per side for medium-rare.\n\nHigh-heat grill\n• Sear 30–45 seconds per side over very high heat.\n• Remove and rest 3–4 minutes tented with foil.\n\nRest\nEssential: redistributes the juices and preserves tenderness."
-    },
-    "marbling": {
-      "system": "bms",
-      "variants": [
-        {
-          "label": "10-12",
-          "lo": 10,
-          "hi": 12,
-          "image": "FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp",
-          "sku": "PLUS"
-        }
-      ]
     }
   },
   {
@@ -93,18 +69,6 @@
       "description": "Japanese A5 wagyu rib eye — extreme marbling and deep flavor. The wagyu experience at its peak.\n\nCut characteristics\n\n• Rib Eye: a noble cut with a perfect balance of muscle and fat.\n• High marbling: intramuscular fat veins that melt as it cooks, enhancing the umami profile.\n• Fine, uniform grain: ensures even cooking and exact reproduction of results.\n\nSensory profile\n\nEach bite unfolds deep umami with hints of nuts and fresh cream. The intramuscular fat melts evenly, leaving the meat soft and juicy, with a velvety sensation on the palate.\n\nNutritional value\n\nThis cut provides high-quality protein, B-complex vitamins and minerals such as iron and zinc. Its fat, rich in monounsaturated fatty acids (oleic acid), contributes to a healthier lipid profile without compromising flavor.\n\nKey points\n\n• Cut: Rib Eye Japanese Wagyu A5\n• Marbling: High (BMS 8–12)\n• Texture: Velvety and juicy\n• Flavor: Intense umami with hints of nuts and cream\n• Cooking: Skillet, griddle or high-heat grill\n• Rest: 3–4 minutes under foil",
       "origin": "Origin & A5 excellence\n\nThe Rib Eye Japanese Wagyu A5 comes from cattle raised on certified Japanese farms, combining traditional practices with cutting-edge technology to achieve exceptional BMS 8–12 marbling. This A5 grade represents the highest quality in texture and flavor.",
       "cooking": "Cooking recommendations\n\nCast-iron skillet\n• Preheat over medium-high until lightly smoking.\n• Season with coarse salt just before searing.\n• Cook 1–2 minutes per side for medium-rare.\n\nDirect grilling\n• Sear 30–45 seconds per side over very high heat.\n• Move to medium heat and cook 1–2 minutes more per side.\n\nRest\nRest 3–4 minutes tented with foil to redistribute the juices."
-    },
-    "marbling": {
-      "system": "bms",
-      "variants": [
-        {
-          "label": "10-12",
-          "lo": 10,
-          "hi": 12,
-          "image": "RIB-EYE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
-          "sku": "RBA5"
-        }
-      ]
     }
   },
   {
@@ -129,18 +93,6 @@
       "description": "Japanese A5 wagyu picanha with its signature fat cap. Juicy and full-flavored, ideal on the grill.\n\nCut characteristics\n\n• Picanha (rump cap): an iconic cut for its triangular shape and uniform fat cap that protects the meat during cooking.\n• High marbling: fine, evenly distributed fat threads that melt under heat, adding juiciness and enhancing flavor.\n• Fine, even grain: allows consistent portioning and precise cooking times.\n\nSensory profile\n\nEach slice offers a burst of umami with hints of nuts and a slight sweetness. As the fat renders into the muscle while cooking, it gives an almost velvety texture that melts on the palate.\n\nNutritional value\n\nA5 Wagyu fat is rich in oleic acid (monounsaturated), supporting a healthier lipid profile. It also provides high-quality protein, B vitamins and minerals such as iron and zinc — ideal for a high-nutritional-value offering.\n\nKey points\n\n• Cut: Picanha Japanese Wagyu A5 (rump cap)\n• Marbling: BMS 8–12 (high)\n• Texture: Juicy and velvety\n• Flavor: Deep umami with hints of nuts and cream\n• Cooking: Grill, griddle or cast-iron skillet\n• Rest: 4–5 minutes for maximum juice retention",
       "origin": "Origin & A5 excellence\n\nThe Picanha Japanese Wagyu A5 comes from cattle raised on certified Japanese farms, where traditional feeding methods and strict care guarantee BMS 8–12 marbling. This superior level of intramuscular fat means exceptional quality and consistency.",
       "cooking": "Cooking recommendations\n\nDirect grilling\n• Sear over high heat 1–2 minutes per side to form a golden crust.\n• Move to a medium-heat zone and cook 2–3 minutes more per side for medium.\n\nCast-iron skillet\n• Preheat until lightly smoking, place the picanha fat-side down first.\n• Sear 2 minutes per side and rest 4 minutes before slicing.\n\nMandatory rest\nCover loosely with foil and wait 4–5 minutes. This pause redistributes the juices and preserves all the tenderness."
-    },
-    "marbling": {
-      "system": "bms",
-      "variants": [
-        {
-          "label": "11-12",
-          "lo": 11,
-          "hi": 12,
-          "image": "PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
-          "sku": "COULOTT"
-        }
-      ]
     }
   },
   {
@@ -165,17 +117,6 @@
       "description": "Australian wagyu rib eye with medium marbling — wagyu richness without excess fat, balanced and authentic flavor.\n\nCut characteristics\n\n• Rib Eye: a noble cut with an ideal muscle-to-fat ratio.\n• Medium marbling: moderate veining that ensures juiciness and bold flavor without being overwhelming.\n• Even thickness: allows uniform cooking and consistent results.\n\nSensory profile\n\nEach bite highlights a delicate umami with light notes of nuts and cream. The texture is juicy and slightly firm, offering a balanced experience that showcases wagyu quality.\n\nNutritional value\n\nThis cut provides high-quality protein, B-complex vitamins and essential minerals such as iron and zinc. Its monounsaturated fat offers a lighter profile without giving up the characteristic wagyu flavor.\n\nKey points\n\n• Cut: Australian Wagyu Rib Eye\n• Marbling: Medium\n• Texture: Juicy and slightly firm\n• Flavor: Mild umami with hints of nuts\n• Cooking: Griddle, skillet or grill\n• Rest: 3–4 minutes for maximum juiciness",
       "origin": "Origin & balanced quality\n\nThe medium-marbled Australian Wagyu Rib Eye comes from cattle raised on well-tended Australian pastures. Its moderate marbling offers wagyu richness without excess fat, keeping a balanced, authentic flavor profile.",
       "cooking": "Cooking recommendations\n\nGriddle or cast-iron skillet\n• Preheat over medium-high heat until smoking.\n• Season with salt to taste just before searing.\n• Cook 2–3 minutes per side for medium.\n\nDirect grilling\n• Sear 1–2 minutes per side over high heat.\n• Reduce to medium heat and cook 1–2 minutes more.\n\nRest\nRest 3–4 minutes tented with foil to redistribute the juices."
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "4-5",
-          "lo": 4,
-          "hi": 5,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp"
-        }
-      ]
     }
   },
   {
@@ -200,17 +141,6 @@
       "description": "Australian wagyu rib eye with low marbling — the pure essence of wagyu with subtle veining and a cleaner flavor.\n\nCut characteristics\n\n• Rib Eye: a piece with the ideal muscle-to-fat ratio, keeping its robust profile.\n• Low marbling: fine, moderate veining that ensures controlled juiciness and a cleaner flavor.\n• Uniform thickness: enables even cooking and consistent results in every piece.\n\nSensory profile\n\nAt first bite, a well-defined red-meat flavor stands out, with earthy notes and a slight natural sweetness. The texture feels firm yet juicy, offering a lighter experience without giving up wagyu character.\n\nNutritional value\n\nWith a controlled fat content, this cut provides high-quality protein, B-complex vitamins and essential minerals such as iron and zinc. Ideal for menus that call for lighter options without sacrificing flavor.\n\nKey points\n\n• Cut: Australian Wagyu Rib Eye\n• Marbling: Low\n• Texture: Firm and juicy\n• Flavor: Defined red meat with earthy notes\n• Cooking: Griddle, skillet or grill\n• Rest: 3–4 minutes for maximum juiciness",
       "origin": "Origin & exceptional quality\n\nThe low-marbled Australian Wagyu Rib Eye comes from cattle raised on select Australian pastures, combining animal-welfare practices with balanced feeding. This cut offers the pure essence of wagyu with subtle marbling that adds flavor without excess fat.",
       "cooking": "Cooking recommendations\n\nGriddle or cast-iron skillet\n• Preheat over medium-high heat until lightly smoking.\n• Season with salt to taste just before searing.\n• Cook 2–3 minutes per side for medium.\n\nDirect grilling\n• Sear 1–2 minutes per side over high heat.\n• Reduce to medium heat and cook 1–2 minutes more.\n\nRest\nRest 3–4 minutes tented with foil to redistribute the juices."
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "0-3",
-          "lo": 0,
-          "hi": 3,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-BAJO-MARMOLEO-3-1.webp"
-        }
-      ]
     }
   },
   {
@@ -235,17 +165,6 @@
       "description": "Firm bite, deep beef flavor and generous marbling. The steakhouse classic.\n\nCut characteristics\n\n• New York cut (strip loin): a noble cut from the upper loin, with a broad surface that allows a perfect sear.\n• BMS 8–12 marbling: fine fat threads that melt as it cooks, infusing the meat with unmatched umami richness.\n• Uniform thickness: enables consistent cooking times and reproducible results.\n\nSensory profile\n\nAt first bite, it awakens intense umami notes with hints of toasted nuts and fresh cream. The texture feels almost velvety as the intramuscular fat slowly melts, intensifying the gourmet experience.\n\nNutritional value\n\nAlthough it has generous marbling, much of its fat is monounsaturated (oleic acid), which contributes a healthier lipid profile. It also offers highly bioavailable protein, B vitamins and minerals such as iron and zinc.\n\nKey points\n\n• Cut: Australian Wagyu New York\n• Marbling: High (BMS 8–12)\n• Texture: Silky and juicy\n• Flavor: Deep umami with notes of nuts and cream\n• Cooking: Grill, griddle or cast-iron skillet\n• Rest: 3–5 min for maximum juiciness",
       "origin": "Origin & exceptional quality\n\nThe Australian Wagyu New York comes from cattle raised on select Australian pastures, with feeding and animal-welfare practices that favor optimal intramuscular fat development. Its high marbling gives it unique juiciness and flavor in every bite.",
       "cooking": "Cooking recommendations\n\nGrill or hot griddle\n• Sear 1–2 minutes per side over high heat for a golden crust.\n• Lower to medium heat and cook 2–3 minutes more for medium.\n\nCast-iron skillet\n• Heat until lightly smoking, season with coarse salt as you lay the steak down.\n• Cook 2 minutes per side and rest 3 minutes tented with foil.\n\nRest\nEssential to redistribute the juices: 3–5 minutes before slicing."
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "8-9",
-          "lo": 8,
-          "hi": 9,
-          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp"
-        }
-      ]
     }
   },
   {
@@ -274,17 +193,6 @@
       "description": "Australian wagyu New York (striploin) with Marble Score MB 8-9 — abundant, even marbling that melts as it cooks. Firm bite and deep beef flavor, the steakhouse classic.\n\nCut characteristics\n\n• New York cut from the upper loin, with a broad surface for a perfect sear.\n• Marble Score MB 8-9: fine, dense threads of intramuscular fat.\n• Uniform thickness for consistent cooking.\n\nGreat on the grill, griddle or cast-iron skillet.",
       "origin": "Australian origin\n\nHigh-marbling Australian wagyu, grain-finished and raised to strict welfare and traceability standards. Its 8-9 Marble Score delivers exceptional juiciness and flavor.",
       "cooking": "Cooking recommendations\n\nGrill or hot griddle\n• Sear 1–2 minutes per side over high heat for a golden crust.\n• Lower to medium heat and cook 2–3 minutes more for medium.\n\nCast-iron skillet\n• Heat until lightly smoking, season with coarse salt as you lay the steak down.\n• Cook 2 minutes per side and rest 3 minutes tented with foil.\n\nRest\n3–5 minutes before slicing for maximum juiciness."
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "8-9",
-          "lo": 8,
-          "hi": 9,
-          "image": "wagyu-australiano-newyork-89-1.webp"
-        }
-      ]
     }
   },
   {
@@ -311,17 +219,6 @@
       "description": "Australian wagyu tenderloin (filet) with Marble Score MB 9+ — peak marbling in the most tender cut of beef. A buttery texture that melts in the mouth.\n\nCut characteristics\n\n• Tenderloin / filet: fine grain, lean and uniform, the most tender cut.\n• Marble Score MB 9+: extreme marbling, dense threads of intramuscular fat.\n• Ideal for medallions and presentations where tenderness rules.\n\nSear over high heat and don't overcook: medium-rare for maximum juiciness.",
       "origin": "Australian origin\n\nAustralian wagyu with exceptional marbling (Marble Score 9+), grain-finished and raised to strict welfare and traceability standards.",
       "cooking": "Cooking recommendations\n\nTemper the steak and pat the surface dry.\n• Sear 1–2 minutes per side over high heat for a golden crust.\n• Medium-rare (52–54 °C) to respect the tenderloin's tenderness.\n\nRest\nRest 4 minutes before slicing to redistribute the juices."
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "9+",
-          "lo": 9,
-          "hi": 10,
-          "image": "filete-australiano-9plus-1.webp"
-        }
-      ]
     }
   },
   {
@@ -346,17 +243,6 @@
       "description": "Australian wagyu T-bone — strip and tenderloin in one cut, bone-in for maximum flavor.\n\nCut characteristics\n\n• T-Bone cut: a bone-in “T”-shaped steak joining two muscles — strip loin (striploin) and tenderloin.\n• High marbling: fine threads of intramuscular fat (high BMS) that melt as it cooks, enhancing juiciness and flavor.\n• Generous format: a wide, uniform piece, ideal for striking presentations.\n\nSensory profile\n\nAt first bite, it surprises with concentrated umami and hints of nuts and cream. The combination of two muscles offers a contrast of textures: the firm strip loin and the tender tenderloin, joined by intramuscular fat that delivers a velvety finish.\n\nNutritional value\n\nThis cut provides high-quality protein, B vitamins and essential minerals such as iron and zinc. Its monounsaturated fat (oleic acid) supports a healthier lipid profile without compromising flavor.\n\nKey points\n\n• Cut: Australian Wagyu T-Bone\n• Marbling: High (high BMS)\n• Texture: Contrast between firm strip loin and tender tenderloin\n• Flavor: Deep umami with notes of nuts and cream\n• Cooking: Grill or cast-iron skillet over high heat\n• Rest: 4–5 minutes for maximum juiciness",
       "origin": "Origin & supreme quality\n\nThe Australian Wagyu T-Bone comes from cattle raised on select Australian pastures, with feeding and animal-welfare practices that promote exceptional marbling. This cut combines the strip loin and the tenderloin, offering two textures in a single steak.",
       "cooking": "Cooking recommendations\n\nGrill over high heat\n• Sear each side 1–2 minutes for a golden crust.\n• Cook over medium heat 3–4 minutes per side for medium.\n\nCast-iron skillet\n• Heat until smoking, season with coarse salt.\n• Cook 3 minutes per side and rest 4 minutes before slicing.\n\nRest\nEssential: tent with foil 4–5 minutes to retain the juices."
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "8-9",
-          "lo": 8,
-          "hi": 9,
-          "image": "T-BONE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp"
-        }
-      ]
     }
   },
   {
@@ -381,17 +267,6 @@
       "description": "Australian wagyu shoulder, marbled and versatile. For braising, roasting or thin slicing.\n\nCut characteristics\n\n• Shoulder (paleta): a fine, uniform-grained cut with intense marbling that brings tenderness and juice retention.\n• BMS 8–12 marbling: evenly distributed fat veins that melt as it cooks, infusing the meat with rich umami notes.\n• Adaptable thickness: allows slow cooking or quick searing, depending on your preparation style.\n\nSensory profile\n\nEach portion unfolds a concentrated umami accompanied by notes of nuts and fresh cream. The texture feels soft and velvety, with melting fat that enriches every bite.\n\nNutritional value\n\nWagyu fat is rich in monounsaturated fatty acids (oleic acid), which support a balanced lipid profile. This cut provides high-quality protein, B-complex vitamins and minerals such as iron and zinc.\n\nKey points\n\n• Cut: Australian Wagyu Shoulder (paleta)\n• Marbling: High (BMS 8–12)\n• Texture: Soft, juicy and velvety\n• Flavor: Intense umami with hints of nuts and cream\n• Cooking: Slow braise, sear and oven\n• Rest: 5–7 min under foil for maximum juiciness",
       "origin": "Origin & premium quality\n\nThe Australian Wagyu Shoulder comes from animals raised on controlled Australian pastures, where balanced feeding and animal welfare promote optimal intramuscular fat development. Its high marbling ensures exceptional juiciness and texture.",
       "cooking": "Cooking recommendations\n\nSlow braise\n• Cook over low heat in a light broth or red wine for 2–3 hours, until optimal tenderness.\n• Finish with a quick sear in a hot pan to create a light crust.\n\nSear & oven\n• Sear the piece 1–2 minutes per side in a very hot pan.\n• Finish in the oven at 160 °C for 45–60 minutes, depending on thickness.\n\nRest\nRest 5–7 minutes covered with foil to redistribute the juices and keep it juicy."
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "8-9",
-          "lo": 8,
-          "hi": 9,
-          "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp"
-        }
-      ]
     }
   },
   {
@@ -416,17 +291,6 @@
       "description": "Australian wagyu Denver — a juicy, high-marbling cut, tender and full-flavored. Excellent on the grill.\n\nWhat makes the Denver cut unique?\n\n• Located in the lower rib section, the Denver is a tender, versatile cut.\n• Its high intramuscular fat infiltration ensures a soft, almost creamy texture that melts on the palate.\n• Ideal for those seeking a perfect balance between intense flavor and maximum juiciness.\n\nFlavor & dining experience\n\nThis Australian Wagyu cut unfolds deep umami notes and a slightly sweet aftertaste. Cooked on the grill or griddle, the fat melts slowly, infusing the meat with aromas of toasted nuts and butter. Every bite is a delight for premium-meat lovers.\n\nNutritional benefits\n\nAlthough marbling adds fat, much of it is unsaturated (oleic acids) that contribute to a healthier lipid profile than conventional cuts. Wagyu is also known for its balanced levels of B vitamins and essential minerals such as zinc and iron — ideal for a balanced diet without sacrificing flavor.\n\nWhy buy from Meat Connection?\n\n• Guaranteed freshness: we deliver refrigerated cuts from our distribution center, keeping the cold chain intact.\n• Home delivery in Mexico: receive your order in under 48 hours.\n• Personalized service: our team of expert butchers guides you on the best way to store and prepare it.\n• Satisfaction assured: if you are not satisfied, we advise you for your next purchase or sort it out hassle-free.\n\nKey points\n\n• Cut: Denver (lower rib section) with high marbling.\n• Origin: certified Australian Wagyu.\n• Texture: soft, juicy, deep umami flavor.\n• Suggested weight: 200–300 g per individual portion.\n• Recommended doneness: medium or medium-rare to appreciate the marbling without overcooking.\n• Preparation: ideal on the grill, griddle or cast-iron skillet.\n• Shipping: refrigerated home delivery in Mexico.\n• Benefits: high in monounsaturated fatty acids and B vitamins.",
       "origin": "Origin & exceptional quality\n\nThe Australian Wagyu Denver comes from cattle raised on select Australian pastures, where every detail of feeding and animal welfare is cared for. Thanks to traditional rearing techniques combined with modern technology, we obtain a high-marbling cut that translates into unmatched juiciness and flavor.",
       "cooking": "Cooking recommendations\n\nGrill over medium-high heat\n• Sear each side 1–2 minutes for a perfect golden crust.\n• Reduce to medium heat and cook 3–4 minutes more to the desired doneness (medium or medium-rare recommended).\n\nGriddle or cast-iron skillet\n• Heat with no oil until lightly smoking.\n• Add the cut, season with coarse salt at the start and pepper at the end to highlight its natural flavor.\n• Cook 3 minutes per side for medium.\n\nFinal rest\nRest the piece 5 minutes before slicing. This maximizes juice retention and ensures a consistent texture."
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "8-9",
-          "lo": 8,
-          "hi": 9,
-          "image": "DENVER-WAGYU-AUSTRALIANO-ALTO-MARMOLEO2.webp"
-        }
-      ]
     }
   },
   {
@@ -451,17 +315,6 @@
       "description": "Japanese A5 wagyu Top Round — rare marbling for this cut. Ideal thinly sliced or in sukiyaki.\n\nCut characteristics\n\n• Top Round: a lean cut with long, consistent grain.\n• High marbling: fine intramuscular fat threads that melt during cooking, adding juiciness and rich flavor.\n• Even thickness: enables uniform cooking and reproducible results.\n\nSensory profile\n\nEach slice reveals concentrated umami with hints of nuts and a slight natural sweetness. The texture feels soft and delicate on the palate, balancing the firmness of the round with the juiciness of the marbling.\n\nNutritional value\n\nThis cut provides high-quality protein, B-complex vitamins and minerals such as iron and zinc. Its fat, mostly monounsaturated, contributes to a healthier profile without sacrificing flavor.\n\nKey points\n\n• Cut: Top Round Japanese Wagyu A5\n• Marbling: High\n• Texture: Soft and juicy\n• Flavor: Deep umami with hints of nuts\n• Cooking: Sear and low-temperature oven\n• Rest: 4–5 minutes for maximum juiciness",
       "origin": "Origin & A5 excellence\n\nThe Top Round Japanese Wagyu A5 comes from cattle raised on certified Japanese farms, combining traditional techniques with modern feeding standards to achieve high marbling. This A5 grade ensures an unmatched flavor and texture profile.",
       "cooking": "Cooking recommendations\n\nSear in a cast-iron skillet\n• Preheat over medium-high until lightly smoking.\n• Season with coarse salt before adding the cut.\n• Sear 1–2 minutes per side to mark the surface.\n\nLow-temperature oven\n• After searing, transfer to a 130 °C oven for 10–12 minutes depending on thickness.\n• Reach medium (55 °C) to keep it juicy.\n\nRest\nRest 4–5 minutes tented with foil to redistribute the juices."
-    },
-    "marbling": {
-      "system": "bms",
-      "variants": [
-        {
-          "label": "10-12",
-          "lo": 10,
-          "hi": 12,
-          "image": "TOP-ROUND-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp"
-        }
-      ]
     }
   },
   {
@@ -510,18 +363,6 @@
       "description": "Australian Black Angus New York with medium marbling — fresh red meat with silky juiciness.\n\nCut characteristics\n\n• New York cut (strip loin): taken from the upper loin, with defined grain and a broad surface for an optimal sear.\n• Medium marbling: balanced intramuscular fat veins that add juiciness without masking the natural meat flavor.\n• Even thickness: a uniform piece that enables consistent cooking times.\n\nSensory profile\n\nOn the palate it unfolds notes of fresh red meat, with light nutty nuances and a delicate sweet aftertaste. The intramuscular fat melts gradually, boosting juiciness and giving a silky finish.\n\nNutritional value\n\nWith medium marbling, this cut provides high-quality protein, iron and zinc, keeping a reasonable fat profile that includes monounsaturated fatty acids, which support a healthier experience without sacrificing flavor.\n\nKey points\n\n• Cut: New York (strip loin)\n• Breed: Australian Black Angus\n• Marbling: Medium, perfect balance of flavor and juiciness\n• Texture: Firm yet juicy, with a silky finish\n• Flavor: Fresh red meat with nutty notes and a sweet aftertaste\n• Cooking: Ideal in cast-iron skillet, griddle or grill\n• Rest: 4–5 minutes for maximum juiciness",
       "origin": "Origin & rearing\n\nThis Australian Black Angus New York comes from cattle raised on select Australian pastures, following animal-welfare protocols and balanced feeding. Its medium marbling results from precise control during the finishing phase, offering the perfect combination of flavor and texture.",
       "cooking": "Cooking recommendations\n\nGriddle or cast-iron skillet\n• Heat over medium-high until it begins to smoke.\n• Season with coarse salt and pepper as you place the cut.\n• Cook 2–3 minutes per side for medium.\n\nDirect grilling\n• Sear each side 1–2 minutes over high heat.\n• After searing, move to an indirect-heat zone and cook 2 minutes more per side.\n\nRest\nRest 4–5 minutes loosely tented with foil to redistribute the juices."
-    },
-    "marbling": {
-      "system": "angus",
-      "variants": [
-        {
-          "label": "6+",
-          "lo": 6,
-          "hi": 9,
-          "image": "new-york-black-angus.webp",
-          "sku": "390292"
-        }
-      ]
     }
   },
   {
@@ -572,46 +413,6 @@
       "description": "Each slice reveals a fat network so dense it looks like lace woven through the beef.\n\nThis King River Rib Eye, in its American cut, shows abundant marbling (MB4-5 reference) that delivers juiciness, tenderness and a deep, buttery flavor. The fine, interlaced fat melts with heat to coat every bite.\n\nA cut made for those seeking an indulgent experience, where the central eye and the outer cap offer two textures in a single piece.",
       "origin": "King River, American cut. Sourced from Black Angus (USA), with an MB4-5 marbling reference visible on the cut's label.",
       "cooking": "Let the steak come to room temperature 30–40 minutes before cooking and pat the surface dry.\n\nSear in a very hot cast iron pan or grill, 2–3 minutes per side, until a golden crust forms. With its high marbling, the ideal doneness is medium (54–57 °C / 129–135 °F at the center).\n\nRest for 5 minutes before slicing. Season with flaky salt and freshly ground pepper; rosemary and garlic enhance without overpowering."
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "0-3",
-          "lo": 0,
-          "hi": 3,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-BAJO-MARMOLEO-3-1.webp",
-          "sku": "448730"
-        },
-        {
-          "label": "4-5",
-          "lo": 4,
-          "hi": 5,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
-          "sku": "448702"
-        },
-        {
-          "label": "6-7",
-          "lo": 6,
-          "hi": 7,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
-          "sku": "448705"
-        },
-        {
-          "label": "8-9",
-          "lo": 8,
-          "hi": 9,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-3.webp",
-          "sku": "448708"
-        },
-        {
-          "label": "9+",
-          "lo": 9,
-          "hi": 10,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-3.webp",
-          "sku": "416172"
-        }
-      ]
     }
   },
   {
@@ -624,18 +425,6 @@
     "badge": {
       "es": "A5 · Japón",
       "en": "A5 · Japan"
-    },
-    "marbling": {
-      "system": "bms",
-      "variants": [
-        {
-          "label": "10-12",
-          "lo": 10,
-          "hi": 12,
-          "image": "placeholder-coming-soon.webp",
-          "sku": "DIEZA5"
-        }
-      ]
     },
     "es": {
       "name": "Diezmillo Chuck Roll Wagyu A5",
@@ -661,18 +450,6 @@
       "es": "A5 · Japón",
       "en": "A5 · Japan"
     },
-    "marbling": {
-      "system": "bms",
-      "variants": [
-        {
-          "label": "11-12",
-          "lo": 11,
-          "hi": 12,
-          "image": "placeholder-coming-soon.webp",
-          "sku": "FLAT"
-        }
-      ]
-    },
     "es": {
       "name": "Flat Iron Wagyu A5",
       "description": "Flat iron (de la paleta) — corte tierno y muy marmoleado, una joya de precio inteligente.\n\nWagyu japonés grado A5, marmoleo BMS 10–12 — la cúspide del marmoleo. Grasa intramuscular que se funde a baja temperatura para una textura mantecosa y umami profundo.\n\nVersátil para parrilla, fajitas o cortado fino.",
@@ -696,18 +473,6 @@
     "badge": {
       "es": "A5 · Japón",
       "en": "A5 · Japan"
-    },
-    "marbling": {
-      "system": "bms",
-      "variants": [
-        {
-          "label": "10-12",
-          "lo": 10,
-          "hi": 12,
-          "image": "placeholder-coming-soon.webp",
-          "sku": "FINGER"
-        }
-      ]
     },
     "es": {
       "name": "Rib Finger Wagyu A5",
@@ -733,18 +498,6 @@
       "es": "A5 · Japón",
       "en": "A5 · Japan"
     },
-    "marbling": {
-      "system": "bms",
-      "variants": [
-        {
-          "label": "10-12",
-          "lo": 10,
-          "hi": 12,
-          "image": "placeholder-coming-soon.webp",
-          "sku": "SHORTP"
-        }
-      ]
-    },
     "es": {
       "name": "Short Plate Wagyu A5",
       "description": "Short plate — corte de plato, marmoleado, base del clásico rollo laminado.\n\nWagyu japonés grado A5, marmoleo BMS 10–12 — la cúspide del marmoleo. Grasa intramuscular que se funde a baja temperatura para una textura mantecosa y umami profundo.\n\nIdeal rebanado fino para hot pot, sukiyaki y parrilla coreana.",
@@ -768,18 +521,6 @@
     "badge": {
       "es": "A5 · Japón",
       "en": "A5 · Japan"
-    },
-    "marbling": {
-      "system": "bms",
-      "variants": [
-        {
-          "label": "10-12",
-          "lo": 10,
-          "hi": 12,
-          "image": "placeholder-coming-soon.webp",
-          "sku": "SHORTA5"
-        }
-      ]
     },
     "es": {
       "name": "Short Rib Kit Wagyu A5",
@@ -805,18 +546,6 @@
       "es": "A5 · Japón",
       "en": "A5 · Japan"
     },
-    "marbling": {
-      "system": "bms",
-      "variants": [
-        {
-          "label": "10-12",
-          "lo": 10,
-          "hi": 12,
-          "image": "placeholder-coming-soon.webp",
-          "sku": "SIRLOIN"
-        }
-      ]
-    },
     "es": {
       "name": "Sirloin Set Wagyu A5",
       "description": "Sirloin (con picaña D-rump) — corte magro y firme con excelente sabor a res.\n\nWagyu japonés grado A5, marmoleo BMS 10–12 — la cúspide del marmoleo. Grasa intramuscular que se funde a baja temperatura para una textura mantecosa y umami profundo.\n\nBistec versátil, brochetas o cortado fino.",
@@ -840,18 +569,6 @@
     "badge": {
       "es": "A5 · Japón",
       "en": "A5 · Japan"
-    },
-    "marbling": {
-      "system": "bms",
-      "variants": [
-        {
-          "label": "10-12",
-          "lo": 10,
-          "hi": 12,
-          "image": "placeholder-coming-soon.webp",
-          "sku": "FLAP"
-        }
-      ]
     },
     "es": {
       "name": "Vacío Flap Wagyu A5",
@@ -877,18 +594,6 @@
       "es": "A5 · Japón",
       "en": "A5 · Japan"
     },
-    "marbling": {
-      "system": "bms",
-      "variants": [
-        {
-          "label": "11-12",
-          "lo": 11,
-          "hi": 12,
-          "image": "placeholder-coming-soon.webp",
-          "sku": "CHUCK"
-        }
-      ]
-    },
     "es": {
       "name": "Tablita Chuck Tail Wagyu A5",
       "description": "Tablita (chuck tail / tira de asado) — costilla cruzada, jugosa y llena de sabor.\n\nWagyu japonés grado A5, marmoleo BMS 10–12 — la cúspide del marmoleo. Grasa intramuscular que se funde a baja temperatura para una textura mantecosa y umami profundo.\n\nClásico de la parrilla mexicana y el asado. Para compartir.",
@@ -912,18 +617,6 @@
     "badge": {
       "es": "Kobe · Japón",
       "en": "Kobe · Japan"
-    },
-    "marbling": {
-      "system": "bms",
-      "variants": [
-        {
-          "label": "10-12",
-          "lo": 10,
-          "hi": 12,
-          "image": "placeholder-coming-soon.webp",
-          "sku": "TENDK"
-        }
-      ]
     },
     "es": {
       "name": "Filete Tenderloin Wagyu Kobe",
@@ -950,7 +643,6 @@
       "es": "Black Angus",
       "en": "Black Angus"
     },
-    "marbling": null,
     "es": {
       "name": "Arrachera Outside Black Angus Macka's",
       "description": "Arrachera (skirt steak) — el corte clásico de la fajita, fibra marcada y mucho sabor.\n\nBlack Angus Macka's Pedigree (Australia), terminado con grano para un marmoleo parejo y un sabor robusto a res. Versátil y consistente pieza a pieza.\n\nMarínala y ásala rápido. Insuperable para tacos y fajitas.",
@@ -975,18 +667,6 @@
     "badge": {
       "es": "Black Angus",
       "en": "Black Angus"
-    },
-    "marbling": {
-      "system": "angus",
-      "variants": [
-        {
-          "label": "4+",
-          "lo": 4,
-          "hi": 9,
-          "image": "lgrow-pe-brisket-top.webp",
-          "sku": "390291"
-        }
-      ]
     },
     "es": {
       "name": "Brisket Black Angus Macka's",
@@ -1013,18 +693,6 @@
       "es": "Black Angus",
       "en": "Black Angus"
     },
-    "marbling": {
-      "system": "angus",
-      "variants": [
-        {
-          "label": "4+",
-          "lo": 4,
-          "hi": 9,
-          "image": "lgrow-chuck-eye-roll-top.webp",
-          "sku": "391648"
-        }
-      ]
-    },
     "es": {
       "name": "Diezmillo Chuck Roll Black Angus Macka's",
       "description": "Diezmillo (chuck roll) — corte de cuello/espaldilla con buen marmoleo y sabor intenso a res.\n\nBlack Angus Macka's Pedigree (Australia), terminado con grano para un marmoleo parejo y un sabor robusto a res. Versátil y consistente pieza a pieza.\n\nMuy versátil: bistec marinado, fajitas, guisos y braseados.",
@@ -1049,7 +717,6 @@
       "es": "Black Angus",
       "en": "Black Angus"
     },
-    "marbling": null,
     "es": {
       "name": "Hanging Tender Black Angus Macka's",
       "description": "Hanging tender (entraña fina) — corte de un solo músculo, tierno y de sabor profundo.\n\nBlack Angus Macka's Pedigree (Australia), terminado con grano para un marmoleo parejo y un sabor robusto a res. Versátil y consistente pieza a pieza.\n\nFavorito de bistró. Marínalo y ásalo rápido.",
@@ -1074,7 +741,6 @@
       "es": "Black Angus",
       "en": "Black Angus"
     },
-    "marbling": null,
     "es": {
       "name": "Lengua Black Angus Macka's",
       "description": "Lengua — corte tradicional que, bien cocido, queda suave y meloso.\n\nBlack Angus Macka's Pedigree (Australia), terminado con grano para un marmoleo parejo y un sabor robusto a res. Versátil y consistente pieza a pieza.\n\nTacos de lengua, guisos y braseados.",
@@ -1099,25 +765,6 @@
     "badge": {
       "es": "Black Angus",
       "en": "Black Angus"
-    },
-    "marbling": {
-      "system": "angus",
-      "variants": [
-        {
-          "label": "4+",
-          "lo": 4,
-          "hi": 9,
-          "image": "lgrow-rump-cap-top.webp",
-          "sku": "390288"
-        },
-        {
-          "label": "6+",
-          "lo": 6,
-          "hi": 9,
-          "image": "lgrow-rump-cap-top.webp",
-          "sku": "390295"
-        }
-      ]
     },
     "es": {
       "name": "Picaña Black Angus Macka's",
@@ -1145,25 +792,6 @@
       "es": "Black Angus",
       "en": "Black Angus"
     },
-    "marbling": {
-      "system": "angus",
-      "variants": [
-        {
-          "label": "4+",
-          "lo": 4,
-          "hi": 9,
-          "image": "lgrow-cube-roll-top.webp",
-          "sku": "390290"
-        },
-        {
-          "label": "6+",
-          "lo": 6,
-          "hi": 9,
-          "image": "lgrow-cube-roll-top.webp",
-          "sku": "390293"
-        }
-      ]
-    },
     "es": {
       "name": "Rib Eye Cube Roll Lip Off Black Angus Macka's",
       "description": "El rib eye (cube roll) equilibra el ojo central magro y la cresta de grasa exterior — dos texturas en una pieza.\n\nBlack Angus Macka's Pedigree (Australia), terminado con grano para un marmoleo parejo y un sabor robusto a res. Versátil y consistente pieza a pieza.\n\nEl corte rey de la parrilla. Excelente sellado, a la plancha o cortado fino.",
@@ -1187,18 +815,6 @@
     "badge": {
       "es": "Black Angus",
       "en": "Black Angus"
-    },
-    "marbling": {
-      "system": "angus",
-      "variants": [
-        {
-          "label": "2+",
-          "lo": 2,
-          "hi": 9,
-          "image": "placeholder-coming-soon.webp",
-          "sku": "391644"
-        }
-      ]
     },
     "es": {
       "name": "Tomahawk Black Angus Macka's",
@@ -1225,7 +841,6 @@
       "es": "Australia · L Grow",
       "en": "Australia · L Grow"
     },
-    "marbling": null,
     "es": {
       "name": "Arrachera Outside Thin Skirt L Grow",
       "description": "Arrachera (skirt steak) — el corte clásico de la fajita, fibra marcada y mucho sabor.\n\nWagyu australiano L Grow, cruza terminada con grano para un marmoleo profundo. Jugoso y untuoso, con el balance perfecto entre grasa y sabor a res.\n\nMarínala y ásala rápido. Insuperable para tacos y fajitas.",
@@ -1251,18 +866,6 @@
     "badge": {
       "es": "Australia · L Grow",
       "en": "Australia · L Grow"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "8-9",
-          "lo": 8,
-          "hi": 9,
-          "image": "lgrow-tenderloin-top.webp",
-          "sku": "LF8-9"
-        }
-      ]
     },
     "es": {
       "name": "Filete Tenderloin Wagyu L Grow",
@@ -1290,18 +893,6 @@
       "es": "L Grow · Fullblood",
       "en": "L Grow · Fullblood"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "9+",
-          "lo": 9,
-          "hi": 10,
-          "image": "lgrow-tenderloin-top.webp",
-          "sku": "LF9+"
-        }
-      ]
-    },
     "es": {
       "name": "Filete Tenderloin Wagyu Fullblood L Grow",
       "description": "El filete (tenderloin) es el corte más tierno de la res: fibra fina, magro y de forma uniforme.\n\nWagyu australiano L Grow, cruza terminada con grano para un marmoleo profundo. Jugoso y untuoso, con el balance perfecto entre grasa y sabor a res.\n\nIdeal para medallones, tournedós y presentaciones donde la terneza manda.",
@@ -1327,18 +918,6 @@
     "badge": {
       "es": "Australia · L Grow",
       "en": "Australia · L Grow"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "8-9",
-          "lo": 8,
-          "hi": 9,
-          "image": "lgrow-striploin-top.webp",
-          "sku": "LN8-9"
-        }
-      ]
     },
     "es": {
       "name": "New York Striploin Wagyu L Grow",
@@ -1366,18 +945,6 @@
       "es": "L Grow · Fullblood",
       "en": "L Grow · Fullblood"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "9+",
-          "lo": 9,
-          "hi": 10,
-          "image": "lgrow-striploin-top.webp",
-          "sku": "LN9+"
-        }
-      ]
-    },
     "es": {
       "name": "New York Striploin Wagyu Fullblood L Grow",
       "description": "New York (striploin) — equilibrio entre marmoleo y mordida firme, con su banda de grasa lateral.\n\nWagyu australiano L Grow, cruza terminada con grano para un marmoleo profundo. Jugoso y untuoso, con el balance perfecto entre grasa y sabor a res.\n\nClásico steakhouse. Rinde excelente entero o en bistecs gruesos.",
@@ -1402,18 +969,6 @@
     "badge": {
       "es": "Australia · L Grow",
       "en": "Australia · L Grow"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "8-9",
-          "lo": 8,
-          "hi": 9,
-          "image": "lgrow-rump-cap-top.webp",
-          "sku": "LP8-9"
-        }
-      ]
     },
     "es": {
       "name": "Picaña Rump Cap Wagyu L Grow",
@@ -1440,25 +995,6 @@
       "es": "Australia · L Grow",
       "en": "Australia · L Grow"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "6-7",
-          "lo": 6,
-          "hi": 7,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
-          "sku": "343697"
-        },
-        {
-          "label": "8-9",
-          "lo": 8,
-          "hi": 9,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-3.webp",
-          "sku": "LR8-9"
-        }
-      ]
-    },
     "es": {
       "name": "Rib Eye Cube Roll Wagyu L Grow",
       "description": "El rib eye (cube roll) equilibra el ojo central magro y la cresta de grasa exterior — dos texturas en una pieza.\n\nWagyu australiano L Grow, cruza terminada con grano para un marmoleo profundo. Jugoso y untuoso, con el balance perfecto entre grasa y sabor a res.\n\nEl corte rey de la parrilla. Excelente sellado, a la plancha o cortado fino.",
@@ -1483,18 +1019,6 @@
     "badge": {
       "es": "Australia · L Grow",
       "en": "Australia · L Grow"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "8-9",
-          "lo": 8,
-          "hi": 9,
-          "image": "lgrow-flap-meat-top.webp",
-          "sku": "343682"
-        }
-      ]
     },
     "es": {
       "name": "Vacío Flap Meat Wagyu L Grow",
@@ -1521,18 +1045,6 @@
       "es": "King River · Australia",
       "en": "King River · Australia"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "0-3",
-          "lo": 0,
-          "hi": 3,
-          "image": "lgrow-inside-skirt-top.webp",
-          "sku": "448826"
-        }
-      ]
-    },
     "es": {
       "name": "Arrachera Inside Skirt King River",
       "description": "Arrachera (skirt steak) — el corte clásico de la fajita, fibra marcada y mucho sabor.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nMarínala y ásala rápido. Insuperable para tacos y fajitas.",
@@ -1557,18 +1069,6 @@
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "9+",
-          "lo": 9,
-          "hi": 10,
-          "image": "lgrow-pe-brisket-top.webp",
-          "sku": "448740"
-        }
-      ]
     },
     "es": {
       "name": "Brisket Deckle Off King River",
@@ -1595,18 +1095,6 @@
       "es": "King River · Australia",
       "en": "King River · Australia"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "6-7",
-          "lo": 6,
-          "hi": 7,
-          "image": "lgrow-shin-shank-top.webp",
-          "sku": "448843"
-        }
-      ]
-    },
     "es": {
       "name": "Chamorro Shin Shank King River",
       "description": "Chamorro (shin / shank) — rico en colágeno, se vuelve gelatinoso y tierno con cocción lenta.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nOsobuco, braseados y caldos de sabor profundo.",
@@ -1632,25 +1120,6 @@
       "es": "King River · Australia",
       "en": "King River · Australia"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "0-3",
-          "lo": 0,
-          "hi": 3,
-          "image": "lgrow-short-rib-meat-top.webp",
-          "sku": "448825"
-        },
-        {
-          "label": "4-5",
-          "lo": 4,
-          "hi": 5,
-          "image": "lgrow-short-rib-meat-top.webp",
-          "sku": "448839"
-        }
-      ]
-    },
     "es": {
       "name": "Chuck Short Rib King River",
       "description": "Short rib (costilla, con o sin hueso) — corte jugoso y muy marmoleado, intenso en sabor.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nRey del braseado y el ahumado. También en finas láminas para parrilla coreana.",
@@ -1675,32 +1144,6 @@
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "0-3",
-          "lo": 0,
-          "hi": 3,
-          "image": "lgrow-chuck-eye-roll-top.webp",
-          "sku": "448772"
-        },
-        {
-          "label": "4-5",
-          "lo": 4,
-          "hi": 5,
-          "image": "lgrow-chuck-eye-roll-top.webp",
-          "sku": "448731"
-        },
-        {
-          "label": "6-7",
-          "lo": 6,
-          "hi": 7,
-          "image": "lgrow-chuck-eye-roll-top.webp",
-          "sku": "448732"
-        }
-      ]
     },
     "es": {
       "name": "Diezmillo Chuck Roll King River",
@@ -1728,18 +1171,6 @@
       "es": "King River · Australia",
       "en": "King River · Australia"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "0-3",
-          "lo": 0,
-          "hi": 3,
-          "image": "lgrow-tenderloin-top.webp",
-          "sku": "448729"
-        }
-      ]
-    },
     "es": {
       "name": "Filete Tenderloin King River",
       "description": "El filete (tenderloin) es el corte más tierno de la res: fibra fina, magro y de forma uniforme.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nIdeal para medallones, tournedós y presentaciones donde la terneza manda.",
@@ -1764,18 +1195,6 @@
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "4-5",
-          "lo": 4,
-          "hi": 5,
-          "image": "lgrow-karubi-plate-top.webp",
-          "sku": "448841"
-        }
-      ]
     },
     "es": {
       "name": "Karubi Plate King River",
@@ -1803,32 +1222,6 @@
       "es": "King River · Australia",
       "en": "King River · Australia"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "2-3",
-          "lo": 2,
-          "hi": 3,
-          "image": "lgrow-striploin-top.webp",
-          "sku": "448721"
-        },
-        {
-          "label": "4-5",
-          "lo": 4,
-          "hi": 5,
-          "image": "lgrow-striploin-top.webp",
-          "sku": "448701"
-        },
-        {
-          "label": "9+",
-          "lo": 9,
-          "hi": 10,
-          "image": "lgrow-striploin-top.webp",
-          "sku": "416171"
-        }
-      ]
-    },
     "es": {
       "name": "New York Striploin King River",
       "description": "New York (striploin) — equilibrio entre marmoleo y mordida firme, con su banda de grasa lateral.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nClásico steakhouse. Rinde excelente entero o en bistecs gruesos.",
@@ -1853,18 +1246,6 @@
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "4-5",
-          "lo": 4,
-          "hi": 5,
-          "image": "lgrow-bolar-blade-top.webp",
-          "sku": "448824"
-        }
-      ]
     },
     "es": {
       "name": "Paleta Bolar Blade King River",
@@ -1891,25 +1272,6 @@
       "es": "King River · Australia",
       "en": "King River · Australia"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "0-3",
-          "lo": 0,
-          "hi": 3,
-          "image": "lgrow-rump-cap-top.webp",
-          "sku": "448827"
-        },
-        {
-          "label": "9+",
-          "lo": 9,
-          "hi": 10,
-          "image": "lgrow-rump-cap-top.webp",
-          "sku": "448719"
-        }
-      ]
-    },
     "es": {
       "name": "Picaña Rump Cap King River",
       "description": "Picaña (rump cap) — corte brasileño por excelencia, con una capa de grasa superior que se vuelve crujiente.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nEstrella del asado. Córtala en C contra la fibra o ásala entera con la grasa hacia arriba.",
@@ -1934,25 +1296,6 @@
       "es": "King River · Australia",
       "en": "King River · Australia"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "0-3",
-          "lo": 0,
-          "hi": 3,
-          "image": "placeholder-coming-soon.webp",
-          "sku": "448783"
-        },
-        {
-          "label": "6-7",
-          "lo": 6,
-          "hi": 7,
-          "image": "placeholder-coming-soon.webp",
-          "sku": "448842"
-        }
-      ]
-    },
     "es": {
       "name": "Rib Eye c/Hueso Export Rib King River",
       "description": "Rib eye con hueso (export rib) — el hueso aporta sabor y una presentación imponente.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nPieza de impacto para asadores y mesas compartidas.",
@@ -1976,32 +1319,6 @@
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "2-3",
-          "lo": 2,
-          "hi": 3,
-          "image": "placeholder-coming-soon.webp",
-          "sku": "448699"
-        },
-        {
-          "label": "4-5",
-          "lo": 4,
-          "hi": 5,
-          "image": "placeholder-coming-soon.webp",
-          "sku": "448700"
-        },
-        {
-          "label": "6-7",
-          "lo": 6,
-          "hi": 7,
-          "image": "placeholder-coming-soon.webp",
-          "sku": "448703"
-        }
-      ]
     },
     "es": {
       "name": "Sirloin c/Picaña D-Rump King River",
@@ -2028,25 +1345,6 @@
       "es": "King River · Australia",
       "en": "King River · Australia"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "4-5",
-          "lo": 4,
-          "hi": 5,
-          "image": "lgrow-rostbiff-top.webp",
-          "sku": "448714"
-        },
-        {
-          "label": "6-7",
-          "lo": 6,
-          "hi": 7,
-          "image": "lgrow-rostbiff-top.webp",
-          "sku": "448716"
-        }
-      ]
-    },
     "es": {
       "name": "Sirloin Rostbiff King River",
       "description": "Sirloin rostbiff — corte magro de cadera, ideal para roast beef y rebanadas finas.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nAsado entero al horno o laminado para fríos y sándwiches.",
@@ -2072,18 +1370,6 @@
       "es": "King River · Australia",
       "en": "King River · Australia"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "0-3",
-          "lo": 0,
-          "hi": 3,
-          "image": "lgrow-chuck-tail-flap-top.webp",
-          "sku": "448840"
-        }
-      ]
-    },
     "es": {
       "name": "Tablita Chuck Tail King River",
       "description": "Tablita (chuck tail / tira de asado) — costilla cruzada, jugosa y llena de sabor.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nClásico de la parrilla mexicana y el asado. Para compartir.",
@@ -2107,18 +1393,6 @@
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "0-3",
-          "lo": 0,
-          "hi": 3,
-          "image": "placeholder-coming-soon.webp",
-          "sku": "448741"
-        }
-      ]
     },
     "es": {
       "name": "Tomahawk King River",
@@ -2144,18 +1418,6 @@
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "9+",
-          "lo": 9,
-          "hi": 10,
-          "image": "lgrow-flap-meat-top.webp",
-          "sku": "448735"
-        }
-      ]
     },
     "es": {
       "name": "Vacío Flap Meat King River",
@@ -2183,18 +1445,6 @@
       "es": "King River · Australia",
       "en": "King River · Australia"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "9+",
-          "lo": 9,
-          "hi": 10,
-          "image": "lgrow-oyster-blade-top.webp",
-          "sku": "448596"
-        }
-      ]
-    },
     "es": {
       "name": "Flat Iron Purebred King River",
       "description": "Flat iron (de la paleta) — corte tierno y muy marmoleado, una joya de precio inteligente.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nVersátil para parrilla, fajitas o cortado fino.",
@@ -2219,18 +1469,6 @@
     "badge": {
       "es": "Jewel · Fullblood",
       "en": "Jewel · Fullblood"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "9+",
-          "lo": 9,
-          "hi": 10,
-          "image": "lgrow-chuck-eye-roll-top.webp",
-          "sku": "448593"
-        }
-      ]
     },
     "es": {
       "name": "Diezmillo Chuck Roll Fullblood Jewel",
@@ -2258,18 +1496,6 @@
       "es": "Jewel · Fullblood",
       "en": "Jewel · Fullblood"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "9+",
-          "lo": 9,
-          "hi": 10,
-          "image": "lgrow-striploin-top.webp",
-          "sku": "448577"
-        }
-      ]
-    },
     "es": {
       "name": "New York Fullblood Jewel",
       "description": "New York (striploin) — equilibrio entre marmoleo y mordida firme, con su banda de grasa lateral.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nClásico steakhouse. Rinde excelente entero o en bistecs gruesos.",
@@ -2294,18 +1520,6 @@
     "badge": {
       "es": "Jewel · Fullblood",
       "en": "Jewel · Fullblood"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "9+",
-          "lo": 9,
-          "hi": 10,
-          "image": "lgrow-bolar-blade-top.webp",
-          "sku": "448594"
-        }
-      ]
     },
     "es": {
       "name": "Paleta Bolar Blade Fullblood Jewel",
@@ -2333,18 +1547,6 @@
       "es": "Jewel · Fullblood",
       "en": "Jewel · Fullblood"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "9+",
-          "lo": 9,
-          "hi": 10,
-          "image": "lgrow-cube-roll-top.webp",
-          "sku": "448574"
-        }
-      ]
-    },
     "es": {
       "name": "Rib Eye Cube Roll Fullblood Jewel",
       "description": "El rib eye (cube roll) equilibra el ojo central magro y la cresta de grasa exterior — dos texturas en una pieza.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nEl corte rey de la parrilla. Excelente sellado, a la plancha o cortado fino.",
@@ -2369,18 +1571,6 @@
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "8+",
-          "lo": 8,
-          "hi": 10,
-          "image": "lgrow-inside-skirt-top.webp",
-          "sku": "62195-1"
-        }
-      ]
     },
     "es": {
       "name": "Arrachera Inside Skirt Abatti Ranch",
@@ -2407,25 +1597,6 @@
       "es": "Cross Americano",
       "en": "American Cross"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "6-7",
-          "lo": 6,
-          "hi": 7,
-          "image": "lgrow-pe-brisket-top.webp",
-          "sku": "71815-1"
-        },
-        {
-          "label": "8+",
-          "lo": 8,
-          "hi": 10,
-          "image": "lgrow-pe-brisket-top.webp",
-          "sku": "61815-1"
-        }
-      ]
-    },
     "es": {
       "name": "Brisket Abatti Ranch",
       "description": "Brisket (pecho) — el corte del barbecue por excelencia, con su característica capa de grasa.\n\nWagyu cross americano Abatti Ranch, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nAhumado lento, pastrami o braseado. La paciencia lo transforma en mantequilla.",
@@ -2450,18 +1621,6 @@
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "4-5",
-          "lo": 4,
-          "hi": 5,
-          "image": "lgrow-short-rib-meat-top.webp",
-          "sku": "83045-1"
-        }
-      ]
     },
     "es": {
       "name": "Chuck Short Rib Abatti Ranch",
@@ -2488,25 +1647,6 @@
       "es": "Cross Americano",
       "en": "American Cross"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "6-7",
-          "lo": 6,
-          "hi": 7,
-          "image": "lgrow-short-rib-meat-top.webp",
-          "sku": "72395-1"
-        },
-        {
-          "label": "8+",
-          "lo": 8,
-          "hi": 10,
-          "image": "lgrow-short-rib-meat-top.webp",
-          "sku": "62395-1"
-        }
-      ]
-    },
     "es": {
       "name": "Costilla Short Rib s/Hueso Abatti Ranch",
       "description": "Short rib (costilla, con o sin hueso) — corte jugoso y muy marmoleado, intenso en sabor.\n\nWagyu cross americano Abatti Ranch, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nRey del braseado y el ahumado. También en finas láminas para parrilla coreana.",
@@ -2531,18 +1671,6 @@
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "8+",
-          "lo": 8,
-          "hi": 10,
-          "image": "lgrow-chuck-eye-roll-top.webp",
-          "sku": "61655-1"
-        }
-      ]
     },
     "es": {
       "name": "Diezmillo Chuck Roll Abatti Ranch",
@@ -2570,18 +1698,6 @@
       "es": "Cross Americano",
       "en": "American Cross"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "4-5",
-          "lo": 4,
-          "hi": 5,
-          "image": "lgrow-tenderloin-top.webp",
-          "sku": "88935-1"
-        }
-      ]
-    },
     "es": {
       "name": "Filete Tenderloin Abatti Ranch",
       "description": "El filete (tenderloin) es el corte más tierno de la res: fibra fina, magro y de forma uniforme.\n\nWagyu cross americano Abatti Ranch, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nIdeal para medallones, tournedós y presentaciones donde la terneza manda.",
@@ -2605,18 +1721,6 @@
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "8+",
-          "lo": 8,
-          "hi": 10,
-          "image": "placeholder-coming-soon.webp",
-          "sku": "62435-3"
-        }
-      ]
     },
     "es": {
       "name": "Meaty Back Rib Abatti Ranch",
@@ -2644,25 +1748,6 @@
       "es": "Cross Americano",
       "en": "American Cross"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "6-7",
-          "lo": 6,
-          "hi": 7,
-          "image": "lgrow-striploin-top.webp",
-          "sku": "78035-1-AB"
-        },
-        {
-          "label": "8+",
-          "lo": 8,
-          "hi": 10,
-          "image": "lgrow-striploin-top.webp",
-          "sku": "68035-1"
-        }
-      ]
-    },
     "es": {
       "name": "New York Striploin Abatti Ranch",
       "description": "New York (striploin) — equilibrio entre marmoleo y mordida firme, con su banda de grasa lateral.\n\nWagyu cross americano Abatti Ranch, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nClásico steakhouse. Rinde excelente entero o en bistecs gruesos.",
@@ -2687,18 +1772,6 @@
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "8+",
-          "lo": 8,
-          "hi": 10,
-          "image": "lgrow-bolar-blade-top.webp",
-          "sku": "61433-1"
-        }
-      ]
     },
     "es": {
       "name": "Paleta Shoulder Clod Abatti Ranch",
@@ -2725,18 +1798,6 @@
       "es": "Cross Americano",
       "en": "American Cross"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "8+",
-          "lo": 8,
-          "hi": 10,
-          "image": "lgrow-rump-cap-top.webp",
-          "sku": "68465-1"
-        }
-      ]
-    },
     "es": {
       "name": "Picaña Abatti Ranch",
       "description": "Picaña (rump cap) — corte brasileño por excelencia, con una capa de grasa superior que se vuelve crujiente.\n\nWagyu cross americano Abatti Ranch, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nEstrella del asado. Córtala en C contra la fibra o ásala entera con la grasa hacia arriba.",
@@ -2761,18 +1822,6 @@
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
-    },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "4-5",
-          "lo": 4,
-          "hi": 5,
-          "image": "lgrow-rib-cap-meat-top.webp",
-          "sku": "82955-1"
-        }
-      ]
     },
     "es": {
       "name": "Rib Cap Abatti Ranch",
@@ -2800,25 +1849,6 @@
       "es": "Cross Americano",
       "en": "American Cross"
     },
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "label": "6-7",
-          "lo": 6,
-          "hi": 7,
-          "image": "lgrow-cube-roll-top.webp",
-          "sku": "71235-1"
-        },
-        {
-          "label": "8+",
-          "lo": 8,
-          "hi": 10,
-          "image": "lgrow-cube-roll-top.webp",
-          "sku": "RBABA"
-        }
-      ]
-    },
     "es": {
       "name": "Rib Eye Lip On Abatti Ranch",
       "description": "El rib eye (cube roll) equilibra el ojo central magro y la cresta de grasa exterior — dos texturas en una pieza.\n\nWagyu cross americano Abatti Ranch, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nEl corte rey de la parrilla. Excelente sellado, a la plancha o cortado fino.",
@@ -2843,7 +1873,6 @@
       "es": "Cross Americano",
       "en": "American Cross"
     },
-    "marbling": null,
     "es": {
       "name": "Tuétano Femur Bones Abatti Ranch",
       "description": "Tuétano (femur bones) — hueso con médula, untuoso y lleno de sabor.\n\nWagyu cross americano Abatti Ranch, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nAl horno para untar en pan, o como base de caldos y salsas.",
