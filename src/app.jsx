@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom/client'
 import { Analytics } from '@vercel/analytics/react'
 import { LangProvider, useLang, getStrings, fmt } from './i18n.jsx'
 import { PRODUCTS as PRODUCT_LIST, PRODUCT_STRINGS } from './products.js'
+import { CATEGORY_KEYS, CAT_SLUG, SLUG_CAT, catOf, catLabel } from './categories.js'
 import AdminApp from './admin/AdminApp.jsx'
 
 
@@ -65,14 +66,8 @@ function slugify(s) {
   return (s || '').toString().normalize('NFD').replace(/[̀-ͯ]/g, '')
     .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
-const CAT_SLUG = {
-  jp: 'a5-japones', au: 'wagyu-australiano', us: 'wagyu-americano', mackas: 'black-angus',
-};
-const SLUG_CAT = Object.fromEntries(Object.entries(CAT_SLUG).map(([k, v]) => [v, k]));
-// Public catalog shows 4 categories. King River / Jewel keep their own product
-// content but display + filter under "Wagyu Australiano" (au).
-const DISPLAY_CAT = { jp: 'jp', mackas: 'mackas', au: 'au', kingriver: 'au', us: 'us' };
-const catOf = (p) => DISPLAY_CAT[p.cat] || p.cat;
+// Category slugs / display mapping / labels come from categories.js (editable
+// via the admin Categorías section → categories.json).
 const PRODUCT_SLUG = {}; // id -> slug
 const SLUG_PRODUCT = {}; // slug -> product
 (() => {
@@ -304,7 +299,7 @@ function Hero({ onShop, onQuote }) {
 /* ===== Product grid ===== */
 function ProductCard({ product, onOpen }) {
   const { Card, Button, Badge } = window.MeatConnectionDesignSystem_3e7a26;
-  const { t } = useLang();
+  const { t, lang } = useLang();
   const p = t.products[product.id];
   return (
     <Card variant="default" padding="none" style={{ display: 'flex', flexDirection: 'column', cursor: 'pointer', transition: 'box-shadow var(--dur-med), transform var(--dur-med)' }}
@@ -318,7 +313,7 @@ function ProductCard({ product, onOpen }) {
       </div>
       <div style={{ padding: '18px', display: 'flex', flexDirection: 'column', gap: '12px', flex: 1 }}>
         <div>
-          <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.14em', fontSize: '11px', color: 'var(--accent-gold-ink)', marginBottom: '6px' }}>{t.categories[catOf(product)] || ''}</div>
+          <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.14em', fontSize: '11px', color: 'var(--accent-gold-ink)', marginBottom: '6px' }}>{catLabel(catOf(product), lang)}</div>
           <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '20px', lineHeight: 1.05, color: 'var(--text-strong)' }}>{p.name}</div>
           <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '4px' }}>{cardHook(p.description)}</div>
           {product.marbling && <div style={{ marginTop: '10px' }}><MarblingPill marbling={product.marbling} /></div>}
@@ -648,12 +643,11 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
 
 /* ===== Footer + toolbar + App ===== */
 function Footer({ onCategory, onAnchor }) {
-  const { t } = useLang();
-  // Catalog column items map positionally to catalog filter codes
-  // (Japanese A5 → jp, Australian → au, American → us, Wholesale boxes → all).
-  const catCodes = ['jp', 'au', 'us', 'mackas'];
+  const { t, lang } = useLang();
+  // Catalog column mirrors the editable category list (labels + order stay in sync).
+  const catItems = CATEGORY_KEYS.map((k) => [catLabel(k, lang), null, null, () => onCategory(k)]);
   const cols = [
-    [t.footer.catalogTitle, t.footer.catalogItems.map((label, i) => [label, null, null, () => onCategory(catCodes[i] || 'all')])],
+    [t.footer.catalogTitle, catItems],
     [t.footer.servicesTitle, t.footer.servicesItems.map((label) => [label, null, null, () => onAnchor('servicios')])],
     [t.footer.contactTitle, [['WhatsApp', waHref(t.wa.quote), 'MessageCircle'], ['Instagram', IG_LINK, 'Instagram'], ['Facebook', FB_LINK, 'Facebook'], [t.footer.quoteCatalogs, '#contacto']]],
   ];
@@ -688,8 +682,8 @@ function Footer({ onCategory, onAnchor }) {
 }
 function ShopToolbar({ active, onPick }) {
   const { Tag } = window.MeatConnectionDesignSystem_3e7a26;
-  const { t } = useLang();
-  const cats = [['all', t.categories.all], ['jp', t.categories.jp], ['au', t.categories.au], ['us', t.categories.us], ['mackas', t.categories.mackas]];
+  const { t, lang } = useLang();
+  const cats = [['all', t.categories.all], ...CATEGORY_KEYS.map((k) => [k, catLabel(k, lang)])];
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap', marginBottom: '28px' }}>
       {cats.map(([key, label]) => <Tag key={key} selected={active === key} onClick={() => onPick(key)}>{label}</Tag>)}

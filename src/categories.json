@@ -1,0 +1,30 @@
+[
+  {
+    "key": "jp",
+    "slug": "a5-japones",
+    "es": "A5 Japonés",
+    "en": "A5 Japanese",
+    "aliases": []
+  },
+  {
+    "key": "au",
+    "slug": "wagyu-australiano",
+    "es": "Wagyu Australiano",
+    "en": "Australian Wagyu",
+    "aliases": ["kingriver"]
+  },
+  {
+    "key": "us",
+    "slug": "wagyu-americano",
+    "es": "Wagyu Americano",
+    "en": "American Wagyu",
+    "aliases": []
+  },
+  {
+    "key": "mackas",
+    "slug": "black-angus",
+    "es": "Black Angus",
+    "en": "Black Angus",
+    "aliases": []
+  }
+]

@@ -44,12 +44,17 @@ export function TextArea({ label, value, onChange, rows = 3 }) {
   )
 }
 
+// options: array of strings, or { value, label } objects for friendly labels.
 export function Select({ label, value, options, onChange }) {
   return (
     <label style={{ display: 'block', marginBottom: '10px' }}>
       {label && <span style={labelStyle}>{label}</span>}
       <select style={inputBase} value={value} onChange={(e) => onChange(e.target.value)}>
-        {options.map((o) => <option key={o} value={o}>{o}</option>)}
+        {options.map((o) => {
+          const val = typeof o === 'object' ? o.value : o
+          const lab = typeof o === 'object' ? o.label : o
+          return <option key={val} value={val}>{lab}</option>
+        })}
       </select>
     </label>
   )

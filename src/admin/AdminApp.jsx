@@ -3,14 +3,26 @@
 // Content admin only — not a CRM. See docs/superpowers/specs/2026-06-27-catalog-admin-simplify.md
 import React from 'react'
 import { RAW_CATALOG, CATEGORIES, TONES, IMAGE_FILES, imageUrl } from '../products.js'
+import { CATEGORY_LIST } from '../categories.js'
 import { TextField, TextArea, Select, card, btn, btnDanger, labelStyle, move } from './fields.jsx'
 import ImagesPicker from './ImagesPicker.jsx'
 import MarblingEditor from './MarblingEditor.jsx'
 import MediaLibrary from './MediaLibrary.jsx'
+import CategoriesEditor from './CategoriesEditor.jsx'
 import { UPLOADED, UPLOADED_PREVIEWS } from './uploads.js'
 
 const PW_KEY = 'mc_admin_pw'
 const clone = (x) => JSON.parse(JSON.stringify(x))
+
+// Labeled category options for the product dropdown/filter: the editable
+// categories (key → Spanish label) plus any legacy/alias code still present on a
+// product (e.g. "kingriver") so those products stay selectable.
+function categoryOptions(catalog) {
+  const opts = CATEGORY_LIST.map((c) => ({ value: c.key, label: c.es }))
+  const known = new Set(opts.map((o) => o.value))
+  for (const p of catalog) if (p.cat && !known.has(p.cat)) { known.add(p.cat); opts.push({ value: p.cat, label: p.cat }) }
+  return opts
+}
 
 const page = { maxWidth: '980px', margin: '0 auto', padding: '28px 18px 120px', fontFamily: 'var(--font-body, sans-serif)', color: 'var(--mc-ink-900, #1a1a1a)' }
 const selectStyle = { padding: '8px 10px', border: '1px solid #cfcbc4', borderRadius: '8px', fontSize: '13px', background: '#fff' }
@@ -209,7 +221,7 @@ function AiGenerate({ product, onChange }) {
   )
 }
 
-function ProductEditor({ product, canMove, open, onToggle, onChange, onMove, onRemove }) {
+function ProductEditor({ product, canMove, open, onToggle, onChange, onMove, onRemove, catOptions }) {
   const cover = (product.images || [])[0]
   const thumb = cover && (imageUrl(cover) || UPLOADED_PREVIEWS.get(cover))
   return (
@@ -231,7 +243,7 @@ function ProductEditor({ product, canMove, open, onToggle, onChange, onMove, onR
         <div style={{ marginTop: '14px' }}>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
             <TextField label="ID" value={product.id} onChange={(v) => onChange({ ...product, id: v })} />
-            <Select label="Categoría" value={product.cat} options={CATEGORIES} onChange={(v) => onChange({ ...product, cat: v })} />
+            <Select label="Categoría" value={product.cat} options={catOptions} onChange={(v) => onChange({ ...product, cat: v })} />
             <Select label="Tono" value={product.tone} options={TONES} onChange={(v) => onChange({ ...product, tone: v })} />
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', alignItems: 'flex-end', margin: '2px 0 12px' }}>
@@ -319,6 +331,7 @@ export default function AdminApp() {
   if (sort === 'name') rows.sort((a, b) => ((a[0].es && a[0].es.name) || a[0].id).localeCompare((b[0].es && b[0].es.name) || b[0].id))
   else if (sort === 'cat') rows.sort((a, b) => a[0].cat.localeCompare(b[0].cat) || ((a[0].es && a[0].es.name) || '').localeCompare((b[0].es && b[0].es.name) || ''))
   const canMove = sort === 'manual' && !q && filterCat === 'all'
+  const catOptions = categoryOptions(catalog)
 
   const navItem = (id, label, count) => (
     <button type="button" onClick={() => setSection(id)} style={{
@@ -336,7 +349,7 @@ export default function AdminApp() {
           Meat Connection<div style={{ fontSize: '11px', fontWeight: 400, color: '#888' }}>Admin</div>
         </div>
         {navItem('products', 'Productos', catalog.length)}
-        {navItem('categories', 'Categorías')}
+        {navItem('categories', 'Categorías', CATEGORY_LIST.length)}
         {navItem('media', 'Medios', IMAGE_FILES.length)}
         <div style={{ flex: 1 }} />
         <button type="button" style={btn} onClick={logout}>Salir</button>
@@ -353,7 +366,7 @@ export default function AdminApp() {
               style={{ padding: '8px 10px', border: '1px solid #cfcbc4', borderRadius: '8px', fontSize: '13px', minWidth: '220px' }} />
             <select value={filterCat} onChange={(e) => setFilterCat(e.target.value)} style={selectStyle}>
               <option value="all">Todas las categorías</option>
-              {CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}
+              {catOptions.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
             </select>
             <select value={sort} onChange={(e) => setSort(e.target.value)} style={selectStyle}>
               <option value="manual">Orden manual</option><option value="name">Por nombre</option><option value="cat">Por categoría</option>
@@ -361,7 +374,7 @@ export default function AdminApp() {
             <span style={{ fontSize: '12px', color: '#777', marginLeft: 'auto' }}>{rows.length} de {catalog.length}</span>
           </div>
           {rows.map(([p, i]) => (
-            <ProductEditor key={key(p, i)} product={p} canMove={canMove}
+            <ProductEditor key={key(p, i)} product={p} canMove={canMove} catOptions={catOptions}
               open={openId === key(p, i)} onToggle={() => setOpenId((o) => o === key(p, i) ? null : key(p, i))}
               onChange={(next) => setProduct(i, next)} onMove={(d) => moveProduct(i, d)} onRemove={() => removeProduct(i)} />
           ))}
@@ -371,13 +384,9 @@ export default function AdminApp() {
 
         {section === 'media' && <MediaLibrary catalog={catalog} />}
 
-        {section === 'categories' && (
-          <div style={{ ...card, color: '#555', fontSize: '14px', lineHeight: 1.6 }}>
-            La gestión de categorías (agregar / renombrar / reordenar) llega en la próxima fase.
-            Por ahora, la categoría de cada producto se elige en su editor.
-          </div>
-        )}
+        {section === 'categories' && <CategoriesEditor catalog={catalog} />}
 
+        {section === 'products' && (
         <div style={{ position: 'sticky', bottom: 0, marginTop: '24px', padding: '14px 0', background: 'linear-gradient(to top, var(--mc-paper, #fff) 70%, transparent)' }}>
           {status && (
             <div style={{ marginBottom: '10px', padding: '10px 12px', borderRadius: '8px', fontSize: '13px',
@@ -391,6 +400,7 @@ export default function AdminApp() {
             {saving ? 'Guardando…' : 'Guardar y publicar'}
           </button>
         </div>
+        )}
       </main>
     </div>
   )

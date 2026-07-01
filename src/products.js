@@ -61,5 +61,7 @@ export const imageUrl = (file) => imageByFile[file]
 // mutating the module's copy that the storefront renders from).
 export const RAW_CATALOG = JSON.parse(JSON.stringify(catalog))
 
-export const CATEGORIES = ['jp', 'mackas', 'au', 'kingriver', 'us']
+// Selectable internal category keys (display keys + aliases) — sourced from the
+// editable category taxonomy so the admin dropdown/validation stay in sync.
+export { ALL_CAT_KEYS as CATEGORIES } from './categories.js'
 export const TONES = ['charcoal', 'kraft', 'cream', 'red']
