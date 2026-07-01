@@ -63,7 +63,7 @@ function LangToggle({ style, className }) {
   const { lang, setLang } = useLang();
   const opts = [['es', 'ES'], ['en', 'EN']];
   return (
-    <div role="group" aria-label="Language" className={className} style={{ display: 'inline-flex', border: '1px solid var(--mc-ink-700)', borderRadius: 'var(--radius-md)', overflow: 'hidden', flex: 'none', ...style }}>
+    <div role="group" aria-label="Language" className={className} style={{ display: 'inline-flex', border: '1px solid color-mix(in srgb, currentColor 32%, transparent)', borderRadius: 'var(--radius-md)', overflow: 'hidden', flex: 'none', ...style }}>
       {opts.map(([code, label]) => {
         const on = lang === code;
         return (
@@ -71,7 +71,7 @@ function LangToggle({ style, className }) {
             aria-label={code === 'es' ? 'Cambiar a español' : 'Switch to English'}
             style={{ border: 'none', cursor: 'pointer', padding: '0 10px', height: '40px', minWidth: '40px',
               fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '13px', letterSpacing: '0.06em',
-              background: on ? 'var(--mc-red)' : 'transparent', color: on ? '#fff' : 'var(--mc-ink-200)', transition: 'background var(--dur-fast), color var(--dur-fast)' }}>
+              background: on ? 'var(--mc-red)' : 'transparent', color: on ? '#fff' : 'currentColor', transition: 'background var(--dur-fast), color var(--dur-fast)' }}>
             {label}
           </button>
         );
@@ -130,19 +130,21 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder, overHero = fals
   const goMobile = (l) => { setMenuOpen(false); l.go(); };
   return (
     <header style={{
-      color: 'var(--mc-paper)', position: 'sticky', top: 0, zIndex: 30,
-      background: transparent ? 'linear-gradient(180deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.18) 100%)' : 'var(--mc-charcoal)',
-      borderBottom: transparent ? '1px solid transparent' : '1px solid var(--mc-ink-700)',
+      color: 'var(--text-strong)', position: 'sticky', top: 0, zIndex: 30,
+      background: transparent ? 'rgba(247,245,240,0.82)' : 'var(--mc-paper)',
+      backdropFilter: transparent ? 'saturate(1.3) blur(10px)' : 'none',
+      WebkitBackdropFilter: transparent ? 'saturate(1.3) blur(10px)' : 'none',
+      borderBottom: '1px solid var(--border-subtle)',
       transition: 'background var(--dur-med) var(--ease-out), border-color var(--dur-med) var(--ease-out)'
     }}>
-      <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 20px', height: '68px', display: 'flex', alignItems: 'center', gap: '24px', boxShadow: transparent ? 'none' : 'inset 0 -1px 0 var(--accent-gold)' }}>
-        <img src={window.MC_LOGO} alt="Meat Connection" style={{ height: '32px', cursor: 'pointer' }} onClick={() => onNav('home')} />
+      <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '0 20px', height: '68px', display: 'flex', alignItems: 'center', gap: '24px', boxShadow: 'inset 0 -1px 0 var(--hairline-gold)' }}>
+        <img src={window.MC_LOGO_INK} alt="Meat Connection" style={{ height: '32px', cursor: 'pointer' }} onClick={() => onNav('home')} />
         <nav className="mc-nav" style={{ display: 'flex', gap: '4px', flex: 1 }}>
           {links.map((l) => (
             <button key={l.label} onClick={l.go}
-              style={{ border: 'none', background: 'transparent', color: 'var(--mc-ink-200)', cursor: 'pointer',
-                fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 500, fontSize: '14px', padding: '8px 12px' }}
-              onMouseOver={(e) => e.currentTarget.style.color = 'var(--accent-gold)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--mc-ink-200)'}>
+              style={{ border: 'none', background: 'transparent', color: 'var(--text-body)', cursor: 'pointer',
+                fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600, fontSize: '14px', padding: '8px 12px' }}
+              onMouseOver={(e) => e.currentTarget.style.color = 'var(--accent-gold-ink)'} onMouseOut={(e) => e.currentTarget.style.color = 'var(--text-body)'}>
               {l.label}
             </button>
           ))}
@@ -152,11 +154,11 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder, overHero = fals
           <button onClick={onReorder} aria-label={t.header.reorderAria} title={t.header.reorderTitle}
             className="mc-reorder-btn"
             style={{ display: 'inline-flex', alignItems: 'center', gap: '7px', height: '40px', padding: '0 13px',
-              border: '1px solid var(--mc-ink-700)', background: 'transparent', color: 'var(--mc-paper)', cursor: 'pointer',
+              border: '1px solid var(--border-default)', background: 'transparent', color: 'var(--text-strong)', cursor: 'pointer',
               borderRadius: 'var(--radius-md)', fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase',
               letterSpacing: '0.06em', fontWeight: 600, fontSize: '13px', whiteSpace: 'nowrap' }}
-            onMouseOver={(e) => { e.currentTarget.style.borderColor = 'var(--mc-red)'; e.currentTarget.style.color = '#fff'; }}
-            onMouseOut={(e) => { e.currentTarget.style.borderColor = 'var(--mc-ink-700)'; e.currentTarget.style.color = 'var(--mc-paper)'; }}>
+            onMouseOver={(e) => { e.currentTarget.style.borderColor = 'var(--mc-red)'; e.currentTarget.style.color = 'var(--mc-red)'; }}
+            onMouseOut={(e) => { e.currentTarget.style.borderColor = 'var(--border-default)'; e.currentTarget.style.color = 'var(--text-strong)'; }}>
             <Icon name="RotateCcw" size={16} color="currentColor" /><span className="mc-reorder-label">{t.header.reorder}</span>
           </button>
           <div style={{ position: 'relative' }}>
@@ -168,8 +170,8 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder, overHero = fals
             )}
           </div>
           <button className="mc-menu-btn" aria-label={t.header.openMenu} aria-expanded={menuOpen} onClick={() => setMenuOpen(true)}
-            style={{ width: '44px', height: '44px', alignItems: 'center', justifyContent: 'center', border: 'none', background: 'transparent', color: 'var(--mc-paper)', cursor: 'pointer' }}>
-            <Icon name="Menu" size={24} color="var(--mc-paper)" />
+            style={{ width: '44px', height: '44px', alignItems: 'center', justifyContent: 'center', border: 'none', background: 'transparent', color: 'var(--text-strong)', cursor: 'pointer' }}>
+            <Icon name="Menu" size={24} color="var(--text-strong)" />
           </button>
         </div>
       </div>
