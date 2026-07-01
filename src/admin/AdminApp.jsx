@@ -4,7 +4,7 @@
 import React from 'react'
 import { RAW_CATALOG, CATEGORIES, TONES, IMAGE_FILES, imageUrl } from '../products.js'
 import { CATEGORY_LIST } from '../categories.js'
-import { TextField, TextArea, Select, card, btn, btnDanger, labelStyle, move } from './fields.jsx'
+import { TextField, TextArea, Select, card, btn, btnPrimary, btnDanger, labelStyle, move, ADMIN_FONT } from './fields.jsx'
 import ImagesPicker from './ImagesPicker.jsx'
 import MarblingEditor from './MarblingEditor.jsx'
 import MediaLibrary from './MediaLibrary.jsx'
@@ -24,8 +24,8 @@ function categoryOptions(catalog) {
   return opts
 }
 
-const page = { maxWidth: '980px', margin: '0 auto', padding: '28px 18px 120px', fontFamily: 'var(--font-body, sans-serif)', color: 'var(--mc-ink-900, #1a1a1a)' }
-const selectStyle = { padding: '8px 10px', border: '1px solid #cfcbc4', borderRadius: '8px', fontSize: '13px', background: '#fff' }
+const page = { maxWidth: '980px', margin: '0 auto', padding: '28px 18px 120px', fontFamily: ADMIN_FONT, color: '#1a1a1a' }
+const selectStyle = { padding: '8px 10px', border: '1px solid #d0d3d6', borderRadius: '8px', fontSize: '13px', background: '#fff' }
 const LANG_LABEL = { es: 'Español', en: 'English' }
 
 // Trim outer whitespace only — internal newlines are meaningful (paragraphs/bullets).
@@ -104,11 +104,11 @@ function LoginGate({ onLogin }) {
   const [pw, setPw] = React.useState('')
   return (
     <div style={{ ...page, maxWidth: '380px', paddingTop: '80px' }}>
-      <h1 style={{ fontFamily: 'var(--font-display, sans-serif)', fontSize: '22px', marginBottom: '4px' }}>Catálogo · Admin</h1>
-      <p style={{ fontSize: '13px', color: 'var(--mc-ink-700, #555)', marginTop: 0 }}>Meat Connection</p>
+      <h1 style={{ fontSize: '20px', fontWeight: 700, marginBottom: '4px' }}>Catálogo · Admin</h1>
+      <p style={{ fontSize: '13px', color: '#616a75', marginTop: 0 }}>Meat Connection</p>
       <form onSubmit={(e) => { e.preventDefault(); if (pw) onLogin(pw) }}>
         <TextField label="Contraseña" type="password" value={pw} onChange={setPw} />
-        <button type="submit" style={{ ...btn, background: 'var(--mc-red, #b3122a)', color: '#fff', borderColor: 'var(--mc-red, #b3122a)', padding: '9px 16px', fontSize: '13px' }}>Entrar</button>
+        <button type="submit" style={{ ...btnPrimary, padding: '9px 16px', fontSize: '13px' }}>Entrar</button>
       </form>
     </div>
   )
@@ -279,6 +279,10 @@ export default function AdminApp() {
   const [filterCat, setFilterCat] = React.useState('all')
   const [sort, setSort] = React.useState('manual')
 
+  // Snapshot of the last-saved (pruned) catalog. dirty = current prune differs.
+  const [savedJson, setSavedJson] = React.useState(() => JSON.stringify(pruneCatalog(clone(RAW_CATALOG))))
+  const dirty = React.useMemo(() => JSON.stringify(pruneCatalog(catalog)) !== savedJson, [catalog, savedJson])
+
   function login(password) {
     try { sessionStorage.setItem(PW_KEY, password) } catch {}
     setPw(password); setAuthed(true)
@@ -306,6 +310,7 @@ export default function AdminApp() {
       })
       if (res.ok) {
         setStatus({ ok: true, msg: 'Guardado. El sitio se actualizará en ~1 minuto.' })
+        setSavedJson(JSON.stringify(pruned))
       } else if (res.status === 401) {
         setStatus({ ok: false, msg: 'Contraseña incorrecta.' })
         logout()
@@ -336,72 +341,85 @@ export default function AdminApp() {
   const navItem = (id, label, count) => (
     <button type="button" onClick={() => setSection(id)} style={{
       display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', textAlign: 'left',
-      border: 'none', borderRadius: '8px', padding: '10px 12px', marginBottom: '2px', cursor: 'pointer', fontSize: '14px',
-      fontWeight: section === id ? 700 : 500,
-      background: section === id ? 'var(--mc-red, #b3122a)' : 'transparent', color: section === id ? '#fff' : 'var(--mc-ink-800, #333)',
-    }}>{label}{count != null && <span style={{ fontSize: '11px', opacity: 0.85 }}>{count}</span>}</button>
+      border: 'none', borderRadius: '8px', padding: '9px 12px', marginBottom: '2px', cursor: 'pointer', fontSize: '13px',
+      fontFamily: ADMIN_FONT, fontWeight: section === id ? 700 : 500,
+      background: section === id ? '#e8eaec' : 'transparent', color: '#1a1a1a',
+    }}>{label}{count != null && <span style={{ fontSize: '11px', color: '#616a75' }}>{count}</span>}</button>
   )
 
   return (
-    <div style={{ display: 'flex', minHeight: '100vh', fontFamily: 'var(--font-body, sans-serif)', color: 'var(--mc-ink-900, #1a1a1a)', background: 'var(--mc-paper, #fff)' }}>
-      <aside style={{ width: '210px', flex: 'none', borderRight: '1px solid var(--mc-ink-200, #e3e0da)', background: 'var(--mc-cream, #faf8f4)', padding: '18px 12px', position: 'sticky', top: 0, alignSelf: 'flex-start', height: '100vh', display: 'flex', flexDirection: 'column', boxSizing: 'border-box' }}>
-        <div style={{ fontFamily: 'var(--font-display, sans-serif)', fontSize: '17px', fontWeight: 700, padding: '0 6px 14px', lineHeight: 1.2 }}>
-          Meat Connection<div style={{ fontSize: '11px', fontWeight: 400, color: '#888' }}>Admin</div>
-        </div>
-        {navItem('products', 'Productos', catalog.length)}
-        {navItem('categories', 'Categorías', CATEGORY_LIST.length)}
-        {navItem('media', 'Medios', IMAGE_FILES.length)}
+    <div style={{ minHeight: '100vh', fontFamily: ADMIN_FONT, color: '#1a1a1a', background: '#f1f2f4' }}>
+      <header style={{ position: 'sticky', top: 0, zIndex: 20, display: 'flex', alignItems: 'center', gap: '12px',
+        padding: '10px 20px', background: '#fff', borderBottom: '1px solid #e1e3e5' }}>
+        <strong style={{ fontSize: '15px' }}>Meat Connection</strong>
+        <span style={{ fontSize: '11px', fontWeight: 600, color: '#616a75', background: '#e8eaec', borderRadius: '6px', padding: '2px 8px' }}>Admin</span>
         <div style={{ flex: 1 }} />
-        <button type="button" style={btn} onClick={logout}>Salir</button>
-      </aside>
-
-      <main style={{ flex: 1, minWidth: 0, padding: '22px 26px 130px', maxWidth: '1080px' }}>
-        <h1 style={{ fontFamily: 'var(--font-display, sans-serif)', fontSize: '22px', margin: '0 0 16px' }}>
-          {section === 'products' ? 'Productos' : section === 'categories' ? 'Categorías' : 'Medios'}
-        </h1>
-
-        {section === 'products' && (<>
-          <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', alignItems: 'center', marginBottom: '14px' }}>
-            <input placeholder="Buscar producto…" value={query} onChange={(e) => setQuery(e.target.value)}
-              style={{ padding: '8px 10px', border: '1px solid #cfcbc4', borderRadius: '8px', fontSize: '13px', minWidth: '220px' }} />
-            <select value={filterCat} onChange={(e) => setFilterCat(e.target.value)} style={selectStyle}>
-              <option value="all">Todas las categorías</option>
-              {catOptions.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-            </select>
-            <select value={sort} onChange={(e) => setSort(e.target.value)} style={selectStyle}>
-              <option value="manual">Orden manual</option><option value="name">Por nombre</option><option value="cat">Por categoría</option>
-            </select>
-            <span style={{ fontSize: '12px', color: '#777', marginLeft: 'auto' }}>{rows.length} de {catalog.length}</span>
-          </div>
-          {rows.map(([p, i]) => (
-            <ProductEditor key={key(p, i)} product={p} canMove={canMove} catOptions={catOptions}
-              open={openId === key(p, i)} onToggle={() => setOpenId((o) => o === key(p, i) ? null : key(p, i))}
-              onChange={(next) => setProduct(i, next)} onMove={(d) => moveProduct(i, d)} onRemove={() => removeProduct(i)} />
-          ))}
-          {rows.length === 0 && <p style={{ color: '#888', fontSize: '13px' }}>Sin resultados.</p>}
-          <button type="button" style={{ ...btn, marginTop: '8px' }} onClick={addProduct}>+ Agregar producto</button>
-        </>)}
-
-        {section === 'media' && <MediaLibrary catalog={catalog} />}
-
-        {section === 'categories' && <CategoriesEditor catalog={catalog} />}
-
-        {section === 'products' && (
-        <div style={{ position: 'sticky', bottom: 0, marginTop: '24px', padding: '14px 0', background: 'linear-gradient(to top, var(--mc-paper, #fff) 70%, transparent)' }}>
-          {status && (
-            <div style={{ marginBottom: '10px', padding: '10px 12px', borderRadius: '8px', fontSize: '13px',
-              background: status.ok ? '#e8f5e9' : '#fdecea', color: status.ok ? '#1b5e20' : '#9b1c1c',
-              border: `1px solid ${status.ok ? '#a5d6a7' : '#f5c2c0'}` }}>{status.msg}</div>
-          )}
-          <button type="button" disabled={saving} onClick={save}
-            style={{ fontFamily: 'var(--font-display, sans-serif)', fontWeight: 700, fontSize: '15px', cursor: saving ? 'default' : 'pointer',
-              border: 'none', borderRadius: '8px', padding: '12px 22px', color: '#fff',
-              background: saving ? 'var(--mc-ink-400, #999)' : 'var(--mc-red, #b3122a)' }}>
-            {saving ? 'Guardando…' : 'Guardar y publicar'}
-          </button>
-        </div>
+        {section === 'products' && dirty && (
+          <span style={{ fontSize: '12px', fontWeight: 600, color: '#8a6116' }}>● Cambios sin guardar</span>
         )}
-      </main>
+        {section === 'products' && (
+          <button type="button" disabled={saving || !dirty} onClick={save}
+            style={{ ...btnPrimary, opacity: saving || !dirty ? 0.5 : 1, cursor: saving || !dirty ? 'default' : 'pointer' }}>
+            {saving ? 'Guardando…' : 'Guardar'}
+          </button>
+        )}
+        <button type="button" style={btn} onClick={logout}>Salir</button>
+      </header>
+
+      {status && (
+        <div style={{ position: 'fixed', top: '62px', right: '20px', zIndex: 30, maxWidth: '420px',
+          display: 'flex', gap: '10px', alignItems: 'flex-start', padding: '10px 14px', borderRadius: '10px',
+          fontSize: '13px', boxShadow: '0 4px 16px rgba(0,0,0,0.12)',
+          background: status.ok ? '#d1f0d9' : '#fdecea', color: status.ok ? '#0a6c2e' : '#9b1c1c',
+          border: `1px solid ${status.ok ? '#a3d9b1' : '#f5c2c0'}` }}>
+          <span>{status.msg}</span>
+          <button type="button" onClick={() => setStatus(null)} aria-label="Cerrar"
+            style={{ border: 'none', background: 'none', cursor: 'pointer', color: 'inherit', fontSize: '14px', lineHeight: 1, padding: 0 }}>✕</button>
+        </div>
+      )}
+
+      <div style={{ display: 'flex' }}>
+        <aside style={{ width: '210px', flex: 'none', borderRight: '1px solid #e1e3e5', background: '#fff',
+          padding: '14px 10px', position: 'sticky', top: '53px', alignSelf: 'flex-start',
+          height: 'calc(100vh - 53px)', display: 'flex', flexDirection: 'column', boxSizing: 'border-box' }}>
+          {navItem('products', 'Productos', catalog.length)}
+          {navItem('categories', 'Categorías', CATEGORY_LIST.length)}
+          {navItem('media', 'Medios', IMAGE_FILES.length)}
+          <div style={{ flex: 1 }} />
+        </aside>
+
+        <main style={{ flex: 1, minWidth: 0, padding: '22px 26px 80px', maxWidth: '1080px' }}>
+          <h1 style={{ fontSize: '20px', fontWeight: 700, margin: '0 0 16px' }}>
+            {section === 'products' ? 'Productos' : section === 'categories' ? 'Categorías' : 'Medios'}
+          </h1>
+
+          {section === 'products' && (<>
+            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', alignItems: 'center', marginBottom: '14px' }}>
+              <input placeholder="Buscar producto…" value={query} onChange={(e) => setQuery(e.target.value)}
+                style={{ ...selectStyle, minWidth: '220px' }} />
+              <select value={filterCat} onChange={(e) => setFilterCat(e.target.value)} style={selectStyle}>
+                <option value="all">Todas las categorías</option>
+                {catOptions.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
+              </select>
+              <select value={sort} onChange={(e) => setSort(e.target.value)} style={selectStyle}>
+                <option value="manual">Orden manual</option><option value="name">Por nombre</option><option value="cat">Por categoría</option>
+              </select>
+              <span style={{ fontSize: '12px', color: '#616a75', marginLeft: 'auto' }}>{rows.length} de {catalog.length}</span>
+            </div>
+            {rows.map(([p, i]) => (
+              <ProductEditor key={key(p, i)} product={p} canMove={canMove} catOptions={catOptions}
+                open={openId === key(p, i)} onToggle={() => setOpenId((o) => o === key(p, i) ? null : key(p, i))}
+                onChange={(next) => setProduct(i, next)} onMove={(d) => moveProduct(i, d)} onRemove={() => removeProduct(i)} />
+            ))}
+            {rows.length === 0 && <p style={{ color: '#616a75', fontSize: '13px' }}>Sin resultados.</p>}
+            <button type="button" style={{ ...btn, marginTop: '8px' }} onClick={addProduct}>+ Agregar producto</button>
+          </>)}
+
+          {section === 'media' && <MediaLibrary catalog={catalog} />}
+
+          {section === 'categories' && <CategoriesEditor catalog={catalog} />}
+        </main>
+      </div>
     </div>
   )
 }
