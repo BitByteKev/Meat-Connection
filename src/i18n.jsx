@@ -31,7 +31,7 @@ export const STRINGS = {
       wholesale: 'Solo ofrecemos ventas mayoristas.',
     },
     pdp: {
-      back: 'Volver al catálogo', available: 'Disponible', presentation: 'Presentación',
+      back: 'Volver al catálogo', available: 'Disponible', soldOut: 'Agotado', presentation: 'Presentación',
       qtyLabel: 'Cantidad (kg)', saleType: 'Tipo de venta', mayoreo: 'Mayoreo', menudeo: 'Menudeo',
       addToOrder: 'Agregar {qty} kg a la cotización',
       trust: [['Truck', 'Envíos express a todo México'], ['ShieldCheck', 'Grado y trazabilidad'], ['Snowflake', 'Cadena de frío garantizada']],
@@ -141,7 +141,7 @@ export const STRINGS = {
       wholesale: 'We only offer wholesale sales.',
     },
     pdp: {
-      back: 'Back to catalog', available: 'Available', presentation: 'Format',
+      back: 'Back to catalog', available: 'Available', soldOut: 'Sold out', presentation: 'Format',
       qtyLabel: 'Quantity (kg)', saleType: 'Sale type', mayoreo: 'Wholesale', menudeo: 'Retail',
       addToOrder: 'Add {qty} kg to quote',
       trust: [['Truck', 'Express shipping nationwide'], ['ShieldCheck', 'Grade & traceability'], ['Snowflake', 'Guaranteed cold chain']],

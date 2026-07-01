@@ -40,6 +40,20 @@ function validateCatalog(products) {
     if (typeof p.tone !== 'string' || !p.tone) return `${at}.tone is required`
     if (!Array.isArray(p.images) || p.images.length === 0) return `${at}.images must be a non-empty array`
     if (!p.images.every((f) => typeof f === 'string' && f)) return `${at}.images must be filenames`
+    if ('available' in p && typeof p.available !== 'boolean') return `${at}.available must be a boolean`
+    for (const f of ['sku', 'weight']) {
+      if (f in p && typeof p[f] !== 'string') return `${at}.${f} must be a string`
+    }
+    if ('marbling' in p && p.marbling !== null) {
+      const mb = p.marbling
+      if (typeof mb !== 'object' || typeof mb.system !== 'string' || !Array.isArray(mb.variants)) return `${at}.marbling must be {system, variants[]}`
+      for (let k = 0; k < mb.variants.length; k++) {
+        const v = mb.variants[k]
+        if (!v || typeof v !== 'object') return `${at}.marbling.variants[${k}] is not an object`
+        if (!Number.isFinite(v.lo) || !Number.isFinite(v.hi)) return `${at}.marbling.variants[${k}] needs numeric lo/hi`
+        if (typeof v.image !== 'string') return `${at}.marbling.variants[${k}].image must be a string`
+      }
+    }
     if (!p.badge || typeof p.badge !== 'object') return `${at}.badge object is required`
     for (const lang of ['es', 'en']) {
       const badge = p.badge[lang]

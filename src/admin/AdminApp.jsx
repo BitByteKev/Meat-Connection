@@ -5,6 +5,7 @@ import React from 'react'
 import { RAW_CATALOG, CATEGORIES, TONES, IMAGE_FILES, imageUrl } from '../products.js'
 import { TextField, TextArea, Select, card, btn, btnDanger, labelStyle, move } from './fields.jsx'
 import ImagesPicker from './ImagesPicker.jsx'
+import MarblingEditor from './MarblingEditor.jsx'
 import MediaLibrary from './MediaLibrary.jsx'
 import { UPLOADED, UPLOADED_PREVIEWS } from './uploads.js'
 
@@ -16,12 +17,18 @@ const selectStyle = { padding: '8px 10px', border: '1px solid #cfcbc4', borderRa
 const LANG_LABEL = { es: 'Español', en: 'English' }
 
 // Trim outer whitespace only — internal newlines are meaningful (paragraphs/bullets).
+// Preserves structured fields the form now edits (marbling grades, availability,
+// SKU, weight) — previously these were silently dropped on every save.
 function pruneCatalog(catalog) {
   return catalog.map((p) => ({
     id: p.id.trim(),
     cat: p.cat,
     tone: p.tone,
     images: p.images,
+    ...(p.marbling ? { marbling: cleanMarbling(p.marbling) } : {}),
+    ...(p.available === false ? { available: false } : {}),
+    ...((p.sku || '').trim() ? { sku: p.sku.trim() } : {}),
+    ...((p.weight || '').trim() ? { weight: p.weight.trim() } : {}),
     badge: {
       es: (p.badge.es || '').trim() || null,
       en: (p.badge.en || '').trim() || null,
@@ -37,6 +44,23 @@ function pruneCatalog(catalog) {
       cooking: L.cooking.trim(),
     }
   }
+}
+
+// Coerce grade numbers, drop blank rows, and strip empty optional keys so the
+// saved marbling matches the shape the storefront's MarblingScale expects.
+function cleanMarbling(m) {
+  const variants = (m.variants || [])
+    .map((v) => {
+      const lo = parseInt(v.lo, 10), hi = parseInt(v.hi, 10)
+      if (!Number.isFinite(lo) || !Number.isFinite(hi)) return null
+      const out = { lo, hi, image: v.image || '' }
+      const label = (v.label || '').trim()
+      out.label = label || (lo === hi ? String(lo) : `${lo}-${hi}`)
+      if ((v.sku || '').trim()) out.sku = v.sku.trim()
+      return out
+    })
+    .filter(Boolean)
+  return { system: m.system, variants }
 }
 
 function validate(catalog) {
@@ -58,6 +82,7 @@ function newProduct() {
   const blank = () => ({ name: '', description: '', origin: '', cooking: '' })
   return {
     id: '', cat: 'jp', tone: 'charcoal', images: IMAGE_FILES[0] ? [IMAGE_FILES[0]] : [],
+    marbling: null, available: true, sku: '', weight: '',
     badge: { es: null, en: null },
     es: blank(), en: blank(),
   }
@@ -209,7 +234,16 @@ function ProductEditor({ product, canMove, open, onToggle, onChange, onMove, onR
             <Select label="Categoría" value={product.cat} options={CATEGORIES} onChange={(v) => onChange({ ...product, cat: v })} />
             <Select label="Tono" value={product.tone} options={TONES} onChange={(v) => onChange({ ...product, tone: v })} />
           </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', alignItems: 'flex-end', margin: '2px 0 12px' }}>
+            <label style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '13px', fontWeight: 600, color: 'var(--mc-ink-800, #2a2a2a)', paddingBottom: '9px' }}>
+              <input type="checkbox" checked={product.available !== false} onChange={(e) => onChange({ ...product, available: e.target.checked })} />
+              Disponible {product.available === false && <span style={{ color: 'var(--mc-red, #b3122a)', fontWeight: 700 }}>· Agotado</span>}
+            </label>
+            <div style={{ flex: '1 1 150px', minWidth: 0 }}><TextField label="SKU (opcional)" value={product.sku || ''} onChange={(v) => onChange({ ...product, sku: v })} /></div>
+            <div style={{ flex: '1 1 200px', minWidth: 0 }}><TextField label="Peso / presentación (opcional)" value={product.weight || ''} onChange={(v) => onChange({ ...product, weight: v })} placeholder="Ej. Corte de 300 g" /></div>
+          </div>
           <ImagesPicker images={product.images} onChange={(v) => onChange({ ...product, images: v })} />
+          <MarblingEditor product={product} onChange={onChange} />
           <AiGenerate product={product} onChange={onChange} />
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginTop: '6px' }}>
             <LangColumn lang="es" product={product} onChange={onChange} />

@@ -314,6 +314,7 @@ function ProductCard({ product, onOpen }) {
       <div style={{ position: 'relative' }}>
         <ProductImage product={product} height={210} />
         {p.badge && (<div style={{ position: 'absolute', top: '14px', left: '14px' }}><Badge tone="red" solid>{p.badge}</Badge></div>)}
+        {product.available === false && (<div style={{ position: 'absolute', top: '14px', right: '14px' }}><Badge tone="ink" solid>{t.pdp.soldOut}</Badge></div>)}
       </div>
       <div style={{ padding: '18px', display: 'flex', flexDirection: 'column', gap: '12px', flex: 1 }}>
         <div>
@@ -533,9 +534,16 @@ function ProductDetail({ product, onAdd, onBack }) {
         <div>
           <div style={{ display: 'flex', gap: '8px', marginBottom: '14px' }}>
             {p.badge && <Badge tone="red" solid>{p.badge}</Badge>}
-            <Badge tone="success">{t.pdp.available}</Badge>
+            {product.available === false
+              ? <Badge tone="neutral">{t.pdp.soldOut}</Badge>
+              : <Badge tone="success">{t.pdp.available}</Badge>}
           </div>
           <h1 className="mc-page-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '48px', lineHeight: 0.98, margin: '0 0 16px', color: 'var(--text-strong)' }}>{p.name}</h1>
+          {(product.weight || product.sku) && (
+            <div style={{ fontSize: '13px', color: 'var(--text-muted)', margin: '-6px 0 16px' }}>
+              {product.weight}{product.weight && product.sku ? ' · ' : ''}{product.sku && `SKU ${product.sku}`}
+            </div>
+          )}
           {marbling && <MarblingScale marbling={marbling} vIdx={vIdx} onSelect={setVIdx} />}
           <div className="mc-pdp-actions" style={{ margin: '24px 0', display: 'flex', flexWrap: 'wrap', gap: '20px', alignItems: 'flex-end' }}>
             <div>
