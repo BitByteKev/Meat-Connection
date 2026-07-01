@@ -9,7 +9,7 @@ import { timingSafeEqual } from 'node:crypto'
 const REPO = process.env.GITHUB_REPO || 'BitByteKev/Meat-Connection'
 const BRANCH = process.env.GITHUB_BRANCH || 'main'
 const FILE_PATH = 'src/products.json'
-const CATEGORIES = new Set(['jp', 'au', 'us'])
+const CATEGORIES = new Set(['jp', 'mackas', 'au', 'kingriver', 'us'])
 
 // Constant-time string compare that doesn't leak length via early return.
 function passwordMatches(given, expected) {
@@ -36,7 +36,7 @@ function validateCatalog(products) {
     if (typeof p.id !== 'string' || !p.id.trim()) return `${at}.id is required`
     if (ids.has(p.id)) return `duplicate id "${p.id}"`
     ids.add(p.id)
-    if (!CATEGORIES.has(p.cat)) return `${at}.cat must be one of jp|au|us`
+    if (!CATEGORIES.has(p.cat)) return `${at}.cat must be one of jp|mackas|au|kingriver|us`
     if (typeof p.tone !== 'string' || !p.tone) return `${at}.tone is required`
     if (!Array.isArray(p.images) || p.images.length === 0) return `${at}.images must be a non-empty array`
     if (!p.images.every((f) => typeof f === 'string' && f)) return `${at}.images must be filenames`

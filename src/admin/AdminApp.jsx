@@ -5,6 +5,7 @@ import React from 'react'
 import { RAW_CATALOG, CATEGORIES, TONES, IMAGE_FILES, imageUrl } from '../products.js'
 import { TextField, TextArea, Select, card, btn, btnDanger, labelStyle, move } from './fields.jsx'
 import ImagesPicker from './ImagesPicker.jsx'
+import { UPLOADED } from './uploads.js'
 
 const PW_KEY = 'mc_admin_pw'
 const clone = (x) => JSON.parse(JSON.stringify(x))
@@ -46,7 +47,7 @@ function validate(catalog) {
     if (!p.es.name.trim()) return `Falta el nombre en Español (ES) en "${p.id}".`
     if (!p.en.name.trim()) return `Falta el nombre en Inglés (EN) en "${p.id}".`
     if (!Array.isArray(p.images) || p.images.length === 0) return `Agrega al menos una imagen en "${p.id}".`
-    for (const f of p.images) if (!IMAGE_FILES.includes(f)) return `Imagen no encontrada en "${p.id}": ${f}.`
+    for (const f of p.images) if (!IMAGE_FILES.includes(f) && !UPLOADED.has(f)) return `Imagen no encontrada en "${p.id}": ${f}.`
   }
   return null
 }
