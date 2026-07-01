@@ -463,8 +463,12 @@ function ProductDetail({ product, onAdd, onBack }) {
   React.useEffect(() => { setVIdx(0); }, [product.id]);
   const imgs = product.images || [];
   const variants = (marbling && marbling.variants) || [];
-  const carouselIndex = variants.length ? Math.max(0, imgs.indexOf(variants[vIdx].image)) : undefined;
-  const onCarousel = variants.length ? (ci) => { const f = variants.findIndex((v) => imgs.indexOf(v.image) === ci); if (f >= 0) setVIdx(f); } : undefined;
+  // Link the carousel to the grade ONLY when each grade has its own distinct photo
+  // (e.g. rib eye). If all grades share one photo (e.g. L Grow's top/side/hero views),
+  // leave the carousel free to swipe the cover images instead.
+  const perGradePhotos = new Set(variants.map((v) => v.image)).size > 1;
+  const carouselIndex = perGradePhotos ? Math.max(0, imgs.indexOf(variants[vIdx].image)) : undefined;
+  const onCarousel = perGradePhotos ? (ci) => { const f = variants.findIndex((v) => imgs.indexOf(v.image) === ci); if (f >= 0) setVIdx(f); } : undefined;
   const [tab, setTab] = React.useState('desc');
   const [saleType, setSaleType] = React.useState('mayoreo');
   const [qty, setQty] = React.useState(5);
