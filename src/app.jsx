@@ -2,7 +2,7 @@ import React from 'react'
 import * as ReactDOM from 'react-dom/client'
 import { Analytics } from '@vercel/analytics/react'
 import { LangProvider, useLang, getStrings, fmt } from './i18n.jsx'
-import { PRODUCTS as PRODUCT_LIST } from './products.js'
+import { PRODUCTS as PRODUCT_LIST, PRODUCT_STRINGS } from './products.js'
 import AdminApp from './admin/AdminApp.jsx'
 
 
@@ -56,6 +56,43 @@ function reorderWhatsApp() {
    Nombre/desc/badge se leen por id desde i18n (que también deriva de products.json). */
 const PRODUCTS = PRODUCT_LIST;
 const TONE_BG = { charcoal: 'var(--mc-charcoal)', kraft: 'var(--mc-kraft)', cream: 'var(--mc-cream)', red: 'var(--mc-red)' };
+
+/* ===== URL slugs + client-side routing =====
+   Categories -> /catalogo/<slug>, products -> /producto/<slug>, home -> /.
+   Slugs are derived from the (stable) Spanish name so links don't change with
+   the language toggle. Deep links need the SPA-fallback rewrites in vercel.json. */
+function slugify(s) {
+  return (s || '').toString().normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+const CAT_SLUG = {
+  jp: 'a5-japones', mackas: 'black-angus-mackas', au: 'wagyu-australiano',
+  kingriver: 'wagyu-australiano-king-river', us: 'wagyu-cross-americano',
+};
+const SLUG_CAT = Object.fromEntries(Object.entries(CAT_SLUG).map(([k, v]) => [v, k]));
+const PRODUCT_SLUG = {}; // id -> slug
+const SLUG_PRODUCT = {}; // slug -> product
+(() => {
+  const seen = {};
+  for (const p of PRODUCTS) {
+    const nm = (PRODUCT_STRINGS.es[p.id] && PRODUCT_STRINGS.es[p.id].name) || p.id;
+    const base = slugify(nm) || slugify(p.id);
+    const slug = seen[base] == null ? (seen[base] = 0, base) : `${base}-${++seen[base]}`;
+    PRODUCT_SLUG[p.id] = slug;
+    SLUG_PRODUCT[slug] = p;
+  }
+})();
+function pathFor(view, cat, active) {
+  if (view === 'product' && active) return `/producto/${PRODUCT_SLUG[active.id] || active.id}`;
+  if (view === 'shop') return cat && cat !== 'all' ? `/catalogo/${CAT_SLUG[cat] || cat}` : '/catalogo';
+  return '/';
+}
+function parseLocation() {
+  const parts = (typeof window !== 'undefined' ? window.location.pathname : '/').replace(/^\/+|\/+$/g, '').split('/');
+  if (parts[0] === 'producto' && SLUG_PRODUCT[parts[1]]) return { view: 'product', active: SLUG_PRODUCT[parts[1]], cat: 'all' };
+  if (parts[0] === 'catalogo') return { view: 'shop', active: null, cat: parts[1] ? (SLUG_CAT[parts[1]] || 'all') : 'all' };
+  return { view: 'home', active: null, cat: 'all' };
+}
 const TONE_FG = { charcoal: 'var(--mc-paper)', kraft: 'var(--mc-ink-900)', cream: 'var(--mc-ink-800)', red: '#fff' };
 
 /* ===== Language toggle (ES | EN) ===== */
@@ -956,9 +993,10 @@ function Testimonials() {
 
 function App() {
   const { t } = useLang();
-  const [view, setView] = React.useState('home');
-  const [active, setActive] = React.useState(null);
-  const [cat, setCat] = React.useState('all');
+  const _init = parseLocation();
+  const [view, setView] = React.useState(_init.view);
+  const [active, setActive] = React.useState(_init.active);
+  const [cat, setCat] = React.useState(_init.cat);
   const [cartOpen, setCartOpen] = React.useState(false);
   const [cart, setCart] = React.useState([]);
   function add(product, qty = 1, saleType = 'mayoreo') {
@@ -969,9 +1007,20 @@ function App() {
   }
   function changeQty(item, d) { setCart((c) => c.map((i) => i.id === item.id ? { ...i, qty: Math.max(1, i.qty + d) } : i)); }
   function remove(item) { setCart((c) => c.filter((i) => i.id !== item.id)); }
-  function open(product) { setActive(product); setView('product'); window.scrollTo(0, 0); }
-  function nav(v) { setView(v); window.scrollTo(0, 0); }
-  function goAnchor(id) { setView('home'); setTimeout(() => { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth' }); }, 60); }
+  const route = (v, c, a) => { const path = pathFor(v, c, a); if (path !== window.location.pathname) window.history.pushState({}, '', path); };
+  function open(product) { setActive(product); setView('product'); window.scrollTo(0, 0); route('product', cat, product); }
+  function nav(v) { setView(v); if (v !== 'product') setActive(null); window.scrollTo(0, 0); route(v, cat, null); }
+  function pickCat(c) { setCat(c); setView('shop'); setActive(null); window.scrollTo(0, 0); route('shop', c, null); }
+  function goAnchor(id) { setView('home'); setActive(null); route('home', cat, null); setTimeout(() => { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth' }); }, 60); }
+  React.useEffect(() => {
+    const onPop = () => { const s = parseLocation(); setView(s.view); setActive(s.active); setCat(s.cat); window.scrollTo(0, 0); };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
+  React.useEffect(() => {
+    const nm = view === 'product' && active ? (PRODUCT_STRINGS.es[active.id] || {}).name : null;
+    document.title = nm ? `${nm} · Meat Connection` : (view === 'shop' ? 'Catálogo · Meat Connection' : 'Meat Connection — Distribuidor de Carne Premium en México');
+  }, [view, active]);
   function quote() { openWhatsApp(getStrings().wa.quote); }
   const count = cart.reduce((s, i) => s + i.qty, 0);
   const filtered = cat === 'all' ? PRODUCTS : PRODUCTS.filter((p) => p.cat === cat);
@@ -1001,12 +1050,12 @@ function App() {
         <section style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '40px 24px 80px' }}>
           <h1 className="mc-page-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '48px', margin: '0 0 8px', color: 'var(--text-strong)' }}>{t.shop.title}</h1>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: '16px', color: 'var(--text-muted)', margin: '0 0 28px' }}>{fmt(t.shop.count, { n: filtered.length })}</p>
-          <ShopToolbar active={cat} onPick={setCat} />
+          <ShopToolbar active={cat} onPick={pickCat} />
           <ProductGrid products={filtered} onOpen={open} />
         </section>
       )}
       {view === 'product' && active && (<ProductDetail product={active} onAdd={add} onBack={() => nav('shop')} />)}
-      <Footer onCategory={(c) => { setCat(c); nav('shop'); }} onAnchor={goAnchor} />
+      <Footer onCategory={pickCat} onAnchor={goAnchor} />
       <CartDrawer open={cartOpen} items={cart} onClose={() => setCartOpen(false)} onQty={changeQty} onRemove={remove} onReorder={reorderWhatsApp} />
       <WhatsAppFab />
     </div>

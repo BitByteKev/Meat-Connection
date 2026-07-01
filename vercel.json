@@ -4,7 +4,10 @@
   "outputDirectory": "dist",
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/admin", "destination": "/" }
+    { "source": "/admin", "destination": "/" },
+    { "source": "/catalogo", "destination": "/" },
+    { "source": "/catalogo/(.*)", "destination": "/" },
+    { "source": "/producto/(.*)", "destination": "/" }
   ],
   "headers": [
     {
