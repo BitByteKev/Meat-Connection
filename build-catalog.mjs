@@ -162,7 +162,6 @@ const MASTER = {
     ['paletaUs','paleta','Paleta Shoulder Clod Abatti Ranch','Shoulder Clod Wagyu Cross Abatti Ranch',[['8+',8,10,'61433-1']]],
     ['picanaUs','picana','Picaña Abatti Ranch','Picanha Wagyu Cross Abatti Ranch',[['8+',8,10,'68465-1']]],
     ['ribcapUs','ribcap','Rib Cap Abatti Ranch','Rib Cap Wagyu Cross Abatti Ranch',[['4-5',4,5,'82955-1']]],
-    ['ribeyelipoffUs','ribeye','Rib Eye Lip Off Abatti Ranch','Rib Eye Lip Off Wagyu Cross Abatti Ranch',[['6-7',6,7,'71285-1'],['8+',8,10,'61285-1']]],
     ['ribeyeliponUs','ribeye','Rib Eye Lip On Abatti Ranch','Rib Eye Lip On Wagyu Cross Abatti Ranch',[['6-7',6,7,'71235-1'],['8+',8,10,'RBABA']]],
     ['tuetanoUs','tuetano','Tuétano Femur Bones Abatti Ranch','Marrow Femur Bones Wagyu Cross Abatti Ranch',[]],
   ],
