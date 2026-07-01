@@ -261,8 +261,9 @@ for (const cat of Object.keys(MASTER)) {
     let variants = buildVariants(cutKey, cat, rows)
     const distinctNow = new Set(variants.map((v) => v.image)).size
     // Clean cut photos are reusable across brands (matched by cut). Use the
-    // accurate per-cut photo for ANY category; fall back to placeholder otherwise.
-    const photo = PHOTOS[cutKey] || EXTRA[cutKey] || null
+    // accurate per-cut photo for non-A5 categories; A5 (jp) generated cuts keep
+    // the coming-soon placeholder to avoid showing Australian marbling on A5.
+    const photo = cat === 'jp' ? null : (PHOTOS[cutKey] || EXTRA[cutKey] || null)
     const gradePhotos = [...new Set(variants.map((v) => v.image))]
     let images
     if (distinctNow > 1 && gradePhotos.every((f) => HAVE.has(f))) {
