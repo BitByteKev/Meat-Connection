@@ -180,29 +180,29 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder, overHero = fals
       <div onClick={() => setMenuOpen(false)} aria-hidden="true"
         style={{ position: 'fixed', inset: 0, background: 'rgba(20,20,20,0.6)', opacity: menuOpen ? 1 : 0, pointerEvents: menuOpen ? 'auto' : 'none', transition: 'opacity var(--dur-med)', zIndex: 60 }}></div>
       <aside role="dialog" aria-label={t.header.navAria} aria-modal="true"
-        style={{ position: 'fixed', top: 0, right: 0, height: '100%', width: '84vw', maxWidth: '360px', background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', boxShadow: 'var(--shadow-lg)', transform: menuOpen ? 'translateX(0)' : 'translateX(100%)', transition: 'transform var(--dur-slow) var(--ease-out)', zIndex: 61, display: 'flex', flexDirection: 'column', padding: '18px 22px calc(22px + env(safe-area-inset-bottom))' }}>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid var(--mc-ink-700)', paddingBottom: '16px' }}>
-          <img src={window.MC_LOGO} alt="Meat Connection" style={{ height: '30px' }} />
+        style={{ position: 'fixed', top: 0, right: 0, height: '100%', width: '84vw', maxWidth: '360px', background: 'var(--mc-paper)', color: 'var(--text-strong)', boxShadow: 'var(--shadow-lg)', transform: menuOpen ? 'translateX(0)' : 'translateX(100%)', transition: 'transform var(--dur-slow) var(--ease-out)', zIndex: 61, display: 'flex', flexDirection: 'column', padding: '18px 22px calc(22px + env(safe-area-inset-bottom))' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid var(--border-subtle)', paddingBottom: '16px' }}>
+          <img src={window.MC_LOGO_INK} alt="Meat Connection" style={{ height: '30px' }} />
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <LangToggle />
             <button onClick={() => setMenuOpen(false)} aria-label={t.header.closeMenu}
-              style={{ width: '44px', height: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: 'none', background: 'transparent', color: 'var(--mc-ink-200)', cursor: 'pointer' }}>
-              <Icon name="X" size={24} color="var(--mc-ink-200)" />
+              style={{ width: '44px', height: '44px', display: 'flex', alignItems: 'center', justifyContent: 'center', border: 'none', background: 'transparent', color: 'var(--text-body)', cursor: 'pointer' }}>
+              <Icon name="X" size={24} color="var(--text-body)" />
             </button>
           </div>
         </div>
         <nav style={{ display: 'flex', flexDirection: 'column', marginTop: '8px', flex: 1 }}>
           {links.map((l) => (
             <button key={l.label} onClick={() => goMobile(l)}
-              style={{ border: 'none', borderBottom: '1px solid var(--mc-ink-800)', background: 'transparent', color: 'var(--mc-paper)', cursor: 'pointer', textAlign: 'left',
+              style={{ border: 'none', borderBottom: '1px solid var(--border-subtle)', background: 'transparent', color: 'var(--text-strong)', cursor: 'pointer', textAlign: 'left',
                 fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '20px', padding: '18px 4px' }}>
               {l.label}
             </button>
           ))}
         </nav>
         <Button variant="secondary" size="lg" fullWidth onClick={() => { setMenuOpen(false); onReorder(); }}
-          iconLeft={<Icon name="RotateCcw" size={18} color="var(--mc-paper)" />}
-          style={{ color: 'var(--mc-paper)', borderColor: 'var(--mc-ink-600)', marginBottom: '10px' }}>{t.header.reorderOrder}</Button>
+          iconLeft={<Icon name="RotateCcw" size={18} color="var(--text-strong)" />}
+          style={{ color: 'var(--text-strong)', borderColor: 'var(--border-default)', marginBottom: '10px' }}>{t.header.reorderOrder}</Button>
         <Button variant="primary" size="lg" fullWidth onClick={() => { setMenuOpen(false); openWhatsApp(getStrings().wa.quote); }}
           iconLeft={<Icon name="MessageCircle" size={18} color="#fff" />}>{t.header.quoteWhatsApp}</Button>
       </aside>
