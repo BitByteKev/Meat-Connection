@@ -550,7 +550,7 @@
   },
   {
     "id": "king-river",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "charcoal",
     "images": [
       "RIB-EYE-WAGYU-AUSTRALIANO-BAJO-MARMOLEO-3-1.webp",
@@ -1511,7 +1511,7 @@
   },
   {
     "id": "arracheraKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "kraft",
     "images": [
       "lgrow-inside-skirt-top.webp",
@@ -1548,7 +1548,7 @@
   },
   {
     "id": "brisketKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "cream",
     "images": [
       "lgrow-pe-brisket-top.webp",
@@ -1585,7 +1585,7 @@
   },
   {
     "id": "chamorroKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "red",
     "images": [
       "lgrow-shin-shank-top.webp",
@@ -1622,7 +1622,7 @@
   },
   {
     "id": "chuckshortribKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "charcoal",
     "images": [
       "lgrow-short-rib-meat-top.webp",
@@ -1666,7 +1666,7 @@
   },
   {
     "id": "diezmilloKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "kraft",
     "images": [
       "lgrow-chuck-eye-roll-top.webp",
@@ -1717,7 +1717,7 @@
   },
   {
     "id": "fileteKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "cream",
     "images": [
       "lgrow-tenderloin-top.webp",
@@ -1755,7 +1755,7 @@
   },
   {
     "id": "karubiKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "red",
     "images": [
       "lgrow-karubi-plate-top.webp",
@@ -1792,7 +1792,7 @@
   },
   {
     "id": "newyorkKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "charcoal",
     "images": [
       "lgrow-striploin-top.webp",
@@ -1844,7 +1844,7 @@
   },
   {
     "id": "paletaKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "kraft",
     "images": [
       "lgrow-bolar-blade-top.webp",
@@ -1881,7 +1881,7 @@
   },
   {
     "id": "picanaKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "cream",
     "images": [
       "lgrow-rump-cap-top.webp",
@@ -1925,7 +1925,7 @@
   },
   {
     "id": "ribeyehuesoKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "red",
     "images": [
       "placeholder-coming-soon.webp"
@@ -1968,7 +1968,7 @@
   },
   {
     "id": "sirloinKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "charcoal",
     "images": [
       "placeholder-coming-soon.webp"
@@ -2018,7 +2018,7 @@
   },
   {
     "id": "rostbiffKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "kraft",
     "images": [
       "lgrow-rostbiff-top.webp",
@@ -2062,7 +2062,7 @@
   },
   {
     "id": "tablitaKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "cream",
     "images": [
       "lgrow-chuck-tail-flap-top.webp",
@@ -2099,7 +2099,7 @@
   },
   {
     "id": "tomahawkKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "red",
     "images": [
       "placeholder-coming-soon.webp"
@@ -2135,7 +2135,7 @@
   },
   {
     "id": "flapKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "charcoal",
     "images": [
       "lgrow-flap-meat-top.webp",
@@ -2172,7 +2172,7 @@
   },
   {
     "id": "flatironKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "kraft",
     "images": [
       "lgrow-oyster-blade-top.webp",
@@ -2210,7 +2210,7 @@
   },
   {
     "id": "jewelDiezmilloKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "cream",
     "images": [
       "lgrow-chuck-eye-roll-top.webp",
@@ -2247,7 +2247,7 @@
   },
   {
     "id": "jewelNewyorkKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "red",
     "images": [
       "lgrow-striploin-top.webp",
@@ -2285,7 +2285,7 @@
   },
   {
     "id": "jewelPaletaKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "charcoal",
     "images": [
       "lgrow-bolar-blade-top.webp",
@@ -2322,7 +2322,7 @@
   },
   {
     "id": "jewelRibeyeKr__gen",
-    "cat": "kingriver",
+    "cat": "au",
     "tone": "kraft",
     "images": [
       "lgrow-cube-roll-top.webp",

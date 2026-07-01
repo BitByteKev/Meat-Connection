@@ -8,7 +8,8 @@
 //   slug    — URL segment for /catalogo/<slug>
 //   es/en   — display label per language
 //   aliases — other internal cats that display + filter under this one
-//             (e.g. King River / Jewel products carry "kingriver" but show as "au")
+//             (folds legacy sub-brand codes into a parent category; currently
+//             none — the former "kingriver" products were re-tagged to "au")
 import CATEGORIES from './categories.json'
 
 export const CATEGORY_LIST = CATEGORIES
@@ -36,8 +37,8 @@ export function catLabel(key, lang) {
 }
 
 // Every internal category key a product may carry (display keys + aliases) —
-// the selectable set for the admin product dropdown, so legacy alias values
-// (e.g. "kingriver") stay valid.
+// the selectable set for the admin product dropdown, so any legacy alias values
+// still on a product stay valid. (No aliases in use at present.)
 export const ALL_CAT_KEYS = (() => {
   const out = []
   for (const c of CATEGORIES) {

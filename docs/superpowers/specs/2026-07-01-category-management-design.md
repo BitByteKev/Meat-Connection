@@ -2,123 +2,150 @@
 
 **Date:** 2026-07-01
 **Project:** Meat Connection (meat-connection.vercel.app)
-**Status:** Approved design — ready for implementation
-**Builds on:** `2026-06-27-catalog-admin-simplify.md` (the editor, GitHub-commit backend, and auth are unchanged). This adds the "Categorías" admin section that phase 1 left as a placeholder (`AdminApp.jsx` — "llega en la próxima fase").
+**Status:** Shipped — this document records the design as actually built.
+**Builds on:** `2026-06-27-catalog-admin-simplify.md` (the editor, GitHub-commit backend, and auth are unchanged). This adds the "Categorías" admin section that phase 1 left as a placeholder.
+
+> **Note on history.** An earlier draft of this spec proposed embedding categories inside `products.json` and flattening the `kingriver` group into `au`. The implementation took a different, cleaner path: a **separate `categories.json`** taxonomy file with an **alias model** that keeps `kingriver` as a hidden alias of `au` (no re-tagging of 22 products, no data migration). This document now describes what shipped, not the original proposal.
 
 ## Why
 
-Category data is currently scattered across four files and has already drifted:
+Before phase 2, category data was scattered and had already drifted across `products.js`, `i18n.jsx`, `app.jsx`, `api/save-products.js`, and `build-sitemap.mjs` — five hand-synced copies, one of them (`kingriver`) missing from the shopper filter and label maps. Phase 2 unifies the public taxonomy into **one committable source of truth** (`categories.json`) and gives the non-technical owner a UI to add, rename, reorder, and safely delete categories.
 
-- `src/products.js` — `CATEGORIES = ['jp', 'mackas', 'au', 'kingriver', 'us']` (storage keys).
-- `src/i18n.jsx` — ES + EN `categories` label maps. **Missing a `kingriver` label.**
-- `src/app.jsx` — hardcoded filter-chip list `[all, jp, au, us, mackas]` (**missing `kingriver`**), plus `CAT_SLUG`/`SLUG_CAT`/`DISPLAY_CAT` maps and a `genericOrigin` branch.
-- `api/save-products.js` — its own hardcoded `CATEGORIES` Set for validation.
-- `build-sitemap.mjs` — its own hardcoded `CAT_SLUG` map.
+## Decisions (as shipped)
 
-A hidden `DISPLAY_CAT` mapping folds the `kingriver` storage tag (22 products — the largest group) into the `au` ("Wagyu Australiano") shopper filter, a leftover from the earlier "consolidate to 4 brand-free categories" work. The result: five storage keys but four shopper-facing filters, kept in sync by hand across five files.
-
-Phase 2 unifies category data into **one committable source of truth** and gives the non-technical owner a UI to add, rename, reorder, and safely delete categories.
-
-## Decisions (locked)
-
-1. **Flatten the two-level model.** Re-tag all `kingriver` products as `au` (no visible change — they already display as Australian) and delete the `DISPLAY_CAT` indirection. One clean list of categories shared by shoppers, the product editor, and the category manager.
-2. **Safe delete.** Deleting a category is allowed only when it has **zero products**; otherwise the delete control is disabled. No product is ever orphaned.
-3. **Embed categories in `products.json`.** Single file, single atomic GitHub commit, single rebuild — the save pipeline already commits this file.
+1. **Separate `categories.json`, not embedded.** The taxonomy lives in its own file, committed and rebuilt independently of the product catalog. Two small files with clear ownership instead of one large wrapper. `products.json` stays a bare product array (no schema change to the catalog file).
+2. **Alias model, not flatten.** `kingriver` (22 products, the largest group) remains a real storage key on those products, declared as an **alias** of `au`. The storefront folds aliases into their parent for display and filtering. No product was re-tagged and no migration script was needed. Adding future sub-brands under an existing filter is a one-line `aliases` edit.
+3. **Safe delete.** A category can be deleted only when **zero** products reference it *or any of its aliases*; otherwise the delete control is disabled with an explanatory tooltip. No product is ever orphaned.
+4. **Keys and slugs are stable once created.** A category's internal `key` (stored on products) and `slug` (its `/catalogo/<slug>` URL) never change on rename, so existing product references and shared links keep working. Labels are freely editable.
 
 ## Data Model
 
-`src/products.json` changes from a bare product array to a wrapper object:
+### `src/categories.json` — the public taxonomy
 
-```jsonc
-{
-  "categories": [
-    { "key": "jp",     "slug": "a5-japones",       "label": { "es": "A5 Japonés",       "en": "A5 Japanese" } },
-    { "key": "au",     "slug": "wagyu-australiano", "label": { "es": "Wagyu Australiano", "en": "Australian Wagyu" } },
-    { "key": "us",     "slug": "wagyu-americano",   "label": { "es": "Wagyu Americano",   "en": "American Wagyu" } },
-    { "key": "mackas", "slug": "black-angus",       "label": { "es": "Black Angus",       "en": "Black Angus" } }
-  ],
-  "products": [ /* …unchanged product objects… */ ]
-}
+An ordered array; **array order is the shopper filter order**.
+
+```json
+[
+  { "key": "jp",     "slug": "a5-japones",       "es": "A5 Japonés",       "en": "A5 Japanese",      "aliases": [] },
+  { "key": "au",     "slug": "wagyu-australiano","es": "Wagyu Australiano","en": "Australian Wagyu", "aliases": ["kingriver"] },
+  { "key": "us",     "slug": "wagyu-americano",  "es": "Wagyu Americano",  "en": "American Wagyu",   "aliases": [] },
+  { "key": "mackas", "slug": "black-angus",      "es": "Black Angus",      "en": "Black Angus",      "aliases": [] }
+]
 ```
 
 Category fields:
 
-- `key` — short internal id stored on every product as `p.cat` (e.g. `au`). **Stable forever** once created; never changes on rename.
-- `slug` — SEO URL segment (`/catalogo/wagyu-australiano`). Auto-generated from the ES label **once, at creation**, then **frozen**. Renaming a label never changes the slug, so existing URLs and shared links keep working.
-- `label.es` / `label.en` — shopper- and owner-facing names. Freely editable.
+- `key` — internal id stored on every product as `p.cat`. **Stable forever**; never changes on rename.
+- `slug` — SEO URL segment. Auto-generated from the ES label at creation, then frozen.
+- `es` / `en` — display labels (flat strings, not a nested `label` object). Freely editable.
+- `aliases` — other internal cat codes that display and filter **under** this category. Products carrying an alias code (e.g. `kingriver`) show as the parent (`au`). This is how the two-level history is preserved without touching product data.
 
-**Array order = shopper filter order.** `all` ("Todos"/"All") remains a UI-only pseudo-filter in `i18n.jsx`; it is not a stored category.
+`all` ("Todos"/"All") is a UI-only pseudo-filter, not a stored category.
 
-## One-Time Migration (throwaway script)
+### Product fields (from `2026-06-27` + phase-2 additions)
 
-A script rewrites `src/products.json` in place:
+Per-product top-level keys as they exist in `products.json`: `id, cat, tone, images, badge, es, en` plus the optional structured fields **`marbling`, `available`, `sku`, `weight`**. Per-language `es`/`en` objects each hold `{ name, description, origin, cooking }`.
 
-1. Re-tag every product with `cat === 'kingriver'` to `cat: 'au'`.
-2. Wrap the array: `{ categories: [...4 seed categories...], products: [...] }`, seeding category labels from the current `i18n.jsx` `categories` maps and slugs from the current `CAT_SLUG` in `app.jsx`.
-3. Seed order: `jp`, `au`, `us`, `mackas` (current shopper-filter order).
+`marbling` (nullable) has the shape consumed by the storefront's marbling scale:
 
-Verify after: build passes; `au` count = old `au` + old `kingriver` (17 + 22 = 39); no product references a category key absent from `categories`.
+```json
+"marbling": {
+  "system": "bms",
+  "variants": [
+    { "label": "11-12", "lo": 11, "hi": 12, "image": "…webp", "sku": "…" }
+  ]
+}
+```
 
-## Storefront Rendering
+`available` defaults to `true` (only `false` is stored); `sku`/`weight` are optional strings (only stored when non-empty).
 
-- `src/products.js` — import the wrapper; `PRODUCTS`/`PRODUCT_STRINGS`/etc. derive from `data.products`. Add exports derived from `data.categories`:
-  - `CATEGORY_LIST` — ordered `[{ key, slug, label }]`.
-  - `CATEGORIES` — ordered array of keys (kept for admin/validation back-compat).
-  - `CATEGORY_LABEL` — `{ [key]: { es, en } }` lookup.
-  - `CAT_SLUG` / `SLUG_CAT` — derived from the category list (move out of `app.jsx`).
-  - `RAW_CATALOG` continues to expose the product array (deep-cloned); add `RAW_CATEGORIES` (deep-cloned category list) for the admin.
-- `src/app.jsx`:
-  - Filter chips derive from `CATEGORY_LIST` (prepend the `all` pseudo-entry) — replaces the hardcoded line-684 array and permanently fixes the drift.
-  - Category eyebrow/labels read from `CATEGORY_LABEL[key][lang]` instead of `t.categories[key]`.
-  - Remove `DISPLAY_CAT` and `catOf`'s remapping; `p.cat` is now the display category directly.
-  - `genericOrigin` (per-category fallback origin text when a product's own `origin` is empty) stays a small map keyed on the legacy `jp`/`us`/`au` keys with the existing default. Categories without an entry (e.g. newly added) simply show no Origen tab when the product's `origin` is empty. Per-category origin text is a future enhancement, not phase 2.
-- `src/i18n.jsx` — remove the per-key entries (`jp`/`au`/`us`/`mackas`) from `categories`; keep `all`. Footer `catalogItems` and hero category lists stay static marketing copy (non-goal — see below).
-- `build-sitemap.mjs` — read category slugs from `products.json`'s `categories` instead of its own hardcoded `CAT_SLUG` map; emit one `/catalogo/:slug` URL per category.
+## Category taxonomy module — `src/categories.js`
 
-## Admin "Categorías" Section
+Imports `categories.json` and derives everything the app, admin, and sitemap need:
 
-Replaces the placeholder card in `AdminApp.jsx`. Follows existing product-list patterns (the shared `move()` helper for reorder, existing `btn`/`btnDanger`/`card` styles, same save flow). New file `src/admin/CategoriesEditor.jsx`.
+- `CATEGORY_LIST` — the ordered array as-is.
+- `CATEGORY_KEYS` — ordered display keys (`['jp','au','us','mackas']`).
+- `CAT_SLUG` / `SLUG_CAT` — key↔slug lookups.
+- `DISPLAY_CAT` — maps every key to itself and every alias to its parent key.
+- `catOf(p)` — `DISPLAY_CAT[p.cat] || p.cat` (the display category for a product).
+- `catLabel(key, lang)` — localized label for a display key.
+- `ALL_CAT_KEYS` — display keys **plus** aliases; the selectable set for the admin product dropdown, so legacy alias values (`kingriver`) stay assignable. Re-exported by `products.js` as `CATEGORIES` for admin/validation.
 
-- Admin loads `RAW_CATEGORIES` into state alongside the catalog.
-- Ordered list; each row shows: reorder ↑/↓ arrows · **ES label input** · **EN label input** (inline) · a product-count badge (count of products whose `cat` === this key) · delete (⌫) button.
-- **Delete** is disabled (with a title/tooltip explaining why) when the count > 0. Enabled only at count 0.
-- **+ Agregar categoría** appends a new row; `key` and `slug` are auto-generated from the ES label (slugify; ensure uniqueness against existing keys/slugs by suffixing if needed). Key/slug are not directly editable by the owner.
-- Product editor's category `Select` shows **labels** (value = key, display = `label.es`) instead of raw keys.
-- Category changes commit together with product changes via the existing **"Guardar y publicar"** button — one save, one commit.
+## Storefront Rendering (`src/app.jsx`, `src/i18n.jsx`)
 
-### Admin validation (client, before save)
+- Filter chips derive from `CATEGORY_KEYS` (prepending the `all` pseudo-entry): `const cats = [['all', t.categories.all], ...CATEGORY_KEYS.map((k) => [k, catLabel(k, lang)])]`.
+- Category eyebrows/labels read from `catLabel(key, lang)`.
+- `catOf(p)` maps alias products (`kingriver`) onto their display parent (`au`) for both the grid filter and the category label.
+- `i18n.jsx` keeps only the `all` pseudo-label under `categories`; per-key labels now come from `categories.json`. Footer `catalogItems` and the hero brand lists remain static marketing copy (non-goal).
 
-- Each category: non-empty unique `key`, non-empty unique `slug`, non-empty `label.es` and `label.en`.
-- Every product's `cat` must match an existing category `key`.
-- Reuse the existing status-banner pattern; error messages name the offending category.
+## Sitemap (`build-sitemap.mjs`)
 
-## Server (`api/save-products.js`)
+Reads `src/categories.json` directly and emits one `/catalogo/<slug>` URL per category, so sitemap slugs always match the live taxonomy.
 
-- Accept `{ password, products, categories }` (was `{ password, products }`).
-- Validate `categories`: non-empty array; each entry has unique non-empty `key` and `slug` (string), and `label.es`/`label.en` non-empty strings.
-- Replace the hardcoded `CATEGORIES` Set: validate each `product.cat` against the **submitted** category keys. This removes the last hardcoded category source.
-- Commit the wrapper object `{ categories, products }` to `src/products.json` (same single-file GitHub PUT flow, unchanged otherwise). Serialize with the same 2-space `JSON.stringify` + trailing newline.
+## Admin "Categorías" Section — `src/admin/CategoriesEditor.jsx`
 
-## Files
+Replaces the placeholder card. Loads `CATEGORY_LIST` into local state.
 
-- `src/products.json` — migrated to `{ categories, products }`.
-- `scripts/migrate-categories.mjs` (or an inline throwaway) — one-time migration; can be removed after.
-- `src/products.js` — read wrapper; add category exports; derive `CAT_SLUG`/`SLUG_CAT`.
-- `src/app.jsx` — derive filter chips + labels from category data; remove `DISPLAY_CAT`/local `CAT_SLUG`.
-- `src/i18n.jsx` — drop per-key category labels; keep `all`.
-- `src/admin/AdminApp.jsx` — load/edit/save categories; label-based category dropdown; render new section.
-- `src/admin/CategoriesEditor.jsx` — **new** category-management UI.
-- `api/save-products.js` — new payload shape + category validation; commit wrapper.
-- `build-sitemap.mjs` — read slugs from `products.json` categories.
+- Ordered rows; each shows: **ES label** · **EN label** · **Slug** (editable, slugified, placeholder from the ES label) · reorder ↑/↓ · **Eliminar**. A caption shows the frozen `key` (or "clave nueva: se generará al guardar") and the in-use product count.
+- **Delete** is disabled when `usedBy(c) > 0`, where `usedBy` counts products whose `cat` is the category's key **or any of its aliases**. Enabled only at 0.
+- **+ Agregar categoría** appends a blank row; on save, a missing `key`/`slug` is auto-generated from the labels (slugify) and validated for the `^[a-z0-9-]+$` shape and uniqueness.
+- Client validation before save: every category needs non-empty ES + EN, a valid unique `key`, and a valid unique `slug`.
+- Saves **on its own** via **"Guardar categorías"** → `POST /api/save-categories`. This is a **separate commit and rebuild** from the product catalog.
 
-## Testing
+### Two-endpoint save model (important)
 
-- **Migration:** build passes; `au` product count = 39; no product `cat` is missing from `categories`; storefront renders all products under the correct four filters; `kingriver` no longer appears anywhere.
-- **Storefront:** four filter chips render in order; renaming a label updates chips + eyebrows but the URL slug is unchanged; a product with empty `origin` in a legacy category still shows the generic origin.
-- **Admin:** add a category (key/slug auto-generated) → appears in product dropdown; rename ES/EN labels; reorder → shop filter order follows; delete blocked while count > 0, allowed at 0; save round-trips categories + products.
-- **Sitemap:** `build-sitemap.mjs` emits one `/catalogo/:slug` per category, matching the category slugs.
-- **E2E (after env vars):** a real save commits the wrapper `products.json`, and the site rebuilds with the changes live.
+Categories and products are committed by **two independent serverless functions**, each committing its own file:
+
+- `POST /api/save-categories` → commits `src/categories.json`.
+- `POST /api/save-products` → commits `src/products.json`.
+
+Because they are separate commits/rebuilds, the intended flow for a **new** category is: save categories → wait ~1 min for the rebuild → **reload the admin** → the new key now appears in the product dropdown → assign products → "Guardar y publicar". The CategoriesEditor success message instructs the owner to reload before assigning products to new categories.
+
+## Product editor (`src/admin/AdminApp.jsx`)
+
+- Category `Select` shows **labels** (value = key, display via `categoryOptions`), including any legacy alias code still present on a product so it stays selectable.
+- New `MarblingEditor.jsx` edits the per-cut marbling grades/variants; `available`/`sku`/`weight` are edited inline.
+- `pruneCatalog` preserves the **full** product schema on save — `id, cat, tone, images, marbling (cleaned), available?, sku?, weight?, badge, es{…}, en{…}` — trimming only outer whitespace and dropping empty optional keys. This closes the earlier "marbling wiped on save" regression class: no known product field is dropped by an allowlist.
+- Client `validate` checks each `p.cat` against `CATEGORIES` (= `ALL_CAT_KEYS`).
+
+## Server validation
+
+`api/save-products.js` (`{ password, products }`):
+
+- Constant-time password compare (`timingSafeEqual`, env value trimmed).
+- `validateCatalog` re-checks every product: unique non-empty `id`; `tone`; non-empty `images[]`; optional `available` boolean; optional `sku`/`weight` strings; optional `marbling` shape (`{system, variants:[{lo,hi,image,…}]}`); `badge.{es,en}` string-or-null; `{es,en}.name` non-empty and `description/origin/cooking` strings.
+- **Category-key check sources `categories.json`** — the valid key set is derived from the committed taxonomy (display keys + aliases, mirroring `ALL_CAT_KEYS`), **not** a hardcoded list. This is required so a category added via `/api/save-categories` becomes usable on products after the next rebuild. *(A hardcoded `Set(['jp','mackas','au','kingriver','us'])` shipped initially and silently rejected any newly-added category at save time; it was replaced with the `categories.json`-derived set.)*
+
+`api/save-categories.js` (`{ password, categories }`):
+
+- Same auth + GitHub-commit flow as products.
+- `validateCategories`: non-empty array; each entry has non-empty string `key`/`slug`/`es`/`en`; `key` and `slug` match `^[a-z0-9][a-z0-9-]*$`; keys and slugs unique; optional `aliases` array of category-code strings.
+- Normalizes and commits `categories.json` with 2-space `JSON.stringify` + trailing newline.
+
+## Files (as shipped)
+
+- `src/categories.json` — **new** public taxonomy (separate file).
+- `src/categories.js` — **new** taxonomy module (`CATEGORY_LIST`/`CATEGORY_KEYS`/`CAT_SLUG`/`SLUG_CAT`/`DISPLAY_CAT`/`catOf`/`catLabel`/`ALL_CAT_KEYS`).
+- `src/products.json` — unchanged shape (bare product array; products gained optional `marbling`/`available`/`sku`/`weight`).
+- `src/products.js` — imports category keys from `categories.js`; exposes marbling/availability derivations.
+- `src/app.jsx` — filter chips + labels from category data via `catLabel`/`catOf`; alias folding.
+- `src/i18n.jsx` — keeps only the `all` category pseudo-label.
+- `src/admin/AdminApp.jsx` — label-based category dropdown; full-schema `pruneCatalog`; renders the new section.
+- `src/admin/CategoriesEditor.jsx` — **new** category-management UI (separate save).
+- `src/admin/MarblingEditor.jsx` — **new** marbling editor.
+- `api/save-products.js` — category check sourced from `categories.json`; marbling/availability validation.
+- `api/save-categories.js` — **new** endpoint committing `categories.json`.
+- `build-sitemap.mjs` — reads slugs from `categories.json`.
+
+## Testing / verification
+
+- **Build:** `npm run build` passes.
+- **Save round-trip (data integrity):** `pruneCatalog` + server `validateCatalog` preserve `marbling` (full nested shape) and all optional fields; no field is dropped by an allowlist.
+- **Storefront:** four filter chips in taxonomy order; `kingriver` products render and filter under "Wagyu Australiano"; renaming a label updates chips/eyebrows but the URL slug is unchanged.
+- **Admin — rename/reorder/safe-delete:** editing labels, reordering (shop filter order follows), and delete-blocked-while-in-use all work on existing categories.
+- **Admin — add:** after the fix, adding a category → reload → assigning a product to it → save round-trips successfully (previously rejected by the hardcoded server allowlist).
+- **Sitemap:** one `/catalogo/<slug>` per category, matching `categories.json`.
 
 ## Non-Goals
 
-Per-category origin text editor, category images/thumbnails, draft/preview, and auto-derived marketing copy (footer `catalogItems`, hero category lists stay static). Directly editing a category's `key` or `slug`. Simplicity for the non-technical owner is the point.
+Per-category origin text editor, category images/thumbnails, draft/preview, auto-derived marketing copy (footer `catalogItems`, hero brand lists stay static), directly editing a category `key`, and single-commit atomic save of categories + products together (they remain two endpoints/two rebuilds by design). Simplicity for the non-technical owner is the point.
