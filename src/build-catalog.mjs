@@ -4,9 +4,13 @@
 // Idempotent: strips prior "__gen" ids, then re-adds. Also patches marbling onto
 // the original hand-written products in place.
 //   node build-catalog.mjs
-import { readFileSync, writeFileSync } from 'node:fs'
+import { readFileSync, writeFileSync, readdirSync } from 'node:fs'
 const PATH = './src/products.json'
 const catalog = JSON.parse(readFileSync(PATH, 'utf8'))
+// Photos that actually exist in /images. A generated cut only shows a real photo
+// when its file is present; otherwise it falls back to the coming-soon card.
+const HAVE = new Set(readdirSync('./images').filter((f) => f.endsWith('.webp')))
+const PLACEHOLDER = 'placeholder-coming-soon.webp'
 
 const SYS = { jp: 'bms', mackas: 'angus', au: 'aus', kingriver: 'aus', us: 'aus' }
 const TONES = ['charcoal', 'kraft', 'cream', 'red']
@@ -199,9 +203,31 @@ function marblingFrom(cat, variants) {
 }
 
 // ---- build ----------------------------------------------------------------
+// Real L Grow (Australian) product photos, by cut. Cover first, then gallery.
+// Applied to Australian/cross cuts; A5 (jp) keeps its own photos, and cuts that
+// already carry real low/med/high marbling photos are left untouched.
+const APPLY_CATS = new Set(['au', 'kingriver', 'us', 'mackas'])
+const PHOTOS = {
+  filete: ['lgrow-tenderloin-top.webp', 'lgrow-tenderloin-side.webp', 'lgrow-tenderloin-hero.webp'],
+  ribeye: ['lgrow-cube-roll-top.webp', 'lgrow-cube-roll-side.webp', 'lgrow-cube-roll-hero.webp'],
+  ny: ['lgrow-striploin-top.webp', 'lgrow-striploin-side.webp', 'lgrow-striploin-hero.webp'],
+  flatiron: ['lgrow-oyster-blade-top.webp', 'lgrow-oyster-blade-side.webp', 'lgrow-oyster-blade-hero.webp'],
+  paleta: ['lgrow-bolar-blade-top.webp', 'lgrow-bolar-blade-side.webp'],
+  diezmillo: ['lgrow-chuck-eye-roll-top.webp', 'lgrow-chuck-eye-roll-side.webp'],
+  tablita: ['lgrow-chuck-tail-flap-top.webp', 'lgrow-chuck-tail-flap-side.webp'],
+  flap: ['lgrow-flap-meat-top.webp', 'lgrow-flap-meat-side.webp'],
+  chamorro: ['lgrow-shin-shank-top.webp', 'lgrow-shin-shank-side.webp'],
+  arrachera: ['lgrow-inside-skirt-top.webp', 'lgrow-inside-skirt-side.webp'],
+  karubi: ['lgrow-karubi-plate-top.webp', 'lgrow-karubi-plate-side.webp'],
+  brisket: ['lgrow-pe-brisket-top.webp', 'lgrow-pe-brisket-side.webp'],
+  ribcap: ['lgrow-rib-cap-meat-top.webp', 'lgrow-rib-cap-meat-side.webp'],
+  ribfinger: ['lgrow-rib-fingers-top.webp', 'lgrow-rib-fingers-side.webp'],
+  rostbiff: ['lgrow-rostbiff-top.webp', 'lgrow-rostbiff-side.webp'],
+  picana: ['lgrow-rump-cap-top.webp', 'lgrow-rump-cap-side.webp'],
+  shortrib: ['lgrow-short-rib-meat-top.webp', 'lgrow-short-rib-meat-side.webp'],
+}
+
 const GEN = '__gen'
-// Generated cuts have no real photo yet — show the branded "coming soon" card.
-const PLACEHOLDER = 'placeholder-coming-soon.webp'
 const base = catalog.filter((p) => !String(p.id).endsWith(GEN))
 
 // 1) patch originals
@@ -227,9 +253,23 @@ for (const cat of Object.keys(MASTER)) {
   for (const [rawId, cutKey, nameES, nameEN, rows, badgeOv] of MASTER[cat]) {
     const id = rawId + GEN
     const cut = CUT[cutKey]; if (!cut) throw new Error(`Missing CUT copy "${cutKey}" (${rawId})`)
-    // Keep the marbling grade scale, but every photo is the coming-soon placeholder.
-    const variants = buildVariants(cutKey, cat, rows).map((v) => ({ ...v, image: PLACEHOLDER }))
-    const images = [PLACEHOLDER]
+    let variants = buildVariants(cutKey, cat, rows)
+    const distinctNow = new Set(variants.map((v) => v.image)).size
+    const photo = APPLY_CATS.has(cat) ? PHOTOS[cutKey] : null
+    const gradePhotos = [...new Set(variants.map((v) => v.image))]
+    let images
+    if (distinctNow > 1 && gradePhotos.every((f) => HAVE.has(f))) {
+      // genuine multi-tier marbling photos that exist (e.g. rib eye) — keep them
+      images = gradePhotos
+    } else if (photo && photo.every((f) => HAVE.has(f))) {
+      // a real L Grow photo set for this cut, and the files are present
+      images = [...photo]
+      variants = variants.map((v) => ({ ...v, image: photo[0] }))
+    } else {
+      // no real photo on disk yet — show the branded coming-soon card
+      images = [PLACEHOLDER]
+      variants = variants.map((v) => ({ ...v, image: PLACEHOLDER }))
+    }
     const badge = badgeOv || BADGE[cat]
     generated.push({
       id, cat, tone: TONES[toneI++ % TONES.length], images,

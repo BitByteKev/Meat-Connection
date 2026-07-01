@@ -1341,7 +1341,8 @@
     "cat": "au",
     "tone": "red",
     "images": [
-      "placeholder-coming-soon.webp"
+      "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
+      "RIB-EYE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-3.webp"
     ],
     "badge": {
       "es": "Australia · L Grow",
@@ -1354,14 +1355,14 @@
           "label": "6-7",
           "lo": 6,
           "hi": 7,
-          "image": "placeholder-coming-soon.webp",
+          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
           "sku": "343697"
         },
         {
           "label": "8-9",
           "lo": 8,
           "hi": 9,
-          "image": "placeholder-coming-soon.webp",
+          "image": "RIB-EYE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-3.webp",
           "sku": "LR8-9"
         }
       ]
