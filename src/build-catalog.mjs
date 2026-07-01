@@ -245,6 +245,12 @@ for (const id in PATCH) {
   }
 }
 
+// Accurate reuse of existing pool photos for cuts without a dedicated L Grow shot.
+const EXTRA = {
+  lengua: ['LENGUA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp'],
+  kobe:   ['FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp'],
+}
+
 // 2) generate the rest
 let toneI = 0
 const generated = []
@@ -254,7 +260,9 @@ for (const cat of Object.keys(MASTER)) {
     const cut = CUT[cutKey]; if (!cut) throw new Error(`Missing CUT copy "${cutKey}" (${rawId})`)
     let variants = buildVariants(cutKey, cat, rows)
     const distinctNow = new Set(variants.map((v) => v.image)).size
-    const photo = APPLY_CATS.has(cat) ? PHOTOS[cutKey] : null
+    // Clean cut photos are reusable across brands (matched by cut). Use the
+    // accurate per-cut photo for ANY category; fall back to placeholder otherwise.
+    const photo = PHOTOS[cutKey] || EXTRA[cutKey] || null
     const gradePhotos = [...new Set(variants.map((v) => v.image))]
     let images
     if (distinctNow > 1 && gradePhotos.every((f) => HAVE.has(f))) {

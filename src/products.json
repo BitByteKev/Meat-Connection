@@ -543,7 +543,8 @@
     "cat": "jp",
     "tone": "charcoal",
     "images": [
-      "placeholder-coming-soon.webp"
+      "lgrow-chuck-eye-roll-top.webp",
+      "lgrow-chuck-eye-roll-side.webp"
     ],
     "badge": {
       "es": "A5 · Japón",
@@ -556,7 +557,7 @@
           "label": "10-12",
           "lo": 10,
           "hi": 12,
-          "image": "placeholder-coming-soon.webp",
+          "image": "lgrow-chuck-eye-roll-top.webp",
           "sku": "DIEZA5"
         }
       ]
@@ -579,7 +580,9 @@
     "cat": "jp",
     "tone": "kraft",
     "images": [
-      "placeholder-coming-soon.webp"
+      "lgrow-oyster-blade-top.webp",
+      "lgrow-oyster-blade-side.webp",
+      "lgrow-oyster-blade-hero.webp"
     ],
     "badge": {
       "es": "A5 · Japón",
@@ -592,7 +595,7 @@
           "label": "11-12",
           "lo": 11,
           "hi": 12,
-          "image": "placeholder-coming-soon.webp",
+          "image": "lgrow-oyster-blade-top.webp",
           "sku": "FLAT"
         }
       ]
@@ -615,7 +618,8 @@
     "cat": "jp",
     "tone": "cream",
     "images": [
-      "placeholder-coming-soon.webp"
+      "lgrow-rib-fingers-top.webp",
+      "lgrow-rib-fingers-side.webp"
     ],
     "badge": {
       "es": "A5 · Japón",
@@ -628,7 +632,7 @@
           "label": "10-12",
           "lo": 10,
           "hi": 12,
-          "image": "placeholder-coming-soon.webp",
+          "image": "lgrow-rib-fingers-top.webp",
           "sku": "FINGER"
         }
       ]
@@ -687,7 +691,8 @@
     "cat": "jp",
     "tone": "charcoal",
     "images": [
-      "placeholder-coming-soon.webp"
+      "lgrow-short-rib-meat-top.webp",
+      "lgrow-short-rib-meat-side.webp"
     ],
     "badge": {
       "es": "A5 · Japón",
@@ -700,7 +705,7 @@
           "label": "10-12",
           "lo": 10,
           "hi": 12,
-          "image": "placeholder-coming-soon.webp",
+          "image": "lgrow-short-rib-meat-top.webp",
           "sku": "SHORTA5"
         }
       ]
@@ -759,7 +764,8 @@
     "cat": "jp",
     "tone": "cream",
     "images": [
-      "placeholder-coming-soon.webp"
+      "lgrow-flap-meat-top.webp",
+      "lgrow-flap-meat-side.webp"
     ],
     "badge": {
       "es": "A5 · Japón",
@@ -772,7 +778,7 @@
           "label": "10-12",
           "lo": 10,
           "hi": 12,
-          "image": "placeholder-coming-soon.webp",
+          "image": "lgrow-flap-meat-top.webp",
           "sku": "FLAP"
         }
       ]
@@ -795,7 +801,8 @@
     "cat": "jp",
     "tone": "red",
     "images": [
-      "placeholder-coming-soon.webp"
+      "lgrow-chuck-tail-flap-top.webp",
+      "lgrow-chuck-tail-flap-side.webp"
     ],
     "badge": {
       "es": "A5 · Japón",
@@ -808,7 +815,7 @@
           "label": "11-12",
           "lo": 11,
           "hi": 12,
-          "image": "placeholder-coming-soon.webp",
+          "image": "lgrow-chuck-tail-flap-top.webp",
           "sku": "CHUCK"
         }
       ]
@@ -831,7 +838,7 @@
     "cat": "jp",
     "tone": "charcoal",
     "images": [
-      "placeholder-coming-soon.webp"
+      "FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp"
     ],
     "badge": {
       "es": "Kobe · Japón",
@@ -844,7 +851,7 @@
           "label": "10-12",
           "lo": 10,
           "hi": 12,
-          "image": "placeholder-coming-soon.webp",
+          "image": "FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp",
           "sku": "TENDK"
         }
       ]
@@ -992,7 +999,7 @@
     "cat": "mackas",
     "tone": "kraft",
     "images": [
-      "placeholder-coming-soon.webp"
+      "LENGUA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp"
     ],
     "badge": {
       "es": "Black Angus",
