@@ -115,22 +115,26 @@ function LangToggle({ style, className }) {
   );
 }
 
-/* Real-photo product image (replaces menu-board tile). fit: cover|contain */
-function ProductImage({ product, height = 220, big = false, fit = 'cover' }) {
+/* Real-photo product image (replaces menu-board tile). fit: cover|contain
+   aspect: optional CSS aspect-ratio (e.g. '1 / 1'); when set the frame sizes by
+   ratio instead of a fixed height, so tall product photos fill the frame and the
+   dark tray/background around the meat crops away instead of showing as black edges. */
+function ProductImage({ product, height = 220, big = false, fit = 'cover', aspect }) {
   const { t } = useLang();
   const name = t.products[product.id].name;
   const src = product.img || window.MC_IMG[product.id];
+  const box = aspect ? { aspectRatio: aspect } : { height: height + 'px' };
   if (src) {
     return (
       <RevealImg src={src} alt={name} loading="lazy"
-        frameStyle={{ height: height + 'px', background: 'var(--mc-charcoal)' }}
+        frameStyle={{ ...box, background: 'var(--mc-charcoal)' }}
         imgStyle={{ width: '100%', height: '100%', objectFit: fit, display: 'block' }} />
     );
   }
   const bg = TONE_BG[product.tone] || 'var(--mc-cream)';
   const fg = TONE_FG[product.tone] || 'var(--mc-ink-800)';
   return (
-    <div style={{ position: 'relative', height: height + 'px', background: bg, color: fg, display: 'flex',
+    <div style={{ position: 'relative', ...box, background: bg, color: fg, display: 'flex',
       flexDirection: 'column', justifyContent: 'flex-end', padding: big ? '28px' : '18px', overflow: 'hidden' }}>
       <div style={{ position: 'relative', fontFamily: 'var(--font-display)',
         lineHeight: 0.98, fontWeight: 700, fontSize: big ? '54px' : '30px' }}>{name}</div>
@@ -307,7 +311,7 @@ function ProductCard({ product, onOpen }) {
       onMouseOver={(e) => { e.currentTarget.style.boxShadow = 'var(--shadow-lg)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
       onMouseOut={(e) => { e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)'; }}>
       <div style={{ position: 'relative' }}>
-        <ProductImage product={product} height={210} />
+        <ProductImage product={product} aspect="1 / 1" />
         {p.badge && (<div style={{ position: 'absolute', top: '14px', left: '14px' }}><Badge tone="red" solid>{p.badge}</Badge></div>)}
         {product.available === false && (<div style={{ position: 'absolute', top: '14px', right: '14px' }}><Badge tone="ink" solid>{t.pdp.soldOut}</Badge></div>)}
       </div>
@@ -406,7 +410,7 @@ function Carousel({ product, name, height = 560, index, onIndex }) {
         onClick={() => setZoom(true)} title="Ampliar imagen"
         onTouchStart={(e) => { touchX.current = e.touches[0].clientX; }}
         onTouchEnd={(e) => { if (touchX.current == null) return; const dx = e.changedTouches[0].clientX - touchX.current; if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1); touchX.current = null; }}>
-        <img src={src} alt={name} style={{ width: '100%', height: height + 'px', objectFit: 'contain', display: 'block' }} />
+        <img src={src} alt={name} style={{ width: '100%', height: height + 'px', objectFit: 'cover', display: 'block' }} />
         {n > 1 && (
           <>
             <button onClick={(e) => { e.stopPropagation(); go(-1); }} aria-label="Anterior" style={navBtn('left')}>‹</button>
