@@ -239,7 +239,7 @@ export default function AdminApp() {
     <div style={{ minHeight: '100vh', fontFamily: ADMIN_FONT, color: '#1a1a1a', background: '#f1f2f4' }}>
       <header style={{ position: 'sticky', top: 0, zIndex: 20, display: 'flex', alignItems: 'center', gap: '12px',
         padding: '10px 20px', background: '#fff', borderBottom: '1px solid #e1e3e5' }}>
-        <strong style={{ fontSize: '15px' }}>Meat Connection</strong>
+        <img src={window.MC_LOGO_INK} alt="Meat Connection" style={{ height: '26px', display: 'block' }} />
         <span style={{ fontSize: '11px', fontWeight: 600, color: '#616a75', background: '#e8eaec', borderRadius: '6px', padding: '2px 8px' }}>Admin</span>
         <div style={{ flex: 1 }} />
         {section === 'products' && dirty && (
