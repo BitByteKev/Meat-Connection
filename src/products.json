@@ -3007,5 +3007,40 @@
       "origin": "Australian wagyu with a 9+ marbling grade on the AUS-MEAT scale. Raised to the quality standards that define Australian wagyu, with careful feeding that promotes its intense marbling.",
       "cooking": "Because of its high marbling, cook this cut over high heat and for a short time to sear the surface without rendering all the fat.\n\n• Let the meat come to room temperature 30 minutes before cooking.\n• Sear in a very hot pan or grill, 1 to 2 minutes per side.\n• Aim for medium-rare to fully enjoy its juiciness.\n• Rest for 3 to 5 minutes before slicing.\n\nSeason simply with flaky salt to let the marbling take center stage."
     }
+  },
+  {
+    "id": "Diezmillo-6-7-australiano",
+    "cat": "au",
+    "tone": "charcoal",
+    "images": [
+      "whatsapp-image-2026-07-02-at-15-11-29-mr452f87449.webp"
+    ],
+    "marbling": {
+      "system": "aus",
+      "variants": [
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "whatsapp-image-2026-07-02-at-15-11-29-mr452f87449.webp",
+          "label": "6-7"
+        }
+      ]
+    },
+    "badge": {
+      "es": null,
+      "en": null
+    },
+    "es": {
+      "name": "Diezmillo Wagyu Australiano · Marmoleo Alto",
+      "description": "Un chuck roll de Wagyu australiano con marmoleo generoso que se deshace en cada bocado.\n\nEl diezmillo (grado 6-7) ofrece un equilibrio ideal entre sabor profundo y terneza jugosa, con vetas de grasa intramuscular que se funden al calor y bañan la carne de untuosidad.\n\nUn corte versátil y noble, perfecto tanto para asados lentos como para cortes finos a la parrilla.",
+      "origin": "Wagyu australiano, marmoleo grado 6-7. Corte de diezmillo (chuck roll) proveniente de ganado Wagyu criado en Australia.",
+      "cooking": "Para cortes gruesos: sella a fuego alto por ambos lados y termina a calor medio hasta término medio.\n\nSi lo cortas en láminas finas, cocina a la parrilla o plancha muy caliente solo unos segundos por lado.\n\nDeja reposar de 3 a 5 minutos antes de servir para conservar los jugos. Término sugerido: medio."
+    },
+    "en": {
+      "name": "Chuck Roll Australian Wagyu · High Marbling",
+      "description": "An Australian Wagyu chuck roll with generous marbling that melts in every bite.\n\nThis chuck roll (grade 6-7) delivers an ideal balance of deep flavor and juicy tenderness, with intramuscular fat that renders under heat and coats the meat in richness.\n\nA versatile, noble cut, perfect for slow roasts or thin slices on the grill.",
+      "origin": "Australian Wagyu, marbling grade 6-7. Chuck roll cut sourced from Wagyu cattle raised in Australia.",
+      "cooking": "For thick cuts: sear over high heat on both sides and finish over medium heat to medium doneness.\n\nIf sliced thin, grill or griddle over very high heat for just a few seconds per side.\n\nRest 3 to 5 minutes before serving to retain the juices. Suggested doneness: medium."
+    }
   }
 ]
