@@ -690,7 +690,9 @@ function Footer({ onCategory, onAnchor }) {
         ))}
       </div>
       <div className="mc-foot-legal" style={{ borderTop: '1px solid var(--border-subtle)', padding: '18px 24px', maxWidth: 'var(--container-max)', margin: '0 auto', display: 'flex', justifyContent: 'space-between', gap: '10px', fontSize: '12px', color: 'var(--mc-ink-500)' }}>
-        <span>© 2026 Meat Connection · {WA_DISPLAY}</span>
+        <span>© 2026 Meat Connection · <a href={waHref()} target="_blank" rel="noopener" aria-label="WhatsApp"
+          onMouseOver={(e) => e.currentTarget.style.color = 'var(--accent-gold-ink)'} onMouseOut={(e) => e.currentTarget.style.color = 'inherit'}
+          style={{ color: 'inherit', textDecoration: 'none' }}>{WA_DISPLAY}</a></span>
       </div>
     </footer>
   );
