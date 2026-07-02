@@ -56,6 +56,9 @@ function reorderWhatsApp() {
 /* Catálogo — orden, categoría y tono vienen de products.json (ver ./products.js).
    Nombre/desc/badge se leen por id desde i18n (que también deriva de products.json). */
 const PRODUCTS = PRODUCT_LIST;
+/* Los agotados no aparecen en listados públicos (catálogo + bestsellers del home),
+   pero su URL directa sigue mostrando la ficha con el badge "Agotado". */
+const IN_STOCK = PRODUCTS.filter((p) => p.available);
 const TONE_BG = { charcoal: 'var(--mc-charcoal)', kraft: 'var(--mc-kraft)', cream: 'var(--mc-cream)', red: 'var(--mc-red)' };
 
 /* ===== URL slugs + client-side routing =====
@@ -1039,7 +1042,7 @@ function App() {
   }, [view, active]);
   function quote() { openWhatsApp(getStrings().wa.quote); }
   const count = cart.reduce((s, i) => s + i.qty, 0);
-  const filtered = cat === 'all' ? PRODUCTS : PRODUCTS.filter((p) => catOf(p) === cat);
+  const filtered = cat === 'all' ? IN_STOCK : IN_STOCK.filter((p) => catOf(p) === cat);
   return (
     <div style={{ background: 'var(--surface-page)', minHeight: '100vh' }}>
       <Header cartCount={count} onCart={() => setCartOpen(true)} onNav={nav} onAnchor={goAnchor} onReorder={reorderWhatsApp} overHero={view === 'home'} />
@@ -1055,7 +1058,7 @@ function App() {
             </div>
             <button onClick={() => nav('shop')} style={{ border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '14px', color: 'var(--text-strong)' }}>{t.bestsellers.seeAll} <Icon name="ArrowRight" size={16} /></button>
           </div>
-          <ProductGrid products={PRODUCTS.slice(0, 4)} onOpen={open} />
+          <ProductGrid products={IN_STOCK.slice(0, 4)} onOpen={open} />
         </Reveal>
         <Partners />
         <Clients />
