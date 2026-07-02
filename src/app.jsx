@@ -59,6 +59,14 @@ const PRODUCTS = PRODUCT_LIST;
 /* Los agotados no aparecen en listados públicos (catálogo + bestsellers del home),
    pero su URL directa sigue mostrando la ficha con el badge "Agotado". */
 const IN_STOCK = PRODUCTS.filter((p) => p.available);
+/* Búsqueda del catálogo: id + nombre en ambos idiomas, sin acentos ni mayúsculas
+   ("picana" encuentra "Picaña", "japones" encuentra "Japonés"). */
+const normSearch = (s) => (s || '').toString().normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+const SEARCH_TEXT = Object.fromEntries(PRODUCTS.map((p) => {
+  const es = (PRODUCT_STRINGS.es[p.id] && PRODUCT_STRINGS.es[p.id].name) || '';
+  const en = (PRODUCT_STRINGS.en[p.id] && PRODUCT_STRINGS.en[p.id].name) || '';
+  return [p.id, normSearch(`${p.id} ${es} ${en}`)];
+}));
 const TONE_BG = { charcoal: 'var(--mc-charcoal)', kraft: 'var(--mc-kraft)', cream: 'var(--mc-cream)', red: 'var(--mc-red)' };
 
 /* ===== URL slugs + client-side routing =====
@@ -687,13 +695,26 @@ function Footer({ onCategory, onAnchor }) {
     </footer>
   );
 }
-function ShopToolbar({ active, onPick }) {
+function ShopToolbar({ active, onPick, query, onQuery }) {
   const { Tag } = window.MeatConnectionDesignSystem_3e7a26;
   const { t, lang } = useLang();
   const cats = [['all', t.categories.all], ...CATEGORY_KEYS.map((k) => [k, catLabel(k, lang)])];
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap', marginBottom: '28px' }}>
       {cats.map(([key, label]) => <Tag key={key} selected={active === key} onClick={() => onPick(key)}>{label}</Tag>)}
+      <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginLeft: 'auto', padding: '0 14px', height: '38px', minWidth: '210px', border: '1px solid var(--border-default)', borderRadius: '999px', background: '#fff' }}>
+        <Icon name="Search" size={15} color="var(--text-muted)" />
+        <input value={query} onChange={(e) => onQuery(e.target.value)} placeholder={t.shop.searchPlaceholder} aria-label={t.shop.searchPlaceholder}
+          onFocus={(e) => { e.currentTarget.parentElement.style.borderColor = 'var(--text-strong)'; }}
+          onBlur={(e) => { e.currentTarget.parentElement.style.borderColor = 'var(--border-default)'; }}
+          style={{ border: 'none', outline: 'none', background: 'transparent', fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--text-strong)', width: '100%', padding: 0 }} />
+        {query && (
+          <button type="button" onClick={() => onQuery('')} aria-label={t.shop.clearSearch}
+            style={{ border: 'none', background: 'none', padding: 0, cursor: 'pointer', display: 'flex' }}>
+            <Icon name="X" size={14} color="var(--text-muted)" />
+          </button>
+        )}
+      </div>
     </div>
   );
 }
@@ -1018,6 +1039,7 @@ function App() {
   const [cat, setCat] = React.useState(_init.cat);
   const [cartOpen, setCartOpen] = React.useState(false);
   const [cart, setCart] = React.useState([]);
+  const [q, setQ] = React.useState('');
   function add(product, qty = 1, saleType = 'mayoreo') {
     setCart((c) => { const ex = c.find((i) => i.id === product.id);
       if (ex) return c.map((i) => i.id === product.id ? { ...i, qty: i.qty + qty, saleType } : i);
@@ -1042,7 +1064,9 @@ function App() {
   }, [view, active]);
   function quote() { openWhatsApp(getStrings().wa.quote); }
   const count = cart.reduce((s, i) => s + i.qty, 0);
-  const filtered = cat === 'all' ? IN_STOCK : IN_STOCK.filter((p) => catOf(p) === cat);
+  const nq = normSearch(q.trim());
+  const searched = nq ? IN_STOCK.filter((p) => SEARCH_TEXT[p.id].includes(nq)) : IN_STOCK;
+  const filtered = cat === 'all' ? searched : searched.filter((p) => catOf(p) === cat);
   return (
     <div style={{ background: 'var(--surface-page)', minHeight: '100vh' }}>
       <Header cartCount={count} onCart={() => setCartOpen(true)} onNav={nav} onAnchor={goAnchor} onReorder={reorderWhatsApp} overHero={view === 'home'} />
@@ -1069,8 +1093,21 @@ function App() {
         <section style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '40px 24px 80px' }}>
           <h1 className="mc-page-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '48px', margin: '0 0 8px', color: 'var(--text-strong)' }}>{t.shop.title}</h1>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: '16px', color: 'var(--text-muted)', margin: '0 0 28px' }}>{fmt(t.shop.count, { n: filtered.length })}</p>
-          <ShopToolbar active={cat} onPick={pickCat} />
-          <ProductGrid products={filtered} onOpen={open} />
+          <ShopToolbar active={cat} onPick={pickCat} query={q} onQuery={setQ} />
+          {filtered.length === 0 ? (
+            <div style={{ padding: '60px 0', textAlign: 'center' }}>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '16px', color: 'var(--text-muted)', margin: '0 0 18px' }}>
+                {q.trim() ? fmt(t.shop.noResultsFor, { q: q.trim() }) : t.shop.noResults}
+              </p>
+              {q.trim() && (
+                <button onClick={() => setQ('')} style={{ cursor: 'pointer', padding: '10px 20px', borderRadius: '999px', border: '1px solid var(--border-default)', background: 'transparent', fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '13px', color: 'var(--text-strong)' }}>
+                  {t.shop.clearSearch}
+                </button>
+              )}
+            </div>
+          ) : (
+            <ProductGrid products={filtered} onOpen={open} />
+          )}
         </section>
       )}
       {view === 'product' && active && (<ProductDetail product={active} onAdd={add} onBack={() => nav('shop')} />)}

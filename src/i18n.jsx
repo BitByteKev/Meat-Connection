@@ -100,7 +100,7 @@ export const STRINGS = {
       cta: 'Ver Catálogo', alt: 'King River MB4-5, wagyu australiano de marmoleo MB4-5, empacado al vacío',
     },
     bestsellers: { eyebrow: 'Del Mostrador', title: 'Cortes Más Vendidos', seeAll: 'Ver Todo' },
-    shop: { title: 'El Catálogo', count: '{n} cortes · mayoreo y menudeo' },
+    shop: { title: 'El Catálogo', count: '{n} cortes · mayoreo y menudeo', searchPlaceholder: 'Buscar corte…', noResultsFor: 'Sin resultados para "{q}".', noResults: 'Sin resultados.', clearSearch: 'Limpiar búsqueda' },
     footer: {
       catalogTitle: 'Catálogo', catalogItems: ['A5 Japonés', 'Wagyu Australiano', 'Wagyu Americano', 'Black Angus'],
       servicesTitle: 'Servicios', servicesItems: ['Envíos Express', 'Importación Directa', 'Cadena de Frío', 'Porcionado al Vacío'],
@@ -210,7 +210,7 @@ export const STRINGS = {
       cta: 'View Catalog', alt: 'King River MB4-5, Australian MB4-5 marbled wagyu, vacuum-packed',
     },
     bestsellers: { eyebrow: 'From the Counter', title: 'Best-Selling Cuts', seeAll: 'View All' },
-    shop: { title: 'The Catalog', count: '{n} cuts · wholesale & retail' },
+    shop: { title: 'The Catalog', count: '{n} cuts · wholesale & retail', searchPlaceholder: 'Search cuts…', noResultsFor: 'No results for "{q}".', noResults: 'No results.', clearSearch: 'Clear search' },
     footer: {
       catalogTitle: 'Catalog', catalogItems: ['A5 Japanese', 'Australian Wagyu', 'American Wagyu', 'Black Angus'],
       servicesTitle: 'Services', servicesItems: ['Express Shipping', 'Direct Import', 'Cold Chain', 'Vacuum Portioning'],
