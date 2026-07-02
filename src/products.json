@@ -2867,5 +2867,40 @@
       "origin": "Abatti Ranch origin\n\nAmerican wagyu cross from Abatti Ranch (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
       "cooking": "Cooking recommendations\n\nRoast at 200 °C for 15–20 min until the marrow bubbles."
     }
+  },
+  {
+    "id": "rib-eye-autraliano-4",
+    "cat": "au",
+    "tone": "charcoal",
+    "images": [
+      "whatsapp-image-2026-07-02-at-16-18-38-mr44nh3k5818.webp"
+    ],
+    "marbling": {
+      "system": "aus",
+      "variants": [
+        {
+          "lo": 4,
+          "hi": 4,
+          "image": "whatsapp-image-2026-07-02-at-16-18-38-mr44nh3k5818.webp",
+          "label": "4"
+        }
+      ]
+    },
+    "badge": {
+      "es": null,
+      "en": null
+    },
+    "es": {
+      "name": "Rib Eye Wagyu Japonés A5 · Marmoleo Alto",
+      "description": "Un rib eye japonés que se deshace con solo tocarlo: marmoleo A5 en su máxima expresión.\n\nCada corte revela una red densa y uniforme de grasa intramuscular que se funde con el calor, aportando una textura mantecosa y un sabor profundo, casi dulce. El Wagyu Japonés A5 representa la calificación más alta del sistema japonés, reservada para carnes de marmoleo excepcional.\n\nUna experiencia para paladares que buscan lo extraordinario: pocas porciones bastan para disfrutar toda su intensidad.",
+      "origin": "Wagyu Japonés con clasificación A5, el grado más alto del sistema de calidad de Japón. Raza Wagyu criada bajo los estándares que caracterizan a esta carne por su marmoleo abundante y su alimentación cuidada.",
+      "cooking": "Retira de refrigeración 30 minutos antes de cocinar. Usa una sartén o plancha muy caliente sin aceite: la propia grasa del corte es suficiente.\n\n• Sella 1 a 2 minutos por lado para un término rojo-inglés\n• Corta en porciones pequeñas debido a su riqueza\n• Deja reposar 3 a 5 minutos antes de servir\n\nSazona solo con sal en escamas para no opacar su sabor natural."
+    },
+    "en": {
+      "name": "Rib Eye Japanese Wagyu A5 · High Marbling",
+      "description": "A Japanese rib eye that melts at the slightest touch: A5 marbling at its finest.\n\nEach cut reveals a dense, even web of intramuscular fat that dissolves with heat, delivering a buttery texture and a deep, almost sweet flavor. Japanese Wagyu A5 is the highest grade in Japan's grading system, reserved for beef with exceptional marbling.\n\nAn experience for palates seeking the extraordinary: a few portions are enough to enjoy its full intensity.",
+      "origin": "Japanese Wagyu with an A5 classification, the top grade in Japan's quality system. Wagyu breed raised under the standards that define this beef for its abundant marbling and carefully managed feeding.",
+      "cooking": "Remove from refrigeration 30 minutes before cooking. Use a very hot pan or griddle with no oil: the cut's own fat is enough.\n\n• Sear 1 to 2 minutes per side for a rare finish\n• Cut into small portions due to its richness\n• Let rest 3 to 5 minutes before serving\n\nSeason only with flaky salt so as not to mask its natural flavor."
+    }
   }
 ]
