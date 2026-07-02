@@ -5,7 +5,7 @@
 // category still in use by products cannot be deleted.
 import React from 'react'
 import { CATEGORY_LIST } from '../categories.js'
-import { TextField, btn, btnDanger, card, labelStyle, move } from './fields.jsx'
+import { TextField, btn, btnPrimary, btnDanger, card, move } from './fields.jsx'
 
 const PW_KEY = 'mc_admin_pw'
 const clone = (x) => JSON.parse(JSON.stringify(x))
@@ -69,7 +69,7 @@ export default function CategoriesEditor({ catalog }) {
 
   return (
     <div>
-      <p style={{ fontSize: '13px', color: 'var(--mc-ink-700, #555)', margin: '0 0 16px', lineHeight: 1.6 }}>
+      <p style={{ fontSize: '13px', color: '#616a75', margin: '0 0 16px', lineHeight: 1.6 }}>
         Renombra, reordena, agrega o elimina las categorías del catálogo. El orden aquí es el orden de los filtros en la tienda.
       </p>
       {cats.map((c, i) => {
@@ -87,7 +87,7 @@ export default function CategoriesEditor({ catalog }) {
                   title={used ? `En uso por ${used} producto(s) — reasígnalos antes de eliminar` : 'Eliminar categoría'} onClick={() => remove(i)}>Eliminar</button>
               </div>
             </div>
-            <div style={{ fontSize: '11px', color: 'var(--mc-ink-500, #888)', marginTop: '2px' }}>
+            <div style={{ fontSize: '11px', color: '#616a75', marginTop: '2px' }}>
               {c._existing ? <>clave: <code>{c.key}</code></> : <em>clave nueva: se generará al guardar</em>}
               {(c.aliases && c.aliases.length > 0) && <> · agrupa: {c.aliases.join(', ')}</>}
               {' · '}{used} producto{used === 1 ? '' : 's'}
@@ -97,15 +97,14 @@ export default function CategoriesEditor({ catalog }) {
       })}
       <button type="button" style={{ ...btn, marginTop: '4px' }} onClick={add}>+ Agregar categoría</button>
 
-      <div style={{ position: 'sticky', bottom: 0, marginTop: '24px', padding: '14px 0', background: 'linear-gradient(to top, var(--mc-paper, #fff) 70%, transparent)' }}>
+      <div style={{ marginTop: '24px' }}>
         {status && (
           <div style={{ marginBottom: '10px', padding: '10px 12px', borderRadius: '8px', fontSize: '13px',
-            background: status.ok ? '#e8f5e9' : '#fdecea', color: status.ok ? '#1b5e20' : '#9b1c1c',
-            border: `1px solid ${status.ok ? '#a5d6a7' : '#f5c2c0'}` }}>{status.msg}</div>
+            background: status.ok ? '#d1f0d9' : '#fdecea', color: status.ok ? '#0a6c2e' : '#9b1c1c',
+            border: `1px solid ${status.ok ? '#a3d9b1' : '#f5c2c0'}` }}>{status.msg}</div>
         )}
         <button type="button" disabled={saving} onClick={save}
-          style={{ fontFamily: 'var(--font-display, sans-serif)', fontWeight: 700, fontSize: '15px', cursor: saving ? 'default' : 'pointer',
-            border: 'none', borderRadius: '8px', padding: '12px 22px', color: '#fff', background: saving ? 'var(--mc-ink-400, #999)' : 'var(--mc-red, #b3122a)' }}>
+          style={{ ...btnPrimary, fontSize: '14px', padding: '10px 18px', opacity: saving ? 0.6 : 1, cursor: saving ? 'default' : 'pointer' }}>
           {saving ? 'Guardando…' : 'Guardar categorías'}
         </button>
       </div>

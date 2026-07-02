@@ -51,12 +51,12 @@ export default function ImagesPicker({ images, onChange }) {
         {list.map((file, i) => (
           <div key={file + i} style={{ width: '110px' }}>
             <div style={{ position: 'relative', width: '110px', height: '88px', borderRadius: '6px', overflow: 'hidden',
-              border: i === 0 ? '3px solid var(--mc-red, #b3122a)' : '1px solid var(--mc-ink-300, #cfcbc4)', background: 'var(--mc-cream, #f4f1ec)' }}>
+              border: i === 0 ? '3px solid #1a1a1a' : '1px solid #d0d3d6', background: '#f1f2f4' }}>
               {previewSrc(file)
                 ? <img src={previewSrc(file)} alt={file} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                 : <div style={{ display: 'flex', width: '100%', height: '100%', alignItems: 'center', justifyContent: 'center', fontSize: '10px', color: '#c0392b', textAlign: 'center', padding: '4px' }}>falta archivo</div>}
               {i === 0 && (
-                <span style={{ position: 'absolute', top: '4px', left: '4px', background: 'var(--mc-red, #b3122a)', color: '#fff', fontSize: '9px', fontWeight: 700, padding: '2px 5px', borderRadius: '4px', letterSpacing: '0.04em' }}>PORTADA</span>
+                <span style={{ position: 'absolute', top: '4px', left: '4px', background: '#1a1a1a', color: '#fff', fontSize: '9px', fontWeight: 700, padding: '2px 5px', borderRadius: '4px', letterSpacing: '0.04em' }}>PORTADA</span>
               )}
             </div>
             <div style={{ display: 'flex', gap: '3px', marginTop: '4px' }}>
@@ -80,14 +80,14 @@ export default function ImagesPicker({ images, onChange }) {
       {upErr && <div style={{ fontSize: '12px', color: '#9b1c1c', marginTop: '6px' }}>{upErr}</div>}
 
       {open && (
-        <div style={{ marginTop: '10px', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(84px, 1fr))', gap: '8px', maxHeight: '260px', overflowY: 'auto', padding: '8px', border: '1px solid var(--mc-ink-200, #e3e0da)', borderRadius: '8px', background: '#fff' }}>
+        <div style={{ marginTop: '10px', display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(84px, 1fr))', gap: '8px', maxHeight: '260px', overflowY: 'auto', padding: '8px', border: '1px solid #e1e3e5', borderRadius: '8px', background: '#fff' }}>
           {IMAGE_FILES.map((file) => {
             const chosen = list.includes(file)
             return (
               <button key={file} type="button" title={file} disabled={chosen}
                 onClick={() => add(file)}
                 style={{ padding: 0, cursor: chosen ? 'default' : 'pointer', borderRadius: '6px', overflow: 'hidden', background: 'none', opacity: chosen ? 0.35 : 1,
-                  border: '1px solid var(--mc-ink-300, #cfcbc4)', aspectRatio: '1 / 1' }}>
+                  border: '1px solid #d0d3d6', aspectRatio: '1 / 1' }}>
                 <img src={imageUrl(file)} alt={file} loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </button>

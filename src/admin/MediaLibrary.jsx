@@ -7,7 +7,7 @@ import { UPLOADED, UPLOADED_PREVIEWS, fileToWebpDataUrl, uploadName } from './up
 
 const PW_KEY = 'mc_admin_pw'
 const previewSrc = (f) => imageUrl(f) || UPLOADED_PREVIEWS.get(f)
-const inputStyle = { padding: '8px 10px', border: '1px solid #cfcbc4', borderRadius: '8px', fontSize: '13px', minWidth: '180px' }
+const inputStyle = { padding: '8px 10px', border: '1px solid #d0d3d6', borderRadius: '8px', fontSize: '13px', minWidth: '180px' }
 const errStyle = { margin: '0 0 12px', padding: '9px 12px', borderRadius: '8px', fontSize: '13px', background: '#fdecea', color: '#9b1c1c', border: '1px solid #f5c2c0' }
 const badge = (bg) => ({ position: 'absolute', top: '5px', left: '5px', background: bg, color: '#fff', fontSize: '9px', fontWeight: 700, padding: '2px 5px', borderRadius: '4px', letterSpacing: '0.04em' })
 
@@ -69,8 +69,8 @@ export default function MediaLibrary({ catalog }) {
           const used = usage[f] || []
           const isNew = extra.includes(f) && !IMAGE_FILES.includes(f)
           return (
-            <div key={f} style={{ border: '1px solid #e3e0da', borderRadius: '8px', overflow: 'hidden', background: '#fff' }}>
-              <div style={{ position: 'relative', aspectRatio: '4 / 3', background: '#f4f1ec' }}>
+            <div key={f} style={{ border: '1px solid #e1e3e5', borderRadius: '8px', overflow: 'hidden', background: '#fff' }}>
+              <div style={{ position: 'relative', aspectRatio: '4 / 3', background: '#f1f2f4' }}>
                 {previewSrc(f)
                   ? <img src={previewSrc(f)} alt={f} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   : <div style={{ display: 'flex', height: '100%', alignItems: 'center', justifyContent: 'center', fontSize: '10px', color: '#c0392b' }}>falta archivo</div>}

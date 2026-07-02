@@ -17,17 +17,17 @@ const SYSTEMS = [
 const maxFor = (sys) => (SYSTEMS.find((s) => s.value === sys) || {}).max || 12
 const previewSrc = (f) => imageUrl(f) || UPLOADED_PREVIEWS.get(f)
 
-const cell = { padding: '6px 8px', border: '1px solid var(--mc-ink-300, #cfcbc4)', borderRadius: '6px', fontSize: '13px', background: '#fff', width: '100%', boxSizing: 'border-box' }
+const cell = { padding: '6px 8px', border: '1px solid #d0d3d6', borderRadius: '6px', fontSize: '13px', background: '#fff', width: '100%', boxSizing: 'border-box' }
 const num = { ...cell, width: '58px', textAlign: 'center' }
-const mini = { fontFamily: 'var(--font-display, sans-serif)', textTransform: 'uppercase', letterSpacing: '0.04em', fontSize: '10px', fontWeight: 700, color: 'var(--mc-ink-600, #777)', margin: '0 0 3px', display: 'block' }
+const mini = { textTransform: 'uppercase', letterSpacing: '0.04em', fontSize: '10px', fontWeight: 700, color: '#616a75', margin: '0 0 3px', display: 'block' }
 
 function Variant({ v, i, images, system, canMove, onChange, onMove, onRemove }) {
   const max = maxFor(system)
   const set = (patch) => onChange({ ...v, ...patch })
   const setNum = (key, raw) => { const n = parseInt(raw, 10); set({ [key]: Number.isFinite(n) ? n : '' }) }
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', alignItems: 'flex-end', padding: '10px', border: '1px solid var(--mc-ink-200, #e3e0da)', borderRadius: '8px', marginBottom: '8px', background: 'var(--mc-cream, #faf8f4)' }}>
-      <div style={{ width: '46px', height: '38px', borderRadius: '6px', overflow: 'hidden', background: '#f4f1ec', flex: 'none', border: '1px solid var(--mc-ink-200, #e3e0da)' }}>
+    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', alignItems: 'flex-end', padding: '10px', border: '1px solid #e1e3e5', borderRadius: '8px', marginBottom: '8px', background: '#f9fafb' }}>
+      <div style={{ width: '46px', height: '38px', borderRadius: '6px', overflow: 'hidden', background: '#f1f2f4', flex: 'none', border: '1px solid #e1e3e5' }}>
         {v.image && previewSrc(v.image) && <img src={previewSrc(v.image)} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
       </div>
       <label style={{ flex: 'none' }}><span style={mini}>Desde</span>
@@ -81,7 +81,7 @@ export default function MarblingEditor({ product, onChange }) {
               onRemove={() => setVariants(variants.filter((_, k) => k !== i))} />
           ))}
           <button type="button" style={btn} onClick={addVariant}>+ Agregar grado</button>
-          <p style={{ fontSize: '11px', color: 'var(--mc-ink-600, #777)', margin: '8px 0 0' }}>
+          <p style={{ fontSize: '11px', color: '#616a75', margin: '8px 0 0' }}>
             Un solo grado con “Desde” = “Hasta” se muestra como un número (9 → “9+” en escalas no japonesas). Varios grados activan el selector de grado en la ficha.
           </p>
         </>
