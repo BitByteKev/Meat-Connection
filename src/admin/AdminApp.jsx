@@ -98,15 +98,45 @@ function newProduct() {
   }
 }
 
+// The password is verified server-side via /api/verify-password before the
+// admin opens — previously any password "logged in" and only failed on save.
 function LoginGate({ onLogin }) {
   const [pw, setPw] = React.useState('')
+  const [busy, setBusy] = React.useState(false)
+  const [err, setErr] = React.useState(null)
+
+  async function submit(e) {
+    e.preventDefault()
+    if (!pw || busy) return
+    setErr(null)
+    setBusy(true)
+    try {
+      const res = await fetch('/api/verify-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password: pw }),
+      })
+      if (res.ok) onLogin(pw)
+      else if (res.status === 401) setErr('Contraseña incorrecta.')
+      else setErr('No se pudo verificar la contraseña, intenta de nuevo.')
+    } catch {
+      setErr('Error de red, intenta de nuevo.')
+    } finally {
+      setBusy(false)
+    }
+  }
+
   return (
     <div style={{ ...page, maxWidth: '380px', paddingTop: '80px' }}>
       <h1 style={{ fontSize: '20px', fontWeight: 700, marginBottom: '4px' }}>Catálogo · Admin</h1>
       <p style={{ fontSize: '13px', color: '#616a75', marginTop: 0 }}>Meat Connection</p>
-      <form onSubmit={(e) => { e.preventDefault(); if (pw) onLogin(pw) }}>
+      <form onSubmit={submit}>
         <TextField label="Contraseña" type="password" value={pw} onChange={setPw} />
-        <button type="submit" style={{ ...btnPrimary, padding: '9px 16px', fontSize: '13px' }}>Entrar</button>
+        <button type="submit" disabled={busy}
+          style={{ ...btnPrimary, padding: '9px 16px', fontSize: '13px', opacity: busy ? 0.6 : 1, cursor: busy ? 'default' : 'pointer' }}>
+          {busy ? 'Verificando…' : 'Entrar'}
+        </button>
+        {err && <div style={{ marginTop: '10px', fontSize: '12px', color: '#9b1c1c' }}>{err}</div>}
       </form>
     </div>
   )
