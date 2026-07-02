@@ -375,22 +375,73 @@ function TextBlock({ text }) {
 }
 const qtyBtn = { width: '40px', height: '40px', border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--mc-charcoal)' };
 const tabPara = { fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.65, color: 'var(--text-body)', margin: 0 };
-/* Fullscreen image zoom (lightbox). Close on backdrop click, X, or Esc. */
+/* Fullscreen image lightbox with real zoom: click/tap magnifies 2.5x into the
+   clicked point, dragging pans while zoomed, click again fits to screen.
+   Close on backdrop click, X, or Esc. */
 function Lightbox({ src, alt, onClose }) {
+  const SCALE = 2.5;
+  const [zoom, setZoom] = React.useState(null); // null = fit-to-screen; {x,y} = pan offset while zoomed
+  const imgRef = React.useRef(null);
+  const drag = React.useRef(null); // { sx, sy, bx, by, moved }
+
   React.useEffect(() => {
     const onKey = (e) => { if (e.key === 'Escape') onClose(); };
     document.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
     return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
   }, [onClose]);
+
+  const clamp = (v, m) => Math.max(-m, Math.min(m, v));
+  // Pan limits keep the scaled image's edges from drifting past the fitted box.
+  const limits = () => {
+    const r = imgRef.current.getBoundingClientRect();
+    const s = zoom ? SCALE : 1; // rect is already scaled while zoomed
+    return { mx: (r.width / s) * (SCALE - 1) / 2, my: (r.height / s) * (SCALE - 1) / 2 };
+  };
+
+  const toggle = (e) => {
+    e.stopPropagation();
+    const wasDrag = drag.current && drag.current.moved;
+    drag.current = null;
+    if (wasDrag) return; // a pan gesture shouldn't also toggle the zoom
+    if (zoom) { setZoom(null); return; }
+    // Zoom in keeping the clicked point stationary under the cursor.
+    const r = imgRef.current.getBoundingClientRect();
+    const cx = e.clientX - (r.left + r.width / 2);
+    const cy = e.clientY - (r.top + r.height / 2);
+    const { mx, my } = limits();
+    setZoom({ x: clamp(-cx * (SCALE - 1), mx), y: clamp(-cy * (SCALE - 1), my) });
+  };
+  const onPointerDown = (e) => {
+    if (!zoom) return;
+    drag.current = { sx: e.clientX, sy: e.clientY, bx: zoom.x, by: zoom.y, moved: false };
+    try { e.currentTarget.setPointerCapture(e.pointerId); } catch {}
+  };
+  const onPointerMove = (e) => {
+    const d = drag.current;
+    if (!d) return;
+    const dx = e.clientX - d.sx, dy = e.clientY - d.sy;
+    if (!d.moved && Math.abs(dx) + Math.abs(dy) < 6) return;
+    d.moved = true;
+    const { mx, my } = limits();
+    setZoom({ x: clamp(d.bx + dx, mx), y: clamp(d.by + dy, my) });
+  };
+
+  const dragging = !!(drag.current && drag.current.moved);
   return (
     <div onClick={onClose} role="dialog" aria-modal="true" aria-label={alt}
-      style={{ position: 'fixed', inset: 0, background: 'rgba(15,15,15,0.93)', zIndex: 80, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', cursor: 'zoom-out' }}>
-      <button onClick={onClose} aria-label="Cerrar" style={{ position: 'absolute', top: '16px', right: '16px', width: '46px', height: '46px', border: 'none', background: 'rgba(255,255,255,0.12)', color: '#fff', borderRadius: '999px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      style={{ position: 'fixed', inset: 0, background: 'rgba(15,15,15,0.93)', zIndex: 80, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', cursor: 'zoom-out', overflow: 'hidden' }}>
+      <button onClick={onClose} aria-label="Cerrar" style={{ position: 'absolute', top: '16px', right: '16px', width: '46px', height: '46px', border: 'none', background: 'rgba(255,255,255,0.12)', color: '#fff', borderRadius: '999px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 2 }}>
         <Icon name="X" size={24} color="#fff" />
       </button>
-      <img src={src} alt={alt} onClick={(e) => e.stopPropagation()}
-        style={{ maxWidth: '95vw', maxHeight: '90vh', width: 'auto', height: 'auto', objectFit: 'contain', borderRadius: '6px', boxShadow: '0 12px 48px rgba(0,0,0,0.55)', cursor: 'default' }} />
+      <img ref={imgRef} src={src} alt={alt} draggable={false}
+        onClick={toggle} onPointerDown={onPointerDown} onPointerMove={onPointerMove}
+        style={{ maxWidth: '95vw', maxHeight: '90vh', width: 'auto', height: 'auto', objectFit: 'contain', borderRadius: '6px',
+          boxShadow: '0 12px 48px rgba(0,0,0,0.55)',
+          transform: zoom ? `translate(${zoom.x}px, ${zoom.y}px) scale(${SCALE})` : 'none',
+          transition: dragging ? 'none' : 'transform 0.25s ease',
+          cursor: zoom ? (dragging ? 'grabbing' : 'zoom-out') : 'zoom-in',
+          touchAction: 'none', userSelect: 'none' }} />
     </div>
   );
 }
