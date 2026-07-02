@@ -2,11 +2,10 @@
 // GitHub via /api/save-products, which triggers a Vercel rebuild (~1 min to live).
 // Content admin only — not a CRM. See docs/superpowers/specs/2026-06-27-catalog-admin-simplify.md
 import React from 'react'
-import { RAW_CATALOG, CATEGORIES, TONES, IMAGE_FILES, imageUrl } from '../products.js'
+import { RAW_CATALOG, CATEGORIES, IMAGE_FILES, imageUrl } from '../products.js'
 import { CATEGORY_LIST } from '../categories.js'
-import { TextField, TextArea, Select, card, btn, btnPrimary, btnDanger, labelStyle, move, ADMIN_FONT } from './fields.jsx'
-import ImagesPicker from './ImagesPicker.jsx'
-import MarblingEditor from './MarblingEditor.jsx'
+import { TextField, card, btn, btnPrimary, btnDanger, move, ADMIN_FONT } from './fields.jsx'
+import ProductDetail from './ProductDetail.jsx'
 import MediaLibrary from './MediaLibrary.jsx'
 import CategoriesEditor from './CategoriesEditor.jsx'
 import { UPLOADED, UPLOADED_PREVIEWS } from './uploads.js'
@@ -26,7 +25,6 @@ function categoryOptions(catalog) {
 
 const page = { maxWidth: '980px', margin: '0 auto', padding: '28px 18px 120px', fontFamily: ADMIN_FONT, color: '#1a1a1a' }
 const selectStyle = { padding: '8px 10px', border: '1px solid #d0d3d6', borderRadius: '8px', fontSize: '13px', background: '#fff' }
-const LANG_LABEL = { es: 'Español', en: 'English' }
 
 // Trim outer whitespace only — internal newlines are meaningful (paragraphs/bullets).
 // Preserves structured fields the form now edits (marbling grades, availability,
@@ -114,155 +112,22 @@ function LoginGate({ onLogin }) {
   )
 }
 
-// One language's editable content (name, badge, and the three text boxes).
-function LangColumn({ lang, product, onChange }) {
-  const L = product[lang]
-  const setL = (patch) => onChange({ ...product, [lang]: { ...L, ...patch } })
-  const setBadge = (v) => onChange({ ...product, badge: { ...product.badge, [lang]: v } })
-  return (
-    <div style={{ flex: '1 1 340px', minWidth: 0, border: '1px solid var(--mc-ink-200, #e3e0da)', borderRadius: '8px', padding: '14px', background: 'var(--mc-cream, #faf8f4)' }}>
-      <div style={{ fontFamily: 'var(--font-display, sans-serif)', fontWeight: 700, fontSize: '13px', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--mc-red, #b3122a)', marginBottom: '10px' }}>
-        {LANG_LABEL[lang]}
-      </div>
-      <TextField label="Nombre" value={L.name} onChange={(v) => setL({ name: v })} />
-      <TextField label="Badge (opcional)" value={product.badge[lang] || ''} onChange={setBadge} />
-      <TextArea label="Descripción" rows={7} value={L.description} onChange={(v) => setL({ description: v })} />
-      <p style={{ fontSize: '11px', color: 'var(--mc-ink-600, #777)', margin: '-6px 0 12px' }}>
-        La primera línea se muestra como gancho en la tarjeta del catálogo.
-      </p>
-      <TextArea label="Origen" rows={4} value={L.origin} onChange={(v) => setL({ origin: v })} />
-      <TextArea label="Cómo cocinar" rows={5} value={L.cooking} onChange={(v) => setL({ cooking: v })} />
-    </div>
-  )
-}
-
-// Fetch a bundled product photo and return it as { media_type, data } base64,
-// so the serverless function can hand it to Claude's vision input. Returns null
-// if the file can't be read.
-async function imageToBase64(url) {
-  try {
-    const res = await fetch(url)
-    if (!res.ok) return null
-    const blob = await res.blob()
-    return await new Promise((resolve) => {
-      const fr = new FileReader()
-      fr.onload = () => {
-        const [meta, data] = String(fr.result).split(',')
-        const m = meta.match(/data:(.*?);base64/)
-        resolve(data ? { media_type: (m && m[1]) || blob.type || 'image/webp', data } : null)
-      }
-      fr.onerror = () => resolve(null)
-      fr.readAsDataURL(blob)
-    })
-  } catch { return null }
-}
-
-// Shared, above both language columns: optional AI notes + a button that drafts
-// the name and all six text boxes in ES + EN. Claude reads the cover photo to
-// identify the cut, so no name is needed first. Via /api/generate-product.
-function AiGenerate({ product, onChange }) {
-  const [notes, setNotes] = React.useState('')
-  const [busy, setBusy] = React.useState(false)
-  const [err, setErr] = React.useState(null)
-
-  async function generate() {
-    setErr(null)
-    let pw = ''
-    try { pw = sessionStorage.getItem(PW_KEY) || '' } catch {}
-    setBusy(true)
-    try {
-      const cover = (product.images || [])[0]
-      const url = cover && imageUrl(cover)
-      const image = url ? await imageToBase64(url) : null
-      const name = (product.es.name || product.en.name || '').trim()
-      const res = await fetch('/api/generate-product', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ password: pw, cat: product.cat, notes, name, image }),
-      })
-      if (!res.ok) {
-        if (res.status === 401) { setErr('Sesión expirada, vuelve a entrar para usar la IA.'); return }
-        let detail = ''
-        try { const j = await res.json(); detail = j.detail || j.error || '' } catch {}
-        setErr('No se pudo generar, intenta de nuevo.' + (detail ? ` (${detail})` : ''))
-        return
-      }
-      const { es, en } = await res.json()
-      const hasText = ['name', 'description', 'origin', 'cooking'].some(
-        (f) => (product.es[f] || '').trim() || (product.en[f] || '').trim()
-      )
-      if (hasText && !window.confirm('¿Reemplazar el nombre y el texto actuales con lo generado por la IA?')) return
-      onChange({
-        ...product,
-        es: { ...product.es, name: es.name, description: es.description, origin: es.origin, cooking: es.cooking },
-        en: { ...product.en, name: en.name, description: en.description, origin: en.origin, cooking: en.cooking },
-      })
-    } catch {
-      setErr('Error de red, intenta de nuevo.')
-    } finally {
-      setBusy(false)
-    }
-  }
-
-  return (
-    <div style={{ border: '1px dashed var(--mc-ink-300, #cfcbc4)', borderRadius: '8px', padding: '12px', margin: '6px 0 14px', background: 'var(--mc-paper, #fff)' }}>
-      <TextArea label="Notas para la IA (opcional)" rows={3} value={notes} onChange={setNotes} />
-      <p style={{ fontSize: '11px', color: 'var(--mc-ink-600, #777)', margin: '-6px 0 10px' }}>
-        La IA lee la foto de portada para nombrar el corte. Agrega detalles si los tienes (marmoleo, alimentación, marca, peso) — se usan pero no se guardan.
-      </p>
-      <button type="button" disabled={busy} onClick={generate}
-        style={{ ...btn, background: busy ? 'var(--mc-ink-200, #e3e0da)' : 'var(--mc-cream, #faf8f4)', cursor: busy ? 'default' : 'pointer' }}>
-        {busy ? 'Generando…' : '✨ Generar con IA (ES + EN)'}
-      </button>
-      {err && (
-        <div style={{ marginTop: '8px', fontSize: '12px', color: '#9b1c1c' }}>{err}</div>
-      )}
-    </div>
-  )
-}
-
-function ProductEditor({ product, canMove, open, onToggle, onChange, onMove, onRemove, catOptions }) {
+function ProductRow({ product, canMove, onOpen, onMove, onRemove }) {
   const cover = (product.images || [])[0]
   const thumb = cover && (imageUrl(cover) || UPLOADED_PREVIEWS.get(cover))
   return (
-    <div style={card}>
+    <div style={{ ...card, padding: '10px 14px' }}>
       <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-        <button type="button" style={{ ...btn, border: 'none', fontSize: '15px', padding: '4px 8px' }} onClick={onToggle}>{open ? '▾' : '▸'}</button>
-        <div onClick={onToggle} style={{ width: '46px', height: '38px', borderRadius: '6px', overflow: 'hidden', background: '#f4f1ec', flex: 'none', cursor: 'pointer', border: '1px solid var(--mc-ink-200, #e3e0da)' }}>
+        <div onClick={onOpen} style={{ width: '46px', height: '38px', borderRadius: '6px', overflow: 'hidden', background: '#f1f2f4', flex: 'none', cursor: 'pointer', border: '1px solid #e1e3e5' }}>
           {thumb && <img src={thumb} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
         </div>
-        <strong onClick={onToggle} style={{ flex: 1, fontFamily: 'var(--font-display, sans-serif)', cursor: 'pointer', minWidth: 0 }}>
-          {product.es.name || product.id || '(sin nombre)'} <span style={{ color: 'var(--mc-ink-500, #888)', fontWeight: 400, fontSize: '12px' }}>· {product.id} · {product.cat}</span>
+        <strong onClick={onOpen} style={{ flex: 1, cursor: 'pointer', minWidth: 0, fontSize: '14px' }}>
+          {product.es.name || product.id || '(sin nombre)'} <span style={{ color: '#616a75', fontWeight: 400, fontSize: '12px' }}>· {product.id} · {product.cat}</span>
         </strong>
         {canMove && <button type="button" style={btn} onClick={() => onMove(-1)}>↑</button>}
         {canMove && <button type="button" style={btn} onClick={() => onMove(1)}>↓</button>}
         <button type="button" style={btnDanger} onClick={onRemove}>Eliminar</button>
       </div>
-
-      {open && (
-        <div style={{ marginTop: '14px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
-            <TextField label="ID" value={product.id} onChange={(v) => onChange({ ...product, id: v })} />
-            <Select label="Categoría" value={product.cat} options={catOptions} onChange={(v) => onChange({ ...product, cat: v })} />
-            <Select label="Tono" value={product.tone} options={TONES} onChange={(v) => onChange({ ...product, tone: v })} />
-          </div>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', alignItems: 'flex-end', margin: '2px 0 12px' }}>
-            <label style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '13px', fontWeight: 600, color: 'var(--mc-ink-800, #2a2a2a)', paddingBottom: '9px' }}>
-              <input type="checkbox" checked={product.available !== false} onChange={(e) => onChange({ ...product, available: e.target.checked })} />
-              Disponible {product.available === false && <span style={{ color: 'var(--mc-red, #b3122a)', fontWeight: 700 }}>· Agotado</span>}
-            </label>
-            <div style={{ flex: '1 1 150px', minWidth: 0 }}><TextField label="SKU (opcional)" value={product.sku || ''} onChange={(v) => onChange({ ...product, sku: v })} /></div>
-            <div style={{ flex: '1 1 200px', minWidth: 0 }}><TextField label="Peso / presentación (opcional)" value={product.weight || ''} onChange={(v) => onChange({ ...product, weight: v })} placeholder="Ej. Corte de 300 g" /></div>
-          </div>
-          <ImagesPicker images={product.images} onChange={(v) => onChange({ ...product, images: v })} />
-          <MarblingEditor product={product} onChange={onChange} />
-          <AiGenerate product={product} onChange={onChange} />
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', marginTop: '6px' }}>
-            <LangColumn lang="es" product={product} onChange={onChange} />
-            <LangColumn lang="en" product={product} onChange={onChange} />
-          </div>
-        </div>
-      )}
     </div>
   )
 }
@@ -274,7 +139,7 @@ export default function AdminApp() {
   const [status, setStatus] = React.useState(null) // { ok, msg }
   const [saving, setSaving] = React.useState(false)
   const [section, setSection] = React.useState('products')
-  const [openId, setOpenId] = React.useState(null)
+  const [detailIndex, setDetailIndex] = React.useState(null) // index into catalog, or null = list
   const [query, setQuery] = React.useState('')
   const [filterCat, setFilterCat] = React.useState('all')
   const [sort, setSort] = React.useState('manual')
@@ -293,8 +158,8 @@ export default function AdminApp() {
   }
   const setProduct = (i, next) => setCatalog((c) => c.map((p, k) => (k === i ? next : p)))
   const moveProduct = (i, d) => setCatalog((c) => move(c, i, d))
-  const removeProduct = (i) => setCatalog((c) => c.filter((_, k) => k !== i))
-  const addProduct = () => setCatalog((c) => [...c, newProduct()])
+  const removeProduct = (i) => { setCatalog((c) => c.filter((_, k) => k !== i)); setDetailIndex(null) }
+  const addProduct = () => { setDetailIndex(catalog.length); setCatalog((c) => [...c, newProduct()]) }
 
   async function save() {
     setStatus(null)
@@ -339,7 +204,7 @@ export default function AdminApp() {
   const catOptions = categoryOptions(catalog)
 
   const navItem = (id, label, count) => (
-    <button type="button" onClick={() => setSection(id)} style={{
+    <button type="button" onClick={() => { setSection(id); setDetailIndex(null) }} style={{
       display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', textAlign: 'left',
       border: 'none', borderRadius: '8px', padding: '9px 12px', marginBottom: '2px', cursor: 'pointer', fontSize: '13px',
       fontFamily: ADMIN_FONT, fontWeight: section === id ? 700 : 500,
@@ -389,11 +254,20 @@ export default function AdminApp() {
         </aside>
 
         <main style={{ flex: 1, minWidth: 0, padding: '22px 26px 80px', maxWidth: '1080px' }}>
-          <h1 style={{ fontSize: '20px', fontWeight: 700, margin: '0 0 16px' }}>
-            {section === 'products' ? 'Productos' : section === 'categories' ? 'Categorías' : 'Medios'}
-          </h1>
+          {!(section === 'products' && detailIndex != null) && (
+            <h1 style={{ fontSize: '20px', fontWeight: 700, margin: '0 0 16px' }}>
+              {section === 'products' ? 'Productos' : section === 'categories' ? 'Categorías' : 'Medios'}
+            </h1>
+          )}
 
-          {section === 'products' && (<>
+          {section === 'products' && detailIndex != null && catalog[detailIndex] && (
+            <ProductDetail product={catalog[detailIndex]} catOptions={catOptions}
+              onChange={(next) => setProduct(detailIndex, next)}
+              onBack={() => setDetailIndex(null)}
+              onRemove={() => removeProduct(detailIndex)} />
+          )}
+
+          {section === 'products' && (detailIndex == null || !catalog[detailIndex]) && (<>
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', alignItems: 'center', marginBottom: '14px' }}>
               <input placeholder="Buscar producto…" value={query} onChange={(e) => setQuery(e.target.value)}
                 style={{ ...selectStyle, minWidth: '220px' }} />
@@ -407,9 +281,9 @@ export default function AdminApp() {
               <span style={{ fontSize: '12px', color: '#616a75', marginLeft: 'auto' }}>{rows.length} de {catalog.length}</span>
             </div>
             {rows.map(([p, i]) => (
-              <ProductEditor key={key(p, i)} product={p} canMove={canMove} catOptions={catOptions}
-                open={openId === key(p, i)} onToggle={() => setOpenId((o) => o === key(p, i) ? null : key(p, i))}
-                onChange={(next) => setProduct(i, next)} onMove={(d) => moveProduct(i, d)} onRemove={() => removeProduct(i)} />
+              <ProductRow key={key(p, i)} product={p} canMove={canMove}
+                onOpen={() => setDetailIndex(i)}
+                onMove={(d) => moveProduct(i, d)} onRemove={() => removeProduct(i)} />
             ))}
             {rows.length === 0 && <p style={{ color: '#616a75', fontSize: '13px' }}>Sin resultados.</p>}
             <button type="button" style={{ ...btn, marginTop: '8px' }} onClick={addProduct}>+ Agregar producto</button>
