@@ -3042,5 +3042,40 @@
       "origin": "Australian Wagyu, marbling grade 6-7. Chuck roll cut sourced from Wagyu cattle raised in Australia.",
       "cooking": "For thick cuts: sear over high heat on both sides and finish over medium heat to medium doneness.\n\nIf sliced thin, grill or griddle over very high heat for just a few seconds per side.\n\nRest 3 to 5 minutes before serving to retain the juices. Suggested doneness: medium."
     }
+  },
+  {
+    "id": "New-york-A5-Japones-10-12",
+    "cat": "jp",
+    "tone": "charcoal",
+    "images": [
+      "whatsapp-image-2026-07-02-at-15-12-20-mr45779i3670.webp"
+    ],
+    "marbling": {
+      "system": "bms",
+      "variants": [
+        {
+          "lo": 10,
+          "hi": 12,
+          "image": "whatsapp-image-2026-07-02-at-15-12-20-mr45779i3670.webp",
+          "label": "10-12"
+        }
+      ]
+    },
+    "badge": {
+      "es": null,
+      "en": null
+    },
+    "es": {
+      "name": "New York Wagyu Japonés A5 · Marmoleo Alto",
+      "description": "El corte que convierte una cena en una celebración: un New York Wagyu Japonés A5 de marmoleo excepcional.\n\nCada rebanada revela una red densa de grasa intramuscular que se funde al calor, entregando una textura suave y un sabor profundo y mantecoso. La certificación A5 representa el estándar más alto del Wagyu japonés.\n\nSe presenta en cortes de aproximadamente 10 a 12 onzas, ideal para compartir o para disfrutar el lujo de una porción generosa.",
+      "origin": "Wagyu Japonés con certificación A5, el grado más alto de calidad en Japón por su marmoleo y textura. Res criada bajo los estándares tradicionales del Wagyu japonés.",
+      "cooking": "Atempera la carne fuera del refrigerador entre 20 y 30 minutos antes de cocinar.\n\nSella en sartén o plancha muy caliente, apenas unos segundos por lado, dado su alto contenido de grasa. Por su intensidad, se recomienda un término sellado por fuera y rojo o rojo-inglés por dentro.\n\nDeja reposar unos minutos, corta en rebanadas delgadas y sirve con muy poca sal para no opacar su sabor natural."
+    },
+    "en": {
+      "name": "New York Japanese Wagyu A5 · High Marbling",
+      "description": "The cut that turns dinner into a celebration: a New York Japanese Wagyu A5 with exceptional marbling.\n\nEvery slice reveals a dense web of intramuscular fat that melts with heat, delivering a silky texture and a deep, buttery flavor. The A5 certification represents the highest standard of Japanese Wagyu.\n\nOffered in cuts of approximately 10 to 12 ounces, perfect to share or to savor the luxury of a generous portion.",
+      "origin": "Japanese Wagyu with A5 certification, the highest quality grade in Japan for its marbling and texture. Cattle raised under the traditional standards of Japanese Wagyu.",
+      "cooking": "Let the meat rest at room temperature for 20 to 30 minutes before cooking.\n\nSear in a very hot pan or griddle for just a few seconds per side, given its high fat content. Because of its richness, a seared exterior with a rare to medium-rare center is recommended.\n\nRest for a few minutes, slice thinly, and serve with just a touch of salt so its natural flavor shines."
+    }
   }
 ]
