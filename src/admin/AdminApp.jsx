@@ -2,13 +2,14 @@
 // GitHub via /api/save-products, which triggers a Vercel rebuild (~1 min to live).
 // Content admin only — not a CRM. See docs/superpowers/specs/2026-06-27-catalog-admin-simplify.md
 import React from 'react'
-import { RAW_CATALOG, CATEGORIES, IMAGE_FILES, imageUrl } from '../products.js'
+import { RAW_CATALOG, CATEGORIES, IMAGE_FILES } from '../products.js'
 import { CATEGORY_LIST } from '../categories.js'
-import { TextField, card, btn, btnPrimary, btnDanger, move, ADMIN_FONT } from './fields.jsx'
+import { TextField, btn, btnPrimary, move, ADMIN_FONT } from './fields.jsx'
+import ProductsTable, { rowKey } from './ProductsTable.jsx'
 import ProductDetail from './ProductDetail.jsx'
 import MediaLibrary from './MediaLibrary.jsx'
 import CategoriesEditor from './CategoriesEditor.jsx'
-import { UPLOADED, UPLOADED_PREVIEWS } from './uploads.js'
+import { UPLOADED } from './uploads.js'
 
 const PW_KEY = 'mc_admin_pw'
 const clone = (x) => JSON.parse(JSON.stringify(x))
@@ -24,7 +25,6 @@ function categoryOptions(catalog) {
 }
 
 const page = { maxWidth: '980px', margin: '0 auto', padding: '28px 18px 120px', fontFamily: ADMIN_FONT, color: '#1a1a1a' }
-const selectStyle = { padding: '8px 10px', border: '1px solid #d0d3d6', borderRadius: '8px', fontSize: '13px', background: '#fff' }
 
 // Trim outer whitespace only — internal newlines are meaningful (paragraphs/bullets).
 // Preserves structured fields the form now edits (marbling grades, availability,
@@ -112,26 +112,6 @@ function LoginGate({ onLogin }) {
   )
 }
 
-function ProductRow({ product, canMove, onOpen, onMove, onRemove }) {
-  const cover = (product.images || [])[0]
-  const thumb = cover && (imageUrl(cover) || UPLOADED_PREVIEWS.get(cover))
-  return (
-    <div style={{ ...card, padding: '10px 14px' }}>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-        <div onClick={onOpen} style={{ width: '46px', height: '38px', borderRadius: '6px', overflow: 'hidden', background: '#f1f2f4', flex: 'none', cursor: 'pointer', border: '1px solid #e1e3e5' }}>
-          {thumb && <img src={thumb} alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />}
-        </div>
-        <strong onClick={onOpen} style={{ flex: 1, cursor: 'pointer', minWidth: 0, fontSize: '14px' }}>
-          {product.es.name || product.id || '(sin nombre)'} <span style={{ color: '#616a75', fontWeight: 400, fontSize: '12px' }}>· {product.id} · {product.cat}</span>
-        </strong>
-        {canMove && <button type="button" style={btn} onClick={() => onMove(-1)}>↑</button>}
-        {canMove && <button type="button" style={btn} onClick={() => onMove(1)}>↓</button>}
-        <button type="button" style={btnDanger} onClick={onRemove}>Eliminar</button>
-      </div>
-    </div>
-  )
-}
-
 export default function AdminApp() {
   const [pw, setPw] = React.useState(() => { try { return sessionStorage.getItem(PW_KEY) || '' } catch { return '' } })
   const [authed, setAuthed] = React.useState(() => { try { return !!sessionStorage.getItem(PW_KEY) } catch { return false } })
@@ -140,9 +120,11 @@ export default function AdminApp() {
   const [saving, setSaving] = React.useState(false)
   const [section, setSection] = React.useState('products')
   const [detailIndex, setDetailIndex] = React.useState(null) // index into catalog, or null = list
+  const [selected, setSelected] = React.useState(() => new Set())
   const [query, setQuery] = React.useState('')
   const [filterCat, setFilterCat] = React.useState('all')
   const [sort, setSort] = React.useState('manual')
+  React.useEffect(() => { setSelected(new Set()) }, [query, filterCat, sort, section])
 
   // Snapshot of the last-saved (pruned) catalog. dirty = current prune differs.
   const [savedJson, setSavedJson] = React.useState(() => JSON.stringify(pruneCatalog(clone(RAW_CATALOG))))
@@ -160,6 +142,18 @@ export default function AdminApp() {
   const moveProduct = (i, d) => setCatalog((c) => move(c, i, d))
   const removeProduct = (i) => { setCatalog((c) => c.filter((_, k) => k !== i)); setDetailIndex(null) }
   const addProduct = () => { setDetailIndex(catalog.length); setCatalog((c) => [...c, newProduct()]) }
+
+  const bulkAvailable = (val) => {
+    setCatalog((c) => c.map((p, i) => (selected.has(rowKey(p, i)) ? { ...p, available: val } : p)))
+    setSelected(new Set())
+  }
+  const bulkDelete = () => {
+    if (!window.confirm(`¿Eliminar ${selected.size} producto(s)?`)) return
+    setCatalog((c) => c.filter((p, i) => !selected.has(rowKey(p, i))))
+    setSelected(new Set())
+    setDetailIndex(null)
+  }
+  const clearFilters = () => { setQuery(''); setFilterCat('all'); setSort('manual') }
 
   async function save() {
     setStatus(null)
@@ -193,7 +187,6 @@ export default function AdminApp() {
 
   if (!authed) return <LoginGate onLogin={login} />
 
-  const key = (p, i) => p.id || `#${i}`
   const q = query.trim().toLowerCase()
   const rows = catalog.map((p, i) => [p, i])
     .filter(([p]) => filterCat === 'all' || p.cat === filterCat)
@@ -267,27 +260,20 @@ export default function AdminApp() {
               onRemove={() => removeProduct(detailIndex)} />
           )}
 
-          {section === 'products' && (detailIndex == null || !catalog[detailIndex]) && (<>
-            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', alignItems: 'center', marginBottom: '14px' }}>
-              <input placeholder="Buscar producto…" value={query} onChange={(e) => setQuery(e.target.value)}
-                style={{ ...selectStyle, minWidth: '220px' }} />
-              <select value={filterCat} onChange={(e) => setFilterCat(e.target.value)} style={selectStyle}>
-                <option value="all">Todas las categorías</option>
-                {catOptions.map((o) => <option key={o.value} value={o.value}>{o.label}</option>)}
-              </select>
-              <select value={sort} onChange={(e) => setSort(e.target.value)} style={selectStyle}>
-                <option value="manual">Orden manual</option><option value="name">Por nombre</option><option value="cat">Por categoría</option>
-              </select>
-              <span style={{ fontSize: '12px', color: '#616a75', marginLeft: 'auto' }}>{rows.length} de {catalog.length}</span>
-            </div>
-            {rows.map(([p, i]) => (
-              <ProductRow key={key(p, i)} product={p} canMove={canMove}
-                onOpen={() => setDetailIndex(i)}
-                onMove={(d) => moveProduct(i, d)} onRemove={() => removeProduct(i)} />
-            ))}
-            {rows.length === 0 && <p style={{ color: '#616a75', fontSize: '13px' }}>Sin resultados.</p>}
-            <button type="button" style={{ ...btn, marginTop: '8px' }} onClick={addProduct}>+ Agregar producto</button>
-          </>)}
+          {section === 'products' && (detailIndex == null || !catalog[detailIndex]) && (
+            <ProductsTable
+              rows={rows} total={catalog.length}
+              query={query} onQuery={setQuery}
+              filterCat={filterCat} onFilterCat={setFilterCat}
+              sort={sort} onSort={setSort}
+              canMove={canMove} catOptions={catOptions}
+              selected={selected} onSelected={setSelected}
+              onOpen={(i) => setDetailIndex(i)}
+              onMove={(i, d) => moveProduct(i, d)}
+              onBulkAvailable={bulkAvailable} onBulkDelete={bulkDelete}
+              onAdd={addProduct} onClearFilters={clearFilters}
+            />
+          )}
 
           {section === 'media' && <MediaLibrary catalog={catalog} />}
 
