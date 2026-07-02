@@ -9,7 +9,7 @@ import {
   createElement,
   ArrowLeft, ArrowRight, BedDouble, CheckCircle2, ChefHat, Facebook, Flag,
   Instagram, Menu, MessageCircle, Minus, Package, PartyPopper, Plane, Plus,
-  Search, ShieldCheck, ShoppingCart, Slice, Snowflake, Store, Trash2, Truck,
+  Search, Share2, ShieldCheck, ShoppingCart, Slice, Snowflake, Store, Trash2, Truck,
   UtensilsCrossed, X, RotateCcw, Quote, ZoomIn,
 } from 'lucide'
 
@@ -33,7 +33,7 @@ window.lucide = {
   createElement,
   ArrowLeft, ArrowRight, BedDouble, CheckCircle2, ChefHat, Facebook, Flag,
   Instagram, Menu, MessageCircle, Minus, Package, PartyPopper, Plane, Plus,
-  Search, ShieldCheck, ShoppingCart, Slice, Snowflake, Store, Trash2, Truck,
+  Search, Share2, ShieldCheck, ShoppingCart, Slice, Snowflake, Store, Trash2, Truck,
   UtensilsCrossed, X, RotateCcw, Quote, ZoomIn,
 }
 

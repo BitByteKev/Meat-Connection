@@ -564,6 +564,31 @@ function MarblingScale({ marbling, vIdx, onSelect }) {
   );
 }
 
+/* Share the product URL: native share sheet where available (mobile — opens
+   WhatsApp etc.), clipboard copy with inline confirmation on desktop. */
+function ShareButton({ product, name }) {
+  const { t } = useLang();
+  const [copied, setCopied] = React.useState(false);
+  async function share() {
+    const url = `${location.origin}/producto/${PRODUCT_SLUG[product.id]}`;
+    if (navigator.share) {
+      try { await navigator.share({ title: name, url }); } catch {} // canceling the sheet is fine
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {}
+  }
+  return (
+    <button onClick={share} style={{ border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-muted)', fontFamily: 'var(--font-body)', fontSize: '14px', padding: 0 }}>
+      <Icon name={copied ? 'CheckCircle2' : 'Share2'} size={16} color="var(--text-muted)" />
+      {copied ? t.pdp.linkCopied : t.pdp.share}
+    </button>
+  );
+}
+
 function ProductDetail({ product, onAdd, onBack }) {
   const { Button, Badge, Tabs } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
@@ -587,9 +612,12 @@ function ProductDetail({ product, onAdd, onBack }) {
   const genericOrigin = product.cat === 'jp' ? t.pdp.originJP : product.cat === 'us' ? t.pdp.originUS : t.pdp.originAU;
   return (
     <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '32px 24px 80px' }}>
-      <button onClick={onBack} style={{ border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-muted)', fontFamily: 'var(--font-body)', fontSize: '14px', marginBottom: '24px', padding: 0 }}>
-        <Icon name="ArrowLeft" size={16} color="var(--text-muted)" /> {t.pdp.back}
-      </button>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', marginBottom: '24px' }}>
+        <button onClick={onBack} style={{ border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-muted)', fontFamily: 'var(--font-body)', fontSize: '14px', padding: 0 }}>
+          <Icon name="ArrowLeft" size={16} color="var(--text-muted)" /> {t.pdp.back}
+        </button>
+        <ShareButton product={product} name={p.name} />
+      </div>
       <div className="mc-pdp" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', alignItems: 'start' }}>
         <Carousel product={product} name={p.name} height={560} index={carouselIndex} onIndex={onCarousel} />
         <div>

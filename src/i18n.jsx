@@ -32,6 +32,7 @@ export const STRINGS = {
     },
     pdp: {
       back: 'Volver al catálogo', available: 'Disponible', soldOut: 'Agotado', presentation: 'Presentación',
+      share: 'Compartir', linkCopied: 'Enlace copiado',
       qtyLabel: 'Cantidad (kg)', saleType: 'Tipo de venta', mayoreo: 'Mayoreo', menudeo: 'Menudeo',
       addToOrder: 'Agregar {qty} kg a la cotización',
       trust: [['Truck', 'Envíos express a todo México'], ['ShieldCheck', 'Grado y trazabilidad'], ['Snowflake', 'Cadena de frío garantizada']],
@@ -142,6 +143,7 @@ export const STRINGS = {
     },
     pdp: {
       back: 'Back to catalog', available: 'Available', soldOut: 'Sold out', presentation: 'Format',
+      share: 'Share', linkCopied: 'Link copied',
       qtyLabel: 'Quantity (kg)', saleType: 'Sale type', mayoreo: 'Wholesale', menudeo: 'Retail',
       addToOrder: 'Add {qty} kg to quote',
       trust: [['Truck', 'Express shipping nationwide'], ['ShieldCheck', 'Grade & traceability'], ['Snowflake', 'Guaranteed cold chain']],
