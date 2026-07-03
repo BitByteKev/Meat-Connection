@@ -39,6 +39,8 @@ function pruneCatalog(catalog) {
     ...(p.available === false ? { available: false } : {}),
     ...((p.sku || '').trim() ? { sku: p.sku.trim() } : {}),
     ...((p.weight || '').trim() ? { weight: p.weight.trim() } : {}),
+    ...((p.priceMayoreo || '').trim() ? { priceMayoreo: p.priceMayoreo.trim() } : {}),
+    ...((p.priceMenudeo || '').trim() ? { priceMenudeo: p.priceMenudeo.trim() } : {}),
     badge: {
       es: (p.badge.es || '').trim() || null,
       en: (p.badge.en || '').trim() || null,
@@ -92,7 +94,7 @@ function newProduct() {
   const blank = () => ({ name: '', description: '', origin: '', cooking: '' })
   return {
     id: '', cat: 'jp', tone: 'charcoal', images: IMAGE_FILES[0] ? [IMAGE_FILES[0]] : [],
-    marbling: null, available: true, sku: '', weight: '',
+    marbling: null, available: true, sku: '', weight: '', priceMayoreo: '', priceMenudeo: '',
     badge: { es: null, en: null },
     es: blank(), en: blank(),
   }

@@ -337,7 +337,21 @@ function ProductCard({ product, onOpen }) {
           {product.marbling && <div style={{ marginTop: '10px' }}><MarblingPill marbling={product.marbling} /></div>}
         </div>
         <div style={{ marginTop: 'auto' }}>
-          <Button variant="secondary" size="sm" fullWidth onClick={(e) => { e.stopPropagation(); onOpen(product); }} iconRight={<Icon name="ArrowRight" size={15} color="currentColor" />}>{t.card.readMore}</Button>
+          {(product.priceMayoreo || product.priceMenudeo) ? (
+            <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '10px' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
+                {[[t.pdp.mayoreo, product.priceMayoreo], [t.pdp.menudeo, product.priceMenudeo]].map(([label, price]) => price && (
+                  <div key={label} style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
+                    <span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600, fontSize: '10px', color: 'var(--text-muted)' }}>{label}</span>
+                    <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '17px', color: 'var(--text-strong)' }}>{price}</span>
+                  </div>
+                ))}
+              </div>
+              <Icon name="ArrowRight" size={16} color="var(--text-muted)" style={{ flex: 'none', marginBottom: '3px' }} />
+            </div>
+          ) : (
+            <Button variant="secondary" size="sm" fullWidth onClick={(e) => { e.stopPropagation(); onOpen(product); }} iconRight={<Icon name="ArrowRight" size={15} color="currentColor" />}>{t.card.readMore}</Button>
+          )}
         </div>
       </div>
     </Card>
@@ -634,6 +648,16 @@ function ProductDetail({ product, onAdd, onBack }) {
           {(product.weight || product.sku) && (
             <div style={{ fontSize: '13px', color: 'var(--text-muted)', margin: '-6px 0 16px' }}>
               {product.weight}{product.weight && product.sku ? ' · ' : ''}{product.sku && `SKU ${product.sku}`}
+            </div>
+          )}
+          {(saleType === 'mayoreo' ? product.priceMayoreo : product.priceMenudeo) && (
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: '10px', margin: '-4px 0 16px' }}>
+              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '28px', color: 'var(--text-strong)' }}>
+                {saleType === 'mayoreo' ? product.priceMayoreo : product.priceMenudeo}
+              </span>
+              <span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600, fontSize: '11px', color: 'var(--text-muted)' }}>
+                {saleType === 'mayoreo' ? t.pdp.mayoreo : t.pdp.menudeo}
+              </span>
             </div>
           )}
           {marbling && <MarblingScale marbling={marbling} vIdx={vIdx} onSelect={setVIdx} />}

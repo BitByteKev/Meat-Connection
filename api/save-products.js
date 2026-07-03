@@ -46,7 +46,7 @@ function validateCatalog(products) {
     if (!Array.isArray(p.images) || p.images.length === 0) return `${at}.images must be a non-empty array`
     if (!p.images.every((f) => typeof f === 'string' && f)) return `${at}.images must be filenames`
     if ('available' in p && typeof p.available !== 'boolean') return `${at}.available must be a boolean`
-    for (const f of ['sku', 'weight']) {
+    for (const f of ['sku', 'weight', 'priceMayoreo', 'priceMenudeo']) {
       if (f in p && typeof p[f] !== 'string') return `${at}.${f} must be a string`
     }
     if ('marbling' in p && p.marbling !== null) {

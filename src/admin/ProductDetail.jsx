@@ -154,6 +154,13 @@ export default function ProductDetail({ product, onChange, onBack, onRemove, cat
           <div style={{ flex: '1 1 150px', minWidth: 0 }}><TextField label="SKU (opcional)" value={product.sku || ''} onChange={(v) => onChange({ ...product, sku: v })} /></div>
           <div style={{ flex: '1 1 200px', minWidth: 0 }}><TextField label="Peso / presentación (opcional)" value={product.weight || ''} onChange={(v) => onChange({ ...product, weight: v })} placeholder="Ej. Corte de 300 g" /></div>
         </div>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginTop: '2px' }}>
+          <div style={{ flex: '1 1 200px', minWidth: 0 }}><TextField label="Precio mayoreo (opcional)" value={product.priceMayoreo || ''} onChange={(v) => onChange({ ...product, priceMayoreo: v })} placeholder="Ej. $1,850 / kg" /></div>
+          <div style={{ flex: '1 1 200px', minWidth: 0 }}><TextField label="Precio menudeo (opcional)" value={product.priceMenudeo || ''} onChange={(v) => onChange({ ...product, priceMenudeo: v })} placeholder="Ej. $2,100 / kg" /></div>
+        </div>
+        <p style={{ fontSize: '11px', color: '#6b7075', margin: '6px 0 0' }}>
+          Texto libre — se muestra tal cual en la tienda. Vacío = la tarjeta muestra "Leer más" y la ficha no muestra precio.
+        </p>
       </SectionCard>
 
       <SectionCard title="Imágenes">
