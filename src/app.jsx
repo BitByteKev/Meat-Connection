@@ -59,6 +59,9 @@ const PRODUCTS = PRODUCT_LIST;
 /* Los agotados no aparecen en listados públicos (catálogo + bestsellers del home),
    pero su URL directa sigue mostrando la ficha con el badge "Agotado". */
 const IN_STOCK = PRODUCTS.filter((p) => p.available);
+/* Los bestsellers del home solo muestran cortes con foto real; los
+   "próximamente" (portada placeholder) siguen visibles en el catálogo. */
+const hasRealPhoto = (p) => !(((p.images || [])[0]) || '').startsWith('placeholder');
 /* Búsqueda del catálogo: id + nombre en ambos idiomas, sin acentos ni mayúsculas
    ("picana" encuentra "Picaña", "japones" encuentra "Japonés"). */
 const normSearch = (s) => (s || '').toString().normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
@@ -1163,7 +1166,8 @@ function App() {
             </div>
             <button onClick={() => nav('shop')} style={{ border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '14px', color: 'var(--text-strong)' }}>{t.bestsellers.seeAll} <Icon name="ArrowRight" size={16} /></button>
           </div>
-          <ProductGrid products={IN_STOCK.slice(0, 4)} onOpen={open} />
+          {/* Los más nuevos primero: el admin agrega productos al final del catálogo. */}
+          <ProductGrid products={IN_STOCK.filter(hasRealPhoto).slice(-4).reverse()} onOpen={open} />
         </Reveal>
         <Partners />
         <Clients />
