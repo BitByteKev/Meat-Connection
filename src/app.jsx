@@ -340,7 +340,7 @@ function ProductCard({ product, onOpen }) {
           {(product.priceMayoreo || product.priceMenudeo) ? (
             <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '10px' }}>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
-                {[[t.pdp.mayoreo, product.priceMayoreo], [t.pdp.menudeo, product.priceMenudeo]].map(([label, price]) => price && (
+                {[[t.pdp.menudeo, product.priceMenudeo], [t.pdp.mayoreo, product.priceMayoreo]].map(([label, price]) => price && (
                   <div key={label} style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
                     <span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600, fontSize: '10px', color: 'var(--text-muted)' }}>{label}</span>
                     <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '17px', color: 'var(--text-strong)' }}>{price}</span>
@@ -668,7 +668,7 @@ function ProductDetail({ product, onAdd, onBack }) {
             <div>
               <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{t.pdp.saleType}</div>
               <div role="group" aria-label={t.pdp.saleType} style={{ display: 'inline-flex', border: '2px solid var(--mc-charcoal)', borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
-                {[['mayoreo', t.pdp.mayoreo], ['menudeo', t.pdp.menudeo]].map(([val, label]) => {
+                {[['menudeo', t.pdp.menudeo], ['mayoreo', t.pdp.mayoreo]].map(([val, label]) => {
                   const on = saleType === val;
                   return (
                     <button key={val} onClick={() => pickType(val)} aria-pressed={on}
