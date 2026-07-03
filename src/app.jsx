@@ -622,10 +622,13 @@ function ProductDetail({ product, onAdd, onBack }) {
   const carouselIndex = perGradePhotos ? Math.max(0, imgs.indexOf(variants[vIdx].image)) : undefined;
   const onCarousel = perGradePhotos ? (ci) => { const f = variants.findIndex((v) => imgs.indexOf(v.image) === ci); if (f >= 0) setVIdx(f); } : undefined;
   const [tab, setTab] = React.useState('desc');
-  const [saleType, setSaleType] = React.useState('mayoreo');
+  // El tipo de venta se deriva de la cantidad: 25 kg o más = mayoreo, menos = menudeo.
+  // Los chips Mayoreo/Menudeo son atajos que ajustan la cantidad al rango correspondiente.
+  const MAYOREO_MIN = 25;
   const [qty, setQty] = React.useState(5);
-  const minQty = saleType === 'mayoreo' ? 5 : 1;
-  const pickType = (val) => { setSaleType(val); if (val === 'mayoreo' && qty < 5) setQty(5); };
+  const saleType = qty >= MAYOREO_MIN ? 'mayoreo' : 'menudeo';
+  const minQty = 1;
+  const pickType = (val) => setQty(val === 'mayoreo' ? Math.max(qty, MAYOREO_MIN) : Math.min(qty, MAYOREO_MIN - 1));
   const genericOrigin = product.cat === 'jp' ? t.pdp.originJP : product.cat === 'us' ? t.pdp.originUS : t.pdp.originAU;
   return (
     <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '32px 24px 80px' }}>
