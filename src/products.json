@@ -19,6 +19,7 @@
         }
       ]
     },
+    "priceMayoreo": "$1,850 / kg",
     "available": false,
     "badge": {
       "es": "A5 · Japón",
@@ -57,6 +58,7 @@
         }
       ]
     },
+    "priceMayoreo": "$2,200 / kg",
     "available": false,
     "badge": {
       "es": null,
@@ -95,6 +97,7 @@
         }
       ]
     },
+    "priceMayoreo": "$2,380 / kg",
     "available": false,
     "badge": {
       "es": null,
@@ -133,6 +136,7 @@
         }
       ]
     },
+    "priceMayoreo": "$1,950 / kg",
     "available": false,
     "badge": {
       "es": null,
@@ -524,6 +528,7 @@
         }
       ]
     },
+    "priceMayoreo": "$1,050 / kg",
     "available": false,
     "badge": {
       "es": null,
@@ -621,6 +626,7 @@
         }
       ]
     },
+    "priceMayoreo": "$850 – $2,200 / kg",
     "available": false,
     "badge": {
       "es": null,
@@ -659,6 +665,7 @@
         }
       ]
     },
+    "priceMayoreo": "$1,800 / kg",
     "badge": {
       "es": "A5 · Japón",
       "en": "A5 · Japan"
@@ -696,6 +703,7 @@
         }
       ]
     },
+    "priceMayoreo": "$1,650 / kg",
     "badge": {
       "es": "A5 · Japón",
       "en": "A5 · Japan"
@@ -733,6 +741,7 @@
         }
       ]
     },
+    "priceMayoreo": "$885 / kg",
     "badge": {
       "es": "A5 · Japón",
       "en": "A5 · Japan"
@@ -770,6 +779,7 @@
         }
       ]
     },
+    "priceMayoreo": "$850 / kg",
     "badge": {
       "es": "A5 · Japón",
       "en": "A5 · Japan"
@@ -807,6 +817,7 @@
         }
       ]
     },
+    "priceMayoreo": "$850 / kg",
     "badge": {
       "es": "A5 · Japón",
       "en": "A5 · Japan"
@@ -844,6 +855,7 @@
         }
       ]
     },
+    "priceMayoreo": "$1,450 / kg",
     "badge": {
       "es": "A5 · Japón",
       "en": "A5 · Japan"
@@ -881,6 +893,7 @@
         }
       ]
     },
+    "priceMayoreo": "$1,950 / kg",
     "badge": {
       "es": "A5 · Japón",
       "en": "A5 · Japan"
@@ -918,6 +931,7 @@
         }
       ]
     },
+    "priceMayoreo": "$2,570 / kg",
     "badge": {
       "es": "A5 · Japón",
       "en": "A5 · Japan"
@@ -955,6 +969,7 @@
         }
       ]
     },
+    "priceMayoreo": "$6,180 / kg",
     "badge": {
       "es": "Kobe · Japón",
       "en": "Kobe · Japan"
@@ -1020,6 +1035,7 @@
         }
       ]
     },
+    "priceMayoreo": "$325 / kg",
     "badge": {
       "es": "Black Angus",
       "en": "Black Angus"
@@ -1058,6 +1074,7 @@
         }
       ]
     },
+    "priceMayoreo": "$320 / kg",
     "badge": {
       "es": "Black Angus",
       "en": "Black Angus"
@@ -1157,6 +1174,7 @@
         }
       ]
     },
+    "priceMayoreo": "$615 – $810 / kg",
     "badge": {
       "es": "Black Angus",
       "en": "Black Angus"
@@ -1204,6 +1222,7 @@
         }
       ]
     },
+    "priceMayoreo": "$1,180 – $1,320 / kg",
     "badge": {
       "es": "Black Angus",
       "en": "Black Angus"
@@ -1241,6 +1260,7 @@
         }
       ]
     },
+    "priceMayoreo": "$710 / kg",
     "badge": {
       "es": "Black Angus",
       "en": "Black Angus"
@@ -1307,6 +1327,7 @@
         }
       ]
     },
+    "priceMayoreo": "$1,950 / kg",
     "badge": {
       "es": "Australia · L Grow",
       "en": "Australia · L Grow"
@@ -1346,6 +1367,7 @@
         }
       ]
     },
+    "priceMayoreo": "$2,350 / kg",
     "badge": {
       "es": "L Grow · Fullblood",
       "en": "L Grow · Fullblood"
@@ -1385,6 +1407,7 @@
         }
       ]
     },
+    "priceMayoreo": "$1,850 / kg",
     "badge": {
       "es": "Australia · L Grow",
       "en": "Australia · L Grow"
@@ -1424,6 +1447,7 @@
         }
       ]
     },
+    "priceMayoreo": "$2,150 / kg",
     "badge": {
       "es": "L Grow · Fullblood",
       "en": "L Grow · Fullblood"
@@ -1462,6 +1486,7 @@
         }
       ]
     },
+    "priceMayoreo": "$1,280 / kg",
     "badge": {
       "es": "Australia · L Grow",
       "en": "Australia · L Grow"
@@ -1508,6 +1533,7 @@
         }
       ]
     },
+    "priceMayoreo": "$1,550 – $2,000 / kg",
     "badge": {
       "es": "Australia · L Grow",
       "en": "Australia · L Grow"
@@ -1546,6 +1572,7 @@
         }
       ]
     },
+    "priceMayoreo": "$1,150 / kg",
     "badge": {
       "es": "Australia · L Grow",
       "en": "Australia · L Grow"
@@ -1584,6 +1611,7 @@
         }
       ]
     },
+    "priceMayoreo": "$420 / kg",
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -1622,6 +1650,7 @@
         }
       ]
     },
+    "priceMayoreo": "$490 / kg",
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -1660,6 +1689,7 @@
         }
       ]
     },
+    "priceMayoreo": "$340 / kg",
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -1706,6 +1736,7 @@
         }
       ]
     },
+    "priceMayoreo": "$450 – $950 / kg",
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -1760,6 +1791,7 @@
         }
       ]
     },
+    "priceMayoreo": "$330 – $530 / kg",
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -1799,6 +1831,7 @@
         }
       ]
     },
+    "priceMayoreo": "$930 / kg",
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -1837,6 +1870,7 @@
         }
       ]
     },
+    "priceMayoreo": "$380 / kg",
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -1892,6 +1926,7 @@
         }
       ]
     },
+    "priceMayoreo": "$695 – $2,100 / kg",
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -1930,6 +1965,7 @@
         }
       ]
     },
+    "priceMayoreo": "$390 / kg",
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -1976,6 +2012,7 @@
         }
       ]
     },
+    "priceMayoreo": "$710 – $1,380 / kg",
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -2021,6 +2058,7 @@
         }
       ]
     },
+    "priceMayoreo": "$745 – $1,250 / kg",
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -2074,6 +2112,7 @@
         }
       ]
     },
+    "priceMayoreo": "$360 – $560 / kg",
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -2120,6 +2159,7 @@
         }
       ]
     },
+    "priceMayoreo": "$385 – $400 / kg",
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -2158,6 +2198,7 @@
         }
       ]
     },
+    "priceMayoreo": "$820 / kg",
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -2195,6 +2236,7 @@
         }
       ]
     },
+    "priceMayoreo": "$740 / kg",
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -2233,6 +2275,7 @@
         }
       ]
     },
+    "priceMayoreo": "$1,200 / kg",
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -2272,6 +2315,7 @@
         }
       ]
     },
+    "priceMayoreo": "$1,400 / kg",
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -2310,6 +2354,7 @@
         }
       ]
     },
+    "priceMayoreo": "$710 / kg",
     "badge": {
       "es": "Jewel · Fullblood",
       "en": "Jewel · Fullblood"
@@ -2349,6 +2394,7 @@
         }
       ]
     },
+    "priceMayoreo": "$2,200 / kg",
     "badge": {
       "es": "Jewel · Fullblood",
       "en": "Jewel · Fullblood"
@@ -2387,6 +2433,7 @@
         }
       ]
     },
+    "priceMayoreo": "$580 / kg",
     "badge": {
       "es": "Jewel · Fullblood",
       "en": "Jewel · Fullblood"
@@ -2426,6 +2473,7 @@
         }
       ]
     },
+    "priceMayoreo": "$2,300 / kg",
     "badge": {
       "es": "Jewel · Fullblood",
       "en": "Jewel · Fullblood"
@@ -2464,6 +2512,7 @@
         }
       ]
     },
+    "priceMayoreo": "$680 / kg",
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
@@ -2510,6 +2559,7 @@
         }
       ]
     },
+    "priceMayoreo": "$390 – $395 / kg",
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
@@ -2548,6 +2598,7 @@
         }
       ]
     },
+    "priceMayoreo": "$565 / kg",
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
@@ -2594,6 +2645,7 @@
         }
       ]
     },
+    "priceMayoreo": "$900 – $950 / kg",
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
@@ -2632,6 +2684,7 @@
         }
       ]
     },
+    "priceMayoreo": "$560 / kg",
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
@@ -2671,6 +2724,7 @@
         }
       ]
     },
+    "priceMayoreo": "$980 / kg",
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
@@ -2708,6 +2762,7 @@
         }
       ]
     },
+    "priceMayoreo": "$360 / kg",
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
@@ -2755,6 +2810,7 @@
         }
       ]
     },
+    "priceMayoreo": "$1,180 – $1,580 / kg",
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
@@ -2793,6 +2849,7 @@
         }
       ]
     },
+    "priceMayoreo": "$499 / kg",
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
@@ -2831,6 +2888,7 @@
         }
       ]
     },
+    "priceMayoreo": "$1,100 / kg",
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
@@ -2869,6 +2927,7 @@
         }
       ]
     },
+    "priceMayoreo": "$490 / kg",
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
@@ -2916,6 +2975,7 @@
         }
       ]
     },
+    "priceMayoreo": "$1,000 – $1,650 / kg",
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
