@@ -335,23 +335,23 @@ function ProductCard({ product, onOpen }) {
           <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '20px', lineHeight: 1.05, color: 'var(--text-strong)' }}>{p.name}</div>
           <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '4px' }}>{cardHook(p.description)}</div>
           {product.marbling && <div style={{ marginTop: '10px' }}><MarblingPill marbling={product.marbling} /></div>}
+          {(() => {
+            const r = priceRange(product.marbling, product.mayoreo);
+            if (!r) return null;
+            const multi = r.min !== r.max;
+            return (
+              <div style={{ marginTop: '10px', display: 'flex', alignItems: 'baseline', gap: '7px', flexWrap: 'wrap' }}>
+                {multi && <span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '11px', color: 'var(--text-muted)' }}>{t.pdp.priceFrom}</span>}
+                <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '17px', color: 'var(--mc-red)' }}>
+                  {multi ? `${fmtMXN(r.min)} – ${fmtMXN(r.max)}` : fmtMXN(r.min)}<span style={{ fontSize: '12px', color: 'var(--text-muted)', fontWeight: 500 }}>{t.pdp.perKg}</span>
+                </span>
+                <span style={{ fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '10px', letterSpacing: '0.04em', color: 'var(--text-faint)' }}>{t.pdp.mayoreo}</span>
+              </div>
+            );
+          })()}
         </div>
         <div style={{ marginTop: 'auto' }}>
-          {(product.priceMayoreo || product.priceMenudeo) ? (
-            <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: '10px' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '3px' }}>
-                {[[t.pdp.menudeo, product.priceMenudeo], [t.pdp.mayoreo, product.priceMayoreo]].map(([label, price]) => price && (
-                  <div key={label} style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
-                    <span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600, fontSize: '10px', color: 'var(--text-muted)' }}>{label}</span>
-                    <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '17px', color: 'var(--text-strong)' }}>{price}</span>
-                  </div>
-                ))}
-              </div>
-              <Icon name="ArrowRight" size={16} color="var(--text-muted)" style={{ flex: 'none', marginBottom: '3px' }} />
-            </div>
-          ) : (
-            <Button variant="secondary" size="sm" fullWidth onClick={(e) => { e.stopPropagation(); onOpen(product); }} iconRight={<Icon name="ArrowRight" size={15} color="currentColor" />}>{t.card.readMore}</Button>
-          )}
+          <Button variant="secondary" size="sm" fullWidth onClick={(e) => { e.stopPropagation(); onOpen(product); }} iconRight={<Icon name="ArrowRight" size={15} color="currentColor" />}>{t.card.readMore}</Button>
         </div>
       </div>
     </Card>
@@ -523,6 +523,17 @@ function variantLabel(v, system) {
   return v.label;
 }
 
+// --- Mayoreo pricing (MXN/kg), read from the per-grade `mayoreo` on each variant ---
+function fmtMXN(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+function variantPrice(v) { return v && typeof v.mayoreo === 'number' ? v.mayoreo : null; }
+// Price range across a product's grades — powers the "scale" shown on catalog cards.
+function priceRange(marbling, topLevel) {
+  const ps = ((marbling && marbling.variants) || []).map(variantPrice).filter((n) => n != null);
+  if (typeof topLevel === 'number') ps.push(topLevel);
+  if (!ps.length) return null;
+  return { min: Math.min(...ps), max: Math.max(...ps) };
+}
+
 function MarblingPill({ marbling }) {
   const { t } = useLang();
   const s = t.pdp.marbling.systems[marbling.system] || t.pdp.marbling.systems.aus;
@@ -567,11 +578,13 @@ function MarblingScale({ marbling, vIdx, onSelect }) {
           <span style={{ ...eyebrow, width: '100%', marginBottom: '2px' }}>{cfg.choose}</span>
           {marbling.variants.map((vt, i) => {
             const on = i === vIdx;
+            const price = variantPrice(vt);
             return (
               <button key={i} onClick={() => onSelect(i)} aria-pressed={on}
-                style={{ cursor: 'pointer', padding: '8px 15px', borderRadius: '999px', fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '13px', letterSpacing: '0.03em',
+                style={{ cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px', padding: '8px 16px', borderRadius: 'var(--radius-md)', fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '13px', letterSpacing: '0.03em',
                   border: '2px solid ' + (on ? 'var(--mc-red)' : 'var(--border-default)'), background: on ? 'var(--mc-red)' : 'transparent', color: on ? '#fff' : 'var(--text-strong)', transition: 'background var(--dur-fast), border-color var(--dur-fast)' }}>
-                {s.unit} {variantLabel(vt, marbling.system)}
+                <span>{s.unit} {variantLabel(vt, marbling.system)}</span>
+                {price != null && <span style={{ fontFamily: 'var(--font-display)', fontSize: '14px', opacity: on ? 1 : 0.9 }}>{fmtMXN(price)}<span style={{ fontSize: '10px', opacity: 0.8 }}>{t.pdp.perKg}</span></span>}
               </button>
             );
           })}
@@ -622,14 +635,13 @@ function ProductDetail({ product, onAdd, onBack }) {
   const carouselIndex = perGradePhotos ? Math.max(0, imgs.indexOf(variants[vIdx].image)) : undefined;
   const onCarousel = perGradePhotos ? (ci) => { const f = variants.findIndex((v) => imgs.indexOf(v.image) === ci); if (f >= 0) setVIdx(f); } : undefined;
   const [tab, setTab] = React.useState('desc');
-  // El tipo de venta se deriva de la cantidad: 25 kg o más = mayoreo, menos = menudeo.
-  // Los chips Mayoreo/Menudeo son atajos que ajustan la cantidad al rango correspondiente.
-  const MAYOREO_MIN = 25;
+  const [saleType, setSaleType] = React.useState('mayoreo');
   const [qty, setQty] = React.useState(5);
-  const saleType = qty >= MAYOREO_MIN ? 'mayoreo' : 'menudeo';
-  const minQty = 1;
-  const pickType = (val) => setQty(val === 'mayoreo' ? Math.max(qty, MAYOREO_MIN) : Math.min(qty, MAYOREO_MIN - 1));
+  const minQty = saleType === 'mayoreo' ? 5 : 1;
+  const pickType = (val) => { setSaleType(val); if (val === 'mayoreo' && qty < 5) setQty(5); };
   const genericOrigin = product.cat === 'jp' ? t.pdp.originJP : product.cat === 'us' ? t.pdp.originUS : t.pdp.originAU;
+  const sys = marbling ? (t.pdp.marbling.systems[marbling.system] || t.pdp.marbling.systems.aus) : null;
+  const selPrice = marbling ? variantPrice(variants[vIdx]) : (typeof product.mayoreo === 'number' ? product.mayoreo : null);
   return (
     <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '32px 24px 80px' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', marginBottom: '24px' }}>
@@ -653,22 +665,28 @@ function ProductDetail({ product, onAdd, onBack }) {
               {product.weight}{product.weight && product.sku ? ' · ' : ''}{product.sku && `SKU ${product.sku}`}
             </div>
           )}
-          {(saleType === 'mayoreo' ? product.priceMayoreo : product.priceMenudeo) && (
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: '10px', margin: '-4px 0 16px' }}>
-              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '28px', color: 'var(--text-strong)' }}>
-                {saleType === 'mayoreo' ? product.priceMayoreo : product.priceMenudeo}
-              </span>
-              <span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 600, fontSize: '11px', color: 'var(--text-muted)' }}>
-                {saleType === 'mayoreo' ? t.pdp.mayoreo : t.pdp.menudeo}
-              </span>
+          {marbling && <MarblingScale marbling={marbling} vIdx={vIdx} onSelect={setVIdx} />}
+          {selPrice != null && (
+            <div style={{ margin: '4px 0 20px' }}>
+              <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '5px' }}>{t.pdp.priceEyebrow}</div>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', flexWrap: 'wrap' }}>
+                <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '36px', lineHeight: 1, color: 'var(--mc-red)' }}>
+                  {fmtMXN(selPrice)}<span style={{ fontSize: '17px', color: 'var(--text-muted)', fontWeight: 600 }}>{t.pdp.perKg}</span>
+                </span>
+                {marbling && sys && (
+                  <span style={{ fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '11px', letterSpacing: '0.04em', color: 'var(--mc-red)', border: '1.5px solid var(--mc-red)', borderRadius: '999px', padding: '3px 10px' }}>
+                    {sys.unit} {variantLabel(variants[vIdx], marbling.system)}
+                  </span>
+                )}
+              </div>
+              <div style={{ fontSize: '11.5px', color: 'var(--text-faint)', marginTop: '6px' }}>{t.pdp.priceNote}</div>
             </div>
           )}
-          {marbling && <MarblingScale marbling={marbling} vIdx={vIdx} onSelect={setVIdx} />}
           <div className="mc-pdp-actions" style={{ margin: '24px 0', display: 'flex', flexWrap: 'wrap', gap: '20px', alignItems: 'flex-end' }}>
             <div>
               <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{t.pdp.saleType}</div>
               <div role="group" aria-label={t.pdp.saleType} style={{ display: 'inline-flex', border: '2px solid var(--mc-charcoal)', borderRadius: 'var(--radius-md)', overflow: 'hidden' }}>
-                {[['menudeo', t.pdp.menudeo], ['mayoreo', t.pdp.mayoreo]].map(([val, label]) => {
+                {[['mayoreo', t.pdp.mayoreo], ['menudeo', t.pdp.menudeo]].map(([val, label]) => {
                   const on = saleType === val;
                   return (
                     <button key={val} onClick={() => pickType(val)} aria-pressed={on}

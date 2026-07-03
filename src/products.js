@@ -16,10 +16,10 @@ for (const path in imageModules) {
   imageByFile[file] = imageModules[path]
 }
 
-export const PRODUCTS = catalog.map(({ id, cat, tone, images, marbling, available, sku, weight, priceMayoreo, priceMenudeo }) => ({
+export const PRODUCTS = catalog.map(({ id, cat, tone, images, marbling, available, sku, weight, mayoreo }) => ({
   id, cat, tone, images, marbling: marbling || null,
   available: available !== false, sku: sku || '', weight: weight || '',
-  priceMayoreo: priceMayoreo || '', priceMenudeo: priceMenudeo || '',
+  mayoreo: typeof mayoreo === 'number' ? mayoreo : null,
 }))
 
 // Marbling scale/variants by id (null when the cut has no grade). Consumed by the
