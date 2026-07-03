@@ -1150,7 +1150,9 @@ function App() {
   const count = cart.reduce((s, i) => s + i.qty, 0);
   const nq = normSearch(q.trim());
   const searched = nq ? IN_STOCK.filter((p) => SEARCH_TEXT[p.id].includes(nq)) : IN_STOCK;
-  const filtered = cat === 'all' ? searched : searched.filter((p) => catOf(p) === cat);
+  // "Todos" muestra lo más nuevo primero (el admin agrega al final del catálogo);
+  // los filtros por categoría conservan el orden manual curado en el admin.
+  const filtered = cat === 'all' ? searched.slice().reverse() : searched.filter((p) => catOf(p) === cat);
   return (
     <div style={{ background: 'var(--surface-page)', minHeight: '100vh' }}>
       <Header cartCount={count} onCart={() => setCartOpen(true)} onNav={nav} onAnchor={goAnchor} onReorder={reorderWhatsApp} overHero={view === 'home'} />
