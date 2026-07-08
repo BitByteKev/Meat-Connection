@@ -14,12 +14,12 @@
           "hi": 12,
           "image": "TRI-TIP-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
           "label": "11-12",
-          "sku": "TRI TIP"
+          "sku": "TRI TIP",
+          "mayoreo": 1850,
+          "menudeo": 2200
         }
       ]
     },
-    "priceMayoreo": "1850",
-    "priceMenudeo": "2200",
     "badge": {
       "es": "A5 · Japón",
       "en": "A5 · Japan"
@@ -52,12 +52,12 @@
           "hi": 12,
           "image": "FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp",
           "label": "10-12",
-          "sku": "PLUS"
+          "sku": "PLUS",
+          "mayoreo": 4650,
+          "menudeo": 4995
         }
       ]
     },
-    "priceMayoreo": "4650",
-    "priceMenudeo": "4995",
     "badge": {
       "es": null,
       "en": null
@@ -90,12 +90,12 @@
           "hi": 12,
           "image": "RIB-EYE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
           "label": "10-12",
-          "sku": "RBA5"
+          "sku": "RBA5",
+          "mayoreo": 4650,
+          "menudeo": 4995
         }
       ]
     },
-    "priceMayoreo": "4650",
-    "priceMenudeo": "4995",
     "badge": {
       "es": null,
       "en": null
@@ -128,12 +128,12 @@
           "hi": 12,
           "image": "PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
           "label": "11-12",
-          "sku": "COULOTT"
+          "sku": "COULOTT",
+          "mayoreo": 3200,
+          "menudeo": 3550
         }
       ]
     },
-    "priceMayoreo": "3200",
-    "priceMenudeo": "3550",
     "badge": {
       "es": null,
       "en": null
@@ -519,7 +519,8 @@
           "hi": 9,
           "image": "new-york-black-angus.webp",
           "label": "6+",
-          "sku": "390292"
+          "sku": "390292",
+          "mayoreo": 1050
         }
       ]
     },
@@ -583,35 +584,40 @@
           "hi": 3,
           "image": "RIB-EYE-WAGYU-AUSTRALIANO-BAJO-MARMOLEO-3-1.webp",
           "label": "0-3",
-          "sku": "448730"
+          "sku": "448730",
+          "mayoreo": 850
         },
         {
           "lo": 4,
           "hi": 5,
           "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
           "label": "4-5",
-          "sku": "448702"
+          "sku": "448702",
+          "mayoreo": 1200
         },
         {
           "lo": 6,
           "hi": 7,
           "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
           "label": "6-7",
-          "sku": "448705"
+          "sku": "448705",
+          "mayoreo": 1500
         },
         {
           "lo": 8,
           "hi": 9,
           "image": "RIB-EYE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-3.webp",
           "label": "8-9",
-          "sku": "448708"
+          "sku": "448708",
+          "mayoreo": 2000
         },
         {
           "lo": 9,
           "hi": 10,
           "image": "RIB-EYE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-3.webp",
           "label": "9+",
-          "sku": "416172"
+          "sku": "416172",
+          "mayoreo": 2200
         }
       ]
     },
@@ -648,7 +654,8 @@
           "hi": 12,
           "image": "placeholder-coming-soon.webp",
           "label": "10-12",
-          "sku": "DIEZA5"
+          "sku": "DIEZA5",
+          "mayoreo": 1800
         }
       ]
     },
@@ -684,7 +691,8 @@
           "hi": 12,
           "image": "placeholder-coming-soon.webp",
           "label": "11-12",
-          "sku": "FLAT"
+          "sku": "FLAT",
+          "mayoreo": 1650
         }
       ]
     },
@@ -720,7 +728,8 @@
           "hi": 12,
           "image": "placeholder-coming-soon.webp",
           "label": "10-12",
-          "sku": "FINGER"
+          "sku": "FINGER",
+          "mayoreo": 885
         }
       ]
     },
@@ -756,7 +765,8 @@
           "hi": 12,
           "image": "placeholder-coming-soon.webp",
           "label": "10-12",
-          "sku": "SHORTP"
+          "sku": "SHORTP",
+          "mayoreo": 850
         }
       ]
     },
@@ -792,7 +802,8 @@
           "hi": 12,
           "image": "placeholder-coming-soon.webp",
           "label": "10-12",
-          "sku": "SHORTA5"
+          "sku": "SHORTA5",
+          "mayoreo": 850
         }
       ]
     },
@@ -828,7 +839,8 @@
           "hi": 12,
           "image": "placeholder-coming-soon.webp",
           "label": "10-12",
-          "sku": "SIRLOIN"
+          "sku": "SIRLOIN",
+          "mayoreo": 1450
         }
       ]
     },
@@ -864,7 +876,8 @@
           "hi": 12,
           "image": "placeholder-coming-soon.webp",
           "label": "10-12",
-          "sku": "FLAP"
+          "sku": "FLAP",
+          "mayoreo": 1950
         }
       ]
     },
@@ -900,7 +913,8 @@
           "hi": 12,
           "image": "placeholder-coming-soon.webp",
           "label": "11-12",
-          "sku": "CHUCK"
+          "sku": "CHUCK",
+          "mayoreo": 2570
         }
       ]
     },
@@ -936,7 +950,8 @@
           "hi": 12,
           "image": "placeholder-coming-soon.webp",
           "label": "10-12",
-          "sku": "TENDK"
+          "sku": "TENDK",
+          "mayoreo": 6180
         }
       ]
     },
@@ -981,7 +996,8 @@
       "description": "Skirt steak (arrachera) — the classic fajita cut, pronounced grain and big flavor.\n\nMacka's Pedigree Black Angus (Australia), grain-finished for even marbling and a robust beef flavor. Versatile and consistent piece to piece.\n\nMarinate and grill fast. Unbeatable for tacos and fajitas.",
       "origin": "Macka's Pedigree origin\n\nAustralian Black Angus from the Macka's Pedigree ranch, raised under strict welfare standards and grain-finished. Traceable and consistent, with classic beef flavor and reliable marbling.",
       "cooking": "Cooking recommendations\n\nVery high heat, 2–3 min per side. Slice thin against the grain."
-    }
+    },
+    "mayoreo": 465
   },
   {
     "id": "brisketMackas__gen",
@@ -999,7 +1015,8 @@
           "hi": 9,
           "image": "lgrow-pe-brisket-top.webp",
           "label": "4+",
-          "sku": "390291"
+          "sku": "390291",
+          "mayoreo": 325
         }
       ]
     },
@@ -1036,7 +1053,8 @@
           "hi": 9,
           "image": "lgrow-chuck-eye-roll-top.webp",
           "label": "4+",
-          "sku": "391648"
+          "sku": "391648",
+          "mayoreo": 320
         }
       ]
     },
@@ -1080,7 +1098,8 @@
       "description": "Hanging tender (hanger steak) — a single-muscle cut, tender with deep flavor.\n\nMacka's Pedigree Black Angus (Australia), grain-finished for even marbling and a robust beef flavor. Versatile and consistent piece to piece.\n\nA bistro favorite. Marinate and grill fast.",
       "origin": "Macka's Pedigree origin\n\nAustralian Black Angus from the Macka's Pedigree ranch, raised under strict welfare standards and grain-finished. Traceable and consistent, with classic beef flavor and reliable marbling.",
       "cooking": "Cooking recommendations\n\nHigh heat, 2–3 min per side to medium-rare. Remove the membrane and slice thin."
-    }
+    },
+    "mayoreo": 380
   },
   {
     "id": "lenguaMackas__gen",
@@ -1106,7 +1125,8 @@
       "description": "Tongue (lengua) — a traditional cut that, properly cooked, turns soft and silky.\n\nMacka's Pedigree Black Angus (Australia), grain-finished for even marbling and a robust beef flavor. Versatile and consistent piece to piece.\n\nTongue tacos, stews and braises.",
       "origin": "Macka's Pedigree origin\n\nAustralian Black Angus from the Macka's Pedigree ranch, raised under strict welfare standards and grain-finished. Traceable and consistent, with classic beef flavor and reliable marbling.",
       "cooking": "Cooking recommendations\n\nSimmer 2.5–3 h until tender, peel the skin and sear or braise in its sauce."
-    }
+    },
+    "mayoreo": 385
   },
   {
     "id": "picanaMackas__gen",
@@ -1124,14 +1144,16 @@
           "hi": 9,
           "image": "lgrow-rump-cap-top.webp",
           "label": "4+",
-          "sku": "390288"
+          "sku": "390288",
+          "mayoreo": 615
         },
         {
           "lo": 6,
           "hi": 9,
           "image": "lgrow-rump-cap-top.webp",
           "label": "6+",
-          "sku": "390295"
+          "sku": "390295",
+          "mayoreo": 810
         }
       ]
     },
@@ -1169,14 +1191,16 @@
           "hi": 9,
           "image": "lgrow-cube-roll-top.webp",
           "label": "4+",
-          "sku": "390290"
+          "sku": "390290",
+          "mayoreo": 1180
         },
         {
           "lo": 6,
           "hi": 9,
           "image": "lgrow-cube-roll-top.webp",
           "label": "6+",
-          "sku": "390293"
+          "sku": "390293",
+          "mayoreo": 1320
         }
       ]
     },
@@ -1212,7 +1236,8 @@
           "hi": 9,
           "image": "placeholder-coming-soon.webp",
           "label": "2+",
-          "sku": "391644"
+          "sku": "391644",
+          "mayoreo": 710
         }
       ]
     },
@@ -1257,7 +1282,8 @@
       "description": "Skirt steak (arrachera) — the classic fajita cut, pronounced grain and big flavor.\n\nL Grow Australian wagyu, grain-finished cross with deep marbling. Juicy and rich, with the perfect balance of fat and beef flavor.\n\nMarinate and grill fast. Unbeatable for tacos and fajitas.",
       "origin": "L Grow Australian Wagyu origin\n\nAustralian wagyu from the L Grow brand, a grain-finished cross for deep, even marbling. Raised under strict marbling standards and fully traceable.",
       "cooking": "Cooking recommendations\n\nVery high heat, 2–3 min per side. Slice thin against the grain."
-    }
+    },
+    "mayoreo": 1250
   },
   {
     "id": "fileteAu__gen",
@@ -1276,7 +1302,8 @@
           "hi": 9,
           "image": "lgrow-tenderloin-top.webp",
           "label": "8-9",
-          "sku": "LF8-9"
+          "sku": "LF8-9",
+          "mayoreo": 1950
         }
       ]
     },
@@ -1314,7 +1341,8 @@
           "hi": 10,
           "image": "lgrow-tenderloin-top.webp",
           "label": "9+",
-          "sku": "LF9+"
+          "sku": "LF9+",
+          "mayoreo": 2350
         }
       ]
     },
@@ -1352,7 +1380,8 @@
           "hi": 9,
           "image": "lgrow-striploin-top.webp",
           "label": "8-9",
-          "sku": "LN8-9"
+          "sku": "LN8-9",
+          "mayoreo": 1850
         }
       ]
     },
@@ -1390,7 +1419,8 @@
           "hi": 10,
           "image": "lgrow-striploin-top.webp",
           "label": "9+",
-          "sku": "LN9+"
+          "sku": "LN9+",
+          "mayoreo": 2150
         }
       ]
     },
@@ -1427,7 +1457,8 @@
           "hi": 9,
           "image": "lgrow-rump-cap-top.webp",
           "label": "8-9",
-          "sku": "LP8-9"
+          "sku": "LP8-9",
+          "mayoreo": 1280
         }
       ]
     },
@@ -1464,14 +1495,16 @@
           "hi": 7,
           "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
           "label": "6-7",
-          "sku": "343697"
+          "sku": "343697",
+          "mayoreo": 1550
         },
         {
           "lo": 8,
           "hi": 9,
           "image": "RIB-EYE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-3.webp",
           "label": "8-9",
-          "sku": "LR8-9"
+          "sku": "LR8-9",
+          "mayoreo": 2000
         }
       ]
     },
@@ -1508,7 +1541,8 @@
           "hi": 9,
           "image": "lgrow-flap-meat-top.webp",
           "label": "8-9",
-          "sku": "343682"
+          "sku": "343682",
+          "mayoreo": 1150
         }
       ]
     },
@@ -1545,7 +1579,8 @@
           "hi": 3,
           "image": "lgrow-inside-skirt-top.webp",
           "label": "0-3",
-          "sku": "448826"
+          "sku": "448826",
+          "mayoreo": 420
         }
       ]
     },
@@ -1582,7 +1617,8 @@
           "hi": 10,
           "image": "lgrow-pe-brisket-top.webp",
           "label": "9+",
-          "sku": "448740"
+          "sku": "448740",
+          "mayoreo": 490
         }
       ]
     },
@@ -1619,7 +1655,8 @@
           "hi": 7,
           "image": "lgrow-shin-shank-top.webp",
           "label": "6-7",
-          "sku": "448843"
+          "sku": "448843",
+          "mayoreo": 340
         }
       ]
     },
@@ -1656,14 +1693,16 @@
           "hi": 3,
           "image": "lgrow-short-rib-meat-top.webp",
           "label": "0-3",
-          "sku": "448825"
+          "sku": "448825",
+          "mayoreo": 450
         },
         {
           "lo": 4,
           "hi": 5,
           "image": "lgrow-short-rib-meat-top.webp",
           "label": "4-5",
-          "sku": "448839"
+          "sku": "448839",
+          "mayoreo": 950
         }
       ]
     },
@@ -1700,21 +1739,24 @@
           "hi": 3,
           "image": "lgrow-chuck-eye-roll-top.webp",
           "label": "0-3",
-          "sku": "448772"
+          "sku": "448772",
+          "mayoreo": 330
         },
         {
           "lo": 4,
           "hi": 5,
           "image": "lgrow-chuck-eye-roll-top.webp",
           "label": "4-5",
-          "sku": "448731"
+          "sku": "448731",
+          "mayoreo": 420
         },
         {
           "lo": 6,
           "hi": 7,
           "image": "lgrow-chuck-eye-roll-top.webp",
           "label": "6-7",
-          "sku": "448732"
+          "sku": "448732",
+          "mayoreo": 530
         }
       ]
     },
@@ -1752,7 +1794,8 @@
           "hi": 3,
           "image": "lgrow-tenderloin-top.webp",
           "label": "0-3",
-          "sku": "448729"
+          "sku": "448729",
+          "mayoreo": 930
         }
       ]
     },
@@ -1789,7 +1832,8 @@
           "hi": 5,
           "image": "lgrow-karubi-plate-top.webp",
           "label": "4-5",
-          "sku": "448841"
+          "sku": "448841",
+          "mayoreo": 380
         }
       ]
     },
@@ -1827,21 +1871,24 @@
           "hi": 3,
           "image": "lgrow-striploin-top.webp",
           "label": "2-3",
-          "sku": "448721"
+          "sku": "448721",
+          "mayoreo": 695
         },
         {
           "lo": 4,
           "hi": 5,
           "image": "lgrow-striploin-top.webp",
           "label": "4-5",
-          "sku": "448701"
+          "sku": "448701",
+          "mayoreo": 870
         },
         {
           "lo": 9,
           "hi": 10,
           "image": "lgrow-striploin-top.webp",
           "label": "9+",
-          "sku": "416171"
+          "sku": "416171",
+          "mayoreo": 2100
         }
       ]
     },
@@ -1878,7 +1925,8 @@
           "hi": 5,
           "image": "lgrow-bolar-blade-top.webp",
           "label": "4-5",
-          "sku": "448824"
+          "sku": "448824",
+          "mayoreo": 390
         }
       ]
     },
@@ -1915,14 +1963,16 @@
           "hi": 3,
           "image": "lgrow-rump-cap-top.webp",
           "label": "0-3",
-          "sku": "448827"
+          "sku": "448827",
+          "mayoreo": 710
         },
         {
           "lo": 9,
           "hi": 10,
           "image": "lgrow-rump-cap-top.webp",
           "label": "9+",
-          "sku": "448719"
+          "sku": "448719",
+          "mayoreo": 1380
         }
       ]
     },
@@ -1958,14 +2008,16 @@
           "hi": 3,
           "image": "placeholder-coming-soon.webp",
           "label": "0-3",
-          "sku": "448783"
+          "sku": "448783",
+          "mayoreo": 745
         },
         {
           "lo": 6,
           "hi": 7,
           "image": "placeholder-coming-soon.webp",
           "label": "6-7",
-          "sku": "448842"
+          "sku": "448842",
+          "mayoreo": 1250
         }
       ]
     },
@@ -2001,21 +2053,24 @@
           "hi": 3,
           "image": "placeholder-coming-soon.webp",
           "label": "2-3",
-          "sku": "448699"
+          "sku": "448699",
+          "mayoreo": 360
         },
         {
           "lo": 4,
           "hi": 5,
           "image": "placeholder-coming-soon.webp",
           "label": "4-5",
-          "sku": "448700"
+          "sku": "448700",
+          "mayoreo": 460
         },
         {
           "lo": 6,
           "hi": 7,
           "image": "placeholder-coming-soon.webp",
           "label": "6-7",
-          "sku": "448703"
+          "sku": "448703",
+          "mayoreo": 560
         }
       ]
     },
@@ -2052,14 +2107,16 @@
           "hi": 5,
           "image": "lgrow-rostbiff-top.webp",
           "label": "4-5",
-          "sku": "448714"
+          "sku": "448714",
+          "mayoreo": 385
         },
         {
           "lo": 6,
           "hi": 7,
           "image": "lgrow-rostbiff-top.webp",
           "label": "6-7",
-          "sku": "448716"
+          "sku": "448716",
+          "mayoreo": 400
         }
       ]
     },
@@ -2096,7 +2153,8 @@
           "hi": 3,
           "image": "lgrow-chuck-tail-flap-top.webp",
           "label": "0-3",
-          "sku": "448840"
+          "sku": "448840",
+          "mayoreo": 820
         }
       ]
     },
@@ -2132,7 +2190,8 @@
           "hi": 3,
           "image": "placeholder-coming-soon.webp",
           "label": "0-3",
-          "sku": "448741"
+          "sku": "448741",
+          "mayoreo": 740
         }
       ]
     },
@@ -2169,7 +2228,8 @@
           "hi": 10,
           "image": "lgrow-flap-meat-top.webp",
           "label": "9+",
-          "sku": "448735"
+          "sku": "448735",
+          "mayoreo": 1200
         }
       ]
     },
@@ -2207,7 +2267,8 @@
           "hi": 10,
           "image": "lgrow-oyster-blade-top.webp",
           "label": "9+",
-          "sku": "448596"
+          "sku": "448596",
+          "mayoreo": 1400
         }
       ]
     },
@@ -2244,7 +2305,8 @@
           "hi": 10,
           "image": "lgrow-chuck-eye-roll-top.webp",
           "label": "9+",
-          "sku": "448593"
+          "sku": "448593",
+          "mayoreo": 710
         }
       ]
     },
@@ -2282,7 +2344,8 @@
           "hi": 10,
           "image": "lgrow-striploin-top.webp",
           "label": "9+",
-          "sku": "448577"
+          "sku": "448577",
+          "mayoreo": 2200
         }
       ]
     },
@@ -2319,7 +2382,8 @@
           "hi": 10,
           "image": "lgrow-bolar-blade-top.webp",
           "label": "9+",
-          "sku": "448594"
+          "sku": "448594",
+          "mayoreo": 580
         }
       ]
     },
@@ -2357,7 +2421,8 @@
           "hi": 10,
           "image": "lgrow-cube-roll-top.webp",
           "label": "9+",
-          "sku": "448574"
+          "sku": "448574",
+          "mayoreo": 2300
         }
       ]
     },
@@ -2394,7 +2459,8 @@
           "hi": 10,
           "image": "lgrow-inside-skirt-top.webp",
           "label": "8+",
-          "sku": "62195-1"
+          "sku": "62195-1",
+          "mayoreo": 680
         }
       ]
     },
@@ -2431,14 +2497,16 @@
           "hi": 7,
           "image": "lgrow-pe-brisket-top.webp",
           "label": "6-7",
-          "sku": "71815-1"
+          "sku": "71815-1",
+          "mayoreo": 390
         },
         {
           "lo": 8,
           "hi": 10,
           "image": "lgrow-pe-brisket-top.webp",
           "label": "8+",
-          "sku": "61815-1"
+          "sku": "61815-1",
+          "mayoreo": 395
         }
       ]
     },
@@ -2475,7 +2543,8 @@
           "hi": 5,
           "image": "lgrow-short-rib-meat-top.webp",
           "label": "4-5",
-          "sku": "83045-1"
+          "sku": "83045-1",
+          "mayoreo": 565
         }
       ]
     },
@@ -2512,14 +2581,16 @@
           "hi": 7,
           "image": "lgrow-short-rib-meat-top.webp",
           "label": "6-7",
-          "sku": "72395-1"
+          "sku": "72395-1",
+          "mayoreo": 900
         },
         {
           "lo": 8,
           "hi": 10,
           "image": "lgrow-short-rib-meat-top.webp",
           "label": "8+",
-          "sku": "62395-1"
+          "sku": "62395-1",
+          "mayoreo": 950
         }
       ]
     },
@@ -2556,7 +2627,8 @@
           "hi": 10,
           "image": "lgrow-chuck-eye-roll-top.webp",
           "label": "8+",
-          "sku": "61655-1"
+          "sku": "61655-1",
+          "mayoreo": 560
         }
       ]
     },
@@ -2594,7 +2666,8 @@
           "hi": 5,
           "image": "lgrow-tenderloin-top.webp",
           "label": "4-5",
-          "sku": "88935-1"
+          "sku": "88935-1",
+          "mayoreo": 980
         }
       ]
     },
@@ -2630,7 +2703,8 @@
           "hi": 10,
           "image": "placeholder-coming-soon.webp",
           "label": "8+",
-          "sku": "62435-3"
+          "sku": "62435-3",
+          "mayoreo": 360
         }
       ]
     },
@@ -2668,14 +2742,16 @@
           "hi": 7,
           "image": "lgrow-striploin-top.webp",
           "label": "6-7",
-          "sku": "78035-1-AB"
+          "sku": "78035-1-AB",
+          "mayoreo": 1180
         },
         {
           "lo": 8,
           "hi": 10,
           "image": "lgrow-striploin-top.webp",
           "label": "8+",
-          "sku": "68035-1"
+          "sku": "68035-1",
+          "mayoreo": 1580
         }
       ]
     },
@@ -2712,7 +2788,8 @@
           "hi": 10,
           "image": "lgrow-bolar-blade-top.webp",
           "label": "8+",
-          "sku": "61433-1"
+          "sku": "61433-1",
+          "mayoreo": 499
         }
       ]
     },
@@ -2749,7 +2826,8 @@
           "hi": 10,
           "image": "lgrow-rump-cap-top.webp",
           "label": "8+",
-          "sku": "68465-1"
+          "sku": "68465-1",
+          "mayoreo": 1100
         }
       ]
     },
@@ -2786,7 +2864,8 @@
           "hi": 5,
           "image": "lgrow-rib-cap-meat-top.webp",
           "label": "4-5",
-          "sku": "82955-1"
+          "sku": "82955-1",
+          "mayoreo": 490
         }
       ]
     },
@@ -2824,14 +2903,16 @@
           "hi": 7,
           "image": "lgrow-cube-roll-top.webp",
           "label": "6-7",
-          "sku": "71235-1"
+          "sku": "71235-1",
+          "mayoreo": 1000
         },
         {
           "lo": 8,
           "hi": 10,
           "image": "lgrow-cube-roll-top.webp",
           "label": "8+",
-          "sku": "RBABA"
+          "sku": "RBABA",
+          "mayoreo": 1650
         }
       ]
     },
@@ -2875,7 +2956,8 @@
       "description": "Marrow (femur bones) — bone with marrow, rich and full of flavor.\n\nAbatti Ranch American wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nRoasted to spread on bread, or as a base for broths and sauces.",
       "origin": "Abatti Ranch origin\n\nAmerican wagyu cross from Abatti Ranch (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
       "cooking": "Cooking recommendations\n\nRoast at 200 °C for 15–20 min until the marrow bubbles."
-    }
+    },
+    "mayoreo": 250
   },
   {
     "id": "rib-eye-autraliano-4",
