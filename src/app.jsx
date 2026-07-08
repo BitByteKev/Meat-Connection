@@ -547,13 +547,13 @@ function MarblingPill({ marbling }) {
   const vs = marbling.variants;
   const lo = Math.min(...vs.map((v) => v.lo));
   const hi = Math.max(...vs.map((v) => v.hi));
-  const range = vs.length === 1 ? variantLabel(vs[0], marbling.system)
-    : (lo === hi ? variantLabel({ lo, hi }, marbling.system) : `${lo}\u2013${hiText(marbling.system, hi)}`);
+  const range = vs.length === 1 ? gradeTag(vs[0], marbling.system, s.unit)
+    : (lo === hi ? gradeTag({ lo, hi }, marbling.system, s.unit) : `${s.unit} ${lo}\u2013${hiText(marbling.system, hi)}`);
   return (
     <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', alignSelf: 'flex-start',
       fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '11px', letterSpacing: '0.04em',
       color: 'var(--mc-red)', border: '1.5px solid var(--mc-red)', borderRadius: '999px', padding: '3px 9px' }}>
-      {s.unit} {range}
+      {range}
     </span>
   );
 }

@@ -154,12 +154,8 @@ export default function ProductDetail({ product, onChange, onBack, onRemove, cat
           <div style={{ flex: '1 1 150px', minWidth: 0 }}><TextField label="SKU (opcional)" value={product.sku || ''} onChange={(v) => onChange({ ...product, sku: v })} /></div>
           <div style={{ flex: '1 1 200px', minWidth: 0 }}><TextField label="Peso / presentación (opcional)" value={product.weight || ''} onChange={(v) => onChange({ ...product, weight: v })} placeholder="Ej. Corte de 300 g" /></div>
         </div>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginTop: '2px' }}>
-          <div style={{ flex: '1 1 200px', minWidth: 0 }}><TextField label="Precio mayoreo MXN/kg (opcional)" type="number" value={product.mayoreo ?? ''} onChange={(v) => onChange({ ...product, mayoreo: v })} placeholder="Ej. 1850" /></div>
-          <div style={{ flex: '1 1 200px', minWidth: 0 }}><TextField label="Precio menudeo MXN/kg (opcional)" type="number" value={product.menudeo ?? ''} onChange={(v) => onChange({ ...product, menudeo: v })} placeholder="Ej. 2100" /></div>
-        </div>
         <p style={{ fontSize: '11px', color: '#6b7075', margin: '6px 0 0' }}>
-          Números en MXN por kg. Para cortes con marmoleo, el precio de cada grado se captura abajo en la sección Marmoleo.
+          Los precios (mayoreo/menudeo, MXN por kg) se capturan por grado en la sección Marmoleo.
         </p>
       </SectionCard>
 

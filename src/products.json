@@ -751,8 +751,20 @@
       "origin": "Origin & distinction\n\nThe Australian Wagyu Tongue comes from cattle raised on controlled Australian pastures, where each animal receives balanced feeding that promotes exceptional marbling. With a high marbling grade, this cut stands out for its rich intramuscular veining that brings juiciness and concentrated flavor.",
       "cooking": "Cooking recommendations\n\nWater bath & quick sear\n• Blanch at 80 °C for 10–15 min to tenderize.\n• Sear on a hot griddle or pan 1 minute per side to mark the surface.\n\nSlow braise\n• Cook over low heat in a light broth for 2–3 h until optimal tenderness.\n• Finish quickly in a hot pan to create a light crust.\n\nShort rest\nRest 5 minutes before slicing to retain the juices."
     },
-    "mayoreo": 500,
-    "sku": "LENGUAMR"
+    "sku": "LENGUAMR",
+    "marbling": {
+      "system": "aus",
+      "variants": [
+        {
+          "lo": 0,
+          "hi": 0,
+          "image": "",
+          "label": "Std",
+          "sku": "LENGUAMR",
+          "mayoreo": 500
+        }
+      ]
+    }
   },
   {
     "id": "nyangus",
@@ -840,8 +852,20 @@
       "origin": "Origin & superior quality\n\nThe American Wagyu Sausage is made with Wagyu beef raised in the USA under high animal-welfare standards and controlled feeding. Each 4-piece pack combines select cuts to deliver a gourmet-level processed product.",
       "cooking": "Cooking recommendations\n\nGrill or non-stick pan\n• Heat over medium to avoid burning the casing.\n• Cook 4–5 minutes per side, turning often for even browning.\n\nOven\n• Preheat to 180 °C.\n• Bake 12–15 minutes on a rack, flipping halfway through.\n\nAvoid piercing\nDo not pierce the casing, to keep the juices inside."
     },
-    "mayoreo": 855,
-    "sku": "WINI"
+    "sku": "WINI",
+    "marbling": {
+      "system": "aus",
+      "variants": [
+        {
+          "lo": 0,
+          "hi": 0,
+          "image": "",
+          "label": "Std",
+          "sku": "WINI",
+          "mayoreo": 855
+        }
+      ]
+    }
   },
   {
     "id": "king-river",
@@ -1301,6 +1325,14 @@
       "system": "angus",
       "variants": [
         {
+          "lo": 0,
+          "hi": 0,
+          "image": "",
+          "label": "Std",
+          "sku": "390287",
+          "mayoreo": 465
+        },
+        {
           "lo": 4,
           "hi": 9,
           "image": "",
@@ -1309,8 +1341,7 @@
           "mayoreo": 465
         }
       ]
-    },
-    "mayoreo": 465
+    }
   },
   {
     "id": "brisketMackas__gen",
@@ -1420,7 +1451,19 @@
       "origin": "Macka's Pedigree origin\n\nAustralian Black Angus from the Macka's Pedigree ranch, raised under strict welfare standards and grain-finished. Traceable and consistent, with classic beef flavor and reliable marbling.",
       "cooking": "Cooking recommendations\n\nHigh heat, 2–3 min per side to medium-rare. Remove the membrane and slice thin."
     },
-    "mayoreo": 380
+    "marbling": {
+      "system": "angus",
+      "variants": [
+        {
+          "lo": 0,
+          "hi": 0,
+          "image": "",
+          "label": "Std",
+          "sku": "390286",
+          "mayoreo": 380
+        }
+      ]
+    }
   },
   {
     "id": "lenguaMackas__gen",
@@ -1447,7 +1490,19 @@
       "origin": "Macka's Pedigree origin\n\nAustralian Black Angus from the Macka's Pedigree ranch, raised under strict welfare standards and grain-finished. Traceable and consistent, with classic beef flavor and reliable marbling.",
       "cooking": "Cooking recommendations\n\nSimmer 2.5–3 h until tender, peel the skin and sear or braise in its sauce."
     },
-    "mayoreo": 385
+    "marbling": {
+      "system": "angus",
+      "variants": [
+        {
+          "lo": 0,
+          "hi": 0,
+          "image": "",
+          "label": "Std",
+          "sku": "390285",
+          "mayoreo": 385
+        }
+      ]
+    }
   },
   {
     "id": "picanaMackas__gen",
@@ -1628,7 +1683,19 @@
       "origin": "L Grow Australian Wagyu origin\n\nAustralian wagyu from the L Grow brand, a grain-finished cross for deep, even marbling. Raised under strict marbling standards and fully traceable.",
       "cooking": "Cooking recommendations\n\nVery high heat, 2–3 min per side. Slice thin against the grain."
     },
-    "mayoreo": 1250
+    "marbling": {
+      "system": "aus",
+      "variants": [
+        {
+          "lo": 0,
+          "hi": 0,
+          "image": "",
+          "label": "Std",
+          "sku": "LA",
+          "mayoreo": 1250
+        }
+      ]
+    }
   },
   {
     "id": "fileteAu__gen",
@@ -3950,7 +4017,19 @@
       "origin": "Abatti Ranch origin\n\nAmerican wagyu cross from Abatti Ranch (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
       "cooking": "Cooking recommendations\n\nRoast at 200 °C for 15–20 min until the marrow bubbles."
     },
-    "mayoreo": 250
+    "marbling": {
+      "system": "aus",
+      "variants": [
+        {
+          "lo": 0,
+          "hi": 0,
+          "image": "",
+          "label": "Std",
+          "sku": "43565-2",
+          "mayoreo": 250
+        }
+      ]
+    }
   },
   {
     "id": "rib-eye-autraliano-4",
@@ -4665,7 +4744,6 @@
       "placeholder-coming-soon.webp"
     ],
     "sku": "BURGER",
-    "mayoreo": 345,
     "badge": {
       "es": "Fullblood · Australia",
       "en": "Fullblood · Australia"
@@ -4681,6 +4759,19 @@
       "description": "100 % fullblood wagyu burger blend: coarse grind with just the right ratio of wagyu fat.\n\nSmash or grill, guaranteed juiciness.",
       "origin": "Australia origin · Fullblood\n\nFullblood wagyu: 100 % pure Japanese genetics raised in Australia. Top-tier 9+ marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nStraight on the grill over medium-high coals. Flip once, pull at your preferred doneness and rest a few minutes."
+    },
+    "marbling": {
+      "system": "aus",
+      "variants": [
+        {
+          "lo": 0,
+          "hi": 0,
+          "image": "",
+          "label": "Std",
+          "sku": "BURGER",
+          "mayoreo": 345
+        }
+      ]
     }
   },
   {
@@ -5397,7 +5488,6 @@
       "placeholder-coming-soon.webp"
     ],
     "sku": "BURGERKR",
-    "mayoreo": 425,
     "badge": {
       "es": "Wagyu Cross · Australia",
       "en": "Wagyu Cross · Australia"
@@ -5413,6 +5503,19 @@
       "description": "King River wagyu cross burger blend: ground with natural wagyu fat.\n\nThe house burger, elevated.",
       "origin": "Australia origin\n\nAustralian wagyu cross from export ranches. Wagyu genetics deliver marbling and juiciness far above standard beef, at an accessible price.",
       "cooking": "Cooking recommendations\n\nStraight on the grill over medium-high coals. Flip once, pull at your preferred doneness and rest a few minutes."
+    },
+    "marbling": {
+      "system": "aus",
+      "variants": [
+        {
+          "lo": 0,
+          "hi": 0,
+          "image": "",
+          "label": "Std",
+          "sku": "BURGERKR",
+          "mayoreo": 425
+        }
+      ]
     }
   },
   {
@@ -5780,7 +5883,6 @@
       "placeholder-coming-soon.webp"
     ],
     "sku": "TMHUSA",
-    "mayoreo": 735,
     "badge": {
       "es": "USDA Choice · USA",
       "en": "USDA Choice · USA"
@@ -5796,6 +5898,19 @@
       "description": "American Black Angus USDA Choice tomahawk: showpiece presence at an accessible price.\n\nThe centerpiece of the cookout.",
       "origin": "USA origin\n\nAmerican Black Angus graded USDA Choice: moderate marbling, reliable tenderness and the classic flavor of grain-fed angus.",
       "cooking": "Cooking recommendations\n\nSear all over, then finish indirect or in a 120 °C oven to 54–56 °C internal. Rest 8–10 min."
+    },
+    "marbling": {
+      "system": "angus",
+      "variants": [
+        {
+          "lo": 0,
+          "hi": 0,
+          "image": "",
+          "label": "Std",
+          "sku": "TMHUSA",
+          "mayoreo": 735
+        }
+      ]
     }
   },
   {
