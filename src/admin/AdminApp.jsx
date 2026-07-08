@@ -28,7 +28,8 @@ const page = { maxWidth: '980px', margin: '0 auto', padding: '28px 18px 120px', 
 
 // Trim outer whitespace only — internal newlines are meaningful (paragraphs/bullets).
 // Preserves structured fields the form now edits (marbling grades, availability,
-// SKU, weight) — previously these were silently dropped on every save.
+// SKU, weight, prices) — previously these were silently dropped on every save.
+const priceNum = (x) => { const n = parseFloat(x); return Number.isFinite(n) ? n : null }
 function pruneCatalog(catalog) {
   return catalog.map((p) => ({
     id: p.id.trim(),
@@ -39,8 +40,8 @@ function pruneCatalog(catalog) {
     ...(p.available === false ? { available: false } : {}),
     ...((p.sku || '').trim() ? { sku: p.sku.trim() } : {}),
     ...((p.weight || '').trim() ? { weight: p.weight.trim() } : {}),
-    ...((p.priceMayoreo || '').trim() ? { priceMayoreo: p.priceMayoreo.trim() } : {}),
-    ...((p.priceMenudeo || '').trim() ? { priceMenudeo: p.priceMenudeo.trim() } : {}),
+    ...(priceNum(p.mayoreo) != null ? { mayoreo: priceNum(p.mayoreo) } : {}),
+    ...(priceNum(p.menudeo) != null ? { menudeo: priceNum(p.menudeo) } : {}),
     badge: {
       es: (p.badge.es || '').trim() || null,
       en: (p.badge.en || '').trim() || null,
@@ -69,6 +70,10 @@ function cleanMarbling(m) {
       const label = (v.label || '').trim()
       out.label = label || (lo === hi ? String(lo) : `${lo}-${hi}`)
       if ((v.sku || '').trim()) out.sku = v.sku.trim()
+      const mayoreo = priceNum(v.mayoreo)
+      if (mayoreo != null) out.mayoreo = mayoreo
+      const menudeo = priceNum(v.menudeo)
+      if (menudeo != null) out.menudeo = menudeo
       return out
     })
     .filter(Boolean)

@@ -155,11 +155,11 @@ export default function ProductDetail({ product, onChange, onBack, onRemove, cat
           <div style={{ flex: '1 1 200px', minWidth: 0 }}><TextField label="Peso / presentación (opcional)" value={product.weight || ''} onChange={(v) => onChange({ ...product, weight: v })} placeholder="Ej. Corte de 300 g" /></div>
         </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', marginTop: '2px' }}>
-          <div style={{ flex: '1 1 200px', minWidth: 0 }}><TextField label="Precio mayoreo (opcional)" value={product.priceMayoreo || ''} onChange={(v) => onChange({ ...product, priceMayoreo: v })} placeholder="Ej. $1,850 / kg" /></div>
-          <div style={{ flex: '1 1 200px', minWidth: 0 }}><TextField label="Precio menudeo (opcional)" value={product.priceMenudeo || ''} onChange={(v) => onChange({ ...product, priceMenudeo: v })} placeholder="Ej. $2,100 / kg" /></div>
+          <div style={{ flex: '1 1 200px', minWidth: 0 }}><TextField label="Precio mayoreo MXN/kg (opcional)" type="number" value={product.mayoreo ?? ''} onChange={(v) => onChange({ ...product, mayoreo: v })} placeholder="Ej. 1850" /></div>
+          <div style={{ flex: '1 1 200px', minWidth: 0 }}><TextField label="Precio menudeo MXN/kg (opcional)" type="number" value={product.menudeo ?? ''} onChange={(v) => onChange({ ...product, menudeo: v })} placeholder="Ej. 2100" /></div>
         </div>
         <p style={{ fontSize: '11px', color: '#6b7075', margin: '6px 0 0' }}>
-          Texto libre — se muestra tal cual en la tienda. Vacío = la tarjeta muestra "Leer más" y la ficha no muestra precio.
+          Números en MXN por kg. Para cortes con marmoleo, el precio de cada grado se captura abajo en la sección Marmoleo.
         </p>
       </SectionCard>
 

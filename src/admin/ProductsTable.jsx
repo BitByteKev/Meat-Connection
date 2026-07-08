@@ -22,6 +22,18 @@ const marblingSummary = (m) => {
   return `${sys} ${lo}–${hi}`
 }
 
+// Price summary per sale type: range across the product's grades (plus the
+// top-level price for cuts without marbling), in MXN/kg. '—' when unset.
+const fmtPrice = (n) => '$' + Math.round(n).toLocaleString('en-US')
+const priceSummary = (p, key) => {
+  const ps = (((p.marbling || {}).variants) || []).map((v) => parseFloat(v[key])).filter(Number.isFinite)
+  const top = parseFloat(p[key])
+  if (Number.isFinite(top)) ps.push(top)
+  if (!ps.length) return '—'
+  const lo = Math.min(...ps), hi = Math.max(...ps)
+  return lo === hi ? fmtPrice(lo) : `${fmtPrice(lo)}–${fmtPrice(hi)}`
+}
+
 export default function ProductsTable({
   rows, total, query, onQuery, filterCat, onFilterCat, sort, onSort, canMove, catOptions,
   selected, onSelected, onOpen, onMove, onBulkAvailable, onBulkDelete, onAdd, onClearFilters,
@@ -81,6 +93,7 @@ export default function ProductsTable({
               <th style={th}>Estado</th>
               <th style={th}>Categoría</th>
               <th style={th}>Marmoleo</th>
+              <th style={th}>Precio /kg</th>
               {canMove && <th style={{ ...th, width: '84px' }}></th>}
             </tr>
           </thead>
@@ -108,6 +121,10 @@ export default function ProductsTable({
                   <td style={td}><Pill ok={p.available !== false}>{p.available !== false ? 'Activo' : 'Agotado'}</Pill></td>
                   <td style={td}>{catLabelOf(p.cat)}</td>
                   <td style={td}>{marblingSummary(p.marbling)}</td>
+                  <td style={{ ...td, whiteSpace: 'nowrap' }}>
+                    <div style={{ fontSize: '12px' }}><span style={{ color: '#616a75' }}>May.</span> {priceSummary(p, 'mayoreo')}</div>
+                    <div style={{ fontSize: '12px' }}><span style={{ color: '#616a75' }}>Men.</span> {priceSummary(p, 'menudeo')}</div>
+                  </td>
                   {canMove && (
                     <td style={{ ...td, whiteSpace: 'nowrap' }} onClick={(e) => e.stopPropagation()}>
                       <button type="button" style={{ ...btn, padding: '4px 8px' }} onClick={() => onMove(i, -1)}>↑</button>{' '}

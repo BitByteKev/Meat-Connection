@@ -1,7 +1,8 @@
 // Marbling editor for the product form. Lets the owner pick a scale (BMS / MB /
 // Angus) and manage the grade variants the storefront renders (MarblingScale +
 // MarblingPill). Each variant has a low/high grade, an optional label, an image
-// chosen from the product's own photos, and an optional SKU.
+// chosen from the product's own photos, an optional SKU, and optional
+// mayoreo/menudeo prices (MXN/kg).
 import React from 'react'
 import { imageUrl } from '../products.js'
 import { labelStyle, btn, btnDanger, move } from './fields.jsx'
@@ -43,6 +44,10 @@ function Variant({ v, i, images, system, canMove, onChange, onMove, onRemove }) 
         </select></label>
       <label style={{ flex: '1 1 110px', minWidth: 0 }}><span style={mini}>SKU (opcional)</span>
         <input value={v.sku || ''} onChange={(e) => set({ sku: e.target.value })} style={cell} /></label>
+      <label style={{ flex: 'none' }}><span style={mini}>Mayoreo $/kg</span>
+        <input type="number" min={0} value={v.mayoreo ?? ''} onChange={(e) => set({ mayoreo: e.target.value })} style={{ ...num, width: '78px' }} /></label>
+      <label style={{ flex: 'none' }}><span style={mini}>Menudeo $/kg</span>
+        <input type="number" min={0} value={v.menudeo ?? ''} onChange={(e) => set({ menudeo: e.target.value })} style={{ ...num, width: '78px' }} /></label>
       <div style={{ display: 'flex', gap: '3px' }}>
         <button type="button" style={{ ...btn, padding: '4px 7px' }} disabled={!canMove || i === 0} onClick={() => onMove(-1)}>↑</button>
         <button type="button" style={{ ...btn, padding: '4px 7px' }} disabled={!canMove} onClick={() => onMove(1)}>↓</button>
