@@ -523,9 +523,9 @@ function variantLabel(v, system) {
   return v.label;
 }
 
-// --- Mayoreo pricing (MXN/kg), read from the per-grade `mayoreo` on each variant ---
+// --- Pricing (MXN/kg), read from the per-grade `mayoreo`/`menudeo` on each variant ---
 function fmtMXN(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
-function variantPrice(v) { return v && typeof v.mayoreo === 'number' ? v.mayoreo : null; }
+function variantPrice(v, key = 'mayoreo') { return v && typeof v[key] === 'number' ? v[key] : null; }
 // Price range across a product's grades — powers the "scale" shown on catalog cards.
 function priceRange(marbling, topLevel) {
   const ps = ((marbling && marbling.variants) || []).map(variantPrice).filter((n) => n != null);
@@ -644,7 +644,12 @@ function ProductDetail({ product, onAdd, onBack }) {
   const pickType = (val) => setQty(val === 'mayoreo' ? Math.max(qty, MAYOREO_MIN) : Math.min(qty, MAYOREO_MIN - 1));
   const genericOrigin = product.cat === 'jp' ? t.pdp.originJP : product.cat === 'us' ? t.pdp.originUS : t.pdp.originAU;
   const sys = marbling ? (t.pdp.marbling.systems[marbling.system] || t.pdp.marbling.systems.aus) : null;
-  const selPrice = marbling ? variantPrice(variants[vIdx]) : (typeof product.mayoreo === 'number' ? product.mayoreo : null);
+  // Price follows the sale type: menudeo shows the menudeo price when captured,
+  // otherwise falls back to mayoreo (and the label says which one is shown).
+  const priceFor = (key) => marbling ? variantPrice(variants[vIdx], key) : (typeof product[key] === 'number' ? product[key] : null);
+  const mayoreoPrice = priceFor('mayoreo'), menudeoPrice = priceFor('menudeo');
+  const showMenudeo = saleType === 'menudeo' ? menudeoPrice != null : mayoreoPrice == null && menudeoPrice != null;
+  const selPrice = showMenudeo ? menudeoPrice : mayoreoPrice;
   return (
     <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '32px 24px 80px' }}>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', marginBottom: '24px' }}>
@@ -671,7 +676,7 @@ function ProductDetail({ product, onAdd, onBack }) {
           {marbling && <MarblingScale marbling={marbling} vIdx={vIdx} onSelect={setVIdx} />}
           {selPrice != null && (
             <div style={{ margin: '4px 0 20px' }}>
-              <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '5px' }}>{t.pdp.priceEyebrow}</div>
+              <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '5px' }}>{showMenudeo ? t.pdp.priceEyebrowMenudeo : t.pdp.priceEyebrow}</div>
               <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', flexWrap: 'wrap' }}>
                 <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '36px', lineHeight: 1, color: 'var(--mc-red)' }}>
                   {fmtMXN(selPrice)}<span style={{ fontSize: '17px', color: 'var(--text-muted)', fontWeight: 600 }}>{t.pdp.perKg}</span>

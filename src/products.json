@@ -186,12 +186,44 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 0,
+          "hi": 3,
+          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
+          "label": "0-3",
+          "sku": "448730",
+          "mayoreo": 850
+        },
+        {
           "lo": 4,
           "hi": 5,
           "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
           "label": "4-5",
           "mayoreo": 1900,
           "sku": "7"
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
+          "label": "6-7",
+          "sku": "343697",
+          "mayoreo": 1550
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
+          "label": "8-9",
+          "sku": "LR8-9",
+          "mayoreo": 2000
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
+          "label": "9+",
+          "sku": "416172",
+          "mayoreo": 2200
         }
       ]
     },
@@ -229,6 +261,38 @@
           "image": "RIB-EYE-WAGYU-AUSTRALIANO-BAJO-MARMOLEO-3-1.webp",
           "label": "0-3",
           "mayoreo": 850
+        },
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "RIB-EYE-WAGYU-AUSTRALIANO-BAJO-MARMOLEO-3-1.webp",
+          "label": "4-5",
+          "sku": "448702",
+          "mayoreo": 1200
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "RIB-EYE-WAGYU-AUSTRALIANO-BAJO-MARMOLEO-3-1.webp",
+          "label": "6-7",
+          "sku": "343697",
+          "mayoreo": 1550
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "RIB-EYE-WAGYU-AUSTRALIANO-BAJO-MARMOLEO-3-1.webp",
+          "label": "8-9",
+          "sku": "LR8-9",
+          "mayoreo": 2000
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "RIB-EYE-WAGYU-AUSTRALIANO-BAJO-MARMOLEO-3-1.webp",
+          "label": "9+",
+          "sku": "416172",
+          "mayoreo": 2200
         }
       ]
     },
@@ -261,12 +325,52 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 2,
+          "hi": 3,
+          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+          "label": "2-3",
+          "sku": "448721",
+          "mayoreo": 695
+        },
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+          "label": "4-5",
+          "sku": "448701",
+          "mayoreo": 870
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+          "label": "6-7",
+          "sku": "448704",
+          "mayoreo": 1300
+        },
+        {
           "lo": 8,
           "hi": 9,
           "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
           "label": "8-9",
           "mayoreo": 1960,
           "sku": "NYMR"
+        },
+        {
+          "lo": 8,
+          "hi": 10,
+          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+          "label": "8+",
+          "sku": "68035-1",
+          "mayoreo": 1580
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+          "label": "9+",
+          "sku": "416171",
+          "mayoreo": 2100
         }
       ]
     },
@@ -303,11 +407,51 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 2,
+          "hi": 3,
+          "image": "wagyu-australiano-newyork-89-1.webp",
+          "label": "2-3",
+          "sku": "448721",
+          "mayoreo": 695
+        },
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "wagyu-australiano-newyork-89-1.webp",
+          "label": "4-5",
+          "sku": "448701",
+          "mayoreo": 870
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "wagyu-australiano-newyork-89-1.webp",
+          "label": "6-7",
+          "sku": "448704",
+          "mayoreo": 1300
+        },
+        {
           "lo": 8,
           "hi": 9,
           "image": "wagyu-australiano-newyork-89-1.webp",
           "label": "8-9",
           "mayoreo": 1960
+        },
+        {
+          "lo": 8,
+          "hi": 10,
+          "image": "wagyu-australiano-newyork-89-1.webp",
+          "label": "8+",
+          "sku": "68035-1",
+          "mayoreo": 1580
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "wagyu-australiano-newyork-89-1.webp",
+          "label": "9+",
+          "sku": "416171",
+          "mayoreo": 2100
         }
       ]
     },
@@ -341,10 +485,44 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 0,
+          "hi": 3,
+          "image": "filete-australiano-9plus-1.webp",
+          "label": "0-3",
+          "sku": "448729",
+          "mayoreo": 930
+        },
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "filete-australiano-9plus-1.webp",
+          "label": "4-5",
+          "sku": "88935-1",
+          "mayoreo": 980
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "filete-australiano-9plus-1.webp",
+          "label": "6-7",
+          "sku": "78935-1-ABR",
+          "mayoreo": 1400
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "filete-australiano-9plus-1.webp",
+          "label": "8-9",
+          "sku": "LF8-9",
+          "mayoreo": 1950
+        },
+        {
           "lo": 9,
           "hi": 10,
           "image": "filete-australiano-9plus-1.webp",
-          "label": "9+"
+          "label": "9+",
+          "mayoreo": 1850,
+          "sku": "TENDMR"
         }
       ]
     },
@@ -422,12 +600,36 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 4,
+          "hi": 5,
+          "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
+          "label": "4-5",
+          "sku": "448824",
+          "mayoreo": 390
+        },
+        {
           "lo": 8,
           "hi": 9,
           "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
           "label": "8-9",
           "mayoreo": 350,
           "sku": "PALETAMR"
+        },
+        {
+          "lo": 8,
+          "hi": 10,
+          "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
+          "label": "8+",
+          "sku": "61433-1",
+          "mayoreo": 499
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
+          "label": "9+",
+          "sku": "448711",
+          "mayoreo": 540
         }
       ]
     },
@@ -1441,6 +1643,30 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 0,
+          "hi": 3,
+          "image": "lgrow-tenderloin-top.webp",
+          "label": "0-3",
+          "sku": "448729",
+          "mayoreo": 930
+        },
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "lgrow-tenderloin-top.webp",
+          "label": "4-5",
+          "sku": "88935-1",
+          "mayoreo": 980
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "lgrow-tenderloin-top.webp",
+          "label": "6-7",
+          "sku": "78935-1-ABR",
+          "mayoreo": 1400
+        },
+        {
           "lo": 8,
           "hi": 9,
           "image": "lgrow-tenderloin-top.webp",
@@ -1604,12 +1830,52 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 0,
+          "hi": 3,
+          "image": "lgrow-rump-cap-top.webp",
+          "label": "0-3",
+          "sku": "448827",
+          "mayoreo": 710
+        },
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "lgrow-rump-cap-top.webp",
+          "label": "4-5",
+          "sku": "448713",
+          "mayoreo": 800
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "lgrow-rump-cap-top.webp",
+          "label": "6-7",
+          "sku": "448715",
+          "mayoreo": 950
+        },
+        {
           "lo": 8,
           "hi": 9,
           "image": "lgrow-rump-cap-top.webp",
           "label": "8-9",
           "sku": "PICCA89",
           "mayoreo": 1400
+        },
+        {
+          "lo": 8,
+          "hi": 10,
+          "image": "lgrow-rump-cap-top.webp",
+          "label": "8+",
+          "sku": "68465-1",
+          "mayoreo": 1100
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "lgrow-rump-cap-top.webp",
+          "label": "9+",
+          "sku": "448719",
+          "mayoreo": 1380
         }
       ]
     },
@@ -1642,6 +1908,22 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 0,
+          "hi": 3,
+          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
+          "label": "0-3",
+          "sku": "448730",
+          "mayoreo": 850
+        },
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
+          "label": "4-5",
+          "sku": "448702",
+          "mayoreo": 1200
+        },
+        {
           "lo": 6,
           "hi": 7,
           "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
@@ -1656,6 +1938,14 @@
           "label": "8-9",
           "sku": "LR8-9",
           "mayoreo": 2000
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
+          "label": "9+",
+          "sku": "416172",
+          "mayoreo": 2200
         }
       ]
     },
@@ -1702,6 +1992,14 @@
           "label": "8-9",
           "sku": "FLAPMR89",
           "mayoreo": 1400
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "lgrow-flap-meat-top.webp",
+          "label": "9+",
+          "sku": "448735",
+          "mayoreo": 1200
         }
       ]
     },
@@ -1740,6 +2038,30 @@
           "label": "0-3",
           "sku": "448826",
           "mayoreo": 420
+        },
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "lgrow-inside-skirt-top.webp",
+          "label": "4-5",
+          "sku": "82195-1",
+          "mayoreo": 600
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "lgrow-inside-skirt-top.webp",
+          "label": "6-7",
+          "sku": "72195-1",
+          "mayoreo": 620
+        },
+        {
+          "lo": 8,
+          "hi": 10,
+          "image": "lgrow-inside-skirt-top.webp",
+          "label": "8+",
+          "sku": "62195-1",
+          "mayoreo": 680
         }
       ]
     },
@@ -1778,6 +2100,30 @@
           "label": "0-3",
           "sku": "448776",
           "mayoreo": 320
+        },
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "lgrow-pe-brisket-top.webp",
+          "label": "4-5",
+          "sku": "81815-1",
+          "mayoreo": 380
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "lgrow-pe-brisket-top.webp",
+          "label": "6-7",
+          "sku": "BRIMR",
+          "mayoreo": 510
+        },
+        {
+          "lo": 8,
+          "hi": 10,
+          "image": "lgrow-pe-brisket-top.webp",
+          "label": "8+",
+          "sku": "61815-1",
+          "mayoreo": 395
         },
         {
           "lo": 9,
@@ -1948,6 +2294,14 @@
           "label": "8-9",
           "sku": "448707",
           "mayoreo": 710
+        },
+        {
+          "lo": 8,
+          "hi": 10,
+          "image": "lgrow-chuck-eye-roll-top.webp",
+          "label": "8+",
+          "sku": "61655-1",
+          "mayoreo": 560
         }
       ]
     },
@@ -1987,6 +2341,38 @@
           "label": "0-3",
           "sku": "448729",
           "mayoreo": 930
+        },
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "lgrow-tenderloin-top.webp",
+          "label": "4-5",
+          "sku": "88935-1",
+          "mayoreo": 980
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "lgrow-tenderloin-top.webp",
+          "label": "6-7",
+          "sku": "78935-1-ABR",
+          "mayoreo": 1400
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-tenderloin-top.webp",
+          "label": "8-9",
+          "sku": "LF8-9",
+          "mayoreo": 1950
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "lgrow-tenderloin-top.webp",
+          "label": "9+",
+          "sku": "TENDMR",
+          "mayoreo": 1850
         }
       ]
     },
@@ -2082,6 +2468,22 @@
           "mayoreo": 1300
         },
         {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-striploin-top.webp",
+          "label": "8-9",
+          "sku": "NYMR",
+          "mayoreo": 1960
+        },
+        {
+          "lo": 8,
+          "hi": 10,
+          "image": "lgrow-striploin-top.webp",
+          "label": "8+",
+          "sku": "68035-1",
+          "mayoreo": 1580
+        },
+        {
           "lo": 9,
           "hi": 10,
           "image": "lgrow-striploin-top.webp",
@@ -2126,6 +2528,22 @@
           "label": "4-5",
           "sku": "448824",
           "mayoreo": 390
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-bolar-blade-top.webp",
+          "label": "8-9",
+          "sku": "PALETAMR",
+          "mayoreo": 350
+        },
+        {
+          "lo": 8,
+          "hi": 10,
+          "image": "lgrow-bolar-blade-top.webp",
+          "label": "8+",
+          "sku": "61433-1",
+          "mayoreo": 499
         },
         {
           "lo": 9,
@@ -2188,6 +2606,22 @@
           "label": "6-7",
           "sku": "448715",
           "mayoreo": 950
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-rump-cap-top.webp",
+          "label": "8-9",
+          "sku": "PICCA89",
+          "mayoreo": 1400
+        },
+        {
+          "lo": 8,
+          "hi": 10,
+          "image": "lgrow-rump-cap-top.webp",
+          "label": "8+",
+          "sku": "68465-1",
+          "mayoreo": 1100
         },
         {
           "lo": 9,
@@ -2495,6 +2929,22 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 4,
+          "hi": 5,
+          "image": "lgrow-flap-meat-top.webp",
+          "label": "4-5",
+          "sku": "FLAPMC45",
+          "mayoreo": 700
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-flap-meat-top.webp",
+          "label": "8-9",
+          "sku": "FLAPMR89",
+          "mayoreo": 1400
+        },
+        {
           "lo": 9,
           "hi": 10,
           "image": "lgrow-flap-meat-top.webp",
@@ -2742,6 +3192,14 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 0,
+          "hi": 3,
+          "image": "lgrow-inside-skirt-top.webp",
+          "label": "0-3",
+          "sku": "448826",
+          "mayoreo": 420
+        },
+        {
           "lo": 4,
           "hi": 5,
           "image": "lgrow-inside-skirt-top.webp",
@@ -2796,6 +3254,14 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 0,
+          "hi": 3,
+          "image": "lgrow-pe-brisket-top.webp",
+          "label": "0-3",
+          "sku": "448776",
+          "mayoreo": 320
+        },
+        {
           "lo": 4,
           "hi": 5,
           "image": "lgrow-pe-brisket-top.webp",
@@ -2818,6 +3284,14 @@
           "label": "8+",
           "sku": "61815-1",
           "mayoreo": 395
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "lgrow-pe-brisket-top.webp",
+          "label": "9+",
+          "sku": "448740",
+          "mayoreo": 490
         }
       ]
     },
@@ -2942,6 +3416,38 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 0,
+          "hi": 3,
+          "image": "lgrow-chuck-eye-roll-top.webp",
+          "label": "0-3",
+          "sku": "448772",
+          "mayoreo": 330
+        },
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "lgrow-chuck-eye-roll-top.webp",
+          "label": "4-5",
+          "sku": "81655-1",
+          "mayoreo": 490
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "lgrow-chuck-eye-roll-top.webp",
+          "label": "6-7",
+          "sku": "448732",
+          "mayoreo": 530
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-chuck-eye-roll-top.webp",
+          "label": "8-9",
+          "sku": "448707",
+          "mayoreo": 710
+        },
+        {
           "lo": 8,
           "hi": 10,
           "image": "lgrow-chuck-eye-roll-top.webp",
@@ -2981,6 +3487,14 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 0,
+          "hi": 3,
+          "image": "lgrow-tenderloin-top.webp",
+          "label": "0-3",
+          "sku": "448729",
+          "mayoreo": 930
+        },
+        {
           "lo": 4,
           "hi": 5,
           "image": "lgrow-tenderloin-top.webp",
@@ -2995,6 +3509,22 @@
           "label": "6-7",
           "sku": "78935-1-ABR",
           "mayoreo": 1400
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-tenderloin-top.webp",
+          "label": "8-9",
+          "sku": "LF8-9",
+          "mayoreo": 1950
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "lgrow-tenderloin-top.webp",
+          "label": "9+",
+          "sku": "TENDMR",
+          "mayoreo": 1850
         }
       ]
     },
@@ -3081,12 +3611,36 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 2,
+          "hi": 3,
+          "image": "lgrow-striploin-top.webp",
+          "label": "2-3",
+          "sku": "448721",
+          "mayoreo": 695
+        },
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "lgrow-striploin-top.webp",
+          "label": "4-5",
+          "sku": "448701",
+          "mayoreo": 870
+        },
+        {
           "lo": 6,
           "hi": 7,
           "image": "lgrow-striploin-top.webp",
           "label": "6-7",
-          "sku": "78035-1-AB",
-          "mayoreo": 1180
+          "sku": "448704",
+          "mayoreo": 1300
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-striploin-top.webp",
+          "label": "8-9",
+          "sku": "NYMR",
+          "mayoreo": 1960
         },
         {
           "lo": 8,
@@ -3095,6 +3649,14 @@
           "label": "8+",
           "sku": "68035-1",
           "mayoreo": 1580
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "lgrow-striploin-top.webp",
+          "label": "9+",
+          "sku": "416171",
+          "mayoreo": 2100
         }
       ]
     },
@@ -3127,12 +3689,36 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 4,
+          "hi": 5,
+          "image": "lgrow-bolar-blade-top.webp",
+          "label": "4-5",
+          "sku": "448824",
+          "mayoreo": 390
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-bolar-blade-top.webp",
+          "label": "8-9",
+          "sku": "PALETAMR",
+          "mayoreo": 350
+        },
+        {
           "lo": 8,
           "hi": 10,
           "image": "lgrow-bolar-blade-top.webp",
           "label": "8+",
           "sku": "61433-1",
           "mayoreo": 499
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "lgrow-bolar-blade-top.webp",
+          "label": "9+",
+          "sku": "448711",
+          "mayoreo": 540
         }
       ]
     },
@@ -3165,12 +3751,52 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 0,
+          "hi": 3,
+          "image": "lgrow-rump-cap-top.webp",
+          "label": "0-3",
+          "sku": "448827",
+          "mayoreo": 710
+        },
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "lgrow-rump-cap-top.webp",
+          "label": "4-5",
+          "sku": "448713",
+          "mayoreo": 800
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "lgrow-rump-cap-top.webp",
+          "label": "6-7",
+          "sku": "448715",
+          "mayoreo": 950
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-rump-cap-top.webp",
+          "label": "8-9",
+          "sku": "PICCA89",
+          "mayoreo": 1400
+        },
+        {
           "lo": 8,
           "hi": 10,
           "image": "lgrow-rump-cap-top.webp",
           "label": "8+",
           "sku": "68465-1",
           "mayoreo": 1100
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "lgrow-rump-cap-top.webp",
+          "label": "9+",
+          "sku": "448719",
+          "mayoreo": 1380
         }
       ]
     },
@@ -3321,11 +3947,43 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 0,
+          "hi": 3,
+          "image": "whatsapp-image-2026-07-02-at-16-18-38-mr44nh3k5818.webp",
+          "label": "0-3",
+          "sku": "448730",
+          "mayoreo": 850
+        },
+        {
           "lo": 4,
           "hi": 4,
           "image": "whatsapp-image-2026-07-02-at-16-18-38-mr44nh3k5818.webp",
           "label": "4",
           "mayoreo": 1900
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "whatsapp-image-2026-07-02-at-16-18-38-mr44nh3k5818.webp",
+          "label": "6-7",
+          "sku": "343697",
+          "mayoreo": 1550
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "whatsapp-image-2026-07-02-at-16-18-38-mr44nh3k5818.webp",
+          "label": "8-9",
+          "sku": "LR8-9",
+          "mayoreo": 2000
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "whatsapp-image-2026-07-02-at-16-18-38-mr44nh3k5818.webp",
+          "label": "9+",
+          "sku": "416172",
+          "mayoreo": 2200
         }
       ]
     },
@@ -3362,6 +4020,22 @@
           "image": "whatsapp-image-2026-07-02-at-15-04-24-mr44qkpk6294.webp",
           "label": "10-12",
           "mayoreo": 1950
+        },
+        {
+          "lo": 11,
+          "hi": 12,
+          "image": "whatsapp-image-2026-07-02-at-15-04-24-mr44qkpk6294.webp",
+          "label": "11-12",
+          "sku": "COULOTTE",
+          "mayoreo": 1950
+        },
+        {
+          "lo": 12,
+          "hi": 12,
+          "image": "whatsapp-image-2026-07-02-at-15-04-24-mr44qkpk6294.webp",
+          "label": "12",
+          "sku": "4",
+          "mayoreo": 3200
         }
       ]
     },
@@ -3393,12 +4067,52 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 2,
+          "hi": 3,
+          "image": "whatsapp-image-2026-07-02-at-15-05-24-mr44u6z84731.webp",
+          "label": "2-3",
+          "sku": "448721",
+          "mayoreo": 695
+        },
+        {
           "lo": 4,
           "hi": 5,
           "image": "whatsapp-image-2026-07-02-at-15-05-24-mr44u6z84731.webp",
           "label": "4-5",
           "mayoreo": 1700,
           "sku": "8"
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "whatsapp-image-2026-07-02-at-15-05-24-mr44u6z84731.webp",
+          "label": "6-7",
+          "sku": "448704",
+          "mayoreo": 1300
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "whatsapp-image-2026-07-02-at-15-05-24-mr44u6z84731.webp",
+          "label": "8-9",
+          "sku": "NYMR",
+          "mayoreo": 1960
+        },
+        {
+          "lo": 8,
+          "hi": 10,
+          "image": "whatsapp-image-2026-07-02-at-15-05-24-mr44u6z84731.webp",
+          "label": "8+",
+          "sku": "68035-1",
+          "mayoreo": 1580
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "whatsapp-image-2026-07-02-at-15-05-24-mr44u6z84731.webp",
+          "label": "9+",
+          "sku": "416171",
+          "mayoreo": 2100
         }
       ]
     },
@@ -3429,6 +4143,30 @@
     "marbling": {
       "system": "aus",
       "variants": [
+        {
+          "lo": 0,
+          "hi": 3,
+          "image": "whatsapp-image-2026-07-02-at-15-06-16-mr450ssn3771.webp",
+          "label": "0-3",
+          "sku": "448730",
+          "mayoreo": 850
+        },
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "whatsapp-image-2026-07-02-at-15-06-16-mr450ssn3771.webp",
+          "label": "4-5",
+          "sku": "448702",
+          "mayoreo": 1200
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "whatsapp-image-2026-07-02-at-15-06-16-mr450ssn3771.webp",
+          "label": "6-7",
+          "sku": "343697",
+          "mayoreo": 1550
+        },
         {
           "lo": 9,
           "hi": 9,
@@ -3466,11 +4204,43 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 0,
+          "hi": 3,
+          "image": "whatsapp-image-2026-07-02-at-15-11-29-mr452f87449.webp",
+          "label": "0-3",
+          "sku": "448772",
+          "mayoreo": 330
+        },
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "whatsapp-image-2026-07-02-at-15-11-29-mr452f87449.webp",
+          "label": "4-5",
+          "sku": "81655-1",
+          "mayoreo": 490
+        },
+        {
           "lo": 6,
           "hi": 7,
           "image": "whatsapp-image-2026-07-02-at-15-11-29-mr452f87449.webp",
           "label": "6-7",
           "mayoreo": 530
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "whatsapp-image-2026-07-02-at-15-11-29-mr452f87449.webp",
+          "label": "8-9",
+          "sku": "448707",
+          "mayoreo": 710
+        },
+        {
+          "lo": 8,
+          "hi": 10,
+          "image": "whatsapp-image-2026-07-02-at-15-11-29-mr452f87449.webp",
+          "label": "8+",
+          "sku": "61655-1",
+          "mayoreo": 560
         }
       ]
     },
@@ -3546,6 +4316,30 @@
     "marbling": {
       "system": "aus",
       "variants": [
+        {
+          "lo": 0,
+          "hi": 3,
+          "image": "whatsapp-image-2026-07-02-at-15-13-15-mr458wp85107.webp",
+          "label": "0-3",
+          "sku": "448772",
+          "mayoreo": 330
+        },
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "whatsapp-image-2026-07-02-at-15-13-15-mr458wp85107.webp",
+          "label": "4-5",
+          "sku": "81655-1",
+          "mayoreo": 490
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "whatsapp-image-2026-07-02-at-15-13-15-mr458wp85107.webp",
+          "label": "6-7",
+          "sku": "448732",
+          "mayoreo": 530
+        },
         {
           "lo": 9,
           "hi": 9,
