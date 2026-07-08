@@ -756,10 +756,10 @@
       "system": "aus",
       "variants": [
         {
-          "lo": 0,
-          "hi": 0,
+          "lo": 8,
+          "hi": 9,
           "image": "",
-          "label": "Std",
+          "label": "8-9",
           "sku": "LENGUAMR",
           "mayoreo": 500
         }
@@ -857,10 +857,10 @@
       "system": "aus",
       "variants": [
         {
-          "lo": 0,
-          "hi": 0,
+          "lo": 8,
+          "hi": 10,
           "image": "",
-          "label": "Std",
+          "label": "8+",
           "sku": "WINI",
           "mayoreo": 855
         }
@@ -1325,14 +1325,6 @@
       "system": "angus",
       "variants": [
         {
-          "lo": 0,
-          "hi": 0,
-          "image": "",
-          "label": "Std",
-          "sku": "390287",
-          "mayoreo": 465
-        },
-        {
           "lo": 4,
           "hi": 9,
           "image": "",
@@ -1687,10 +1679,10 @@
       "system": "aus",
       "variants": [
         {
-          "lo": 0,
-          "hi": 0,
+          "lo": 8,
+          "hi": 9,
           "image": "",
-          "label": "Std",
+          "label": "8-9",
           "sku": "LA",
           "mayoreo": 1250
         }
@@ -4764,10 +4756,10 @@
       "system": "aus",
       "variants": [
         {
-          "lo": 0,
-          "hi": 0,
+          "lo": 9,
+          "hi": 10,
           "image": "",
-          "label": "Std",
+          "label": "9+",
           "sku": "BURGER",
           "mayoreo": 345
         }
@@ -5906,7 +5898,7 @@
           "lo": 0,
           "hi": 0,
           "image": "",
-          "label": "Std",
+          "label": "Choice",
           "sku": "TMHUSA",
           "mayoreo": 735
         }
