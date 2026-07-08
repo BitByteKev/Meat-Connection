@@ -94,7 +94,6 @@
         }
       ]
     },
-    "available": false,
     "priceMayoreo": "4650",
     "priceMenudeo": "4995",
     "badge": {
@@ -134,6 +133,8 @@
       ]
     },
     "available": false,
+    "priceMayoreo": "3200",
+    "priceMenudeo": "3550",
     "badge": {
       "es": null,
       "en": null
