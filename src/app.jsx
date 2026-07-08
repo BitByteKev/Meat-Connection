@@ -519,8 +519,15 @@ function hiText(system, hi) { const m = marblingMax(system); return system === '
 // A single grade renders as a solid number, except a top grade (9 in the aus/angus
 // scales) which reads as "9+". Ranges keep their explicit label (e.g. "4-5", "9+").
 function variantLabel(v, system) {
+  if (v.lo === 0 && v.hi === 0) return v.label || 'Std'; // gradeless base tier (e.g. "Std")
   if (v.lo === v.hi) return (system !== 'bms' && v.hi >= 9) ? '9+' : String(v.lo);
   return v.label;
+}
+// Unit prefix ("MB 8-9") only makes sense for numeric grades — a gradeless base
+// tier shows its plain label ("Std").
+function gradeTag(v, system, unit) {
+  const l = variantLabel(v, system);
+  return /^[0-9]/.test(l) ? `${unit} ${l}` : l;
 }
 
 // --- Pricing (MXN/kg), read from the per-grade `mayoreo`/`menudeo` on each variant ---
@@ -564,7 +571,7 @@ function MarblingScale({ marbling, vIdx, onSelect }) {
     <div style={{ margin: '2px 0 26px' }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '10px' }}>
         <span style={eyebrow}>{cfg.title}</span>
-        <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '20px', color: 'var(--text-strong)' }}>{s.unit} {variantLabel(v, marbling.system)}</span>
+        <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '20px', color: 'var(--text-strong)' }}>{gradeTag(v, marbling.system, s.unit)}</span>
       </div>
       <div style={{ position: 'relative', height: '12px', borderRadius: '999px', background: 'linear-gradient(90deg,#f5ede7 0%,#e7b49f 55%,#b8371f 100%)' }}>
         <div style={{ position: 'absolute', top: '-3px', bottom: '-3px', left: left + '%', width: width + '%',
@@ -573,9 +580,9 @@ function MarblingScale({ marbling, vIdx, onSelect }) {
       <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '7px', fontSize: '11px', color: 'var(--text-muted)' }}>
         <span>{s.lo}</span><span>{s.name}</span><span>{s.hi} (9+)</span>
       </div>
-      {marbling.variants.length > 1 && (
+      {marbling.variants.length > 0 && (
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '16px' }}>
-          <span style={{ ...eyebrow, width: '100%', marginBottom: '2px' }}>{cfg.choose}</span>
+          {marbling.variants.length > 1 && <span style={{ ...eyebrow, width: '100%', marginBottom: '2px' }}>{cfg.choose}</span>}
           {marbling.variants.map((vt, i) => {
             const on = i === vIdx;
             const price = variantPrice(vt);
@@ -583,7 +590,7 @@ function MarblingScale({ marbling, vIdx, onSelect }) {
               <button key={i} onClick={() => onSelect(i)} aria-pressed={on}
                 style={{ cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px', padding: '8px 16px', borderRadius: 'var(--radius-md)', fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '13px', letterSpacing: '0.03em',
                   border: '2px solid ' + (on ? 'var(--mc-red)' : 'var(--border-default)'), background: on ? 'var(--mc-red)' : 'transparent', color: on ? '#fff' : 'var(--text-strong)', transition: 'background var(--dur-fast), border-color var(--dur-fast)' }}>
-                <span>{s.unit} {variantLabel(vt, marbling.system)}</span>
+                <span>{gradeTag(vt, marbling.system, s.unit)}</span>
                 {price != null && <span style={{ fontFamily: 'var(--font-display)', fontSize: '14px', opacity: on ? 1 : 0.9 }}>{fmtMXN(price)}<span style={{ fontSize: '10px', opacity: 0.8 }}>{t.pdp.perKg}</span></span>}
               </button>
             );
@@ -683,7 +690,7 @@ function ProductDetail({ product, onAdd, onBack }) {
                 </span>
                 {marbling && sys && (
                   <span style={{ fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '11px', letterSpacing: '0.04em', color: 'var(--mc-red)', border: '1.5px solid var(--mc-red)', borderRadius: '999px', padding: '3px 10px' }}>
-                    {sys.unit} {variantLabel(variants[vIdx], marbling.system)}
+                    {gradeTag(variants[vIdx], marbling.system, sys.unit)}
                   </span>
                 )}
               </div>
