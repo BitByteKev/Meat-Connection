@@ -38,7 +38,7 @@ const priceSummary = (p, key) => {
 
 export default function ProductsTable({
   rows, total, query, onQuery, filterCat, onFilterCat, sort, onSort, canMove, catOptions,
-  selected, onSelected, onOpen, onMove, onBulkAvailable, onBulkDelete, onAdd, onClearFilters,
+  selected, onSelected, onOpen, onMove, onBulkAvailable, onBulkDelete, onAdd, onClearFilters, onExport,
 }) {
   const visibleKeys = rows.map(([p, i]) => rowKey(p, i))
   const allSelected = visibleKeys.length > 0 && visibleKeys.every((k) => selected.has(k))
@@ -67,6 +67,7 @@ export default function ProductsTable({
             <option value="manual">Orden manual</option><option value="name">Por nombre</option><option value="cat">Por categoría</option>
           </select>
           <span style={{ fontSize: '12px', color: '#616a75', marginLeft: 'auto' }}>{rows.length} de {total}</span>
+          <button type="button" style={btn} onClick={onExport}>Exportar Excel</button>
         </div>
       ) : (
         <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', alignItems: 'center', padding: '12px 14px', borderBottom: '1px solid #e1e3e5', background: '#f9fafb' }}>

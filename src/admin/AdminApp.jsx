@@ -6,6 +6,7 @@ import { RAW_CATALOG, CATEGORIES, IMAGE_FILES } from '../products.js'
 import { CATEGORY_LIST } from '../categories.js'
 import { TextField, btn, btnPrimary, move, ADMIN_FONT } from './fields.jsx'
 import ProductsTable, { rowKey } from './ProductsTable.jsx'
+import { exportProductsXlsx } from './exportXlsx.js'
 import ProductDetail from './ProductDetail.jsx'
 import MediaLibrary from './MediaLibrary.jsx'
 import CategoriesEditor from './CategoriesEditor.jsx'
@@ -313,6 +314,10 @@ export default function AdminApp() {
               onMove={(i, d) => moveProduct(i, d)}
               onBulkAvailable={bulkAvailable} onBulkDelete={bulkDelete}
               onAdd={addProduct} onClearFilters={clearFilters}
+              onExport={() => exportProductsXlsx(catalog, (cat) => {
+                const o = catOptions.find((x) => x.value === cat)
+                return o ? o.label : cat
+              })}
             />
           )}
 
