@@ -18,9 +18,6 @@
         }
       ]
     },
-    "available": false,
-    "priceMayoreo": "1850",
-    "priceMenudeo": "2200",
     "badge": {
       "es": "A5 · Japón",
       "en": "A5 · Japan"
@@ -57,7 +54,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": null,
       "en": null
@@ -94,7 +90,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": null,
       "en": null
@@ -131,7 +126,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": null,
       "en": null
@@ -167,7 +161,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": null,
       "en": null
@@ -203,7 +196,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": null,
       "en": null
@@ -239,7 +231,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": "Más Vendido",
       "en": "Best Seller"
@@ -351,7 +342,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": null,
       "en": null
@@ -387,7 +377,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": null,
       "en": null
@@ -423,7 +412,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": null,
       "en": null
@@ -459,7 +447,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": null,
       "en": null
@@ -484,7 +471,6 @@
     "images": [
       "LENGUA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp"
     ],
-    "available": false,
     "badge": {
       "es": null,
       "en": null
@@ -521,7 +507,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": null,
       "en": null
@@ -546,7 +531,6 @@
     "images": [
       "SALSICHA-WAGYU-AMERICANO-4PACK.webp"
     ],
-    "available": false,
     "badge": {
       "es": "4 Pack",
       "en": "4-Pack"
@@ -613,7 +597,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": null,
       "en": null
@@ -1087,7 +1070,6 @@
     "images": [
       "LENGUA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp"
     ],
-    "available": false,
     "sku": "390285",
     "badge": {
       "es": "Black Angus",
