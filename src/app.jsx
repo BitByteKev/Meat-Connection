@@ -44,8 +44,15 @@ function orderLines(items) {
   const S = getStrings().pdp;
   return items.map((it) => {
     const tipo = it.saleType === 'menudeo' ? S.menudeo : S.mayoreo;
-    return '• ' + productName(it.id) + ' — ' + it.qty + ' kg (' + tipo + ')';
+    let line = '• ' + productName(it.id) + (it.grade ? ' · ' + it.grade : '') + ' — ' + it.qty + ' kg (' + tipo + ')';
+    if (typeof it.unitPrice === 'number') line += ' — ' + fmtMXN(it.unitPrice * it.qty);
+    return line;
   }).join('\n');
+}
+const cartTotal = (items) => items.reduce((s, i) => s + (typeof i.unitPrice === 'number' ? i.unitPrice * i.qty : 0), 0);
+function orderTotalLine(items) {
+  const total = cartTotal(items);
+  return total > 0 ? '\n' + getStrings().cart.totalLabel + ': ' + fmtMXN(total) + ' MXN' : '';
 }
 function reorderWhatsApp() {
   const wa = getStrings().wa;
@@ -722,7 +729,16 @@ function ProductDetail({ product, onAdd, onBack }) {
               </div>
             </div>
           </div>
-          <Button variant="primary" size="lg" fullWidth onClick={() => onAdd(product, qty, saleType)} iconLeft={<Icon name="ShoppingCart" size={18} color="#fff" />}>
+          {selPrice != null && (
+            <div style={{ display: 'flex', alignItems: 'baseline', gap: '10px', margin: '-4px 0 14px' }}>
+              <span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)' }}>{fmt(t.pdp.totalLabel, { qty })}</span>
+              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '26px', lineHeight: 1, color: 'var(--text-strong)' }}>{fmtMXN(selPrice * qty)}</span>
+              <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>MXN</span>
+            </div>
+          )}
+          <Button variant="primary" size="lg" fullWidth
+            onClick={() => onAdd(product, qty, saleType, { grade: marbling ? variantLabel(variants[vIdx], marbling.system) : null, unitPrice: selPrice })}
+            iconLeft={<Icon name="ShoppingCart" size={18} color="#fff" />}>
             {fmt(t.pdp.addToOrder, { qty })}
           </Button>
           <div className="mc-trust" style={{ display: 'flex', gap: '20px', margin: '20px 0 28px' }}>
@@ -777,7 +793,11 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
                 </div>
                 <div style={{ flex: 1 }}>
                   <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '15px', color: 'var(--text-strong)', lineHeight: 1.1, marginBottom: '3px' }}>{t.products[it.id].name}</div>
-                  <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--text-muted)', marginBottom: '8px' }}>{it.saleType === 'menudeo' ? t.pdp.menudeo : t.pdp.mayoreo}</div>
+                  <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--text-muted)', marginBottom: '8px' }}>
+                    {it.saleType === 'menudeo' ? t.pdp.menudeo : t.pdp.mayoreo}
+                    {it.grade ? ' · ' + it.grade : ''}
+                    {typeof it.unitPrice === 'number' ? ' · ' + fmtMXN(it.unitPrice) + t.pdp.perKg : ''}
+                  </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-sm)' }}>
                       <button onClick={() => onQty(it, -1)} style={miniBtn}><Icon name="Minus" size={13} /></button>
@@ -785,6 +805,9 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
                       <button onClick={() => onQty(it, 1)} style={miniBtn}><Icon name="Plus" size={13} /></button>
                     </div>
                     <button onClick={() => onRemove(it)} style={{ border: 'none', background: 'transparent', cursor: 'pointer', color: 'var(--text-faint)', display: 'flex', alignItems: 'center', gap: '4px' }}><Icon name="Trash2" size={14} color="var(--text-faint)" /></button>
+                    {typeof it.unitPrice === 'number' && (
+                      <span style={{ marginLeft: 'auto', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '15px', color: 'var(--text-strong)' }}>{fmtMXN(it.unitPrice * it.qty)}</span>
+                    )}
                   </div>
                 </div>
               </div>
@@ -792,8 +815,14 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
           </div>
         )}
         <div style={{ padding: '18px 22px', borderTop: '2px solid var(--mc-charcoal)', background: 'var(--mc-bone)' }}>
+          {cartTotal(items) > 0 && (
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '12px' }}>
+              <span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)' }}>{t.cart.totalLabel}</span>
+              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '24px', color: 'var(--text-strong)' }}>{fmtMXN(cartTotal(items))} <span style={{ fontSize: '13px', color: 'var(--text-muted)', fontWeight: 600 }}>MXN</span></span>
+            </div>
+          )}
           <Button variant="primary" size="lg" fullWidth disabled={items.length === 0}
-            onClick={() => { saveLastOrder(items); openWhatsApp(t.wa.orderIntro + '\n' + orderLines(items)); }}
+            onClick={() => { saveLastOrder(items); openWhatsApp(t.wa.orderIntro + '\n' + orderLines(items) + orderTotalLine(items)); }}
             iconLeft={<Icon name="MessageCircle" size={18} color="#fff" />}>{t.cart.requestWhatsApp}</Button>
         </div>
       </aside>
@@ -1187,10 +1216,10 @@ function App() {
   const [cartOpen, setCartOpen] = React.useState(false);
   const [cart, setCart] = React.useState([]);
   const [q, setQ] = React.useState('');
-  function add(product, qty = 1, saleType = 'mayoreo') {
+  function add(product, qty = 1, saleType = 'mayoreo', extra = {}) {
     setCart((c) => { const ex = c.find((i) => i.id === product.id);
-      if (ex) return c.map((i) => i.id === product.id ? { ...i, qty: i.qty + qty, saleType } : i);
-      return [...c, { ...product, qty, saleType }]; });
+      if (ex) return c.map((i) => i.id === product.id ? { ...i, qty: i.qty + qty, saleType, ...extra } : i);
+      return [...c, { ...product, qty, saleType, ...extra }]; });
     setCartOpen(true);
   }
   function changeQty(item, d) { setCart((c) => c.map((i) => i.id === item.id ? { ...i, qty: Math.max(1, i.qty + d) } : i)); }
