@@ -17,7 +17,7 @@ const toolInput = { padding: '8px 10px', border: '1px solid #d0d3d6', borderRadi
 const marblingSummary = (m) => {
   if (!m || !Array.isArray(m.variants) || m.variants.length === 0) return '—'
   const graded = m.variants.filter((v) => v.hi > 0)
-  if (graded.length === 0) return 'Std'
+  if (graded.length === 0) return m.variants[0].label || 'Clásico'
   const sys = m.system === 'bms' ? 'BMS' : 'MB'
   const lo = Math.min(...graded.map((v) => v.lo))
   const hi = Math.max(...graded.map((v) => v.hi))

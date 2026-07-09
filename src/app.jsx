@@ -519,12 +519,12 @@ function hiText(system, hi) { const m = marblingMax(system); return system === '
 // A single grade renders as a solid number, except a top grade (9 in the aus/angus
 // scales) which reads as "9+". Ranges keep their explicit label (e.g. "4-5", "9+").
 function variantLabel(v, system) {
-  if (v.lo === 0 && v.hi === 0) return v.label || 'Std'; // gradeless base tier (e.g. "Std")
+  if (v.lo === 0 && v.hi === 0) return v.label || 'Clásico'; // gradeless base tier
   if (v.lo === v.hi) return (system !== 'bms' && v.hi >= 9) ? '9+' : String(v.lo);
   return v.label;
 }
 // Unit prefix ("MB 8-9") only makes sense for numeric grades — a gradeless base
-// tier shows its plain label ("Std").
+// tier shows its plain label ("Clásico").
 function gradeTag(v, system, unit) {
   const l = variantLabel(v, system);
   return /^[0-9]/.test(l) ? `${unit} ${l}` : l;
