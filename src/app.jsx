@@ -647,7 +647,8 @@ function ProductDetail({ product, onAdd, onBack }) {
   const MAYOREO_MIN = 25;
   const [qty, setQty] = React.useState(5);
   const saleType = qty >= MAYOREO_MIN ? 'mayoreo' : 'menudeo';
-  const minQty = 1;
+  // En mayoreo la cantidad no baja de 25 — para menos kilos hay que elegir Menudeo.
+  const minQty = saleType === 'mayoreo' ? MAYOREO_MIN : 1;
   const pickType = (val) => setQty(val === 'mayoreo' ? Math.max(qty, MAYOREO_MIN) : Math.min(qty, MAYOREO_MIN - 1));
   const genericOrigin = product.cat === 'jp' ? t.pdp.originJP : product.cat === 'us' ? t.pdp.originUS : t.pdp.originAU;
   const sys = marbling ? (t.pdp.marbling.systems[marbling.system] || t.pdp.marbling.systems.aus) : null;
