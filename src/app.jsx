@@ -558,7 +558,7 @@ function MarblingPill({ marbling }) {
   );
 }
 
-function MarblingScale({ marbling, vIdx, onSelect }) {
+function MarblingScale({ marbling, vIdx, onSelect, priceKey = 'mayoreo' }) {
   const { t } = useLang();
   const cfg = t.pdp.marbling;
   const s = cfg.systems[marbling.system] || cfg.systems.aus;
@@ -585,7 +585,7 @@ function MarblingScale({ marbling, vIdx, onSelect }) {
           {marbling.variants.length > 1 && <span style={{ ...eyebrow, width: '100%', marginBottom: '2px' }}>{cfg.choose}</span>}
           {marbling.variants.map((vt, i) => {
             const on = i === vIdx;
-            const price = variantPrice(vt);
+            const price = variantPrice(vt, priceKey) ?? variantPrice(vt);
             return (
               <button key={i} onClick={() => onSelect(i)} aria-pressed={on}
                 style={{ cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px', padding: '8px 16px', borderRadius: 'var(--radius-md)', fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '13px', letterSpacing: '0.03em',
@@ -680,7 +680,7 @@ function ProductDetail({ product, onAdd, onBack }) {
               {product.weight}{product.weight && product.sku ? ' · ' : ''}{product.sku && `SKU ${product.sku}`}
             </div>
           )}
-          {marbling && <MarblingScale marbling={marbling} vIdx={vIdx} onSelect={setVIdx} />}
+          {marbling && <MarblingScale marbling={marbling} vIdx={vIdx} onSelect={setVIdx} priceKey={saleType === 'menudeo' ? 'menudeo' : 'mayoreo'} />}
           {selPrice != null && (
             <div style={{ margin: '4px 0 20px' }}>
               <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '5px' }}>{showMenudeo ? t.pdp.priceEyebrowMenudeo : t.pdp.priceEyebrow}</div>
