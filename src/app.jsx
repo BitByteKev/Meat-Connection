@@ -40,19 +40,35 @@ function loadLastOrder() {
   try { const s = JSON.parse(localStorage.getItem(LAST_ORDER_KEY)); return Array.isArray(s) && s.length ? s : null; } catch (e) { return null; }
 }
 const productName = (id) => (getStrings().products[id] ? getStrings().products[id].name : id);
+/* El tipo de venta se decide por el TOTAL del carrito: 25 kg o más entre todos
+   los productos = precios de mayoreo en todas las líneas; menos = menudeo.
+   Cada línea guarda ambos precios de su grado y el efectivo se calcula aquí. */
+const MAYOREO_MIN = 25;
+const cartKg = (items) => items.reduce((s, i) => s + i.qty, 0);
+const cartType = (items) => (cartKg(items) >= MAYOREO_MIN ? 'mayoreo' : 'menudeo');
+function lineUnit(it, type) {
+  const may = typeof it.unitMayoreo === 'number' ? it.unitMayoreo : (typeof it.unitPrice === 'number' ? it.unitPrice : null);
+  const men = typeof it.unitMenudeo === 'number' ? it.unitMenudeo : null;
+  return type === 'menudeo' ? (men ?? may) : (may ?? men);
+}
+const cartTotal = (items) => {
+  const ty = cartType(items);
+  return items.reduce((s, i) => { const u = lineUnit(i, ty); return s + (u != null ? u * i.qty : 0); }, 0);
+};
 function orderLines(items) {
   const S = getStrings().pdp;
+  const ty = cartType(items);
+  const tipo = ty === 'menudeo' ? S.menudeo : S.mayoreo;
   return items.map((it) => {
-    const tipo = it.saleType === 'menudeo' ? S.menudeo : S.mayoreo;
     let line = '• ' + productName(it.id) + (it.grade ? ' · ' + it.grade : '') + ' — ' + it.qty + ' kg (' + tipo + ')';
-    if (typeof it.unitPrice === 'number') line += ' — ' + fmtMXN(it.unitPrice * it.qty);
+    const u = lineUnit(it, ty);
+    if (u != null) line += ' — ' + fmtMXN(u * it.qty);
     return line;
   }).join('\n');
 }
-const cartTotal = (items) => items.reduce((s, i) => s + (typeof i.unitPrice === 'number' ? i.unitPrice * i.qty : 0), 0);
 function orderTotalLine(items) {
   const total = cartTotal(items);
-  return total > 0 ? '\n' + getStrings().cart.totalLabel + ': ' + fmtMXN(total) + ' MXN' : '';
+  return total > 0 ? '\n' + getStrings().cart.totalLabel + ' (' + cartKg(items) + ' kg): ' + fmtMXN(total) + ' MXN' : '';
 }
 function reorderWhatsApp() {
   const wa = getStrings().wa;
@@ -651,7 +667,6 @@ function ProductDetail({ product, onAdd, onBack }) {
   const [tab, setTab] = React.useState('desc');
   // El tipo de venta se deriva de la cantidad: 25 kg o más = mayoreo, menos = menudeo.
   // Los chips Mayoreo/Menudeo son atajos que ajustan la cantidad al rango correspondiente.
-  const MAYOREO_MIN = 25;
   const [qty, setQty] = React.useState(5);
   const saleType = qty >= MAYOREO_MIN ? 'mayoreo' : 'menudeo';
   // Cada modo queda fijo a su rango: menudeo 1–24 kg, mayoreo 25+ kg.
@@ -737,7 +752,7 @@ function ProductDetail({ product, onAdd, onBack }) {
             </div>
           )}
           <Button variant="primary" size="lg" fullWidth
-            onClick={() => onAdd(product, qty, saleType, { grade: marbling ? variantLabel(variants[vIdx], marbling.system) : null, unitPrice: selPrice })}
+            onClick={() => onAdd(product, qty, saleType, { grade: marbling ? variantLabel(variants[vIdx], marbling.system) : null, unitMayoreo: mayoreoPrice, unitMenudeo: menudeoPrice })}
             iconLeft={<Icon name="ShoppingCart" size={18} color="#fff" />}>
             {fmt(t.pdp.addToOrder, { qty })}
           </Button>
@@ -795,9 +810,9 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
                 <div style={{ flex: 1 }}>
                   <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '15px', color: 'var(--text-strong)', lineHeight: 1.1, marginBottom: '3px' }}>{t.products[it.id].name}</div>
                   <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--text-muted)', marginBottom: '8px' }}>
-                    {it.saleType === 'menudeo' ? t.pdp.menudeo : t.pdp.mayoreo}
+                    {cartType(items) === 'menudeo' ? t.pdp.menudeo : t.pdp.mayoreo}
                     {it.grade ? ' · ' + it.grade : ''}
-                    {typeof it.unitPrice === 'number' ? ' · ' + fmtMXN(it.unitPrice) + t.pdp.perKg : ''}
+                    {lineUnit(it, cartType(items)) != null ? ' · ' + fmtMXN(lineUnit(it, cartType(items))) + t.pdp.perKg : ''}
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-sm)' }}>
@@ -806,8 +821,8 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
                       <button onClick={() => onQty(it, 1)} style={miniBtn}><Icon name="Plus" size={13} /></button>
                     </div>
                     <button onClick={() => onRemove(it)} style={{ border: 'none', background: 'transparent', cursor: 'pointer', color: 'var(--text-faint)', display: 'flex', alignItems: 'center', gap: '4px' }}><Icon name="Trash2" size={14} color="var(--text-faint)" /></button>
-                    {typeof it.unitPrice === 'number' && (
-                      <span style={{ marginLeft: 'auto', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '15px', color: 'var(--text-strong)' }}>{fmtMXN(it.unitPrice * it.qty)}</span>
+                    {lineUnit(it, cartType(items)) != null && (
+                      <span style={{ marginLeft: 'auto', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '15px', color: 'var(--text-strong)' }}>{fmtMXN(lineUnit(it, cartType(items)) * it.qty)}</span>
                     )}
                   </div>
                 </div>
@@ -818,7 +833,10 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
         <div style={{ padding: '18px 22px', borderTop: '2px solid var(--mc-charcoal)', background: 'var(--mc-bone)' }}>
           {cartTotal(items) > 0 && (
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '12px' }}>
-              <span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)' }}>{t.cart.totalLabel}</span>
+              <span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)' }}>
+                {t.cart.totalLabel}
+                <span style={{ display: 'block', fontWeight: 500, letterSpacing: 0, textTransform: 'none', fontSize: '11px', marginTop: '2px' }}>{cartKg(items)} kg · {cartType(items) === 'menudeo' ? t.pdp.menudeo : t.pdp.mayoreo}</span>
+              </span>
               <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '24px', color: 'var(--text-strong)' }}>{fmtMXN(cartTotal(items))} <span style={{ fontSize: '13px', color: 'var(--text-muted)', fontWeight: 600 }}>MXN</span></span>
             </div>
           )}
