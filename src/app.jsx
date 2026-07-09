@@ -1239,7 +1239,24 @@ function App() {
   const [active, setActive] = React.useState(_init.active);
   const [cat, setCat] = React.useState(_init.cat);
   const [cartOpen, setCartOpen] = React.useState(false);
-  const [cart, setCart] = React.useState([]);
+  // El carrito sobrevive recargas: se guarda lo mínimo (id, kg, grado y ambos
+  // precios) y se rehidrata por id — se descartan productos que ya no existen.
+  const CART_KEY = 'mc_cart';
+  const [cart, setCart] = React.useState(() => {
+    try {
+      const s = JSON.parse(localStorage.getItem(CART_KEY));
+      if (!Array.isArray(s)) return [];
+      const known = new Set(PRODUCTS.map((p) => p.id));
+      return s.filter((i) => i && known.has(i.id) && typeof i.qty === 'number' && i.qty > 0);
+    } catch (e) { return []; }
+  });
+  React.useEffect(() => {
+    try {
+      localStorage.setItem(CART_KEY, JSON.stringify(cart.map((i) => (
+        { id: i.id, qty: i.qty, saleType: i.saleType, grade: i.grade, unitMayoreo: i.unitMayoreo, unitMenudeo: i.unitMenudeo }
+      ))));
+    } catch (e) {}
+  }, [cart]);
   const [q, setQ] = React.useState('');
   function add(product, qty = 1, saleType = 'mayoreo', extra = {}) {
     setCart((c) => { const ex = c.find((i) => i.id === product.id);
