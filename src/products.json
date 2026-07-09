@@ -780,6 +780,7 @@
         }
       ]
     },
+    "available": false,
     "sku": "LENGUAMR",
     "badge": {
       "es": null,
@@ -1409,6 +1410,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Black Angus",
       "en": "Black Angus"
@@ -1457,6 +1459,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Black Angus",
       "en": "Black Angus"
@@ -2293,6 +2296,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -2751,6 +2755,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -3570,6 +3575,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
@@ -3711,6 +3717,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
@@ -3787,6 +3794,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
