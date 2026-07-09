@@ -365,21 +365,21 @@
         },
         {
           "lo": 8,
-          "hi": 9,
-          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
-          "label": "8-9",
-          "sku": "NYMR",
-          "mayoreo": 1960,
-          "menudeo": 2260
-        },
-        {
-          "lo": 8,
           "hi": 10,
           "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
           "label": "8+",
           "sku": "68035-1",
           "mayoreo": 1580,
           "menudeo": 1880
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+          "label": "8-9",
+          "sku": "NYMR",
+          "mayoreo": 1960,
+          "menudeo": 2260
         },
         {
           "lo": 9,
@@ -452,20 +452,20 @@
         },
         {
           "lo": 8,
-          "hi": 9,
-          "image": "wagyu-australiano-newyork-89-1.webp",
-          "label": "8-9",
-          "mayoreo": 1960,
-          "menudeo": 2260
-        },
-        {
-          "lo": 8,
           "hi": 10,
           "image": "wagyu-australiano-newyork-89-1.webp",
           "label": "8+",
           "sku": "68035-1",
           "mayoreo": 1580,
           "menudeo": 1880
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "wagyu-australiano-newyork-89-1.webp",
+          "label": "8-9",
+          "mayoreo": 1960,
+          "menudeo": 2260
         },
         {
           "lo": 9,
@@ -583,21 +583,21 @@
       "variants": [
         {
           "lo": 8,
-          "hi": 9,
-          "image": "T-BONE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp",
-          "label": "8-9",
-          "sku": "SHORTMR",
-          "mayoreo": 1650,
-          "menudeo": 1950
-        },
-        {
-          "lo": 8,
           "hi": 10,
           "image": "T-BONE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp",
           "label": "8+",
           "sku": "SHORTLMS",
           "mayoreo": 1350,
           "menudeo": 1650
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "T-BONE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp",
+          "label": "8-9",
+          "sku": "SHORTMR",
+          "mayoreo": 1650,
+          "menudeo": 1950
         }
       ]
     },
@@ -639,21 +639,21 @@
         },
         {
           "lo": 8,
-          "hi": 9,
-          "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
-          "label": "8-9",
-          "sku": "PALETAMR",
-          "mayoreo": 350,
-          "menudeo": 650
-        },
-        {
-          "lo": 8,
           "hi": 10,
           "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
           "label": "8+",
           "sku": "61433-1",
           "mayoreo": 499,
           "menudeo": 799
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
+          "label": "8-9",
+          "sku": "PALETAMR",
+          "mayoreo": 350,
+          "menudeo": 650
         },
         {
           "lo": 9,
@@ -1995,21 +1995,21 @@
         },
         {
           "lo": 8,
-          "hi": 9,
-          "image": "lgrow-rump-cap-top.webp",
-          "label": "8-9",
-          "sku": "PICCA89",
-          "mayoreo": 1400,
-          "menudeo": 1700
-        },
-        {
-          "lo": 8,
           "hi": 10,
           "image": "lgrow-rump-cap-top.webp",
           "label": "8+",
           "sku": "68465-1",
           "mayoreo": 1100,
           "menudeo": 1400
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-rump-cap-top.webp",
+          "label": "8-9",
+          "sku": "PICCA89",
+          "mayoreo": 1400,
+          "menudeo": 1700
         },
         {
           "lo": 9,
@@ -2468,21 +2468,21 @@
         },
         {
           "lo": 8,
-          "hi": 9,
-          "image": "lgrow-chuck-eye-roll-top.webp",
-          "label": "8-9",
-          "sku": "448707",
-          "mayoreo": 710,
-          "menudeo": 1010
-        },
-        {
-          "lo": 8,
           "hi": 10,
           "image": "lgrow-chuck-eye-roll-top.webp",
           "label": "8+",
           "sku": "61655-1",
           "mayoreo": 560,
           "menudeo": 860
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-chuck-eye-roll-top.webp",
+          "label": "8-9",
+          "sku": "448707",
+          "mayoreo": 710,
+          "menudeo": 1010
         }
       ]
     },
@@ -2661,21 +2661,21 @@
         },
         {
           "lo": 8,
-          "hi": 9,
-          "image": "lgrow-striploin-top.webp",
-          "label": "8-9",
-          "sku": "NYMR",
-          "mayoreo": 1960,
-          "menudeo": 2260
-        },
-        {
-          "lo": 8,
           "hi": 10,
           "image": "lgrow-striploin-top.webp",
           "label": "8+",
           "sku": "68035-1",
           "mayoreo": 1580,
           "menudeo": 1880
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-striploin-top.webp",
+          "label": "8-9",
+          "sku": "NYMR",
+          "mayoreo": 1960,
+          "menudeo": 2260
         },
         {
           "lo": 9,
@@ -2728,21 +2728,21 @@
         },
         {
           "lo": 8,
-          "hi": 9,
-          "image": "lgrow-bolar-blade-top.webp",
-          "label": "8-9",
-          "sku": "PALETAMR",
-          "mayoreo": 350,
-          "menudeo": 650
-        },
-        {
-          "lo": 8,
           "hi": 10,
           "image": "lgrow-bolar-blade-top.webp",
           "label": "8+",
           "sku": "61433-1",
           "mayoreo": 499,
           "menudeo": 799
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-bolar-blade-top.webp",
+          "label": "8-9",
+          "sku": "PALETAMR",
+          "mayoreo": 350,
+          "menudeo": 650
         },
         {
           "lo": 9,
@@ -2813,21 +2813,21 @@
         },
         {
           "lo": 8,
-          "hi": 9,
-          "image": "lgrow-rump-cap-top.webp",
-          "label": "8-9",
-          "sku": "PICCA89",
-          "mayoreo": 1400,
-          "menudeo": 1700
-        },
-        {
-          "lo": 8,
           "hi": 10,
           "image": "lgrow-rump-cap-top.webp",
           "label": "8+",
           "sku": "68465-1",
           "mayoreo": 1100,
           "menudeo": 1400
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-rump-cap-top.webp",
+          "label": "8-9",
+          "sku": "PICCA89",
+          "mayoreo": 1400,
+          "menudeo": 1700
         },
         {
           "lo": 9,
@@ -3615,21 +3615,21 @@
         },
         {
           "lo": 8,
-          "hi": 9,
-          "image": "lgrow-short-rib-meat-top.webp",
-          "label": "8-9",
-          "sku": "RIBON",
-          "mayoreo": 1350,
-          "menudeo": 1650
-        },
-        {
-          "lo": 8,
           "hi": 10,
           "image": "lgrow-short-rib-meat-top.webp",
           "label": "8+",
           "sku": "62395-1",
           "mayoreo": 950,
           "menudeo": 1250
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-short-rib-meat-top.webp",
+          "label": "8-9",
+          "sku": "RIBON",
+          "mayoreo": 1350,
+          "menudeo": 1650
         }
       ]
     },
@@ -3699,21 +3699,21 @@
         },
         {
           "lo": 8,
-          "hi": 9,
-          "image": "lgrow-chuck-eye-roll-top.webp",
-          "label": "8-9",
-          "sku": "448707",
-          "mayoreo": 710,
-          "menudeo": 1010
-        },
-        {
-          "lo": 8,
           "hi": 10,
           "image": "lgrow-chuck-eye-roll-top.webp",
           "label": "8+",
           "sku": "61655-1",
           "mayoreo": 560,
           "menudeo": 860
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-chuck-eye-roll-top.webp",
+          "label": "8-9",
+          "sku": "448707",
+          "mayoreo": 710,
+          "menudeo": 1010
         }
       ]
     },
@@ -3909,21 +3909,21 @@
         },
         {
           "lo": 8,
-          "hi": 9,
-          "image": "lgrow-striploin-top.webp",
-          "label": "8-9",
-          "sku": "NYMR",
-          "mayoreo": 1960,
-          "menudeo": 2260
-        },
-        {
-          "lo": 8,
           "hi": 10,
           "image": "lgrow-striploin-top.webp",
           "label": "8+",
           "sku": "68035-1",
           "mayoreo": 1580,
           "menudeo": 1880
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-striploin-top.webp",
+          "label": "8-9",
+          "sku": "NYMR",
+          "mayoreo": 1960,
+          "menudeo": 2260
         },
         {
           "lo": 9,
@@ -3975,21 +3975,21 @@
         },
         {
           "lo": 8,
-          "hi": 9,
-          "image": "lgrow-bolar-blade-top.webp",
-          "label": "8-9",
-          "sku": "PALETAMR",
-          "mayoreo": 350,
-          "menudeo": 650
-        },
-        {
-          "lo": 8,
           "hi": 10,
           "image": "lgrow-bolar-blade-top.webp",
           "label": "8+",
           "sku": "61433-1",
           "mayoreo": 499,
           "menudeo": 799
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-bolar-blade-top.webp",
+          "label": "8-9",
+          "sku": "PALETAMR",
+          "mayoreo": 350,
+          "menudeo": 650
         },
         {
           "lo": 9,
@@ -4059,21 +4059,21 @@
         },
         {
           "lo": 8,
-          "hi": 9,
-          "image": "lgrow-rump-cap-top.webp",
-          "label": "8-9",
-          "sku": "PICCA89",
-          "mayoreo": 1400,
-          "menudeo": 1700
-        },
-        {
-          "lo": 8,
           "hi": 10,
           "image": "lgrow-rump-cap-top.webp",
           "label": "8+",
           "sku": "68465-1",
           "mayoreo": 1100,
           "menudeo": 1400
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "lgrow-rump-cap-top.webp",
+          "label": "8-9",
+          "sku": "PICCA89",
+          "mayoreo": 1400,
+          "menudeo": 1700
         },
         {
           "lo": 9,
@@ -4406,21 +4406,21 @@
         },
         {
           "lo": 8,
-          "hi": 9,
-          "image": "whatsapp-image-2026-07-02-at-15-05-24-mr44u6z84731.webp",
-          "label": "8-9",
-          "sku": "NYMR",
-          "mayoreo": 1960,
-          "menudeo": 2260
-        },
-        {
-          "lo": 8,
           "hi": 10,
           "image": "whatsapp-image-2026-07-02-at-15-05-24-mr44u6z84731.webp",
           "label": "8+",
           "sku": "68035-1",
           "mayoreo": 1580,
           "menudeo": 1880
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "whatsapp-image-2026-07-02-at-15-05-24-mr44u6z84731.webp",
+          "label": "8-9",
+          "sku": "NYMR",
+          "mayoreo": 1960,
+          "menudeo": 2260
         },
         {
           "lo": 9,
@@ -4561,21 +4561,21 @@
         },
         {
           "lo": 8,
-          "hi": 9,
-          "image": "whatsapp-image-2026-07-02-at-15-11-29-mr452f87449.webp",
-          "label": "8-9",
-          "sku": "448707",
-          "mayoreo": 710,
-          "menudeo": 1010
-        },
-        {
-          "lo": 8,
           "hi": 10,
           "image": "whatsapp-image-2026-07-02-at-15-11-29-mr452f87449.webp",
           "label": "8+",
           "sku": "61655-1",
           "mayoreo": 560,
           "menudeo": 860
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "whatsapp-image-2026-07-02-at-15-11-29-mr452f87449.webp",
+          "label": "8-9",
+          "sku": "448707",
+          "mayoreo": 710,
+          "menudeo": 1010
         }
       ]
     },
