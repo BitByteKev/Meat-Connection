@@ -647,8 +647,10 @@ function ProductDetail({ product, onAdd, onBack }) {
   const MAYOREO_MIN = 25;
   const [qty, setQty] = React.useState(5);
   const saleType = qty >= MAYOREO_MIN ? 'mayoreo' : 'menudeo';
-  // En mayoreo la cantidad no baja de 25 — para menos kilos hay que elegir Menudeo.
+  // Cada modo queda fijo a su rango: menudeo 1–24 kg, mayoreo 25+ kg.
+  // La única forma de cambiar de modo es el toggle Menudeo/Mayoreo.
   const minQty = saleType === 'mayoreo' ? MAYOREO_MIN : 1;
+  const maxQty = saleType === 'menudeo' ? MAYOREO_MIN - 1 : Infinity;
   const pickType = (val) => setQty(val === 'mayoreo' ? Math.max(qty, MAYOREO_MIN) : Math.min(qty, MAYOREO_MIN - 1));
   const genericOrigin = product.cat === 'jp' ? t.pdp.originJP : product.cat === 'us' ? t.pdp.originUS : t.pdp.originAU;
   const sys = marbling ? (t.pdp.marbling.systems[marbling.system] || t.pdp.marbling.systems.aus) : null;
@@ -716,7 +718,7 @@ function ProductDetail({ product, onAdd, onBack }) {
               <div style={{ display: 'inline-flex', alignItems: 'center', border: '2px solid var(--mc-charcoal)', borderRadius: 'var(--radius-md)', height: '44px' }}>
                 <button onClick={() => setQty(Math.max(minQty, qty - 1))} style={qtyBtn}><Icon name="Minus" size={16} /></button>
                 <span style={{ width: '48px', textAlign: 'center', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '18px' }}>{qty}</span>
-                <button onClick={() => setQty(qty + 1)} style={qtyBtn}><Icon name="Plus" size={16} /></button>
+                <button onClick={() => setQty(Math.min(maxQty, qty + 1))} style={qtyBtn}><Icon name="Plus" size={16} /></button>
               </div>
             </div>
           </div>
