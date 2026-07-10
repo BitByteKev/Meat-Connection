@@ -3943,15 +3943,15 @@
       "en": "American Cross"
     },
     "es": {
-      "name": "New York Striploin Abatti Ranch",
-      "description": "New York (striploin) — equilibrio entre marmoleo y mordida firme, con su banda de grasa lateral.\n\nWagyu cross americano Abatti Ranch, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nClásico steakhouse. Rinde excelente entero o en bistecs gruesos.",
-      "origin": "Origen Abatti Ranch\n\nWagyu cross americano del rancho Abatti (EE.UU.), criado con altos estándares de alimentación y bienestar. Combina genética wagyu con la robustez de la res americana para un sabor intenso y versátil.",
+      "name": "New York Striploin",
+      "description": "New York (striploin) — equilibrio entre marmoleo y mordida firme, con su banda de grasa lateral.\n\nWagyu cross americano, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nClásico steakhouse. Rinde excelente entero o en bistecs gruesos.",
+      "origin": "Wagyu cross americano  (EE.UU.), criado con altos estándares de alimentación y bienestar. Combina genética wagyu con la robustez de la res americana para un sabor intenso y versátil.",
       "cooking": "Recomendaciones de cocción\n\nSella 2–3 min por lado, parando la grasa lateral hacia el calor. Medio (54–57 °C). Reposa 5 min."
     },
     "en": {
-      "name": "New York Striploin Wagyu Cross Abatti Ranch",
-      "description": "New York (striploin) — balance of marbling and a firm bite, with its signature lateral fat band.\n\nAbatti Ranch American wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nSteakhouse classic. Great whole or in thick steaks.",
-      "origin": "Abatti Ranch origin\n\nAmerican wagyu cross from Abatti Ranch (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
+      "name": "New York Striploin Wagyu Cross",
+      "description": "New York (striploin) — balance of marbling and a firm bite, with its signature lateral fat band.\n\nAmerican wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nSteakhouse classic. Great whole or in thick steaks.",
+      "origin": "American wagyu cross from (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
       "cooking": "Cooking recommendations\n\nSear 2–3 min per side, standing the fat band toward the heat. Medium (54–57 °C). Rest 5 min."
     }
   },
