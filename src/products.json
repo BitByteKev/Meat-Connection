@@ -3344,15 +3344,15 @@
       "en": "Jewel · Fullblood"
     },
     "es": {
-      "name": "Paleta Bolar Blade Fullblood Jewel",
-      "description": "Paleta (bolar blade / shoulder clod) — corte de espaldilla, sabroso y de buen rendimiento.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nExcelente para braseados, mechado, fajitas y porciones de volumen.",
-      "origin": "Origen King River\n\nWagyu australiano King River, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
+      "name": "Paleta Bolar Blade Fullblood",
+      "description": "Paleta (bolar blade / shoulder clod) — corte de espaldilla, sabroso y de buen rendimiento.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nExcelente para braseados, mechado, fajitas y porciones de volumen.",
+      "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nBistec: sella y sirve medio. Braseado: cocción lenta 2–3 h hasta deshebrar."
     },
     "en": {
-      "name": "Bolar Blade Fullblood Wagyu Jewel",
-      "description": "Shoulder clod (bolar blade) — a flavorful, high-yield shoulder cut.\n\nKing River Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nGreat for braises, shredded beef, fajitas and high-volume portions.",
-      "origin": "King River origin\n\nKing River Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
+      "name": "Bolar Blade Fullblood Wagyu",
+      "description": "Shoulder clod (bolar blade) — a flavorful, high-yield shoulder cut.\n\nAustralian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nGreat for braises, shredded beef, fajitas and high-volume portions.",
+      "origin": "Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nSteak: sear and serve medium. Braise: slow-cook 2–3 h until it shreds."
     }
   },
