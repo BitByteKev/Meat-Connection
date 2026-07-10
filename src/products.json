@@ -2692,19 +2692,19 @@
     },
     "available": false,
     "badge": {
-      "es": "King River · Australia",
-      "en": "King River · Australia"
+      "es": "· Australia",
+      "en": "· Australia"
     },
     "es": {
-      "name": "New York Striploin King River",
-      "description": "New York (striploin) — equilibrio entre marmoleo y mordida firme, con su banda de grasa lateral.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nClásico steakhouse. Rinde excelente entero o en bistecs gruesos.",
-      "origin": "Origen King River\n\nWagyu australiano King River, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
+      "name": "New York Striploin",
+      "description": "New York (striploin) — equilibrio entre marmoleo y mordida firme, con su banda de grasa lateral.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nClásico steakhouse. Rinde excelente entero o en bistecs gruesos.",
+      "origin": "Origen King River\n\nWagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nSella 2–3 min por lado, parando la grasa lateral hacia el calor. Medio (54–57 °C). Reposa 5 min."
     },
     "en": {
-      "name": "New York Striploin Wagyu King River",
-      "description": "New York (striploin) — balance of marbling and a firm bite, with its signature lateral fat band.\n\nKing River Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nSteakhouse classic. Great whole or in thick steaks.",
-      "origin": "King River origin\n\nKing River Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
+      "name": "New York Striploin Wagyu",
+      "description": "New York (striploin) — balance of marbling and a firm bite, with its signature lateral fat band.\n\n Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nSteakhouse classic. Great whole or in thick steaks.",
+      "origin": "King River origin\n\nAustralian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nSear 2–3 min per side, standing the fat band toward the heat. Medium (54–57 °C). Rest 5 min."
     }
   },
