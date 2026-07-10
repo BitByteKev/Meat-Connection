@@ -3802,15 +3802,15 @@
       "en": "American Cross"
     },
     "es": {
-      "name": "Filete Tenderloin Abatti Ranch",
-      "description": "El filete (tenderloin) es el corte más tierno de la res: fibra fina, magro y de forma uniforme.\n\nWagyu cross americano Abatti Ranch, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nIdeal para medallones, tournedós y presentaciones donde la terneza manda.",
-      "origin": "Origen Abatti Ranch\n\nWagyu cross americano del rancho Abatti (EE.UU.), criado con altos estándares de alimentación y bienestar. Combina genética wagyu con la robustez de la res americana para un sabor intenso y versátil.",
+      "name": "Filete Tenderloin",
+      "description": "El filete (tenderloin) es el corte más tierno de la res: fibra fina, magro y de forma uniforme.\n\nWagyu cross americano, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nIdeal para medallones, tournedós y presentaciones donde la terneza manda.",
+      "origin": "Wagyu cross americano(EE.UU.), criado con altos estándares de alimentación y bienestar. Combina genética wagyu con la robustez de la res americana para un sabor intenso y versátil.",
       "cooking": "Recomendaciones de cocción\n\nAtempera, seca la superficie y sella 1–2 min por lado a fuego alto. Término medio-rojo (52–54 °C). Reposa 4 min."
     },
     "en": {
-      "name": "Tenderloin Wagyu Cross Abatti Ranch",
-      "description": "The tenderloin is the most tender cut of beef: fine grain, lean and uniform in shape.\n\nAbatti Ranch American wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nIdeal for medallions, tournedos and presentations where tenderness rules.",
-      "origin": "Abatti Ranch origin\n\nAmerican wagyu cross from Abatti Ranch (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
+      "name": "Tenderloin Wagyu Cross",
+      "description": "The tenderloin is the most tender cut of beef: fine grain, lean and uniform in shape.\n\nAmerican wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nIdeal for medallions, tournedos and presentations where tenderness rules.",
+      "origin": "American wagyu cross (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
       "cooking": "Cooking recommendations\n\nTemper, pat dry and sear 1–2 min per side over high heat. Medium-rare (52–54 °C). Rest 4 min."
     }
   },
