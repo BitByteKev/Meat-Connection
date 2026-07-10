@@ -3468,15 +3468,15 @@
       "en": "American Cross"
     },
     "es": {
-      "name": "Arrachera Inside Skirt Abatti Ranch",
-      "description": "Arrachera (skirt steak) — el corte clásico de la fajita, fibra marcada y mucho sabor.\n\nWagyu cross americano Abatti Ranch, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nMarínala y ásala rápido. Insuperable para tacos y fajitas.",
-      "origin": "Origen Abatti Ranch\n\nWagyu cross americano del rancho Abatti (EE.UU.), criado con altos estándares de alimentación y bienestar. Combina genética wagyu con la robustez de la res americana para un sabor intenso y versátil.",
+      "name": "Arrachera Inside Skirt",
+      "description": "Arrachera (skirt steak) — el corte clásico de la fajita, fibra marcada y mucho sabor.\n\nWagyu cross americano, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nMarínala y ásala rápido. Insuperable para tacos y fajitas.",
+      "origin": "Wagyu cross americano (EE.UU.), criado con altos estándares de alimentación y bienestar. Combina genética wagyu con la robustez de la res americana para un sabor intenso y versátil.",
       "cooking": "Recomendaciones de cocción\n\nFuego muy alto, 2–3 min por lado. Corta fino en contra de la fibra."
     },
     "en": {
-      "name": "Inside Skirt Wagyu Cross Abatti Ranch",
-      "description": "Skirt steak (arrachera) — the classic fajita cut, pronounced grain and big flavor.\n\nAbatti Ranch American wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nMarinate and grill fast. Unbeatable for tacos and fajitas.",
-      "origin": "Abatti Ranch origin\n\nAmerican wagyu cross from Abatti Ranch (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
+      "name": "Inside Skirt Wagyu Cross",
+      "description": "Skirt steak (arrachera) — the classic fajita cut, pronounced grain and big flavor.\nAmerican wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nMarinate and grill fast. Unbeatable for tacos and fajitas.",
+      "origin": "American wagyu cross(USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
       "cooking": "Cooking recommendations\n\nVery high heat, 2–3 min per side. Slice thin against the grain."
     }
   },
