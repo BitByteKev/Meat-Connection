@@ -3182,19 +3182,19 @@
       ]
     },
     "badge": {
-      "es": "King River · Australia",
-      "en": "King River · Australia"
+      "es": "· Australia",
+      "en": "· Australia"
     },
     "es": {
-      "name": "Vacío Flap Meat King River",
-      "description": "Vacío (flap meat) — fibra abierta que absorbe marinadas y se llena de sabor.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nExcelente para tacos, fajitas y parrilla rápida.",
-      "origin": "Origen King River\n\nWagyu australiano King River, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
+      "name": "Vacío Flap Meat",
+      "description": "Vacío (flap meat) — fibra abierta que absorbe marinadas y se llena de sabor.\n\nWagyu australiano , corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nExcelente para tacos, fajitas y parrilla rápida.",
+      "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nSella fuerte 2–3 min por lado. Corta SIEMPRE fino y en contra de la fibra."
     },
     "en": {
-      "name": "Flap Meat Wagyu King River",
-      "description": "Flap meat (vacío) — an open, loose grain that soaks up marinades and packs flavor.\n\nKing River Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nExcellent for tacos, fajitas and quick grilling.",
-      "origin": "King River origin\n\nKing River Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
+      "name": "Flap Meat Wagyu",
+      "description": "Flap meat (vacío) — an open, loose grain that soaks up marinades and packs flavor.\n\n Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nExcellent for tacos, fajitas and quick grilling.",
+      "origin": "Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nSear hard 2–3 min per side. ALWAYS slice thin and against the grain."
     }
   },
