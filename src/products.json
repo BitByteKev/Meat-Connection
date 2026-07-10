@@ -3725,15 +3725,15 @@
       "en": "American Cross"
     },
     "es": {
-      "name": "Diezmillo Chuck Roll Abatti Ranch",
-      "description": "Diezmillo (chuck roll) — corte de cuello/espaldilla con buen marmoleo y sabor intenso a res.\n\nWagyu cross americano Abatti Ranch, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nMuy versátil: bistec marinado, fajitas, guisos y braseados.",
-      "origin": "Origen Abatti Ranch\n\nWagyu cross americano del rancho Abatti (EE.UU.), criado con altos estándares de alimentación y bienestar. Combina genética wagyu con la robustez de la res americana para un sabor intenso y versátil.",
+      "name": "Diezmillo Chuck Roll",
+      "description": "Diezmillo (chuck roll) — corte de cuello/espaldilla con buen marmoleo y sabor intenso a res.\n\nWagyu cross americano, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nMuy versátil: bistec marinado, fajitas, guisos y braseados.",
+      "origin": "Wagyu cross americano (EE.UU.), criado con altos estándares de alimentación y bienestar. Combina genética wagyu con la robustez de la res americana para un sabor intenso y versátil.",
       "cooking": "Recomendaciones de cocción\n\nBistec fino: sella rápido y fuerte. Pieza grande: braseado lento hasta terneza total."
     },
     "en": {
-      "name": "Chuck Roll Wagyu Cross Abatti Ranch",
-      "description": "Chuck roll (diezmillo) — a neck/shoulder cut with good marbling and intense beef flavor.\n\nAbatti Ranch American wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nVery versatile: marinated steak, fajitas, stews and braises.",
-      "origin": "Abatti Ranch origin\n\nAmerican wagyu cross from Abatti Ranch (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
+      "name": "Chuck Roll Wagyu Cross",
+      "description": "Chuck roll (diezmillo) — a neck/shoulder cut with good marbling and intense beef flavor.\n\nAbatti Ranch standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nVery versatile: marinated steak, fajitas, stews and braises.",
+      "origin": "American wagyu cross(USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
       "cooking": "Cooking recommendations\n\nThin steak: sear fast and hot. Large piece: slow braise until fully tender."
     }
   },
