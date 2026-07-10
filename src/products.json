@@ -2158,18 +2158,18 @@
       ]
     },
     "badge": {
-      "es": "Australia · L Grow",
-      "en": "Australia · L Grow"
+      "es": "Australia",
+      "en": "Australia"
     },
     "es": {
-      "name": "Vacío Flap Meat Wagyu L Grow",
-      "description": "Vacío (flap meat) — fibra abierta que absorbe marinadas y se llena de sabor.\n\nWagyu australiano L Grow, cruza terminada con grano para un marmoleo profundo. Jugoso y untuoso, con el balance perfecto entre grasa y sabor a res.\n\nExcelente para tacos, fajitas y parrilla rápida.",
+      "name": "Vacío Flap Meat Wagyu",
+      "description": "Vacío (flap meat) — fibra abierta que absorbe marinadas y se llena de sabor.\n\nWagyu australiano, cruza terminada con grano para un marmoleo profundo. Jugoso y untuoso, con el balance perfecto entre grasa y sabor a res.\n\nExcelente para tacos, fajitas y parrilla rápida.",
       "origin": "Origen Wagyu Australiano L Grow\n\nWagyu australiano de la marca L Grow, cruza terminada con grano para un marmoleo profundo y parejo. Criado bajo estrictos estándares de marmoleo y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nSella fuerte 2–3 min por lado. Corta SIEMPRE fino y en contra de la fibra."
     },
     "en": {
-      "name": "Flap Meat Australian Wagyu L Grow",
-      "description": "Flap meat (vacío) — an open, loose grain that soaks up marinades and packs flavor.\n\nL Grow Australian wagyu, grain-finished cross with deep marbling. Juicy and rich, with the perfect balance of fat and beef flavor.\n\nExcellent for tacos, fajitas and quick grilling.",
+      "name": "Flap Meat Australian Wagyu",
+      "description": "Flap meat (vacío) — an open, loose grain that soaks up marinades and packs flavor.\n\nAustralian wagyu, grain-finished cross with deep marbling. Juicy and rich, with the perfect balance of fat and beef flavor.\n\nExcellent for tacos, fajitas and quick grilling.",
       "origin": "L Grow Australian Wagyu origin\n\nAustralian wagyu from the L Grow brand, a grain-finished cross for deep, even marbling. Raised under strict marbling standards and fully traceable.",
       "cooking": "Cooking recommendations\n\nSear hard 2–3 min per side. ALWAYS slice thin and against the grain."
     }
