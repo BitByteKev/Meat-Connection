@@ -392,6 +392,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Más Vendido",
       "en": "Best Seller"
