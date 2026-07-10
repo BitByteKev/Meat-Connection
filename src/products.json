@@ -3858,15 +3858,15 @@
       "en": "American Cross"
     },
     "es": {
-      "name": "Meaty Back Rib Abatti Ranch",
-      "description": "Meaty back rib — costillas de lomo con buena cobertura de carne entre los huesos.\n\nWagyu cross americano Abatti Ranch, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nPara el horno o el ahumador, con glaseado o salsa BBQ.",
-      "origin": "Origen Abatti Ranch\n\nWagyu cross americano del rancho Abatti (EE.UU.), criado con altos estándares de alimentación y bienestar. Combina genética wagyu con la robustez de la res americana para un sabor intenso y versátil.",
+      "name": "Meaty Back Rib",
+      "description": "Meaty back rib — costillas de lomo con buena cobertura de carne entre los huesos.\n\nWagyu cross americano, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nPara el horno o el ahumador, con glaseado o salsa BBQ.",
+      "origin": "Origen Abatti Ranch\n\nWagyu cross americano (EE.UU.), criado con altos estándares de alimentación y bienestar. Combina genética wagyu con la robustez de la res americana para un sabor intenso y versátil.",
       "cooking": "Recomendaciones de cocción\n\nHornea/ahúma a 150 °C 2.5–3 h. Glasea en los últimos 20 min."
     },
     "en": {
-      "name": "Meaty Back Rib Wagyu Cross Abatti Ranch",
-      "description": "Meaty back ribs — loin ribs with good meat coverage between the bones.\n\nAbatti Ranch American wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nFor the oven or smoker, with a glaze or BBQ sauce.",
-      "origin": "Abatti Ranch origin\n\nAmerican wagyu cross from Abatti Ranch (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
+      "name": "Meaty Back Rib Wagyu Cross",
+      "description": "Meaty back ribs — loin ribs with good meat coverage between the bones.\n\nAmerican wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nFor the oven or smoker, with a glaze or BBQ sauce.",
+      "origin": "American wagyu cross from  (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
       "cooking": "Cooking recommendations\n\nBake/smoke at 150 °C for 2.5–3 h. Glaze in the last 20 min."
     }
   },
