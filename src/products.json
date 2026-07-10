@@ -972,6 +972,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": null,
       "en": null
