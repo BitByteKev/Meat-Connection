@@ -2175,7 +2175,7 @@
     }
   },
   {
-    "id": "arracheraKr__gen",
+    "id": "arrachera__gen",
     "cat": "au",
     "tone": "kraft",
     "images": [
@@ -2224,19 +2224,19 @@
       ]
     },
     "badge": {
-      "es": "King River · Australia",
-      "en": "King River · Australia"
+      "es": "· Australia",
+      "en": "· Australia"
     },
     "es": {
-      "name": "Arrachera Inside Skirt King River",
+      "name": "Arrachera Inside Skirt",
       "description": "Arrachera (skirt steak) — el corte clásico de la fajita, fibra marcada y mucho sabor.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nMarínala y ásala rápido. Insuperable para tacos y fajitas.",
-      "origin": "Origen King River\n\nWagyu australiano King River, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
+      "origin": "Wagyu australiano King River, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nFuego muy alto, 2–3 min por lado. Corta fino en contra de la fibra."
     },
     "en": {
-      "name": "Inside Skirt Wagyu King River",
+      "name": "Inside Skirt Wagyu",
       "description": "Skirt steak (arrachera) — the classic fajita cut, pronounced grain and big flavor.\n\nKing River Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nMarinate and grill fast. Unbeatable for tacos and fajitas.",
-      "origin": "King River origin\n\nKing River Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
+      "origin": "King River Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nVery high heat, 2–3 min per side. Slice thin against the grain."
     }
   },
