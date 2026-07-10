@@ -3016,15 +3016,15 @@
       "en": "King River · Australia"
     },
     "es": {
-      "name": "Sirloin Rostbiff King River",
-      "description": "Sirloin rostbiff — corte magro de cadera, ideal para roast beef y rebanadas finas.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nAsado entero al horno o laminado para fríos y sándwiches.",
-      "origin": "Origen King River\n\nWagyu australiano King River, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
+      "name": "Sirloin Rostbiff",
+      "description": "Sirloin rostbiff — corte magro de cadera, ideal para roast beef y rebanadas finas.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nAsado entero al horno o laminado para fríos y sándwiches.",
+      "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nSella y hornea a 160 °C hasta 52–54 °C al centro. Reposa 10 min y rebana fino."
     },
     "en": {
-      "name": "Sirloin Rostbiff Wagyu King River",
-      "description": "Sirloin rostbiff — a lean hip cut, ideal for roast beef and thin slicing.\n\nKing River Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nRoast whole or shave for cold cuts and sandwiches.",
-      "origin": "King River origin\n\nKing River Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
+      "name": "Sirloin Rostbiff Wagyu",
+      "description": "Sirloin rostbiff — a lean hip cut, ideal for roast beef and thin slicing.\n Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nRoast whole or shave for cold cuts and sandwiches.",
+      "origin": "Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nSear and roast at 160 °C until 52–54 °C internal. Rest 10 min and slice thin."
     }
   },
