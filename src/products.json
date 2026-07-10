@@ -3226,15 +3226,15 @@
       "en": "King River · Australia"
     },
     "es": {
-      "name": "Flat Iron Purebred King River",
-      "description": "Flat iron (de la paleta) — corte tierno y muy marmoleado, una joya de precio inteligente.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nVersátil para parrilla, fajitas o cortado fino.",
-      "origin": "Origen King River\n\nWagyu australiano King River, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
+      "name": "Flat Iron Purebred",
+      "description": "Flat iron (de la paleta) — corte tierno y muy marmoleado, una joya de precio inteligente.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nVersátil para parrilla, fajitas o cortado fino.",
+      "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nSella 2–3 min por lado a fuego alto. Medio-rojo. Corta fino en contra de la fibra."
     },
     "en": {
-      "name": "Flat Iron Purebred Wagyu King River",
-      "description": "Flat iron (from the shoulder) — a tender, heavily marbled cut and a smart-value gem.\n\nKing River Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nVersatile for grilling, fajitas or slicing thin.",
-      "origin": "King River origin\n\nKing River Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
+      "name": "Flat Iron Purebred Wagyu",
+      "description": "Flat iron (from the shoulder) — a tender, heavily marbled cut and a smart-value gem.\n\nAustralian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nVersatile for grilling, fajitas or slicing thin.",
+      "origin": "Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nSear 2–3 min per side over high heat. Medium-rare. Slice thin against the grain."
     }
   },
