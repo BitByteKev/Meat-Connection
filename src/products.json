@@ -3125,19 +3125,19 @@
       ]
     },
     "badge": {
-      "es": "King River · Australia",
-      "en": "King River · Australia"
+      "es": "· Australia",
+      "en": "· Australia"
     },
     "es": {
-      "name": "Tomahawk King River",
-      "description": "Tomahawk — rib eye con el hueso de la costilla limpio y largo. Espectáculo en la mesa.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nLa pieza central de cualquier asado. Para compartir.",
-      "origin": "Origen King River\n\nWagyu australiano King River, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
+      "name": "Tomahawk",
+      "description": "Tomahawk — rib eye con el hueso de la costilla limpio y largo. Espectáculo en la mesa.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nLa pieza central de cualquier asado. Para compartir.",
+      "origin": "Wagyu australiano King River, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nSella todos los lados y termina a calor indirecto/horno a 140 °C hasta 54–57 °C. Reposa 8–10 min."
     },
     "en": {
-      "name": "Tomahawk Wagyu King River",
-      "description": "Tomahawk — rib eye with the long, frenched rib bone. A showstopper.\n\nKing River Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nThe centerpiece of any cookout. Made for sharing.",
-      "origin": "King River origin\n\nKing River Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
+      "name": "Tomahawk Wagyu",
+      "description": "Tomahawk — rib eye with the long, frenched rib bone. A showstopper.\n\nAustralian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nThe centerpiece of any cookout. Made for sharing.",
+      "origin": "Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nSear all sides and finish over indirect heat / 140 °C oven until 54–57 °C. Rest 8–10 min."
     }
   },
