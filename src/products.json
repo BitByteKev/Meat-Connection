@@ -2899,19 +2899,19 @@
       ]
     },
     "badge": {
-      "es": "King River · Australia",
-      "en": "King River · Australia"
+      "es": "· Australia",
+      "en": "· Australia"
     },
     "es": {
-      "name": "Rib Eye c/Hueso Export Rib King River",
-      "description": "Rib eye con hueso (export rib) — el hueso aporta sabor y una presentación imponente.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nPieza de impacto para asadores y mesas compartidas.",
-      "origin": "Origen King River\n\nWagyu australiano King River, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
+      "name": "Rib Eye c/Hueso Export Rib",
+      "description": "Rib eye con hueso (export rib) — el hueso aporta sabor y una presentación imponente.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nPieza de impacto para asadores y mesas compartidas.",
+      "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nSella y termina a calor indirecto/horno a 140 °C hasta 54–57 °C al centro. Reposa 6–8 min."
     },
     "en": {
-      "name": "Bone-in Rib Eye Export Rib Wagyu King River",
-      "description": "Bone-in rib eye (export rib) — the bone adds flavor and a striking presentation.\n\nKing River Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nA showpiece for grill masters and shared tables.",
-      "origin": "King River origin\n\nKing River Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
+      "name": "Bone-in Rib Eye Export Rib Wagyu",
+      "description": "Bone-in rib eye (export rib) — the bone adds flavor and a striking presentation.\n\n Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nA showpiece for grill masters and shared tables.",
+      "origin": "Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nSear and finish over indirect heat or a 140 °C oven until 54–57 °C at the center. Rest 6–8 min."
     }
   },
