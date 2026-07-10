@@ -4009,15 +4009,15 @@
       "en": "American Cross"
     },
     "es": {
-      "name": "Paleta Shoulder Clod Abatti Ranch",
-      "description": "Paleta (bolar blade / shoulder clod) — corte de espaldilla, sabroso y de buen rendimiento.\n\nWagyu cross americano Abatti Ranch, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nExcelente para braseados, mechado, fajitas y porciones de volumen.",
-      "origin": "Origen Abatti Ranch\n\nWagyu cross americano del rancho Abatti (EE.UU.), criado con altos estándares de alimentación y bienestar. Combina genética wagyu con la robustez de la res americana para un sabor intenso y versátil.",
+      "name": "Paleta Shoulder Clod",
+      "description": "Paleta (bolar blade / shoulder clod) — corte de espaldilla, sabroso y de buen rendimiento.\n\nWagyu cross americano, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nExcelente para braseados, mechado, fajitas y porciones de volumen.",
+      "origin": "Wagyu cross americano (EE.UU.), criado con altos estándares de alimentación y bienestar. Combina genética wagyu con la robustez de la res americana para un sabor intenso y versátil.",
       "cooking": "Recomendaciones de cocción\n\nBistec: sella y sirve medio. Braseado: cocción lenta 2–3 h hasta deshebrar."
     },
     "en": {
-      "name": "Shoulder Clod Wagyu Cross Abatti Ranch",
-      "description": "Shoulder clod (bolar blade) — a flavorful, high-yield shoulder cut.\n\nAbatti Ranch American wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nGreat for braises, shredded beef, fajitas and high-volume portions.",
-      "origin": "Abatti Ranch origin\n\nAmerican wagyu cross from Abatti Ranch (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
+      "name": "Shoulder Clod Wagyu Cross",
+      "description": "Shoulder clod (bolar blade) — a flavorful, high-yield shoulder cut.\n\nAmerican wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nGreat for braises, shredded beef, fajitas and high-volume portions.",
+      "origin": "American wagyu cross (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
       "cooking": "Cooking recommendations\n\nSteak: sear and serve medium. Braise: slow-cook 2–3 h until it shreds."
     }
   },
