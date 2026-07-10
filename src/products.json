@@ -3069,19 +3069,19 @@
       ]
     },
     "badge": {
-      "es": "King River · Australia",
-      "en": "King River · Australia"
+      "es": "· Australia",
+      "en": "· Australia"
     },
     "es": {
-      "name": "Tablita Chuck Tail King River",
-      "description": "Tablita (chuck tail / tira de asado) — costilla cruzada, jugosa y llena de sabor.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nClásico de la parrilla mexicana y el asado. Para compartir.",
-      "origin": "Origen King River\n\nWagyu australiano King River, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
+      "name": "Tablita Chuck Tail",
+      "description": "Tablita (chuck tail / tira de asado) — costilla cruzada, jugosa y llena de sabor.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nClásico de la parrilla mexicana y el asado. Para compartir.",
+      "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nAsa a fuego medio-alto 4–6 min por lado."
     },
     "en": {
-      "name": "Chuck Tail Tablita Wagyu King River",
-      "description": "Tablita (chuck tail / short rib flap) — a cross-cut rib strip, juicy and full of flavor.\n\nKing River Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nA classic of the Mexican grill and asado. Made for sharing.",
-      "origin": "King River origin\n\nKing River Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
+      "name": "Chuck Tail Tablita Wagyu",
+      "description": "Tablita (chuck tail / short rib flap) — a cross-cut rib strip, juicy and full of flavor.\n\nAustralian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nA classic of the Mexican grill and asado. Made for sharing.",
+      "origin": "Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nGrill over medium-high 4–6 min per side."
     }
   },
