@@ -2959,15 +2959,15 @@
       "en": "King River · Australia"
     },
     "es": {
-      "name": "Sirloin c/Picaña D-Rump King River",
-      "description": "Sirloin (con picaña D-rump) — corte magro y firme con excelente sabor a res.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nBistec versátil, brochetas o cortado fino.",
-      "origin": "Origen King River\n\nWagyu australiano King River, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
+      "name": "Sirloin c/Picaña D-Rump",
+      "description": "Sirloin (con picaña D-rump) — corte magro y firme con excelente sabor a res.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nBistec versátil, brochetas o cortado fino.",
+      "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nSella 2–3 min por lado a fuego alto. No pases de medio. Reposa 4 min."
     },
     "en": {
-      "name": "Sirloin w/Picanha D-Rump Wagyu King River",
-      "description": "Sirloin (with picanha D-rump) — a lean, firm cut with excellent beef flavor.\n\nKing River Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nVersatile steak, skewers or thin slices.",
-      "origin": "King River origin\n\nKing River Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
+      "name": "Sirloin w/Picanha D-Rump Wagyu",
+      "description": "Sirloin (with picanha D-rump) — a lean, firm cut with excellent beef flavor.\n\nAustralian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nVersatile steak, skewers or thin slices.",
+      "origin": "Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nSear 2–3 min per side over high heat. Don’t go past medium. Rest 4 min."
     }
   },
