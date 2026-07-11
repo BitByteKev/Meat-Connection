@@ -4132,15 +4132,15 @@
       "en": "American Cross"
     },
     "es": {
-      "name": "Rib Cap Abatti Ranch",
-      "description": "Rib cap (tapa de rib eye) — la parte más marmoleada y sabrosa de la costilla, codiciada por los conocedores.\n\nWagyu cross americano Abatti Ranch, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nEnróllala para medallones o ásala entera. Sabor de rib eye concentrado.",
-      "origin": "Origen Abatti Ranch\n\nWagyu cross americano del rancho Abatti (EE.UU.), criado con altos estándares de alimentación y bienestar. Combina genética wagyu con la robustez de la res americana para un sabor intenso y versátil.",
+      "name": "Rib Cap",
+      "description": "Rib cap (tapa de rib eye) — la parte más marmoleada y sabrosa de la costilla, codiciada por los conocedores.\n\nWagyu cross americano, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nEnróllala para medallones o ásala entera. Sabor de rib eye concentrado.",
+      "origin": "Wagyu cross americano (EE.UU.), criado con altos estándares de alimentación y bienestar. Combina genética wagyu con la robustez de la res americana para un sabor intenso y versátil.",
       "cooking": "Recomendaciones de cocción\n\nSella rápido y fuerte; por su grasa se cocina pronto. Medio. Reposa 4 min."
     },
     "en": {
-      "name": "Rib Cap Wagyu Cross Abatti Ranch",
-      "description": "Rib cap (spinalis) — the most marbled, flavorful part of the rib, prized by connoisseurs.\n\nAbatti Ranch American wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nRoll it for medallions or grill it whole. Concentrated rib-eye flavor.",
-      "origin": "Abatti Ranch origin\n\nAmerican wagyu cross from Abatti Ranch (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
+      "name": "Rib Cap Wagyu Cross",
+      "description": "Rib cap (spinalis) — the most marbled, flavorful part of the rib, prized by connoisseurs.\n\n American wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nRoll it for medallions or grill it whole. Concentrated rib-eye flavor.",
+      "origin": "American wagyu cross from (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
       "cooking": "Cooking recommendations\n\nSear fast and hot; its fat cooks it quickly. Medium. Rest 4 min."
     }
   },
