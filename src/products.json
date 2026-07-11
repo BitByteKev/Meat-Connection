@@ -2903,7 +2903,7 @@
       "en": "· Australia"
     },
     "es": {
-      "name": "Rib Eye c/Hueso Export Rib",
+      "name": "Rib Eye c/Hueso",
       "description": "Rib eye con hueso (export rib) — el hueso aporta sabor y una presentación imponente.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nPieza de impacto para asadores y mesas compartidas.",
       "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nSella y termina a calor indirecto/horno a 140 °C hasta 54–57 °C al centro. Reposa 6–8 min."
@@ -4504,15 +4504,15 @@
       "en": null
     },
     "es": {
-      "name": "Rib Eye Wagyu Australiano · Marmoleo Alto",
+      "name": "Rib Eye Wagyu Australiano",
       "description": "Un rib eye australiano con marmoleo excepcional que se derrite en cada bocado.\n\nEste corte destaca por su intensa red de grasa intramuscular, calificada 9+ en la escala australiana de marmoleo, lo que se traduce en una jugosidad profunda y un sabor mantecoso inolvidable. La textura es tierna y sedosa, con ese equilibrio perfecto entre carne y marmoleo que buscan los verdaderos amantes del wagyu.\n\nIdeal para ocasiones especiales o para consentir tu paladar con una experiencia de alta cocina en casa.",
-      "origin": "Wagyu australiano con grado de marmoleo 9+ en la escala AUS-MEAT. Criado bajo los estándares de calidad que caracterizan al wagyu de Australia, con una alimentación cuidada que favorece el desarrollo de su marmoleo intenso.",
+      "origin": "Wagyu australiano criado bajo los estándares de calidad que caracterizan al wagyu de Australia, con una alimentación cuidada que favorece el desarrollo de su marmoleo intenso.",
       "cooking": "Por su alto marmoleo, cocina este corte a fuego alto y por poco tiempo para sellar la superficie sin fundir toda la grasa.\n\n• Atempera la carne 30 minutos antes de cocinar.\n• Sella en sartén o parrilla muy caliente, 1 a 2 minutos por lado.\n• Busca un término medio-rojo (medium-rare) para disfrutar al máximo su jugosidad.\n• Deja reposar de 3 a 5 minutos antes de cortar.\n\nSazona sencillo con sal en escamas para dejar que el marmoleo sea el protagonista."
     },
     "en": {
-      "name": "Rib Eye Australian Wagyu · High Marbling",
+      "name": "Rib Eye Australian Wagyu",
       "description": "An Australian rib eye with exceptional marbling that melts in every bite.\n\nThis cut stands out for its intense network of intramuscular fat, rated 9+ on the Australian marbling scale, delivering deep juiciness and an unforgettable buttery flavor. The texture is tender and silky, with that perfect balance between meat and marbling that true wagyu lovers seek.\n\nIdeal for special occasions or for treating your palate to a fine-dining experience at home.",
-      "origin": "Australian wagyu with a 9+ marbling grade on the AUS-MEAT scale. Raised to the quality standards that define Australian wagyu, with careful feeding that promotes its intense marbling.",
+      "origin": "Australian wagyu raised to the quality standards that define Australian wagyu, with careful feeding that promotes its intense marbling.",
       "cooking": "Because of its high marbling, cook this cut over high heat and for a short time to sear the surface without rendering all the fat.\n\n• Let the meat come to room temperature 30 minutes before cooking.\n• Sear in a very hot pan or grill, 1 to 2 minutes per side.\n• Aim for medium-rare to fully enjoy its juiciness.\n• Rest for 3 to 5 minutes before slicing.\n\nSeason simply with flaky salt to let the marbling take center stage."
     }
   },
