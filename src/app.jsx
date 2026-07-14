@@ -925,15 +925,30 @@ function SectionHead({ eyebrow, title, sub, light }) {
 }
 
 /* ===== Servicios / propuesta de valor ===== */
+// Background videos ship a 9:16 portrait cut for phones (-mobile files): correct
+// framing on narrow screens and a fraction of the data of the 1080p landscape file.
+function useIsPhone() {
+  const [isPhone, setIsPhone] = React.useState(() => window.matchMedia('(max-width: 640px)').matches);
+  React.useEffect(() => {
+    const mq = window.matchMedia('(max-width: 640px)');
+    const onChange = (e) => setIsPhone(e.matches);
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
+  return isPhone;
+}
+
 function Services() {
   const { Card } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
+  const phone = useIsPhone();
   return (
     <section id="servicios" style={{ position: 'relative', overflow: 'hidden', background: 'var(--mc-charcoal)', scrollMarginTop: '72px' }}>
       <video
+        key={phone ? 'm' : 'd'}
         className="mc-servicios-video"
-        src="/servicios-bg.mp4"
-        poster="/servicios-poster.jpg"
+        src={phone ? '/servicios-bg-mobile.mp4' : '/servicios-bg.mp4'}
+        poster={phone ? '/servicios-poster-mobile.jpg' : '/servicios-poster.jpg'}
         autoPlay muted loop playsInline preload="metadata"
         aria-hidden="true"
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center bottom', zIndex: 0 }}
@@ -1200,12 +1215,14 @@ function RevealImg({ src, alt, imgStyle = {}, frameStyle = {}, ...rest }) {
 function Testimonials() {
   const { Card } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
+  const phone = useIsPhone();
   return (
     <section style={{ position: 'relative', overflow: 'hidden', background: 'var(--mc-charcoal)' }}>
       <video
+        key={phone ? 'm' : 'd'}
         className="mc-testimonials-video"
-        src="/testimonios-bg.mp4"
-        poster="/testimonios-poster.jpg"
+        src={phone ? '/testimonios-bg-mobile.mp4' : '/testimonios-bg.mp4'}
+        poster={phone ? '/testimonios-poster-mobile.jpg' : '/testimonios-poster.jpg'}
         autoPlay muted loop playsInline preload="metadata"
         aria-hidden="true"
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
