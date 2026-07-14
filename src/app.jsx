@@ -941,34 +941,22 @@ function useIsPhone() {
 function Services() {
   const { Card } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
-  const phone = useIsPhone();
   return (
-    <section id="servicios" style={{ position: 'relative', overflow: 'hidden', background: 'var(--mc-charcoal)', scrollMarginTop: '72px' }}>
-      <video
-        key={phone ? 'm' : 'd'}
-        className="mc-servicios-video"
-        src={phone ? '/servicios-bg-mobile.mp4' : '/servicios-bg.mp4'}
-        poster={phone ? '/servicios-poster-mobile.jpg' : '/servicios-poster.jpg'}
-        autoPlay muted loop playsInline preload="metadata"
-        aria-hidden="true"
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center bottom', zIndex: 0 }}
-      />
-      <div style={{ position: 'absolute', inset: 0, zIndex: 1,
-        background: 'linear-gradient(180deg, rgba(15,15,15,0.72) 0%, rgba(15,15,15,0.45) 55%, rgba(15,15,15,0.7) 100%)' }} />
-      <Reveal style={{ position: 'relative', zIndex: 2, maxWidth: 'var(--container-max)', margin: '0 auto', padding: '72px 24px' }}>
-        <SectionHead light eyebrow={t.services.eyebrow} title={t.services.title} sub={t.services.sub} />
+    <section id="servicios" style={{ background: 'var(--surface-sunken)', scrollMarginTop: '72px' }}>
+      <Reveal style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '72px 24px' }}>
+        <SectionHead eyebrow={t.services.eyebrow} title={t.services.title} sub={t.services.sub} />
         <div className="mc-services" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
           {t.services.main.map(([ic, title, d]) => (
-            <Card key={title} variant="default" style={{ padding: '28px', background: 'rgba(20,20,20,0.66)', border: '1px solid var(--mc-ink-700)', boxShadow: 'none', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}>
+            <Card key={title} variant="default" style={{ padding: '28px' }}>
               <div style={{ width: '52px', height: '52px', borderRadius: 'var(--radius-md)', background: 'var(--mc-red)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '18px' }}>
                 <Icon name={ic} size={26} color="#fff" />
               </div>
-              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '22px', color: 'var(--mc-paper)' }}>{title}</div>
-              <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', lineHeight: 1.6, color: 'var(--mc-ink-200)', margin: '10px 0 0' }}>{d}</p>
+              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '22px', color: 'var(--text-strong)' }}>{title}</div>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', lineHeight: 1.6, color: 'var(--text-muted)', margin: '10px 0 0' }}>{d}</p>
             </Card>
           ))}
         </div>
-        <div className="mc-subservices" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', marginTop: '24px', padding: '24px', background: 'rgba(20,20,20,0.66)', border: '1px solid var(--mc-ink-700)', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)', borderRadius: 'var(--radius-md)' }}>
+        <div className="mc-subservices" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', marginTop: '24px', padding: '24px', background: 'var(--mc-charcoal)', borderRadius: 'var(--radius-md)' }}>
           {t.services.sub2.map(([ic, txt]) => (
             <div key={txt} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <Icon name={ic} size={22} color="var(--accent-gold)" />

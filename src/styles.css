@@ -241,7 +241,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 
 /* Background videos: respect reduced-motion (poster/fallback color shows instead) */
 @media (prefers-reduced-motion: reduce) {
-  .mc-hero-video, .mc-servicios-video, .mc-testimonials-video { display: none; }
+  .mc-hero-video, .mc-testimonials-video { display: none; }
 }
 @media (max-width: 640px) {
   .mc-hero { padding: 84px 20px !important; }
