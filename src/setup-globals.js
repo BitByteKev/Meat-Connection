@@ -16,7 +16,6 @@ import {
 // Brand / logo / hero images (decoded from the former base64 globals)
 import mc_logo from './assets-img/mc_logo.webp'
 import mc_logo_ink from '../assets/meat_connection_black_text.webp'
-import mc_destacado from '../images/corte-destacado.webp'
 import brand_wagyu from './assets-img/mc_brand_wagyu.webp'
 import brand_jewel from './assets-img/mc_brand_jewel.png'
 import brand_kingriver from './assets-img/mc_brand_kingriver.png'
@@ -39,7 +38,6 @@ window.lucide = {
 
 window.MC_LOGO = mc_logo
 window.MC_LOGO_INK = mc_logo_ink
-window.MC_DESTACADO = mc_destacado
 window.MC_IMG = MC_IMG
 window.MC_IMAGES = MC_IMAGES
 window.MC_MARBLING = MC_MARBLING

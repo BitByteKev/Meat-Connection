@@ -208,7 +208,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .mc-hero{ padding:88px 20px !important; }
   .mc-pdp{ grid-template-columns:minmax(0,1fr) !important; gap:24px !important; }
   .mc-contact{ grid-template-columns:minmax(0,1fr) !important; gap:32px !important; }
-  .mc-showcase{ grid-template-columns:minmax(0,1fr) !important; gap:28px !important; padding:48px 20px !important; }
   .mc-foot{ grid-template-columns:1fr 1fr !important; gap:28px !important; }
   .mc-feature-head{ flex-direction:column !important; align-items:flex-start !important; gap:16px !important; }
   /* Let the design-system tab row wrap instead of overflowing the screen */

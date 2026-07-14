@@ -97,11 +97,6 @@ export const STRINGS = {
         { quote: 'Cortes trazables y de grado real. Volver a pedir por WhatsApp me toma diez segundos.', who: 'Comprador', biz: 'Carnicería gourmet · Monterrey' },
       ],
     },
-    showcase: {
-      eyebrow: 'Corte destacado', title: 'King River MB4-5',
-      sub: 'Wagyu australiano King River con marmoleo MB4-5 — equilibrio perfecto entre grasa y sabor a res. Jugoso, untuoso y versátil, rinde excelente en parrilla, sellado y cortes finos. Porcionado a tu medida y empacado al vacío.',
-      cta: 'Ver Catálogo', alt: 'King River MB4-5, wagyu australiano de marmoleo MB4-5, empacado al vacío',
-    },
     bestsellers: { eyebrow: 'Del Mostrador', title: 'Cortes Más Vendidos', seeAll: 'Ver Todo' },
     shop: { title: 'El Catálogo', count: '{n} cortes · mayoreo y menudeo', searchPlaceholder: 'Buscar corte…', noResultsFor: 'Sin resultados para "{q}".', noResults: 'Sin resultados.', clearSearch: 'Limpiar búsqueda' },
     footer: {
@@ -209,11 +204,6 @@ export const STRINGS = {
         { quote: "The cold chain has never failed and delivery times are exact. It's the wagyu supplier I trust for the hotel.", who: 'Food & Beverage Manager', biz: 'Luxury hotel · Los Cabos' },
         { quote: 'Traceable, truly graded cuts. Reordering on WhatsApp takes me ten seconds.', who: 'Buyer', biz: 'Gourmet butcher shop · Monterrey' },
       ],
-    },
-    showcase: {
-      eyebrow: 'Featured cut', title: 'King River MB4-5',
-      sub: 'Australian King River wagyu with MB4-5 marbling — the perfect balance of fat and beef flavor. Juicy, buttery and versatile, it performs beautifully on the grill, seared or thinly sliced. Portioned to your spec and vacuum-packed.',
-      cta: 'View Catalog', alt: 'King River MB4-5, Australian MB4-5 marbled wagyu, vacuum-packed',
     },
     bestsellers: { eyebrow: 'From the Counter', title: 'Best-Selling Cuts', seeAll: 'View All' },
     shop: { title: 'The Catalog', count: '{n} cuts · wholesale & retail', searchPlaceholder: 'Search cuts…', noResultsFor: 'No results for "{q}".', noResults: 'No results.', clearSearch: 'Clear search' },

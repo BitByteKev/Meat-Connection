@@ -861,7 +861,7 @@ function Footer({ onCategory, onAnchor }) {
   ];
   const linkStyle = { display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--mc-ink-600)', textDecoration: 'none', fontSize: '13px' };
   return (
-    <footer style={{ background: 'var(--mc-cream)', color: 'var(--text-body)', borderTop: '1px solid var(--border-default)' }}>
+    <footer style={{ background: 'var(--mc-cream)', color: 'var(--text-body)' }}>
       <div className="mc-foot" style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '56px 24px 32px', display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr 1fr', gap: '40px' }}>
         <div>
           <img src={window.MC_LOGO_INK} alt="Meat Connection" style={{ height: '32px', marginBottom: '16px' }} />
@@ -929,21 +929,31 @@ function Services() {
   const { Card } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
   return (
-    <section id="servicios" style={{ background: 'var(--surface-sunken)', scrollMarginTop: '72px' }}>
-      <Reveal style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '72px 24px' }}>
-        <SectionHead eyebrow={t.services.eyebrow} title={t.services.title} sub={t.services.sub} />
+    <section id="servicios" style={{ position: 'relative', overflow: 'hidden', background: 'var(--mc-charcoal)', scrollMarginTop: '72px' }}>
+      <video
+        className="mc-servicios-video"
+        src="/servicios-bg.mp4"
+        poster="/servicios-poster.jpg"
+        autoPlay muted loop playsInline preload="metadata"
+        aria-hidden="true"
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center bottom', zIndex: 0 }}
+      />
+      <div style={{ position: 'absolute', inset: 0, zIndex: 1,
+        background: 'linear-gradient(180deg, rgba(15,15,15,0.72) 0%, rgba(15,15,15,0.45) 55%, rgba(15,15,15,0.7) 100%)' }} />
+      <Reveal style={{ position: 'relative', zIndex: 2, maxWidth: 'var(--container-max)', margin: '0 auto', padding: '72px 24px' }}>
+        <SectionHead light eyebrow={t.services.eyebrow} title={t.services.title} sub={t.services.sub} />
         <div className="mc-services" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
           {t.services.main.map(([ic, title, d]) => (
-            <Card key={title} variant="default" style={{ padding: '28px' }}>
+            <Card key={title} variant="default" style={{ padding: '28px', background: 'rgba(20,20,20,0.66)', border: '1px solid var(--mc-ink-700)', boxShadow: 'none', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}>
               <div style={{ width: '52px', height: '52px', borderRadius: 'var(--radius-md)', background: 'var(--mc-red)', display: 'flex', alignItems: 'center', justifyContent: 'center', marginBottom: '18px' }}>
                 <Icon name={ic} size={26} color="#fff" />
               </div>
-              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '22px', color: 'var(--text-strong)' }}>{title}</div>
-              <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', lineHeight: 1.6, color: 'var(--text-muted)', margin: '10px 0 0' }}>{d}</p>
+              <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '22px', color: 'var(--mc-paper)' }}>{title}</div>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', lineHeight: 1.6, color: 'var(--mc-ink-200)', margin: '10px 0 0' }}>{d}</p>
             </Card>
           ))}
         </div>
-        <div className="mc-subservices" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', marginTop: '24px', padding: '24px', background: 'var(--mc-charcoal)', borderRadius: 'var(--radius-md)' }}>
+        <div className="mc-subservices" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '20px', marginTop: '24px', padding: '24px', background: 'rgba(20,20,20,0.66)', border: '1px solid var(--mc-ink-700)', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)', borderRadius: 'var(--radius-md)' }}>
           {t.services.sub2.map(([ic, txt]) => (
             <div key={txt} style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
               <Icon name={ic} size={22} color="var(--accent-gold)" />
@@ -1001,24 +1011,14 @@ function Partners() {
 function Clients() {
   const { t } = useLang();
   return (
-    <section id="clientes" style={{ position: 'relative', overflow: 'hidden', background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', scrollMarginTop: '72px' }}>
-      <video
-        className="mc-clientes-video"
-        src="/clientes-bg.mp4"
-        poster="/clientes-poster.jpg"
-        autoPlay muted loop playsInline preload="metadata"
-        aria-hidden="true"
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
-      />
-      <div style={{ position: 'absolute', inset: 0, zIndex: 1,
-        background: 'linear-gradient(180deg, rgba(15,15,15,0.82) 0%, rgba(15,15,15,0.62) 50%, rgba(15,15,15,0.82) 100%)' }} />
-      <Reveal style={{ position: 'relative', zIndex: 2, maxWidth: 'var(--container-max)', margin: '0 auto', padding: '72px 24px' }}>
-        <SectionHead light eyebrow={t.clients.eyebrow} title={t.clients.title} sub={t.clients.sub} />
+    <section id="clientes" style={{ background: 'var(--surface-page)', scrollMarginTop: '72px' }}>
+      <Reveal style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '72px 24px' }}>
+        <SectionHead eyebrow={t.clients.eyebrow} title={t.clients.title} sub={t.clients.sub} />
         <div className="mc-clients" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
           {t.clients.list.map(([ic, txt]) => (
-            <div key={txt} style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '20px', border: '1px solid var(--mc-ink-700)', borderRadius: 'var(--radius-md)', background: 'rgba(20,20,20,0.72)', backdropFilter: 'blur(3px)', WebkitBackdropFilter: 'blur(3px)' }}>
-              <Icon name={ic} size={24} color="var(--accent-gold)" />
-              <span style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--mc-paper)' }}>{txt}</span>
+            <div key={txt} style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '20px', border: '1px solid var(--border-subtle)', borderRadius: 'var(--radius-md)', background: 'var(--mc-bone)' }}>
+              <Icon name={ic} size={24} color="var(--accent-gold-ink)" />
+              <span style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--text-body)' }}>{txt}</span>
             </div>
           ))}
         </div>
@@ -1195,44 +1195,34 @@ function RevealImg({ src, alt, imgStyle = {}, frameStyle = {}, ...rest }) {
   );
 }
 
-/* ===== Paleta showcase ===== */
-function MarbleShowcase({ onShop }) {
-  const { Button } = window.MeatConnectionDesignSystem_3e7a26;
-  const { t } = useLang();
-  return (
-    <section style={{ background: 'var(--surface-page)' }}>
-      <div className="mc-showcase" style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '72px 24px', display: 'grid', gridTemplateColumns: '0.95fr 1.05fr', gap: '48px', alignItems: 'center' }}>
-        <Reveal>
-          <img src={window.MC_DESTACADO} alt={t.showcase.alt} loading="lazy" decoding="async"
-            style={{ width: '100%', height: 'auto', display: 'block', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-md)' }} />
-        </Reveal>
-        <div>
-          <SectionHead eyebrow={t.showcase.eyebrow} title={t.showcase.title} sub={t.showcase.sub} />
-          <Button variant="primary" size="lg" onClick={onShop} iconRight={<Icon name="ArrowRight" size={18} color="#fff" />}>{t.showcase.cta}</Button>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 /* ===== Testimonios / prueba social =====
    PLACEHOLDER — reemplaza estas citas con testimonios reales (con permiso) en src/i18n.jsx. */
 function Testimonials() {
   const { Card } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
   return (
-    <section style={{ background: 'var(--surface-sunken)' }}>
-      <Reveal style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '72px 24px' }}>
-        <SectionHead eyebrow={t.testimonials.eyebrow} title={t.testimonials.title} sub={t.testimonials.sub} />
+    <section style={{ position: 'relative', overflow: 'hidden', background: 'var(--mc-charcoal)' }}>
+      <video
+        className="mc-testimonials-video"
+        src="/testimonios-bg.mp4"
+        poster="/testimonios-poster.jpg"
+        autoPlay muted loop playsInline preload="metadata"
+        aria-hidden="true"
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
+      />
+      <div style={{ position: 'absolute', inset: 0, zIndex: 1,
+        background: 'linear-gradient(180deg, rgba(15,15,15,0.72) 0%, rgba(15,15,15,0.42) 55%, rgba(15,15,15,0.66) 100%)' }} />
+      <Reveal style={{ position: 'relative', zIndex: 2, maxWidth: 'var(--container-max)', margin: '0 auto', padding: '72px 24px' }}>
+        <SectionHead light eyebrow={t.testimonials.eyebrow} title={t.testimonials.title} sub={t.testimonials.sub} />
         <div className="mc-testimonials" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
           {t.testimonials.items.map((item, i) => (
-            <Card key={i} variant="default" style={{ padding: '28px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
-              <Icon name="Quote" size={26} color="var(--mc-red)" />
-              <div style={{ color: 'var(--mc-red)', letterSpacing: '2px', fontSize: '15px' }}>★★★★★</div>
-              <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.65, color: 'var(--text-body)', margin: 0, flex: 1 }}>“{item.quote}”</p>
-              <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '14px' }}>
-                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '14px', color: 'var(--text-strong)' }}>{item.who}</div>
-                <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '2px' }}>{item.biz}</div>
+            <Card key={i} variant="default" style={{ padding: '28px', display: 'flex', flexDirection: 'column', gap: '14px', background: 'rgba(20,20,20,0.66)', border: '1px solid var(--mc-ink-700)', boxShadow: 'none', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}>
+              <Icon name="Quote" size={26} color="var(--accent-gold)" />
+              <div style={{ color: 'var(--accent-gold)', letterSpacing: '2px', fontSize: '15px' }}>★★★★★</div>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.65, color: 'var(--mc-ink-100)', margin: 0, flex: 1 }}>“{item.quote}”</p>
+              <div style={{ borderTop: '1px solid var(--mc-ink-700)', paddingTop: '14px' }}>
+                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '14px', color: 'var(--mc-paper)' }}>{item.who}</div>
+                <div style={{ fontSize: '13px', color: 'var(--mc-ink-200)', marginTop: '2px' }}>{item.biz}</div>
               </div>
             </Card>
           ))}
@@ -1303,7 +1293,6 @@ function App() {
       {view === 'home' && (<>
         <Hero onShop={() => nav('shop')} onQuote={quote} />
         <Services />
-        <MarbleShowcase onShop={() => nav('shop')} />
         <Reveal style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '64px 24px' }}>
           <div className="mc-feature-head" style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', marginBottom: '28px' }}>
             <div>
