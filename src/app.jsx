@@ -1001,12 +1001,22 @@ function Partners() {
 function Clients() {
   const { t } = useLang();
   return (
-    <section id="clientes" style={{ background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', scrollMarginTop: '72px' }}>
-      <Reveal style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '72px 24px' }}>
+    <section id="clientes" style={{ position: 'relative', overflow: 'hidden', background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', scrollMarginTop: '72px' }}>
+      <video
+        className="mc-clientes-video"
+        src="/clientes-bg.mp4"
+        poster="/clientes-poster.jpg"
+        autoPlay muted loop playsInline preload="metadata"
+        aria-hidden="true"
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
+      />
+      <div style={{ position: 'absolute', inset: 0, zIndex: 1,
+        background: 'linear-gradient(180deg, rgba(15,15,15,0.82) 0%, rgba(15,15,15,0.62) 50%, rgba(15,15,15,0.82) 100%)' }} />
+      <Reveal style={{ position: 'relative', zIndex: 2, maxWidth: 'var(--container-max)', margin: '0 auto', padding: '72px 24px' }}>
         <SectionHead light eyebrow={t.clients.eyebrow} title={t.clients.title} sub={t.clients.sub} />
         <div className="mc-clients" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
           {t.clients.list.map(([ic, txt]) => (
-            <div key={txt} style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '20px', border: '1px solid var(--mc-ink-700)', borderRadius: 'var(--radius-md)', background: 'var(--mc-ink-900)' }}>
+            <div key={txt} style={{ display: 'flex', alignItems: 'center', gap: '14px', padding: '20px', border: '1px solid var(--mc-ink-700)', borderRadius: 'var(--radius-md)', background: 'rgba(20,20,20,0.72)', backdropFilter: 'blur(3px)', WebkitBackdropFilter: 'blur(3px)' }}>
               <Icon name={ic} size={24} color="var(--accent-gold)" />
               <span style={{ fontFamily: 'var(--font-body)', fontSize: '15px', color: 'var(--mc-paper)' }}>{txt}</span>
             </div>
