@@ -3816,10 +3816,11 @@
   },
   {
     "id": "backribUs__gen",
-    "cat": "us",
+    "cat": "au",
     "tone": "charcoal",
     "images": [
-      "placeholder-coming-soon.webp"
+      "whatsapp-image-2026-07-15-at-12-00-25-mrmjvcql6476.webp",
+      "whatsapp-image-2026-07-15-at-12-00-25-1-mrmjveb88899.webp"
     ],
     "marbling": {
       "system": "aus",
@@ -3854,20 +3855,20 @@
       ]
     },
     "badge": {
-      "es": "Cross Americano",
-      "en": "American Cross"
+      "es": "Cross Australiano",
+      "en": "Australiano Cross"
     },
     "es": {
-      "name": "Meaty Back Rib",
-      "description": "Meaty back rib — costillas de lomo con buena cobertura de carne entre los huesos.\n\nWagyu cross americano, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nPara el horno o el ahumador, con glaseado o salsa BBQ.",
-      "origin": "Origen Abatti Ranch\n\nWagyu cross americano (EE.UU.), criado con altos estándares de alimentación y bienestar. Combina genética wagyu con la robustez de la res americana para un sabor intenso y versátil.",
-      "cooking": "Recomendaciones de cocción\n\nHornea/ahúma a 150 °C 2.5–3 h. Glasea en los últimos 20 min."
+      "name": "Short Rib Wagyu Australiano",
+      "description": "Costilla de res con hueso, jugosa y llena de sabor profundo.\n\nEste Short Rib de Wagyu Australiano combina la untuosidad característica del wagyu con la textura firme y el intenso sabor a carne de la costilla. Su marmoleo medio se derrite lentamente durante la cocción, dejando cada bocado suave y sabroso.\n\nUn corte ideal para preparaciones lentas que premian la paciencia con una terneza que se deshace.",
+      "origin": "Wagyu Australiano. Ganado de raza wagyu criado en Australia, reconocido por su marmoleo consistente y sabor equilibrado.",
+      "cooking": "Perfecto para cocción lenta y a baja temperatura.\n\n• Cocción lenta al horno o estofado: 3 a 4 horas a fuego bajo hasta que la carne se separe del hueso.\n• BBQ o ahumado: mantén temperatura constante de 110–120 °C por varias horas.\n• Sellado previo: dora bien por todos lados para concentrar los jugos.\n• Deja reposar unos minutos antes de servir para conservar la jugosidad."
     },
     "en": {
-      "name": "Meaty Back Rib Wagyu Cross",
-      "description": "Meaty back ribs — loin ribs with good meat coverage between the bones.\n\nAmerican wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nFor the oven or smoker, with a glaze or BBQ sauce.",
-      "origin": "American wagyu cross from  (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
-      "cooking": "Cooking recommendations\n\nBake/smoke at 150 °C for 2.5–3 h. Glaze in the last 20 min."
+      "name": "Short Rib Australian Wagyu",
+      "description": "Bone-in beef rib, juicy and packed with deep flavor.\n\nThis Australian Wagyu Short Rib blends the signature richness of wagyu with the firm texture and intense beefy taste of the rib. Its medium marbling melts slowly as it cooks, leaving every bite tender and flavorful.\n\nAn ideal cut for slow preparations that reward patience with meat that falls off the bone.",
+      "origin": "Australian Wagyu. Wagyu-breed cattle raised in Australia, known for consistent marbling and a well-balanced flavor.",
+      "cooking": "Perfect for slow, low-temperature cooking.\n\n• Slow braise or oven: 3 to 4 hours on low heat until the meat pulls away from the bone.\n• BBQ or smoking: keep a steady 110–120 °C for several hours.\n• Pre-sear: brown well on all sides to lock in the juices.\n• Let it rest a few minutes before serving to keep it juicy."
     }
   },
   {
