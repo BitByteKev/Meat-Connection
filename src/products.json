@@ -42,7 +42,8 @@
     "cat": "jp",
     "tone": "kraft",
     "images": [
-      "whatsapp-image-2026-07-28-at-15-03-19-ms57d5ah6848.webp"
+      "whatsapp-image-2026-07-28-at-15-03-19-ms57d5ah6848.webp",
+      "whatsapp-image-2026-07-28-at-15-31-59-ms58e1ez2482.webp"
     ],
     "marbling": {
       "system": "bms",
@@ -50,7 +51,7 @@
         {
           "lo": 10,
           "hi": 12,
-          "image": "FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp",
+          "image": "whatsapp-image-2026-07-28-at-15-03-19-ms57d5ah6848.webp",
           "label": "10-12",
           "sku": "PLUS TENDERLOIN",
           "mayoreo": 2200,
@@ -59,7 +60,7 @@
         {
           "lo": 12,
           "hi": 12,
-          "image": "FILETE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-2-e1749645167193.webp",
+          "image": "whatsapp-image-2026-07-28-at-15-03-19-ms57d5ah6848.webp",
           "label": "12",
           "sku": "3",
           "mayoreo": 4650,
