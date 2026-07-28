@@ -4190,5 +4190,29 @@
       "origin": "Australian wagyu cross from Margaret River Wagyu Beef, Western Australia. Bone-in shortloin cut.",
       "cooking": "Let it come to room temperature for 30–40 min before cooking.\n\n• Sear over high heat on a grill or cast-iron skillet, 2–3 min per side to brown the fat.\n• Lower the heat or move to an indirect zone until medium (52–55 °C center).\n• Season with salt and pepper at the end to avoid burning the salt.\n\nRest 5–8 min before slicing to keep the juices. Given the high marbling, avoid cooking past medium."
     }
+  },
+  {
+    "id": "Rib-eye-lip-off-6-7-wagyu-cross-americano-abatti-ranch",
+    "cat": "us",
+    "tone": "charcoal",
+    "images": [
+      "whatsapp-image-2026-07-28-at-16-23-59-ms5aa6ta9829.webp"
+    ],
+    "badge": {
+      "es": null,
+      "en": null
+    },
+    "es": {
+      "name": "Rib Eye Lip Off Wagyu Cross Americano",
+      "description": "El equilibrio perfecto entre la intensidad del Angus y la untuosidad del Wagyu en un solo corte.\n\nEste Rib Eye lip off proviene de un cruce Wagyu americano de Abbatti Ranch, con la porción de la tapa retirada para dejar el ojo del corte limpio y parejo. El resultado es una carne de vetas finas y bien distribuidas que se derriten al calor, aportando jugosidad y un sabor profundo.\n\nUn corte pensado para quienes buscan la experiencia del Wagyu con el carácter robusto de la genética americana.",
+      "origin": "Cruce Wagyu americano (Wagyu × Angus) de Abbatti Ranch, Estados Unidos. Presentación Rib Eye lip off, calibre 6-7. Genética que combina el marmoleo del Wagyu con la estructura del ganado americano.",
+      "cooking": "Atempera el corte 30-40 minutos antes de cocinar.\n\nSella en parrilla o sartén de hierro muy caliente 2-3 minutos por lado para formar costra, luego baja el calor para terminar. Por su marmoleo alto, cuida el exceso de grasa liberada.\n\nBusca un término medio-rojo o medio para aprovechar la untuosidad. Deja reposar 5 minutos antes de cortar. Sal en escamas al final."
+    },
+    "en": {
+      "name": "Rib Eye Lip Off American Wagyu Cross",
+      "description": "The perfect balance between the boldness of Angus and the buttery richness of Wagyu in a single cut.\n\nThis lip off Rib Eye comes from an American Wagyu cross at Abbatti Ranch, with the cap removed to leave a clean, even eye of the ribeye. The fine, well-distributed marbling melts under heat, delivering juiciness and deep flavor.\n\nA cut made for those seeking the Wagyu experience with the robust character of American genetics.",
+      "origin": "American Wagyu cross (Wagyu × Angus) from Abbatti Ranch, United States. Lip off Rib Eye presentation, size 6-7. Genetics that combine Wagyu marbling with the structure of American cattle.",
+      "cooking": "Let the steak come to room temperature 30-40 minutes before cooking.\n\nSear on a very hot grill or cast-iron skillet for 2-3 minutes per side to build a crust, then lower the heat to finish. Given its high marbling, watch for excess rendered fat.\n\nAim for medium-rare to medium to enjoy its richness. Rest for 5 minutes before slicing. Finish with flaky salt."
+    }
   }
 ]
