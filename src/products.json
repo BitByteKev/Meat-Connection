@@ -248,6 +248,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": null,
       "en": null
@@ -2343,62 +2344,6 @@
     }
   },
   {
-    "id": "ribeyehuesoKr__gen",
-    "cat": "au",
-    "tone": "red",
-    "images": [
-      "placeholder-coming-soon.webp"
-    ],
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "lo": 0,
-          "hi": 3,
-          "image": "placeholder-coming-soon.webp",
-          "label": "0-3",
-          "sku": "448783",
-          "mayoreo": 745,
-          "menudeo": 1045
-        },
-        {
-          "lo": 6,
-          "hi": 7,
-          "image": "placeholder-coming-soon.webp",
-          "label": "6-7",
-          "sku": "448842",
-          "mayoreo": 1250,
-          "menudeo": 1550
-        },
-        {
-          "lo": 8,
-          "hi": 10,
-          "image": "placeholder-coming-soon.webp",
-          "label": "8+",
-          "sku": "RBHMAS",
-          "mayoreo": 1550,
-          "menudeo": 1850
-        }
-      ]
-    },
-    "badge": {
-      "es": "· Australia",
-      "en": "· Australia"
-    },
-    "es": {
-      "name": "Rib Eye c/Hueso",
-      "description": "Rib eye con hueso (export rib) — el hueso aporta sabor y una presentación imponente.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nPieza de impacto para asadores y mesas compartidas.",
-      "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
-      "cooking": "Recomendaciones de cocción\n\nSella y termina a calor indirecto/horno a 140 °C hasta 54–57 °C al centro. Reposa 6–8 min."
-    },
-    "en": {
-      "name": "Bone-in Rib Eye Export Rib Wagyu",
-      "description": "Bone-in rib eye (export rib) — the bone adds flavor and a striking presentation.\n\n Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nA showpiece for grill masters and shared tables.",
-      "origin": "Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
-      "cooking": "Cooking recommendations\n\nSear and finish over indirect heat or a 140 °C oven until 54–57 °C at the center. Rest 6–8 min."
-    }
-  },
-  {
     "id": "sirloinKr__gen",
     "cat": "au",
     "tone": "charcoal",
@@ -3138,44 +3083,6 @@
     }
   },
   {
-    "id": "ny-ribeye-kobe",
-    "cat": "jp",
-    "tone": "cream",
-    "images": [
-      "placeholder-coming-soon.webp"
-    ],
-    "marbling": {
-      "system": "bms",
-      "variants": [
-        {
-          "lo": 10,
-          "hi": 12,
-          "image": "",
-          "label": "10-12",
-          "sku": "NYKOBE",
-          "mayoreo": 6500,
-          "menudeo": 6800
-        }
-      ]
-    },
-    "badge": {
-      "es": "Kobe · Japón",
-      "en": "Kobe · Japan"
-    },
-    "es": {
-      "name": "New York / Rib Eye Wagyu Kobe",
-      "description": "Lomo de auténtico Kobe: disponible como New York o Rib Eye según pieza. Marmoleo BMS 10–12 que se funde a temperatura ambiente.\n\nLa experiencia más exclusiva de la carne japonesa, por kilo.",
-      "origin": "Origen Kobe, Japón\n\nAuténtica carne de Kobe: wagyu Tajima criado en la prefectura de Hyogo bajo el certificado oficial. La denominación más exclusiva del mundo de la carne.",
-      "cooking": "Recomendaciones de cocción\n\nAtempera 30 min, seca la superficie y sella a fuego alto 2–3 min por lado. Término medio (54–56 °C). Reposa 5 min antes de cortar."
-    },
-    "en": {
-      "name": "New York / Rib Eye Kobe Wagyu",
-      "description": "Genuine Kobe loin: available as New York or Rib Eye depending on the piece. BMS 10–12 marbling that melts at room temperature.\n\nThe most exclusive Japanese beef experience, by the kilo.",
-      "origin": "Kobe, Japan origin\n\nAuthentic Kobe beef: Tajima wagyu raised in Hyogo prefecture under official certification. The most exclusive designation in the world of beef.",
-      "cooking": "Cooking recommendations\n\nTemper 30 min, pat dry and sear over high heat 2–3 min per side. Medium (54–56 °C). Rest 5 min before slicing."
-    }
-  },
-  {
     "id": "arrachera-inside-a5",
     "cat": "jp",
     "tone": "charcoal",
@@ -3880,53 +3787,6 @@
     }
   },
   {
-    "id": "ribeye-purebred",
-    "cat": "au",
-    "tone": "kraft",
-    "images": [
-      "placeholder-coming-soon.webp"
-    ],
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "lo": 8,
-          "hi": 9,
-          "image": "",
-          "label": "8-9",
-          "sku": "559425",
-          "mayoreo": 2000,
-          "menudeo": 2300
-        },
-        {
-          "lo": 9,
-          "hi": 10,
-          "image": "",
-          "label": "9+",
-          "sku": "559427",
-          "mayoreo": 2300,
-          "menudeo": 2600
-        }
-      ]
-    },
-    "badge": {
-      "es": "Purebred · Australia",
-      "en": "Purebred · Australia"
-    },
-    "es": {
-      "name": "Rib Eye Cube Roll Wagyu Purebred",
-      "description": "Rib eye purebred: el corte más popular del wagyu con marmoleo 8-9 y 9+ de genética casi pura.\n\nJugosidad y sabor de gama alta en cada steak.",
-      "origin": "Origen Australia · Purebred\n\nWagyu purebred australiano (93 %+ genética wagyu). Marmoleo alto y consistente, crianza de exportación y trazabilidad completa.",
-      "cooking": "Recomendaciones de cocción\n\nAtempera 30 min, seca la superficie y sella a fuego alto 2–3 min por lado. Término medio (54–56 °C). Reposa 5 min antes de cortar."
-    },
-    "en": {
-      "name": "Rib Eye Cube Roll Wagyu Purebred",
-      "description": "Purebred rib eye: wagyu’s most popular cut with 8-9 and 9+ near-pure-genetics marbling.\n\nTop-range juiciness and flavor in every steak.",
-      "origin": "Australia origin · Purebred\n\nAustralian purebred wagyu (93 %+ wagyu genetics). High, consistent marbling, export-grade husbandry and full traceability.",
-      "cooking": "Cooking recommendations\n\nTemper 30 min, pat dry and sear over high heat 2–3 min per side. Medium (54–56 °C). Rest 5 min before slicing."
-    }
-  },
-  {
     "id": "tomahawk-purebred",
     "cat": "au",
     "tone": "cream",
@@ -3998,53 +3858,6 @@
     "en": {
       "name": "Premium American Wagyu New York",
       "description": "Premium-line 8+ American wagyu New York: extended grain-fed striploin with intense American-style marbling.\n\nThe classic steakhouse cut at its highest tier.",
-      "origin": "USA origin\n\nPremium American wagyu from Abatti Ranch, California. Extended grain-feeding program: intense marbling and export-grade consistency.",
-      "cooking": "Cooking recommendations\n\nTemper 30 min, pat dry and sear over high heat 2–3 min per side. Medium (54–56 °C). Rest 5 min before slicing."
-    }
-  },
-  {
-    "id": "ribeye-americano",
-    "cat": "us",
-    "tone": "kraft",
-    "images": [
-      "placeholder-coming-soon.webp"
-    ],
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "lo": 4,
-          "hi": 5,
-          "image": "",
-          "label": "4-5",
-          "sku": "20",
-          "mayoreo": 1300,
-          "menudeo": 1600
-        },
-        {
-          "lo": 8,
-          "hi": 10,
-          "image": "",
-          "label": "8+",
-          "sku": "25",
-          "mayoreo": 2250,
-          "menudeo": 2550
-        }
-      ]
-    },
-    "badge": {
-      "es": "Abatti Ranch · USA",
-      "en": "Abatti Ranch · USA"
-    },
-    "es": {
-      "name": "Rib Eye Wagyu Americano Premium",
-      "description": "Rib eye wagyu americano línea premium: disponible en marmoleo 4-5 y 8+ de crianza extendida con grano.\n\nSabor profundo y jugosidad de rancho californiano.",
-      "origin": "Origen Estados Unidos\n\nWagyu americano premium de Abatti Ranch, California. Programa de crianza con grano de larga duración: marmoleo intenso y consistencia de exportación.",
-      "cooking": "Recomendaciones de cocción\n\nAtempera 30 min, seca la superficie y sella a fuego alto 2–3 min por lado. Término medio (54–56 °C). Reposa 5 min antes de cortar."
-    },
-    "en": {
-      "name": "Premium American Wagyu Rib Eye",
-      "description": "Premium-line American wagyu rib eye: available in 4-5 and 8+ marbling from extended grain feeding.\n\nDeep flavor and California-ranch juiciness.",
       "origin": "USA origin\n\nPremium American wagyu from Abatti Ranch, California. Extended grain-feeding program: intense marbling and export-grade consistency.",
       "cooking": "Cooking recommendations\n\nTemper 30 min, pat dry and sear over high heat 2–3 min per side. Medium (54–56 °C). Rest 5 min before slicing."
     }
@@ -4210,62 +4023,6 @@
       "name": "Top Round Wagyu Cross",
       "description": "Wagyu cross 8-9+ top round: lean, high-yield and wagyu-infiltrated.\n\nMilanesas, thin-cut asado and fine shredding.",
       "origin": "Australia origin\n\nAustralian wagyu cross from export ranches. Wagyu genetics deliver marbling and juiciness far above standard beef, at an accessible price.",
-      "cooking": "Cooking recommendations\n\nTemper 30 min, pat dry and sear over high heat 2–3 min per side. Medium (54–56 °C). Rest 5 min before slicing."
-    }
-  },
-  {
-    "id": "ribeye-lipoff-cross",
-    "cat": "us",
-    "tone": "charcoal",
-    "images": [
-      "placeholder-coming-soon.webp"
-    ],
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "lo": 4,
-          "hi": 5,
-          "image": "",
-          "label": "4-5",
-          "sku": "81285-1",
-          "mayoreo": 990,
-          "menudeo": 1290
-        },
-        {
-          "lo": 6,
-          "hi": 7,
-          "image": "",
-          "label": "6-7",
-          "sku": "71285-1",
-          "mayoreo": 1400,
-          "menudeo": 1700
-        },
-        {
-          "lo": 8,
-          "hi": 10,
-          "image": "",
-          "label": "8+",
-          "sku": "61285-1",
-          "mayoreo": 1750,
-          "menudeo": 2050
-        }
-      ]
-    },
-    "badge": {
-      "es": "Wagyu Cross · USA",
-      "en": "Wagyu Cross · USA"
-    },
-    "es": {
-      "name": "Rib Eye Lip Off Wagyu Cross",
-      "description": "Rib eye lip off de wagyu cross americano: el ojo del rib eye limpio, sin tapa externa — pura zona central marmoleada.\n\nSteaks parejos de porción exacta.",
-      "origin": "Origen Estados Unidos\n\nWagyu cross americano de ranchos como Abatti Ranch, California. Crianza con grano que produce marmoleo abundante y sabor profundo.",
-      "cooking": "Recomendaciones de cocción\n\nAtempera 30 min, seca la superficie y sella a fuego alto 2–3 min por lado. Término medio (54–56 °C). Reposa 5 min antes de cortar."
-    },
-    "en": {
-      "name": "Rib Eye Lip Off Wagyu Cross",
-      "description": "American wagyu cross lip-off rib eye: the clean rib eye center, no outer lip — pure marbled eye.\n\nEven, precisely portioned steaks.",
-      "origin": "USA origin\n\nAmerican wagyu cross from ranches like Abatti Ranch, California. Grain feeding produces abundant marbling and deep flavor.",
       "cooking": "Cooking recommendations\n\nTemper 30 min, pat dry and sear over high heat 2–3 min per side. Medium (54–56 °C). Rest 5 min before slicing."
     }
   },
