@@ -593,6 +593,7 @@
     "cat": "mackas",
     "tone": "charcoal",
     "images": [
+      "whatsapp-image-2026-07-28-at-14-51-15-ms56xnyc1357.webp",
       "new-york-black-angus.webp"
     ],
     "marbling": {
@@ -601,7 +602,7 @@
         {
           "lo": 2,
           "hi": 9,
-          "image": "new-york-black-angus.webp",
+          "image": "",
           "label": "2+",
           "sku": "390186",
           "mayoreo": 600,
@@ -610,7 +611,7 @@
         {
           "lo": 4,
           "hi": 9,
-          "image": "new-york-black-angus.webp",
+          "image": "",
           "label": "4+",
           "sku": "390289",
           "mayoreo": 960,
@@ -619,7 +620,7 @@
         {
           "lo": 5,
           "hi": 9,
-          "image": "new-york-black-angus.webp",
+          "image": "",
           "label": "5+",
           "sku": "NYOCONNOR",
           "mayoreo": 600,
@@ -628,7 +629,7 @@
         {
           "lo": 6,
           "hi": 9,
-          "image": "new-york-black-angus.webp",
+          "image": "",
           "label": "6+",
           "sku": "390292",
           "mayoreo": 1050,
