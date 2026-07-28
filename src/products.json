@@ -269,7 +269,6 @@
     "cat": "au",
     "tone": "charcoal",
     "images": [
-      "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
       "wagyu-australiano-newyork-89-1.webp",
       "wagyu-australiano-newyork-89-2.webp",
       "wagyu-australiano-newyork-89-3.webp",
@@ -277,6 +276,7 @@
       "wagyu-australiano-newyork-89-5.webp",
       "lgrow-striploin-top.webp",
       "lgrow-striploin-side.webp",
+      "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
       "lgrow-striploin-hero.webp",
       "whatsapp-image-2026-07-02-at-15-05-24-mr44u6z84731.webp"
     ],
@@ -286,7 +286,7 @@
         {
           "lo": 2,
           "hi": 3,
-          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+          "image": "wagyu-australiano-newyork-89-1.webp",
           "label": "2-3",
           "sku": "448721",
           "mayoreo": 695,
@@ -295,7 +295,7 @@
         {
           "lo": 4,
           "hi": 5,
-          "image": "whatsapp-image-2026-07-02-at-15-05-24-mr44u6z84731.webp",
+          "image": "wagyu-australiano-newyork-89-2.webp",
           "label": "4-5",
           "sku": "8",
           "mayoreo": 1700,
@@ -304,7 +304,7 @@
         {
           "lo": 6,
           "hi": 7,
-          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+          "image": "wagyu-australiano-newyork-89-3.webp",
           "label": "6-7",
           "sku": "448704",
           "mayoreo": 1300,
@@ -313,7 +313,7 @@
         {
           "lo": 8,
           "hi": 9,
-          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+          "image": "wagyu-australiano-newyork-89-4.webp",
           "label": "8-9",
           "sku": "NYMR",
           "mayoreo": 1960,
@@ -322,7 +322,7 @@
         {
           "lo": 8,
           "hi": 99,
-          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+          "image": "wagyu-australiano-newyork-89-5.webp",
           "label": "8+",
           "sku": "68035-1",
           "mayoreo": 1580,
@@ -331,7 +331,7 @@
         {
           "lo": 9,
           "hi": 99,
-          "image": "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
+          "image": "",
           "label": "9+",
           "sku": "416171",
           "mayoreo": 2100,
