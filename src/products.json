@@ -1188,6 +1188,7 @@
     "cat": "mackas",
     "tone": "cream",
     "images": [
+      "whatsapp-image-2026-07-28-at-14-48-41-ms56w2k72802.webp",
       "lgrow-pe-brisket-top.webp",
       "lgrow-pe-brisket-side.webp"
     ],
@@ -1197,7 +1198,7 @@
         {
           "lo": 4,
           "hi": 9,
-          "image": "lgrow-pe-brisket-top.webp",
+          "image": "",
           "label": "4+",
           "sku": "390291",
           "mayoreo": 325,
@@ -1205,7 +1206,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": "Black Angus",
       "en": "Black Angus"
