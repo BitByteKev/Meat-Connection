@@ -3376,44 +3376,6 @@
     }
   },
   {
-    "id": "tomahawk-fullblood",
-    "cat": "au",
-    "tone": "charcoal",
-    "images": [
-      "placeholder-coming-soon.webp"
-    ],
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "lo": 9,
-          "hi": 10,
-          "image": "",
-          "label": "9+",
-          "sku": "448775",
-          "mayoreo": 2000,
-          "menudeo": 2300
-        }
-      ]
-    },
-    "badge": {
-      "es": "Fullblood · Australia",
-      "en": "Fullblood · Australia"
-    },
-    "es": {
-      "name": "Tomahawk Wagyu Fullblood",
-      "description": "Tomahawk fullblood 9+: rib eye en hueso largo francés con marmoleo de la más alta gama.\n\nLa pieza central de cualquier parrillada.",
-      "origin": "Origen Australia · Fullblood\n\nWagyu fullblood: genética japonesa 100 % pura criada en Australia. Marmoleo 9+ de la más alta gama, terminado con grano y totalmente trazable.",
-      "cooking": "Recomendaciones de cocción\n\nSella por todos lados y termina indirecto o al horno a 120 °C hasta 54–56 °C interno. Reposa 8–10 min."
-    },
-    "en": {
-      "name": "Tomahawk Wagyu Fullblood",
-      "description": "Fullblood 9+ tomahawk: long-bone frenched rib eye with top-of-the-range marbling.\n\nThe centerpiece of any cookout.",
-      "origin": "Australia origin · Fullblood\n\nFullblood wagyu: 100 % pure Japanese genetics raised in Australia. Top-tier 9+ marbling, grain-finished and fully traceable.",
-      "cooking": "Cooking recommendations\n\nSear all over, then finish indirect or in a 120 °C oven to 54–56 °C internal. Rest 8–10 min."
-    }
-  },
-  {
     "id": "vacio-fullblood",
     "cat": "au",
     "tone": "kraft",
@@ -3497,44 +3459,6 @@
       "description": "Purebred 9+ tenderloin: the most tender cut of beef with near-pure wagyu marbling.\n\nRestaurant-grade medallions and tournedos.",
       "origin": "Australia origin · Purebred\n\nAustralian purebred wagyu (93 %+ wagyu genetics). High, consistent marbling, export-grade husbandry and full traceability.",
       "cooking": "Cooking recommendations\n\nTemper 30 min, pat dry and sear over high heat 2–3 min per side. Medium (54–56 °C). Rest 5 min before slicing."
-    }
-  },
-  {
-    "id": "tomahawk-purebred",
-    "cat": "au",
-    "tone": "cream",
-    "images": [
-      "placeholder-coming-soon.webp"
-    ],
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "lo": 9,
-          "hi": 10,
-          "image": "",
-          "label": "9+",
-          "sku": "565289",
-          "mayoreo": 1800,
-          "menudeo": 2100
-        }
-      ]
-    },
-    "badge": {
-      "es": "Purebred · Australia",
-      "en": "Purebred · Australia"
-    },
-    "es": {
-      "name": "Tomahawk Wagyu Purebred",
-      "description": "Tomahawk purebred 9+: presencia imponente y marmoleo alto de genética casi pura.\n\nPara compartir — y presumir.",
-      "origin": "Origen Australia · Purebred\n\nWagyu purebred australiano (93 %+ genética wagyu). Marmoleo alto y consistente, crianza de exportación y trazabilidad completa.",
-      "cooking": "Recomendaciones de cocción\n\nSella por todos lados y termina indirecto o al horno a 120 °C hasta 54–56 °C interno. Reposa 8–10 min."
-    },
-    "en": {
-      "name": "Tomahawk Wagyu Purebred",
-      "description": "Purebred 9+ tomahawk: commanding presence and high near-pure-genetics marbling.\n\nMade for sharing — and showing off.",
-      "origin": "Australia origin · Purebred\n\nAustralian purebred wagyu (93 %+ wagyu genetics). High, consistent marbling, export-grade husbandry and full traceability.",
-      "cooking": "Cooking recommendations\n\nSear all over, then finish indirect or in a 120 °C oven to 54–56 °C internal. Rest 8–10 min."
     }
   },
   {
@@ -4012,45 +3936,6 @@
       "description": "Black Angus 3+ shortloin T-bone: New York and tenderloin on one bone.\n\nTwo cuts, one cookout.",
       "origin": "Australia origin\n\nAustralian Black Angus from programs like Macka’s, Jack’s Creek and Angus Pure: pasture-raised, grain-finished beef graded by Marble Score.",
       "cooking": "Cooking recommendations\n\nTemper 30 min, pat dry and sear over high heat 2–3 min per side. Medium (54–56 °C). Rest 5 min before slicing."
-    }
-  },
-  {
-    "id": "tomahawk-usda",
-    "cat": "mackas",
-    "tone": "charcoal",
-    "images": [
-      "placeholder-coming-soon.webp"
-    ],
-    "marbling": {
-      "system": "angus",
-      "variants": [
-        {
-          "lo": 0,
-          "hi": 0,
-          "image": "",
-          "label": "Choice",
-          "sku": "TMHUSA",
-          "mayoreo": 735,
-          "menudeo": 1035
-        }
-      ]
-    },
-    "sku": "TMHUSA",
-    "badge": {
-      "es": "USDA Choice · USA",
-      "en": "USDA Choice · USA"
-    },
-    "es": {
-      "name": "Tomahawk Black Angus USDA Choice",
-      "description": "Tomahawk de Black Angus americano USDA Choice: presencia de estaca con precio accesible.\n\nEl centro de mesa del asado.",
-      "origin": "Origen Estados Unidos\n\nBlack Angus americano con clasificación USDA Choice: marmoleo moderado, terneza confiable y el sabor clásico del angus de grano.",
-      "cooking": "Recomendaciones de cocción\n\nSella por todos lados y termina indirecto o al horno a 120 °C hasta 54–56 °C interno. Reposa 8–10 min."
-    },
-    "en": {
-      "name": "Tomahawk Black Angus USDA Choice",
-      "description": "American Black Angus USDA Choice tomahawk: showpiece presence at an accessible price.\n\nThe centerpiece of the cookout.",
-      "origin": "USA origin\n\nAmerican Black Angus graded USDA Choice: moderate marbling, reliable tenderness and the classic flavor of grain-fed angus.",
-      "cooking": "Cooking recommendations\n\nSear all over, then finish indirect or in a 120 °C oven to 54–56 °C internal. Rest 8–10 min."
     }
   },
   {
