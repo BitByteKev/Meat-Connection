@@ -6308,5 +6308,29 @@
       "origin": "Wagyu of Australian origin. Flank cut, known for its long grain and concentrated flavor.",
       "cooking": "Let the meat come to room temperature before cooking.\n\n• Sear over high heat on the grill or skillet, 2 to 3 minutes per side.\n• Aim for medium or medium-rare to keep it juicy.\n• Rest for 4 to 5 minutes before slicing.\n• Always slice against the grain for maximum tenderness."
     }
+  },
+  {
+    "id": "SHORTLOIN-MARGARET-RIVER-8-9-WAGYU-CROSS-AUSTRALIANO-MR",
+    "cat": "au",
+    "tone": "cream",
+    "images": [
+      "whatsapp-image-2026-07-28-at-09-38-05-ms4vsgu26291.webp"
+    ],
+    "badge": {
+      "es": null,
+      "en": null
+    },
+    "es": {
+      "name": "Shortloin Wagyu Australiano",
+      "description": "El corazón del lomo, con un marmoleo intenso que se funde en cada bocado.\n\nEl Short Loin es una de las secciones más nobles del animal, de donde nacen los cortes más codiciados. Este Wagyu Cross australiano de la región de Margaret River ofrece una grasa fina y bien distribuida, con un marmoleo de nivel 8-9 que garantiza una experiencia jugosa y untuosa.\n\nUna pieza versátil y generosa, ideal para porcionar en casa o llevar tu parrilla a otro nivel.",
+      "origin": "Wagyu Cross australiano de la región de Margaret River, Australia Occidental. Marmoleo (marble score) 8-9, reflejo de una alimentación cuidada y de la genética Wagyu cruzada.",
+      "cooking": "Deja atemperar la carne fuera del refrigerador entre 30 y 45 minutos antes de cocinar.\n\nSella a fuego alto en sartén de hierro o parrilla bien caliente, 2 a 3 minutos por lado según el grosor, buscando un término medio-rojo (medium-rare) para aprovechar el marmoleo.\n\nDeja reposar de 5 a 8 minutos antes de cortar. Sazona con sal en escamas justo al servir; la grasa aporta suficiente sabor por sí sola."
+    },
+    "en": {
+      "name": "Shortloin Australian Wagyu",
+      "description": "The heart of the loin, with intense marbling that melts in every bite.\n\nThe Short Loin is one of the noblest sections of the animal, home to the most sought-after cuts. This Australian Wagyu Cross from the Margaret River region offers fine, well-distributed fat, with a marble score of 8-9 that guarantees a juicy, buttery experience.\n\nA versatile and generous piece, perfect for portioning at home or taking your grill to the next level.",
+      "origin": "Australian Wagyu Cross from the Margaret River region, Western Australia. Marble score 8-9, reflecting careful feeding and crossed Wagyu genetics.",
+      "cooking": "Let the meat come to room temperature for 30 to 45 minutes before cooking.\n\nSear over high heat in a cast-iron pan or on a hot grill, 2 to 3 minutes per side depending on thickness, aiming for medium-rare to make the most of the marbling.\n\nRest for 5 to 8 minutes before slicing. Season with flaky salt right before serving; the fat provides plenty of flavor on its own."
+    }
   }
 ]
