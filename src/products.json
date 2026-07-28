@@ -193,6 +193,7 @@
     "tone": "red",
     "images": [
       "whatsapp-image-2026-07-02-at-16-18-38-mr44nh3k5818.webp",
+      "whatsapp-image-2026-07-28-at-14-46-16-ms56v7v8715.webp",
       "whatsapp-image-2026-07-02-at-15-06-16-mr450ssn3771.webp",
       "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
       "RIB-EYE-WAGYU-AUSTRALIANO-BAJO-MARMOLEO-3-1.webp"
@@ -238,7 +239,7 @@
         },
         {
           "lo": 9,
-          "hi": 99,
+          "hi": 9,
           "image": "",
           "label": "9+",
           "sku": "416172",
