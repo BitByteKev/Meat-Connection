@@ -145,7 +145,7 @@
         {
           "lo": 10,
           "hi": 12,
-          "image": "whatsapp-image-2026-07-02-at-15-04-24-mr44qkpk6294.webp",
+          "image": "",
           "label": "10-12",
           "mayoreo": 1950,
           "menudeo": 2250
@@ -656,10 +656,7 @@
     "cat": "us",
     "tone": "cream",
     "images": [
-      "whatsapp-image-2026-07-28-at-10-53-19-ms4ygga79317.webp",
-      "whatsapp-image-2026-07-28-at-10-53-46-ms4ygeot2634.webp",
-      "whatsapp-image-2026-07-02-at-15-03-38-ms4yb1uq7385.webp",
-      "whatsapp-image-2026-07-02-at-15-03-38-1-ms4yb3ip6332.webp"
+      "SALSICHA-WAGYU-AMERICANO-4PACK.webp"
     ],
     "marbling": {
       "system": "aus",
@@ -2459,7 +2456,6 @@
     "cat": "au",
     "tone": "kraft",
     "images": [
-      "whatsapp-image-2026-07-28-at-11-25-30-ms4zvt3z7244.webp",
       "lgrow-rostbiff-top.webp",
       "lgrow-rostbiff-side.webp"
     ],
@@ -2469,7 +2465,7 @@
         {
           "lo": 4,
           "hi": 5,
-          "image": "",
+          "image": "lgrow-rostbiff-top.webp",
           "label": "4-5",
           "sku": "448714",
           "mayoreo": 385,
@@ -2478,7 +2474,7 @@
         {
           "lo": 6,
           "hi": 7,
-          "image": "",
+          "image": "lgrow-rostbiff-top.webp",
           "label": "6-7",
           "sku": "448716",
           "mayoreo": 400,
@@ -2487,7 +2483,7 @@
         {
           "lo": 9,
           "hi": 10,
-          "image": "",
+          "image": "lgrow-rostbiff-top.webp",
           "label": "9+",
           "sku": "448720",
           "mayoreo": 500,
@@ -3673,6 +3669,44 @@
     }
   },
   {
+    "id": "sirloin-fullblood",
+    "cat": "au",
+    "tone": "kraft",
+    "images": [
+      "placeholder-coming-soon.webp"
+    ],
+    "marbling": {
+      "system": "aus",
+      "variants": [
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "",
+          "label": "9+",
+          "sku": "TOPSA",
+          "mayoreo": 500,
+          "menudeo": 800
+        }
+      ]
+    },
+    "badge": {
+      "es": "Fullblood · Australia",
+      "en": "Fullblood · Australia"
+    },
+    "es": {
+      "name": "Sirloin Wagyu Fullblood",
+      "description": "Sirloin fullblood 9+: equilibrio entre magro y marmoleo con precio de entrada a la gama fullblood.\n\nSteaks generosos para el día a día premium.",
+      "origin": "Origen Australia · Fullblood\n\nWagyu fullblood: genética japonesa 100 % pura criada en Australia. Marmoleo 9+ de la más alta gama, terminado con grano y totalmente trazable.",
+      "cooking": "Recomendaciones de cocción\n\nAtempera 30 min, seca la superficie y sella a fuego alto 2–3 min por lado. Término medio (54–56 °C). Reposa 5 min antes de cortar."
+    },
+    "en": {
+      "name": "Sirloin Wagyu Fullblood",
+      "description": "Fullblood 9+ sirloin: balance of lean and marbling at an entry price to the fullblood range.\n\nGenerous steaks for premium everyday cooking.",
+      "origin": "Australia origin · Fullblood\n\nFullblood wagyu: 100 % pure Japanese genetics raised in Australia. Top-tier 9+ marbling, grain-finished and fully traceable.",
+      "cooking": "Cooking recommendations\n\nTemper 30 min, pat dry and sear over high heat 2–3 min per side. Medium (54–56 °C). Rest 5 min before slicing."
+    }
+  },
+  {
     "id": "tablita-fullblood",
     "cat": "au",
     "tone": "cream",
@@ -4711,13 +4745,13 @@
       "en": null
     },
     "es": {
-      "name": "Shortloin Margaret River Wagyu Cross Australiano",
+      "name": "SHORTLOIN MARGARET RIVER WAGYU CROSS AUSTRALIANO",
       "description": "El corazón del lomo, con un marmoleo intenso que se funde en cada bocado.\n\nEl Short Loin es una de las secciones más nobles del animal, de donde nacen los cortes más codiciados. Este Wagyu Cross australiano de la región de Margaret River ofrece una grasa fina y bien distribuida, con un marmoleo de nivel 8-9 que garantiza una experiencia jugosa y untuosa.\n\nUna pieza versátil y generosa, ideal para porcionar en casa o llevar tu parrilla a otro nivel.",
       "origin": "Wagyu Cross australiano de la región de Margaret River, Australia Occidental. Marmoleo (marble score) 8-9, reflejo de una alimentación cuidada y de la genética Wagyu cruzada.",
       "cooking": "Deja atemperar la carne fuera del refrigerador entre 30 y 45 minutos antes de cocinar.\n\nSella a fuego alto en sartén de hierro o parrilla bien caliente, 2 a 3 minutos por lado según el grosor, buscando un término medio-rojo (medium-rare) para aprovechar el marmoleo.\n\nDeja reposar de 5 a 8 minutos antes de cortar. Sazona con sal en escamas justo al servir; la grasa aporta suficiente sabor por sí sola."
     },
     "en": {
-      "name": "Shortloin Margaret River Wagyu Cross Australian",
+      "name": "SHORTLOIN MARGARET RIVER WAGYU CROSS AUSTRALIANO",
       "description": "The heart of the loin, with intense marbling that melts in every bite.\n\nThe Short Loin is one of the noblest sections of the animal, home to the most sought-after cuts. This Australian Wagyu Cross from the Margaret River region offers fine, well-distributed fat, with a marble score of 8-9 that guarantees a juicy, buttery experience.\n\nA versatile and generous piece, perfect for portioning at home or taking your grill to the next level.",
       "origin": "Australian Wagyu Cross from the Margaret River region, Western Australia. Marble score 8-9, reflecting careful feeding and crossed Wagyu genetics.",
       "cooking": "Let the meat come to room temperature for 30 to 45 minutes before cooking.\n\nSear over high heat in a cast-iron pan or on a hot grill, 2 to 3 minutes per side depending on thickness, aiming for medium-rare to make the most of the marbling.\n\nRest for 5 to 8 minutes before slicing. Season with flaky salt right before serving; the fat provides plenty of flavor on its own."
