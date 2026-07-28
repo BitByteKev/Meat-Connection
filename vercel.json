@@ -3,33 +3,178 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/producto/arrachera-inside-skirt-1",
+      "destination": "/producto/arrachera-inside-skirt",
+      "permanent": true
+    },
+    {
+      "source": "/producto/brisket-wagyu-americano",
+      "destination": "/producto/brisket-deckle",
+      "permanent": true
+    },
+    {
+      "source": "/producto/diezmillo-chuck-roll-1",
+      "destination": "/producto/diezmillo-chuck-roll",
+      "permanent": true
+    },
+    {
+      "source": "/producto/diezmillo-wagyu-australiano",
+      "destination": "/producto/diezmillo-chuck-roll",
+      "permanent": true
+    },
+    {
+      "source": "/producto/diezmillo-wagyu-australiano-1",
+      "destination": "/producto/diezmillo-chuck-roll",
+      "permanent": true
+    },
+    {
+      "source": "/producto/filete-australiano",
+      "destination": "/producto/filete-tenderloin-wagyu",
+      "permanent": true
+    },
+    {
+      "source": "/producto/filete-tenderloin",
+      "destination": "/producto/filete-tenderloin-wagyu",
+      "permanent": true
+    },
+    {
+      "source": "/producto/filete-tenderloin-1",
+      "destination": "/producto/filete-tenderloin-wagyu",
+      "permanent": true
+    },
+    {
+      "source": "/producto/new-york-fullblood",
+      "destination": "/producto/new-york-striploin-wagyu-fullblood",
+      "permanent": true
+    },
+    {
+      "source": "/producto/new-york-striploin",
+      "destination": "/producto/new-york-wagyu-australiano",
+      "permanent": true
+    },
+    {
+      "source": "/producto/new-york-striploin-1",
+      "destination": "/producto/new-york-wagyu-australiano",
+      "permanent": true
+    },
+    {
+      "source": "/producto/new-york-wagyu-australiano-1",
+      "destination": "/producto/new-york-wagyu-australiano",
+      "permanent": true
+    },
+    {
+      "source": "/producto/paleta-bolar-blade",
+      "destination": "/producto/paleta-wagyu-australiano",
+      "permanent": true
+    },
+    {
+      "source": "/producto/paleta-shoulder-clod",
+      "destination": "/producto/paleta-wagyu-australiano",
+      "permanent": true
+    },
+    {
+      "source": "/producto/picana",
+      "destination": "/producto/picana-rump-cap-wagyu",
+      "permanent": true
+    },
+    {
+      "source": "/producto/picana-rump-cap",
+      "destination": "/producto/picana-rump-cap-wagyu",
+      "permanent": true
+    },
+    {
+      "source": "/producto/picana-wagyu-japones-a5-1",
+      "destination": "/producto/picana-wagyu-japones-a5",
+      "permanent": true
+    },
+    {
+      "source": "/producto/rib-eye-wagyu-australiano-1",
+      "destination": "/producto/rib-eye-wagyu-australiano",
+      "permanent": true
+    },
+    {
+      "source": "/producto/rib-eye-wagyu-australiano-2",
+      "destination": "/producto/rib-eye-wagyu-australiano",
+      "permanent": true
+    },
+    {
+      "source": "/producto/rib-eye-wagyu-australiano-3",
+      "destination": "/producto/rib-eye-wagyu-australiano",
+      "permanent": true
+    },
+    {
+      "source": "/producto/vacio-flap-meat",
+      "destination": "/producto/vacio-flap-meat-wagyu",
+      "permanent": true
+    },
+    {
+      "source": "/producto/wagyu-australiano-new-york",
+      "destination": "/producto/new-york-wagyu-australiano",
+      "permanent": true
+    }
+  ],
   "rewrites": [
-    { "source": "/admin", "destination": "/" },
-    { "source": "/catalogo", "destination": "/" },
-    { "source": "/catalogo/(.*)", "destination": "/" },
-    { "source": "/producto/(.*)", "destination": "/" }
+    {
+      "source": "/admin",
+      "destination": "/"
+    },
+    {
+      "source": "/catalogo",
+      "destination": "/"
+    },
+    {
+      "source": "/catalogo/(.*)",
+      "destination": "/"
+    },
+    {
+      "source": "/producto/(.*)",
+      "destination": "/"
+    }
   ],
   "headers": [
     {
       "source": "/assets/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/images/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
       ]
     },
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "Permissions-Policy", "value": "geolocation=(), microphone=(), camera=(), interest-cohort=()" },
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'" }
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "geolocation=(), microphone=(), camera=(), interest-cohort=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self'"
+        }
       ]
     }
   ]
