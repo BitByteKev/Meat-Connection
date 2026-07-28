@@ -3669,44 +3669,6 @@
     }
   },
   {
-    "id": "sirloin-fullblood",
-    "cat": "au",
-    "tone": "kraft",
-    "images": [
-      "placeholder-coming-soon.webp"
-    ],
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "lo": 9,
-          "hi": 10,
-          "image": "",
-          "label": "9+",
-          "sku": "TOPSA",
-          "mayoreo": 500,
-          "menudeo": 800
-        }
-      ]
-    },
-    "badge": {
-      "es": "Fullblood · Australia",
-      "en": "Fullblood · Australia"
-    },
-    "es": {
-      "name": "Sirloin Wagyu Fullblood",
-      "description": "Sirloin fullblood 9+: equilibrio entre magro y marmoleo con precio de entrada a la gama fullblood.\n\nSteaks generosos para el día a día premium.",
-      "origin": "Origen Australia · Fullblood\n\nWagyu fullblood: genética japonesa 100 % pura criada en Australia. Marmoleo 9+ de la más alta gama, terminado con grano y totalmente trazable.",
-      "cooking": "Recomendaciones de cocción\n\nAtempera 30 min, seca la superficie y sella a fuego alto 2–3 min por lado. Término medio (54–56 °C). Reposa 5 min antes de cortar."
-    },
-    "en": {
-      "name": "Sirloin Wagyu Fullblood",
-      "description": "Fullblood 9+ sirloin: balance of lean and marbling at an entry price to the fullblood range.\n\nGenerous steaks for premium everyday cooking.",
-      "origin": "Australia origin · Fullblood\n\nFullblood wagyu: 100 % pure Japanese genetics raised in Australia. Top-tier 9+ marbling, grain-finished and fully traceable.",
-      "cooking": "Cooking recommendations\n\nTemper 30 min, pat dry and sear over high heat 2–3 min per side. Medium (54–56 °C). Rest 5 min before slicing."
-    }
-  },
-  {
     "id": "tablita-fullblood",
     "cat": "au",
     "tone": "cream",
