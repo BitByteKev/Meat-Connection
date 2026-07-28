@@ -1755,6 +1755,7 @@
     "cat": "au",
     "tone": "cream",
     "images": [
+      "whatsapp-image-2026-07-28-at-11-46-27-ms50e9cl1432.webp",
       "lgrow-rump-cap-top.webp",
       "lgrow-rump-cap-side.webp"
     ],
@@ -1764,7 +1765,7 @@
         {
           "lo": 0,
           "hi": 3,
-          "image": "lgrow-rump-cap-top.webp",
+          "image": "",
           "label": "0-3",
           "sku": "448827",
           "mayoreo": 710,
@@ -1773,7 +1774,7 @@
         {
           "lo": 4,
           "hi": 5,
-          "image": "lgrow-rump-cap-top.webp",
+          "image": "",
           "label": "4-5",
           "sku": "448713",
           "mayoreo": 800,
@@ -1782,7 +1783,7 @@
         {
           "lo": 6,
           "hi": 7,
-          "image": "lgrow-rump-cap-top.webp",
+          "image": "",
           "label": "6-7",
           "sku": "448715",
           "mayoreo": 950,
@@ -1791,7 +1792,7 @@
         {
           "lo": 8,
           "hi": 9,
-          "image": "lgrow-rump-cap-top.webp",
+          "image": "",
           "label": "8-9",
           "sku": "PICCA89",
           "mayoreo": 1400,
@@ -1800,7 +1801,7 @@
         {
           "lo": 8,
           "hi": 99,
-          "image": "lgrow-rump-cap-top.webp",
+          "image": "",
           "label": "8+",
           "sku": "68465-1",
           "mayoreo": 1100,
@@ -1809,7 +1810,7 @@
         {
           "lo": 9,
           "hi": 99,
-          "image": "lgrow-rump-cap-top.webp",
+          "image": "",
           "label": "9+",
           "sku": "448719",
           "mayoreo": 1380,
@@ -3555,44 +3556,6 @@
       "description": "Fullblood wagyu 9+ tongue: unique buttery texture after slow cooking, or thin-sliced gyutan style.\n\nFrom lengua tacos to Japanese grills.",
       "origin": "Australia origin · Fullblood\n\nFullblood wagyu: 100 % pure Japanese genetics raised in Australia. Top-tier 9+ marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nLow and slow: smoker or oven at 110–130 °C until probe-tender. Ideal for American-style BBQ or long braises."
-    }
-  },
-  {
-    "id": "picana-fullblood",
-    "cat": "au",
-    "tone": "kraft",
-    "images": [
-      "placeholder-coming-soon.webp"
-    ],
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "lo": 9,
-          "hi": 10,
-          "image": "",
-          "label": "9+",
-          "sku": "251735",
-          "mayoreo": 1400,
-          "menudeo": 1700
-        }
-      ]
-    },
-    "badge": {
-      "es": "Fullblood · Australia",
-      "en": "Fullblood · Australia"
-    },
-    "es": {
-      "name": "Picaña Wagyu Fullblood",
-      "description": "Picaña (rump cap) fullblood 9+ con su capa de grasa intacta: el corte insignia del churrasco con marmoleo de genética japonesa pura.\n\nEspada, parrilla o al horno.",
-      "origin": "Origen Australia · Fullblood\n\nWagyu fullblood: genética japonesa 100 % pura criada en Australia. Marmoleo 9+ de la más alta gama, terminado con grano y totalmente trazable.",
-      "cooking": "Recomendaciones de cocción\n\nDirecto a la parrilla sobre brasa media-alta. Voltea una sola vez, retira al término deseado y reposa unos minutos."
-    },
-    "en": {
-      "name": "Picanha Wagyu Fullblood",
-      "description": "Fullblood 9+ picanha (rump cap) with its fat cap intact: the churrasco flagship with pure Japanese-genetics marbling.\n\nSkewer, grill or oven.",
-      "origin": "Australia origin · Fullblood\n\nFullblood wagyu: 100 % pure Japanese genetics raised in Australia. Top-tier 9+ marbling, grain-finished and fully traceable.",
-      "cooking": "Cooking recommendations\n\nStraight on the grill over medium-high coals. Flip once, pull at your preferred doneness and rest a few minutes."
     }
   },
   {
