@@ -711,7 +711,7 @@
         {
           "lo": 0,
           "hi": 3,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-BAJO-MARMOLEO-3-1.webp",
+          "image": "",
           "label": "0-3",
           "sku": "448730",
           "mayoreo": 850,
@@ -720,7 +720,7 @@
         {
           "lo": 2,
           "hi": 3,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-BAJO-MARMOLEO-3-1.webp",
+          "image": "",
           "label": "2-3",
           "sku": "447302",
           "mayoreo": 920,
@@ -729,7 +729,7 @@
         {
           "lo": 4,
           "hi": 5,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
+          "image": "",
           "label": "4-5",
           "sku": "448702",
           "mayoreo": 1200,
@@ -738,7 +738,7 @@
         {
           "lo": 6,
           "hi": 7,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
+          "image": "",
           "label": "6-7",
           "sku": "448705",
           "mayoreo": 1500,
@@ -747,7 +747,7 @@
         {
           "lo": 8,
           "hi": 9,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-3.webp",
+          "image": "",
           "label": "8-9",
           "sku": "448708",
           "mayoreo": 2000,
@@ -756,7 +756,7 @@
         {
           "lo": 9,
           "hi": 10,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-3.webp",
+          "image": "",
           "label": "9+",
           "sku": "416172",
           "mayoreo": 2200,
