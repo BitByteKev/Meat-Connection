@@ -2456,6 +2456,7 @@
     "cat": "au",
     "tone": "kraft",
     "images": [
+      "whatsapp-image-2026-07-28-at-11-25-30-ms4zvt3z7244.webp",
       "lgrow-rostbiff-top.webp",
       "lgrow-rostbiff-side.webp"
     ],
@@ -2465,7 +2466,7 @@
         {
           "lo": 4,
           "hi": 5,
-          "image": "lgrow-rostbiff-top.webp",
+          "image": "",
           "label": "4-5",
           "sku": "448714",
           "mayoreo": 385,
@@ -2474,7 +2475,7 @@
         {
           "lo": 6,
           "hi": 7,
-          "image": "lgrow-rostbiff-top.webp",
+          "image": "",
           "label": "6-7",
           "sku": "448716",
           "mayoreo": 400,
@@ -2483,7 +2484,7 @@
         {
           "lo": 9,
           "hi": 10,
-          "image": "lgrow-rostbiff-top.webp",
+          "image": "",
           "label": "9+",
           "sku": "448720",
           "mayoreo": 500,
