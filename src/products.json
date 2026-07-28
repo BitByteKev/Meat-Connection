@@ -516,7 +516,8 @@
     "tone": "charcoal",
     "images": [
       "whatsapp-image-2026-07-28-at-14-51-15-ms56xnyc1357.webp",
-      "whatsapp-image-2026-07-28-at-16-10-54-ms59yr6t2869.webp"
+      "whatsapp-image-2026-07-28-at-16-10-54-ms59yr6t2869.webp",
+      "whatsapp-image-2026-07-28-at-16-38-02-ms5arkau3779.webp"
     ],
     "marbling": {
       "system": "angus",
@@ -533,7 +534,7 @@
         {
           "lo": 4,
           "hi": 9,
-          "image": "",
+          "image": "whatsapp-image-2026-07-28-at-16-38-02-ms5arkau3779.webp",
           "label": "4+",
           "sku": "390289",
           "mayoreo": 960,
@@ -1028,44 +1029,6 @@
     }
   },
   {
-    "id": "kobeFilete__gen",
-    "cat": "jp",
-    "tone": "charcoal",
-    "images": [
-      "placeholder-coming-soon.webp"
-    ],
-    "marbling": {
-      "system": "bms",
-      "variants": [
-        {
-          "lo": 10,
-          "hi": 12,
-          "image": "placeholder-coming-soon.webp",
-          "label": "10-12",
-          "sku": "TENDK",
-          "mayoreo": 6180,
-          "menudeo": 6480
-        }
-      ]
-    },
-    "badge": {
-      "es": "Kobe · Japón",
-      "en": "Kobe · Japan"
-    },
-    "es": {
-      "name": "Filete Tenderloin Wagyu Kobe",
-      "description": "Filete tenderloin con genética Kobe — el grado más exclusivo del wagyu japonés. Terneza extrema y marmoleo que se deshace al contacto.\n\nWagyu japonés grado A5, marmoleo BMS 10–12 — la cúspide del marmoleo. Grasa intramuscular que se funde a baja temperatura para una textura mantecosa y umami profundo.\n\nReservado para la mesa de mayor nivel. Porciones pequeñas: la grasa hace el trabajo.",
-      "origin": "Origen y distinción A5\n\nProcede de reses Wagyu Negro Japonés de raza pura, criadas en granjas certificadas de Japón. El grado A5 garantiza la máxima expresión de marmoleo, ternura y sabor, totalmente trazable hasta la prefectura.",
-      "cooking": "Recomendaciones de cocción\n\nSella 60–90 seg por lado a fuego muy alto, sin aceite. Medio-rojo. Sal en escamas al final."
-    },
-    "en": {
-      "name": "Tenderloin Kobe Wagyu",
-      "description": "Tenderloin filet with Kobe genetics — the most exclusive grade of Japanese wagyu. Extreme tenderness and marbling that melts on contact.\n\nJapanese A5 wagyu, BMS 10–12 marbling — the peak of marbling. Intramuscular fat that melts at low temperature for a buttery texture and deep umami.\n\nReserved for the highest-end table. Small portions: the fat does the work.",
-      "origin": "Origin & A5 distinction\n\nSourced from purebred Japanese Black Wagyu cattle, raised on certified Japanese farms. The A5 grade guarantees the fullest expression of marbling, tenderness and flavor, fully traceable to the prefecture.",
-      "cooking": "Cooking recommendations\n\nSear 60–90 sec per side over very high heat, no oil. Medium-rare. Flaky salt to finish."
-    }
-  },
-  {
     "id": "arracheraMackas__gen",
     "cat": "mackas",
     "tone": "kraft",
@@ -1335,7 +1298,8 @@
     "tone": "red",
     "images": [
       "whatsapp-image-2026-07-28-at-16-06-06-ms59wpct9160.webp",
-      "whatsapp-image-2026-07-28-at-15-19-07-ms58238g5643.webp"
+      "whatsapp-image-2026-07-28-at-15-19-07-ms58238g5643.webp",
+      "whatsapp-image-2026-07-28-at-16-37-24-ms5aqn2n3219.webp"
     ],
     "marbling": {
       "system": "angus",
@@ -1352,7 +1316,7 @@
         {
           "lo": 4,
           "hi": 9,
-          "image": "lgrow-cube-roll-top.webp",
+          "image": "whatsapp-image-2026-07-28-at-16-37-24-ms5aqn2n3219.webp",
           "label": "4+",
           "sku": "390290",
           "mayoreo": 1180,
@@ -1482,7 +1446,8 @@
       "filete-australiano-9plus-3.webp",
       "lgrow-tenderloin-top.webp",
       "lgrow-tenderloin-side.webp",
-      "lgrow-tenderloin-hero.webp"
+      "lgrow-tenderloin-hero.webp",
+      "whatsapp-image-2026-07-28-at-16-32-09-ms5aow49246.webp"
     ],
     "marbling": {
       "system": "aus",
@@ -1552,13 +1517,11 @@
     }
   },
   {
-    "id": "fileteFbAu__gen",
-    "cat": "au",
+    "id": "fileteFbUs__gen",
+    "cat": "us",
     "tone": "red",
     "images": [
-      "lgrow-tenderloin-top.webp",
-      "lgrow-tenderloin-side.webp",
-      "lgrow-tenderloin-hero.webp"
+      "lgrow-tenderloin-top.webp"
     ],
     "marbling": {
       "system": "aus",
@@ -1579,16 +1542,16 @@
       "en": "L Grow · Fullblood"
     },
     "es": {
-      "name": "Filete Tenderloin Wagyu Fullblood",
-      "description": "El filete (tenderloin) es el corte más tierno de la res: fibra fina, magro y de forma uniforme.\n\nWagyu australiano L Grow, cruza terminada con grano para un marmoleo profundo. Jugoso y untuoso, con el balance perfecto entre grasa y sabor a res.\n\nIdeal para medallones, tournedós y presentaciones donde la terneza manda.",
-      "origin": "Origen Wagyu Australiano L Grow\n\nWagyu australiano de la marca L Grow, cruza terminada con grano para un marmoleo profundo y parejo. Criado bajo estrictos estándares de marmoleo y totalmente trazable.",
-      "cooking": "Recomendaciones de cocción\n\nAtempera, seca la superficie y sella 1–2 min por lado a fuego alto. Término medio-rojo (52–54 °C). Reposa 4 min."
+      "name": "Filete Tenderloin Black Angus · Marmoleo Medio",
+      "description": "El corte más tierno de la res, ahora con el carácter del Black Angus estadounidense.\n\nEl tenderloin (o filete) proviene del lomo interior, la zona de menor ejercicio muscular, lo que le da su textura excepcionalmente suave y su perfil magro. Su marmoleo medio aporta jugosidad sin restar delicadeza, ideal para quienes buscan un bocado limpio y refinado.\n\nUn corte versátil y elegante que brilla tanto en la parrilla como en la sartén, perfecto para ocasiones que merecen algo especial.",
+      "origin": "Res Black Angus originaria de Estados Unidos. La raza Angus es reconocida por su carne tierna y de sabor equilibrado. Corte extraído del lomo interior (tenderloin).",
+      "cooking": "Retira de refrigeración 30 a 40 minutos antes de cocinar y seca bien la superficie. Sazona con sal y pimienta.\n\nSella a fuego alto en sartén o parrilla, 2 a 3 minutos por lado para un medio rojo (medium rare). Por ser un corte magro, evita sobrecocinarlo para conservar su jugosidad.\n\nDeja reposar de 5 a 7 minutos antes de cortar para que los jugos se redistribuyan. Sirve en medallones."
     },
     "en": {
-      "name": "Fullblood Tenderloin Wagyu L Grow",
-      "description": "The tenderloin is the most tender cut of beef: fine grain, lean and uniform in shape.\n\nL Grow Australian wagyu, grain-finished cross with deep marbling. Juicy and rich, with the perfect balance of fat and beef flavor.\n\nIdeal for medallions, tournedos and presentations where tenderness rules.",
-      "origin": "L Grow Australian Wagyu origin\n\nAustralian wagyu from the L Grow brand, a grain-finished cross for deep, even marbling. Raised under strict marbling standards and fully traceable.",
-      "cooking": "Cooking recommendations\n\nTemper, pat dry and sear 1–2 min per side over high heat. Medium-rare (52–54 °C). Rest 4 min."
+      "name": "Tenderloin Filet Black Angus · Medium Marbling",
+      "description": "The most tender cut of beef, now with the character of American Black Angus.\n\nThe tenderloin comes from the inner loin, the least-worked muscle, giving it its exceptionally soft texture and lean profile. Its medium marbling adds juiciness without sacrificing delicacy, ideal for those seeking a clean, refined bite.\n\nA versatile and elegant cut that shines on the grill or in the pan, perfect for occasions that deserve something special.",
+      "origin": "Black Angus beef from the United States. The Angus breed is known for its tender meat and balanced flavor. Cut taken from the inner loin (tenderloin).",
+      "cooking": "Remove from refrigeration 30 to 40 minutes before cooking and pat the surface dry. Season with salt and pepper.\n\nSear over high heat in a pan or on the grill, 2 to 3 minutes per side for medium rare. Since this is a lean cut, avoid overcooking to keep it juicy.\n\nLet it rest 5 to 7 minutes before slicing so the juices redistribute. Serve as medallions."
     }
   },
   {
@@ -3419,45 +3382,6 @@
       "description": "Fullblood flap meat (vacío): open grain, intense flavor and exceptional juiciness thanks to pure-genetics marbling.\n\nStar of the Argentine grill and the luxury taco.",
       "origin": "Australia origin · Fullblood\n\nFullblood wagyu: 100 % pure Japanese genetics raised in Australia. Top-tier 9+ marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nStraight on the grill over medium-high coals. Flip once, pull at your preferred doneness and rest a few minutes."
-    }
-  },
-  {
-    "id": "filete-purebred",
-    "cat": "au",
-    "tone": "cream",
-    "images": [
-      "placeholder-coming-soon.webp"
-    ],
-    "marbling": {
-      "system": "aus",
-      "variants": [
-        {
-          "lo": 9,
-          "hi": 10,
-          "image": "",
-          "label": "9+",
-          "sku": "565291",
-          "mayoreo": 2200,
-          "menudeo": 2500
-        }
-      ]
-    },
-    "available": false,
-    "badge": {
-      "es": "Purebred · Australia",
-      "en": "Purebred · Australia"
-    },
-    "es": {
-      "name": "Filete Tenderloin Wagyu Purebred",
-      "description": "Filete purebred 9+: el corte más tierno de la res con marmoleo de genética wagyu casi pura.\n\nMedallones y tournedós de restaurante.",
-      "origin": "Origen Australia · Purebred\n\nWagyu purebred australiano (93 %+ genética wagyu). Marmoleo alto y consistente, crianza de exportación y trazabilidad completa.",
-      "cooking": "Recomendaciones de cocción\n\nAtempera 30 min, seca la superficie y sella a fuego alto 2–3 min por lado. Término medio (54–56 °C). Reposa 5 min antes de cortar."
-    },
-    "en": {
-      "name": "Tenderloin Wagyu Purebred",
-      "description": "Purebred 9+ tenderloin: the most tender cut of beef with near-pure wagyu marbling.\n\nRestaurant-grade medallions and tournedos.",
-      "origin": "Australia origin · Purebred\n\nAustralian purebred wagyu (93 %+ wagyu genetics). High, consistent marbling, export-grade husbandry and full traceability.",
-      "cooking": "Cooking recommendations\n\nTemper 30 min, pat dry and sear over high heat 2–3 min per side. Medium (54–56 °C). Rest 5 min before slicing."
     }
   },
   {
