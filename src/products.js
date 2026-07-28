@@ -65,4 +65,3 @@ export const RAW_CATALOG = JSON.parse(JSON.stringify(catalog))
 // Selectable internal category keys (display keys + aliases) — sourced from the
 // editable category taxonomy so the admin dropdown/validation stay in sync.
 export { ALL_CAT_KEYS as CATEGORIES } from './categories.js'
-export const TONES = ['charcoal', 'kraft', 'cream', 'red']

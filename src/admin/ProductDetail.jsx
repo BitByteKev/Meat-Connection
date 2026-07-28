@@ -2,7 +2,7 @@
 // Edits flow through onChange into AdminApp's catalog state; publishing happens
 // via the top-bar Guardar (whole-catalog commit), not here.
 import React from 'react'
-import { TONES, imageUrl } from '../products.js'
+import { imageUrl } from '../products.js'
 import { TextField, TextArea, Select, card, btn, btnDanger, Pill } from './fields.jsx'
 import ImagesPicker from './ImagesPicker.jsx'
 import MarblingEditor from './MarblingEditor.jsx'
@@ -141,10 +141,9 @@ export default function ProductDetail({ product, onChange, onBack, onRemove, cat
       </div>
 
       <SectionCard title="Datos">
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '10px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
           <TextField label="ID" value={product.id} onChange={(v) => onChange({ ...product, id: v })} />
           <Select label="Categoría" value={product.cat} options={catOptions} onChange={(v) => onChange({ ...product, cat: v })} />
-          <Select label="Tono" value={product.tone} options={TONES} onChange={(v) => onChange({ ...product, tone: v })} />
         </div>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px', alignItems: 'flex-end', margin: '2px 0 0' }}>
           <label style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '13px', fontWeight: 600, color: '#1a1a1a', paddingBottom: '9px' }}>
