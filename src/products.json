@@ -136,8 +136,8 @@
     "cat": "jp",
     "tone": "cream",
     "images": [
-      "PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
-      "whatsapp-image-2026-07-02-at-15-04-24-mr44qkpk6294.webp"
+      "whatsapp-image-2026-07-02-at-15-04-24-mr44qkpk6294.webp",
+      "PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp"
     ],
     "marbling": {
       "system": "bms",
@@ -153,7 +153,7 @@
         {
           "lo": 11,
           "hi": 12,
-          "image": "PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
+          "image": "",
           "label": "11-12",
           "sku": "COULOTTE",
           "mayoreo": 1950,
@@ -162,7 +162,7 @@
         {
           "lo": 12,
           "hi": 12,
-          "image": "PICANA-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
+          "image": "",
           "label": "12",
           "sku": "4",
           "mayoreo": 3200,
