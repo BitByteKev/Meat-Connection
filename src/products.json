@@ -192,9 +192,9 @@
     "cat": "au",
     "tone": "red",
     "images": [
+      "whatsapp-image-2026-07-02-at-16-18-38-mr44nh3k5818.webp",
       "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
       "RIB-EYE-WAGYU-AUSTRALIANO-BAJO-MARMOLEO-3-1.webp",
-      "whatsapp-image-2026-07-02-at-16-18-38-mr44nh3k5818.webp",
       "whatsapp-image-2026-07-02-at-15-06-16-mr450ssn3771.webp"
     ],
     "marbling": {
@@ -203,7 +203,7 @@
         {
           "lo": 0,
           "hi": 3,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
+          "image": "whatsapp-image-2026-07-02-at-16-18-38-mr44nh3k5818.webp",
           "label": "0-3",
           "sku": "448730",
           "mayoreo": 850,
@@ -212,7 +212,7 @@
         {
           "lo": 4,
           "hi": 5,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
+          "image": "whatsapp-image-2026-07-02-at-16-18-38-mr44nh3k5818.webp",
           "label": "4-5",
           "sku": "7",
           "mayoreo": 1900,
@@ -221,7 +221,7 @@
         {
           "lo": 6,
           "hi": 7,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
+          "image": "whatsapp-image-2026-07-02-at-16-18-38-mr44nh3k5818.webp",
           "label": "6-7",
           "sku": "343697",
           "mayoreo": 1550,
@@ -230,7 +230,7 @@
         {
           "lo": 8,
           "hi": 9,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
+          "image": "whatsapp-image-2026-07-02-at-16-18-38-mr44nh3k5818.webp",
           "label": "8-9",
           "sku": "LR8-9",
           "mayoreo": 2000,
@@ -239,7 +239,7 @@
         {
           "lo": 9,
           "hi": 99,
-          "image": "RIB-EYE-WAGYU-AUSTRALIANO-MEDIO-MARMOLEO.webp",
+          "image": "whatsapp-image-2026-07-02-at-16-18-38-mr44nh3k5818.webp",
           "label": "9+",
           "sku": "416172",
           "mayoreo": 2200,
