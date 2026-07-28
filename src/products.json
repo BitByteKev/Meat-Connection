@@ -1349,6 +1349,7 @@
     "cat": "mackas",
     "tone": "cream",
     "images": [
+      "whatsapp-image-2026-07-28-at-11-12-32-ms4z4s091572.webp",
       "lgrow-rump-cap-top.webp",
       "lgrow-rump-cap-side.webp"
     ],
@@ -1358,7 +1359,7 @@
         {
           "lo": 2,
           "hi": 9,
-          "image": "lgrow-rump-cap-top.webp",
+          "image": "",
           "label": "2+",
           "sku": "4040917",
           "mayoreo": 520,
@@ -1367,7 +1368,7 @@
         {
           "lo": 4,
           "hi": 9,
-          "image": "lgrow-rump-cap-top.webp",
+          "image": "",
           "label": "4+",
           "sku": "390288",
           "mayoreo": 615,
@@ -1376,7 +1377,7 @@
         {
           "lo": 6,
           "hi": 9,
-          "image": "lgrow-rump-cap-top.webp",
+          "image": "",
           "label": "6+",
           "sku": "390295",
           "mayoreo": 810,
