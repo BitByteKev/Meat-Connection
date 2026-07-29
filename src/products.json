@@ -695,14 +695,14 @@
     },
     "es": {
       "name": "Rib Eye King River",
-      "description": "Cada rebanada despliega una red de grasa intramuscular tan densa que parece encaje sobre la carne.\n\nEste Rib Eye King River, en su corte americano, exhibe un marmoleo abundante (referencia MB4-5) que se traduce en jugosidad, terneza y un sabor profundo a mantequilla. La grasa fina y entreverada se funde con el calor para envolver cada bocado.\n\nUn corte pensado para quienes buscan una experiencia indulgente, donde el ojo central y la cresta exterior ofrecen dos texturas en una sola pieza.",
-      "origin": "King River, corte americano. Procedencia Black Angus (EE.UU.), con un marmoleo de referencia MB4-5 visible en la etiqueta de la pieza.",
+      "description": "Cada rebanada despliega una red de grasa intramuscular tan densa que parece encaje sobre la carne.\n\nEste Rib Eye King River, wagyu australiano, exhibe un marmoleo abundante (referencia MB4-5) que se traduce en jugosidad, terneza y un sabor profundo a mantequilla. La grasa fina y entreverada se funde con el calor para envolver cada bocado.\n\nUn corte pensado para quienes buscan una experiencia indulgente, donde el ojo central y la cresta exterior ofrecen dos texturas en una sola pieza.",
+      "origin": "King River, wagyu australiano. Cruza de wagyu criada en Australia, con un marmoleo de referencia MB4-5 visible en la etiqueta de la pieza.",
       "cooking": "Atempera la carne 30–40 minutos antes de cocinar y seca bien la superficie.\n\nSella en sartén de hierro o parrilla muy caliente, 2–3 minutos por lado, hasta formar costra dorada. Por su marmoleo alto, el término ideal es medio (54–57 °C al centro).\n\nDeja reposar 5 minutos antes de cortar. Sazona con sal en escamas y pimienta recién molida; el romero y el ajo realzan sin opacar."
     },
     "en": {
       "name": "Rib Eye King River",
-      "description": "Each slice reveals a fat network so dense it looks like lace woven through the beef.\n\nThis King River Rib Eye, in its American cut, shows abundant marbling (MB4-5 reference) that delivers juiciness, tenderness and a deep, buttery flavor. The fine, interlaced fat melts with heat to coat every bite.\n\nA cut made for those seeking an indulgent experience, where the central eye and the outer cap offer two textures in a single piece.",
-      "origin": "King River, American cut. Sourced from Black Angus (USA), with an MB4-5 marbling reference visible on the cut's label.",
+      "description": "Each slice reveals a fat network so dense it looks like lace woven through the beef.\n\nThis King River Rib Eye, Australian wagyu, shows abundant marbling (MB4-5 reference) that delivers juiciness, tenderness and a deep, buttery flavor. The fine, interlaced fat melts with heat to coat every bite.\n\nA cut made for those seeking an indulgent experience, where the central eye and the outer cap offer two textures in a single piece.",
+      "origin": "King River, Australian wagyu. A wagyu cross raised in Australia, with an MB4-5 marbling reference visible on the cut's label.",
       "cooking": "Let the steak come to room temperature 30–40 minutes before cooking and pat the surface dry.\n\nSear in a very hot cast iron pan or grill, 2–3 minutes per side, until a golden crust forms. With its high marbling, the ideal doneness is medium (54–57 °C / 129–135 °F at the center).\n\nRest for 5 minutes before slicing. Season with flaky salt and freshly ground pepper; rosemary and garlic enhance without overpowering."
     }
   },
@@ -1632,8 +1632,8 @@
     },
     "en": {
       "name": "Picanha Rump Cap Australian Wagyu",
-      "description": "Picanha (rump cap) — the quintessential Brazilian cut, with a top fat layer that turns crisp.\n\n American wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nStar of the cookout. Slice in C against the grain or grill whole, fat-side up.",
-      "origin": "American wagyu cross from  (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
+      "description": "Picanha (rump cap) — the quintessential Brazilian cut, with a top fat layer that turns crisp.\n\nAustralian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nStar of the cookout. Slice in C against the grain or grill whole, fat-side up.",
+      "origin": "King River origin\n\nKing River Australian wagyu, one of the most recognized wagyu crosses in Australia. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nScore the fat, sear fat-side toward the fire and finish over medium heat. Medium. Rest 5 min."
     }
   },
@@ -1826,14 +1826,14 @@
     },
     "es": {
       "name": "Arrachera Inside Skirt",
-      "description": "Arrachera (skirt steak) — el corte clásico de la fajita, fibra marcada y mucho sabor.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nMarínala y ásala rápido. Insuperable para tacos y fajitas.",
+      "description": "Arrachera (skirt steak) — el corte clásico de la fajita, fibra marcada y mucho sabor.\n\nWagyu cross americano, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nMarínala y ásala rápido. Insuperable para tacos y fajitas.",
       "origin": "Wagyu cross americano (EE.UU.), criado con altos estándares de alimentación y bienestar. Combina genética wagyu con la robustez de la res americana para un sabor intenso y versátil.",
       "cooking": "Recomendaciones de cocción\n\nFuego muy alto, 2–3 min por lado. Corta fino en contra de la fibra."
     },
     "en": {
       "name": "Inside Skirt Wagyu",
-      "description": "Skirt steak (arrachera) — the classic fajita cut, pronounced grain and big flavor.\n\nKing River Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nMarinate and grill fast. Unbeatable for tacos and fajitas.",
-      "origin": "American wagyu cross(USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
+      "description": "Skirt steak (arrachera) — the classic fajita cut, pronounced grain and big flavor.\n\nAmerican wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nMarinate and grill fast. Unbeatable for tacos and fajitas.",
+      "origin": "American wagyu cross (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
       "cooking": "Cooking recommendations\n\nVery high heat, 2–3 min per side. Slice thin against the grain."
     }
   },
@@ -1901,14 +1901,14 @@
     },
     "es": {
       "name": "Brisket Deckle",
-      "description": "Brisket (pecho) — el corte del barbecue por excelencia, con su característica capa de grasa.\n\nWagyu cross americano Abatti Ranch, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nAhumado lento, pastrami o braseado. La paciencia lo transforma en mantequilla.",
-      "origin": "Wagyu cross americano (EE.UU.), criado con altos estándares de alimentación y bienestar. Combina genética wagyu con la robustez de la res americana para un sabor intenso y versátil.",
+      "description": "Brisket (pecho) — el corte del barbecue por excelencia, con su característica capa de grasa.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nAhumado lento, pastrami o braseado. La paciencia lo transforma en mantequilla.",
+      "origin": "Wagyu australiano King River, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nAhúma a 110–120 °C hasta 92–96 °C al centro (10–14 h). Reposa 1 h envuelto."
     },
     "en": {
       "name": "Brisket Deckle Wagyu",
-      "description": "Brisket — the quintessential barbecue cut, with its signature fat cap.\n\nAbatti Ranch American wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nLow-and-slow smoke, pastrami or braise. Patience turns it to butter.",
-      "origin": "American wagyu cross (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
+      "description": "Brisket — the quintessential barbecue cut, with its signature fat cap.\n\nKing River Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nLow-and-slow smoke, pastrami or braise. Patience turns it to butter.",
+      "origin": "King River Australian wagyu, one of the most recognized wagyu crosses in Australia. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nSmoke at 110–120 °C until 92–96 °C internal (10–14 h). Rest 1 h wrapped."
     }
   },
@@ -2440,13 +2440,13 @@
     "es": {
       "name": "Diezmillo Chuck Roll Fullblood",
       "description": "Diezmillo (chuck roll) — corte de cuello/espaldilla con buen marmoleo y sabor intenso a res.\n\nWagyu americano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nMuy versátil: bistec marinado, fajitas, guisos y braseados.",
-      "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
+      "origin": "Wagyu fullblood americano (EE.UU.), criado con altos estándares de alimentación y bienestar. Genética wagyu 100 % pura para un marmoleo profundo y un sabor intenso, totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nBistec fino: sella rápido y fuerte. Pieza grande: braseado lento hasta terneza total."
     },
     "en": {
       "name": "Chuck Roll Fullblood Wagyu",
       "description": "Chuck roll (diezmillo) — a neck/shoulder cut with good marbling and intense beef flavor.\n\nAmerican wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nVery versatile: marinated steak, fajitas, stews and braises.",
-      "origin": "Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
+      "origin": "American fullblood wagyu (USA), raised with high feeding and welfare standards. 100% pure wagyu genetics for deep marbling and intense flavor, fully traceable.",
       "cooking": "Cooking recommendations\n\nThin steak: sear fast and hot. Large piece: slow braise until fully tender."
     }
   },
