@@ -649,7 +649,7 @@ function ShareButton({ product, name }) {
 }
 
 function ProductDetail({ product, onAdd, onBack }) {
-  const { Button, Badge, Tabs } = window.MeatConnectionDesignSystem_3e7a26;
+  const { Button, Tabs } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
   const p = t.products[product.id];
   const marbling = (window.MC_MARBLING && window.MC_MARBLING[product.id]) || null;
@@ -692,12 +692,6 @@ function ProductDetail({ product, onAdd, onBack }) {
       <div className="mc-pdp" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', alignItems: 'start' }}>
         <Carousel product={product} name={p.name} height={560} index={carouselIndex} onIndex={onCarousel} />
         <div>
-          <div style={{ display: 'flex', gap: '8px', marginBottom: '14px' }}>
-            {p.badge && <Badge tone="red" solid>{p.badge}</Badge>}
-            {product.available === false
-              ? <Badge tone="neutral">{t.pdp.soldOut}</Badge>
-              : <Badge tone="success">{t.pdp.available}</Badge>}
-          </div>
           <h1 className="mc-page-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '48px', lineHeight: 0.98, margin: '0 0 16px', color: 'var(--text-strong)' }}>{p.name}</h1>
           {(product.weight || product.sku) && (
             <div style={{ fontSize: '13px', color: 'var(--text-muted)', margin: '-6px 0 16px' }}>

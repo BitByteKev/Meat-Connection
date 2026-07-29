@@ -19,18 +19,16 @@ function SectionCard({ title, children }) {
   )
 }
 
-// One language's editable content (name, badge, and the three text boxes).
+// One language's editable content (name and the three text boxes).
 function LangColumn({ lang, product, onChange }) {
   const L = product[lang]
   const setL = (patch) => onChange({ ...product, [lang]: { ...L, ...patch } })
-  const setBadge = (v) => onChange({ ...product, badge: { ...product.badge, [lang]: v } })
   return (
     <div style={{ flex: '1 1 340px', minWidth: 0, border: '1px solid #e1e3e5', borderRadius: '8px', padding: '14px', background: '#f9fafb' }}>
       <div style={{ fontWeight: 700, fontSize: '12px', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#616a75', marginBottom: '10px' }}>
         {LANG_LABEL[lang]}
       </div>
       <TextField label="Nombre" value={L.name} onChange={(v) => setL({ name: v })} />
-      <TextField label="Badge (opcional)" value={product.badge[lang] || ''} onChange={setBadge} />
       <TextArea label="Descripción" rows={7} value={L.description} onChange={(v) => setL({ description: v })} />
       <p style={{ fontSize: '11px', color: '#616a75', margin: '-6px 0 12px' }}>
         La primera línea se muestra como gancho en la tarjeta del catálogo.

@@ -22,7 +22,13 @@ export default function MediaLibrary({ catalog }) {
     return m
   }, [catalog])
   const [extra, setExtra] = React.useState(() => [...UPLOADED])
-  const all = React.useMemo(() => [...new Set([...IMAGE_FILES, ...extra])].sort(), [extra])
+  // IMAGE_FILES is frozen at build time, so a deleted file stays in it until the
+  // next deploy — mask deletions here or the tile never leaves the grid.
+  const [removed, setRemoved] = React.useState(() => new Set())
+  const all = React.useMemo(
+    () => [...new Set([...IMAGE_FILES, ...extra])].filter((f) => !removed.has(f)).sort(),
+    [extra, removed],
+  )
   const [uploading, setUploading] = React.useState(false)
   const [busy, setBusy] = React.useState(null)
   const [err, setErr] = React.useState(null)
@@ -49,6 +55,7 @@ export default function MediaLibrary({ catalog }) {
       const res = await fetch('/api/delete-image', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password: pw(), filename }) })
       if (!res.ok) { let d = ''; try { const j = await res.json(); d = j.detail || j.error || '' } catch {} throw new Error('No se pudo eliminar' + (d ? ` (${d})` : '')) }
       UPLOADED.delete(filename); UPLOADED_PREVIEWS.delete(filename); setExtra((e) => e.filter((x) => x !== filename))
+      setRemoved((s) => new Set(s).add(filename))
     } catch (e) { setErr(String(e && e.message || e)) } finally { setBusy(null) }
   }
 
@@ -74,7 +81,6 @@ export default function MediaLibrary({ catalog }) {
                 {previewSrc(f)
                   ? <img src={previewSrc(f)} alt={f} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   : <div style={{ display: 'flex', height: '100%', alignItems: 'center', justifyContent: 'center', fontSize: '10px', color: '#c0392b' }}>falta archivo</div>}
-                {isNew && <span style={badge('#0a7d2c')}>NUEVA</span>}
               </div>
               <div style={{ padding: '7px 8px' }}>
                 <div style={{ fontSize: '10px', wordBreak: 'break-all', color: '#555' }} title={f}>{f}</div>
