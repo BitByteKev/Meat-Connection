@@ -4,7 +4,8 @@
     "cat": "jp",
     "tone": "charcoal",
     "images": [
-      "whatsapp-image-2026-07-28-at-11-07-36-ms4yz64f3064.webp"
+      "whatsapp-image-2026-07-28-at-11-07-36-ms4yz64f3064.webp",
+      "whatsapp-image-2026-07-29-at-15-33-12-ms6nw33h8265.webp"
     ],
     "marbling": {
       "system": "bms",
@@ -12,7 +13,7 @@
         {
           "lo": 11,
           "hi": 12,
-          "image": "TRI-TIP-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
+          "image": "",
           "label": "11-12",
           "sku": "TRI TIP",
           "mayoreo": 1850,
