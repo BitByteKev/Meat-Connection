@@ -63,6 +63,9 @@ function orderLines(items) {
     let line = '• ' + productName(it.id) + (it.grade ? ' · ' + it.grade : '') + ' — ' + it.qty + ' kg (' + tipo + ')';
     const u = lineUnit(it, ty);
     if (u != null) line += ' — ' + fmtMXN(u * it.qty);
+    /* URL plana en su propia línea: WhatsApp la vuelve clic-able y abre la ficha
+       del corte. Sin slug (producto eliminado de un pedido guardado) se omite. */
+    if (PRODUCT_SLUG[it.id]) line += '\n' + location.origin + '/producto/' + PRODUCT_SLUG[it.id];
     return line;
   }).join('\n');
 }
