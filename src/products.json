@@ -1403,7 +1403,7 @@
     "cat": "au",
     "tone": "kraft",
     "images": [
-      "whatsapp-image-2026-07-28-at-16-31-54-ms5alj7i6559.webp"
+      "whatsapp-image-2026-07-29-at-16-00-12-ms6ou9vx8986.webp"
     ],
     "marbling": {
       "system": "aus",
@@ -3367,6 +3367,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Fullblood · Australia",
       "en": "Fullblood · Australia"
