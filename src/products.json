@@ -711,7 +711,7 @@
     "cat": "jp",
     "tone": "charcoal",
     "images": [
-      "whatsapp-image-2026-07-29-at-15-54-15-ms6on9433517.webp"
+      "placeholder-coming-soon.webp"
     ],
     "marbling": {
       "system": "bms",
@@ -996,8 +996,7 @@
     "cat": "jp",
     "tone": "red",
     "images": [
-      "whatsapp-image-2026-07-29-at-15-55-03-1-ms6onuh67479.webp",
-      "whatsapp-image-2026-07-29-at-15-55-03-ms6onvt5168.webp"
+      "placeholder-coming-soon.webp"
     ],
     "marbling": {
       "system": "bms",
@@ -1403,7 +1402,7 @@
     "cat": "au",
     "tone": "kraft",
     "images": [
-      "whatsapp-image-2026-07-29-at-16-00-12-ms6ou9vx8986.webp"
+      "whatsapp-image-2026-07-28-at-16-31-54-ms5alj7i6559.webp"
     ],
     "marbling": {
       "system": "aus",
@@ -1542,13 +1541,13 @@
       "en": "L Grow · Fullblood"
     },
     "es": {
-      "name": "Filete Tenderloin Black Angus",
+      "name": "Filete Tenderloin Black Angus · Marmoleo Medio",
       "description": "El corte más tierno de la res, ahora con el carácter del Black Angus estadounidense.\n\nEl tenderloin (o filete) proviene del lomo interior, la zona de menor ejercicio muscular, lo que le da su textura excepcionalmente suave y su perfil magro. Su marmoleo medio aporta jugosidad sin restar delicadeza, ideal para quienes buscan un bocado limpio y refinado.\n\nUn corte versátil y elegante que brilla tanto en la parrilla como en la sartén, perfecto para ocasiones que merecen algo especial.",
       "origin": "Res Black Angus originaria de Estados Unidos. La raza Angus es reconocida por su carne tierna y de sabor equilibrado. Corte extraído del lomo interior (tenderloin).",
       "cooking": "Retira de refrigeración 30 a 40 minutos antes de cocinar y seca bien la superficie. Sazona con sal y pimienta.\n\nSella a fuego alto en sartén o parrilla, 2 a 3 minutos por lado para un medio rojo (medium rare). Por ser un corte magro, evita sobrecocinarlo para conservar su jugosidad.\n\nDeja reposar de 5 a 7 minutos antes de cortar para que los jugos se redistribuyan. Sirve en medallones."
     },
     "en": {
-      "name": "Tenderloin Filet Black Angus",
+      "name": "Tenderloin Filet Black Angus · Medium Marbling",
       "description": "The most tender cut of beef, now with the character of American Black Angus.\n\nThe tenderloin comes from the inner loin, the least-worked muscle, giving it its exceptionally soft texture and lean profile. Its medium marbling adds juiciness without sacrificing delicacy, ideal for those seeking a clean, refined bite.\n\nA versatile and elegant cut that shines on the grill or in the pan, perfect for occasions that deserve something special.",
       "origin": "Black Angus beef from the United States. The Angus breed is known for its tender meat and balanced flavor. Cut taken from the inner loin (tenderloin).",
       "cooking": "Remove from refrigeration 30 to 40 minutes before cooking and pat the surface dry. Season with salt and pepper.\n\nSear over high heat in a pan or on the grill, 2 to 3 minutes per side for medium rare. Since this is a lean cut, avoid overcooking to keep it juicy.\n\nLet it rest 5 to 7 minutes before slicing so the juices redistribute. Serve as medallions."
@@ -1718,7 +1717,7 @@
     "cat": "au",
     "tone": "charcoal",
     "images": [
-      "whatsapp-image-2026-07-29-at-15-58-56-ms6otjvc2941.webp"
+      "whatsapp-image-2026-07-29-at-15-58-56-ms6peldz8365.webp"
     ],
     "marbling": {
       "system": "aus",
@@ -2772,7 +2771,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": "Cross Australiano",
       "en": "American Cross"
@@ -2883,7 +2881,7 @@
     "cat": "jp",
     "tone": "charcoal",
     "images": [
-      "whatsapp-image-2026-07-29-at-15-55-54-ms6ookqc5508.webp"
+      "placeholder-coming-soon.webp"
     ],
     "marbling": {
       "system": "bms",
@@ -2921,9 +2919,7 @@
     "cat": "jp",
     "tone": "kraft",
     "images": [
-      "whatsapp-image-2026-07-29-at-15-56-18-ms6opkux8227.webp",
-      "whatsapp-image-2026-07-29-at-15-56-18-1-ms6opm3q5932.webp",
-      "whatsapp-image-2026-07-29-at-15-56-33-ms6opn8c5509.webp"
+      "placeholder-coming-soon.webp"
     ],
     "marbling": {
       "system": "bms",
@@ -3367,7 +3363,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": "Fullblood · Australia",
       "en": "Fullblood · Australia"
@@ -3391,7 +3386,8 @@
     "tone": "charcoal",
     "images": [
       "whatsapp-image-2026-07-28-at-16-38-26-ms5assbk5056.webp",
-      "whatsapp-image-2026-07-28-at-16-05-22-ms59zw0n5469.webp"
+      "whatsapp-image-2026-07-28-at-16-05-22-ms59zw0n5469.webp",
+      "whatsapp-image-2026-07-29-at-15-36-47-ms6o041i548.webp"
     ],
     "marbling": {
       "system": "aus",
@@ -3408,8 +3404,8 @@
       ]
     },
     "badge": {
-      "es": null,
-      "en": null
+      "es": "Abatti Ranch · USA",
+      "en": "Abatti Ranch · USA"
     },
     "es": {
       "name": "New York Wagyu Americano Premium",
@@ -3868,7 +3864,7 @@
     "cat": "mackas",
     "tone": "kraft",
     "images": [
-      "placeholder-coming-soon.webp"
+      "whatsapp-image-2026-07-29-at-16-14-05-ms6pbzr92556.webp"
     ],
     "marbling": {
       "system": "angus",
