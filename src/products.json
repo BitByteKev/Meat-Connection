@@ -621,7 +621,7 @@
     }
   },
   {
-    "id": "king-river",
+    "id": "Rib Eye australiano",
     "cat": "au",
     "tone": "charcoal",
     "images": [
@@ -2437,13 +2437,13 @@
     },
     "es": {
       "name": "Diezmillo Chuck Roll Fullblood",
-      "description": "Diezmillo (chuck roll) — corte de cuello/espaldilla con buen marmoleo y sabor intenso a res.\n\nWagyu americano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nMuy versátil: bistec marinado, fajitas, guisos y braseados.",
+      "description": "Diezmillo (chuck roll) — corte de cuello/espaldilla con buen marmoleo y sabor intenso a res.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nMuy versátil: bistec marinado, fajitas, guisos y braseados.",
       "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nBistec fino: sella rápido y fuerte. Pieza grande: braseado lento hasta terneza total."
     },
     "en": {
       "name": "Chuck Roll Fullblood Wagyu",
-      "description": "Chuck roll (diezmillo) — a neck/shoulder cut with good marbling and intense beef flavor.\n\nAmerican wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nVery versatile: marinated steak, fajitas, stews and braises.",
+      "description": "Chuck roll (diezmillo) — a neck/shoulder cut with good marbling and intense beef flavor.\n\nAustralian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nVery versatile: marinated steak, fajitas, stews and braises.",
       "origin": "Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nThin steak: sear fast and hot. Large piece: slow braise until fully tender."
     }
