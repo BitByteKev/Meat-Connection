@@ -342,7 +342,7 @@ function Hero({ onShop, onQuote }) {
 
 /* ===== Product grid ===== */
 function ProductCard({ product, onOpen }) {
-  const { Card, Button, Badge } = window.MeatConnectionDesignSystem_3e7a26;
+  const { Card, Button } = window.MeatConnectionDesignSystem_3e7a26;
   const { t, lang } = useLang();
   const p = t.products[product.id];
   return (
@@ -350,11 +350,7 @@ function ProductCard({ product, onOpen }) {
       onClick={() => onOpen(product)}
       onMouseOver={(e) => { e.currentTarget.style.boxShadow = 'var(--shadow-lg)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
       onMouseOut={(e) => { e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)'; }}>
-      <div style={{ position: 'relative' }}>
-        <ProductImage product={product} aspect="1 / 1" />
-        {p.badge && (<div style={{ position: 'absolute', top: '14px', left: '14px' }}><Badge tone="red" solid>{p.badge}</Badge></div>)}
-        {product.available === false && (<div style={{ position: 'absolute', top: '14px', right: '14px' }}><Badge tone="ink" solid>{t.pdp.soldOut}</Badge></div>)}
-      </div>
+      <ProductImage product={product} aspect="1 / 1" />
       <div style={{ padding: '18px', display: 'flex', flexDirection: 'column', gap: '12px', flex: 1 }}>
         <div>
           <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.14em', fontSize: '11px', color: 'var(--accent-gold-ink)', marginBottom: '6px' }}>{catLabel(catOf(product), lang)}</div>
