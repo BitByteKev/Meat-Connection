@@ -1717,7 +1717,11 @@
     "cat": "au",
     "tone": "charcoal",
     "images": [
-      "whatsapp-image-2026-07-29-at-15-58-56-ms6peldz8365.webp"
+      "whatsapp-image-2026-07-15-at-11-36-55-2-mrmk3oen2973.webp",
+      "whatsapp-image-2026-07-15-at-11-36-55-1-mrmk3q6l2094.webp",
+      "whatsapp-image-2026-07-15-at-11-36-55-mrmk3res1352.webp",
+      "lgrow-flap-meat-top.webp",
+      "lgrow-flap-meat-side.webp"
     ],
     "marbling": {
       "system": "aus",
@@ -1751,7 +1755,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": "Australia",
       "en": "Australia"
@@ -2434,13 +2437,13 @@
     },
     "es": {
       "name": "Diezmillo Chuck Roll Fullblood",
-      "description": "Diezmillo (chuck roll) — corte de cuello/espaldilla con buen marmoleo y sabor intenso a res.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nMuy versátil: bistec marinado, fajitas, guisos y braseados.",
+      "description": "Diezmillo (chuck roll) — corte de cuello/espaldilla con buen marmoleo y sabor intenso a res.\n\nWagyu americano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nMuy versátil: bistec marinado, fajitas, guisos y braseados.",
       "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nBistec fino: sella rápido y fuerte. Pieza grande: braseado lento hasta terneza total."
     },
     "en": {
       "name": "Chuck Roll Fullblood Wagyu",
-      "description": "Chuck roll (diezmillo) — a neck/shoulder cut with good marbling and intense beef flavor.\n\nAustralian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nVery versatile: marinated steak, fajitas, stews and braises.",
+      "description": "Chuck roll (diezmillo) — a neck/shoulder cut with good marbling and intense beef flavor.\n\nAmerican wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nVery versatile: marinated steak, fajitas, stews and braises.",
       "origin": "Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nThin steak: sear fast and hot. Large piece: slow braise until fully tender."
     }
@@ -2489,9 +2492,8 @@
     "cat": "au",
     "tone": "kraft",
     "images": [
-      "whatsapp-image-2026-07-29-at-16-17-46-ms6pglka1386.webp",
-      "whatsapp-image-2026-07-29-at-16-17-45-ms6pgmys8703.webp",
-      "whatsapp-image-2026-07-29-at-16-18-04-ms6pgy2s5586.webp",
+      "lgrow-cube-roll-top.webp",
+      "lgrow-cube-roll-side.webp",
       "lgrow-cube-roll-hero.webp"
     ],
     "marbling": {
@@ -3866,7 +3868,7 @@
     "cat": "mackas",
     "tone": "kraft",
     "images": [
-      "whatsapp-image-2026-07-29-at-16-14-05-ms6pbzr92556.webp"
+      "placeholder-coming-soon.webp"
     ],
     "marbling": {
       "system": "angus",
@@ -3935,6 +3937,33 @@
       "description": "Fullblood 9+ shortloin T-bone: New York and tenderloin on one bone, with pure Japanese-genetics marbling.\n\nTwo premium cuts in a single piece.",
       "origin": "Australia origin · Fullblood\n\nFullblood wagyu: 100 % pure Japanese genetics raised in Australia. Top-tier 9+ marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nTemper 30 min, pat dry and sear over high heat 2–3 min per side. Medium (54–56 °C). Rest 5 min before slicing."
+    }
+  },
+  {
+    "id": "Vacío-Corte-australiano",
+    "cat": "au",
+    "tone": "charcoal",
+    "images": [
+      "whatsapp-image-2026-07-15-at-11-36-55-2-mrmjq7iq6822.webp",
+      "whatsapp-image-2026-07-15-at-11-36-55-1-mrmjq98z2559.webp",
+      "whatsapp-image-2026-07-15-at-11-36-55-mrmjqahv5880.webp"
+    ],
+    "available": false,
+    "badge": {
+      "es": null,
+      "en": null
+    },
+    "es": {
+      "name": "Vacío Wagyu Australiano",
+      "description": "Un corte jugoso y lleno de sabor, con la intensidad del Wagyu australiano en cada fibra.\n\nEl vacío destaca por su textura fibrosa y su carácter marcado, ideal para quienes buscan una experiencia sabrosa sin renunciar a la suavidad que aporta el marmoleo del Wagyu. Su grasa intramuscular se funde durante la cocción, aportando jugosidad y profundidad.\n\nPerfecto para el asador o el sartén, es un corte versátil que brilla tanto en una parrillada como en una mesa formal.",
+      "origin": "Wagyu de origen australiano. Corte de vacío (flank), reconocido por su fibra larga y sabor concentrado.",
+      "cooking": "Atempera la carne fuera del refrigerador antes de cocinar.\n\n• Sella a fuego alto en parrilla o sartén, 2 a 3 minutos por lado.\n• Busca un término medio o medio rojo para conservar la jugosidad.\n• Deja reposar de 4 a 5 minutos antes de cortar.\n• Rebana siempre en contra de la fibra para máxima suavidad."
+    },
+    "en": {
+      "name": "Flank Australian Wagyu",
+      "description": "A juicy, flavor-packed cut carrying the bold character of Australian Wagyu in every fiber.\n\nFlank stands out for its distinct grain and pronounced taste, ideal for those seeking a savory experience without giving up the tenderness that Wagyu marbling provides. Its intramuscular fat melts during cooking, adding juiciness and depth.\n\nPerfect for the grill or the skillet, it's a versatile cut that shines at a backyard cookout or a formal table alike.",
+      "origin": "Wagyu of Australian origin. Flank cut, known for its long grain and concentrated flavor.",
+      "cooking": "Let the meat come to room temperature before cooking.\n\n• Sear over high heat on the grill or skillet, 2 to 3 minutes per side.\n• Aim for medium or medium-rare to keep it juicy.\n• Rest for 4 to 5 minutes before slicing.\n• Always slice against the grain for maximum tenderness."
     }
   },
   {
