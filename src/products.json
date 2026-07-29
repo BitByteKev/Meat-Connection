@@ -1751,6 +1751,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Australia",
       "en": "Australia"
@@ -2488,8 +2489,8 @@
     "cat": "au",
     "tone": "kraft",
     "images": [
-      "lgrow-cube-roll-top.webp",
-      "lgrow-cube-roll-side.webp",
+      "whatsapp-image-2026-07-29-at-16-17-46-ms6pglka1386.webp",
+      "whatsapp-image-2026-07-29-at-16-17-45-ms6pgmys8703.webp",
       "lgrow-cube-roll-hero.webp"
     ],
     "marbling": {
