@@ -1196,7 +1196,7 @@
     }
   },
   {
-    "id": "lenguaMackas__gen",
+    "id": "lengua Black Angus",
     "cat": "mackas",
     "tone": "kraft",
     "images": [
@@ -1216,21 +1216,20 @@
         }
       ]
     },
-    "sku": "390285",
     "badge": {
       "es": "Black Angus",
       "en": "Black Angus"
     },
     "es": {
       "name": "Lengua Black Angus",
-      "description": "Lengua — corte tradicional que, bien cocido, queda suave y meloso.\n\nBlack Angus Macka's Pedigree (Australia), terminado con grano para un marmoleo parejo y un sabor robusto a res. Versátil y consistente pieza a pieza.\n\nTacos de lengua, guisos y braseados.",
-      "origin": "Origen Macka's Pedigree\n\nBlack Angus australiano de la ganadería Macka's Pedigree, criado bajo estrictos estándares de bienestar y terminado con grano. Trazable y consistente, con el sabor clásico a res y un marmoleo confiable.",
+      "description": "Lengua — corte tradicional que, bien cocido, queda suave y meloso.\n\nBlack Angus (Australia), terminado con grano para un marmoleo parejo y un sabor robusto a res. Versátil y consistente pieza a pieza.\n\nTacos de lengua, guisos y braseados.",
+      "origin": "Origen Australiano\n\nBlack Angus australiano de la ganadería Macka's Pedigree, criado bajo estrictos estándares de bienestar y terminado con grano. Trazable y consistente, con el sabor clásico a res y un marmoleo confiable.",
       "cooking": "Recomendaciones de cocción\n\nCuece 2.5–3 h hasta suave, retira la piel y dora o brasea en su salsa."
     },
     "en": {
       "name": "Tongue Black Angus Macka's",
-      "description": "Tongue (lengua) — a traditional cut that, properly cooked, turns soft and silky.\n\nMacka's Pedigree Black Angus (Australia), grain-finished for even marbling and a robust beef flavor. Versatile and consistent piece to piece.\n\nTongue tacos, stews and braises.",
-      "origin": "Macka's Pedigree origin\n\nAustralian Black Angus from the Macka's Pedigree ranch, raised under strict welfare standards and grain-finished. Traceable and consistent, with classic beef flavor and reliable marbling.",
+      "description": "Tongue (lengua) — a traditional cut that, properly cooked, turns soft and silky.\n\nBlack Angus (Australia), grain-finished for even marbling and a robust beef flavor. Versatile and consistent piece to piece.\n\nTongue tacos, stews and braises.",
+      "origin": "Australian origin\n\nAustralian Black Angus from the Macka's Pedigree ranch, raised under strict welfare standards and grain-finished. Traceable and consistent, with classic beef flavor and reliable marbling.",
       "cooking": "Cooking recommendations\n\nSimmer 2.5–3 h until tender, peel the skin and sear or braise in its sauce."
     }
   },
