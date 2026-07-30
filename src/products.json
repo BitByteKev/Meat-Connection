@@ -2412,7 +2412,7 @@
     }
   },
   {
-    "id": "jewelDiezmilloUs__gen",
+    "id": "Diezmillo Americano",
     "cat": "us",
     "tone": "cream",
     "images": [
@@ -2437,14 +2437,14 @@
       "en": "Jewel · Fullblood"
     },
     "es": {
-      "name": "Diezmillo Chuck Roll Fullblood",
-      "description": "Diezmillo (chuck roll) — corte de cuello/espaldilla con buen marmoleo y sabor intenso a res.\n\nWagyu americano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nMuy versátil: bistec marinado, fajitas, guisos y braseados.",
+      "name": "Diezmillo Americano",
+      "description": "Diezmillo — corte de cuello/espaldilla con buen marmoleo y sabor intenso a res.\n\nWagyu americano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nMuy versátil: bistec marinado, fajitas, guisos y braseados.",
       "origin": "Wagyu fullblood americano (EE.UU.), criado con altos estándares de alimentación y bienestar. Genética wagyu 100 % pura para un marmoleo profundo y un sabor intenso, totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nBistec fino: sella rápido y fuerte. Pieza grande: braseado lento hasta terneza total."
     },
     "en": {
-      "name": "Chuck Roll Fullblood Wagyu",
-      "description": "Chuck roll (diezmillo) — a neck/shoulder cut with good marbling and intense beef flavor.\n\nAmerican wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nVery versatile: marinated steak, fajitas, stews and braises.",
+      "name": "Diezmillo Wagyu Americano",
+      "description": "(diezmillo) — a neck/shoulder cut with good marbling and intense beef flavor.\n\nAmerican wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nVery versatile: marinated steak, fajitas, stews and braises.",
       "origin": "American fullblood wagyu (USA), raised with high feeding and welfare standards. 100% pure wagyu genetics for deep marbling and intense flavor, fully traceable.",
       "cooking": "Cooking recommendations\n\nThin steak: sear fast and hot. Large piece: slow braise until fully tender."
     }
