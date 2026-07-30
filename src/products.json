@@ -1157,7 +1157,7 @@
     }
   },
   {
-    "id": "hangingMackas__gen",
+    "id": "hanging",
     "cat": "mackas",
     "tone": "charcoal",
     "images": [
@@ -1184,14 +1184,14 @@
     },
     "es": {
       "name": "Hanging Tender Black Angus",
-      "description": "Hanging tender (entraña fina) — corte de un solo músculo, tierno y de sabor profundo.\n\nBlack Angus Macka's Pedigree (Australia), terminado con grano para un marmoleo parejo y un sabor robusto a res. Versátil y consistente pieza a pieza.\n\nFavorito de bistró. Marínalo y ásalo rápido.",
-      "origin": "Origen Macka's Pedigree\n\nBlack Angus australiano de la ganadería Macka's Pedigree, criado bajo estrictos estándares de bienestar y terminado con grano. Trazable y consistente, con el sabor clásico a res y un marmoleo confiable.",
+      "description": "Hanging tender (entraña fina) — corte de un solo músculo, tierno y de sabor profundo.\n\nBlack Angus (Australia), terminado con grano para un marmoleo parejo y un sabor robusto a res. Versátil y consistente pieza a pieza.\n\nFavorito de bistró. Marínalo y ásalo rápido.",
+      "origin": "Origen Australiano\n\nBlack Angus australiano de la ganadería Macka's Pedigree, criado bajo estrictos estándares de bienestar y terminado con grano. Trazable y consistente, con el sabor clásico a res y un marmoleo confiable.",
       "cooking": "Recomendaciones de cocción\n\nFuego alto, 2–3 min por lado a medio-rojo. Retira la membrana y corta fino."
     },
     "en": {
-      "name": "Hanging Tender Black Angus Macka's",
-      "description": "Hanging tender (hanger steak) — a single-muscle cut, tender with deep flavor.\n\nMacka's Pedigree Black Angus (Australia), grain-finished for even marbling and a robust beef flavor. Versatile and consistent piece to piece.\n\nA bistro favorite. Marinate and grill fast.",
-      "origin": "Macka's Pedigree origin\n\nAustralian Black Angus from the Macka's Pedigree ranch, raised under strict welfare standards and grain-finished. Traceable and consistent, with classic beef flavor and reliable marbling.",
+      "name": "Hanging Tender Black Angus",
+      "description": "Hanging tender (hanger steak) — a single-muscle cut, tender with deep flavor.\n\n Black Angus (Australia), grain-finished for even marbling and a robust beef flavor. Versatile and consistent piece to piece.\n\nA bistro favorite. Marinate and grill fast.",
+      "origin": "Australian origin\n\nAustralian Black Angus from the Macka's Pedigree ranch, raised under strict welfare standards and grain-finished. Traceable and consistent, with classic beef flavor and reliable marbling.",
       "cooking": "Cooking recommendations\n\nHigh heat, 2–3 min per side to medium-rare. Remove the membrane and slice thin."
     }
   },
