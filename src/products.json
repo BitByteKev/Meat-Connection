@@ -1110,7 +1110,7 @@
     }
   },
   {
-    "id": "diezmilloMackas__gen",
+    "id": "BA diezmillo",
     "cat": "mackas",
     "tone": "red",
     "images": [
@@ -1144,14 +1144,14 @@
       "en": "Black Angus"
     },
     "es": {
-      "name": "Diezmillo Chuck Roll Black Angus",
-      "description": "Diezmillo (chuck roll) — corte de cuello/espaldilla con buen marmoleo y sabor intenso a res.\n\nBlack Angus Macka's Pedigree (Australia), terminado con grano para un marmoleo parejo y un sabor robusto a res. Versátil y consistente pieza a pieza.\n\nMuy versátil: bistec marinado, fajitas, guisos y braseados.",
+      "name": "Diezmillo Black Angus",
+      "description": "Diezmillo — con buen marmoleo y sabor intenso a res.\n\nBlack Angus Macka's Pedigree (Australia), terminado con grano para un marmoleo parejo y un sabor robusto a res. Versátil y consistente pieza a pieza.\n\nMuy versátil: bistec marinado, fajitas, guisos y braseados.",
       "origin": "Origen Macka's Pedigree\n\nBlack Angus australiano de la ganadería Macka's Pedigree, criado bajo estrictos estándares de bienestar y terminado con grano. Trazable y consistente, con el sabor clásico a res y un marmoleo confiable.",
       "cooking": "Recomendaciones de cocción\n\nBistec fino: sella rápido y fuerte. Pieza grande: braseado lento hasta terneza total."
     },
     "en": {
-      "name": "Chuck Roll Black Angus Macka's",
-      "description": "Chuck roll (diezmillo) — a neck/shoulder cut with good marbling and intense beef flavor.\n\nMacka's Pedigree Black Angus (Australia), grain-finished for even marbling and a robust beef flavor. Versatile and consistent piece to piece.\n\nVery versatile: marinated steak, fajitas, stews and braises.",
+      "name": "Diezmillo Black Angus",
+      "description": "(diezmillo) — a neck/shoulder cut with good marbling and intense beef flavor.\n\nMacka's Pedigree Black Angus (Australia), grain-finished for even marbling and a robust beef flavor. Versatile and consistent piece to piece.\n\nVery versatile: marinated steak, fajitas, stews and braises.",
       "origin": "Macka's Pedigree origin\n\nAustralian Black Angus from the Macka's Pedigree ranch, raised under strict welfare standards and grain-finished. Traceable and consistent, with classic beef flavor and reliable marbling.",
       "cooking": "Cooking recommendations\n\nThin steak: sear fast and hot. Large piece: slow braise until fully tender."
     }
