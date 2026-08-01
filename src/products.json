@@ -125,7 +125,7 @@
     }
   },
   {
-    "id": "picana",
+    "id": "picana A5",
     "cat": "jp",
     "tone": "cream",
     "images": [
@@ -142,24 +142,6 @@
           "label": "10-12",
           "mayoreo": 1950,
           "menudeo": 2250
-        },
-        {
-          "lo": 11,
-          "hi": 12,
-          "image": "",
-          "label": "11-12",
-          "sku": "COULOTTE",
-          "mayoreo": 1950,
-          "menudeo": 2250
-        },
-        {
-          "lo": 12,
-          "hi": 12,
-          "image": "",
-          "label": "12",
-          "sku": "4",
-          "mayoreo": 3200,
-          "menudeo": 3500
         }
       ]
     },
