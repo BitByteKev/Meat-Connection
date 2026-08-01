@@ -172,8 +172,6 @@
       "wagyu-australiano-newyork-89-3.webp",
       "wagyu-australiano-newyork-89-4.webp",
       "wagyu-australiano-newyork-89-5.webp",
-      "lgrow-striploin-top.webp",
-      "lgrow-striploin-side.webp",
       "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
       "lgrow-striploin-hero.webp",
       "whatsapp-image-2026-07-02-at-15-05-24-mr44u6z84731.webp",
@@ -197,8 +195,8 @@
           "image": "wagyu-australiano-newyork-89-2.webp",
           "label": "4-5",
           "sku": "8",
-          "mayoreo": 1700,
-          "menudeo": 2000
+          "mayoreo": 870,
+          "menudeo": 1100
         },
         {
           "lo": 6,
@@ -215,24 +213,6 @@
           "image": "wagyu-australiano-newyork-89-4.webp",
           "label": "8-9",
           "sku": "NYMR",
-          "mayoreo": 1960,
-          "menudeo": 2260
-        },
-        {
-          "lo": 8,
-          "hi": 99,
-          "image": "wagyu-australiano-newyork-89-5.webp",
-          "label": "8+",
-          "sku": "68035-1",
-          "mayoreo": 1580,
-          "menudeo": 1880
-        },
-        {
-          "lo": 9,
-          "hi": 99,
-          "image": "",
-          "label": "9+",
-          "sku": "416171",
           "mayoreo": 2100,
           "menudeo": 2400
         }
