@@ -104,15 +104,6 @@
           "sku": "RBA5",
           "mayoreo": 2380,
           "menudeo": 2680
-        },
-        {
-          "lo": 12,
-          "hi": 12,
-          "image": "RIB-EYE-WAGYU-JAPONES-A5-ALTO-MARMOLEO-1.webp",
-          "label": "12",
-          "sku": "1",
-          "mayoreo": 4650,
-          "menudeo": 4950
         }
       ]
     },
