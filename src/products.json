@@ -1349,7 +1349,7 @@
     }
   },
   {
-    "id": "arrachera australiano",
+    "id": "Arrachera Inside Aus",
     "cat": "au",
     "tone": "kraft",
     "images": [
@@ -1359,29 +1359,38 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 0,
+          "hi": 3,
+          "image": "",
+          "label": "0-3",
+          "sku": "KR",
+          "mayoreo": 420,
+          "menudeo": 700
+        },
+        {
           "lo": 8,
           "hi": 9,
-          "image": "",
+          "image": "whatsapp-image-2026-07-28-at-16-31-54-ms5alj7i6559.webp",
           "label": "8-9",
-          "sku": "LA",
-          "mayoreo": 1250,
-          "menudeo": 1550
+          "sku": "KR",
+          "mayoreo": 800,
+          "menudeo": 1100
         }
       ]
     },
-    "sku": "LA",
+    "sku": "KR",
     "badge": {
       "es": "Australia · L Grow",
       "en": "Australia · L Grow"
     },
     "es": {
-      "name": "Arrachera",
+      "name": "Arrachera Inside Aus",
       "description": "Arrachera (skirt steak) — el corte clásico de la fajita, fibra marcada y mucho sabor.\n\nWagyu australiano L Grow, cruza terminada con grano para un marmoleo profundo. Jugoso y untuoso, con el balance perfecto entre grasa y sabor a res.\n\nMarínala y ásala rápido. Insuperable para tacos y fajitas.",
       "origin": "Origen Wagyu Australiano \n\nWagyu australiano de la marca L Grow, cruza terminada con grano para un marmoleo profundo y parejo. Criado bajo estrictos estándares de marmoleo y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nFuego muy alto, 2–3 min por lado. Corta fino en contra de la fibra."
     },
     "en": {
-      "name": "Arrachera",
+      "name": "Arrachera  Inside Aus",
       "description": "Skirt steak (arrachera) — the classic fajita cut, pronounced grain and big flavor.\n\nL Grow Australian wagyu, grain-finished cross with deep marbling. Juicy and rich, with the perfect balance of fat and beef flavor.\n\nMarinate and grill fast. Unbeatable for tacos and fajitas.",
       "origin": "Australian Wagyu origin\n\nAustralian wagyu from the L Grow brand, a grain-finished cross for deep, even marbling. Raised under strict marbling standards and fully traceable.",
       "cooking": "Cooking recommendations\n\nVery high heat, 2–3 min per side. Slice thin against the grain."
