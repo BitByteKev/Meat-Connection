@@ -1599,7 +1599,7 @@
     }
   },
   {
-    "id": "ribeye wagyu australiano",
+    "id": "Rib Eye Aust",
     "cat": "au",
     "tone": "red",
     "images": [
@@ -1656,18 +1656,19 @@
         }
       ]
     },
+    "sku": "KR",
     "badge": {
       "es": "Australia",
       "en": "Australia"
     },
     "es": {
-      "name": "Rib eye wagyu australiano",
+      "name": "Rib Eye Aus.",
       "description": "El rib eye  equilibra el ojo central magro y la cresta de grasa exterior — dos texturas en una pieza.\n\nWagyu australiano, cruza terminada con grano para un marmoleo profundo. Jugoso y untuoso, con el balance perfecto entre grasa y sabor a res.\n\nEl corte rey de la parrilla. Excelente sellado, a la plancha o cortado fino.",
       "origin": "Origen Wagyu Australiano \nWagyu australiano de la marca L Grow, cruza terminada con grano para un marmoleo profundo y parejo. Criado bajo estrictos estándares de marmoleo y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nSella 2–3 min por lado hasta costra dorada. Medio (54–57 °C) para fundir el marmoleo. Reposa 5 min."
     },
     "en": {
-      "name": "Rib Eye Australian Wagyu",
+      "name": "Rib Eye Aus",
       "description": "The rib eye balances the lean central eye and the outer fat cap — two textures in one piece.\n\nAustralian wagyu, grain-finished cross with deep marbling. Juicy and rich, with the perfect balance of fat and beef flavor.\n\nThe king of the grill. Excellent seared, on the griddle or sliced thin.",
       "origin": "Australian Wagyu origin\n\nAustralian wagyu from the L Grow brand, a grain-finished cross for deep, even marbling. Raised under strict marbling standards and fully traceable.",
       "cooking": "Cooking recommendations\n\nSear 2–3 min per side until a golden crust forms. Medium (54–57 °C) to render the marbling. Rest 5 min."
