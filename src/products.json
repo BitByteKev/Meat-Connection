@@ -1258,7 +1258,7 @@
       "variants": [
         {
           "lo": 2,
-          "hi": 9,
+          "hi": 3,
           "image": "lgrow-cube-roll-top.webp",
           "label": "2+",
           "sku": "390195",
@@ -1267,7 +1267,7 @@
         },
         {
           "lo": 4,
-          "hi": 9,
+          "hi": 5,
           "image": "whatsapp-image-2026-07-28-at-16-37-24-ms5aqn2n3219.webp",
           "label": "4+",
           "sku": "390290",
@@ -1276,7 +1276,7 @@
         },
         {
           "lo": 6,
-          "hi": 9,
+          "hi": 7,
           "image": "lgrow-cube-roll-top.webp",
           "label": "6+",
           "sku": "390293",
@@ -1290,13 +1290,13 @@
       "en": "Black Angus"
     },
     "es": {
-      "name": "Rib Eye Black Angus",
+      "name": "Rib Eye BA",
       "description": "El rib eye (cube roll) equilibra el ojo central magro y la cresta de grasa exterior — dos texturas en una pieza.\n\nBlack Angus Macka's Pedigree (Australia), terminado con grano para un marmoleo parejo y un sabor robusto a res. Versátil y consistente pieza a pieza.\n\nEl corte rey de la parrilla. Excelente sellado, a la plancha o cortado fino.",
       "origin": "Origen Macka's Pedigree\n\nBlack Angus australiano de la ganadería Macka's Pedigree, criado bajo estrictos estándares de bienestar y terminado con grano. Trazable y consistente, con el sabor clásico a res y un marmoleo confiable.",
       "cooking": "Recomendaciones de cocción\n\nSella 2–3 min por lado hasta costra dorada. Medio (54–57 °C) para fundir el marmoleo. Reposa 5 min."
     },
     "en": {
-      "name": "Rib Eye Black Angus",
+      "name": "Rib Eye BA",
       "description": "The rib eye (cube roll) balances the lean central eye and the outer fat cap — two textures in one piece.\n\nMacka's Pedigree Black Angus (Australia), grain-finished for even marbling and a robust beef flavor. Versatile and consistent piece to piece.\n\nThe king of the grill. Excellent seared, on the griddle or sliced thin.",
       "origin": "Macka's Pedigree origin\n\nAustralian Black Angus from the Macka's Pedigree ranch, raised under strict welfare standards and grain-finished. Traceable and consistent, with classic beef flavor and reliable marbling.",
       "cooking": "Cooking recommendations\n\nSear 2–3 min per side until a golden crust forms. Medium (54–57 °C) to render the marbling. Rest 5 min."
