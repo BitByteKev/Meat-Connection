@@ -566,7 +566,7 @@
       "cooking": "Recomendaciones de cocción\n\nParrilla o sartén antiadherente\n• Calienta a fuego medio para evitar quemar la piel.\n• Cocina 4–5 minutos por lado, girando con frecuencia para un dorado parejo.\n\nHorno\n• Precalienta a 180 °C.\n• Hornea 12–15 minutos sobre rejilla, volteando a la mitad del tiempo.\n\nEvitar pinchazos\nNo perforar la piel para conservar los jugos en su interior."
     },
     "en": {
-      "name": "American Sausage · 4-Pack",
+      "name": "Ame Sausage · 4-Pack",
       "description": "American wagyu sausage, 4-pack. Juicy and flavorful, made from premium wagyu trim.\n\nProduct features\n\n• Pack of 4: a practical format for your kitchen or service.\n• Wagyu beef: high intramuscular fat content that brings juiciness and rich flavor.\n• Artisan seasoning: a balanced spice blend that enhances the umami profile without overpowering the meat.\n\nSensory profile\n\nEach bite reveals a mild umami with hints of grilled meat and light herbal touches. The Wagyu fat emulsion delivers a juicy texture and a delicate aftertaste that sets these sausages apart from conventional ones.\n\nNutritional value\n\nRich in high-quality protein and with Wagyu fat high in oleic acid (monounsaturated), these sausages also provide B vitamins and minerals such as iron and zinc — ideal for value-added menu options.\n\nKey points\n\n• Format: pack of 4 sausages\n• Meat type: American Wagyu\n• Texture: Juicy and velvety\n• Flavor: Mild umami with artisan spices\n• Cooking: Grill, pan or oven\n• Use: Gourmet menus, events and premium service",
       "origin": "Origin & superior quality\n\nThe American Wagyu Sausage is made with Wagyu beef raised in the USA under high animal-welfare standards and controlled feeding. Each 4-piece pack combines select cuts to deliver a gourmet-level processed product.",
       "cooking": "Cooking recommendations\n\nGrill or non-stick pan\n• Heat over medium to avoid burning the casing.\n• Cook 4–5 minutes per side, turning often for even browning.\n\nOven\n• Preheat to 180 °C.\n• Bake 12–15 minutes on a rack, flipping halfway through.\n\nAvoid piercing\nDo not pierce the casing, to keep the juices inside."
@@ -691,7 +691,7 @@
       "cooking": "Recomendaciones de cocción\n\nBistec fino: sella rápido y fuerte. Pieza grande: braseado lento hasta terneza total."
     },
     "en": {
-      "name": "Diezmillo Japanese Wagyu A5",
+      "name": "Diezmillo A5 Wagyu",
       "description": "(diezmillo) — a neck/shoulder cut with good marbling and intense beef flavor.\n\nJapanese A5 wagyu, BMS 10–12 marbling — the peak of marbling. Intramuscular fat that melts at low temperature for a buttery texture and deep umami.\n\nVery versatile: marinated steak, fajitas, stews and braises.",
       "origin": "Origin & A5 distinction\n\nSourced from purebred Japanese Black Wagyu cattle, raised on certified Japanese farms. The A5 grade guarantees the fullest expression of marbling, tenderness and flavor, fully traceable to the prefecture.",
       "cooking": "Cooking recommendations\n\nThin steak: sear fast and hot. Large piece: slow braise until fully tender."
@@ -891,7 +891,7 @@
       "cooking": "Recomendaciones de cocción\n\nSella 2–3 min por lado a fuego alto. No pases de medio. Reposa 4 min."
     },
     "en": {
-      "name": "Sirloin Japanese Wagyu A5",
+      "name": "Sirloin A5 Wagyu",
       "description": "Sirloin (with picanha D-rump) — a lean, firm cut with excellent beef flavor.\n\nJapanese A5 wagyu, BMS 10–12 marbling — the peak of marbling. Intramuscular fat that melts at low temperature for a buttery texture and deep umami.\n\nVersatile steak, skewers or thin slices.",
       "origin": "Origin & A5 distinction\n\nSourced from purebred Japanese Black Wagyu cattle, raised on certified Japanese farms. The A5 grade guarantees the fullest expression of marbling, tenderness and flavor, fully traceable to the prefecture.",
       "cooking": "Cooking recommendations\n\nSear 2–3 min per side over high heat. Don’t go past medium. Rest 4 min."
@@ -938,7 +938,7 @@
       "cooking": "Recomendaciones de cocción\n\nSella fuerte 2–3 min por lado. Corta SIEMPRE fino y en contra de la fibra."
     },
     "en": {
-      "name": "Flap Meat Japanese Wagyu A5",
+      "name": "Flap Meat A5 Wagyu",
       "description": "Flap meat (vacío) — an open, loose grain that soaks up marinades and packs flavor.\n\nJapanese A5 wagyu, BMS 10–12 marbling — the peak of marbling. Intramuscular fat that melts at low temperature for a buttery texture and deep umami.\n\nExcellent for tacos, fajitas and quick grilling.",
       "origin": "Origin & A5 distinction\n\nSourced from purebred Japanese Black Wagyu cattle, raised on certified Japanese farms. The A5 grade guarantees the fullest expression of marbling, tenderness and flavor, fully traceable to the prefecture.",
       "cooking": "Cooking recommendations\n\nSear hard 2–3 min per side. ALWAYS slice thin and against the grain."
@@ -976,7 +976,7 @@
       "cooking": "Recomendaciones de cocción\n\nAsa a fuego medio-alto 4–6 min por lado."
     },
     "en": {
-      "name": "Tablita Japanese Wagyu A5",
+      "name": "Tablita A5 Wagyu",
       "description": "Tablita  — a cross-cut rib strip, juicy and full of flavor.\n\nJapanese A5 wagyu, BMS 10–12 marbling — the peak of marbling. Intramuscular fat that melts at low temperature for a buttery texture and deep umami.\n\nA classic of the Mexican grill and asado. Made for sharing.",
       "origin": "Origin & A5 distinction\n\nSourced from purebred Japanese Black Wagyu cattle, raised on certified Japanese farms. The A5 grade guarantees the fullest expression of marbling, tenderness and flavor, fully traceable to the prefecture.",
       "cooking": "Cooking recommendations\n\nGrill over medium-high 4–6 min per side."
@@ -1051,13 +1051,13 @@
       "en": "Black Angus"
     },
     "es": {
-      "name": "Brisket Black Angus",
+      "name": "Brisket BA",
       "description": "Brisket (pecho) — el corte del barbecue por excelencia, con su característica capa de grasa.\n\nBlack Angus Macka's Pedigree (Australia), terminado con grano para un marmoleo parejo y un sabor robusto a res. Versátil y consistente pieza a pieza.\n\nAhumado lento, pastrami o braseado. La paciencia lo transforma en mantequilla.",
       "origin": "Origen Macka's Pedigree\n\nBlack Angus australiano de la ganadería Macka's Pedigree, criado bajo estrictos estándares de bienestar y terminado con grano. Trazable y consistente, con el sabor clásico a res y un marmoleo confiable.",
       "cooking": "Recomendaciones de cocción\n\nAhúma a 110–120 °C hasta 92–96 °C al centro (10–14 h). Reposa 1 h envuelto."
     },
     "en": {
-      "name": "Brisket Black Angus Macka's",
+      "name": "Brisket BA Macka's",
       "description": "Brisket — the quintessential barbecue cut, with its signature fat cap.\n\nMacka's Pedigree Black Angus (Australia), grain-finished for even marbling and a robust beef flavor. Versatile and consistent piece to piece.\n\nLow-and-slow smoke, pastrami or braise. Patience turns it to butter.",
       "origin": "Macka's Pedigree origin\n\nAustralian Black Angus from the Macka's Pedigree ranch, raised under strict welfare standards and grain-finished. Traceable and consistent, with classic beef flavor and reliable marbling.",
       "cooking": "Cooking recommendations\n\nSmoke at 110–120 °C until 92–96 °C internal (10–14 h). Rest 1 h wrapped."
@@ -1098,13 +1098,13 @@
       "en": "Black Angus"
     },
     "es": {
-      "name": "Diezmillo Black Angus",
+      "name": "Diezmillo BA",
       "description": "Diezmillo — con buen marmoleo y sabor intenso a res.\n\nBlack Angus Macka's Pedigree (Australia), terminado con grano para un marmoleo parejo y un sabor robusto a res. Versátil y consistente pieza a pieza.\n\nMuy versátil: bistec marinado, fajitas, guisos y braseados.",
       "origin": "Origen Macka's Pedigree\n\nBlack Angus australiano de la ganadería Macka's Pedigree, criado bajo estrictos estándares de bienestar y terminado con grano. Trazable y consistente, con el sabor clásico a res y un marmoleo confiable.",
       "cooking": "Recomendaciones de cocción\n\nBistec fino: sella rápido y fuerte. Pieza grande: braseado lento hasta terneza total."
     },
     "en": {
-      "name": "Diezmillo Black Angus",
+      "name": "Diezmillo BA",
       "description": "(diezmillo) — a neck/shoulder cut with good marbling and intense beef flavor.\n\nMacka's Pedigree Black Angus (Australia), grain-finished for even marbling and a robust beef flavor. Versatile and consistent piece to piece.\n\nVery versatile: marinated steak, fajitas, stews and braises.",
       "origin": "Macka's Pedigree origin\n\nAustralian Black Angus from the Macka's Pedigree ranch, raised under strict welfare standards and grain-finished. Traceable and consistent, with classic beef flavor and reliable marbling.",
       "cooking": "Cooking recommendations\n\nThin steak: sear fast and hot. Large piece: slow braise until fully tender."
@@ -1137,13 +1137,13 @@
       "en": "Black Angus"
     },
     "es": {
-      "name": "Hanging Tender Black Angus",
+      "name": "Hanging Tender BA",
       "description": "Hanging tender (entraña fina) — corte de un solo músculo, tierno y de sabor profundo.\n\nBlack Angus (Australia), terminado con grano para un marmoleo parejo y un sabor robusto a res. Versátil y consistente pieza a pieza.\n\nFavorito de bistró. Marínalo y ásalo rápido.",
       "origin": "Origen Australiano\n\nBlack Angus australiano de la ganadería Macka's Pedigree, criado bajo estrictos estándares de bienestar y terminado con grano. Trazable y consistente, con el sabor clásico a res y un marmoleo confiable.",
       "cooking": "Recomendaciones de cocción\n\nFuego alto, 2–3 min por lado a medio-rojo. Retira la membrana y corta fino."
     },
     "en": {
-      "name": "Hanging Tender Black Angus",
+      "name": "Hanging Tender BA",
       "description": "Hanging tender (hanger steak) — a single-muscle cut, tender with deep flavor.\n\n Black Angus (Australia), grain-finished for even marbling and a robust beef flavor. Versatile and consistent piece to piece.\n\nA bistro favorite. Marinate and grill fast.",
       "origin": "Australian origin\n\nAustralian Black Angus from the Macka's Pedigree ranch, raised under strict welfare standards and grain-finished. Traceable and consistent, with classic beef flavor and reliable marbling.",
       "cooking": "Cooking recommendations\n\nHigh heat, 2–3 min per side to medium-rare. Remove the membrane and slice thin."
@@ -1175,13 +1175,13 @@
       "en": "Black Angus"
     },
     "es": {
-      "name": "Lengua Black Angus",
+      "name": "Lengua BA",
       "description": "Lengua — corte tradicional que, bien cocido, queda suave y meloso.\n\nBlack Angus (Australia), terminado con grano para un marmoleo parejo y un sabor robusto a res. Versátil y consistente pieza a pieza.\n\nTacos de lengua, guisos y braseados.",
       "origin": "Origen Australiano\n\nBlack Angus australiano de la ganadería Macka's Pedigree, criado bajo estrictos estándares de bienestar y terminado con grano. Trazable y consistente, con el sabor clásico a res y un marmoleo confiable.",
       "cooking": "Recomendaciones de cocción\n\nCuece 2.5–3 h hasta suave, retira la piel y dora o brasea en su salsa."
     },
     "en": {
-      "name": "Tongue Black Angus Macka's",
+      "name": "Tongue BA Macka's",
       "description": "Tongue (lengua) — a traditional cut that, properly cooked, turns soft and silky.\n\nBlack Angus (Australia), grain-finished for even marbling and a robust beef flavor. Versatile and consistent piece to piece.\n\nTongue tacos, stews and braises.",
       "origin": "Australian origin\n\nAustralian Black Angus from the Macka's Pedigree ranch, raised under strict welfare standards and grain-finished. Traceable and consistent, with classic beef flavor and reliable marbling.",
       "cooking": "Cooking recommendations\n\nSimmer 2.5–3 h until tender, peel the skin and sear or braise in its sauce."
@@ -1232,13 +1232,13 @@
       "en": "Black Angus"
     },
     "es": {
-      "name": "Picaña Black Angus",
+      "name": "Picaña BA",
       "description": "Picaña (rump cap) — corte brasileño por excelencia, con una capa de grasa superior que se vuelve crujiente.\n\nBlack Angus Macka's Pedigree (Australia), terminado con grano para un marmoleo parejo y un sabor robusto a res. Versátil y consistente pieza a pieza.\n\nEstrella del asado. Córtala en C contra la fibra o ásala entera con la grasa hacia arriba.",
       "origin": "Origen Macka's Pedigree\n\nBlack Angus australiano de la ganadería Macka's Pedigree, criado bajo estrictos estándares de bienestar y terminado con grano. Trazable y consistente, con el sabor clásico a res y un marmoleo confiable.",
       "cooking": "Recomendaciones de cocción\n\nMarca la grasa, sella con la capa hacia el fuego y termina a calor medio. Medio. Reposa 5 min."
     },
     "en": {
-      "name": "Picanha Black Angus Macka's",
+      "name": "Picanha BA Macka's",
       "description": "Picanha (rump cap) — the quintessential Brazilian cut, with a top fat layer that turns crisp.\n\nMacka's Pedigree Black Angus (Australia), grain-finished for even marbling and a robust beef flavor. Versatile and consistent piece to piece.\n\nStar of the cookout. Slice in C against the grain or grill whole, fat-side up.",
       "origin": "Macka's Pedigree origin\n\nAustralian Black Angus from the Macka's Pedigree ranch, raised under strict welfare standards and grain-finished. Traceable and consistent, with classic beef flavor and reliable marbling.",
       "cooking": "Cooking recommendations\n\nScore the fat, sear fat-side toward the fire and finish over medium heat. Medium. Rest 5 min."
@@ -1337,13 +1337,13 @@
       "en": "Black Angus"
     },
     "es": {
-      "name": "Tomahawk Black Angus",
+      "name": "Tomahawk BA",
       "description": "Tomahawk — rib eye con el hueso de la costilla limpio y largo. Espectáculo en la mesa.\n\nBlack Angus Macka's Pedigree (Australia), terminado con grano para un marmoleo parejo y un sabor robusto a res. Versátil y consistente pieza a pieza.\n\nLa pieza central de cualquier asado. Para compartir.",
       "origin": "Origen Black angus\n\nBlack Angus australiano de la ganadería Macka's Pedigree, criado bajo estrictos estándares de bienestar y terminado con grano. Trazable y consistente, con el sabor clásico a res y un marmoleo confiable.",
       "cooking": "Recomendaciones de cocción\n\nSella todos los lados y termina a calor indirecto/horno a 140 °C hasta 54–57 °C. Reposa 8–10 min."
     },
     "en": {
-      "name": "Tomahawk Black Angus",
+      "name": "Tomahawk BA",
       "description": "Tomahawk — rib eye with the long, frenched rib bone. A showstopper.\n\nMacka's Pedigree Black Angus (Australia), grain-finished for even marbling and a robust beef flavor. Versatile and consistent piece to piece.\n\nThe centerpiece of any cookout. Made for sharing.",
       "origin": "Black Angus Origin\nAustralian Black Angus from the Macka's Pedigree ranch, raised under strict welfare standards and grain-finished. Traceable and consistent, with classic beef flavor and reliable marbling.",
       "cooking": "Cooking recommendations\n\nSear all sides and finish over indirect heat / 140 °C oven until 54–57 °C. Rest 8–10 min."
@@ -1391,7 +1391,7 @@
       "cooking": "Recomendaciones de cocción\n\nFuego muy alto, 2–3 min por lado. Corta fino en contra de la fibra."
     },
     "en": {
-      "name": "Arrachera  Inside Aus",
+      "name": "Arrachera Inside Aus",
       "description": "Skirt steak (arrachera) — the classic fajita cut, pronounced grain and big flavor.\n\nL Grow Australian wagyu, grain-finished cross with deep marbling. Juicy and rich, with the perfect balance of fat and beef flavor.\n\nMarinate and grill fast. Unbeatable for tacos and fajitas.",
       "origin": "Australian Wagyu origin\n\nAustralian wagyu from the L Grow brand, a grain-finished cross for deep, even marbling. Raised under strict marbling standards and fully traceable.",
       "cooking": "Cooking recommendations\n\nVery high heat, 2–3 min per side. Slice thin against the grain."
@@ -1464,13 +1464,13 @@
       "en": "Australia · L Grow"
     },
     "es": {
-      "name": "Filete Wagyu australiano",
+      "name": "Filete Wagyu Aus",
       "description": "Filete de wagyu australiano con Marble Score MB 9+ — el máximo marmoleo en el corte más tierno de la res. Textura mantecosa que se deshace en el paladar.\n\nCaracterísticas del corte\n\n• Filete / solomillo: fibra fina, magro y uniforme, el corte más tierno.\n• Marble Score MB 9+: marmoleo extremo, vetas densas de grasa intramuscular.\n• Ideal para medallones y presentaciones donde la terneza manda.\n\nSella a fuego alto y no lo sobrecocines: término medio-rojo para máxima jugosidad.",
       "origin": "Origen Wagyu Australiano L Grow\n\nWagyu australiano de la marca L Grow, cruza terminada con grano para un marmoleo profundo y parejo. Criado bajo estrictos estándares de marmoleo y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nAtempera la pieza y seca bien la superficie.\n• Sella 1–2 minutos por lado a fuego alto para una corteza dorada.\n• Término medio-rojo (52–54 °C) para respetar la terneza del filete.\n\nReposo\nDeja reposar 4 minutos antes de cortar para redistribuir los jugos."
     },
     "en": {
-      "name": "Filete Australian Wagyu",
+      "name": "Filete Aus Wagyu",
       "description": "Australian wagyu with Marble Score MB 9+ — peak marbling in the most tender cut of beef. A buttery texture that melts in the mouth.\n\nCut characteristics\n\n• Tenderloin / filet: fine grain, lean and uniform, the most tender cut.\n• Marble Score MB 9+: extreme marbling, dense threads of intramuscular fat.\n• Ideal for medallions and presentations where tenderness rules.\n\nSear over high heat and don't overcook: medium-rare for maximum juiciness.",
       "origin": "L Grow Australian Wagyu origin\n\nAustralian wagyu from the L Grow brand, a grain-finished cross for deep, even marbling. Raised under strict marbling standards and fully traceable.",
       "cooking": "Cooking recommendations\n\nTemper the steak and pat the surface dry.\n• Sear 1–2 minutes per side over high heat for a golden crust.\n• Medium-rare (52–54 °C) to respect the tenderloin's tenderness.\n\nRest\nRest 4 minutes before slicing to redistribute the juices."
@@ -1586,13 +1586,13 @@
       "en": "Australia · L Grow"
     },
     "es": {
-      "name": "Picaña Wagyu Australiano",
+      "name": "Picaña Wagyu Aus",
       "description": "Picaña (rump cap) — corte brasileño por excelencia, con una capa de grasa superior que se vuelve crujiente.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nEstrella del asado. Córtala en C contra la fibra o ásala entera con la grasa hacia arriba.",
       "origin": "Origen australiano\n\nWagyu australiano King River, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nMarca la grasa, sella con la capa hacia el fuego y termina a calor medio. Medio. Reposa 5 min."
     },
     "en": {
-      "name": "Picanha Rump Cap Australian Wagyu",
+      "name": "Picanha Rump Cap Aus Wagyu",
       "description": "Picanha (rump cap) — the quintessential Brazilian cut, with a top fat layer that turns crisp.\n\nAustralian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nStar of the cookout. Slice in C against the grain or grill whole, fat-side up.",
       "origin": "Australian origin\n\nKing River Australian wagyu, one of the most recognized wagyu crosses in Australia. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nScore the fat, sear fat-side toward the fire and finish over medium heat. Medium. Rest 5 min."
@@ -1728,7 +1728,7 @@
       "cooking": "Recomendaciones de cocción\n\nSella fuerte 2–3 min por lado. Corta SIEMPRE fino y en contra de la fibra."
     },
     "en": {
-      "name": "Flap Meat Australian Wagyu",
+      "name": "Flap Meat Aus Wagyu",
       "description": "Flap meat and packs flavor.\n\n Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nExcellent for tacos, fajitas and quick grilling.",
       "origin": "Australian Wagyu origin\n\nAustralian wagyu from the L Grow brand, a grain-finished cross for deep, even marbling. Raised under strict marbling standards and fully traceable.",
       "cooking": "Cooking recommendations\n\nSear hard 2–3 min per side. ALWAYS slice thin and against the grain."
@@ -1853,13 +1853,13 @@
       "en": "Australia"
     },
     "es": {
-      "name": "Brisket Australiano",
+      "name": "Brisket Aus",
       "description": "Brisket (pecho) — el corte del barbecue por excelencia, con su característica capa de grasa.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nAhumado lento, pastrami o braseado. La paciencia lo transforma en mantequilla.",
       "origin": "Wagyu australiano King River, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nAhúma a 110–120 °C hasta 92–96 °C al centro (10–14 h). Reposa 1 h envuelto."
     },
     "en": {
-      "name": "Brisket Wagyu Australiano",
+      "name": "Brisket Wagyu Aus",
       "description": "Brisket — the quintessential barbecue cut, with its signature fat cap.\n\nKing River Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nLow-and-slow smoke, pastrami or braise. Patience turns it to butter.",
       "origin": "King River Australian wagyu, one of the most recognized wagyu crosses in Australia. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nSmoke at 110–120 °C until 92–96 °C internal (10–14 h). Rest 1 h wrapped."
@@ -1901,7 +1901,7 @@
       "en": "· Australia"
     },
     "es": {
-      "name": "Chamorro Australiano",
+      "name": "Chamorro Aus",
       "description": "Chamorro (shin / shank) — rico en colágeno, se vuelve gelatinoso y tierno con cocción lenta.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nOsobuco, braseados y caldos de sabor profundo.",
       "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nBrasea 2.5–3 h a fuego bajo con líquido hasta que se separe del hueso."
@@ -1958,13 +1958,13 @@
       "en": "· Australia"
     },
     "es": {
-      "name": "Chuck Short Australiano",
+      "name": "Chuck Short Aus",
       "description": "Short rib (costilla, con o sin hueso) — corte jugoso y muy marmoleado, intenso en sabor.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nRey del braseado y el ahumado. También en finas láminas para parrilla coreana.",
       "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nBraseado: 3 h a 160 °C hasta deshebrar. Parrilla (rebanado): sella 1–2 min por lado."
     },
     "en": {
-      "name": "Chuck Short Rib Wagyu Australian",
+      "name": "Chuck Short Rib Wagyu Aus",
       "description": "Short rib (bone-in or boneless) — a juicy, heavily marbled cut, intense in flavor.\n\nAustralian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nKing of braising and smoking. Also thin-sliced for Korean BBQ.",
       "origin": "Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nBraise: 3 h at 160 °C until it shreds. Grill (sliced): sear 1–2 min per side."
@@ -2046,7 +2046,7 @@
       "en": "· Australia"
     },
     "es": {
-      "name": "Diezmillo Australiano",
+      "name": "Diezmillo Aus",
       "description": "Un diezmillo Wagyu australiano con un marmoleo excepcional que se deshace en cada bocado.\n\nEste corte proviene del cuarto delantero y combina sabor profundo con una jugosidad extraordinaria gracias a su intensa infiltración de grasa. Es una opción versátil que sorprende tanto en preparaciones al sartén como en cocciones lentas.\n\nIdeal para quienes buscan la experiencia Wagyu premium en un corte lleno de carácter y suavidad.",
       "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Para cortes en filete: sella a fuego alto 1 a 2 minutos por lado y termina a término medio o medio-rojo para respetar la grasa. Deja reposar 5 minutos antes de servir.\n\nSi lo preparas en pieza entera, opta por cocción lenta y baja temperatura para lograr una textura tierna. Sazona de forma sencilla con sal en escamas para no opacar el sabor natural del Wagyu."
@@ -2198,7 +2198,7 @@
       "en": "King River · Australia"
     },
     "es": {
-      "name": "Sirloin Rostbiff Australiano",
+      "name": "Sirloin Rostbiff Aus",
       "description": "Sirloin rostbiff — corte magro de cadera, ideal para roast beef y rebanadas finas.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nAsado entero al horno o laminado para fríos y sándwiches.",
       "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nSella y hornea a 160 °C hasta 52–54 °C al centro. Reposa 10 min y rebana fino."
@@ -2353,7 +2353,7 @@
       "en": "King River · Australia"
     },
     "es": {
-      "name": "Flat Iron Australiano",
+      "name": "Flat Iron Aus",
       "description": "Flat iron (de la paleta) — corte tierno y muy marmoleado, una joya de precio inteligente.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nVersátil para parrilla, fajitas o cortado fino.",
       "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nSella 2–3 min por lado a fuego alto. Medio-rojo. Corta fino en contra de la fibra."
@@ -2391,13 +2391,13 @@
       "en": "Jewel · Fullblood"
     },
     "es": {
-      "name": "Diezmillo Americano",
+      "name": "Diezmillo Ame",
       "description": "Diezmillo — corte de cuello/espaldilla con buen marmoleo y sabor intenso a res.\n\nWagyu americano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nMuy versátil: bistec marinado, fajitas, guisos y braseados.",
       "origin": "Wagyu fullblood americano (EE.UU.), criado con altos estándares de alimentación y bienestar. Genética wagyu 100 % pura para un marmoleo profundo y un sabor intenso, totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nBistec fino: sella rápido y fuerte. Pieza grande: braseado lento hasta terneza total."
     },
     "en": {
-      "name": "Diezmillo Wagyu Americano",
+      "name": "Diezmillo Wagyu Ame",
       "description": "(diezmillo) — a neck/shoulder cut with good marbling and intense beef flavor.\n\nAmerican wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nVery versatile: marinated steak, fajitas, stews and braises.",
       "origin": "American fullblood wagyu (USA), raised with high feeding and welfare standards. 100% pure wagyu genetics for deep marbling and intense flavor, fully traceable.",
       "cooking": "Cooking recommendations\n\nThin steak: sear fast and hot. Large piece: slow braise until fully tender."
@@ -2640,13 +2640,13 @@
       "en": "Australiano Cross"
     },
     "es": {
-      "name": "Short Rib Wagyu Australiano",
+      "name": "Short Rib Wagyu Aus",
       "description": "Costilla de res con hueso, jugosa y llena de sabor profundo.\n\nEste Short Rib de Wagyu Australiano combina la untuosidad característica del wagyu con la textura firme y el intenso sabor a carne de la costilla. Su marmoleo medio se derrite lentamente durante la cocción, dejando cada bocado suave y sabroso.\n\nUn corte ideal para preparaciones lentas que premian la paciencia con una terneza que se deshace.",
       "origin": "Wagyu Australiano. Ganado de raza wagyu criado en Australia, reconocido por su marmoleo consistente y sabor equilibrado.",
       "cooking": "Perfecto para cocción lenta y a baja temperatura.\n\n• Cocción lenta al horno o estofado: 3 a 4 horas a fuego bajo hasta que la carne se separe del hueso.\n• BBQ o ahumado: mantén temperatura constante de 110–120 °C por varias horas.\n• Sellado previo: dora bien por todos lados para concentrar los jugos.\n• Deja reposar unos minutos antes de servir para conservar la jugosidad."
     },
     "en": {
-      "name": "Short Rib Australian Wagyu",
+      "name": "Short Rib Aus Wagyu",
       "description": "Bone-in beef rib, juicy and packed with deep flavor.\n\nThis Australian Wagyu Short Rib blends the signature richness of wagyu with the firm texture and intense beefy taste of the rib. Its medium marbling melts slowly as it cooks, leaving every bite tender and flavorful.\n\nAn ideal cut for slow preparations that reward patience with meat that falls off the bone.",
       "origin": "Australian Wagyu. Wagyu-breed cattle raised in Australia, known for consistent marbling and a well-balanced flavor.",
       "cooking": "Perfect for slow, low-temperature cooking.\n\n• Slow braise or oven: 3 to 4 hours on low heat until the meat pulls away from the bone.\n• BBQ or smoking: keep a steady 110–120 °C for several hours.\n• Pre-sear: brown well on all sides to lock in the juices.\n• Let it rest a few minutes before serving to keep it juicy."
@@ -2735,13 +2735,13 @@
       "en": "American Cross"
     },
     "es": {
-      "name": "Rib Eye Wagyu Australiano",
+      "name": "Rib Eye Wagyu Aus",
       "description": "Un rib eye de wagyu cross que combina la jugosidad del wagyu con el carácter del corte más querido de la parrilla.\n\nCon un marmoleo medio (escala 4-5), cada rebanada ofrece un equilibrio ideal entre grasa intramuscular y sabor a res profundo. La grasa se funde al calor y baña la carne, dejando una textura suave y un final mantecoso.\n\nUn corte versátil y generoso, perfecto para quienes buscan la experiencia wagyu sin renunciar a la contundencia del rib eye.",
       "origin": "Wagyu cross australiano de la región de King River. Cruza de raza wagyu que aporta marmoleo característico con nivel estimado 4-5.",
       "cooking": "Atempera la carne 30-40 minutos antes de cocinar. Sella en parrilla o sartén muy caliente 2-3 minutos por lado para formar costra.\n\nCocina a término medio o medio-rojo para aprovechar el marmoleo. Deja reposar 5 minutos antes de cortar y sazona con sal en escamas al final."
     },
     "en": {
-      "name": "Rib Eye Australian Wagyu",
+      "name": "Rib Eye Aus Wagyu",
       "description": "A wagyu cross rib eye that pairs wagyu's juiciness with the character of the grill's most beloved cut.\n\nWith medium marbling (grade 4-5), every slice delivers an ideal balance between intramuscular fat and deep beefy flavor. The fat melts with the heat and bastes the meat, leaving a tender texture and a buttery finish.\n\nA versatile, generous cut, perfect for those seeking the wagyu experience without giving up the bold richness of a rib eye.",
       "origin": "Australian wagyu cross from the King River region. A wagyu crossbreed delivering characteristic marbling at an estimated grade of 4-5.",
       "cooking": "Bring the steak to room temperature 30-40 minutes before cooking. Sear on a very hot grill or pan for 2-3 minutes per side to build a crust.\n\nCook to medium or medium-rare to make the most of the marbling. Rest for 5 minutes before slicing and finish with flaky salt."
@@ -2823,13 +2823,13 @@
       "en": null
     },
     "es": {
-      "name": "New York Wagyu Japonés A5",
+      "name": "New York Wagyu A5",
       "description": "El corte que convierte una cena en una celebración: un New York Wagyu Japonés A5 de marmoleo excepcional.\n\nCada rebanada revela una red densa de grasa intramuscular que se funde al calor, entregando una textura suave y un sabor profundo y mantecoso. La certificación A5 representa el estándar más alto del Wagyu japonés.\n\nSe presenta en cortes de aproximadamente 10 a 12 onzas, ideal para compartir o para disfrutar el lujo de una porción generosa.",
       "origin": "Wagyu Japonés con certificación A5, el grado más alto de calidad en Japón por su marmoleo y textura. Res criada bajo los estándares tradicionales del Wagyu japonés.",
       "cooking": "Atempera la carne fuera del refrigerador entre 20 y 30 minutos antes de cocinar.\n\nSella en sartén o plancha muy caliente, apenas unos segundos por lado, dado su alto contenido de grasa. Por su intensidad, se recomienda un término sellado por fuera y rojo o rojo-inglés por dentro.\n\nDeja reposar unos minutos, corta en rebanadas delgadas y sirve con muy poca sal para no opacar su sabor natural."
     },
     "en": {
-      "name": "New York Japanese Wagyu A5",
+      "name": "New York A5 Wagyu",
       "description": "The cut that turns dinner into a celebration: a New York Japanese Wagyu A5 with exceptional marbling.\n\nEvery slice reveals a dense web of intramuscular fat that melts with heat, delivering a silky texture and a deep, buttery flavor. The A5 certification represents the highest standard of Japanese Wagyu.\n\nOffered in cuts of approximately 10 to 12 ounces, perfect to share or to savor the luxury of a generous portion.",
       "origin": "Japanese Wagyu with A5 certification, the highest quality grade in Japan for its marbling and texture. Cattle raised under the traditional standards of Japanese Wagyu.",
       "cooking": "Let the meat rest at room temperature for 20 to 30 minutes before cooking.\n\nSear in a very hot pan or griddle for just a few seconds per side, given its high fat content. Because of its richness, a seared exterior with a rare to medium-rare center is recommended.\n\nRest for a few minutes, slice thinly, and serve with just a touch of salt so its natural flavor shines."
@@ -3368,13 +3368,13 @@
       "en": "Abatti Ranch · USA"
     },
     "es": {
-      "name": "New York Wagyu Americano Premium",
+      "name": "New York Wagyu Ame Premium",
       "description": "New York wagyu americano línea premium 8+: striploin de crianza extendida con grano, marmoleo intenso estilo americano.\n\nEl corte clásico de steakhouse en su tier más alto.",
       "origin": "Origen Estados Unidos\n\nWagyu americano premium de Abatti Ranch, California. Programa de crianza con grano de larga duración: marmoleo intenso y consistencia de exportación.",
       "cooking": "Recomendaciones de cocción\n\nAtempera 30 min, seca la superficie y sella a fuego alto 2–3 min por lado. Término medio (54–56 °C). Reposa 5 min antes de cortar."
     },
     "en": {
-      "name": "Premium American Wagyu New York",
+      "name": "Premium Ame Wagyu New York",
       "description": "Premium-line 8+ American wagyu New York: extended grain-fed striploin with intense American-style marbling.\n\nThe classic steakhouse cut at its highest tier.",
       "origin": "USA origin\n\nPremium American wagyu from Abatti Ranch, California. Extended grain-feeding program: intense marbling and export-grade consistency.",
       "cooking": "Cooking recommendations\n\nTemper 30 min, pat dry and sear over high heat 2–3 min per side. Medium (54–56 °C). Rest 5 min before slicing."
@@ -3655,13 +3655,13 @@
       "en": "Black Angus · Australia"
     },
     "es": {
-      "name": "Costilla Chuck Short Rib Black Angus",
+      "name": "Costilla Chuck Short Rib BA",
       "description": "Costilla chuck short rib de Black Angus 4+: carnosa, con hueso y marmoleo parejo.\n\nPara ahumar, brasear o asar lento al carbón.",
       "origin": "Origen Australia\n\nBlack Angus australiano de programas como Macka’s, Jack’s Creek y Angus Pure: res de pastura terminada con grano, con marmoleo calificado por Marble Score.",
       "cooking": "Recomendaciones de cocción\n\nCocción lenta: ahumador u horno a 110–130 °C hasta quedar suave al tacto. Ideal para BBQ estilo americano o guisos largos."
     },
     "en": {
-      "name": "Chuck Short Rib Black Angus",
+      "name": "Chuck Short Rib BA",
       "description": "Black Angus 4+ chuck short rib: meaty, bone-in, evenly marbled.\n\nFor smoking, braising or slow charcoal grilling.",
       "origin": "Australia origin\n\nAustralian Black Angus from programs like Macka’s, Jack’s Creek and Angus Pure: pasture-raised, grain-finished beef graded by Marble Score.",
       "cooking": "Cooking recommendations\n\nLow and slow: smoker or oven at 110–130 °C until probe-tender. Ideal for American-style BBQ or long braises."
@@ -3693,13 +3693,13 @@
       "en": "Black Angus · Australia"
     },
     "es": {
-      "name": "Costilla Short Rib Black Angus",
+      "name": "Costilla Short Rib BA",
       "description": "Costilla short rib de Black Angus 4+: la costilla clásica del plate, ideal para BBQ y cocciones largas.\n\nSabor angus con precio de todos los días.",
       "origin": "Origen Australia\n\nBlack Angus australiano de programas como Macka’s, Jack’s Creek y Angus Pure: res de pastura terminada con grano, con marmoleo calificado por Marble Score.",
       "cooking": "Recomendaciones de cocción\n\nCocción lenta: ahumador u horno a 110–130 °C hasta quedar suave al tacto. Ideal para BBQ estilo americano o guisos largos."
     },
     "en": {
-      "name": "Short Rib Black Angus",
+      "name": "Short Rib BA",
       "description": "Black Angus 4+ short rib: the classic plate rib, ideal for BBQ and long cooks.\n\nAngus flavor at an everyday price.",
       "origin": "Australia origin\n\nAustralian Black Angus from programs like Macka’s, Jack’s Creek and Angus Pure: pasture-raised, grain-finished beef graded by Marble Score.",
       "cooking": "Cooking recommendations\n\nLow and slow: smoker or oven at 110–130 °C until probe-tender. Ideal for American-style BBQ or long braises."
@@ -3731,13 +3731,13 @@
       "en": "Black Angus · Australia"
     },
     "es": {
-      "name": "Rib Cap Espaldilla Black Angus",
+      "name": "Rib Cap Espaldilla BA",
       "description": "Rib cap (espaldilla) de Black Angus: el músculo más sabroso de la res en su versión más accesible.\n\nTiras a fuego fuerte y tacos de lujo diario.",
       "origin": "Origen Australia\n\nBlack Angus australiano de programas como Macka’s, Jack’s Creek y Angus Pure: res de pastura terminada con grano, con marmoleo calificado por Marble Score.",
       "cooking": "Recomendaciones de cocción\n\nAtempera 30 min, seca la superficie y sella a fuego alto 2–3 min por lado. Término medio (54–56 °C). Reposa 5 min antes de cortar."
     },
     "en": {
-      "name": "Rib Cap Black Angus",
+      "name": "Rib Cap BA",
       "description": "Black Angus rib cap: the animal’s most flavorful muscle in its most accessible form.\n\nHigh-heat strips and everyday luxury tacos.",
       "origin": "Australia origin\n\nAustralian Black Angus from programs like Macka’s, Jack’s Creek and Angus Pure: pasture-raised, grain-finished beef graded by Marble Score.",
       "cooking": "Cooking recommendations\n\nTemper 30 min, pat dry and sear over high heat 2–3 min per side. Medium (54–56 °C). Rest 5 min before slicing."
@@ -3769,13 +3769,13 @@
       "en": "Black Angus · Australia"
     },
     "es": {
-      "name": "Rib Eye Lip On Black Angus",
+      "name": "Rib Eye Lip On BA",
       "description": "Rib eye lip on de Black Angus 4+: con su tapa externa para más sabor y jugosidad en la parrilla.\n\nEl steak angus de siempre, bien marmoleado.",
       "origin": "Origen Australia\n\nBlack Angus australiano de programas como Macka’s, Jack’s Creek y Angus Pure: res de pastura terminada con grano, con marmoleo calificado por Marble Score.",
       "cooking": "Recomendaciones de cocción\n\nAtempera 30 min, seca la superficie y sella a fuego alto 2–3 min por lado. Término medio (54–56 °C). Reposa 5 min antes de cortar."
     },
     "en": {
-      "name": "Rib Eye Lip On Black Angus",
+      "name": "Rib Eye Lip On BA",
       "description": "Black Angus 4+ lip-on rib eye: outer lip on for extra flavor and juiciness on the grill.\n\nThe classic angus steak, well marbled.",
       "origin": "Australia origin\n\nAustralian Black Angus from programs like Macka’s, Jack’s Creek and Angus Pure: pasture-raised, grain-finished beef graded by Marble Score.",
       "cooking": "Cooking recommendations\n\nTemper 30 min, pat dry and sear over high heat 2–3 min per side. Medium (54–56 °C). Rest 5 min before slicing."
@@ -3807,13 +3807,13 @@
       "en": "Black Angus · Australia"
     },
     "es": {
-      "name": "Shortloin / T-Bone Black Angus",
+      "name": "Shortloin / T-Bone BA",
       "description": "Shortloin T-Bone de Black Angus 3+: New York y filete en un mismo hueso.\n\nDos cortes, una parrillada.",
       "origin": "Origen Australia\n\nBlack Angus australiano de programas como Macka’s, Jack’s Creek y Angus Pure: res de pastura terminada con grano, con marmoleo calificado por Marble Score.",
       "cooking": "Recomendaciones de cocción\n\nAtempera 30 min, seca la superficie y sella a fuego alto 2–3 min por lado. Término medio (54–56 °C). Reposa 5 min antes de cortar."
     },
     "en": {
-      "name": "Shortloin / T-Bone Black Angus",
+      "name": "Shortloin / T-Bone BA",
       "description": "Black Angus 3+ shortloin T-bone: New York and tenderloin on one bone.\n\nTwo cuts, one cookout.",
       "origin": "Australia origin\n\nAustralian Black Angus from programs like Macka’s, Jack’s Creek and Angus Pure: pasture-raised, grain-finished beef graded by Marble Score.",
       "cooking": "Cooking recommendations\n\nTemper 30 min, pat dry and sear over high heat 2–3 min per side. Medium (54–56 °C). Rest 5 min before slicing."
@@ -3845,13 +3845,13 @@
       "en": "Black Angus · Australia"
     },
     "es": {
-      "name": "Vacío Flap Meat Black Angus",
+      "name": "Vacío Flap Meat BA",
       "description": "Vacío (flap meat) de Black Angus 2-3+: fibra abierta y sabor intenso para la parrilla de diario.\n\nRinde parejo del asado al taco.",
       "origin": "Origen Australia\n\nBlack Angus australiano de programas como Macka’s, Jack’s Creek y Angus Pure: res de pastura terminada con grano, con marmoleo calificado por Marble Score.",
       "cooking": "Recomendaciones de cocción\n\nDirecto a la parrilla sobre brasa media-alta. Voltea una sola vez, retira al término deseado y reposa unos minutos."
     },
     "en": {
-      "name": "Flap Meat Black Angus",
+      "name": "Flap Meat BA",
       "description": "Black Angus 2-3+ flap meat (vacío): open grain and intense flavor for everyday grilling.\n\nConsistent from asado to taco.",
       "origin": "Australia origin\n\nAustralian Black Angus from programs like Macka’s, Jack’s Creek and Angus Pure: pasture-raised, grain-finished beef graded by Marble Score.",
       "cooking": "Cooking recommendations\n\nStraight on the grill over medium-high coals. Flip once, pull at your preferred doneness and rest a few minutes."
@@ -3910,13 +3910,13 @@
       "en": null
     },
     "es": {
-      "name": "Vacío Wagyu Australiano",
+      "name": "Vacío Wagyu Aus",
       "description": "Un corte jugoso y lleno de sabor, con la intensidad del Wagyu australiano en cada fibra.\n\nEl vacío destaca por su textura fibrosa y su carácter marcado, ideal para quienes buscan una experiencia sabrosa sin renunciar a la suavidad que aporta el marmoleo del Wagyu. Su grasa intramuscular se funde durante la cocción, aportando jugosidad y profundidad.\n\nPerfecto para el asador o el sartén, es un corte versátil que brilla tanto en una parrillada como en una mesa formal.",
       "origin": "Wagyu de origen australiano. Corte de vacío (flank), reconocido por su fibra larga y sabor concentrado.",
       "cooking": "Atempera la carne fuera del refrigerador antes de cocinar.\n\n• Sella a fuego alto en parrilla o sartén, 2 a 3 minutos por lado.\n• Busca un término medio o medio rojo para conservar la jugosidad.\n• Deja reposar de 4 a 5 minutos antes de cortar.\n• Rebana siempre en contra de la fibra para máxima suavidad."
     },
     "en": {
-      "name": "Flank Australian Wagyu",
+      "name": "Flank Aus Wagyu",
       "description": "A juicy, flavor-packed cut carrying the bold character of Australian Wagyu in every fiber.\n\nFlank stands out for its distinct grain and pronounced taste, ideal for those seeking a savory experience without giving up the tenderness that Wagyu marbling provides. Its intramuscular fat melts during cooking, adding juiciness and depth.\n\nPerfect for the grill or the skillet, it's a versatile cut that shines at a backyard cookout or a formal table alike.",
       "origin": "Wagyu of Australian origin. Flank cut, known for its long grain and concentrated flavor.",
       "cooking": "Let the meat come to room temperature before cooking.\n\n• Sear over high heat on the grill or skillet, 2 to 3 minutes per side.\n• Aim for medium or medium-rare to keep it juicy.\n• Rest for 4 to 5 minutes before slicing.\n• Always slice against the grain for maximum tenderness."
@@ -3945,13 +3945,13 @@
       "en": null
     },
     "es": {
-      "name": "Shortloin Wagyu Cross Australiano",
+      "name": "Shortloin Wagyu Cross Aus",
       "description": "Cortes de shortloin con hueso, tan marmoleados que la grasa se dibuja como encaje sobre la carne.\n\nDe la etiqueta de Margaret River Wagyu Beef, este shortloin cross australiano combina la terneza del wagyu con un músculo de gran carácter. Cada pieza muestra vetas finas de grasa intramuscular que se funden al calor y aportan jugosidad en cada bocado.\n\nUn corte pensado para quienes buscan una experiencia intensa y untuosa, ideal para compartir en la mesa.",
       "origin": "Wagyu cross australianoWagyu Beef, Australia Occidental. Corte de shortloin (bajo del lomo) con hueso.",
       "cooking": "Atempera 30–40 min fuera del refrigerador antes de cocinar.\n\n• Sella a fuego alto en parrilla o sartén de hierro, 2–3 min por lado para dorar la grasa.\n• Baja el calor o pásalo a zona indirecta hasta alcanzar término medio (52–55 °C al centro).\n• Salpimienta al final para no quemar la sal.\n\nDeja reposar 5–8 min antes de cortar para conservar los jugos. Por su alto marmoleo, evita términos más allá de medio."
     },
     "en": {
-      "name": "Wagyu Cross Australian Shortloin",
+      "name": "Wagyu Cross Aus Shortloin",
       "description": "Bone-in shortloin cuts so richly marbled the fat traces like lace across the meat.\n\nFrom Margaret River Wagyu Beef, this Australian wagyu cross shortloin blends wagyu tenderness with a full-flavored muscle. Each piece shows fine threads of intramuscular fat that melt with heat and deliver juiciness in every bite.\n\nA cut made for those seeking an intense, buttery experience worth sharing at the table.",
       "origin": "Australian wagyu cross from Wagyu Beef, Western Australia. Bone-in shortloin cut.",
       "cooking": "Let it come to room temperature for 30–40 min before cooking.\n\n• Sear over high heat on a grill or cast-iron skillet, 2–3 min per side to brown the fat.\n• Lower the heat or move to an indirect zone until medium (52–55 °C center).\n• Season with salt and pepper at the end to avoid burning the salt.\n\nRest 5–8 min before slicing to keep the juices. Given the high marbling, avoid cooking past medium."
@@ -3970,13 +3970,13 @@
       "en": null
     },
     "es": {
-      "name": "Rib Eye Lip Off Wagyu Cross Americano",
+      "name": "Rib Eye Lip Off Wagyu Cross Ame",
       "description": "El equilibrio perfecto entre la intensidad del Angus y la untuosidad del Wagyu en un solo corte.\n\nEste Rib Eye lip off proviene de un cruce Wagyu americano de Abbatti Ranch, con la porción de la tapa retirada para dejar el ojo del corte limpio y parejo. El resultado es una carne de vetas finas y bien distribuidas que se derriten al calor, aportando jugosidad y un sabor profundo.\n\nUn corte pensado para quienes buscan la experiencia del Wagyu con el carácter robusto de la genética americana.",
       "origin": "Cruce Wagyu americano (Wagyu × Angus) de Abbatti Ranch, Estados Unidos. Presentación Rib Eye lip off, calibre 6-7. Genética que combina el marmoleo del Wagyu con la estructura del ganado americano.",
       "cooking": "Atempera el corte 30-40 minutos antes de cocinar.\n\nSella en parrilla o sartén de hierro muy caliente 2-3 minutos por lado para formar costra, luego baja el calor para terminar. Por su marmoleo alto, cuida el exceso de grasa liberada.\n\nBusca un término medio-rojo o medio para aprovechar la untuosidad. Deja reposar 5 minutos antes de cortar. Sal en escamas al final."
     },
     "en": {
-      "name": "Rib Eye Lip Off American Wagyu Cross",
+      "name": "Rib Eye Lip Off Ame Wagyu Cross",
       "description": "The perfect balance between the boldness of Angus and the buttery richness of Wagyu in a single cut.\n\nThis lip off Rib Eye comes from an American Wagyu cross at Abbatti Ranch, with the cap removed to leave a clean, even eye of the ribeye. The fine, well-distributed marbling melts under heat, delivering juiciness and deep flavor.\n\nA cut made for those seeking the Wagyu experience with the robust character of American genetics.",
       "origin": "American Wagyu cross (Wagyu × Angus) from Abbatti Ranch, United States. Lip off Rib Eye presentation, size 6-7. Genetics that combine Wagyu marbling with the structure of American cattle.",
       "cooking": "Let the steak come to room temperature 30-40 minutes before cooking.\n\nSear on a very hot grill or cast-iron skillet for 2-3 minutes per side to build a crust, then lower the heat to finish. Given its high marbling, watch for excess rendered fat.\n\nAim for medium-rare to medium to enjoy its richness. Rest for 5 minutes before slicing. Finish with flaky salt."
