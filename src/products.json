@@ -531,7 +531,7 @@
     }
   },
   {
-    "id": "salchicha",
+    "id": "Salchicha",
     "cat": "us",
     "tone": "cream",
     "images": [
@@ -560,13 +560,13 @@
       "en": "4-Pack"
     },
     "es": {
-      "name": "Salchicha Wagyu Americano · 4 Pack",
+      "name": "Salchicha Ame · 4 Pack",
       "description": "Salchicha de wagyu americano, paquete de 4. Jugosa y sabrosa, elaborada con recortes de wagyu premium.\n\nCaracterísticas del producto\n\n• Paquete de 4 piezas: formato práctico para tu cocina o servicio.\n• Carne Wagyu: alto contenido de grasa intramuscular que aporta jugosidad y riqueza de sabor.\n• Condimentos artesanales: mezcla equilibrada de especias que realza el perfil umami sin opacar la carne.\n\nPerfil sensorial\n\nCada bocado revela un umami suave con matices a carne asada y ligeros toques herbales. La emulsión de grasa Wagyu ofrece textura jugosa y un retrogusto delicado que distingue a estas salchichas de las convencionales.\n\nValor nutricional\n\nRicas en proteínas de alta calidad y con grasa Wagyu rica en ácido oleico (monoinsaturados), estas salchichas aportan además vitaminas B y minerales como hierro y zinc, ideales para opciones de menú con valor añadido.\n\nPuntos clave\n\n• Formato: Pack de 4 salchichas\n• Tipo de carne: Wagyu Americano\n• Textura: Jugosa y aterciopelada\n• Sabor: Umami suave con especias artesanales\n• Cocción: Parrilla, sartén u horno\n• Uso: Menús gourmet, eventos y servicios premium",
       "origin": "Origen y calidad superior\n\nLa Salchicha Wagyu Americano se elabora con carne de res Wagyu criada en EE. UU. bajo altos estándares de bienestar animal y alimentación controlada. Cada paquete de 4 piezas combina cortes selectos para ofrecer un producto procesado de nivel gourmet.",
       "cooking": "Recomendaciones de cocción\n\nParrilla o sartén antiadherente\n• Calienta a fuego medio para evitar quemar la piel.\n• Cocina 4–5 minutos por lado, girando con frecuencia para un dorado parejo.\n\nHorno\n• Precalienta a 180 °C.\n• Hornea 12–15 minutos sobre rejilla, volteando a la mitad del tiempo.\n\nEvitar pinchazos\nNo perforar la piel para conservar los jugos en su interior."
     },
     "en": {
-      "name": "American Wagyu Sausage · 4-Pack",
+      "name": "American Sausage · 4-Pack",
       "description": "American wagyu sausage, 4-pack. Juicy and flavorful, made from premium wagyu trim.\n\nProduct features\n\n• Pack of 4: a practical format for your kitchen or service.\n• Wagyu beef: high intramuscular fat content that brings juiciness and rich flavor.\n• Artisan seasoning: a balanced spice blend that enhances the umami profile without overpowering the meat.\n\nSensory profile\n\nEach bite reveals a mild umami with hints of grilled meat and light herbal touches. The Wagyu fat emulsion delivers a juicy texture and a delicate aftertaste that sets these sausages apart from conventional ones.\n\nNutritional value\n\nRich in high-quality protein and with Wagyu fat high in oleic acid (monounsaturated), these sausages also provide B vitamins and minerals such as iron and zinc — ideal for value-added menu options.\n\nKey points\n\n• Format: pack of 4 sausages\n• Meat type: American Wagyu\n• Texture: Juicy and velvety\n• Flavor: Mild umami with artisan spices\n• Cooking: Grill, pan or oven\n• Use: Gourmet menus, events and premium service",
       "origin": "Origin & superior quality\n\nThe American Wagyu Sausage is made with Wagyu beef raised in the USA under high animal-welfare standards and controlled feeding. Each 4-piece pack combines select cuts to deliver a gourmet-level processed product.",
       "cooking": "Cooking recommendations\n\nGrill or non-stick pan\n• Heat over medium to avoid burning the casing.\n• Cook 4–5 minutes per side, turning often for even browning.\n\nOven\n• Preheat to 180 °C.\n• Bake 12–15 minutes on a rack, flipping halfway through.\n\nAvoid piercing\nDo not pierce the casing, to keep the juices inside."
@@ -1373,7 +1373,7 @@
           "image": "whatsapp-image-2026-07-28-at-16-31-54-ms5alj7i6559.webp",
           "label": "8-9",
           "sku": "KR",
-          "mayoreo": 900,
+          "mayoreo": 800,
           "menudeo": 1100
         }
       ]
