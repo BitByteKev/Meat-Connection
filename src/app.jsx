@@ -657,6 +657,10 @@ function ProductDetail({ product, onAdd, onBack }) {
   React.useEffect(() => { setVIdx(0); }, [product.id]);
   const imgs = product.images || [];
   const variants = (marbling && marbling.variants) || [];
+  // Brands for the Marcas tab: the selected grade's marcas, else any marcas across
+  // grades, else empty (BrandTiles then shows the full distributor list).
+  const selMarcas = (variants[vIdx] && variants[vIdx].marcas) || [];
+  const marcasFilter = selMarcas.length ? selMarcas : [...new Set(variants.flatMap((v) => v.marcas || []))];
   // Link the carousel to the grade ONLY when each grade has its own distinct photo
   // (e.g. rib eye). If all grades share one photo (e.g. L Grow's top/side/hero views),
   // leave the carousel free to swipe the cover images instead.
@@ -761,7 +765,7 @@ function ProductDetail({ product, onAdd, onBack }) {
             {tab === 'desc' && (p.description ? <TextBlock text={p.description} /> : <p style={tabPara}>{t.pdp.descSuffix}</p>)}
             {tab === 'origin' && (p.origin ? <TextBlock text={p.origin} /> : <p style={tabPara}>{genericOrigin}</p>)}
             {tab === 'cooking' && (p.cooking ? <TextBlock text={p.cooking} /> : <p style={tabPara}>{t.pdp.cooking}</p>)}
-            {tab === 'brands' && <BrandTiles compact />}
+            {tab === 'brands' && <BrandTiles compact filter={marcasFilter} />}
           </div>
           <div style={{ marginTop: '22px', padding: '16px 18px', background: 'var(--surface-sunken)', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-md)' }}>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '13.5px', lineHeight: 1.6, color: 'var(--text-body)', margin: 0 }}>{t.notice.processed}</p>
@@ -968,16 +972,19 @@ const BRAND_LIST = [
   { name: 'Jewel', key: 'jewel', url: 'https://jewelbykingriver.com.au/latest/' },
   { name: "L'grow", key: 'lgrow', url: 'https://sandalwood.au/wagyu/' },
   { name: "Macka's", key: 'mackas', url: 'https://mackasblackangus.com.au/' },
+  { name: 'Angus Pure', key: 'anguspure', url: 'https://thomasfoods.com/products/meat/australian-angus-beef/' },
   { name: 'A5 Japonés · Wagyu Japanese Beef', key: 'wagyu', url: null, whiten: true },
 ];
 // Brand logo tiles — the home "Marcas" strip and the product-page Marcas tab share this.
-function BrandTiles({ compact }) {
+// `filter` (array of brand keys) narrows to a product's own brands; empty/absent shows all.
+function BrandTiles({ compact, filter }) {
+  const list = (filter && filter.length) ? BRAND_LIST.filter((b) => filter.indexOf(b.key) !== -1) : BRAND_LIST;
   const tileStyle = { border: '1px solid var(--mc-ink-700)', borderRadius: 'var(--radius-md)', background: 'var(--mc-charcoal)', padding: compact ? '18px 18px' : '28px 24px', minHeight: compact ? '92px' : '132px', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', transition: 'border-color var(--dur-med), box-shadow var(--dur-med), transform var(--dur-med)' };
   const hoverIn = (e) => { e.currentTarget.style.borderColor = 'var(--accent-gold)'; e.currentTarget.style.boxShadow = 'var(--shadow-md)'; e.currentTarget.style.transform = 'translateY(-3px)'; };
   const hoverOut = (e) => { e.currentTarget.style.borderColor = 'var(--mc-ink-700)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)'; };
   return (
     <div className="mc-brands" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: compact ? 'flex-start' : 'center', gap: '16px' }}>
-      {BRAND_LIST.map((b) => {
+      {list.map((b) => {
         const inner = b.key
           ? <img src={window.MC_BRAND[b.key]} alt={b.name} loading="lazy" decoding="async" style={{ maxHeight: compact ? '52px' : '84px', maxWidth: '100%', width: 'auto', objectFit: 'contain', filter: b.whiten ? 'brightness(0) invert(1)' : undefined, opacity: b.whiten ? 0.92 : undefined }} />
           : <span style={{ fontFamily: 'var(--font-display)', fontSize: compact ? '22px' : '32px', letterSpacing: '0.02em', color: 'var(--mc-paper)' }}>{b.name}</span>;

@@ -1,8 +1,8 @@
 // Marbling editor for the product form. Lets the owner pick a scale (BMS / MB /
 // Angus) and manage the grade variants the storefront renders (MarblingScale +
 // MarblingPill). Each variant has a low/high grade, an optional label, an image
-// chosen from the product's own photos, an optional SKU, and optional
-// mayoreo/menudeo prices (MXN/kg).
+// chosen from the product's own photos, an optional SKU, optional
+// mayoreo/menudeo prices (MXN/kg), and optional marcas (brands).
 import React from 'react'
 import { imageUrl } from '../products.js'
 import { labelStyle, btn, btnDanger, move } from './fields.jsx'
@@ -16,6 +16,16 @@ const SYSTEMS = [
   { value: 'angus', label: 'Marble Score · Angus (1–9)', max: 9 },
 ]
 const maxFor = (sys) => (SYSTEMS.find((s) => s.value === sys) || {}).max || 12
+
+// Keys must match BRAND_LIST in src/app.jsx — the storefront Marcas tab filters by them.
+const BRANDS = [
+  ['mackas', "Macka's"],
+  ['kingriver', 'King River'],
+  ['lgrow', "L'grow"],
+  ['anguspure', 'Angus Pure'],
+  ['wagyu', 'A5 Japonés'],
+  ['jewel', 'Jewel'],
+]
 const previewSrc = (f) => imageUrl(f) || UPLOADED_PREVIEWS.get(f)
 
 const cell = { padding: '6px 8px', border: '1px solid #d0d3d6', borderRadius: '6px', fontSize: '13px', background: '#fff', width: '100%', boxSizing: 'border-box' }
@@ -52,6 +62,18 @@ function Variant({ v, i, images, system, canMove, onChange, onMove, onRemove }) 
         <button type="button" style={{ ...btn, padding: '4px 7px' }} disabled={!canMove || i === 0} onClick={() => onMove(-1)}>↑</button>
         <button type="button" style={{ ...btn, padding: '4px 7px' }} disabled={!canMove} onClick={() => onMove(1)}>↓</button>
         <button type="button" style={{ ...btnDanger, padding: '4px 7px' }} onClick={onRemove}>✕</button>
+      </div>
+      <div style={{ flex: '1 1 100%', minWidth: 0 }}>
+        <span style={mini}>Marcas de este grado (sin marcar = muestra todas)</span>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px 14px' }}>
+          {BRANDS.map(([key, name]) => (
+            <label key={key} style={{ display: 'inline-flex', alignItems: 'center', gap: '5px', fontSize: '12.5px', color: '#3c434b' }}>
+              <input type="checkbox" checked={(v.marcas || []).includes(key)}
+                onChange={(e) => { const rest = (v.marcas || []).filter((k) => k !== key); set({ marcas: e.target.checked ? [...rest, key] : rest }) }} />
+              {name}
+            </label>
+          ))}
+        </div>
       </div>
     </div>
   )

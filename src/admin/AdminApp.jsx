@@ -75,6 +75,7 @@ function cleanMarbling(m) {
       if (mayoreo != null) out.mayoreo = mayoreo
       const menudeo = priceNum(v.menudeo)
       if (menudeo != null) out.menudeo = menudeo
+      if (Array.isArray(v.marcas) && v.marcas.length) out.marcas = v.marcas
       return out
     })
     .filter(Boolean)

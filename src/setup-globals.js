@@ -21,6 +21,7 @@ import brand_jewel from './assets-img/mc_brand_jewel.png'
 import brand_kingriver from './assets-img/mc_brand_kingriver.png'
 import brand_lgrow from './assets-img/mc_brand_lgrow.png'
 import brand_mackas from './assets-img/mc_brand_mackas.png'
+import brand_anguspure from './assets-img/mc_brand_anguspure.png'
 
 // Product photos — derived from products.json + an images glob (see ./products.js),
 // so the admin can assign any photo in /images without touching code.
@@ -47,4 +48,5 @@ window.MC_BRAND = {
   kingriver: brand_kingriver,
   lgrow: brand_lgrow,
   mackas: brand_mackas,
+  anguspure: brand_anguspure,
 }

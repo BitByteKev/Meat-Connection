@@ -17,7 +17,10 @@
           "label": "11-12",
           "sku": "TRI TIP",
           "mayoreo": 1850,
-          "menudeo": 2150
+          "menudeo": 2150,
+          "marcas": [
+            "wagyu"
+          ]
         }
       ]
     },
@@ -56,7 +59,10 @@
           "label": "10-12",
           "sku": "PLUS TENDERLOIN",
           "mayoreo": 2200,
-          "menudeo": 2500
+          "menudeo": 2500,
+          "marcas": [
+            "wagyu"
+          ]
         },
         {
           "lo": 12,
@@ -65,7 +71,10 @@
           "label": "12",
           "sku": "3",
           "mayoreo": 4650,
-          "menudeo": 4950
+          "menudeo": 4950,
+          "marcas": [
+            "wagyu"
+          ]
         }
       ]
     },
@@ -103,7 +112,10 @@
           "label": "10-12",
           "sku": "RBA5",
           "mayoreo": 2380,
-          "menudeo": 2680
+          "menudeo": 2680,
+          "marcas": [
+            "wagyu"
+          ]
         }
       ]
     },
@@ -141,7 +153,10 @@
           "image": "",
           "label": "10-12",
           "mayoreo": 1950,
-          "menudeo": 2250
+          "menudeo": 2250,
+          "marcas": [
+            "wagyu"
+          ]
         }
       ]
     },
@@ -187,7 +202,13 @@
           "label": "2-3",
           "sku": "448721",
           "mayoreo": 695,
-          "menudeo": 995
+          "menudeo": 995,
+          "marcas": [
+            "mackas",
+            "kingriver",
+            "lgrow",
+            "jewel"
+          ]
         },
         {
           "lo": 4,
@@ -196,7 +217,13 @@
           "label": "4-5",
           "sku": "8",
           "mayoreo": 870,
-          "menudeo": 1100
+          "menudeo": 1100,
+          "marcas": [
+            "mackas",
+            "kingriver",
+            "lgrow",
+            "jewel"
+          ]
         },
         {
           "lo": 6,
@@ -205,7 +232,13 @@
           "label": "6-7",
           "sku": "448704",
           "mayoreo": 1300,
-          "menudeo": 1600
+          "menudeo": 1600,
+          "marcas": [
+            "mackas",
+            "kingriver",
+            "lgrow",
+            "jewel"
+          ]
         },
         {
           "lo": 8,
@@ -214,7 +247,13 @@
           "label": "8-9",
           "sku": "NYMR",
           "mayoreo": 2100,
-          "menudeo": 2400
+          "menudeo": 2400,
+          "marcas": [
+            "mackas",
+            "kingriver",
+            "lgrow",
+            "jewel"
+          ]
         }
       ]
     },
@@ -252,7 +291,10 @@
           "label": "8+",
           "sku": "SHORTLMS",
           "mayoreo": 1350,
-          "menudeo": 1650
+          "menudeo": 1650,
+          "marcas": [
+            "jewel"
+          ]
         },
         {
           "lo": 8,
@@ -261,7 +303,10 @@
           "label": "8-9",
           "sku": "SHORTMR",
           "mayoreo": 1650,
-          "menudeo": 1950
+          "menudeo": 1950,
+          "marcas": [
+            "jewel"
+          ]
         }
       ]
     },
@@ -301,7 +346,11 @@
           "label": "4-5",
           "sku": "448824",
           "mayoreo": 390,
-          "menudeo": 690
+          "menudeo": 690,
+          "marcas": [
+            "kingriver",
+            "jewel"
+          ]
         },
         {
           "lo": 8,
@@ -310,7 +359,11 @@
           "label": "8-9",
           "sku": "PALETAMR",
           "mayoreo": 350,
-          "menudeo": 650
+          "menudeo": 650,
+          "marcas": [
+            "kingriver",
+            "jewel"
+          ]
         },
         {
           "lo": 8,
@@ -319,7 +372,11 @@
           "label": "8+",
           "sku": "61433-1",
           "mayoreo": 499,
-          "menudeo": 799
+          "menudeo": 799,
+          "marcas": [
+            "kingriver",
+            "jewel"
+          ]
         },
         {
           "lo": 9,
@@ -328,7 +385,11 @@
           "label": "9+",
           "sku": "448711",
           "mayoreo": 540,
-          "menudeo": 840
+          "menudeo": 840,
+          "marcas": [
+            "kingriver",
+            "jewel"
+          ]
         }
       ]
     },
@@ -366,7 +427,12 @@
           "label": "9+",
           "sku": "0041513-01",
           "mayoreo": 1860,
-          "menudeo": 2160
+          "menudeo": 2160,
+          "marcas": [
+            "kingriver",
+            "lgrow",
+            "jewel"
+          ]
         }
       ]
     },
@@ -404,7 +470,10 @@
           "label": "10-12",
           "sku": "TOP ROUND",
           "mayoreo": 1390,
-          "menudeo": 1690
+          "menudeo": 1690,
+          "marcas": [
+            "wagyu"
+          ]
         }
       ]
     },
@@ -442,7 +511,10 @@
           "label": "8-9",
           "sku": "LENGUAMR",
           "mayoreo": 500,
-          "menudeo": 800
+          "menudeo": 800,
+          "marcas": [
+            "mackas"
+          ]
         }
       ]
     },
@@ -482,7 +554,10 @@
           "label": "2+",
           "sku": "390186",
           "mayoreo": 600,
-          "menudeo": 900
+          "menudeo": 900,
+          "marcas": [
+            "mackas"
+          ]
         },
         {
           "lo": 4,
@@ -491,7 +566,10 @@
           "label": "4+",
           "sku": "390289",
           "mayoreo": 960,
-          "menudeo": 1260
+          "menudeo": 1260,
+          "marcas": [
+            "mackas"
+          ]
         },
         {
           "lo": 5,
@@ -500,7 +578,10 @@
           "label": "5+",
           "sku": "NYOCONNOR",
           "mayoreo": 600,
-          "menudeo": 900
+          "menudeo": 900,
+          "marcas": [
+            "mackas"
+          ]
         },
         {
           "lo": 6,
@@ -509,7 +590,10 @@
           "label": "6+",
           "sku": "390292",
           "mayoreo": 1050,
-          "menudeo": 1350
+          "menudeo": 1350,
+          "marcas": [
+            "mackas"
+          ]
         }
       ]
     },
@@ -592,7 +676,12 @@
           "label": "0-3",
           "sku": "448730",
           "mayoreo": 850,
-          "menudeo": 1150
+          "menudeo": 1150,
+          "marcas": [
+            "mackas",
+            "kingriver",
+            "lgrow"
+          ]
         },
         {
           "lo": 2,
@@ -601,7 +690,12 @@
           "label": "2-3",
           "sku": "447302",
           "mayoreo": 920,
-          "menudeo": 1220
+          "menudeo": 1220,
+          "marcas": [
+            "mackas",
+            "kingriver",
+            "lgrow"
+          ]
         },
         {
           "lo": 4,
@@ -610,7 +704,12 @@
           "label": "4-5",
           "sku": "448702",
           "mayoreo": 1200,
-          "menudeo": 1500
+          "menudeo": 1500,
+          "marcas": [
+            "mackas",
+            "kingriver",
+            "lgrow"
+          ]
         },
         {
           "lo": 6,
@@ -619,7 +718,12 @@
           "label": "6-7",
           "sku": "448705",
           "mayoreo": 1500,
-          "menudeo": 1800
+          "menudeo": 1800,
+          "marcas": [
+            "mackas",
+            "kingriver",
+            "lgrow"
+          ]
         },
         {
           "lo": 8,
@@ -628,7 +732,12 @@
           "label": "8-9",
           "sku": "448708",
           "mayoreo": 2000,
-          "menudeo": 2300
+          "menudeo": 2300,
+          "marcas": [
+            "mackas",
+            "kingriver",
+            "lgrow"
+          ]
         },
         {
           "lo": 9,
@@ -637,7 +746,12 @@
           "label": "9+",
           "sku": "416172",
           "mayoreo": 2200,
-          "menudeo": 2500
+          "menudeo": 2500,
+          "marcas": [
+            "mackas",
+            "kingriver",
+            "lgrow"
+          ]
         }
       ]
     },
@@ -676,7 +790,10 @@
           "label": "10-12",
           "sku": "DIEZA5",
           "mayoreo": 1800,
-          "menudeo": 2100
+          "menudeo": 2100,
+          "marcas": [
+            "wagyu"
+          ]
         }
       ]
     },
@@ -714,7 +831,10 @@
           "label": "11-12",
           "sku": "FLAT",
           "mayoreo": 1650,
-          "menudeo": 1950
+          "menudeo": 1950,
+          "marcas": [
+            "wagyu"
+          ]
         }
       ]
     },
@@ -791,7 +911,10 @@
           "label": "10-12",
           "sku": "SHORTP",
           "mayoreo": 850,
-          "menudeo": 1150
+          "menudeo": 1150,
+          "marcas": [
+            "wagyu"
+          ]
         }
       ]
     },
@@ -829,7 +952,10 @@
           "label": "10-12",
           "sku": "SHORTA5",
           "mayoreo": 850,
-          "menudeo": 1150
+          "menudeo": 1150,
+          "marcas": [
+            "wagyu"
+          ]
         }
       ]
     },
@@ -867,7 +993,10 @@
           "label": "10-12",
           "sku": "SIRLOIN",
           "mayoreo": 1450,
-          "menudeo": 1750
+          "menudeo": 1750,
+          "marcas": [
+            "wagyu"
+          ]
         },
         {
           "lo": 12,
@@ -876,7 +1005,10 @@
           "label": "12",
           "sku": "5",
           "mayoreo": 1800,
-          "menudeo": 2100
+          "menudeo": 2100,
+          "marcas": [
+            "wagyu"
+          ]
         }
       ]
     },
@@ -914,7 +1046,10 @@
           "label": "10-12",
           "sku": "FLAP",
           "mayoreo": 1950,
-          "menudeo": 2250
+          "menudeo": 2250,
+          "marcas": [
+            "wagyu"
+          ]
         },
         {
           "lo": 12,
@@ -923,7 +1058,10 @@
           "label": "12",
           "sku": "6",
           "mayoreo": 1900,
-          "menudeo": 2200
+          "menudeo": 2200,
+          "marcas": [
+            "wagyu"
+          ]
         }
       ]
     },
@@ -961,7 +1099,10 @@
           "label": "11-12",
           "sku": "CHUCK",
           "mayoreo": 2570,
-          "menudeo": 2870
+          "menudeo": 2870,
+          "marcas": [
+            "wagyu"
+          ]
         }
       ]
     },
@@ -1001,7 +1142,11 @@
           "label": "4+",
           "sku": "10021902",
           "mayoreo": 465,
-          "menudeo": 765
+          "menudeo": 765,
+          "marcas": [
+            "mackas",
+            "anguspure"
+          ]
         }
       ]
     },
@@ -1042,7 +1187,10 @@
           "label": "4+",
           "sku": "390291",
           "mayoreo": 325,
-          "menudeo": 625
+          "menudeo": 625,
+          "marcas": [
+            "mackas"
+          ]
         }
       ]
     },
@@ -1080,7 +1228,10 @@
           "label": "3+",
           "sku": "DIEZJC",
           "mayoreo": 285,
-          "menudeo": 585
+          "menudeo": 585,
+          "marcas": [
+            "mackas"
+          ]
         },
         {
           "lo": 4,
@@ -1089,7 +1240,10 @@
           "label": "4+",
           "sku": "391648",
           "mayoreo": 320,
-          "menudeo": 620
+          "menudeo": 620,
+          "marcas": [
+            "mackas"
+          ]
         }
       ]
     },
@@ -1127,7 +1281,10 @@
           "label": "Clásico",
           "sku": "390286",
           "mayoreo": 380,
-          "menudeo": 680
+          "menudeo": 680,
+          "marcas": [
+            "mackas"
+          ]
         }
       ]
     },
@@ -1166,7 +1323,10 @@
           "label": "Clásico",
           "sku": "390285",
           "mayoreo": 385,
-          "menudeo": 685
+          "menudeo": 685,
+          "marcas": [
+            "mackas"
+          ]
         }
       ]
     },
@@ -1205,7 +1365,11 @@
           "label": "2+",
           "sku": "4040917",
           "mayoreo": 520,
-          "menudeo": 820
+          "menudeo": 820,
+          "marcas": [
+            "mackas",
+            "anguspure"
+          ]
         },
         {
           "lo": 4,
@@ -1214,7 +1378,11 @@
           "label": "4+",
           "sku": "390288",
           "mayoreo": 615,
-          "menudeo": 915
+          "menudeo": 915,
+          "marcas": [
+            "mackas",
+            "anguspure"
+          ]
         },
         {
           "lo": 6,
@@ -1223,7 +1391,11 @@
           "label": "6+",
           "sku": "390295",
           "mayoreo": 810,
-          "menudeo": 1110
+          "menudeo": 1110,
+          "marcas": [
+            "mackas",
+            "anguspure"
+          ]
         }
       ]
     },
@@ -1263,7 +1435,10 @@
           "label": "2+",
           "sku": "390195",
           "mayoreo": 840,
-          "menudeo": 1140
+          "menudeo": 1140,
+          "marcas": [
+            "mackas"
+          ]
         },
         {
           "lo": 4,
@@ -1272,7 +1447,10 @@
           "label": "4+",
           "sku": "390290",
           "mayoreo": 1180,
-          "menudeo": 1480
+          "menudeo": 1480,
+          "marcas": [
+            "mackas"
+          ]
         },
         {
           "lo": 6,
@@ -1281,7 +1459,10 @@
           "label": "6+",
           "sku": "390293",
           "mayoreo": 1320,
-          "menudeo": 1620
+          "menudeo": 1620,
+          "marcas": [
+            "mackas"
+          ]
         }
       ]
     },
@@ -1319,7 +1500,10 @@
           "label": "2+",
           "sku": "391644",
           "mayoreo": 710,
-          "menudeo": 1010
+          "menudeo": 1010,
+          "marcas": [
+            "mackas"
+          ]
         },
         {
           "lo": 4,
@@ -1328,7 +1512,10 @@
           "label": "4+",
           "sku": "TOMAJC",
           "mayoreo": 625,
-          "menudeo": 925
+          "menudeo": 925,
+          "marcas": [
+            "mackas"
+          ]
         }
       ]
     },
@@ -1366,7 +1553,10 @@
           "label": "0-3",
           "sku": "KR",
           "mayoreo": 420,
-          "menudeo": 700
+          "menudeo": 700,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 8,
@@ -1375,7 +1565,10 @@
           "label": "8-9",
           "sku": "KR",
           "mayoreo": 800,
-          "menudeo": 1100
+          "menudeo": 1100,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -1419,7 +1612,10 @@
           "label": "0-3",
           "sku": "448729",
           "mayoreo": 930,
-          "menudeo": 1230
+          "menudeo": 1230,
+          "marcas": [
+            "lgrow"
+          ]
         },
         {
           "lo": 4,
@@ -1428,7 +1624,10 @@
           "label": "4-5",
           "sku": "88935-1",
           "mayoreo": 980,
-          "menudeo": 1280
+          "menudeo": 1280,
+          "marcas": [
+            "lgrow"
+          ]
         },
         {
           "lo": 6,
@@ -1437,7 +1636,10 @@
           "label": "6-7",
           "sku": "78935-1-ABR",
           "mayoreo": 1400,
-          "menudeo": 1700
+          "menudeo": 1700,
+          "marcas": [
+            "lgrow"
+          ]
         },
         {
           "lo": 8,
@@ -1446,7 +1648,10 @@
           "label": "8-9",
           "sku": "LF8-9",
           "mayoreo": 1950,
-          "menudeo": 2250
+          "menudeo": 2250,
+          "marcas": [
+            "lgrow"
+          ]
         },
         {
           "lo": 9,
@@ -1455,7 +1660,10 @@
           "label": "9+",
           "sku": "TENDMR",
           "mayoreo": 1850,
-          "menudeo": 2150
+          "menudeo": 2150,
+          "marcas": [
+            "lgrow"
+          ]
         }
       ]
     },
@@ -1532,7 +1740,10 @@
           "label": "0-3",
           "sku": "448827",
           "mayoreo": 710,
-          "menudeo": 1010
+          "menudeo": 1010,
+          "marcas": [
+            "lgrow"
+          ]
         },
         {
           "lo": 4,
@@ -1541,7 +1752,10 @@
           "label": "4-5",
           "sku": "448713",
           "mayoreo": 800,
-          "menudeo": 1100
+          "menudeo": 1100,
+          "marcas": [
+            "lgrow"
+          ]
         },
         {
           "lo": 6,
@@ -1550,7 +1764,10 @@
           "label": "6-7",
           "sku": "448715",
           "mayoreo": 950,
-          "menudeo": 1250
+          "menudeo": 1250,
+          "marcas": [
+            "lgrow"
+          ]
         },
         {
           "lo": 8,
@@ -1559,7 +1776,10 @@
           "label": "8-9",
           "sku": "PICCA89",
           "mayoreo": 1400,
-          "menudeo": 1700
+          "menudeo": 1700,
+          "marcas": [
+            "lgrow"
+          ]
         },
         {
           "lo": 8,
@@ -1568,7 +1788,10 @@
           "label": "8+",
           "sku": "68465-1",
           "mayoreo": 1100,
-          "menudeo": 1400
+          "menudeo": 1400,
+          "marcas": [
+            "lgrow"
+          ]
         },
         {
           "lo": 9,
@@ -1577,7 +1800,10 @@
           "label": "9+",
           "sku": "448719",
           "mayoreo": 1380,
-          "menudeo": 1680
+          "menudeo": 1680,
+          "marcas": [
+            "lgrow"
+          ]
         }
       ]
     },
@@ -1616,7 +1842,12 @@
           "label": "0-3",
           "sku": "448730",
           "mayoreo": 850,
-          "menudeo": 1150
+          "menudeo": 1150,
+          "marcas": [
+            "kingriver",
+            "lgrow",
+            "jewel"
+          ]
         },
         {
           "lo": 4,
@@ -1625,7 +1856,12 @@
           "label": "4-5",
           "sku": "448702",
           "mayoreo": 1200,
-          "menudeo": 1500
+          "menudeo": 1500,
+          "marcas": [
+            "kingriver",
+            "lgrow",
+            "jewel"
+          ]
         },
         {
           "lo": 6,
@@ -1634,7 +1870,12 @@
           "label": "6-7",
           "sku": "343697",
           "mayoreo": 1550,
-          "menudeo": 1850
+          "menudeo": 1850,
+          "marcas": [
+            "kingriver",
+            "lgrow",
+            "jewel"
+          ]
         },
         {
           "lo": 8,
@@ -1643,7 +1884,12 @@
           "label": "8-9",
           "sku": "LR8-9",
           "mayoreo": 2000,
-          "menudeo": 2300
+          "menudeo": 2300,
+          "marcas": [
+            "kingriver",
+            "lgrow",
+            "jewel"
+          ]
         },
         {
           "lo": 9,
@@ -1652,7 +1898,12 @@
           "label": "9+",
           "sku": "416172",
           "mayoreo": 2200,
-          "menudeo": 2500
+          "menudeo": 2500,
+          "marcas": [
+            "kingriver",
+            "lgrow",
+            "jewel"
+          ]
         }
       ]
     },
@@ -1695,7 +1946,11 @@
           "label": "4-5",
           "sku": "FLAPMC45",
           "mayoreo": 700,
-          "menudeo": 1000
+          "menudeo": 1000,
+          "marcas": [
+            "kingriver",
+            "lgrow"
+          ]
         },
         {
           "lo": 8,
@@ -1704,7 +1959,11 @@
           "label": "8-9",
           "sku": "FLAPMR89",
           "mayoreo": 1400,
-          "menudeo": 1700
+          "menudeo": 1700,
+          "marcas": [
+            "kingriver",
+            "lgrow"
+          ]
         },
         {
           "lo": 9,
@@ -1713,7 +1972,11 @@
           "label": "9+",
           "sku": "448735",
           "mayoreo": 1200,
-          "menudeo": 1500
+          "menudeo": 1500,
+          "marcas": [
+            "kingriver",
+            "lgrow"
+          ]
         }
       ]
     },
@@ -1808,7 +2071,10 @@
           "label": "0-3",
           "sku": "448776",
           "mayoreo": 320,
-          "menudeo": 620
+          "menudeo": 620,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 4,
@@ -1817,7 +2083,10 @@
           "label": "4-5",
           "sku": "81815-1",
           "mayoreo": 380,
-          "menudeo": 680
+          "menudeo": 680,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 6,
@@ -1826,7 +2095,10 @@
           "label": "6-7",
           "sku": "BRIMR",
           "mayoreo": 510,
-          "menudeo": 810
+          "menudeo": 810,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 8,
@@ -1835,7 +2107,10 @@
           "label": "8+",
           "sku": "61815-1",
           "mayoreo": 395,
-          "menudeo": 695
+          "menudeo": 695,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 9,
@@ -1844,7 +2119,10 @@
           "label": "9+",
           "sku": "448740",
           "mayoreo": 490,
-          "menudeo": 790
+          "menudeo": 790,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -1992,7 +2270,10 @@
           "label": "Clásico",
           "sku": "CHUCKMASAMI",
           "mayoreo": 540,
-          "menudeo": 840
+          "menudeo": 840,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 0,
@@ -2001,7 +2282,10 @@
           "label": "0-3",
           "sku": "448772",
           "mayoreo": 330,
-          "menudeo": 630
+          "menudeo": 630,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 4,
@@ -2010,7 +2294,10 @@
           "label": "4-5",
           "sku": "81655-1",
           "mayoreo": 490,
-          "menudeo": 790
+          "menudeo": 790,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 6,
@@ -2019,7 +2306,10 @@
           "label": "6-7",
           "sku": "448732",
           "mayoreo": 530,
-          "menudeo": 830
+          "menudeo": 830,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 8,
@@ -2028,7 +2318,10 @@
           "label": "8-9",
           "sku": "448707",
           "mayoreo": 710,
-          "menudeo": 1010
+          "menudeo": 1010,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 8,
@@ -2037,7 +2330,10 @@
           "label": "8+",
           "sku": "61655-1",
           "mayoreo": 560,
-          "menudeo": 860
+          "menudeo": 860,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -2076,7 +2372,10 @@
           "label": "4-5",
           "sku": "448841",
           "mayoreo": 380,
-          "menudeo": 680
+          "menudeo": 680,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -2114,7 +2413,10 @@
           "label": "2-3",
           "sku": "448699",
           "mayoreo": 360,
-          "menudeo": 660
+          "menudeo": 660,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 4,
@@ -2123,7 +2425,10 @@
           "label": "4-5",
           "sku": "448700",
           "mayoreo": 460,
-          "menudeo": 760
+          "menudeo": 760,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 6,
@@ -2132,7 +2437,10 @@
           "label": "6-7",
           "sku": "448703",
           "mayoreo": 560,
-          "menudeo": 860
+          "menudeo": 860,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -2172,7 +2480,10 @@
           "label": "4-5",
           "sku": "448714",
           "mayoreo": 385,
-          "menudeo": 685
+          "menudeo": 685,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 6,
@@ -2181,7 +2492,10 @@
           "label": "6-7",
           "sku": "448716",
           "mayoreo": 400,
-          "menudeo": 700
+          "menudeo": 700,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 9,
@@ -2190,7 +2504,10 @@
           "label": "9+",
           "sku": "448720",
           "mayoreo": 500,
-          "menudeo": 800
+          "menudeo": 800,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -2231,7 +2548,11 @@
           "label": "0-3",
           "sku": "448840",
           "mayoreo": 820,
-          "menudeo": 1120
+          "menudeo": 1120,
+          "marcas": [
+            "kingriver",
+            "lgrow"
+          ]
         },
         {
           "lo": 6,
@@ -2240,7 +2561,11 @@
           "label": "6-9",
           "sku": "0041498-01",
           "mayoreo": 1500,
-          "menudeo": 1800
+          "menudeo": 1800,
+          "marcas": [
+            "kingriver",
+            "lgrow"
+          ]
         },
         {
           "lo": 8,
@@ -2249,7 +2574,11 @@
           "label": "8+",
           "sku": "61845-1",
           "mayoreo": 980,
-          "menudeo": 1280
+          "menudeo": 1280,
+          "marcas": [
+            "kingriver",
+            "lgrow"
+          ]
         }
       ]
     },
@@ -2287,7 +2616,10 @@
           "label": "0-3",
           "sku": "448741",
           "mayoreo": 740,
-          "menudeo": 1040
+          "menudeo": 1040,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 4,
@@ -2296,7 +2628,10 @@
           "label": "4-5",
           "sku": "80363-1",
           "mayoreo": 780,
-          "menudeo": 1080
+          "menudeo": 1080,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 8,
@@ -2305,7 +2640,10 @@
           "label": "8-9",
           "sku": "TMHMR",
           "mayoreo": 2015,
-          "menudeo": 2315
+          "menudeo": 2315,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -2422,7 +2760,10 @@
           "label": "9+",
           "sku": "PALETA",
           "mayoreo": 635,
-          "menudeo": 935
+          "menudeo": 935,
+          "marcas": [
+            "jewel"
+          ]
         }
       ]
     },
@@ -2462,7 +2803,10 @@
           "label": "4-5",
           "sku": "256723",
           "mayoreo": 1650,
-          "menudeo": 1950
+          "menudeo": 1950,
+          "marcas": [
+            "lgrow"
+          ]
         },
         {
           "lo": 8,
@@ -2471,7 +2815,10 @@
           "label": "8-9",
           "sku": "RBJADE",
           "mayoreo": 2000,
-          "menudeo": 2300
+          "menudeo": 2300,
+          "marcas": [
+            "lgrow"
+          ]
         },
         {
           "lo": 9,
@@ -2480,7 +2827,10 @@
           "label": "9+",
           "sku": "RBSA",
           "mayoreo": 2400,
-          "menudeo": 2700
+          "menudeo": 2700,
+          "marcas": [
+            "lgrow"
+          ]
         }
       ]
     },
@@ -2614,7 +2964,10 @@
           "label": "4-5",
           "sku": "82435-3",
           "mayoreo": 360,
-          "menudeo": 660
+          "menudeo": 660,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 6,
@@ -2623,7 +2976,10 @@
           "label": "6-7",
           "sku": "72435-1",
           "mayoreo": 360,
-          "menudeo": 660
+          "menudeo": 660,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 8,
@@ -2632,7 +2988,10 @@
           "label": "8+",
           "sku": "62435-3",
           "mayoreo": 360,
-          "menudeo": 660
+          "menudeo": 660,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -2709,7 +3068,12 @@
           "label": "4-5",
           "sku": "81235-1",
           "mayoreo": 850,
-          "menudeo": 1150
+          "menudeo": 1150,
+          "marcas": [
+            "mackas",
+            "kingriver",
+            "lgrow"
+          ]
         },
         {
           "lo": 6,
@@ -2718,7 +3082,12 @@
           "label": "6-7",
           "sku": "71235-1",
           "mayoreo": 730,
-          "menudeo": 1030
+          "menudeo": 1030,
+          "marcas": [
+            "mackas",
+            "kingriver",
+            "lgrow"
+          ]
         },
         {
           "lo": 8,
@@ -2727,7 +3096,12 @@
           "label": "8+",
           "sku": "RBABA",
           "mayoreo": 1650,
-          "menudeo": 1950
+          "menudeo": 1950,
+          "marcas": [
+            "mackas",
+            "kingriver",
+            "lgrow"
+          ]
         }
       ]
     },
@@ -2806,7 +3180,10 @@
           "label": "10-12",
           "sku": "NYA5",
           "mayoreo": 2380,
-          "menudeo": 2680
+          "menudeo": 2680,
+          "marcas": [
+            "wagyu"
+          ]
         },
         {
           "lo": 12,
@@ -2815,7 +3192,10 @@
           "label": "12",
           "sku": "2",
           "mayoreo": 4400,
-          "menudeo": 4700
+          "menudeo": 4700,
+          "marcas": [
+            "wagyu"
+          ]
         }
       ]
     },
@@ -2853,7 +3233,10 @@
           "label": "10-12",
           "sku": "0089063-01",
           "mayoreo": 1400,
-          "menudeo": 1700
+          "menudeo": 1700,
+          "marcas": [
+            "wagyu"
+          ]
         }
       ]
     },
@@ -2892,7 +3275,10 @@
           "label": "10-12",
           "sku": "A5BRI",
           "mayoreo": 985,
-          "menudeo": 1285
+          "menudeo": 1285,
+          "marcas": [
+            "wagyu"
+          ]
         }
       ]
     },
@@ -2930,7 +3316,10 @@
           "label": "10-12",
           "sku": "RIBA5",
           "mayoreo": 800,
-          "menudeo": 1100
+          "menudeo": 1100,
+          "marcas": [
+            "wagyu"
+          ]
         }
       ]
     },
@@ -3483,7 +3872,10 @@
           "label": "Clásico",
           "sku": "BURGERKR",
           "mayoreo": 425,
-          "menudeo": 725
+          "menudeo": 725,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -3761,7 +4153,10 @@
           "label": "4+",
           "sku": "1332443",
           "mayoreo": 840,
-          "menudeo": 1140
+          "menudeo": 1140,
+          "marcas": [
+            "mackas"
+          ]
         }
       ]
     },
