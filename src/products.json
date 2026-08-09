@@ -1290,8 +1290,8 @@
         }
       ]
     },
-    "sku": "390286",
     "available": false,
+    "sku": "390286",
     "badge": {
       "es": "Black Angus",
       "en": "Black Angus"
@@ -3409,8 +3409,8 @@
         }
       ]
     },
-    "sku": "BURGER",
     "available": false,
+    "sku": "BURGER",
     "badge": {
       "es": "Fullblood · Australia",
       "en": "Fullblood · Australia"
@@ -3752,8 +3752,6 @@
     "cat": "us",
     "tone": "charcoal",
     "images": [
-      "whatsapp-image-2026-07-28-at-16-38-26-ms5assbk5056.webp",
-      "whatsapp-image-2026-07-28-at-16-05-22-ms59zw0n5469.webp",
       "whatsapp-image-2026-07-29-at-15-36-47-ms6o041i548.webp"
     ],
     "marbling": {
@@ -3775,13 +3773,13 @@
       "en": "Abatti Ranch · USA"
     },
     "es": {
-      "name": "New York Ame Premium",
+      "name": "New York Ame",
       "description": "New York wagyu americano línea premium 8+: striploin de crianza extendida con grano, marmoleo intenso estilo americano.\n\nEl corte clásico de steakhouse en su tier más alto.",
       "origin": "Origen Estados Unidos\n\nWagyu americano premium de Abatti Ranch, California. Programa de crianza con grano de larga duración: marmoleo intenso y consistencia de exportación.",
       "cooking": "Recomendaciones de cocción\n\nAtempera 30 min, seca la superficie y sella a fuego alto 2–3 min por lado. Término medio (54–56 °C). Reposa 5 min antes de cortar."
     },
     "en": {
-      "name": "Premium Ame New York",
+      "name": "Ame New York",
       "description": "Premium-line 8+ American wagyu New York: extended grain-fed striploin with intense American-style marbling.\n\nThe classic steakhouse cut at its highest tier.",
       "origin": "USA origin\n\nPremium American wagyu from Abatti Ranch, California. Extended grain-feeding program: intense marbling and export-grade consistency.",
       "cooking": "Cooking recommendations\n\nTemper 30 min, pat dry and sear over high heat 2–3 min per side. Medium (54–56 °C). Rest 5 min before slicing."
