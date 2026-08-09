@@ -1195,6 +1195,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Black Angus",
       "en": "Black Angus"
@@ -1290,6 +1291,7 @@
       ]
     },
     "sku": "390286",
+    "available": false,
     "badge": {
       "es": "Black Angus",
       "en": "Black Angus"
@@ -2688,6 +2690,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "King River · Australia",
       "en": "King River · Australia"
@@ -2726,6 +2729,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Jewel · Fullblood",
       "en": "Jewel · Fullblood"
@@ -2873,6 +2877,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
@@ -2930,6 +2935,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
@@ -3035,6 +3041,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
@@ -3324,6 +3331,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "A5 · Japón",
       "en": "A5 · Japan"
@@ -3362,6 +3370,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Fullblood · Australia",
       "en": "Fullblood · Australia"
@@ -3401,6 +3410,7 @@
       ]
     },
     "sku": "BURGER",
+    "available": false,
     "badge": {
       "es": "Fullblood · Australia",
       "en": "Fullblood · Australia"
@@ -3439,6 +3449,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Fullblood · Australia",
       "en": "Fullblood · Australia"
@@ -3477,6 +3488,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Fullblood · Australia",
       "en": "Fullblood · Australia"
@@ -3553,6 +3565,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Fullblood · Australia",
       "en": "Fullblood · Australia"
@@ -3591,6 +3604,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Fullblood · Australia",
       "en": "Fullblood · Australia"
@@ -3629,6 +3643,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Fullblood · Australia",
       "en": "Fullblood · Australia"
@@ -3714,6 +3729,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Fullblood · Australia",
       "en": "Fullblood · Australia"
@@ -3792,6 +3808,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Wagyu Cross · Australia",
       "en": "Wagyu Cross · Australia"
@@ -3839,6 +3856,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Wagyu Cross · Australia",
       "en": "Wagyu Cross · Australia"
@@ -3921,6 +3939,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Wagyu Cross · Australia",
       "en": "Wagyu Cross · Australia"
@@ -3968,6 +3987,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Wagyu Cross · Australia",
       "en": "Wagyu Cross · Australia"
@@ -4006,6 +4026,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Wagyu Cross · Australia",
       "en": "Wagyu Cross · Australia"
@@ -4044,6 +4065,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Black Angus · Australia",
       "en": "Black Angus · Australia"
@@ -4082,6 +4104,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Black Angus · Australia",
       "en": "Black Angus · Australia"
@@ -4120,6 +4143,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Black Angus · Australia",
       "en": "Black Angus · Australia"
@@ -4161,6 +4185,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Black Angus · Australia",
       "en": "Black Angus · Australia"
@@ -4199,6 +4224,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Black Angus · Australia",
       "en": "Black Angus · Australia"
@@ -4237,6 +4263,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Black Angus · Australia",
       "en": "Black Angus · Australia"
@@ -4275,6 +4302,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Fullblood · Australia",
       "en": "Fullblood · Australia"
@@ -4337,6 +4365,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": null,
       "en": null
@@ -4362,6 +4391,7 @@
       "whatsapp-image-2026-07-28-at-16-23-59-ms5aa6ta9829.webp",
       "whatsapp-image-2026-07-29-at-15-35-19-ms6ny6554710.webp"
     ],
+    "available": false,
     "badge": {
       "es": null,
       "en": null
