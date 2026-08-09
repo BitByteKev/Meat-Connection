@@ -3532,13 +3532,13 @@
       "en": "Fullblood · Australia"
     },
     "es": {
-      "name": "Lengua Fullblood",
+      "name": "Lengua Aus",
       "description": "Lengua de wagyu fullblood 9+: textura mantecosa única después de una cocción lenta, o en láminas finas al estilo gyutan.\n\nDel taco de lengua a la parrilla japonesa.",
       "origin": "Origen Australia · Fullblood\n\nWagyu fullblood: genética japonesa 100 % pura criada en Australia. Marmoleo 9+ de la más alta gama, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nCocción lenta: ahumador u horno a 110–130 °C hasta quedar suave al tacto. Ideal para BBQ estilo americano o guisos largos."
     },
     "en": {
-      "name": "Beef Tongue Fullblood",
+      "name": "Beef Tongue Aus",
       "description": "Fullblood wagyu 9+ tongue: unique buttery texture after slow cooking, or thin-sliced gyutan style.\n\nFrom lengua tacos to Japanese grills.",
       "origin": "Australia origin · Fullblood\n\nFullblood wagyu: 100 % pure Japanese genetics raised in Australia. Top-tier 9+ marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nLow and slow: smoker or oven at 110–130 °C until probe-tender. Ideal for American-style BBQ or long braises."
@@ -3687,13 +3687,13 @@
       "en": "Fullblood · Australia"
     },
     "es": {
-      "name": "Tablita Chuck Tail Fullblood",
+      "name": "Tablita Chuck Tail Aus",
       "description": "Tablita (chuck tail flap) fullblood 9+: el corte norteño consentido, ahora con marmoleo de genética japonesa pura.\n\nParrilla directa y término medio.",
       "origin": "Origen Australia · Fullblood\n\nWagyu fullblood: genética japonesa 100 % pura criada en Australia. Marmoleo 9+ de la más alta gama, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nDirecto a la parrilla sobre brasa media-alta. Voltea una sola vez, retira al término deseado y reposa unos minutos."
     },
     "en": {
-      "name": "Chuck Tail Flap Fullblood",
+      "name": "Chuck Tail Flap Aus",
       "description": "Fullblood 9+ tablita (chuck tail flap): the beloved northern-Mexico cut, now with pure Japanese-genetics marbling.\n\nDirect grilling, medium doneness.",
       "origin": "Australia origin · Fullblood\n\nFullblood wagyu: 100 % pure Japanese genetics raised in Australia. Top-tier 9+ marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nStraight on the grill over medium-high coals. Flip once, pull at your preferred doneness and rest a few minutes."
@@ -3904,13 +3904,13 @@
       "en": "Wagyu Cross · Australia"
     },
     "es": {
-      "name": "Hamburguesa Cross",
+      "name": "Hamburguesa",
       "description": "Carne para hamburguesa de wagyu cross King River: molienda con grasa wagyu natural.\n\nLa hamburguesa de casa, elevada.",
       "origin": "Origen Australia\n\nWagyu cross australiano de ranchos de exportación. La cruza wagyu aporta marmoleo y jugosidad muy por encima del estándar, a un precio accesible.",
       "cooking": "Recomendaciones de cocción\n\nDirecto a la parrilla sobre brasa media-alta. Voltea una sola vez, retira al término deseado y reposa unos minutos."
     },
     "en": {
-      "name": "Cross Burger",
+      "name": "Burger",
       "description": "King River wagyu cross burger blend: ground with natural wagyu fat.\n\nThe house burger, elevated.",
       "origin": "Australia origin\n\nAustralian wagyu cross from export ranches. Wagyu genetics deliver marbling and juiciness far above standard beef, at an accessible price.",
       "cooking": "Cooking recommendations\n\nStraight on the grill over medium-high coals. Flip once, pull at your preferred doneness and rest a few minutes."
