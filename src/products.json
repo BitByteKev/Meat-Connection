@@ -2777,13 +2777,13 @@
       "en": "Jewel · Fullblood"
     },
     "es": {
-      "name": "Paleta Bolar Blade Fullblood",
+      "name": "Paleta Bolar Blade",
       "description": "Paleta (bolar blade / shoulder clod) — corte de espaldilla, sabroso y de buen rendimiento.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nExcelente para braseados, mechado, fajitas y porciones de volumen.",
       "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nBistec: sella y sirve medio. Braseado: cocción lenta 2–3 h hasta deshebrar."
     },
     "en": {
-      "name": "Bolar Blade Fullblood",
+      "name": "Bolar Blade",
       "description": "Shoulder clod (bolar blade) — a flavorful, high-yield shoulder cut.\n\nAustralian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nGreat for braises, shredded beef, fajitas and high-volume portions.",
       "origin": "Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nSteak: sear and serve medium. Braise: slow-cook 2–3 h until it shreds."
@@ -2844,13 +2844,13 @@
       "en": "· Fullblood"
     },
     "es": {
-      "name": "Rib Eye Cube Roll Fullblood",
+      "name": "Rib Eye Cube Roll",
       "description": "El rib eye (cube roll) equilibra el ojo central magro y la cresta de grasa exterior — dos texturas en una pieza.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nEl corte rey de la parrilla. Excelente sellado, a la plancha o cortado fino.",
       "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nSella 2–3 min por lado hasta costra dorada. Medio (54–57 °C) para fundir el marmoleo. Reposa 5 min."
     },
     "en": {
-      "name": "Rib Eye Cube Roll Fullblood",
+      "name": "Rib Eye Cube Roll",
       "description": "The rib eye (cube roll) balances the lean central eye and the outer fat cap — two textures in one piece.\n\nKing River Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nThe king of the grill. Excellent seared, on the griddle or sliced thin.",
       "origin": "Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nSear 2–3 min per side until a golden crust forms. Medium (54–57 °C) to render the marbling. Rest 5 min."
@@ -3527,6 +3527,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Fullblood · Australia",
       "en": "Fullblood · Australia"
@@ -3682,6 +3683,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Fullblood · Australia",
       "en": "Fullblood · Australia"
