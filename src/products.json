@@ -367,7 +367,7 @@
         },
         {
           "lo": 8,
-          "hi": 99,
+          "hi": 10,
           "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
           "label": "8+",
           "sku": "61433-1",
@@ -380,7 +380,7 @@
         },
         {
           "lo": 9,
-          "hi": 99,
+          "hi": 10,
           "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
           "label": "9+",
           "sku": "448711",
@@ -1195,7 +1195,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": "Black Angus",
       "en": "Black Angus"
@@ -2730,7 +2729,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": "Jewel · Fullblood",
       "en": "Jewel · Fullblood"
@@ -2878,7 +2876,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
@@ -2936,7 +2933,6 @@
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
