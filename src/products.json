@@ -2061,6 +2061,7 @@
     "cat": "au",
     "tone": "cream",
     "images": [
+      "whatsapp-image-2026-08-10-at-08-28-10-msndznp19186.webp",
       "lgrow-pe-brisket-top.webp",
       "lgrow-pe-brisket-side.webp"
     ],
@@ -2070,7 +2071,7 @@
         {
           "lo": 0,
           "hi": 3,
-          "image": "lgrow-pe-brisket-top.webp",
+          "image": "",
           "label": "0-3",
           "sku": "448776",
           "mayoreo": 320,
@@ -2082,7 +2083,7 @@
         {
           "lo": 4,
           "hi": 5,
-          "image": "lgrow-pe-brisket-top.webp",
+          "image": "",
           "label": "4-5",
           "sku": "81815-1",
           "mayoreo": 380,
@@ -2094,7 +2095,7 @@
         {
           "lo": 6,
           "hi": 7,
-          "image": "lgrow-pe-brisket-top.webp",
+          "image": "",
           "label": "6-7",
           "sku": "BRIMR",
           "mayoreo": 510,
@@ -2106,7 +2107,7 @@
         {
           "lo": 8,
           "hi": 99,
-          "image": "lgrow-pe-brisket-top.webp",
+          "image": "",
           "label": "8+",
           "sku": "61815-1",
           "mayoreo": 395,
@@ -2118,7 +2119,7 @@
         {
           "lo": 9,
           "hi": 99,
-          "image": "lgrow-pe-brisket-top.webp",
+          "image": "",
           "label": "9+",
           "sku": "448740",
           "mayoreo": 490,
