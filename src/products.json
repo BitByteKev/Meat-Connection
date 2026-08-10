@@ -1910,6 +1910,7 @@
         }
       ]
     },
+    "available": false,
     "sku": "KR",
     "badge": {
       "es": "Australia",
@@ -3111,6 +3112,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": "Cross Australiano",
       "en": "American Cross"
