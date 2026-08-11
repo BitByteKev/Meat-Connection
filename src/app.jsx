@@ -501,16 +501,25 @@ function Lightbox({ imgs, index, alt, onClose, onIndex }) {
   );
 }
 /* Swipeable product gallery: one image at a time with arrows, dots, touch-swipe,
-   and click-to-zoom. A single image renders as a plain photo (no chrome). */
-function Carousel({ product, name, height = 560, index, onIndex }) {
+   and click-to-zoom. A single image renders as a plain photo (no chrome).
+   Navigation always advances the gallery internally — `index`/`jumpKey` let a
+   parent (e.g. the marbling grade picker) push the carousel to a specific photo,
+   but jumpKey only changes on a deliberate grade change, so a grade↔photo match
+   that fails (blank or stale variant image) can never block or revert an arrow
+   click; see ProductDetail's perGradePhotos wiring. */
+function Carousel({ product, name, height = 560, index, onIndex, jumpKey }) {
   const list = (window.MC_IMAGES && window.MC_IMAGES[product.id]) || [];
   const imgs = list.length ? list : (window.MC_IMG[product.id] ? [window.MC_IMG[product.id]] : []);
-  const controlled = typeof index === 'number';
-  const [internal, setInternal] = React.useState(0);
-  const idx = controlled ? index : internal;
+  const [idx, setInternal] = React.useState(typeof index === 'number' ? index : 0);
+  React.useEffect(() => {
+    setInternal(typeof index === 'number' ? index : 0);
+    // Re-jump only when the product or the grade picker itself changes — not on
+    // every render, so it never fights the carousel's own free navigation.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [product.id, jumpKey]);
   const setIdx = (updater) => {
     const next = typeof updater === 'function' ? updater(idx) : updater;
-    if (!controlled) setInternal(next);
+    setInternal(next);
     if (onIndex) onIndex(next);
   };
   const [zoom, setZoom] = React.useState(false);
@@ -710,7 +719,7 @@ function ProductDetail({ product, onAdd, onBack }) {
         <ShareButton product={product} name={p.name} />
       </div>
       <div className="mc-pdp" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '48px', alignItems: 'start' }}>
-        <Carousel product={product} name={p.name} height={560} index={carouselIndex} onIndex={onCarousel} />
+        <Carousel product={product} name={p.name} height={560} index={carouselIndex} onIndex={onCarousel} jumpKey={perGradePhotos ? vIdx : undefined} />
         <div>
           <h1 className="mc-page-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '48px', lineHeight: 0.98, margin: '0 0 16px', color: 'var(--text-strong)' }}>{p.name}</h1>
           {(product.weight || product.sku) && (
