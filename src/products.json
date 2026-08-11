@@ -4339,7 +4339,16 @@
     ],
     "marbling": {
       "system": "angus",
-      "variants": []
+      "variants": [
+        {
+          "lo": 8,
+          "hi": 8,
+          "image": "whatsapp-image-2026-08-11-at-10-50-17-msoyjusi9753.webp",
+          "label": "8",
+          "mayoreo": 499,
+          "menudeo": 800
+        }
+      ]
     },
     "badge": {
       "es": null,
