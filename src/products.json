@@ -4327,5 +4327,35 @@
       "origin": "Black Angus beef from the United States. A breed known for its balance of lean meat and intramuscular fat, raised under American cattle standards.",
       "cooking": "Best for low and slow cooking.\n\n• Smoking: keep between 110–120 °C (230–250 °F) for 8 to 12 hours, until reaching an internal temperature near 92–96 °C (198–205 °F).\n• Braising: sear the cut and cook covered with liquid over low heat for several hours.\n• Rest: let it rest at least 30–45 minutes before slicing against the grain.\n\nThe key is patience: the fat and collagen need time to transform into juiciness."
     }
+  },
+  {
+    "id": "paleta-shoulder-clod",
+    "cat": "us",
+    "tone": "charcoal",
+    "images": [
+      "whatsapp-image-2026-08-11-at-10-50-17-msoyjusi9753.webp",
+      "whatsapp-image-2026-08-11-at-10-50-18-1-msoyjxr99719.webp",
+      "whatsapp-image-2026-08-11-at-10-50-18-msoyjwiw8617.webp"
+    ],
+    "marbling": {
+      "system": "angus",
+      "variants": []
+    },
+    "badge": {
+      "es": null,
+      "en": null
+    },
+    "es": {
+      "name": "Paleta Shoulder Clod Ame",
+      "description": "Un corte de paleta versátil y lleno de sabor, ideal para cocciones lentas que rinden en la mesa.\n\nEl shoulder clod proviene del cuarto delantero y combina fibras magras con vetas de grasa bien distribuidas, lo que le da jugosidad y un carácter robusto. Su marmoleo medio lo hace perfecto para quienes buscan un balance entre res auténtica y terneza.\n\nUna pieza generosa, excelente para asados grandes, brisket-style o para porcionar en filetes rústicos.",
+      "origin": "Res Black Angus de Estados Unidos (Batti Ranch). Corte de paleta (shoulder clod) del cuarto delantero, con marmoleo medio característico de la raza.",
+      "cooking": "Ideal para cocción lenta a baja temperatura: 8 a 12 horas en ahumador u horno a 110–120 °C hasta que esté suave al tenedor.\n\nTambién puedes porcionarlo en filetes gruesos, sellarlos a fuego alto y terminar a término medio (54–57 °C interno).\n\nDeja reposar de 10 a 15 minutos antes de cortar en contra de la fibra para máxima terneza."
+    },
+    "en": {
+      "name": "Paleta Shoulder Clod Ame",
+      "description": "A versatile, flavor-packed shoulder cut, ideal for slow cooking that shines at the table.\n\nThe shoulder clod comes from the forequarter and blends lean fibers with well-distributed fat veins, delivering juiciness and a robust character. Its medium marbling makes it perfect for those seeking a balance between authentic beef flavor and tenderness.\n\nA generous piece, excellent for large roasts, brisket-style cooks, or portioning into rustic steaks.",
+      "origin": "Black Angus beef from the United States (Batti Ranch). Shoulder clod cut from the forequarter, with the medium marbling characteristic of the breed.",
+      "cooking": "Best for low-and-slow cooking: 8 to 12 hours in a smoker or oven at 110–120 °C until fork-tender.\n\nYou can also portion it into thick steaks, sear over high heat, and finish to medium (54–57 °C internal).\n\nRest 10 to 15 minutes before slicing against the grain for maximum tenderness."
+    }
   }
 ]
