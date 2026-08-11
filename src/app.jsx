@@ -416,19 +416,28 @@ const qtyBtn = { width: '40px', height: '40px', border: 'none', background: 'tra
 const tabPara = { fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.65, color: 'var(--text-body)', margin: 0 };
 /* Fullscreen image lightbox with real zoom: click/tap magnifies 2.5x into the
    clicked point, dragging pans while zoomed, click again fits to screen.
-   Close on backdrop click, X, or Esc. */
-function Lightbox({ src, alt, onClose }) {
+   Left/right arrows (and arrow keys) step through the gallery and keep
+   working even while zoomed in. Close on backdrop click, X, or Esc. */
+function Lightbox({ imgs, index, alt, onClose, onIndex }) {
   const SCALE = 2.5;
+  const n = imgs.length;
+  const src = imgs[index];
   const [zoom, setZoom] = React.useState(null); // null = fit-to-screen; {x,y} = pan offset while zoomed
   const imgRef = React.useRef(null);
   const drag = React.useRef(null); // { sx, sy, bx, by, moved }
 
+  const go = (d) => { setZoom(null); onIndex((c) => (c + d + n) % n); };
+
   React.useEffect(() => {
-    const onKey = (e) => { if (e.key === 'Escape') onClose(); };
+    const onKey = (e) => {
+      if (e.key === 'Escape') onClose();
+      else if (e.key === 'ArrowLeft' && n > 1) go(-1);
+      else if (e.key === 'ArrowRight' && n > 1) go(1);
+    };
     document.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
     return () => { document.removeEventListener('keydown', onKey); document.body.style.overflow = ''; };
-  }, [onClose]);
+  }, [onClose, index, n]);
 
   const clamp = (v, m) => Math.max(-m, Math.min(m, v));
   // Pan limits keep the scaled image's edges from drifting past the fitted box.
@@ -467,12 +476,19 @@ function Lightbox({ src, alt, onClose }) {
   };
 
   const dragging = !!(drag.current && drag.current.moved);
+  const lbNavBtn = (side) => ({ position: 'absolute', top: '50%', transform: 'translateY(-50%)', [side]: '16px', width: '48px', height: '48px', border: 'none', background: 'rgba(255,255,255,0.12)', color: '#fff', fontSize: '26px', lineHeight: 1, borderRadius: '999px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 2 });
   return (
     <div onClick={onClose} role="dialog" aria-modal="true" aria-label={alt}
       style={{ position: 'fixed', inset: 0, background: 'rgba(15,15,15,0.93)', zIndex: 80, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '24px', cursor: 'zoom-out', overflow: 'hidden' }}>
       <button onClick={onClose} aria-label="Cerrar" style={{ position: 'absolute', top: '16px', right: '16px', width: '46px', height: '46px', border: 'none', background: 'rgba(255,255,255,0.12)', color: '#fff', borderRadius: '999px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 2 }}>
         <Icon name="X" size={24} color="#fff" />
       </button>
+      {n > 1 && (
+        <>
+          <button onClick={(e) => { e.stopPropagation(); go(-1); }} aria-label="Anterior" style={lbNavBtn('left')}>‹</button>
+          <button onClick={(e) => { e.stopPropagation(); go(1); }} aria-label="Siguiente" style={lbNavBtn('right')}>›</button>
+        </>
+      )}
       <img ref={imgRef} src={src} alt={alt} draggable={false}
         onClick={toggle} onPointerDown={onPointerDown} onPointerMove={onPointerMove}
         style={{ maxWidth: '95vw', maxHeight: '90vh', width: 'auto', height: 'auto', objectFit: 'contain', borderRadius: '6px',
@@ -530,7 +546,7 @@ function Carousel({ product, name, height = 560, index, onIndex }) {
           ))}
         </div>
       )}
-      {zoom && <Lightbox src={src} alt={name} onClose={() => setZoom(false)} />}
+      {zoom && <Lightbox imgs={imgs} index={i} alt={name} onClose={() => setZoom(false)} onIndex={setIdx} />}
     </div>
   );
 }
