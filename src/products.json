@@ -3597,7 +3597,7 @@
     }
   },
   {
-    "id": "newyork-americano",
+    "id": "newyork-USA",
     "cat": "us",
     "tone": "charcoal",
     "images": [
@@ -3622,13 +3622,13 @@
       "en": "Abatti Ranch · USA"
     },
     "es": {
-      "name": "New York Ame",
+      "name": "New York USA",
       "description": "New York wagyu americano línea premium 8+: striploin de crianza extendida con grano, marmoleo intenso estilo americano.\n\nEl corte clásico de steakhouse en su tier más alto.",
       "origin": "Origen Estados Unidos\n\nWagyu americano premium de Abatti Ranch, California. Programa de crianza con grano de larga duración: marmoleo intenso y consistencia de exportación.",
       "cooking": "Recomendaciones de cocción\n\nAtempera 30 min, seca la superficie y sella a fuego alto 2–3 min por lado. Término medio (54–56 °C). Reposa 5 min antes de cortar."
     },
     "en": {
-      "name": "Ame New York",
+      "name": "USA New York",
       "description": "Premium-line 8+ American wagyu New York: extended grain-fed striploin with intense American-style marbling.\n\nThe classic steakhouse cut at its highest tier.",
       "origin": "USA origin\n\nPremium American wagyu from Abatti Ranch, California. Extended grain-feeding program: intense marbling and export-grade consistency.",
       "cooking": "Cooking recommendations\n\nTemper 30 min, pat dry and sear over high heat 2–3 min per side. Medium (54–56 °C). Rest 5 min before slicing."
