@@ -4300,7 +4300,7 @@
     }
   },
   {
-    "id": "brisket-america",
+    "id": "brisket-USA",
     "cat": "us",
     "tone": "charcoal",
     "images": [
@@ -4328,13 +4328,13 @@
       "en": null
     },
     "es": {
-      "name": "Brisket Ame",
+      "name": "Brisket USA",
       "description": "El corte que convierte la paciencia en sabor: un brisket Black Angus hecho para la cocción lenta.\n\nProveniente del pecho de la res, este corte combina fibras firmes con una capa de grasa que se derrite poco a poco, aportando jugosidad y profundidad. Su marmoleo medio lo hace ideal para ahumados y braseados prolongados.\n\nUn clásico del barbecue americano que premia el tiempo con una textura tierna y un sabor intenso.",
       "origin": "Res Black Angus de Estados Unidos. Raza reconocida por su equilibrio entre magro y grasa intramuscular, criada bajo estándares de la ganadería americana.",
       "cooking": "Ideal para cocción lenta y a baja temperatura.\n\n• Ahumado: mantén entre 110–120 °C durante 8 a 12 horas, hasta alcanzar una temperatura interna cercana a 92–96 °C.\n• Braseado: sella el corte y cocina tapado con líquido a fuego bajo por varias horas.\n• Reposo: deja reposar al menos 30–45 minutos antes de rebanar en contra de la fibra.\n\nLa clave está en la paciencia: la grasa y el colágeno necesitan tiempo para transformarse en jugosidad."
     },
     "en": {
-      "name": "Brisket Ame",
+      "name": "Brisket USA",
       "description": "The cut that turns patience into flavor: a Black Angus brisket made for low and slow cooking.\n\nComing from the beef chest, this cut blends firm fibers with a fat cap that renders gradually, delivering juiciness and depth. Its medium marbling makes it perfect for smoking and long braises.\n\nAn American barbecue classic that rewards time with tender texture and bold flavor.",
       "origin": "Black Angus beef from the United States. A breed known for its balance of lean meat and intramuscular fat, raised under American cattle standards.",
       "cooking": "Best for low and slow cooking.\n\n• Smoking: keep between 110–120 °C (230–250 °F) for 8 to 12 hours, until reaching an internal temperature near 92–96 °C (198–205 °F).\n• Braising: sear the cut and cook covered with liquid over low heat for several hours.\n• Rest: let it rest at least 30–45 minutes before slicing against the grain.\n\nThe key is patience: the fat and collagen need time to transform into juiciness."
