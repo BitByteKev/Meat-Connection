@@ -139,12 +139,12 @@
       "system": "bms",
       "variants": [
         {
-          "lo": 10,
+          "lo": 11,
           "hi": 12,
           "image": "",
-          "label": "10-12",
-          "mayoreo": 1950,
-          "menudeo": 2250,
+          "label": "11-12",
+          "mayoreo": 3200,
+          "menudeo": 3500,
           "marcas": [
             "wagyu"
           ]
@@ -158,13 +158,13 @@
     "es": {
       "name": "Picaña A5",
       "description": "Picaña de wagyu japonés A5 con su capa de grasa característica. Jugosa y llena de sabor, ideal a la parrilla.\n\nCaracterísticas del corte\n\n• Picanha (tapa de cuadril): corte icónico por su forma triangular y capa de grasa uniforme que protege la carne durante la cocción.\n• Marmoleo alto: finas vetas de grasa distribuidas homogéneamente que se funden durante el calor, aportando jugosidad y realce de sabor.\n• Fibra fina y pareja: permite porcionados consistentes y tiempos de cocción precisos.\n\nPerfil sensorial\n\nCada rebanada ofrece una explosión de umami con toques a nuez y un ligero dulzor. La grasa que se incorpora al tejido muscular al cocinarse brinda una textura casi aterciopelada que se deshace en el paladar.\n\nValor nutricional\n\nLa grasa del Wagyu A5 es rica en ácido oleico (monoinsaturados), favoreciendo un perfil lipídico más saludable. Además, aporta proteínas de alta calidad, vitaminas B y minerales como hierro y zinc, ideales para una propuesta de alto valor nutricional.\n\nPuntos clave\n\n• Corte: Picanha Wagyu Japonés A5 (tapa de cuadril)\n• Marmoleo: BMS 8–12 (alto)\n• Textura: Jugosa y aterciopelada\n• Sabor: Umami profundo con matices a nuez y crema\n• Cocción: Parrilla, plancha o sartén de hierro fundido\n• Reposo: 4–5 minutos para máxima retención de jugos",
-      "origin": "Origen y excelencia del A5\n\nLa Picanha Wagyu Japonés A5 proviene de reses criadas en granjas certificadas de Japón, donde métodos tradicionales de alimentación y cuidados estrictos garantizan un marmoleo BMS 8–12. Este nivel superior de grasa intramuscular es sinónimo de calidad y consistencia excepcionales.",
+      "origin": "Origen y excelencia del A5\n\nLa Picanha Wagyu Japonés A5 proviene de reses criadas en granjas certificadas de Japón, donde métodos tradicionales de alimentación y cuidados estrictos garantizan un marmoleo BMS 11–12. Este nivel superior de grasa intramuscular es sinónimo de calidad y consistencia excepcionales.",
       "cooking": "Recomendaciones de cocción\n\nParrilla directa\n• Sellar a fuego alto 1–2 minutos por lado para formar costra dorada.\n• Pasar a zona de calor medio y cocinar 2–3 minutos adicionales por lado para término medio.\n\nSartén de hierro fundido\n• Precalentar hasta que humee ligeramente, colocar la picanha con la grasa hacia abajo primero.\n• Sellar 2 minutos por lado y dejar reposar 4 minutos antes de cortar.\n\nReposo obligado\nCubrir con papel aluminio suave y esperar 4–5 minutos. Esta pausa redistribuye los jugos y conserva toda la ternura."
     },
     "en": {
       "name": "Picanha A5",
       "description": "Japanese A5 wagyu picanha with its signature fat cap. Juicy and full-flavored, ideal on the grill.\n\nCut characteristics\n\n• Picanha (rump cap): an iconic cut for its triangular shape and uniform fat cap that protects the meat during cooking.\n• High marbling: fine, evenly distributed fat threads that melt under heat, adding juiciness and enhancing flavor.\n• Fine, even grain: allows consistent portioning and precise cooking times.\n\nSensory profile\n\nEach slice offers a burst of umami with hints of nuts and a slight sweetness. As the fat renders into the muscle while cooking, it gives an almost velvety texture that melts on the palate.\n\nNutritional value\n\nA5 Wagyu fat is rich in oleic acid (monounsaturated), supporting a healthier lipid profile. It also provides high-quality protein, B vitamins and minerals such as iron and zinc — ideal for a high-nutritional-value offering.\n\nKey points\n\n• Cut: Picanha Japanese Wagyu A5 (rump cap)\n• Marbling: BMS 8–12 (high)\n• Texture: Juicy and velvety\n• Flavor: Deep umami with hints of nuts and cream\n• Cooking: Grill, griddle or cast-iron skillet\n• Rest: 4–5 minutes for maximum juice retention",
-      "origin": "Origin & A5 excellence\n\nThe Picanha Japanese Wagyu A5 comes from cattle raised on certified Japanese farms, where traditional feeding methods and strict care guarantee BMS 8–12 marbling. This superior level of intramuscular fat means exceptional quality and consistency.",
+      "origin": "Origin & A5 excellence\n\nThe Picanha Japanese Wagyu A5 comes from cattle raised on certified Japanese farms, where traditional feeding methods and strict care guarantee BMS 11–12 marbling. This superior level of intramuscular fat means exceptional quality and consistency.",
       "cooking": "Cooking recommendations\n\nDirect grilling\n• Sear over high heat 1–2 minutes per side to form a golden crust.\n• Move to a medium-heat zone and cook 2–3 minutes more per side for medium.\n\nCast-iron skillet\n• Preheat until lightly smoking, place the picanha fat-side down first.\n• Sear 2 minutes per side and rest 4 minutes before slicing.\n\nMandatory rest\nCover loosely with foil and wait 4–5 minutes. This pause redistributes the juices and preserves all the tenderness."
     }
   },
