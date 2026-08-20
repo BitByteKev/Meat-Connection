@@ -93,6 +93,19 @@ function validate(catalog) {
     if (!p.en.name.trim()) return `Falta el nombre en Inglés (EN) en "${p.id}".`
     if (!Array.isArray(p.images) || p.images.length === 0) return `Agrega al menos una imagen en "${p.id}".`
     for (const f of p.images) if (!IMAGE_FILES.includes(f) && !UPLOADED.has(f)) return `Imagen no encontrada en "${p.id}": ${f}.`
+    if (p.marbling && Array.isArray(p.marbling.variants)) {
+      const byGrade = {}
+      for (const v of p.marbling.variants) {
+        const k = v.lo + '-' + v.hi
+        ;(byGrade[k] = byGrade[k] || []).push(v)
+      }
+      for (const k in byGrade) {
+        const group = byGrade[k]
+        if (group.length > 1 && group.some((v) => !Array.isArray(v.marcas) || v.marcas.length === 0)) {
+          return `Grado repetido "${k}" en "${p.id}": marca cada variante para distinguirlas.`
+        }
+      }
+    }
   }
   return null
 }
