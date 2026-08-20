@@ -25,6 +25,7 @@ const BRANDS = [
   ['anguspure', 'Angus Pure'],
   ['wagyu', 'A5 Japonés'],
   ['jewel', 'Jewel'],
+  ['abattiranch', 'Abatti Ranch'],
 ]
 const previewSrc = (f) => imageUrl(f) || UPLOADED_PREVIEWS.get(f)
 
