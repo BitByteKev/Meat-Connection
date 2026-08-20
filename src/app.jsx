@@ -998,6 +998,7 @@ const BRAND_LIST = [
   { name: "L'grow", key: 'lgrow', url: 'https://sandalwood.au/wagyu/' },
   { name: "Macka's", key: 'mackas', url: 'https://mackasblackangus.com.au/' },
   { name: 'Angus Pure', key: 'anguspure', url: 'https://thomasfoods.com/products/meat/australian-angus-beef/' },
+  { name: 'Abatti Ranch Wagyu', key: 'abattiranch', url: 'https://www.abattiranchwagyu.com/' },
   { name: 'A5 Japonés · Wagyu Japanese Beef', key: 'wagyu', url: null, whiten: true },
 ];
 // Brand logo tiles — the home "Marcas" strip and the product-page Marcas tab share this.
