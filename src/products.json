@@ -341,46 +341,18 @@
           "mayoreo": 390,
           "menudeo": 690,
           "marcas": [
-            "kingriver",
-            "jewel"
-          ]
-        },
-        {
-          "lo": 8,
-          "hi": 9,
-          "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
-          "label": "8-9",
-          "sku": "PALETAMR",
-          "mayoreo": 350,
-          "menudeo": 650,
-          "marcas": [
-            "kingriver",
-            "jewel"
-          ]
-        },
-        {
-          "lo": 8,
-          "hi": 10,
-          "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
-          "label": "8+",
-          "sku": "61433-1",
-          "mayoreo": 499,
-          "menudeo": 799,
-          "marcas": [
-            "kingriver",
-            "jewel"
+            "kingriver"
           ]
         },
         {
           "lo": 9,
           "hi": 10,
           "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
-          "label": "9+",
-          "sku": "448711",
-          "mayoreo": 540,
-          "menudeo": 840,
+          "label": "9-10",
+          "sku": "PALETAMR",
+          "mayoreo": 580,
+          "menudeo": 980,
           "marcas": [
-            "kingriver",
             "jewel"
           ]
         }
@@ -391,13 +363,13 @@
       "en": "· Australia"
     },
     "es": {
-      "name": "Paleta Aus",
+      "name": "Paleta",
       "description": "Paleta de wagyu australiano, marmoleada y versátil. Para estofar, asar o cortar en finas láminas.\n\nCaracterísticas del corte\n\n• Paleta (espaldilla): pieza de fibra fina y uniforme, con un marmoleo intenso que aporta terneza y capacidad de retención de jugos.\n• Marmoleo BMS 8–12: vetas de grasa distribuidas homogéneamente que se funden al cocinar, impregnando la carne de ricos matices umami.\n• Grosor adaptable: permite cocciones lentas o sellados rápidos, según el estilo de preparación.\n\nPerfil sensorial\n\nCada porción despliega un umami concentrado acompañado de notas a nuez y crema fresca. La textura se percibe suave y aterciopelada, con un deshielo de grasa que enriquece cada bocado.\n\nValor nutricional\n\nLa grasa del Wagyu es rica en ácidos grasos monoinsaturados (ácido oleico), que favorecen un perfil lipídico equilibrado. Este corte aporta proteínas de alta calidad, vitaminas del complejo B y minerales como hierro y zinc.\n\nPuntos clave\n\n• Corte: Paleta Wagyu Australiano (espaldilla)\n• Marmoleo: Alto (BMS 8–12)\n• Textura: Suave, jugosa y aterciopelada\n• Sabor: Umami intenso con matices a nuez y crema\n• Cocción: Braseado lento, sellado y horno\n• Reposo: 5–7 min bajo aluminio para máxima jugosidad",
       "origin": "Origen y calidad premium\n\nLa Paleta Wagyu Australiano se obtiene de ejemplares criados en pasturas controladas de Australia, donde la alimentación balanceada y el bienestar animal propician un desarrollo óptimo de grasa intramuscular. Su marmoleo alto garantiza una jugosidad y textura excepcionales.",
       "cooking": "Recomendaciones de cocción\n\nBraseado lento\n• Cocinar a fuego bajo en caldo ligero o vino tinto durante 2–3 horas, hasta obtener ternura óptima.\n• Finalizar con un sellado rápido en sartén caliente para crear ligera costra.\n\nSelladura y horno\n• Sellar la pieza 1–2 minutos por lado en sartén bien caliente.\n• Terminar en horno a 160 °C durante 45–60 minutos, según el grosor.\n\nReposo\nDejar reposar 5–7 minutos tapado con aluminio para redistribuir jugos y mantener la jugosidad."
     },
     "en": {
-      "name": "Aus Shoulder",
+      "name": "Shoulder",
       "description": "Australian wagyu shoulder, marbled and versatile. For braising, roasting or thin slicing.\n\nCut characteristics\n\n• Shoulder (paleta): a fine, uniform-grained cut with intense marbling that brings tenderness and juice retention.\n• BMS 8–12 marbling: evenly distributed fat veins that melt as it cooks, infusing the meat with rich umami notes.\n• Adaptable thickness: allows slow cooking or quick searing, depending on your preparation style.\n\nSensory profile\n\nEach portion unfolds a concentrated umami accompanied by notes of nuts and fresh cream. The texture feels soft and velvety, with melting fat that enriches every bite.\n\nNutritional value\n\nWagyu fat is rich in monounsaturated fatty acids (oleic acid), which support a balanced lipid profile. This cut provides high-quality protein, B-complex vitamins and minerals such as iron and zinc.\n\nKey points\n\n• Cut: Australian Wagyu Shoulder (paleta)\n• Marbling: High (BMS 8–12)\n• Texture: Soft, juicy and velvety\n• Flavor: Intense umami with hints of nuts and cream\n• Cooking: Slow braise, sear and oven\n• Rest: 5–7 min under foil for maximum juiciness",
       "origin": "Origin & premium quality\n\nThe Australian Wagyu Shoulder comes from animals raised on controlled Australian pastures, where balanced feeding and animal welfare promote optimal intramuscular fat development. Its high marbling ensures exceptional juiciness and texture.",
       "cooking": "Cooking recommendations\n\nSlow braise\n• Cook over low heat in a light broth or red wine for 2–3 hours, until optimal tenderness.\n• Finish with a quick sear in a hot pan to create a light crust.\n\nSear & oven\n• Sear the piece 1–2 minutes per side in a very hot pan.\n• Finish in the oven at 160 °C for 45–60 minutes, depending on thickness.\n\nRest\nRest 5–7 minutes covered with foil to redistribute the juices and keep it juicy."
