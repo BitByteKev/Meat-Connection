@@ -106,18 +106,31 @@ export function buildXlsx(rows, sheetName = 'Productos') {
   return zip(files)
 }
 
+// Keys must match BRAND_LIST in src/app.jsx — used to label the "Marca"
+// column when a grade has more than one brand/price variant.
+const BRAND_NAMES = {
+  mackas: "Macka's",
+  kingriver: 'King River',
+  lgrow: "L'grow",
+  anguspure: 'Angus Pure',
+  wagyu: 'A5 Japonés',
+  jewel: 'Jewel',
+  abattiranch: 'Abatti Ranch',
+}
+const brandNames = (marcas) => (Array.isArray(marcas) && marcas.length ? marcas.map((k) => BRAND_NAMES[k] || k).join(' / ') : '')
+
 // One row per grade variant (mirrors the wholesale price sheet layout).
 export function productRows(catalog, catLabelOf) {
   const num = (x) => (typeof x === 'number' ? x : '')
-  const rows = [['Producto', 'Categoría', 'Marmoleo', 'Clave/SKU', 'Mayoreo MXN/kg', 'Menudeo MXN/kg', 'Estado', 'ID']]
+  const rows = [['Producto', 'Categoría', 'Marmoleo', 'Marca', 'Clave/SKU', 'Mayoreo MXN/kg', 'Menudeo MXN/kg', 'Estado', 'ID']]
   for (const p of catalog) {
     const name = (p.es && p.es.name) || p.id
     const estado = p.available === false ? 'Agotado' : 'Activo'
     const vs = (p.marbling && p.marbling.variants) || []
     if (vs.length) {
-      for (const v of vs) rows.push([name, catLabelOf(p.cat), v.label || '', v.sku || '', num(v.mayoreo), num(v.menudeo), estado, p.id])
+      for (const v of vs) rows.push([name, catLabelOf(p.cat), v.label || '', brandNames(v.marcas), v.sku || '', num(v.mayoreo), num(v.menudeo), estado, p.id])
     } else {
-      rows.push([name, catLabelOf(p.cat), '', p.sku || '', num(p.mayoreo), num(p.menudeo), estado, p.id])
+      rows.push([name, catLabelOf(p.cat), '', '', p.sku || '', num(p.mayoreo), num(p.menudeo), estado, p.id])
     }
   }
   return rows
