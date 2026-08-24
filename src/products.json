@@ -2051,7 +2051,10 @@
           "label": "6-7",
           "sku": "448843",
           "mayoreo": 340,
-          "menudeo": 640
+          "menudeo": 640,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 9,
@@ -2060,7 +2063,10 @@
           "label": "9+",
           "sku": "CHAMORROMR",
           "mayoreo": 350,
-          "menudeo": 650
+          "menudeo": 650,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -2100,7 +2106,10 @@
           "label": "0-3",
           "sku": "448825",
           "mayoreo": 450,
-          "menudeo": 750
+          "menudeo": 750,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 4,
@@ -2109,7 +2118,10 @@
           "label": "4-5",
           "sku": "448839",
           "mayoreo": 950,
-          "menudeo": 1250
+          "menudeo": 1250,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 8,
@@ -2118,7 +2130,10 @@
           "label": "8-9",
           "sku": "448736",
           "mayoreo": 850,
-          "menudeo": 1150
+          "menudeo": 1150,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -2574,7 +2589,10 @@
           "label": "9+",
           "sku": "448596",
           "mayoreo": 1400,
-          "menudeo": 1700
+          "menudeo": 1700,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -3186,7 +3204,10 @@
           "label": "9+",
           "sku": "CACHSA",
           "mayoreo": 500,
-          "menudeo": 800
+          "menudeo": 800,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -3225,7 +3246,10 @@
           "label": "9+",
           "sku": "BURGER",
           "mayoreo": 345,
-          "menudeo": 645
+          "menudeo": 645,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -3265,7 +3289,10 @@
           "label": "9+",
           "sku": "KARUBISA",
           "mayoreo": 450,
-          "menudeo": 750
+          "menudeo": 750,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -3304,7 +3331,10 @@
           "label": "9+",
           "sku": "KNUCKSA",
           "mayoreo": 425,
-          "menudeo": 725
+          "menudeo": 725,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -3343,7 +3373,10 @@
           "label": "9+",
           "sku": "LENGUASA",
           "mayoreo": 500,
-          "menudeo": 800
+          "menudeo": 800,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -3382,7 +3415,10 @@
           "label": "9+",
           "sku": "RABO",
           "mayoreo": 830,
-          "menudeo": 1130
+          "menudeo": 1130,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -3421,7 +3457,10 @@
           "label": "9+",
           "sku": "LIFTERSA",
           "mayoreo": 620,
-          "menudeo": 920
+          "menudeo": 920,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -3460,7 +3499,10 @@
           "label": "9+",
           "sku": "TOPSA",
           "mayoreo": 500,
-          "menudeo": 800
+          "menudeo": 800,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -3499,7 +3541,10 @@
           "label": "9+",
           "sku": "448774",
           "mayoreo": 1650,
-          "menudeo": 1950
+          "menudeo": 1950,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -3538,7 +3583,10 @@
           "label": "6-7",
           "sku": "0049060-01",
           "mayoreo": 1150,
-          "menudeo": 1450
+          "menudeo": 1450,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 9,
@@ -3547,7 +3595,10 @@
           "label": "9+",
           "sku": "251713",
           "mayoreo": 1460,
-          "menudeo": 1760
+          "menudeo": 1760,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -3624,7 +3675,10 @@
           "label": "8-9",
           "sku": "CACHMR",
           "mayoreo": 698,
-          "menudeo": 998
+          "menudeo": 998,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -3663,7 +3717,10 @@
           "label": "8-9",
           "sku": "FLATMR",
           "mayoreo": 1180,
-          "menudeo": 1480
+          "menudeo": 1480,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 9,
@@ -3672,7 +3729,10 @@
           "label": "9+",
           "sku": "448726",
           "mayoreo": 1100,
-          "menudeo": 1400
+          "menudeo": 1400,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -3757,7 +3817,10 @@
           "label": "8-9",
           "sku": "TOPRSA",
           "mayoreo": 365,
-          "menudeo": 665
+          "menudeo": 665,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -3796,7 +3859,10 @@
           "label": "6-7",
           "sku": "72335-1-ABR",
           "mayoreo": 550,
-          "menudeo": 850
+          "menudeo": 850,
+          "marcas": [
+            "kingriver"
+          ]
         },
         {
           "lo": 8,
@@ -3805,7 +3871,10 @@
           "label": "8-9",
           "sku": "SHORRMR",
           "mayoreo": 1350,
-          "menudeo": 1650
+          "menudeo": 1650,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -3844,7 +3913,10 @@
           "label": "8-9",
           "sku": "TOCINOWAG",
           "mayoreo": 1100,
-          "menudeo": 1400
+          "menudeo": 1400,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -4135,7 +4207,10 @@
           "label": "9+",
           "sku": "SHORTSA",
           "mayoreo": 1950,
-          "menudeo": 2250
+          "menudeo": 2250,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -4198,7 +4273,10 @@
           "lo": 8,
           "hi": 9,
           "image": "whatsapp-image-2026-07-28-at-09-38-05-ms4vsgu26291.webp",
-          "label": "8-9"
+          "label": "8-9",
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },

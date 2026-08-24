@@ -577,14 +577,6 @@ function gradeTag(v, system, unit) {
   return /^[0-9]/.test(l) ? `${unit} ${l}` : l;
 }
 
-// Grade keys (lo-hi) that appear on more than one variant — i.e. the same
-// grade priced differently per brand. Drives whether the grade-selector
-// buttons need a brand label to stay distinguishable.
-function dupGradeKeys(variants) {
-  const counts = {};
-  for (const v of variants) { const k = v.lo + '-' + v.hi; counts[k] = (counts[k] || 0) + 1; }
-  return new Set(Object.keys(counts).filter((k) => counts[k] > 1));
-}
 
 // --- Pricing (MXN/kg), read from the per-grade `mayoreo`/`menudeo` on each variant ---
 function fmtMXN(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
@@ -620,7 +612,6 @@ function MarblingScale({ marbling, vIdx, onSelect, priceKey = 'mayoreo' }) {
   const s = cfg.systems[marbling.system] || cfg.systems.aus;
   const max = marblingMax(marbling.system);
   const v = marbling.variants[vIdx];
-  const dupGrades = dupGradeKeys(marbling.variants);
   const pct = (n) => Math.max(0, Math.min(100, (n / max) * 100));
   const left = pct(v.lo), width = Math.max(7, pct(v.hi) - pct(v.lo));
   const eyebrow = { fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)' };
@@ -643,7 +634,7 @@ function MarblingScale({ marbling, vIdx, onSelect, priceKey = 'mayoreo' }) {
           {marbling.variants.map((vt, i) => {
             const on = i === vIdx;
             const price = variantPrice(vt, priceKey) ?? variantPrice(vt);
-            const brand = dupGrades.has(vt.lo + '-' + vt.hi) ? brandLabel(vt.marcas) : null;
+            const brand = brandLabel(vt.marcas);
             return (
               <button key={i} onClick={() => onSelect(i)} aria-pressed={on}
                 style={{ cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px', padding: '8px 16px', borderRadius: 'var(--radius-md)', fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '13px', letterSpacing: '0.03em',
@@ -1013,9 +1004,9 @@ const BRAND_LIST = [
   { name: 'Abatti Ranch Wagyu', key: 'abattiranch', url: 'https://www.abattiranchwagyu.com/' },
   { name: 'A5 Japonés · Wagyu Japanese Beef', key: 'wagyu', url: null, whiten: true },
 ];
-// Brand display name(s) for a marbling variant's `marcas` — shown on the grade-
-// selector button only for grades with more than one brand/price variant (see
-// dupGradeKeys / MarblingScale above). null when the variant has no brand set.
+// Brand display name(s) for a marbling variant's `marcas` — shown under the
+// grade on every grade-selector button that has one (see MarblingScale above).
+// null when the variant has no brand set, which renders no label.
 function brandLabel(marcas) {
   if (!marcas || !marcas.length) return null;
   return marcas.map((key) => (BRAND_LIST.find((b) => b.key === key) || {}).name || key).join(' / ');
