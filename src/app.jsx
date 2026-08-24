@@ -736,9 +736,6 @@ function ProductDetail({ product, onAdd, onBack }) {
   const vIdx = gradeIdx.indexOf(vSel) !== -1 ? vSel : (gradeIdx.length ? gradeIdx[0] : 0);
   // Switching brand drops the grade so it re-derives to that brand's lowest.
   const pickBrand = (k) => { setBrandSel(k); setVSel(null); };
-  // Brands for the Marcas tab: the brand being shown, else any marcas across
-  // grades, else empty (BrandTiles then shows the full distributor list).
-  const marcasFilter = brand ? [brand] : [...new Set(variants.flatMap((v) => v.marcas || []))];
   // Link the carousel to the grade ONLY when each grade has its own distinct photo
   // (e.g. rib eye). If all grades share one photo (e.g. L Grow's top/side/hero views),
   // leave the carousel free to swipe the cover images instead.
@@ -843,7 +840,6 @@ function ProductDetail({ product, onAdd, onBack }) {
             {tab === 'desc' && (p.description ? <TextBlock text={p.description} /> : <p style={tabPara}>{t.pdp.descSuffix}</p>)}
             {tab === 'origin' && (p.origin ? <TextBlock text={p.origin} /> : <p style={tabPara}>{genericOrigin}</p>)}
             {tab === 'cooking' && (p.cooking ? <TextBlock text={p.cooking} /> : <p style={tabPara}>{t.pdp.cooking}</p>)}
-            {tab === 'brands' && <BrandTiles compact filter={marcasFilter} />}
           </div>
           <div style={{ marginTop: '22px', padding: '16px 18px', background: 'var(--surface-sunken)', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-md)' }}>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '13.5px', lineHeight: 1.6, color: 'var(--text-body)', margin: 0 }}>{t.notice.processed}</p>
@@ -1059,10 +1055,10 @@ const BRAND_LIST = [
 function brandInfo(key) {
   return BRAND_LIST.find((b) => b.key === key) || { name: key, key };
 }
-// Brand logo tiles — the home "Marcas" strip and the product-page Marcas tab share this.
-// `filter` (array of brand keys) narrows to a product's own brands; empty/absent shows all.
-function BrandTiles({ compact, filter }) {
-  const list = (filter && filter.length) ? BRAND_LIST.filter((b) => filter.indexOf(b.key) !== -1) : BRAND_LIST;
+// Brand logo tiles for the home "Marcas" strip. The product page shows its own
+// brands in the grade selector instead (see MarblingScale).
+function BrandTiles({ compact }) {
+  const list = BRAND_LIST;
   const tileStyle = { border: '1px solid var(--mc-ink-700)', borderRadius: 'var(--radius-md)', background: 'var(--mc-charcoal)', padding: compact ? '18px 18px' : '28px 24px', minHeight: compact ? '92px' : '132px', display: 'flex', alignItems: 'center', justifyContent: 'center', textDecoration: 'none', transition: 'border-color var(--dur-med), box-shadow var(--dur-med), transform var(--dur-med)' };
   const hoverIn = (e) => { e.currentTarget.style.borderColor = 'var(--accent-gold)'; e.currentTarget.style.boxShadow = 'var(--shadow-md)'; e.currentTarget.style.transform = 'translateY(-3px)'; };
   const hoverOut = (e) => { e.currentTarget.style.borderColor = 'var(--mc-ink-700)'; e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)'; };
