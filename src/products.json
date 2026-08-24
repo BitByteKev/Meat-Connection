@@ -851,7 +851,10 @@
           "label": "10-12",
           "sku": "FINGER",
           "mayoreo": 885,
-          "menudeo": 1185
+          "menudeo": 1185,
+          "marcas": [
+            "wagyu"
+          ]
         }
       ]
     },
@@ -3880,7 +3883,10 @@
           "label": "4+",
           "sku": "1336310",
           "mayoreo": 430,
-          "menudeo": 730
+          "menudeo": 730,
+          "marcas": [
+            "mackas"
+          ]
         }
       ]
     },
@@ -3919,7 +3925,10 @@
           "label": "4+",
           "sku": "1336880",
           "mayoreo": 420,
-          "menudeo": 720
+          "menudeo": 720,
+          "marcas": [
+            "mackas"
+          ]
         }
       ]
     },
@@ -3958,7 +3967,10 @@
           "label": "1+",
           "sku": "RBCAPJC",
           "mayoreo": 200,
-          "menudeo": 500
+          "menudeo": 500,
+          "marcas": [
+            "mackas"
+          ]
         }
       ]
     },
@@ -4039,7 +4051,10 @@
           "label": "3+",
           "sku": "SHORTJC",
           "mayoreo": 450,
-          "menudeo": 750
+          "menudeo": 750,
+          "marcas": [
+            "mackas"
+          ]
         }
       ]
     },
@@ -4078,7 +4093,10 @@
           "label": "2-3+",
           "sku": "FLAPMJC",
           "mayoreo": 390,
-          "menudeo": 690
+          "menudeo": 690,
+          "marcas": [
+            "mackas"
+          ]
         }
       ]
     },
