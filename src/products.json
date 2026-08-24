@@ -644,11 +644,9 @@
           "label": "0-3",
           "sku": "448730",
           "mayoreo": 850,
-          "menudeo": 1150,
+          "menudeo": 1250,
           "marcas": [
-            "mackas",
-            "kingriver",
-            "lgrow"
+            "kingriver"
           ]
         },
         {
@@ -660,9 +658,7 @@
           "mayoreo": 920,
           "menudeo": 1220,
           "marcas": [
-            "mackas",
-            "kingriver",
-            "lgrow"
+            "kingriver"
           ]
         },
         {
@@ -674,9 +670,7 @@
           "mayoreo": 1200,
           "menudeo": 1500,
           "marcas": [
-            "mackas",
-            "kingriver",
-            "lgrow"
+            "kingriver"
           ]
         },
         {
@@ -688,9 +682,7 @@
           "mayoreo": 1500,
           "menudeo": 1800,
           "marcas": [
-            "mackas",
-            "kingriver",
-            "lgrow"
+            "kingriver"
           ]
         },
         {
@@ -702,9 +694,7 @@
           "mayoreo": 2000,
           "menudeo": 2300,
           "marcas": [
-            "mackas",
-            "kingriver",
-            "lgrow"
+            "kingriver"
           ]
         },
         {
@@ -716,8 +706,28 @@
           "mayoreo": 2200,
           "menudeo": 2500,
           "marcas": [
-            "mackas",
-            "kingriver",
+            "kingriver"
+          ]
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "whatsapp-image-2026-07-28-at-15-25-38-ms58809j355.webp",
+          "label": "6-7",
+          "mayoreo": 1550,
+          "menudeo": 1850,
+          "marcas": [
+            "lgrow"
+          ]
+        },
+        {
+          "lo": 9,
+          "hi": 12,
+          "image": "whatsapp-image-2026-07-28-at-15-25-38-ms58809j355.webp",
+          "label": "9-12",
+          "mayoreo": 2000,
+          "menudeo": 2300,
+          "marcas": [
             "lgrow"
           ]
         }
