@@ -102,7 +102,7 @@ export const STRINGS = {
     footer: {
       catalogTitle: 'Catálogo', catalogItems: ['A5 Japonés', 'Wagyu Australiano', 'Wagyu Americano', 'Black Angus'],
       servicesTitle: 'Servicios', servicesItems: ['Envíos Express', 'Importación Directa', 'Cadena de Frío', 'Porcionado al Vacío'],
-      contactTitle: 'Contacto', quoteCatalogs: 'Cotizar / Catálogos',
+      contactTitle: 'Contacto', quoteCatalogs: 'Cotizar / Catálogos', madeBy: 'Sitio web hecho por',
       tagline: 'Distribuidor de carne premium en México. Wagyu japonés, wagyu australiano y carne americana — importación directa con envíos express y cadena de frío garantizada.',
     },
     fab: { aria: 'Cotizar por WhatsApp', title: 'Cotizar por WhatsApp — arrastra para mover' },
@@ -210,7 +210,7 @@ export const STRINGS = {
     footer: {
       catalogTitle: 'Catalog', catalogItems: ['A5 Japanese', 'Australian Wagyu', 'American Wagyu', 'Black Angus'],
       servicesTitle: 'Services', servicesItems: ['Express Shipping', 'Direct Import', 'Cold Chain', 'Vacuum Portioning'],
-      contactTitle: 'Contact', quoteCatalogs: 'Quote / Catalogs',
+      contactTitle: 'Contact', quoteCatalogs: 'Quote / Catalogs', madeBy: 'Website made by',
       tagline: 'Premium meat distributor in Mexico. Japanese wagyu, Australian wagyu and American beef — direct import with express shipping and a guaranteed cold chain.',
     },
     fab: { aria: 'Quote on WhatsApp', title: 'Quote on WhatsApp — drag to move' },

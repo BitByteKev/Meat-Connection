@@ -957,6 +957,9 @@ function Footer({ onCategory, onAnchor }) {
         <span>© 2026 Meat Connection · <a href={waHref()} target="_blank" rel="noopener" aria-label="WhatsApp"
           onMouseOver={(e) => e.currentTarget.style.color = 'var(--accent-gold-ink)'} onMouseOut={(e) => e.currentTarget.style.color = 'inherit'}
           style={{ color: 'inherit', textDecoration: 'none' }}>{WA_DISPLAY}</a></span>
+        <span>{t.footer.madeBy} <a href="https://kcdigital.pro" target="_blank" rel="noopener"
+          onMouseOver={(e) => e.currentTarget.style.color = 'var(--accent-gold-ink)'} onMouseOut={(e) => e.currentTarget.style.color = 'inherit'}
+          style={{ color: 'inherit', textDecoration: 'none' }}>kcdigital.pro</a></span>
       </div>
     </footer>
   );
