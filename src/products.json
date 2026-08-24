@@ -602,7 +602,10 @@
           "label": "8+",
           "sku": "WINI",
           "mayoreo": 855,
-          "menudeo": 1155
+          "menudeo": 1155,
+          "marcas": [
+            "abattiranch"
+          ]
         }
       ]
     },
@@ -1691,7 +1694,10 @@
           "label": "9+",
           "sku": "TENDSA",
           "mayoreo": 2420,
-          "menudeo": 2720
+          "menudeo": 2720,
+          "marcas": [
+            "abattiranch"
+          ]
         }
       ]
     },
@@ -1902,7 +1908,10 @@
           "label": "4-5",
           "sku": "82195-1",
           "mayoreo": 600,
-          "menudeo": 900
+          "menudeo": 900,
+          "marcas": [
+            "abattiranch"
+          ]
         },
         {
           "lo": 6,
@@ -1911,7 +1920,10 @@
           "label": "6-7",
           "sku": "72195-1",
           "mayoreo": 620,
-          "menudeo": 920
+          "menudeo": 920,
+          "marcas": [
+            "abattiranch"
+          ]
         },
         {
           "lo": 8,
@@ -1920,7 +1932,10 @@
           "label": "8+",
           "sku": "62195-1",
           "mayoreo": 680,
-          "menudeo": 980
+          "menudeo": 980,
+          "marcas": [
+            "abattiranch"
+          ]
         }
       ]
     },
@@ -2631,7 +2646,10 @@
           "label": "9+",
           "sku": "448593",
           "mayoreo": 710,
-          "menudeo": 1010
+          "menudeo": 1010,
+          "marcas": [
+            "abattiranch"
+          ]
         }
       ]
     },
@@ -2780,7 +2798,10 @@
           "label": "4-5",
           "sku": "83045-1",
           "mayoreo": 565,
-          "menudeo": 865
+          "menudeo": 865,
+          "marcas": [
+            "abattiranch"
+          ]
         }
       ]
     },
@@ -2821,7 +2842,10 @@
           "label": "6-7",
           "sku": "72395-1",
           "mayoreo": 900,
-          "menudeo": 1200
+          "menudeo": 1200,
+          "marcas": [
+            "abattiranch"
+          ]
         },
         {
           "lo": 8,
@@ -2830,7 +2854,10 @@
           "label": "8+",
           "sku": "62395-1",
           "mayoreo": 950,
-          "menudeo": 1250
+          "menudeo": 1250,
+          "marcas": [
+            "abattiranch"
+          ]
         },
         {
           "lo": 8,
@@ -2839,7 +2866,10 @@
           "label": "8-9",
           "sku": "RIBON",
           "mayoreo": 1350,
-          "menudeo": 1650
+          "menudeo": 1650,
+          "marcas": [
+            "abattiranch"
+          ]
         }
       ]
     },
@@ -2946,7 +2976,10 @@
           "label": "4-5",
           "sku": "82955-1",
           "mayoreo": 490,
-          "menudeo": 790
+          "menudeo": 790,
+          "marcas": [
+            "abattiranch"
+          ]
         }
       ]
     },
@@ -2986,7 +3019,10 @@
           "label": "Clásico",
           "sku": "43565-2",
           "mayoreo": 250,
-          "menudeo": 550
+          "menudeo": 550,
+          "marcas": [
+            "abattiranch"
+          ]
         }
       ]
     },
@@ -3637,7 +3673,10 @@
           "label": "8+",
           "sku": "26",
           "mayoreo": 2150,
-          "menudeo": 2450
+          "menudeo": 2450,
+          "marcas": [
+            "abattiranch"
+          ]
         }
       ]
     },
@@ -4344,7 +4383,10 @@
           "image": "whatsapp-image-2026-08-11-at-10-39-25-msoy6wbm272.webp",
           "label": "6-7",
           "mayoreo": 790,
-          "menudeo": 1100
+          "menudeo": 1100,
+          "marcas": [
+            "abattiranch"
+          ]
         }
       ]
     },
@@ -4385,7 +4427,10 @@
           "image": "whatsapp-image-2026-08-11-at-10-42-05-msoyazgz3316.webp",
           "label": "4-5",
           "mayoreo": 380,
-          "menudeo": 700
+          "menudeo": 700,
+          "marcas": [
+            "abattiranch"
+          ]
         }
       ]
     },
@@ -4423,7 +4468,10 @@
           "image": "whatsapp-image-2026-08-11-at-10-50-17-msoyjusi9753.webp",
           "label": "8",
           "mayoreo": 499,
-          "menudeo": 800
+          "menudeo": 800,
+          "marcas": [
+            "abattiranch"
+          ]
         }
       ]
     },
