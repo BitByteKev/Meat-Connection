@@ -228,8 +228,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .mc-foot-legal{ flex-direction:column !important; gap:6px !important; text-align:center !important; }
   .mc-trust{ flex-direction:column !important; gap:8px !important; align-items:flex-start !important; }
   .mc-pdp-actions{ flex-wrap:wrap !important; }
-  /* Brand chips go two-up rather than shrinking the logos out of legibility */
-  .mc-brand-picker > button{ flex:1 1 44% !important; min-width:0 !important; }
+  /* Brand chips go two-up rather than shrinking the logos out of legibility.
+     A lone chip keeps its natural width — nothing to line up against. */
+  .mc-brand-picker > button:not(:only-child){ flex:1 1 44% !important; min-width:0 !important; }
 }
 
 /* ===== Respect reduced motion ===== */
