@@ -577,6 +577,21 @@ function gradeTag(v, system, unit) {
   return /^[0-9]/.test(l) ? `${unit} ${l}` : l;
 }
 
+// Brand keys offered across a product's variants, in first-appearance order —
+// one chip each in the brand selector above the grade grid. Derived from the
+// data, so a third brand needs no code change.
+function brandKeys(variants) {
+  const out = [];
+  for (const v of variants) for (const k of v.marcas || []) if (out.indexOf(k) === -1) out.push(k);
+  return out;
+}
+// Indices of the grades a brand offers, in data order (lowest grade first, so
+// [0] is the default selection). A falsy brand — a product whose variants carry
+// no `marcas` at all — yields every variant, keeping one plain grid.
+function gradeIdxFor(variants, brand) {
+  return variants.map((_, i) => i).filter((i) => !brand || (variants[i].marcas || []).indexOf(brand) !== -1);
+}
+
 
 // --- Pricing (MXN/kg), read from the per-grade `mayoreo`/`menudeo` on each variant ---
 function fmtMXN(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
@@ -606,12 +621,14 @@ function MarblingPill({ marbling }) {
   );
 }
 
-function MarblingScale({ marbling, vIdx, onSelect, priceKey = 'mayoreo' }) {
+function MarblingScale({ marbling, vIdx, onSelect, brand, onBrand, priceKey = 'mayoreo' }) {
   const { t } = useLang();
   const cfg = t.pdp.marbling;
   const s = cfg.systems[marbling.system] || cfg.systems.aus;
   const max = marblingMax(marbling.system);
   const v = marbling.variants[vIdx];
+  const brands = brandKeys(marbling.variants);
+  const shown = gradeIdxFor(marbling.variants, brand);
   const pct = (n) => Math.max(0, Math.min(100, (n / max) * 100));
   const left = pct(v.lo), width = Math.max(7, pct(v.hi) - pct(v.lo));
   const eyebrow = { fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)' };
@@ -628,19 +645,41 @@ function MarblingScale({ marbling, vIdx, onSelect, priceKey = 'mayoreo' }) {
       <div style={{ display: 'flex', justifyContent: 'space-between', marginTop: '7px', fontSize: '11px', color: 'var(--text-muted)' }}>
         <span>{s.lo}</span><span>{s.name}</span><span>{s.hi} (9+)</span>
       </div>
-      {marbling.variants.length > 0 && (
+      {brands.length > 0 && (
+        <div style={{ marginTop: '18px' }}>
+          <span style={{ ...eyebrow, display: 'block', marginBottom: '8px' }}>{cfg.chooseBrand}</span>
+          {/* Logos are white artwork, so the chip keeps the same charcoal ground
+              the BrandTiles strip uses — on a light chip they would vanish. */}
+          <div className="mc-brand-picker" style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
+            {brands.map((k) => {
+              const b = brandInfo(k);
+              const on = k === brand;
+              return (
+                <button key={k} onClick={() => onBrand(k)} aria-pressed={on} title={b.name} aria-label={b.name}
+                  style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', flex: '0 1 auto', minWidth: '96px', height: '62px', padding: '6px 18px', borderRadius: 'var(--radius-md)', background: 'var(--mc-charcoal)',
+                    border: '2px solid ' + (on ? 'var(--mc-red)' : 'var(--mc-ink-700)'), transition: 'border-color var(--dur-fast)' }}>
+                  {window.MC_BRAND && window.MC_BRAND[k]
+                    ? <img src={window.MC_BRAND[k]} alt={b.name} loading="lazy" decoding="async"
+                        style={{ maxHeight: '42px', maxWidth: '116px', width: 'auto', objectFit: 'contain', opacity: on ? 1 : 0.72, filter: b.whiten ? 'brightness(0) invert(1)' : undefined }} />
+                    : <span style={{ fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '12px', letterSpacing: '0.03em', textTransform: 'uppercase', color: 'var(--mc-paper)' }}>{b.name}</span>}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      )}
+      {shown.length > 0 && (
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px', marginTop: '16px' }}>
-          {marbling.variants.length > 1 && <span style={{ ...eyebrow, width: '100%', marginBottom: '2px' }}>{cfg.choose}</span>}
-          {marbling.variants.map((vt, i) => {
+          {shown.length > 1 && <span style={{ ...eyebrow, width: '100%', marginBottom: '2px' }}>{cfg.choose}</span>}
+          {shown.map((i) => {
+            const vt = marbling.variants[i];
             const on = i === vIdx;
             const price = variantPrice(vt, priceKey) ?? variantPrice(vt);
-            const brand = brandLabel(vt.marcas);
             return (
               <button key={i} onClick={() => onSelect(i)} aria-pressed={on}
                 style={{ cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px', padding: '8px 16px', borderRadius: 'var(--radius-md)', fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '13px', letterSpacing: '0.03em',
                   border: '2px solid ' + (on ? 'var(--mc-red)' : 'var(--border-default)'), background: on ? 'var(--mc-red)' : 'transparent', color: on ? '#fff' : 'var(--text-strong)', transition: 'background var(--dur-fast), border-color var(--dur-fast)' }}>
                 <span>{gradeTag(vt, marbling.system, s.unit)}</span>
-                {brand && <span style={{ fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '9.5px', letterSpacing: '0.02em', textTransform: 'uppercase', opacity: on ? 1 : 0.85 }}>{brand}</span>}
                 {price != null && <span style={{ fontFamily: 'var(--font-display)', fontSize: '14px', opacity: on ? 1 : 0.9 }}>{fmtMXN(price)}<span style={{ fontSize: '10px', opacity: 0.8 }}>{t.pdp.perKg}</span></span>}
               </button>
             );
@@ -681,20 +720,31 @@ function ProductDetail({ product, onAdd, onBack }) {
   const { t } = useLang();
   const p = t.products[product.id];
   const marbling = (window.MC_MARBLING && window.MC_MARBLING[product.id]) || null;
-  const [vIdx, setVIdx] = React.useState(0);
-  React.useEffect(() => { setVIdx(0); }, [product.id]);
   const imgs = product.images || [];
   const variants = (marbling && marbling.variants) || [];
-  // Brands for the Marcas tab: the selected grade's marcas, else any marcas across
+  // Brand first, then grade. Both selections are stored raw and validated on
+  // every render: an out-of-range pick (another product's brand, a grade the
+  // newly picked brand doesn't offer) falls back to the first valid one, so
+  // `vIdx` always points at a grade the shown brand actually sells and a stale
+  // price/badge can never survive a brand switch.
+  const [brandSel, setBrandSel] = React.useState(null);
+  const [vSel, setVSel] = React.useState(null);
+  React.useEffect(() => { setBrandSel(null); setVSel(null); }, [product.id]);
+  const brands = brandKeys(variants);
+  const brand = brands.indexOf(brandSel) !== -1 ? brandSel : (brands[0] || null);
+  const gradeIdx = gradeIdxFor(variants, brand);
+  const vIdx = gradeIdx.indexOf(vSel) !== -1 ? vSel : (gradeIdx.length ? gradeIdx[0] : 0);
+  // Switching brand drops the grade so it re-derives to that brand's lowest.
+  const pickBrand = (k) => { setBrandSel(k); setVSel(null); };
+  // Brands for the Marcas tab: the brand being shown, else any marcas across
   // grades, else empty (BrandTiles then shows the full distributor list).
-  const selMarcas = (variants[vIdx] && variants[vIdx].marcas) || [];
-  const marcasFilter = selMarcas.length ? selMarcas : [...new Set(variants.flatMap((v) => v.marcas || []))];
+  const marcasFilter = brand ? [brand] : [...new Set(variants.flatMap((v) => v.marcas || []))];
   // Link the carousel to the grade ONLY when each grade has its own distinct photo
   // (e.g. rib eye). If all grades share one photo (e.g. L Grow's top/side/hero views),
   // leave the carousel free to swipe the cover images instead.
   const perGradePhotos = new Set(variants.map((v) => v.image)).size > 1;
   const carouselIndex = perGradePhotos ? Math.max(0, imgs.indexOf(variants[vIdx].image)) : undefined;
-  const onCarousel = perGradePhotos ? (ci) => { const f = variants.findIndex((v) => imgs.indexOf(v.image) === ci); if (f >= 0) setVIdx(f); } : undefined;
+  const onCarousel = perGradePhotos ? (ci) => { const f = gradeIdx.find((i) => imgs.indexOf(variants[i].image) === ci); if (f != null) setVSel(f); } : undefined;
   const [tab, setTab] = React.useState('desc');
   // El tipo de venta se deriva de la cantidad: 25 kg o más = mayoreo, menos = menudeo.
   // Los chips Mayoreo/Menudeo son atajos que ajustan la cantidad al rango correspondiente.
@@ -730,7 +780,7 @@ function ProductDetail({ product, onAdd, onBack }) {
               {product.weight}{product.weight && product.sku ? ' · ' : ''}{product.sku && `SKU ${product.sku}`}
             </div>
           )}
-          {marbling && <MarblingScale marbling={marbling} vIdx={vIdx} onSelect={setVIdx} priceKey={saleType === 'menudeo' ? 'menudeo' : 'mayoreo'} />}
+          {marbling && <MarblingScale marbling={marbling} vIdx={vIdx} onSelect={setVSel} brand={brand} onBrand={pickBrand} priceKey={saleType === 'menudeo' ? 'menudeo' : 'mayoreo'} />}
           {selPrice != null && (
             <div style={{ margin: '4px 0 20px' }}>
               <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '5px' }}>{showMenudeo ? t.pdp.priceEyebrowMenudeo : t.pdp.priceEyebrow}</div>
@@ -1004,12 +1054,10 @@ const BRAND_LIST = [
   { name: 'Abatti Ranch Wagyu', key: 'abattiranch', url: 'https://www.abattiranchwagyu.com/' },
   { name: 'A5 Japonés · Wagyu Japanese Beef', key: 'wagyu', url: null, whiten: true },
 ];
-// Brand display name(s) for a marbling variant's `marcas` — shown under the
-// grade on every grade-selector button that has one (see MarblingScale above).
-// null when the variant has no brand set, which renders no label.
-function brandLabel(marcas) {
-  if (!marcas || !marcas.length) return null;
-  return marcas.map((key) => (BRAND_LIST.find((b) => b.key === key) || {}).name || key).join(' / ');
+// Display data for a brand key — name and the `whiten` flag for logos that need
+// inverting. Falls back to the raw key so an unknown brand still renders.
+function brandInfo(key) {
+  return BRAND_LIST.find((b) => b.key === key) || { name: key, key };
 }
 // Brand logo tiles — the home "Marcas" strip and the product-page Marcas tab share this.
 // `filter` (array of brand keys) narrows to a product's own brands; empty/absent shows all.

@@ -46,7 +46,7 @@ export const STRINGS = {
       cooking: 'El Wagyu se cocina rápido y a fuego alto. Llévalo a temperatura ambiente, sálalo justo antes de sellar y mantén las porciones pequeñas — la grasa hace el trabajo. Deja reposar y córtalo fino en contra de la fibra.',
       reviews: '★★★★★ «Marmoleo de restaurante en casa.» — Comprador verificado',
       marbling: {
-        title: 'Marmoleo', choose: 'Elige el grado de marmoleo', of: 'de',
+        title: 'Marmoleo', choose: 'Elige el grado de marmoleo', chooseBrand: 'Elige la marca', of: 'de',
         systems: {
           bms:   { name: 'Escala japonesa BMS', unit: 'BMS', lo: 'Menos', hi: 'Más' },
           aus:   { name: 'Marble Score (Australia)', unit: 'MB', lo: 'Menos', hi: 'Más' },
@@ -154,7 +154,7 @@ export const STRINGS = {
       cooking: 'Wagyu cooks fast and hot. Bring it to room temperature, salt just before searing and keep portions small — the fat does the work. Let it rest and slice thin against the grain.',
       reviews: '★★★★★ "Restaurant-grade marbling at home." — Verified buyer',
       marbling: {
-        title: 'Marbling', choose: 'Choose the marbling grade', of: 'of',
+        title: 'Marbling', choose: 'Choose the marbling grade', chooseBrand: 'Choose the brand', of: 'of',
         systems: {
           bms:   { name: 'Japanese BMS scale', unit: 'BMS', lo: 'Less', hi: 'More' },
           aus:   { name: 'Marble Score (Australia)', unit: 'MB', lo: 'Less', hi: 'More' },
