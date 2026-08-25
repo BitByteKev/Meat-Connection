@@ -1136,8 +1136,18 @@
           "mayoreo": 465,
           "menudeo": 765,
           "marcas": [
-            "mackas",
             "anguspure"
+          ]
+        },
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "whatsapp-image-2026-07-28-at-14-39-23-ms56m6l61287.webp",
+          "label": "4-5",
+          "mayoreo": 465,
+          "menudeo": 765,
+          "marcas": [
+            "mackas"
           ]
         }
       ]
