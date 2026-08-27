@@ -2068,18 +2068,6 @@
           "marcas": [
             "kingriver"
           ]
-        },
-        {
-          "lo": 8,
-          "hi": 9,
-          "image": "lgrow-short-rib-meat-top.webp",
-          "label": "8-9",
-          "sku": "448736",
-          "mayoreo": 850,
-          "menudeo": 1150,
-          "marcas": [
-            "kingriver"
-          ]
         }
       ]
     },
@@ -2088,13 +2076,13 @@
       "en": "· Australia"
     },
     "es": {
-      "name": "Chuck Short Aus",
+      "name": "Chuck Short",
       "description": "Short rib (costilla, con o sin hueso) — corte jugoso y muy marmoleado, intenso en sabor.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nRey del braseado y el ahumado. También en finas láminas para parrilla coreana.",
       "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nBraseado: 3 h a 160 °C hasta deshebrar. Parrilla (rebanado): sella 1–2 min por lado."
     },
     "en": {
-      "name": "Chuck Short Rib Aus",
+      "name": "Chuck Short Rib",
       "description": "Short rib (bone-in or boneless) — a juicy, heavily marbled cut, intense in flavor.\n\nAustralian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nKing of braising and smoking. Also thin-sliced for Korean BBQ.",
       "origin": "Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
       "cooking": "Cooking recommendations\n\nBraise: 3 h at 160 °C until it shreds. Grill (sliced): sear 1–2 min per side."
