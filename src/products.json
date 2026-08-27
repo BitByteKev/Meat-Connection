@@ -1708,7 +1708,7 @@
           "mayoreo": 710,
           "menudeo": 1010,
           "marcas": [
-            "lgrow"
+            "kingriver"
           ]
         },
         {
@@ -1720,7 +1720,7 @@
           "mayoreo": 800,
           "menudeo": 1100,
           "marcas": [
-            "lgrow"
+            "kingriver"
           ]
         },
         {
@@ -1732,41 +1732,29 @@
           "mayoreo": 950,
           "menudeo": 1250,
           "marcas": [
-            "lgrow"
+            "kingriver"
+          ]
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "",
+          "label": "9+",
+          "sku": "PICCA89",
+          "mayoreo": 1380,
+          "menudeo": 1700,
+          "marcas": [
+            "kingriver"
           ]
         },
         {
           "lo": 8,
           "hi": 9,
           "image": "",
-          "label": "8-9",
-          "sku": "PICCA89",
-          "mayoreo": 1400,
-          "menudeo": 1700,
-          "marcas": [
-            "lgrow"
-          ]
-        },
-        {
-          "lo": 8,
-          "hi": 99,
-          "image": "",
           "label": "8+",
           "sku": "68465-1",
-          "mayoreo": 1100,
-          "menudeo": 1400,
-          "marcas": [
-            "lgrow"
-          ]
-        },
-        {
-          "lo": 9,
-          "hi": 99,
-          "image": "",
-          "label": "9+",
-          "sku": "448719",
-          "mayoreo": 1380,
-          "menudeo": 1680,
+          "mayoreo": 1280,
+          "menudeo": 1550,
           "marcas": [
             "lgrow"
           ]
@@ -1778,7 +1766,7 @@
       "en": "Australia · L Grow"
     },
     "es": {
-      "name": "Picaña Aus",
+      "name": "Picaña",
       "description": "Picaña (rump cap) — corte brasileño por excelencia, con una capa de grasa superior que se vuelve crujiente.\n\nWagyu australiano, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nEstrella del asado. Córtala en C contra la fibra o ásala entera con la grasa hacia arriba.",
       "origin": "Origen australiano\n\nWagyu australiano King River, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nMarca la grasa, sella con la capa hacia el fuego y termina a calor medio. Medio. Reposa 5 min."
