@@ -1508,24 +1508,12 @@
       "variants": [
         {
           "lo": 2,
-          "hi": 9,
+          "hi": 3,
           "image": "placeholder-coming-soon.webp",
           "label": "2+",
           "sku": "391644",
           "mayoreo": 710,
           "menudeo": 1010,
-          "marcas": [
-            "mackas"
-          ]
-        },
-        {
-          "lo": 4,
-          "hi": 9,
-          "image": "placeholder-coming-soon.webp",
-          "label": "4+",
-          "sku": "TOMAJC",
-          "mayoreo": 625,
-          "menudeo": 925,
           "marcas": [
             "mackas"
           ]
