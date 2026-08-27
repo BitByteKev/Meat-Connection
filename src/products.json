@@ -1363,41 +1363,49 @@
       "variants": [
         {
           "lo": 2,
-          "hi": 9,
+          "hi": 3,
           "image": "",
           "label": "2+",
           "sku": "4040917",
           "mayoreo": 520,
           "menudeo": 820,
           "marcas": [
-            "mackas",
             "anguspure"
           ]
         },
         {
           "lo": 4,
-          "hi": 9,
+          "hi": 5,
+          "image": "whatsapp-image-2026-07-28-at-11-12-32-ms4z4s091572.webp",
+          "label": "4+",
+          "mayoreo": 565,
+          "menudeo": 865,
+          "marcas": [
+            "anguspure"
+          ]
+        },
+        {
+          "lo": 4,
+          "hi": 5,
           "image": "",
           "label": "4+",
           "sku": "390288",
           "mayoreo": 615,
           "menudeo": 915,
           "marcas": [
-            "mackas",
-            "anguspure"
+            "mackas"
           ]
         },
         {
           "lo": 6,
-          "hi": 9,
+          "hi": 7,
           "image": "",
           "label": "6+",
           "sku": "390295",
           "mayoreo": 810,
           "menudeo": 1110,
           "marcas": [
-            "mackas",
-            "anguspure"
+            "mackas"
           ]
         }
       ]
