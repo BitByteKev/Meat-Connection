@@ -1659,13 +1659,13 @@
       "system": "aus",
       "variants": [
         {
-          "lo": 9,
-          "hi": 10,
+          "lo": 4,
+          "hi": 5,
           "image": "lgrow-tenderloin-top.webp",
-          "label": "9+",
+          "label": "4+",
           "sku": "TENDSA",
-          "mayoreo": 2420,
-          "menudeo": 2720,
+          "mayoreo": 980,
+          "menudeo": 1250,
           "marcas": [
             "abattiranch"
           ]
