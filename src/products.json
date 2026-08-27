@@ -1614,48 +1614,12 @@
           "mayoreo": 930,
           "menudeo": 1230,
           "marcas": [
-            "lgrow"
-          ]
-        },
-        {
-          "lo": 4,
-          "hi": 5,
-          "image": "filete-australiano-9plus-1.webp",
-          "label": "4-5",
-          "sku": "88935-1",
-          "mayoreo": 980,
-          "menudeo": 1280,
-          "marcas": [
-            "lgrow"
-          ]
-        },
-        {
-          "lo": 6,
-          "hi": 7,
-          "image": "filete-australiano-9plus-1.webp",
-          "label": "6-7",
-          "sku": "78935-1-ABR",
-          "mayoreo": 1400,
-          "menudeo": 1700,
-          "marcas": [
-            "lgrow"
-          ]
-        },
-        {
-          "lo": 8,
-          "hi": 9,
-          "image": "filete-australiano-9plus-1.webp",
-          "label": "8-9",
-          "sku": "LF8-9",
-          "mayoreo": 1950,
-          "menudeo": 2250,
-          "marcas": [
-            "lgrow"
+            "kingriver"
           ]
         },
         {
           "lo": 9,
-          "hi": 99,
+          "hi": 10,
           "image": "filete-australiano-9plus-1.webp",
           "label": "9+",
           "sku": "TENDMR",
