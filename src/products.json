@@ -2104,22 +2104,10 @@
       "variants": [
         {
           "lo": 0,
-          "hi": 0,
+          "hi": 3,
           "image": "lgrow-chuck-eye-roll-top.webp",
           "label": "Clásico",
           "sku": "CHUCKMASAMI",
-          "mayoreo": 540,
-          "menudeo": 840,
-          "marcas": [
-            "kingriver"
-          ]
-        },
-        {
-          "lo": 0,
-          "hi": 3,
-          "image": "lgrow-chuck-eye-roll-top.webp",
-          "label": "0-3",
-          "sku": "448772",
           "mayoreo": 330,
           "menudeo": 630,
           "marcas": [
@@ -2131,9 +2119,9 @@
           "hi": 5,
           "image": "lgrow-chuck-eye-roll-top.webp",
           "label": "4-5",
-          "sku": "81655-1",
-          "mayoreo": 490,
-          "menudeo": 790,
+          "sku": "448772",
+          "mayoreo": 420,
+          "menudeo": 720,
           "marcas": [
             "kingriver"
           ]
@@ -2143,7 +2131,7 @@
           "hi": 7,
           "image": "lgrow-chuck-eye-roll-top.webp",
           "label": "6-7",
-          "sku": "448732",
+          "sku": "81655-1",
           "mayoreo": 530,
           "menudeo": 830,
           "marcas": [
@@ -2155,23 +2143,23 @@
           "hi": 9,
           "image": "lgrow-chuck-eye-roll-top.webp",
           "label": "8-9",
-          "sku": "448707",
+          "sku": "448732",
           "mayoreo": 710,
-          "menudeo": 1010,
+          "menudeo": 1000,
           "marcas": [
             "kingriver"
           ]
         },
         {
-          "lo": 8,
+          "lo": 9,
           "hi": 10,
           "image": "lgrow-chuck-eye-roll-top.webp",
-          "label": "8+",
-          "sku": "61655-1",
-          "mayoreo": 560,
-          "menudeo": 860,
+          "label": "9-10",
+          "sku": "448707",
+          "mayoreo": 710,
+          "menudeo": 1010,
           "marcas": [
-            "kingriver"
+            "jewel"
           ]
         }
       ]
@@ -2181,7 +2169,7 @@
       "en": "· Australia"
     },
     "es": {
-      "name": "Diezmillo Aus",
+      "name": "Diezmillo",
       "description": "Un diezmillo Wagyu australiano con un marmoleo excepcional que se deshace en cada bocado.\n\nEste corte proviene del cuarto delantero y combina sabor profundo con una jugosidad extraordinaria gracias a su intensa infiltración de grasa. Es una opción versátil que sorprende tanto en preparaciones al sartén como en cocciones lentas.\n\nIdeal para quienes buscan la experiencia Wagyu premium en un corte lleno de carácter y suavidad.",
       "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
       "cooking": "Para cortes en filete: sella a fuego alto 1 a 2 minutos por lado y termina a término medio o medio-rojo para respetar la grasa. Deja reposar 5 minutos antes de servir.\n\nSi lo preparas en pieza entera, opta por cocción lenta y baja temperatura para lograr una textura tierna. Sazona de forma sencilla con sal en escamas para no opacar el sabor natural del Wagyu."
