@@ -1623,8 +1623,19 @@
           "image": "filete-australiano-9plus-1.webp",
           "label": "9+",
           "sku": "TENDMR",
-          "mayoreo": 1850,
-          "menudeo": 2150,
+          "mayoreo": 2100,
+          "menudeo": 2400,
+          "marcas": [
+            "kingriver"
+          ]
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "filete-australiano-9plus-1.webp",
+          "label": "9-10",
+          "mayoreo": 1950,
+          "menudeo": 2250,
           "marcas": [
             "lgrow"
           ]
@@ -1636,7 +1647,7 @@
       "en": "Australia · L Grow"
     },
     "es": {
-      "name": "Filete Aus",
+      "name": "Filete",
       "description": "Filete de wagyu australiano con Marble Score MB 9+ — el máximo marmoleo en el corte más tierno de la res. Textura mantecosa que se deshace en el paladar.\n\nCaracterísticas del corte\n\n• Filete / solomillo: fibra fina, magro y uniforme, el corte más tierno.\n• Marble Score MB 9+: marmoleo extremo, vetas densas de grasa intramuscular.\n• Ideal para medallones y presentaciones donde la terneza manda.\n\nSella a fuego alto y no lo sobrecocines: término medio-rojo para máxima jugosidad.",
       "origin": "Origen Wagyu Australiano L Grow\n\nWagyu australiano de la marca L Grow, cruza terminada con grano para un marmoleo profundo y parejo. Criado bajo estrictos estándares de marmoleo y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nAtempera la pieza y seca bien la superficie.\n• Sella 1–2 minutos por lado a fuego alto para una corteza dorada.\n• Término medio-rojo (52–54 °C) para respetar la terneza del filete.\n\nReposo\nDeja reposar 4 minutos antes de cortar para redistribuir los jugos."
