@@ -1793,16 +1793,15 @@
       "system": "aus",
       "variants": [
         {
-          "lo": 4,
-          "hi": 5,
+          "lo": 9,
+          "hi": 10,
           "image": "lgrow-flap-meat-top.webp",
-          "label": "4-5",
+          "label": "9-10",
           "sku": "FLAPMC45",
-          "mayoreo": 700,
-          "menudeo": 1000,
+          "mayoreo": 1200,
+          "menudeo": 1500,
           "marcas": [
-            "kingriver",
-            "lgrow"
+            "kingriver"
           ]
         },
         {
@@ -1811,23 +1810,9 @@
           "image": "lgrow-flap-meat-top.webp",
           "label": "8-9",
           "sku": "FLAPMR89",
-          "mayoreo": 1400,
-          "menudeo": 1700,
-          "marcas": [
-            "kingriver",
-            "lgrow"
-          ]
-        },
-        {
-          "lo": 9,
-          "hi": 99,
-          "image": "lgrow-flap-meat-top.webp",
-          "label": "9+",
-          "sku": "448735",
           "mayoreo": 1200,
           "menudeo": 1500,
           "marcas": [
-            "kingriver",
             "lgrow"
           ]
         }
@@ -1844,7 +1829,7 @@
       "cooking": "Recomendaciones de cocción\n\nSella fuerte 2–3 min por lado. Corta SIEMPRE fino y en contra de la fibra."
     },
     "en": {
-      "name": "Flap Meat Aus",
+      "name": "Flap Meat",
       "description": "Flap meat and packs flavor.\n\n Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nExcellent for tacos, fajitas and quick grilling.",
       "origin": "Australian Wagyu origin\n\nAustralian wagyu from the L Grow brand, a grain-finished cross for deep, even marbling. Raised under strict marbling standards and fully traceable.",
       "cooking": "Cooking recommendations\n\nSear hard 2–3 min per side. ALWAYS slice thin and against the grain."
