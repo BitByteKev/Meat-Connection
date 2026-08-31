@@ -3670,20 +3670,7 @@
     ],
     "marbling": {
       "system": "aus",
-      "variants": [
-        {
-          "lo": 0,
-          "hi": 0,
-          "image": "",
-          "label": "Clásico",
-          "sku": "BURGERKR",
-          "mayoreo": 425,
-          "menudeo": 725,
-          "marcas": [
-            "kingriver"
-          ]
-        }
-      ]
+      "variants": []
     },
     "sku": "BURGERKR",
     "badge": {
