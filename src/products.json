@@ -3511,13 +3511,35 @@
       "system": "aus",
       "variants": [
         {
+          "lo": 4,
+          "hi": 5,
+          "image": "whatsapp-image-2026-07-29-at-15-36-47-ms6o041i548.webp",
+          "label": "4-5",
+          "mayoreo": 620,
+          "menudeo": 920,
+          "marcas": [
+            "abattiranch"
+          ]
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "whatsapp-image-2026-07-29-at-15-36-47-ms6o041i548.webp",
+          "label": "6-7",
+          "mayoreo": 700,
+          "menudeo": 1000,
+          "marcas": [
+            "abattiranch"
+          ]
+        },
+        {
           "lo": 8,
-          "hi": 10,
+          "hi": 9,
           "image": "",
           "label": "8+",
           "sku": "26",
-          "mayoreo": 2150,
-          "menudeo": 2450,
+          "mayoreo": 1580,
+          "menudeo": 1880,
           "marcas": [
             "abattiranch"
           ]
