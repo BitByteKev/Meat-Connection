@@ -2447,25 +2447,13 @@
           ]
         },
         {
-          "lo": 4,
-          "hi": 5,
+          "lo": 9,
+          "hi": 10,
           "image": "placeholder-coming-soon.webp",
-          "label": "4-5",
-          "sku": "80363-1",
-          "mayoreo": 780,
-          "menudeo": 1080,
-          "marcas": [
-            "kingriver"
-          ]
-        },
-        {
-          "lo": 8,
-          "hi": 9,
-          "image": "placeholder-coming-soon.webp",
-          "label": "8-9",
+          "label": "9-10",
           "sku": "TMHMR",
-          "mayoreo": 2015,
-          "menudeo": 2315,
+          "mayoreo": 1500,
+          "menudeo": 1800,
           "marcas": [
             "kingriver"
           ]
