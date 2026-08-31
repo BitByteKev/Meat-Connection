@@ -4198,6 +4198,41 @@
       "whatsapp-image-2026-07-28-at-16-23-59-ms5aa6ta9829.webp",
       "whatsapp-image-2026-07-29-at-15-35-19-ms6ny6554710.webp"
     ],
+    "marbling": {
+      "system": "aus",
+      "variants": [
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "whatsapp-image-2026-07-28-at-16-23-59-ms5aa6ta9829.webp",
+          "label": "4-5",
+          "mayoreo": 990,
+          "menudeo": 1290,
+          "marcas": [
+            "abattiranch"
+          ]
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "whatsapp-image-2026-07-28-at-16-23-59-ms5aa6ta9829.webp",
+          "label": "6-7",
+          "mayoreo": 1400,
+          "menudeo": 1700,
+          "marcas": [
+            "abattiranch"
+          ]
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "whatsapp-image-2026-07-28-at-16-23-59-ms5aa6ta9829.webp",
+          "label": "8-9",
+          "mayoreo": 1750,
+          "menudeo": 2050
+        }
+      ]
+    },
     "badge": {
       "es": null,
       "en": null
