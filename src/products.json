@@ -2378,33 +2378,30 @@
           "mayoreo": 820,
           "menudeo": 1120,
           "marcas": [
-            "kingriver",
-            "lgrow"
-          ]
-        },
-        {
-          "lo": 6,
-          "hi": 9,
-          "image": "lgrow-chuck-tail-flap-top.webp",
-          "label": "6-9",
-          "sku": "0041498-01",
-          "mayoreo": 1500,
-          "menudeo": 1800,
-          "marcas": [
-            "kingriver",
-            "lgrow"
+            "kingriver"
           ]
         },
         {
           "lo": 8,
-          "hi": 10,
+          "hi": 9,
           "image": "lgrow-chuck-tail-flap-top.webp",
-          "label": "8+",
-          "sku": "61845-1",
-          "mayoreo": 980,
-          "menudeo": 1280,
+          "label": "8-9",
+          "sku": "0041498-01",
+          "mayoreo": 1500,
+          "menudeo": 1800,
           "marcas": [
-            "kingriver",
+            "kingriver"
+          ]
+        },
+        {
+          "lo": 7,
+          "hi": 9,
+          "image": "lgrow-chuck-tail-flap-top.webp",
+          "label": "9+",
+          "sku": "61845-1",
+          "mayoreo": 1500,
+          "menudeo": 1800,
+          "marcas": [
             "lgrow"
           ]
         }
