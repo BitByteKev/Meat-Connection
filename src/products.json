@@ -4339,6 +4339,28 @@
           "marcas": [
             "abattiranch"
           ]
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "whatsapp-image-2026-08-11-at-10-42-05-msoyazgz3316.webp",
+          "label": "6-7",
+          "mayoreo": 390,
+          "menudeo": 690,
+          "marcas": [
+            "abattiranch"
+          ]
+        },
+        {
+          "lo": 8,
+          "hi": 9,
+          "image": "whatsapp-image-2026-08-11-at-10-42-05-msoyazgz3316.webp",
+          "label": "8-9",
+          "mayoreo": 395,
+          "menudeo": 800,
+          "marcas": [
+            "abattiranch"
+          ]
         }
       ]
     },
