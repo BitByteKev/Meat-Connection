@@ -2749,30 +2749,6 @@
           "marcas": [
             "abattiranch"
           ]
-        },
-        {
-          "lo": 8,
-          "hi": 10,
-          "image": "lgrow-short-rib-meat-top.webp",
-          "label": "8+",
-          "sku": "62395-1",
-          "mayoreo": 950,
-          "menudeo": 1250,
-          "marcas": [
-            "abattiranch"
-          ]
-        },
-        {
-          "lo": 8,
-          "hi": 9,
-          "image": "lgrow-short-rib-meat-top.webp",
-          "label": "8-9",
-          "sku": "RIBON",
-          "mayoreo": 1350,
-          "menudeo": 1650,
-          "marcas": [
-            "abattiranch"
-          ]
         }
       ]
     },
