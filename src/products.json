@@ -1224,26 +1224,26 @@
       "variants": [
         {
           "lo": 3,
-          "hi": 9,
+          "hi": 4,
           "image": "lgrow-chuck-eye-roll-top.webp",
           "label": "3+",
           "sku": "DIEZJC",
-          "mayoreo": 285,
-          "menudeo": 585,
+          "mayoreo": 320,
+          "menudeo": 620,
           "marcas": [
             "mackas"
           ]
         },
         {
-          "lo": 4,
-          "hi": 9,
+          "lo": 3,
+          "hi": 4,
           "image": "lgrow-chuck-eye-roll-top.webp",
           "label": "4+",
           "sku": "391648",
-          "mayoreo": 320,
-          "menudeo": 620,
+          "mayoreo": 290,
+          "menudeo": 590,
           "marcas": [
-            "mackas"
+            "anguspure"
           ]
         }
       ]
