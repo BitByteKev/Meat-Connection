@@ -2813,13 +2813,24 @@
       "system": "aus",
       "variants": [
         {
-          "lo": 1,
+          "lo": 0,
           "hi": 3,
           "image": "placeholder-coming-soon.webp",
           "label": "0-3",
           "sku": "82435-3",
           "mayoreo": 450,
           "menudeo": 660,
+          "marcas": [
+            "kingriver"
+          ]
+        },
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "whatsapp-image-2026-08-11-at-12-35-31-3-msp2beyr2406.webp",
+          "label": "4-5",
+          "sku": "580",
+          "mayoreo": 880,
           "marcas": [
             "kingriver"
           ]
@@ -3700,7 +3711,18 @@
     ],
     "marbling": {
       "system": "aus",
-      "variants": []
+      "variants": [
+        {
+          "lo": 4,
+          "hi": 5,
+          "image": "whatsapp-image-2026-08-08-at-19-21-25-msl6ffto9224.webp",
+          "label": "4-5",
+          "sku": "425",
+          "marcas": [
+            "kingriver"
+          ]
+        }
+      ]
     },
     "sku": "BURGERKR",
     "badge": {
