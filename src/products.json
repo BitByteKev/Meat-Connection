@@ -669,7 +669,7 @@
           "image": "",
           "label": "4-5",
           "sku": "448702",
-          "mayoreo": 1200,
+          "mayoreo": 1320,
           "menudeo": 1500,
           "marcas": [
             "kingriver"
@@ -723,11 +723,22 @@
           ]
         },
         {
-          "lo": 9,
-          "hi": 10,
+          "lo": 8,
+          "hi": 9,
           "image": "whatsapp-image-2026-07-28-at-15-25-38-ms58809j355.webp",
           "label": "9+",
           "mayoreo": 2000,
+          "menudeo": 2300,
+          "marcas": [
+            "lgrow"
+          ]
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "whatsapp-image-2026-07-28-at-15-25-38-ms58809j355.webp",
+          "label": "10+",
+          "mayoreo": 2150,
           "menudeo": 2300,
           "marcas": [
             "lgrow"
