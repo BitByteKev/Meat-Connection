@@ -179,7 +179,6 @@
       "wagyu-australiano-newyork-89-4.webp",
       "wagyu-australiano-newyork-89-5.webp",
       "NEW-YORK-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-2.webp",
-      "lgrow-striploin-hero.webp",
       "whatsapp-image-2026-07-02-at-15-05-24-mr44u6z84731.webp",
       "whatsapp-image-2026-07-28-at-11-53-35-ms50lpbt4984.webp"
     ],
@@ -193,7 +192,7 @@
           "label": "2-3",
           "sku": "448721",
           "mayoreo": 695,
-          "menudeo": 995,
+          "menudeo": 990,
           "marcas": [
             "kingriver"
           ]
@@ -204,8 +203,8 @@
           "image": "wagyu-australiano-newyork-89-2.webp",
           "label": "4-5",
           "sku": "8",
-          "mayoreo": 870,
-          "menudeo": 1170,
+          "mayoreo": 1050,
+          "menudeo": 1200,
           "marcas": [
             "kingriver"
           ]
@@ -217,7 +216,7 @@
           "label": "6-7",
           "sku": "448704",
           "mayoreo": 1300,
-          "menudeo": 1600,
+          "menudeo": 1500,
           "marcas": [
             "kingriver"
           ]
@@ -248,9 +247,9 @@
         },
         {
           "lo": 9,
-          "hi": 12,
+          "hi": 10,
           "image": "wagyu-australiano-newyork-89-1.webp",
-          "label": "9-12",
+          "label": "9-10",
           "sku": "2000",
           "mayoreo": 2300,
           "marcas": [
