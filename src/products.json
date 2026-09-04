@@ -2215,6 +2215,17 @@
           "marcas": [
             "kingriver"
           ]
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "whatsapp-image-2026-08-10-at-15-08-19-msnsbizv7196.webp",
+          "label": "9-10",
+          "mayoreo": 450,
+          "menudeo": 750,
+          "marcas": [
+            "jewel"
+          ]
         }
       ]
     },
