@@ -2606,13 +2606,12 @@
     }
   },
   {
-    "id": "jewelRibeyeKr__gen",
-    "cat": "au",
+    "id": "ribeyeliponUSA",
+    "cat": "us",
     "tone": "kraft",
     "images": [
-      "lgrow-cube-roll-top.webp",
-      "lgrow-cube-roll-side.webp",
-      "lgrow-cube-roll-hero.webp"
+      "whatsapp-image-2026-08-26-at-12-36-02-pm-mtnhmbr26273.webp",
+      "whatsapp-image-2026-08-26-at-12-39-34-pm-mtnhma6u1285.webp"
     ],
     "marbling": {
       "system": "aus",
@@ -2623,54 +2622,53 @@
           "image": "lgrow-cube-roll-top.webp",
           "label": "4-5",
           "sku": "256723",
-          "mayoreo": 1650,
-          "menudeo": 1950,
+          "mayoreo": 700,
+          "menudeo": 950,
           "marcas": [
-            "lgrow"
+            "abattiranch"
+          ]
+        },
+        {
+          "lo": 6,
+          "hi": 7,
+          "image": "lgrow-cube-roll-top.webp",
+          "label": "8-9",
+          "sku": "RBJADE",
+          "mayoreo": 735,
+          "menudeo": 1000,
+          "marcas": [
+            "abattiranch"
           ]
         },
         {
           "lo": 8,
           "hi": 9,
           "image": "lgrow-cube-roll-top.webp",
-          "label": "8-9",
-          "sku": "RBJADE",
-          "mayoreo": 2000,
-          "menudeo": 2300,
-          "marcas": [
-            "lgrow"
-          ]
-        },
-        {
-          "lo": 9,
-          "hi": 10,
-          "image": "lgrow-cube-roll-top.webp",
           "label": "9+",
           "sku": "RBSA",
-          "mayoreo": 2400,
-          "menudeo": 2700,
+          "mayoreo": 1650,
+          "menudeo": 1950,
           "marcas": [
-            "lgrow"
+            "abattiranch"
           ]
         }
       ]
     },
-    "available": false,
     "badge": {
       "es": "· Fullblood",
       "en": "· Fullblood"
     },
     "es": {
-      "name": "Rib Eye Cube Roll",
-      "description": "El rib eye (cube roll) equilibra el ojo central magro y la cresta de grasa exterior — dos texturas en una pieza.\n\nWagyu australiano King River, corte de exportación con marmoleo abundante. Grasa fina y entreverada que aporta jugosidad, terneza y un sabor profundo a mantequilla.\n\nEl corte rey de la parrilla. Excelente sellado, a la plancha o cortado fino.",
-      "origin": "Wagyu australiano, una de las cruzas de wagyu más reconocidas de Australia. Corte de exportación con marmoleo de referencia, terminado con grano y totalmente trazable.",
-      "cooking": "Recomendaciones de cocción\n\nSella 2–3 min por lado hasta costra dorada. Medio (54–57 °C) para fundir el marmoleo. Reposa 5 min."
+      "name": "Rib Eye Lip On USA",
+      "description": "El clásico que nunca falla: un Rib Eye jugoso con el sabor profundo que solo el hueso vecino y la grasa saben dar.\n\nEste corte Lip On conserva el casquete y la tapa exterior, esa parte extra que concentra jugosidad y textura. Su marmoleo medio recorre el ojo central en vetas finas que se derriten al calor, aportando suavidad sin restarle carácter carnoso.\n\nUna pieza generosa, ideal para quien busca el equilibrio perfecto entre sabor robusto y terneza.",
+      "origin": "Res de Estados Unidos, raza reconocida por su marmoleo consistente y su sabor pronunciado. Alimentación mayormente a base de grano en la etapa final, lo que favorece el veteado y la jugosidad.",
+      "cooking": "Atempera la pieza 30 a 40 minutos fuera del refrigerador y sécala bien.\n\n• Sella en sartén de hierro o parrilla muy caliente, 3 a 4 minutos por lado para formar costra.\n• Baja el calor o pásalo a zona indirecta hasta llegar al término deseado; sugerimos término medio (54–57 °C internos).\n• Sazona con sal gruesa y pimienta al final.\n\nDeja reposar 5 a 8 minutos antes de cortar para que los jugos se redistribuyan."
     },
     "en": {
-      "name": "Rib Eye Cube Roll",
-      "description": "The rib eye (cube roll) balances the lean central eye and the outer fat cap — two textures in one piece.\n\nKing River Australian wagyu, export cut with abundant marbling. Fine, interlaced fat that delivers juiciness, tenderness and a deep, buttery flavor.\n\nThe king of the grill. Excellent seared, on the griddle or sliced thin.",
-      "origin": "Australian wagyu, one of Australia’s most recognized wagyu crosses. Export cut with reference-grade marbling, grain-finished and fully traceable.",
-      "cooking": "Cooking recommendations\n\nSear 2–3 min per side until a golden crust forms. Medium (54–57 °C) to render the marbling. Rest 5 min."
+      "name": "Rib Eye Lip On USA",
+      "description": "The timeless favorite: a juicy Rib Eye with the deep, beefy flavor only the neighboring bone and fat can deliver.\n\nThis Lip On cut keeps the cap and outer muscle, that extra portion where juiciness and texture concentrate. Its medium marbling runs through the central eye in fine veins that melt with heat, adding tenderness without losing its meaty backbone.\n\nA generous cut, perfect for those seeking the ideal balance between bold flavor and tenderness.",
+      "origin": "beef from the United States, a breed known for its consistent marbling and pronounced flavor. Predominantly grain-finished, which enhances veining and juiciness.",
+      "cooking": "Temper the cut 30 to 40 minutes at room temperature and pat it dry.\n\n• Sear on a very hot cast-iron pan or grill, 3 to 4 minutes per side to build a crust.\n• Lower the heat or move to indirect zone until you reach the desired doneness; we suggest medium (54–57 °C internal).\n• Season with coarse salt and pepper at the end.\n\nLet it rest 5 to 8 minutes before slicing so the juices redistribute."
     }
   },
   {
