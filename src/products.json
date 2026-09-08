@@ -1658,13 +1658,13 @@
     },
     "es": {
       "name": "Filete",
-      "description": "Filete de wagyu australiano con Marble Score MB 9+ — el máximo marmoleo en el corte más tierno de la res. Textura mantecosa que se deshace en el paladar.\n\nCaracterísticas del corte\n\n• Filete / solomillo: fibra fina, magro y uniforme, el corte más tierno.\n• Marble Score MB 9+: marmoleo extremo, vetas densas de grasa intramuscular.\n• Ideal para medallones y presentaciones donde la terneza manda.\n\nSella a fuego alto y no lo sobrecocines: término medio-rojo para máxima jugosidad.",
+      "description": "Filete de wagyu australiano de textura tierna. Elige la marca y el grado de marmoleo disponibles para tu pedido.\n\nCaracterísticas del corte\n\n• Filete / solomillo: fibra fina, magro y uniforme, el corte más tierno.\n• Marble Score MB 9+: marmoleo extremo, vetas densas de grasa intramuscular.\n• Ideal para medallones y presentaciones donde la terneza manda.\n\nSella a fuego alto y no lo sobrecocines: término medio-rojo para máxima jugosidad.",
       "origin": "Origen Wagyu Australiano L Grow\n\nWagyu australiano de la marca L Grow, cruza terminada con grano para un marmoleo profundo y parejo. Criado bajo estrictos estándares de marmoleo y totalmente trazable.",
       "cooking": "Recomendaciones de cocción\n\nAtempera la pieza y seca bien la superficie.\n• Sella 1–2 minutos por lado a fuego alto para una corteza dorada.\n• Término medio-rojo (52–54 °C) para respetar la terneza del filete.\n\nReposo\nDeja reposar 4 minutos antes de cortar para redistribuir los jugos."
     },
     "en": {
       "name": "Filete Aus",
-      "description": "Australian wagyu with Marble Score MB 9+ — peak marbling in the most tender cut of beef. A buttery texture that melts in the mouth.\n\nCut characteristics\n\n• Tenderloin / filet: fine grain, lean and uniform, the most tender cut.\n• Marble Score MB 9+: extreme marbling, dense threads of intramuscular fat.\n• Ideal for medallions and presentations where tenderness rules.\n\nSear over high heat and don't overcook: medium-rare for maximum juiciness.",
+      "description": "Tender Australian wagyu filet. Choose the available brand and marbling grade for your order.\n\nCut characteristics\n\n• Tenderloin / filet: fine grain, lean and uniform, the most tender cut.\n• Marble Score MB 9+: extreme marbling, dense threads of intramuscular fat.\n• Ideal for medallions and presentations where tenderness rules.\n\nSear over high heat and don't overcook: medium-rare for maximum juiciness.",
       "origin": "L Grow Australian Wagyu origin\n\nAustralian wagyu from the L Grow brand, a grain-finished cross for deep, even marbling. Raised under strict marbling standards and fully traceable.",
       "cooking": "Cooking recommendations\n\nTemper the steak and pat the surface dry.\n• Sear 1–2 minutes per side over high heat for a golden crust.\n• Medium-rare (52–54 °C) to respect the tenderloin's tenderness.\n\nRest\nRest 4 minutes before slicing to redistribute the juices."
     }
@@ -1699,13 +1699,13 @@
     },
     "es": {
       "name": "Filete USA",
-      "description": "El corte más tierno de la res, ahora con el carácter del Black Angus estadounidense.\n\nEl tenderloin (o filete) proviene del lomo interior, la zona de menor ejercicio muscular, lo que le da su textura excepcionalmente suave y su perfil magro. Su marmoleo medio aporta jugosidad sin restar delicadeza, ideal para quienes buscan un bocado limpio y refinado.\n\nUn corte versátil y elegante que brilla tanto en la parrilla como en la sartén, perfecto para ocasiones que merecen algo especial.",
+      "description": "Un filete estadounidense de textura tierna y sabor delicado. Elige el grado disponible para tu pedido.\n\nEl tenderloin (o filete) proviene del lomo interior, la zona de menor ejercicio muscular, lo que le da su textura excepcionalmente suave y su perfil magro. Su marmoleo medio aporta jugosidad sin restar delicadeza, ideal para quienes buscan un bocado limpio y refinado.\n\nUn corte versátil y elegante que brilla tanto en la parrilla como en la sartén, perfecto para ocasiones que merecen algo especial.",
       "origin": "Res Black Angus originaria de Estados Unidos. La raza Angus es reconocida por su carne tierna y de sabor equilibrado. Corte extraído del lomo interior (tenderloin).",
       "cooking": "Retira de refrigeración 30 a 40 minutos antes de cocinar y seca bien la superficie. Sazona con sal y pimienta.\n\nSella a fuego alto en sartén o parrilla, 2 a 3 minutos por lado para un medio rojo (medium rare). Por ser un corte magro, evita sobrecocinarlo para conservar su jugosidad.\n\nDeja reposar de 5 a 7 minutos antes de cortar para que los jugos se redistribuyan. Sirve en medallones."
     },
     "en": {
       "name": "Filet USA",
-      "description": "The most tender cut of beef, now with the character of American Black Angus.\n\nThe tenderloin comes from the inner loin, the least-worked muscle, giving it its exceptionally soft texture and lean profile. Its medium marbling adds juiciness without sacrificing delicacy, ideal for those seeking a clean, refined bite.\n\nA versatile and elegant cut that shines on the grill or in the pan, perfect for occasions that deserve something special.",
+      "description": "A tender American filet with a delicate flavor. Choose the available grade for your order.\n\nThe tenderloin comes from the inner loin, the least-worked muscle, giving it its exceptionally soft texture and lean profile. Its medium marbling adds juiciness without sacrificing delicacy, ideal for those seeking a clean, refined bite.\n\nA versatile and elegant cut that shines on the grill or in the pan, perfect for occasions that deserve something special.",
       "origin": "Black Angus beef from the United States. The Angus breed is known for its tender meat and balanced flavor. Cut taken from the inner loin (tenderloin).",
       "cooking": "Remove from refrigeration 30 to 40 minutes before cooking and pat the surface dry. Season with salt and pepper.\n\nSear over high heat in a pan or on the grill, 2 to 3 minutes per side for medium rare. Since this is a lean cut, avoid overcooking to keep it juicy.\n\nLet it rest 5 to 7 minutes before slicing so the juices redistribute. Serve as medallions."
     }
@@ -4424,13 +4424,13 @@
     },
     "es": {
       "name": "Brisket USA",
-      "description": "El corte que convierte la paciencia en sabor: un brisket Black Angus hecho para la cocción lenta.\n\nProveniente del pecho de la res, este corte combina fibras firmes con una capa de grasa que se derrite poco a poco, aportando jugosidad y profundidad. Su marmoleo medio lo hace ideal para ahumados y braseados prolongados.\n\nUn clásico del barbecue americano que premia el tiempo con una textura tierna y un sabor intenso.",
+      "description": "El corte que convierte la paciencia en sabor: un brisket estadounidense hecho para la cocción lenta.\n\nProveniente del pecho de la res, este corte combina fibras firmes con una capa de grasa que se derrite poco a poco, aportando jugosidad y profundidad. Su marmoleo medio lo hace ideal para ahumados y braseados prolongados.\n\nUn clásico del barbecue americano que premia el tiempo con una textura tierna y un sabor intenso.",
       "origin": "Res Black Angus de Estados Unidos. Raza reconocida por su equilibrio entre magro y grasa intramuscular, criada bajo estándares de la ganadería americana.",
       "cooking": "Ideal para cocción lenta y a baja temperatura.\n\n• Ahumado: mantén entre 110–120 °C durante 8 a 12 horas, hasta alcanzar una temperatura interna cercana a 92–96 °C.\n• Braseado: sella el corte y cocina tapado con líquido a fuego bajo por varias horas.\n• Reposo: deja reposar al menos 30–45 minutos antes de rebanar en contra de la fibra.\n\nLa clave está en la paciencia: la grasa y el colágeno necesitan tiempo para transformarse en jugosidad."
     },
     "en": {
       "name": "Brisket USA",
-      "description": "The cut that turns patience into flavor: a Black Angus brisket made for low and slow cooking.\n\nComing from the beef chest, this cut blends firm fibers with a fat cap that renders gradually, delivering juiciness and depth. Its medium marbling makes it perfect for smoking and long braises.\n\nAn American barbecue classic that rewards time with tender texture and bold flavor.",
+      "description": "The cut that turns patience into flavor: an American brisket made for low and slow cooking.\n\nComing from the beef chest, this cut blends firm fibers with a fat cap that renders gradually, delivering juiciness and depth. Its medium marbling makes it perfect for smoking and long braises.\n\nAn American barbecue classic that rewards time with tender texture and bold flavor.",
       "origin": "Black Angus beef from the United States. A breed known for its balance of lean meat and intramuscular fat, raised under American cattle standards.",
       "cooking": "Best for low and slow cooking.\n\n• Smoking: keep between 110–120 °C (230–250 °F) for 8 to 12 hours, until reaching an internal temperature near 92–96 °C (198–205 °F).\n• Braising: sear the cut and cook covered with liquid over low heat for several hours.\n• Rest: let it rest at least 30–45 minutes before slicing against the grain.\n\nThe key is patience: the fat and collagen need time to transform into juiciness."
     }

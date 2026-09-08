@@ -251,3 +251,48 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   .mc-h1 { font-size: 40px !important; }
 }
 
+
+/* Catalog clarity and mobile quote flow */
+.mc-card-brands { font-size: 11px; color: var(--text-muted); margin-top: 7px; line-height: 1.4; }
+.mc-catalog-note { padding: 12px 16px; margin: 0 0 22px; border-left: 3px solid var(--mc-red); background: var(--mc-cream); font-size: 13px; line-height: 1.5; }
+.mc-catalog-filters { display: flex; gap: 16px; align-items: flex-end; margin: -8px 0 24px; flex-wrap: wrap; }
+.mc-catalog-filters label { display: grid; gap: 6px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
+.mc-catalog-filters select { min-height: 42px; min-width: 190px; padding: 8px 32px 8px 12px; background: var(--mc-bone); border: 1px solid var(--border-default); border-radius: 4px; color: var(--text-body); font: 13px var(--font-body); }
+.mc-catalog-filters button { border: 0; background: none; text-decoration: underline; min-height: 42px; cursor: pointer; color: var(--text-muted); }
+.mc-wholesale { padding: 13px 15px; margin: 16px 0; background: var(--mc-cream); border-radius: 4px; }
+.mc-wholesale strong { display: block; font-size: 13px; color: var(--text-strong); }
+.mc-wholesale small { display: block; font-size: 11px; line-height: 1.5; color: var(--text-muted); }
+.mc-wholesale progress { display: block; width: 100%; height: 5px; margin: 10px 0; border: none; accent-color: var(--mc-red); }
+.mc-wholesale progress::-webkit-progress-bar { background: var(--mc-ink-200); border-radius: 4px; }
+.mc-wholesale progress::-webkit-progress-value { background: var(--mc-red); border-radius: 4px; }
+.mc-order-guide { background: var(--mc-charcoal); color: var(--mc-paper); }
+.mc-order-guide > div { max-width: var(--container-max); margin: auto; padding: 64px 24px; }
+.mc-order-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.mc-order-steps article { border-top: 1px solid var(--mc-ink-600); padding-top: 24px; }
+.mc-order-steps article > span { font: italic 32px var(--font-display); color: var(--accent-gold); }
+.mc-order-steps h3 { font: 600 24px var(--font-display); margin: 16px 0 12px; }
+.mc-order-steps p { color: var(--mc-ink-200); line-height: 1.65; font-size: 14px; }
+.mc-mobile-buy { display: none; }
+button:disabled { cursor: not-allowed; opacity: .5; }
+@media (max-width: 640px) {
+  .mc-gallery-image { height: 260px !important; object-fit: contain !important; background: var(--mc-cream); }
+  .mc-product-page { padding-top: 20px !important; padding-bottom: 110px !important; }
+  .mc-mobile-buy { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 35; gap: 12px; align-items: center; justify-content: space-between; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: var(--mc-bone); border-top: 1px solid var(--border-default); box-shadow: 0 -4px 18px #0000000d; }
+  .mc-mobile-buy strong { font-size: 14px; color: var(--mc-red); }
+  .mc-mobile-buy small { display: block; margin-top: 4px; color: var(--text-muted); font-size: 11px; }
+  .mc-mobile-buy button { font-size: 11px !important; padding: 0 12px !important; min-height: 44px; }
+  body:has(.mc-mobile-buy) button[aria-label="Cotizar por WhatsApp"], body:has(.mc-mobile-buy) button[aria-label="Quote on WhatsApp"] { bottom: 98px !important; }
+  .mc-order-steps { grid-template-columns: 1fr; gap: 18px; }
+  .mc-catalog-filters { gap: 12px; }
+  .mc-catalog-filters label { flex: 1; min-width: 130px; }
+  .mc-catalog-filters select { min-width: 0; width: 100%; }
+}
+@media (max-width: 640px) {
+  body:has(.mc-mobile-buy) .mc-whatsapp-fab { bottom: 100px !important; }
+}
+.mc-category-filter { border: 1px solid var(--border-default); border-radius: 999px; padding: 7px 14px; min-height: 36px; font: 13px var(--font-body); background: transparent; color: var(--text-body); cursor: pointer; }
+.mc-category-filter[aria-pressed="true"] { background: var(--mc-charcoal); border-color: var(--mc-charcoal); color: var(--mc-paper); }
+body:has(aside[aria-hidden="false"]) .mc-whatsapp-fab { visibility: hidden; }
+@media (max-width: 640px) {
+  body:has(.mc-mobile-buy) .mc-whatsapp-fab { top: auto !important; left: auto !important; right: 22px !important; bottom: 100px !important; }
+}

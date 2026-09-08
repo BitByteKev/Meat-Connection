@@ -182,11 +182,36 @@ function ProductImage({ product, height = 220, big = false, fit = 'cover', aspec
   );
 }
 
+function useDrawerFocus(open, onClose) {
+  const ref = React.useRef(null);
+  const closeRef = React.useRef(onClose);
+  closeRef.current = onClose;
+  React.useEffect(() => {
+    if (!open || !ref.current) return;
+    const previous = document.activeElement;
+    const panel = ref.current;
+    const controls = () => [...panel.querySelectorAll('button:not(:disabled), a[href], input, select, textarea, [tabindex="0"]')].filter((el) => el.getClientRects().length);
+    controls()[0]?.focus();
+    const onKey = (event) => {
+      if (event.key === 'Escape') { event.preventDefault(); closeRef.current(); }
+      if (event.key === 'Tab') {
+        const items = controls(), first = items[0], last = items.at(-1);
+        if (event.shiftKey && (document.activeElement === first || !panel.contains(document.activeElement))) { event.preventDefault(); last?.focus(); }
+        else if (!event.shiftKey && (document.activeElement === last || !panel.contains(document.activeElement))) { event.preventDefault(); first?.focus(); }
+      }
+    };
+    document.addEventListener('keydown', onKey);
+    return () => { document.removeEventListener('keydown', onKey); if (previous?.isConnected) previous.focus(); };
+  }, [open]);
+  return ref;
+}
+
 /* ===== Header ===== */
 function Header({ cartCount, onCart, onNav, onAnchor, onReorder, overHero = false }) {
   const { IconButton, Button } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const menuRef = useDrawerFocus(menuOpen, () => setMenuOpen(false));
   const [atTop, setAtTop] = React.useState(true);
   React.useEffect(() => {
     const onScroll = () => setAtTop(window.scrollY < 40);
@@ -262,8 +287,8 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder, overHero = fals
       {/* Mobile slide-in menu */}
       <div onClick={() => setMenuOpen(false)} aria-hidden="true"
         style={{ position: 'fixed', inset: 0, background: 'rgba(20,20,20,0.6)', opacity: menuOpen ? 1 : 0, pointerEvents: menuOpen ? 'auto' : 'none', transition: 'opacity var(--dur-med)', zIndex: 60 }}></div>
-      <aside role="dialog" aria-label={t.header.navAria} aria-modal="true"
-        style={{ position: 'fixed', top: 0, right: 0, height: '100%', width: '84vw', maxWidth: '360px', background: 'var(--mc-paper)', color: 'var(--text-strong)', boxShadow: 'var(--shadow-lg)', transform: menuOpen ? 'translateX(0)' : 'translateX(100%)', transition: 'transform var(--dur-slow) var(--ease-out)', zIndex: 61, display: 'flex', flexDirection: 'column', padding: '18px 22px calc(22px + env(safe-area-inset-bottom))' }}>
+      <aside role="dialog" aria-label={t.header.navAria} aria-modal="true" ref={menuRef} aria-hidden={!menuOpen} inert={menuOpen ? undefined : ""}
+        style={{ position: 'fixed', top: 0, right: 0, height: '100%', width: '84vw', maxWidth: '360px', background: 'var(--mc-paper)', color: 'var(--text-strong)', boxShadow: 'var(--shadow-lg)', visibility: menuOpen ? 'visible' : 'hidden', transform: menuOpen ? 'translateX(0)' : 'translateX(100%)', transition: 'transform var(--dur-slow) var(--ease-out)', zIndex: 61, display: 'flex', flexDirection: 'column', padding: '18px 22px calc(22px + env(safe-area-inset-bottom))' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid var(--border-subtle)', paddingBottom: '16px' }}>
           <img src={window.MC_LOGO_INK} alt="Meat Connection" style={{ height: '30px' }} />
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
@@ -294,7 +319,19 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder, overHero = fals
 }
 
 /* ===== Hero ===== */
+function useHeroMotion() {
+  const [enabled, setEnabled] = React.useState(false);
+  React.useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce), (max-width: 640px)');
+    const connection = navigator.connection;
+    const update = () => setEnabled(!mq.matches && !connection?.saveData && !/^(slow-)?2g$/.test(connection?.effectiveType || ''));
+    update(); mq.addEventListener('change', update); connection?.addEventListener('change', update);
+    return () => { mq.removeEventListener('change', update); connection?.removeEventListener('change', update); };
+  }, []);
+  return enabled;
+}
 function Hero({ onShop, onQuote }) {
+  const motion = useHeroMotion();
   const { Button } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
   // marginTop tucks the hero under the 68px sticky header so the video fills behind it;
@@ -302,10 +339,11 @@ function Hero({ onShop, onQuote }) {
   return (
     <section className="mc-hero-section" style={{ position: 'relative', background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', overflow: 'hidden', marginTop: '-68px' }}>
       <video
+        aria-hidden="true"
         className="mc-hero-video"
-        src="/hero.mp4"
+        src={motion ? "/hero-light.mp4" : undefined}
         poster="/hero-poster.jpg"
-        autoPlay muted loop playsInline preload="metadata"
+        autoPlay={motion} muted loop playsInline preload="none"
         style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 72%', zIndex: 0 }}
       />
       <div style={{ position: 'absolute', inset: 0, zIndex: 1,
@@ -350,24 +388,24 @@ function ProductCard({ product, onOpen }) {
       onClick={() => onOpen(product)}
       onMouseOver={(e) => { e.currentTarget.style.boxShadow = 'var(--shadow-lg)'; e.currentTarget.style.transform = 'translateY(-3px)'; }}
       onMouseOut={(e) => { e.currentTarget.style.boxShadow = 'none'; e.currentTarget.style.transform = 'translateY(0)'; }}>
-      <ProductImage product={product} aspect="1 / 1" />
+      <ProductImage product={product} aspect="4 / 3" />
       <div style={{ padding: '18px', display: 'flex', flexDirection: 'column', gap: '12px', flex: 1 }}>
         <div>
           <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.14em', fontSize: '11px', color: 'var(--accent-gold-ink)', marginBottom: '6px' }}>{catLabel(catOf(product), lang)}</div>
           <div style={{ fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '20px', lineHeight: 1.05, color: 'var(--text-strong)' }}>{p.name}</div>
+          <div className="mc-card-brands">{brandKeys(product.marbling?.variants || []).map((k) => brandInfo(k).name).join(' · ')}</div>
           <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '4px' }}>{cardHook(p.description)}</div>
           {product.marbling && <div style={{ marginTop: '10px' }}><MarblingPill marbling={product.marbling} /></div>}
           {(() => {
             const r = priceRange(product.marbling, product.mayoreo);
             if (!r) return null;
-            const multi = r.min !== r.max;
             return (
               <div style={{ marginTop: '10px', display: 'flex', alignItems: 'baseline', gap: '7px', flexWrap: 'wrap' }}>
-                {multi && <span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '11px', color: 'var(--text-muted)' }}>{t.pdp.priceFrom}</span>}
+                {<span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '11px', color: 'var(--text-muted)' }}>{t.pdp.priceFrom}</span>}
                 <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '17px', color: 'var(--mc-red)' }}>
-                  {multi ? `${fmtMXN(r.min)} – ${fmtMXN(r.max)}` : fmtMXN(r.min)}<span style={{ fontSize: '12px', color: 'var(--text-muted)', fontWeight: 500 }}>{t.pdp.perKg}</span>
+                  {fmtMXN(r.min)}<span style={{ fontSize: '12px', color: 'var(--text-muted)', fontWeight: 500 }}>{t.pdp.perKg}</span>
                 </span>
-                <span style={{ fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '10px', letterSpacing: '0.04em', color: 'var(--text-faint)' }}>{t.pdp.mayoreo}</span>
+                <span style={{ fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '10px', letterSpacing: '0.04em', color: 'var(--text-faint)' }}>MXN · {t.pdp.mayoreo}</span>
               </div>
             );
           })()}
@@ -536,7 +574,7 @@ function Carousel({ product, name, height = 560, index, onIndex, jumpKey }) {
         onClick={() => setZoom(true)} title="Ampliar imagen"
         onTouchStart={(e) => { touchX.current = e.touches[0].clientX; }}
         onTouchEnd={(e) => { if (touchX.current == null) return; const dx = e.changedTouches[0].clientX - touchX.current; if (Math.abs(dx) > 40) go(dx < 0 ? 1 : -1); touchX.current = null; }}>
-        <img src={src} alt={name} style={{ width: '100%', height: height + 'px', objectFit: 'cover', display: 'block' }} />
+        <img className="mc-gallery-image" src={src} alt={name} style={{ width: '100%', height: height + 'px', objectFit: 'cover', display: 'block' }} />
         {n > 1 && (
           <>
             <button onClick={(e) => { e.stopPropagation(); go(-1); }} aria-label="Anterior" style={navBtn('left')}>‹</button>
@@ -598,7 +636,7 @@ function fmtMXN(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
 function variantPrice(v, key = 'mayoreo') { return v && typeof v[key] === 'number' ? v[key] : null; }
 // Price range across a product's grades — powers the "scale" shown on catalog cards.
 function priceRange(marbling, topLevel) {
-  const ps = ((marbling && marbling.variants) || []).map(variantPrice).filter((n) => n != null);
+  const ps = ((marbling && marbling.variants) || []).map((v) => variantPrice(v)).filter((n) => n != null);
   if (typeof topLevel === 'number') ps.push(topLevel);
   if (!ps.length) return null;
   return { min: Math.min(...ps), max: Math.max(...ps) };
@@ -659,8 +697,10 @@ function MarblingScale({ marbling, vIdx, onSelect, brand, onBrand, priceKey = 'm
                   style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', flex: '0 1 auto', minWidth: '96px', height: '62px', padding: '6px 18px', borderRadius: 'var(--radius-md)', background: 'var(--mc-charcoal)',
                     border: '2px solid ' + (on ? 'var(--mc-red)' : 'var(--mc-ink-700)'), transition: 'border-color var(--dur-fast)' }}>
                   {window.MC_BRAND && window.MC_BRAND[k]
-                    ? <img src={window.MC_BRAND[k]} alt={b.name} loading="lazy" decoding="async"
-                        style={{ maxHeight: '42px', maxWidth: '116px', width: 'auto', objectFit: 'contain', opacity: on ? 1 : 0.72, filter: b.whiten ? 'brightness(0) invert(1)' : undefined }} />
+                    ? <span style={{ display: 'flex', opacity: on ? 1 : 0.72, ...(b.onLight ? { background: 'var(--mc-paper)', borderRadius: 'var(--radius-sm)', padding: '5px 8px' } : null) }}>
+                        <img src={window.MC_BRAND[k]} alt={b.name} loading="lazy" decoding="async"
+                          style={{ maxHeight: b.onLight ? '32px' : '42px', maxWidth: '116px', width: 'auto', objectFit: 'contain', filter: b.whiten ? 'brightness(0) invert(1)' : undefined }} />
+                      </span>
                     : <span style={{ fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '12px', letterSpacing: '0.03em', textTransform: 'uppercase', color: 'var(--mc-paper)' }}>{b.name}</span>}
                 </button>
               );
@@ -715,7 +755,7 @@ function ShareButton({ product, name }) {
   );
 }
 
-function ProductDetail({ product, onAdd, onBack }) {
+function ProductDetail({ product, onAdd, onBack, cartWeight = 0 }) {
   const { Button, Tabs } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
   const p = t.products[product.id];
@@ -743,15 +783,13 @@ function ProductDetail({ product, onAdd, onBack }) {
   const carouselIndex = perGradePhotos ? Math.max(0, imgs.indexOf(variants[vIdx].image)) : undefined;
   const onCarousel = perGradePhotos ? (ci) => { const f = gradeIdx.find((i) => imgs.indexOf(variants[i].image) === ci); if (f != null) setVSel(f); } : undefined;
   const [tab, setTab] = React.useState('desc');
-  // El tipo de venta se deriva de la cantidad: 25 kg o más = mayoreo, menos = menudeo.
-  // Los chips Mayoreo/Menudeo son atajos que ajustan la cantidad al rango correspondiente.
+  // Preview uses the combined cart weight, matching final quote pricing.
   const [qty, setQty] = React.useState(5);
-  const saleType = qty >= MAYOREO_MIN ? 'mayoreo' : 'menudeo';
-  // Cada modo queda fijo a su rango: menudeo 1–24 kg, mayoreo 25+ kg.
-  // La única forma de cambiar de modo es el toggle Menudeo/Mayoreo.
-  const minQty = saleType === 'mayoreo' ? MAYOREO_MIN : 1;
-  const maxQty = saleType === 'menudeo' ? MAYOREO_MIN - 1 : Infinity;
-  const pickType = (val) => setQty(val === 'mayoreo' ? Math.max(qty, MAYOREO_MIN) : Math.min(qty, MAYOREO_MIN - 1));
+  const saleType = cartWeight + qty >= MAYOREO_MIN ? 'mayoreo' : 'menudeo';
+  // Quantity can cross the threshold in either direction; chips are shortcuts.
+  const minQty = 1;
+  const maxQty = Infinity;
+  const pickType = (val) => setQty(val === 'mayoreo' ? Math.max(qty, MAYOREO_MIN - cartWeight) : Math.max(1, Math.min(qty, MAYOREO_MIN - cartWeight - 1)));
   const genericOrigin = product.cat === 'jp' ? t.pdp.originJP : product.cat === 'us' ? t.pdp.originUS : t.pdp.originAU;
   const sys = marbling ? (t.pdp.marbling.systems[marbling.system] || t.pdp.marbling.systems.aus) : null;
   // Price follows the sale type: menudeo shows the menudeo price when captured,
@@ -760,8 +798,10 @@ function ProductDetail({ product, onAdd, onBack }) {
   const mayoreoPrice = priceFor('mayoreo'), menudeoPrice = priceFor('menudeo');
   const showMenudeo = saleType === 'menudeo' ? menudeoPrice != null : mayoreoPrice == null && menudeoPrice != null;
   const selPrice = showMenudeo ? menudeoPrice : mayoreoPrice;
+  const addSelection = () => onAdd(product, qty, saleType, { grade: marbling ? variantLabel(variants[vIdx], marbling.system) : null, unitMayoreo: mayoreoPrice, unitMenudeo: menudeoPrice });
   return (
-    <div style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '32px 24px 80px' }}>
+    <div className="mc-product-page" style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '32px 24px 80px' }}>
+      <div className="mc-mobile-buy"><div><strong>{selPrice != null ? fmtMXN(selPrice) + ' MXN/kg' : t.review.askPrice}</strong><small>{qty} kg · {saleType === 'mayoreo' ? t.pdp.mayoreo : t.pdp.menudeo}</small></div><Button variant="primary" disabled={!product.available} onClick={addSelection}>{t.review.addQuote}</Button></div>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', marginBottom: '24px' }}>
         <button onClick={onBack} style={{ border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-muted)', fontFamily: 'var(--font-body)', fontSize: '14px', padding: 0 }}>
           <Icon name="ArrowLeft" size={16} color="var(--text-muted)" /> {t.pdp.back}
@@ -794,6 +834,7 @@ function ProductDetail({ product, onAdd, onBack }) {
               <div style={{ fontSize: '11.5px', color: 'var(--text-faint)', marginTop: '6px' }}>{t.pdp.priceNote}</div>
             </div>
           )}
+          <WholesaleProgress kg={cartWeight + qty} preview />
           <div className="mc-pdp-actions" style={{ margin: '24px 0', display: 'flex', flexWrap: 'wrap', gap: '20px', alignItems: 'flex-end' }}>
             <div>
               <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{t.pdp.saleType}</div>
@@ -801,7 +842,7 @@ function ProductDetail({ product, onAdd, onBack }) {
                 {[['menudeo', t.pdp.menudeo], ['mayoreo', t.pdp.mayoreo]].map(([val, label]) => {
                   const on = saleType === val;
                   return (
-                    <button key={val} onClick={() => pickType(val)} aria-pressed={on}
+                    <button key={val} disabled={val === "menudeo" && cartWeight >= MAYOREO_MIN - 1} onClick={() => pickType(val)} aria-pressed={on}
                       style={{ border: 'none', cursor: 'pointer', padding: '0 16px', height: '44px', fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.04em', fontWeight: 700, fontSize: '13px', background: on ? 'var(--mc-charcoal)' : 'transparent', color: on ? 'var(--mc-paper)' : 'var(--text-strong)' }}>{label}</button>
                   );
                 })}
@@ -810,9 +851,9 @@ function ProductDetail({ product, onAdd, onBack }) {
             <div>
               <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '8px' }}>{t.pdp.qtyLabel}</div>
               <div style={{ display: 'inline-flex', alignItems: 'center', border: '2px solid var(--mc-charcoal)', borderRadius: 'var(--radius-md)', height: '44px' }}>
-                <button onClick={() => setQty(Math.max(minQty, qty - 1))} style={qtyBtn}><Icon name="Minus" size={16} /></button>
+                <button aria-label={t.review.decrease} disabled={qty <= minQty} onClick={() => setQty(Math.max(minQty, qty - 1))} style={qtyBtn}><Icon name="Minus" size={16} /></button>
                 <span style={{ width: '48px', textAlign: 'center', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '18px' }}>{qty}</span>
-                <button onClick={() => setQty(Math.min(maxQty, qty + 1))} style={qtyBtn}><Icon name="Plus" size={16} /></button>
+                <button aria-label={t.review.increase} disabled={qty >= maxQty} onClick={() => setQty(Math.min(maxQty, qty + 1))} style={qtyBtn}><Icon name="Plus" size={16} /></button>
               </div>
             </div>
           </div>
@@ -824,7 +865,7 @@ function ProductDetail({ product, onAdd, onBack }) {
             </div>
           )}
           <Button variant="primary" size="lg" fullWidth
-            onClick={() => onAdd(product, qty, saleType, { grade: marbling ? variantLabel(variants[vIdx], marbling.system) : null, unitMayoreo: mayoreoPrice, unitMenudeo: menudeoPrice })}
+            onClick={addSelection}
             iconLeft={<Icon name="ShoppingCart" size={18} color="#fff" />}>
             {fmt(t.pdp.addToOrder, { qty })}
           </Button>
@@ -854,12 +895,13 @@ function ProductDetail({ product, onAdd, onBack }) {
 /* ===== Cart drawer ===== */
 const miniBtn = { width: '26px', height: '26px', border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--mc-charcoal)' };
 function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
+  const drawerRef = useDrawerFocus(open, onClose);
   const { Button } = window.MeatConnectionDesignSystem_3e7a26;
   const { t } = useLang();
   return (
     <>
       <div onClick={onClose} style={{ position: 'fixed', inset: 0, background: 'rgba(20,20,20,0.5)', opacity: open ? 1 : 0, pointerEvents: open ? 'auto' : 'none', transition: 'opacity var(--dur-med)', zIndex: 40 }}></div>
-      <aside style={{ position: 'fixed', top: 0, right: 0, height: '100%', width: '400px', maxWidth: '92vw', background: 'var(--surface-page)', boxShadow: 'var(--shadow-lg)', transform: open ? 'translateX(0)' : 'translateX(100%)', transition: 'transform var(--dur-slow) var(--ease-out)', zIndex: 50, display: 'flex', flexDirection: 'column' }}>
+      <aside role="dialog" aria-modal="true" aria-label={t.cart.title} ref={drawerRef} aria-hidden={!open} inert={open ? undefined : ""} style={{ position: 'fixed', top: 0, right: 0, height: '100%', width: '400px', maxWidth: '92vw', background: 'var(--surface-page)', boxShadow: 'var(--shadow-lg)', visibility: open ? 'visible' : 'hidden', transform: open ? 'translateX(0)' : 'translateX(100%)', transition: 'transform var(--dur-slow) var(--ease-out)', zIndex: 50, display: 'flex', flexDirection: 'column' }}>
         <div style={{ background: 'var(--mc-charcoal)', color: 'var(--mc-paper)', padding: '20px 22px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '20px' }}>{t.cart.title}</span>
           <button onClick={onClose} aria-label={t.cart.close} style={{ border: 'none', background: 'transparent', color: 'var(--mc-ink-200)', cursor: 'pointer', display: 'flex' }}><Icon name="X" size={22} color="var(--mc-ink-200)" /></button>
@@ -887,11 +929,11 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-sm)' }}>
-                      <button onClick={() => onQty(it, -1)} style={miniBtn}><Icon name="Minus" size={13} /></button>
+                      <button aria-label={`${t.review.decrease}: ${productName(it.id)}`} onClick={() => onQty(it, -1)} style={miniBtn}><Icon name="Minus" size={13} /></button>
                       <span style={{ width: '28px', textAlign: 'center', fontSize: '13px', fontWeight: 600 }}>{it.qty}</span>
-                      <button onClick={() => onQty(it, 1)} style={miniBtn}><Icon name="Plus" size={13} /></button>
+                      <button aria-label={`${t.review.increase}: ${productName(it.id)}`} onClick={() => onQty(it, 1)} style={miniBtn}><Icon name="Plus" size={13} /></button>
                     </div>
-                    <button onClick={() => onRemove(it)} style={{ border: 'none', background: 'transparent', cursor: 'pointer', color: 'var(--text-faint)', display: 'flex', alignItems: 'center', gap: '4px' }}><Icon name="Trash2" size={14} color="var(--text-faint)" /></button>
+                    <button aria-label={`${t.review.remove}: ${productName(it.id)}`} onClick={() => onRemove(it)} style={{ border: 'none', background: 'transparent', cursor: 'pointer', color: 'var(--text-faint)', display: 'flex', alignItems: 'center', gap: '4px' }}><Icon name="Trash2" size={14} color="var(--text-faint)" /></button>
                     {lineUnit(it, cartType(items)) != null && (
                       <span style={{ marginLeft: 'auto', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '15px', color: 'var(--text-strong)' }}>{fmtMXN(lineUnit(it, cartType(items)) * it.qty)}</span>
                     )}
@@ -902,6 +944,7 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
           </div>
         )}
         <div style={{ padding: '18px 22px', borderTop: '2px solid var(--mc-charcoal)', background: 'var(--mc-bone)' }}>
+          <WholesaleProgress kg={cartKg(items)} />
           {cartTotal(items) > 0 && (
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '12px' }}>
               <span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)' }}>
@@ -928,7 +971,7 @@ function Footer({ onCategory, onAnchor }) {
   const cols = [
     [t.footer.catalogTitle, catItems],
     [t.footer.servicesTitle, t.footer.servicesItems.map((label) => [label, null, null, () => onAnchor('servicios')])],
-    [t.footer.contactTitle, [['WhatsApp', waHref(t.wa.quote), 'MessageCircle'], ['Instagram', IG_LINK, 'Instagram'], ['Facebook', FB_LINK, 'Facebook'], [t.footer.quoteCatalogs, '#contacto']]],
+    [t.footer.contactTitle, [['WhatsApp', waHref(t.wa.quote), 'MessageCircle'], ['Instagram', IG_LINK, 'Instagram'], ['Facebook', FB_LINK, 'Facebook'], [t.footer.quoteCatalogs, null, null, () => onAnchor('contacto')]]],
   ];
   const linkStyle = { display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--mc-ink-600)', textDecoration: 'none', fontSize: '13px' };
   return (
@@ -965,12 +1008,11 @@ function Footer({ onCategory, onAnchor }) {
   );
 }
 function ShopToolbar({ active, onPick, query, onQuery }) {
-  const { Tag } = window.MeatConnectionDesignSystem_3e7a26;
   const { t, lang } = useLang();
   const cats = [['all', t.categories.all], ...CATEGORY_KEYS.map((k) => [k, catLabel(k, lang)])];
   return (
     <div style={{ display: 'flex', alignItems: 'center', gap: '10px', flexWrap: 'wrap', marginBottom: '28px' }}>
-      {cats.map(([key, label]) => <Tag key={key} selected={active === key} onClick={() => onPick(key)}>{label}</Tag>)}
+      {cats.map(([key, label]) => <button className="mc-category-filter" key={key} aria-pressed={active === key} onClick={() => onPick(key)}>{label}</button>)}
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginLeft: 'auto', padding: '0 14px', height: '38px', minWidth: '210px', border: '1px solid var(--border-default)', borderRadius: '999px', background: '#fff' }}>
         <Icon name="Search" size={15} color="var(--text-muted)" />
         <input value={query} onChange={(e) => onQuery(e.target.value)} placeholder={t.shop.searchPlaceholder} aria-label={t.shop.searchPlaceholder}
@@ -999,18 +1041,6 @@ function SectionHead({ eyebrow, title, sub, light }) {
 }
 
 /* ===== Servicios / propuesta de valor ===== */
-// Background videos ship a 9:16 portrait cut for phones (-mobile files): correct
-// framing on narrow screens and a fraction of the data of the 1080p landscape file.
-function useIsPhone() {
-  const [isPhone, setIsPhone] = React.useState(() => window.matchMedia('(max-width: 640px)').matches);
-  React.useEffect(() => {
-    const mq = window.matchMedia('(max-width: 640px)');
-    const onChange = (e) => setIsPhone(e.matches);
-    mq.addEventListener('change', onChange);
-    return () => mq.removeEventListener('change', onChange);
-  }, []);
-  return isPhone;
-}
 
 function Services() {
   const { Card } = window.MeatConnectionDesignSystem_3e7a26;
@@ -1053,8 +1083,10 @@ const BRAND_LIST = [
   { name: 'Abatti Ranch Wagyu', key: 'abattiranch', url: 'https://www.abattiranchwagyu.com/' },
   { name: 'A5 Japonés · Wagyu Japanese Beef', key: 'wagyu', url: null, whiten: true },
 ];
-// Display data for a brand key — name and the `whiten` flag for logos that need
-// inverting. Falls back to the raw key so an unknown brand still renders.
+// Display data for a brand key — the name plus the two artwork flags: `whiten`
+// inverts a logo to solid white, `onLight` marks artwork drawn in dark ink,
+// which needs a paper backing to read on the charcoal tiles. Falls back to the
+// raw key so an unknown brand still renders.
 function brandInfo(key) {
   return BRAND_LIST.find((b) => b.key === key) || { name: key, key };
 }
@@ -1068,9 +1100,12 @@ function BrandTiles({ compact }) {
   return (
     <div className="mc-brands" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: compact ? 'flex-start' : 'center', gap: '16px' }}>
       {list.map((b) => {
-        const inner = b.key
-          ? <img src={window.MC_BRAND[b.key]} alt={b.name} loading="lazy" decoding="async" style={{ maxHeight: compact ? '52px' : '84px', maxWidth: '100%', width: 'auto', objectFit: 'contain', filter: b.whiten ? 'brightness(0) invert(1)' : undefined, opacity: b.whiten ? 0.92 : undefined }} />
-          : <span style={{ fontFamily: 'var(--font-display)', fontSize: compact ? '22px' : '32px', letterSpacing: '0.02em', color: 'var(--mc-paper)' }}>{b.name}</span>;
+        const logo = b.key && <img src={window.MC_BRAND[b.key]} alt={b.name} loading="lazy" decoding="async" style={{ maxHeight: compact ? '52px' : '84px', maxWidth: '100%', width: 'auto', objectFit: 'contain', filter: b.whiten ? 'brightness(0) invert(1)' : undefined, opacity: b.whiten ? 0.92 : undefined }} />;
+        const inner = !b.key
+          ? <span style={{ fontFamily: 'var(--font-display)', fontSize: compact ? '22px' : '32px', letterSpacing: '0.02em', color: 'var(--mc-paper)' }}>{b.name}</span>
+          : b.onLight
+            ? <span style={{ display: 'flex', background: 'var(--mc-paper)', borderRadius: 'var(--radius-sm)', padding: compact ? '8px 12px' : '12px 16px' }}>{logo}</span>
+            : logo;
         return b.url ? (
           <a key={b.name} className="mc-brand-tile" href={b.url} target="_blank" rel="noopener" title={b.name} aria-label={b.name}
             style={tileStyle} onMouseOver={hoverIn} onMouseOut={hoverOut}>{inner}</a>
@@ -1161,7 +1196,7 @@ function ContactSection({ onQuote }) {
               <Icon name="CheckCircle2" size={44} color="var(--mc-success)" />
               <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '22px', color: 'var(--text-strong)' }}>{t.contact.thanksTitle}</div>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: 'var(--text-muted)', margin: 0 }}>{t.contact.thanksMsg}</p>
-              <Button variant="primary" onClick={onQuote} iconLeft={<Icon name="MessageCircle" size={16} color="#fff" />}>{t.contact.thanksBtn}</Button>
+              <Button variant="primary" onClick={submit} iconLeft={<Icon name="MessageCircle" size={16} color="#fff" />}>{t.contact.thanksBtn}</Button>
             </div>
           ) : (
             <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
@@ -1222,7 +1257,7 @@ function WhatsAppFab() {
   };
 
   return (
-    <button type="button" aria-label={t.fab.aria} title={t.fab.title}
+    <button className="mc-whatsapp-fab" type="button" aria-label={t.fab.aria} title={t.fab.title}
       onPointerDown={onPointerDown} onPointerMove={onPointerMove} onPointerUp={onPointerUp}
       onMouseEnter={(e) => { if (!dragging) { e.currentTarget.style.transform = 'scale(1.1)'; e.currentTarget.style.background = '#1ebe5a'; e.currentTarget.style.boxShadow = '0 10px 28px rgba(37,211,102,0.45)'; } }}
       onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; e.currentTarget.style.background = '#25D366'; e.currentTarget.style.boxShadow = 'var(--shadow-lg)'; }}
@@ -1281,43 +1316,23 @@ function RevealImg({ src, alt, imgStyle = {}, frameStyle = {}, ...rest }) {
   );
 }
 
-/* ===== Testimonios / prueba social =====
-   PLACEHOLDER — reemplaza estas citas con testimonios reales (con permiso) en src/i18n.jsx. */
-function Testimonials() {
-  const { Card } = window.MeatConnectionDesignSystem_3e7a26;
+/* Ordering guidance replaces unapproved placeholder testimonials. */
+function OrderingGuide() {
   const { t } = useLang();
-  const phone = useIsPhone();
-  return (
-    <section style={{ position: 'relative', overflow: 'hidden', background: 'var(--mc-charcoal)' }}>
-      <video
-        key={phone ? 'm' : 'd'}
-        className="mc-testimonials-video"
-        src={phone ? '/testimonios-bg-mobile.mp4' : '/testimonios-bg.mp4'}
-        poster={phone ? '/testimonios-poster-mobile.jpg' : '/testimonios-poster.jpg'}
-        autoPlay muted loop playsInline preload="metadata"
-        aria-hidden="true"
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center', zIndex: 0 }}
-      />
-      <div style={{ position: 'absolute', inset: 0, zIndex: 1,
-        background: 'linear-gradient(180deg, rgba(15,15,15,0.72) 0%, rgba(15,15,15,0.42) 55%, rgba(15,15,15,0.66) 100%)' }} />
-      <Reveal style={{ position: 'relative', zIndex: 2, maxWidth: 'var(--container-max)', margin: '0 auto', padding: '72px 24px' }}>
-        <SectionHead light eyebrow={t.testimonials.eyebrow} title={t.testimonials.title} sub={t.testimonials.sub} />
-        <div className="mc-testimonials" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px' }}>
-          {t.testimonials.items.map((item, i) => (
-            <Card key={i} variant="default" style={{ padding: '28px', display: 'flex', flexDirection: 'column', gap: '14px', background: 'rgba(20,20,20,0.66)', border: '1px solid var(--mc-ink-700)', boxShadow: 'none', backdropFilter: 'blur(4px)', WebkitBackdropFilter: 'blur(4px)' }}>
-              <Icon name="Quote" size={26} color="var(--accent-gold)" />
-              <div style={{ color: 'var(--accent-gold)', letterSpacing: '2px', fontSize: '15px' }}>★★★★★</div>
-              <p style={{ fontFamily: 'var(--font-body)', fontSize: '15px', lineHeight: 1.65, color: 'var(--mc-ink-100)', margin: 0, flex: 1 }}>“{item.quote}”</p>
-              <div style={{ borderTop: '1px solid var(--mc-ink-700)', paddingTop: '14px' }}>
-                <div style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '14px', color: 'var(--mc-paper)' }}>{item.who}</div>
-                <div style={{ fontSize: '13px', color: 'var(--mc-ink-200)', marginTop: '2px' }}>{item.biz}</div>
-              </div>
-            </Card>
-          ))}
-        </div>
-      </Reveal>
-    </section>
-  );
+  return <section className="mc-order-guide"><div>
+    <SectionHead light eyebrow={t.review.stepsEyebrow} title={t.review.stepsTitle} sub={t.review.stepsSub} />
+    <div className="mc-order-steps">{t.review.steps.map(([title, description], i) => <article key={title}><span>0{i + 1}</span><h3>{title}</h3><p>{description}</p></article>)}</div>
+  </div></section>;
+}
+
+function WholesaleProgress({ kg, preview = false }) {
+  const { t } = useLang();
+  const remaining = Math.max(0, MAYOREO_MIN - kg);
+  return <div className="mc-wholesale" role="status">
+    <strong>{remaining ? fmt(remaining === 1 ? t.review.remainingOne : t.review.remaining, { kg: remaining }) : t.review.unlocked}</strong>
+    <progress value={Math.min(kg, MAYOREO_MIN)} max={MAYOREO_MIN} aria-label={t.review.wholesaleProgress} />
+    <small>{t.review.wholesaleRule}{preview ? ' ' + t.review.preview : ''}</small>
+  </div>;
 }
 
 function App() {
@@ -1346,6 +1361,8 @@ function App() {
     } catch (e) {}
   }, [cart]);
   const [q, setQ] = React.useState('');
+  const [brandFilter, setBrandFilter] = React.useState('');
+  const [gradeFilter, setGradeFilter] = React.useState('');
   function add(product, qty = 1, saleType = 'mayoreo', extra = {}) {
     setCart((c) => { const ex = c.find((i) => i.id === product.id);
       if (ex) return c.map((i) => i.id === product.id ? { ...i, qty: i.qty + qty, saleType, ...extra } : i);
@@ -1374,7 +1391,7 @@ function App() {
   const searched = nq ? IN_STOCK.filter((p) => SEARCH_TEXT[p.id].includes(nq)) : IN_STOCK;
   // "Todos" muestra lo más nuevo primero (el admin agrega al final del catálogo);
   // los filtros por categoría conservan el orden manual curado en el admin.
-  const filtered = cat === 'all' ? searched.slice().reverse() : searched.filter((p) => catOf(p) === cat);
+  const filtered = (cat === 'all' ? searched.slice().reverse() : searched.filter((p) => catOf(p) === cat)).filter((p) => !brandFilter && !gradeFilter || (p.marbling?.variants || []).some((v) => (!brandFilter || (v.marcas || []).includes(brandFilter)) && (!gradeFilter || `${p.marbling.system}:${variantLabel(v, p.marbling.system)}` === gradeFilter)));
   return (
     <div style={{ background: 'var(--surface-page)', minHeight: '100vh' }}>
       <Header cartCount={count} onCart={() => setCartOpen(true)} onNav={nav} onAnchor={goAnchor} onReorder={reorderWhatsApp} overHero={view === 'home'} />
@@ -1394,14 +1411,20 @@ function App() {
         </Reveal>
         <Partners />
         <Clients />
-        <Testimonials />
+        <OrderingGuide />
         <ContactSection onQuote={quote} />
       </>)}
       {view === 'shop' && (
         <section style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '40px 24px 80px' }}>
           <h1 className="mc-page-title" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '48px', margin: '0 0 8px', color: 'var(--text-strong)' }}>{t.shop.title}</h1>
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: '16px', color: 'var(--text-muted)', margin: '0 0 28px' }}>{fmt(t.shop.count, { n: filtered.length })}</p>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: '16px', color: 'var(--text-muted)', margin: '0 0 28px' }}>{fmt(filtered.length === 1 ? t.review.oneCut : t.shop.count, { n: filtered.length })}</p>
+          <div className="mc-catalog-note">{t.review.wholesaleRule}</div>
           <ShopToolbar active={cat} onPick={pickCat} query={q} onQuery={setQ} />
+          <div className="mc-catalog-filters">
+            <label>{t.review.brand}<select value={brandFilter} onChange={(e) => setBrandFilter(e.target.value)}><option value="">{t.review.allBrands}</option>{BRAND_LIST.map((b) => <option key={b.key} value={b.key}>{b.name}</option>)}</select></label>
+            <label>{t.review.marbling}<select value={gradeFilter} onChange={(e) => setGradeFilter(e.target.value)}><option value="">{t.review.allGrades}</option>{Array.from(new Map(IN_STOCK.flatMap((p) => (p.marbling?.variants || []).map((v) => [`${p.marbling.system}:${variantLabel(v, p.marbling.system)}`, gradeTag(v, p.marbling.system, (t.pdp.marbling.systems[p.marbling.system] || t.pdp.marbling.systems.aus).unit) + (v.lo === 0 && v.hi === 0 ? ' · ' + (t.pdp.marbling.systems[p.marbling.system] || t.pdp.marbling.systems.aus).name : '')]))).entries()).map(([key, label]) => <option key={key} value={key}>{label}</option>)}</select></label>
+            {(brandFilter || gradeFilter || q) && <button onClick={() => { setBrandFilter(''); setGradeFilter(''); setQ(''); }}>{t.review.clearFilters}</button>}
+          </div>
           {filtered.length === 0 ? (
             <div style={{ padding: '60px 0', textAlign: 'center' }}>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '16px', color: 'var(--text-muted)', margin: '0 0 18px' }}>
@@ -1418,7 +1441,7 @@ function App() {
           )}
         </section>
       )}
-      {view === 'product' && active && (<ProductDetail product={active} onAdd={add} onBack={() => nav('shop')} />)}
+      {view === 'product' && active && (<ProductDetail product={active} onAdd={add} onBack={() => nav('shop')} cartWeight={count} />)}
       <Footer onCategory={pickCat} onAnchor={goAnchor} />
       <CartDrawer open={cartOpen} items={cart} onClose={() => setCartOpen(false)} onQty={changeQty} onRemove={remove} onReorder={reorderWhatsApp} />
       <WhatsAppFab />
