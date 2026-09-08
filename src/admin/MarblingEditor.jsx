@@ -110,7 +110,7 @@ export default function MarblingEditor({ product, onChange }) {
           ))}
           <button type="button" style={btn} onClick={addVariant}>+ Agregar grado</button>
           <p style={{ fontSize: '11px', color: '#616a75', margin: '8px 0 0' }}>
-            Un solo grado con “Desde” = “Hasta” se muestra como un número (9 → “9+” en escalas no japonesas). Varios grados activan el selector de grado en la ficha.
+            Deja “Hasta” vacío para un rango hasta el máximo de la escala (por ejemplo, Desde 9 y etiqueta “9+”). Un solo grado con “Desde” = “Hasta” se muestra como un número (9 → “9+” en escalas no japonesas). Varios grados activan el selector de grado en la ficha.
           </p>
         </>
       )}

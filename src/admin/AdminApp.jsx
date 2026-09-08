@@ -65,7 +65,10 @@ function pruneCatalog(catalog) {
 function cleanMarbling(m) {
   const variants = (m.variants || [])
     .map((v) => {
-      const lo = parseInt(v.lo, 10), hi = parseInt(v.hi, 10)
+      const lo = parseInt(v.lo, 10)
+      // An empty “Hasta” means the range extends to the top of the scale.
+      const openEnded = v.hi == null || String(v.hi).trim() === ''
+      const hi = openEnded ? (m.system === 'bms' ? 12 : m.system === 'angus' ? 9 : 10) : parseInt(v.hi, 10)
       if (!Number.isFinite(lo) || !Number.isFinite(hi)) return null
       const out = { lo, hi, image: v.image || '' }
       const label = (v.label || '').trim()
