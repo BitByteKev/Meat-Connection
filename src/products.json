@@ -2688,23 +2688,11 @@
       "system": "aus",
       "variants": [
         {
-          "lo": 4,
-          "hi": 5,
-          "image": "lgrow-short-rib-meat-top.webp",
-          "label": "4-5",
-          "sku": "83045-1",
-          "mayoreo": 565,
-          "menudeo": 865,
-          "marcas": [
-            "abattiranch"
-          ]
-        },
-        {
           "lo": 6,
           "hi": 7,
           "image": "whatsapp-image-2026-07-28-at-16-04-16-ms59v3lt1127.webp",
           "label": "6-7",
-          "mayoreo": 580,
+          "mayoreo": 540,
           "menudeo": 840,
           "marcas": [
             "abattiranch"
@@ -2718,13 +2706,13 @@
     },
     "es": {
       "name": "Chuck Short Rib USA",
-      "description": "Short rib (costilla, con o sin hueso) — corte jugoso y muy marmoleado, intenso en sabor.\n\nWagyu cross americano, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nRey del braseado y el ahumado. También en finas láminas para parrilla coreana.",
+      "description": "Short rib (costilla, con hueso) — corte jugoso y muy marmoleado, intenso en sabor.\n\nWagyu cross americano, criado en EE.UU. con altos estándares. Marmoleo generoso y sabor intenso, con gran versatilidad para parrilla y cocina.\n\nRey del braseado y el ahumado. También en finas láminas para parrilla coreana.",
       "origin": "Wagyu cross americano (EE.UU.), criado con altos estándares de alimentación y bienestar. Combina genética wagyu con la robustez de la res americana para un sabor intenso y versátil.",
       "cooking": "Recomendaciones de cocción\n\nBraseado: 3 h a 160 °C hasta deshebrar. Parrilla (rebanado): sella 1–2 min por lado."
     },
     "en": {
       "name": "Chuck Short Rib Cross USA",
-      "description": "Short rib (bone-in or boneless) — a juicy, heavily marbled cut, intense in flavor.\n\nAmerican wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nKing of braising and smoking. Also thin-sliced for Korean BBQ.",
+      "description": "Short rib (bone-in) — a juicy, heavily marbled cut, intense in flavor.\n\nAmerican wagyu cross, raised in the USA to high standards. Generous marbling and intense flavor, with great versatility for grill and kitchen.\n\nKing of braising and smoking. Also thin-sliced for Korean BBQ.",
       "origin": "American wagyu cross from (USA), raised with high feeding and welfare standards. It blends wagyu genetics with the robustness of American beef for an intense, versatile flavor.",
       "cooking": "Cooking recommendations\n\nBraise: 3 h at 160 °C until it shreds. Grill (sliced): sear 1–2 min per side."
     }
