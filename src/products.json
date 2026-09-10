@@ -247,9 +247,9 @@
         },
         {
           "lo": 9,
-          "hi": 10,
+          "hi": 9,
           "image": "wagyu-australiano-newyork-89-1.webp",
-          "label": "9-10",
+          "label": "9+",
           "sku": "2000",
           "mayoreo": 2300,
           "marcas": [
