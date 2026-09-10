@@ -701,7 +701,7 @@
         },
         {
           "lo": 9,
-          "hi": 10,
+          "hi": 9,
           "image": "",
           "label": "9+",
           "sku": "416172",
@@ -735,9 +735,9 @@
         },
         {
           "lo": 9,
-          "hi": 10,
+          "hi": 9,
           "image": "whatsapp-image-2026-07-28-at-15-25-38-ms58809j355.webp",
-          "label": "10+",
+          "label": "9+",
           "mayoreo": 2150,
           "menudeo": 2300,
           "marcas": [
