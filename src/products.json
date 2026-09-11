@@ -1233,10 +1233,10 @@
       "system": "angus",
       "variants": [
         {
-          "lo": 3,
+          "lo": 4,
           "hi": 4,
           "image": "lgrow-chuck-eye-roll-top.webp",
-          "label": "3+",
+          "label": "4+",
           "sku": "DIEZJC",
           "mayoreo": 320,
           "menudeo": 620,
@@ -1245,7 +1245,7 @@
           ]
         },
         {
-          "lo": 3,
+          "lo": 4,
           "hi": 4,
           "image": "lgrow-chuck-eye-roll-top.webp",
           "label": "4+",
