@@ -1139,7 +1139,7 @@
       "variants": [
         {
           "lo": 4,
-          "hi": 5,
+          "hi": 4,
           "image": "",
           "label": "4+",
           "sku": "10021902",
@@ -1151,9 +1151,9 @@
         },
         {
           "lo": 4,
-          "hi": 5,
+          "hi": 4,
           "image": "whatsapp-image-2026-07-28-at-14-39-23-ms56m6l61287.webp",
-          "label": "4-5",
+          "label": "4+",
           "mayoreo": 465,
           "menudeo": 765,
           "marcas": [
