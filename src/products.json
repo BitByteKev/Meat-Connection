@@ -1616,20 +1616,8 @@
       "system": "aus",
       "variants": [
         {
-          "lo": 0,
-          "hi": 3,
-          "image": "filete-australiano-9plus-1.webp",
-          "label": "0-3",
-          "sku": "448729",
-          "mayoreo": 930,
-          "menudeo": 1230,
-          "marcas": [
-            "kingriver"
-          ]
-        },
-        {
           "lo": 9,
-          "hi": 10,
+          "hi": 9,
           "image": "filete-australiano-9plus-1.webp",
           "label": "9+",
           "sku": "TENDMR",
@@ -1640,10 +1628,10 @@
           ]
         },
         {
-          "lo": 9,
-          "hi": 10,
+          "lo": 8,
+          "hi": 9,
           "image": "filete-australiano-9plus-1.webp",
-          "label": "9-10",
+          "label": "8-9",
           "mayoreo": 1950,
           "menudeo": 2250,
           "marcas": [
