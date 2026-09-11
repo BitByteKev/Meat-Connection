@@ -652,18 +652,6 @@
           ]
         },
         {
-          "lo": 2,
-          "hi": 3,
-          "image": "",
-          "label": "2-3",
-          "sku": "447302",
-          "mayoreo": 920,
-          "menudeo": 1220,
-          "marcas": [
-            "kingriver"
-          ]
-        },
-        {
           "lo": 4,
           "hi": 5,
           "image": "",
@@ -683,18 +671,6 @@
           "sku": "448705",
           "mayoreo": 1500,
           "menudeo": 1800,
-          "marcas": [
-            "kingriver"
-          ]
-        },
-        {
-          "lo": 8,
-          "hi": 9,
-          "image": "",
-          "label": "8-9",
-          "sku": "448708",
-          "mayoreo": 2000,
-          "menudeo": 2300,
           "marcas": [
             "kingriver"
           ]
