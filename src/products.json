@@ -247,7 +247,7 @@
         },
         {
           "lo": 9,
-          "hi": 10,
+          "hi": 9,
           "image": "wagyu-australiano-newyork-89-1.webp",
           "label": "9+",
           "sku": "2000",
@@ -290,7 +290,7 @@
       "variants": [
         {
           "lo": 8,
-          "hi": 10,
+          "hi": 9,
           "image": "T-BONE-WAGYU-AUSTRALIANO-ALTO-MARMOLEO.webp",
           "label": "9+",
           "sku": "SHORTLMS",
@@ -345,7 +345,7 @@
         },
         {
           "lo": 9,
-          "hi": 10,
+          "hi": 9,
           "image": "PALETA-WAGYU-AUSTRALIANO-ALTO-MARMOLEO-1.webp",
           "label": "9+",
           "sku": "PALETAMR",
@@ -652,18 +652,6 @@
           ]
         },
         {
-          "lo": 2,
-          "hi": 3,
-          "image": "",
-          "label": "0-3",
-          "sku": "447302",
-          "mayoreo": 920,
-          "menudeo": 1220,
-          "marcas": [
-            "kingriver"
-          ]
-        },
-        {
           "lo": 4,
           "hi": 5,
           "image": "",
@@ -688,20 +676,8 @@
           ]
         },
         {
-          "lo": 8,
-          "hi": 9,
-          "image": "",
-          "label": "8-9",
-          "sku": "448708",
-          "mayoreo": 2000,
-          "menudeo": 2300,
-          "marcas": [
-            "kingriver"
-          ]
-        },
-        {
           "lo": 9,
-          "hi": 10,
+          "hi": 9,
           "image": "",
           "label": "9+",
           "sku": "416172",
@@ -735,7 +711,7 @@
         },
         {
           "lo": 9,
-          "hi": 10,
+          "hi": 9,
           "image": "whatsapp-image-2026-07-28-at-15-25-38-ms58809j355.webp",
           "label": "9+",
           "mayoreo": 2150,
@@ -1139,7 +1115,7 @@
       "variants": [
         {
           "lo": 4,
-          "hi": 5,
+          "hi": 4,
           "image": "",
           "label": "4-5",
           "sku": "10021902",
@@ -1151,7 +1127,7 @@
         },
         {
           "lo": 4,
-          "hi": 5,
+          "hi": 4,
           "image": "whatsapp-image-2026-07-28-at-14-39-23-ms56m6l61287.webp",
           "label": "4-5",
           "mayoreo": 465,
@@ -1233,10 +1209,10 @@
       "system": "angus",
       "variants": [
         {
-          "lo": 3,
+          "lo": 4,
           "hi": 4,
           "image": "lgrow-chuck-eye-roll-top.webp",
-          "label": "0-3",
+          "label": "4-5",
           "sku": "DIEZJC",
           "mayoreo": 320,
           "menudeo": 620,
@@ -1245,7 +1221,7 @@
           ]
         },
         {
-          "lo": 3,
+          "lo": 4,
           "hi": 4,
           "image": "lgrow-chuck-eye-roll-top.webp",
           "label": "4-5",
@@ -1595,20 +1571,8 @@
       "system": "aus",
       "variants": [
         {
-          "lo": 0,
-          "hi": 3,
-          "image": "filete-australiano-9plus-1.webp",
-          "label": "0-3",
-          "sku": "448729",
-          "mayoreo": 930,
-          "menudeo": 1230,
-          "marcas": [
-            "kingriver"
-          ]
-        },
-        {
           "lo": 9,
-          "hi": 10,
+          "hi": 9,
           "image": "filete-australiano-9plus-1.webp",
           "label": "9+",
           "sku": "TENDMR",
@@ -1619,10 +1583,10 @@
           ]
         },
         {
-          "lo": 9,
-          "hi": 10,
+          "lo": 8,
+          "hi": 9,
           "image": "filete-australiano-9plus-1.webp",
-          "label": "9+",
+          "label": "8-9",
           "mayoreo": 1950,
           "menudeo": 2250,
           "marcas": [
@@ -1663,9 +1627,8 @@
           "hi": 5,
           "image": "lgrow-tenderloin-top.webp",
           "label": "4-5",
-          "sku": "TENDSA",
           "mayoreo": 980,
-          "menudeo": 1250,
+          "menudeo": 1280,
           "marcas": [
             "abattiranch"
           ]
@@ -1737,7 +1700,7 @@
         },
         {
           "lo": 9,
-          "hi": 10,
+          "hi": 9,
           "image": "",
           "label": "9+",
           "sku": "PICCA89",
@@ -1751,7 +1714,7 @@
           "lo": 8,
           "hi": 9,
           "image": "",
-          "label": "8-9",
+          "label": "9+",
           "sku": "68465-1",
           "mayoreo": 1280,
           "menudeo": 1550,
@@ -1990,18 +1953,6 @@
           "marcas": [
             "kingriver"
           ]
-        },
-        {
-          "lo": 9,
-          "hi": 10,
-          "image": "lgrow-shin-shank-top.webp",
-          "label": "9+",
-          "sku": "CHAMORROMR",
-          "mayoreo": 350,
-          "menudeo": 650,
-          "marcas": [
-            "lgrow"
-          ]
         }
       ]
     },
@@ -2035,25 +1986,13 @@
       "system": "aus",
       "variants": [
         {
-          "lo": 0,
-          "hi": 3,
-          "image": "lgrow-short-rib-meat-top.webp",
-          "label": "0-3",
-          "sku": "448825",
-          "mayoreo": 450,
-          "menudeo": 750,
-          "marcas": [
-            "kingriver"
-          ]
-        },
-        {
           "lo": 4,
           "hi": 5,
           "image": "lgrow-short-rib-meat-top.webp",
           "label": "4-5",
           "sku": "448839",
-          "mayoreo": 580,
-          "menudeo": 950,
+          "mayoreo": 950,
+          "menudeo": 1250,
           "marcas": [
             "kingriver"
           ]
@@ -2065,14 +2004,14 @@
       "en": "· Australia"
     },
     "es": {
-      "name": "Chuck Short",
-      "description": "Chuck Short · Wagyu australiano.\n\nCostilla de res de sabor profundo. Ideal para braseados, ahumado y cocciones lentas que suavizan su textura.",
+      "name": "Chuck Short Rib",
+      "description": "Chuck Short Rib · Wagyu australiano.\n\nCostilla de res sin hueso de sabor profundo. Ideal para braseados, ahumado y cocciones lentas que suavizan su textura.",
       "origin": "Origen: Australia\n\nWagyu australiano de origen australiano.",
       "cooking": "Recomendaciones de cocción\n\nBraseado: 3 h a 160 °C hasta deshebrar. Parrilla (rebanado): sella 1–2 min por lado."
     },
     "en": {
       "name": "Chuck Short Rib",
-      "description": "Chuck Short Rib · Australian Wagyu.\n\nBeef short rib with a deep flavor. Ideal for braising, smoking and slow cooking to tenderize the meat.",
+      "description": "Chuck Short Rib · Australian Wagyu.\n\nBoneless beef short rib with a deep flavor. Ideal for braising, smoking and slow cooking to tenderize the meat.",
       "origin": "Origin: Australia\n\nAustralian Wagyu sourced from Australia.",
       "cooking": "Cooking recommendations\n\nBraise: 3 h at 160 °C until it shreds. Grill (sliced): sear 1–2 min per side."
     }
@@ -2323,6 +2262,16 @@
           "marcas": [
             "kingriver"
           ]
+        },
+        {
+          "lo": 9,
+          "hi": 10,
+          "image": "whatsapp-image-2026-08-03-at-15-46-04-msdtjrf98549.webp",
+          "label": "9+",
+          "mayoreo": 500,
+          "marcas": [
+            "kingriver"
+          ]
         }
       ]
     },
@@ -2384,7 +2333,7 @@
           "lo": 8,
           "hi": 9,
           "image": "lgrow-chuck-tail-flap-top.webp",
-          "label": "8-9",
+          "label": "9+",
           "sku": "0041498-01",
           "mayoreo": 1500,
           "menudeo": 1800,
@@ -2631,7 +2580,7 @@
           "lo": 6,
           "hi": 7,
           "image": "lgrow-cube-roll-top.webp",
-          "label": "8-9",
+          "label": "6-7",
           "sku": "RBJADE",
           "mayoreo": 735,
           "menudeo": 1000,
@@ -2641,9 +2590,9 @@
         },
         {
           "lo": 8,
-          "hi": 9,
+          "hi": 8,
           "image": "lgrow-cube-roll-top.webp",
-          "label": "9+",
+          "label": "8-9",
           "sku": "RBSA",
           "mayoreo": 1650,
           "menudeo": 1950,
@@ -2681,23 +2630,11 @@
       "system": "aus",
       "variants": [
         {
-          "lo": 4,
-          "hi": 5,
-          "image": "lgrow-short-rib-meat-top.webp",
-          "label": "4-5",
-          "sku": "83045-1",
-          "mayoreo": 565,
-          "menudeo": 865,
-          "marcas": [
-            "abattiranch"
-          ]
-        },
-        {
           "lo": 6,
           "hi": 7,
           "image": "whatsapp-image-2026-07-28-at-16-04-16-ms59v3lt1127.webp",
           "label": "6-7",
-          "mayoreo": 580,
+          "mayoreo": 540,
           "menudeo": 840,
           "marcas": [
             "abattiranch"
@@ -2711,13 +2648,13 @@
     },
     "es": {
       "name": "Chuck Short Rib USA",
-      "description": "Chuck Short Rib USA · Wagyu americano.\n\nCostilla de res de sabor profundo. Ideal para braseados, ahumado y cocciones lentas que suavizan su textura.",
+      "description": "Chuck Short Rib USA · Wagyu americano.\n\nCostilla de res con hueso de sabor profundo. Ideal para braseados, ahumado y cocciones lentas que suavizan su textura.",
       "origin": "Origen: Estados Unidos\n\nWagyu americano de origen estadounidense.",
       "cooking": "Recomendaciones de cocción\n\nBraseado: 3 h a 160 °C hasta deshebrar. Parrilla (rebanado): sella 1–2 min por lado."
     },
     "en": {
-      "name": "Chuck Short Rib Cross USA",
-      "description": "Chuck Short Rib Cross USA · American Wagyu.\n\nBeef short rib with a deep flavor. Ideal for braising, smoking and slow cooking to tenderize the meat.",
+      "name": "Chuck Short Rib USA",
+      "description": "Chuck Short Rib USA · American Wagyu.\n\nBone-in beef short rib with a deep flavor. Ideal for braising, smoking and slow cooking to tenderize the meat.",
       "origin": "Origin: the United States\n\nAmerican Wagyu sourced from the United States.",
       "cooking": "Cooking recommendations\n\nBraise: 3 h at 160 °C until it shreds. Grill (sliced): sear 1–2 min per side."
     }
@@ -2736,13 +2673,13 @@
       "system": "aus",
       "variants": [
         {
-          "lo": 6,
-          "hi": 7,
+          "lo": 8,
+          "hi": 8,
           "image": "lgrow-short-rib-meat-top.webp",
-          "label": "6-7",
+          "label": "8-9",
           "sku": "72395-1",
-          "mayoreo": 900,
-          "menudeo": 1200,
+          "mayoreo": 950,
+          "menudeo": 1250,
           "marcas": [
             "abattiranch"
           ]
@@ -2754,14 +2691,14 @@
       "en": "American Cross"
     },
     "es": {
-      "name": "Costilla Short Rib s/Hueso",
-      "description": "Costilla Short Rib s/Hueso · Wagyu americano.\n\nCostilla de res de sabor profundo. Ideal para braseados, ahumado y cocciones lentas que suavizan su textura.",
+      "name": "Short Rib USA",
+      "description": "Short Rib USA · Wagyu americano.\n\nCostilla de res sin hueso de sabor profundo. Ideal para braseados, ahumado y cocciones lentas que suavizan su textura.",
       "origin": "Origen: Estados Unidos\n\nWagyu americano de origen estadounidense.",
       "cooking": "Recomendaciones de cocción\n\nBraseado: 3 h a 160 °C hasta deshebrar. Parrilla (rebanado): sella 1–2 min por lado."
     },
     "en": {
-      "name": "Boneless Short Rib Cross",
-      "description": "Boneless Short Rib Cross · American Wagyu.\n\nBeef short rib with a deep flavor. Ideal for braising, smoking and slow cooking to tenderize the meat.",
+      "name": "Short Rib USA",
+      "description": "Short Rib USA · American Wagyu.\n\nBoneless beef short rib with a deep flavor. Ideal for braising, smoking and slow cooking to tenderize the meat.",
       "origin": "Origin: the United States\n\nAmerican Wagyu sourced from the United States.",
       "cooking": "Cooking recommendations\n\nBraise: 3 h at 160 °C until it shreds. Grill (sliced): sear 1–2 min per side."
     }
@@ -2780,24 +2717,13 @@
       "system": "aus",
       "variants": [
         {
-          "lo": 0,
-          "hi": 3,
-          "image": "placeholder-coming-soon.webp",
-          "label": "0-3",
-          "sku": "82435-3",
-          "mayoreo": 450,
-          "menudeo": 660,
-          "marcas": [
-            "kingriver"
-          ]
-        },
-        {
           "lo": 4,
           "hi": 5,
           "image": "whatsapp-image-2026-08-11-at-12-35-31-3-msp2beyr2406.webp",
           "label": "4-5",
           "sku": "580",
           "mayoreo": 880,
+          "menudeo": 1250,
           "marcas": [
             "kingriver"
           ]
@@ -4212,17 +4138,6 @@
       "system": "aus",
       "variants": [
         {
-          "lo": 4,
-          "hi": 5,
-          "image": "whatsapp-image-2026-07-28-at-16-23-59-ms5aa6ta9829.webp",
-          "label": "4-5",
-          "mayoreo": 990,
-          "menudeo": 1290,
-          "marcas": [
-            "abattiranch"
-          ]
-        },
-        {
           "lo": 6,
           "hi": 7,
           "image": "whatsapp-image-2026-07-28-at-16-23-59-ms5aa6ta9829.webp",
@@ -4239,7 +4154,10 @@
           "image": "whatsapp-image-2026-07-28-at-16-23-59-ms5aa6ta9829.webp",
           "label": "8-9",
           "mayoreo": 1750,
-          "menudeo": 2050
+          "menudeo": 2050,
+          "marcas": [
+            "abattiranch"
+          ]
         }
       ]
     },
