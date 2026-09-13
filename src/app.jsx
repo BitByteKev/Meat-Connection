@@ -233,7 +233,7 @@ function Header({ cartCount, onCart, onNav, onAnchor, onReorder, overHero = fals
   }, [menuOpen]);
   const goMobile = (l) => { setMenuOpen(false); l.go(); };
   return (
-    <header style={{ color: 'var(--text-strong)', position: 'sticky', top: 0, zIndex: 30 }}>
+    <header style={{ color: 'var(--text-strong)', position: 'sticky', top: 0, zIndex: menuOpen ? 60 : 30 }}>
       {/* Frosted bar lives on its own element (NOT the <header>): backdrop-filter
           on an ancestor would make it the containing block for the fixed menu below,
           collapsing the menu's height:100% at the top of the page. */}
