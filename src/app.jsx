@@ -600,16 +600,10 @@ function Carousel({ product, name, height = 560, index, onIndex, jumpKey }) {
 /* ===== Marbling scale (grade selector + visual scale + per-grade photo) ===== */
 function marblingMax(system) { return system === 'bms' ? 12 : system === 'angus' ? 9 : 10; }
 function hiText(system, hi) { const m = marblingMax(system); return system === 'bms' ? String(hi) : (hi >= m ? '9+' : String(hi)); }
-// A single grade (lo === hi) shows a solid number, e.g. "9" — never "9-9". Ranges keep their label.
-// A single grade renders as a solid number, except a top grade (9 in the aus/angus
-// scales) which reads as "9+". Ranges keep their explicit label (e.g. "4-5", "9+").
+// Catalog labels group the recorded scores into the supported display ranges.
 function variantLabel(v, system) {
-  if (v.lo === 0 && v.hi === 0) return v.label || 'Clásico'; // gradeless base tier
-  if (v.lo === v.hi) return (system !== 'bms' && v.hi >= 9) ? '9+' : String(v.lo);
-  return v.label;
+  return v.label || (system === 'bms' && v.lo >= 10 ? '10-12' : v.lo >= 9 ? '9+' : v.lo >= 8 ? '8-9' : v.lo >= 6 ? '6-7' : v.lo >= 4 ? '4-5' : '0-3');
 }
-// Unit prefix ("MB 8-9") only makes sense for numeric grades — a gradeless base
-// tier shows its plain label ("Clásico").
 function gradeTag(v, system, unit) {
   const l = variantLabel(v, system);
   return /^[0-9]/.test(l) ? `${unit} ${l}` : l;
@@ -646,10 +640,8 @@ function MarblingPill({ marbling }) {
   const { t } = useLang();
   const s = t.pdp.marbling.systems[marbling.system] || t.pdp.marbling.systems.aus;
   const vs = marbling.variants;
-  const lo = Math.min(...vs.map((v) => v.lo));
-  const hi = Math.max(...vs.map((v) => v.hi));
-  const range = vs.length === 1 ? gradeTag(vs[0], marbling.system, s.unit)
-    : (lo === hi ? gradeTag({ lo, hi }, marbling.system, s.unit) : `${s.unit} ${lo}\u2013${hiText(marbling.system, hi)}`);
+  const labels = [...new Set(vs.map((v) => variantLabel(v, marbling.system)))];
+  const range = `${s.unit} ${labels.join(' · ')}`;
   return (
     <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', alignSelf: 'flex-start',
       fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '11px', letterSpacing: '0.04em',

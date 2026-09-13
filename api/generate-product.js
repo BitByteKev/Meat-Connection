@@ -1,7 +1,7 @@
 // Vercel serverless function — drafts a product's name + bilingual copy with Claude.
 // The admin "Generar con IA" button posts the cover image, category, and optional
 // notes; this returns { es, en } each with { name, description, origin, cooking }.
-// Claude identifies the cut and estimates marbling from the photo, so the owner
+// Claude identifies the cut from the photo, so the owner
 // doesn't have to name the product first. Nothing is persisted here — the admin
 // drops the text into the editor and saves via save-products.
 //
@@ -12,11 +12,12 @@ import Anthropic from '@anthropic-ai/sdk'
 
 export const config = { maxDuration: 30 }
 
-const CATS = new Set(['jp', 'au', 'us'])
+const CATS = new Set(['jp', 'au', 'us', 'mackas'])
 const ORIGIN = {
   jp: { es: 'Wagyu Japonés A5', en: 'Japanese Wagyu A5' },
   au: { es: 'Wagyu Australiano', en: 'Australian Wagyu' },
-  us: { es: 'Black Angus (EE.UU.)', en: 'Black Angus (USA)' },
+  us: { es: 'Wagyu Americano', en: 'American Wagyu' },
+  mackas: { es: 'Black Angus Australiano', en: 'Australian Black Angus' },
 }
 const IMG_TYPES = new Set(['image/jpeg', 'image/png', 'image/gif', 'image/webp'])
 
@@ -62,15 +63,16 @@ function passwordMatches(given, expected) {
 }
 
 const SYSTEM = `Eres un redactor publicitario bilingüe experto para Meat Connection, importadora premium de wagyu y carnes finas en México.
-Recibes una FOTO del corte (y a veces notas del dueño). A partir de la foto, identifica de qué corte se trata y estima el nivel de marmoleo (Alto, Medio o Bajo).
+Recibes una FOTO del corte (y a veces notas del dueño). A partir de la foto, identifica de qué corte se trata. Respeta el nombre y el origen proporcionados; no deduzcas el país de origen ni un puntaje de marmoleo por la apariencia de la carne.
 Escribes con precisión: nunca inventas grados, certificaciones, premios, granjas ni cifras que no veas en la foto o que no estén en las notas. Si no sabes un dato, sé general en lugar de inventarlo.
 
 Generas contenido en dos idiomas — español de México (principal) e inglés — con cuatro campos cada uno:
 - name: nombre comercial del producto siguiendo el estilo del catálogo.
-  Español: "{Corte} {ORIGEN_ES} · Marmoleo {Nivel}"  (ej. "Rib Eye Wagyu Australiano · Marmoleo Medio")
-  Inglés:  "{Cut} {ORIGEN_EN} · {Level} Marbling"     (ej. "Rib Eye Australian Wagyu · Medium Marbling")
+  Español: "{Corte} {ORIGEN_ES}" (ej. "Rib Eye Wagyu Australiano")
+  Inglés:  "{Cut} {ORIGEN_EN}" (ej. "Rib Eye Australian Wagyu")
 - description: 2 o 3 párrafos cortos. La PRIMERA línea debe funcionar sola como un gancho de una sola oración (se muestra en la tarjeta del catálogo).
-- origin: procedencia — raza, región, grado o alimentación que se conozca; si no se sabe, sé general sin inventar.
+- origin: procedencia — raza, país o alimentación que se conozca; si no se sabe, sé general sin inventar. El país debe coincidir con el nombre y la categoría.
+No incluyas marmoleo, marbling, MB, BMS ni puntajes de marmoleo en description u origin; se muestran por separado en el selector.
 - cooking: preparación práctica (calor, tiempos, reposo, término).
 
 Separa los párrafos con una línea en blanco. Si haces listas, inicia cada línea con "• ".
