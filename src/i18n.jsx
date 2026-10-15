@@ -26,7 +26,7 @@ export const STRINGS = {
     products: PRODUCT_STRINGS.es,
     review: {
       decrease: 'Reducir cantidad', increase: 'Aumentar cantidad', remove: 'Quitar corte',
-      askPrice: 'Consultar precio', addQuote: 'Agregar a cotización',
+      moreInfo: 'Más información', askPrice: 'Consultar precio', addQuote: 'Agregar a cotización',
       wholesaleRule: 'Mayoreo desde 25 kg combinados entre todos los cortes de tu cotización.',
       oneCut: '1 corte · mayoreo y menudeo', remainingOne: 'Te falta 1 kg para precio de mayoreo', remaining: 'Te faltan {kg} kg para precio de mayoreo', unlocked: 'Precio de mayoreo activado',
       wholesaleProgress: 'Avance hacia 25 kg de mayoreo', preview: 'Incluye la cantidad seleccionada.',
@@ -118,6 +118,7 @@ export const STRINGS = {
     },
     fab: { aria: 'Cotizar por WhatsApp', title: 'Cotizar por WhatsApp — arrastra para mover' },
     wa: {
+      productInfoIntro: 'Hola Meat Connection, quisiera más información sobre este producto:',
       quote: 'Hola Meat Connection, me interesa cotizar carne premium para mi negocio.',
       reorderIntro: 'Hola Meat Connection, soy cliente y quiero volver a pedir:',
       reorderGeneric: 'Hola Meat Connection, soy cliente y quiero volver a pedir mi pedido habitual.',
@@ -145,7 +146,7 @@ export const STRINGS = {
     products: PRODUCT_STRINGS.en,
     review: {
       decrease: 'Decrease quantity', increase: 'Increase quantity', remove: 'Remove cut',
-      askPrice: 'Ask for pricing', addQuote: 'Add to quote',
+      moreInfo: 'More information', askPrice: 'Ask for pricing', addQuote: 'Add to quote',
       wholesaleRule: 'Wholesale pricing starts at 25 kg combined across all cuts in your quote.',
       oneCut: '1 cut · wholesale & retail', remainingOne: 'Add 1 kg to unlock wholesale pricing', remaining: 'Add {kg} kg to unlock wholesale pricing', unlocked: 'Wholesale pricing unlocked',
       wholesaleProgress: 'Progress toward 25 kg wholesale', preview: 'Includes the selected quantity.',
@@ -237,6 +238,7 @@ export const STRINGS = {
     },
     fab: { aria: 'Quote on WhatsApp', title: 'Quote on WhatsApp — drag to move' },
     wa: {
+      productInfoIntro: "Hi Meat Connection, I would like more information about this product:",
       quote: "Hi Meat Connection, I'd like a quote for premium meat for my business.",
       reorderIntro: "Hi Meat Connection, I'm a client and I'd like to reorder:",
       reorderGeneric: "Hi Meat Connection, I'm a client and I'd like to reorder my usual order.",
