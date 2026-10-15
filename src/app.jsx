@@ -29,6 +29,29 @@ const FB_LINK = 'https://facebook.com/meatconnectionmx';
 const waHref = (msg) => 'https://wa.me/' + WA_NUMBER + (msg ? '?text=' + encodeURIComponent(msg) : '');
 const openWhatsApp = (msg) => window.open(waHref(msg), '_blank');
 
+// Reuse the existing WhatsApp destination and product permalink format.
+function requestProductInfo(product, { variant, brand, qty, saleType } = {}) {
+  const t = getStrings();
+  const p = t.products[product.id];
+  const variants = variant ? [variant] : (product.marbling?.variants || []);
+  const brands = brand ? [brand] : brandKeys(variants);
+  const details = [
+    t.wa.productInfoIntro,
+    p.name,
+    catLabel(catOf(product), document.documentElement.lang || 'es'),
+    brands.map((key) => brandInfo(key).name).join(' · '),
+    product.marbling && variants.map((v) => gradeTag(v, product.marbling.system,
+      (t.pdp.marbling.systems[product.marbling.system] || t.pdp.marbling.systems.aus).unit)).join(' · '),
+    product.sku && 'SKU: ' + product.sku,
+    product.weight,
+    qty && qty + ' kg' + (saleType ? ' · ' + t.pdp[saleType] : ''),
+    p.description,
+    p.origin,
+    location.origin + '/producto/' + PRODUCT_SLUG[product.id],
+  ];
+  openWhatsApp(details.filter(Boolean).join('\n'));
+}
+
 /* Reorder: returning clients re-send their last order in one tap — their #1 friction.
    We store only id/price/qty so the message rebuilds in the current language.
    Falls back to a generic reorder message until a first order is placed on this device. */
@@ -46,32 +69,17 @@ const productName = (id) => (getStrings().products[id] ? getStrings().products[i
 const MAYOREO_MIN = 25;
 const cartKg = (items) => items.reduce((s, i) => s + i.qty, 0);
 const cartType = (items) => (cartKg(items) >= MAYOREO_MIN ? 'mayoreo' : 'menudeo');
-function lineUnit(it, type) {
-  const may = typeof it.unitMayoreo === 'number' ? it.unitMayoreo : (typeof it.unitPrice === 'number' ? it.unitPrice : null);
-  const men = typeof it.unitMenudeo === 'number' ? it.unitMenudeo : null;
-  return type === 'menudeo' ? (men ?? may) : (may ?? men);
-}
-const cartTotal = (items) => {
-  const ty = cartType(items);
-  return items.reduce((s, i) => { const u = lineUnit(i, ty); return s + (u != null ? u * i.qty : 0); }, 0);
-};
 function orderLines(items) {
   const S = getStrings().pdp;
   const ty = cartType(items);
   const tipo = ty === 'menudeo' ? S.menudeo : S.mayoreo;
   return items.map((it) => {
     let line = '• ' + productName(it.id) + (it.grade ? ' · ' + it.grade : '') + ' — ' + it.qty + ' kg (' + tipo + ')';
-    const u = lineUnit(it, ty);
-    if (u != null) line += ' — ' + fmtMXN(u * it.qty);
     /* URL plana en su propia línea: WhatsApp la vuelve clic-able y abre la ficha
        del corte. Sin slug (producto eliminado de un pedido guardado) se omite. */
     if (PRODUCT_SLUG[it.id]) line += '\n' + location.origin + '/producto/' + PRODUCT_SLUG[it.id];
     return line;
   }).join('\n');
-}
-function orderTotalLine(items) {
-  const total = cartTotal(items);
-  return total > 0 ? '\n' + getStrings().cart.totalLabel + ' (' + cartKg(items) + ' kg): ' + fmtMXN(total) + ' MXN' : '';
 }
 function reorderWhatsApp() {
   const wa = getStrings().wa;
@@ -396,22 +404,10 @@ function ProductCard({ product, onOpen }) {
           <div className="mc-card-brands">{brandKeys(product.marbling?.variants || []).map((k) => brandInfo(k).name).join(' · ')}</div>
           <div style={{ fontSize: '13px', color: 'var(--text-muted)', marginTop: '4px' }}>{cardHook(p.description)}</div>
           {product.marbling && <div style={{ marginTop: '10px' }}><MarblingPill marbling={product.marbling} /></div>}
-          {(() => {
-            const r = priceRange(product.marbling, product.mayoreo);
-            if (!r) return null;
-            return (
-              <div style={{ marginTop: '10px', display: 'flex', alignItems: 'baseline', gap: '7px', flexWrap: 'wrap' }}>
-                {<span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '11px', color: 'var(--text-muted)' }}>{t.pdp.priceFrom}</span>}
-                <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '17px', color: 'var(--mc-red)' }}>
-                  {fmtMXN(r.min)}<span style={{ fontSize: '12px', color: 'var(--text-muted)', fontWeight: 500 }}>{t.pdp.perKg}</span>
-                </span>
-                <span style={{ fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '10px', letterSpacing: '0.04em', color: 'var(--text-faint)' }}>MXN · {t.pdp.mayoreo}</span>
-              </div>
-            );
-          })()}
+
         </div>
         <div style={{ marginTop: 'auto' }}>
-          <Button variant="secondary" size="sm" fullWidth onClick={(e) => { e.stopPropagation(); onOpen(product); }} iconRight={<Icon name="ArrowRight" size={15} color="currentColor" />}>{t.card.readMore}</Button>
+          <Button variant="secondary" size="sm" fullWidth onClick={(e) => { e.stopPropagation(); requestProductInfo(product); }} iconRight={<Icon name="MessageCircle" size={15} color="currentColor" />}>{t.review.moreInfo}</Button>
         </div>
       </div>
     </Card>
@@ -626,15 +622,7 @@ function gradeIdxFor(variants, brand) {
 
 
 // --- Pricing (MXN/kg), read from the per-grade `mayoreo`/`menudeo` on each variant ---
-function fmtMXN(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
 function variantPrice(v, key = 'mayoreo') { return v && typeof v[key] === 'number' ? v[key] : null; }
-// Price range across a product's grades — powers the "scale" shown on catalog cards.
-function priceRange(marbling, topLevel) {
-  const ps = ((marbling && marbling.variants) || []).map((v) => variantPrice(v)).filter((n) => n != null);
-  if (typeof topLevel === 'number') ps.push(topLevel);
-  if (!ps.length) return null;
-  return { min: Math.min(...ps), max: Math.max(...ps) };
-}
 
 function MarblingPill({ marbling }) {
   const { t } = useLang();
@@ -706,13 +694,11 @@ function MarblingScale({ marbling, vIdx, onSelect, brand, onBrand, priceKey = 'm
           {shown.map((i) => {
             const vt = marbling.variants[i];
             const on = i === vIdx;
-            const price = variantPrice(vt, priceKey) ?? variantPrice(vt);
             return (
               <button key={i} onClick={() => onSelect(i)} aria-pressed={on}
                 style={{ cursor: 'pointer', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '2px', padding: '8px 16px', borderRadius: 'var(--radius-md)', fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '13px', letterSpacing: '0.03em',
                   border: '2px solid ' + (on ? 'var(--mc-red)' : 'var(--border-default)'), background: on ? 'var(--mc-red)' : 'transparent', color: on ? '#fff' : 'var(--text-strong)', transition: 'background var(--dur-fast), border-color var(--dur-fast)' }}>
                 <span>{gradeTag(vt, marbling.system, s.unit)}</span>
-                {price != null && <span style={{ fontFamily: 'var(--font-display)', fontSize: '14px', opacity: on ? 1 : 0.9 }}>{fmtMXN(price)}<span style={{ fontSize: '10px', opacity: 0.8 }}>{t.pdp.perKg}</span></span>}
               </button>
             );
           })}
@@ -788,12 +774,10 @@ function ProductDetail({ product, onAdd, onBack, cartWeight = 0 }) {
   // otherwise falls back to mayoreo (and the label says which one is shown).
   const priceFor = (key) => marbling ? variantPrice(variants[vIdx], key) : (typeof product[key] === 'number' ? product[key] : null);
   const mayoreoPrice = priceFor('mayoreo'), menudeoPrice = priceFor('menudeo');
-  const showMenudeo = saleType === 'menudeo' ? menudeoPrice != null : mayoreoPrice == null && menudeoPrice != null;
-  const selPrice = showMenudeo ? menudeoPrice : mayoreoPrice;
   const addSelection = () => onAdd(product, qty, saleType, { grade: marbling ? variantLabel(variants[vIdx], marbling.system) : null, unitMayoreo: mayoreoPrice, unitMenudeo: menudeoPrice });
   return (
     <div className="mc-product-page" style={{ maxWidth: 'var(--container-max)', margin: '0 auto', padding: '32px 24px 80px' }}>
-      <div className="mc-mobile-buy"><div><strong>{selPrice != null ? fmtMXN(selPrice) + ' MXN/kg' : t.review.askPrice}</strong><small>{qty} kg · {saleType === 'mayoreo' ? t.pdp.mayoreo : t.pdp.menudeo}</small></div><Button variant="primary" disabled={!product.available} onClick={addSelection}>{t.review.addQuote}</Button></div>
+      <div className="mc-mobile-buy"><div><strong>{p.name}</strong><small>{qty} kg · {saleType === 'mayoreo' ? t.pdp.mayoreo : t.pdp.menudeo}</small></div><Button variant="primary" disabled={!product.available} onClick={() => requestProductInfo(product, { variant: variants[vIdx], brand, qty, saleType })}>{t.review.moreInfo}</Button></div>
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px', marginBottom: '24px' }}>
         <button onClick={onBack} style={{ border: 'none', background: 'transparent', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--text-muted)', fontFamily: 'var(--font-body)', fontSize: '14px', padding: 0 }}>
           <Icon name="ArrowLeft" size={16} color="var(--text-muted)" /> {t.pdp.back}
@@ -810,22 +794,11 @@ function ProductDetail({ product, onAdd, onBack, cartWeight = 0 }) {
             </div>
           )}
           {marbling && <MarblingScale marbling={marbling} vIdx={vIdx} onSelect={setVSel} brand={brand} onBrand={pickBrand} priceKey={saleType === 'menudeo' ? 'menudeo' : 'mayoreo'} />}
-          {selPrice != null && (
-            <div style={{ margin: '4px 0 20px' }}>
-              <div style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)', marginBottom: '5px' }}>{showMenudeo ? t.pdp.priceEyebrowMenudeo : t.pdp.priceEyebrow}</div>
-              <div style={{ display: 'flex', alignItems: 'baseline', gap: '12px', flexWrap: 'wrap' }}>
-                <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '36px', lineHeight: 1, color: 'var(--mc-red)' }}>
-                  {fmtMXN(selPrice)}<span style={{ fontSize: '17px', color: 'var(--text-muted)', fontWeight: 600 }}>{t.pdp.perKg}</span>
-                </span>
-                {marbling && sys && (
-                  <span style={{ fontFamily: 'var(--font-eyebrow)', fontWeight: 700, fontSize: '11px', letterSpacing: '0.04em', color: 'var(--mc-red)', border: '1.5px solid var(--mc-red)', borderRadius: '999px', padding: '3px 10px' }}>
-                    {gradeTag(variants[vIdx], marbling.system, sys.unit)}
-                  </span>
-                )}
-              </div>
-              <div style={{ fontSize: '11.5px', color: 'var(--text-faint)', marginTop: '6px' }}>{t.pdp.priceNote}</div>
-            </div>
-          )}
+          <Button variant="secondary" size="lg" fullWidth
+            onClick={() => requestProductInfo(product, { variant: variants[vIdx], brand, qty, saleType })}
+            iconLeft={<Icon name="MessageCircle" size={18} />}>
+            {t.review.moreInfo}
+          </Button>
           <WholesaleProgress kg={cartWeight + qty} preview />
           <div className="mc-pdp-actions" style={{ margin: '24px 0', display: 'flex', flexWrap: 'wrap', gap: '20px', alignItems: 'flex-end' }}>
             <div>
@@ -849,13 +822,6 @@ function ProductDetail({ product, onAdd, onBack, cartWeight = 0 }) {
               </div>
             </div>
           </div>
-          {selPrice != null && (
-            <div style={{ display: 'flex', alignItems: 'baseline', gap: '10px', margin: '-4px 0 14px' }}>
-              <span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)' }}>{fmt(t.pdp.totalLabel, { qty })}</span>
-              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '26px', lineHeight: 1, color: 'var(--text-strong)' }}>{fmtMXN(selPrice * qty)}</span>
-              <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>MXN</span>
-            </div>
-          )}
           <Button variant="primary" size="lg" fullWidth
             onClick={addSelection}
             iconLeft={<Icon name="ShoppingCart" size={18} color="#fff" />}>
@@ -917,7 +883,6 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
                   <div style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.04em', color: 'var(--text-muted)', marginBottom: '8px' }}>
                     {cartType(items) === 'menudeo' ? t.pdp.menudeo : t.pdp.mayoreo}
                     {it.grade ? ' · ' + it.grade : ''}
-                    {lineUnit(it, cartType(items)) != null ? ' · ' + fmtMXN(lineUnit(it, cartType(items))) + t.pdp.perKg : ''}
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                     <div style={{ display: 'flex', alignItems: 'center', border: '1px solid var(--border-default)', borderRadius: 'var(--radius-sm)' }}>
@@ -926,9 +891,7 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
                       <button aria-label={`${t.review.increase}: ${productName(it.id)}`} onClick={() => onQty(it, 1)} style={miniBtn}><Icon name="Plus" size={13} /></button>
                     </div>
                     <button aria-label={`${t.review.remove}: ${productName(it.id)}`} onClick={() => onRemove(it)} style={{ border: 'none', background: 'transparent', cursor: 'pointer', color: 'var(--text-faint)', display: 'flex', alignItems: 'center', gap: '4px' }}><Icon name="Trash2" size={14} color="var(--text-faint)" /></button>
-                    {lineUnit(it, cartType(items)) != null && (
-                      <span style={{ marginLeft: 'auto', fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '15px', color: 'var(--text-strong)' }}>{fmtMXN(lineUnit(it, cartType(items)) * it.qty)}</span>
-                    )}
+
                   </div>
                 </div>
               </div>
@@ -937,17 +900,8 @@ function CartDrawer({ open, items, onClose, onQty, onRemove, onReorder }) {
         )}
         <div style={{ padding: '18px 22px', borderTop: '2px solid var(--mc-charcoal)', background: 'var(--mc-bone)' }}>
           <WholesaleProgress kg={cartKg(items)} />
-          {cartTotal(items) > 0 && (
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '12px' }}>
-              <span style={{ fontFamily: 'var(--font-eyebrow)', textTransform: 'uppercase', letterSpacing: '0.06em', fontWeight: 600, fontSize: '12px', color: 'var(--text-muted)' }}>
-                {t.cart.totalLabel}
-                <span style={{ display: 'block', fontWeight: 500, letterSpacing: 0, textTransform: 'none', fontSize: '11px', marginTop: '2px' }}>{cartKg(items)} kg · {cartType(items) === 'menudeo' ? t.pdp.menudeo : t.pdp.mayoreo}</span>
-              </span>
-              <span style={{ fontFamily: 'var(--font-display)', fontWeight: 700, fontSize: '24px', color: 'var(--text-strong)' }}>{fmtMXN(cartTotal(items))} <span style={{ fontSize: '13px', color: 'var(--text-muted)', fontWeight: 600 }}>MXN</span></span>
-            </div>
-          )}
           <Button variant="primary" size="lg" fullWidth disabled={items.length === 0}
-            onClick={() => { saveLastOrder(items); openWhatsApp(t.wa.orderIntro + '\n' + orderLines(items) + orderTotalLine(items)); }}
+            onClick={() => { saveLastOrder(items); openWhatsApp(t.wa.orderIntro + '\n' + orderLines(items)); }}
             iconLeft={<Icon name="MessageCircle" size={18} color="#fff" />}>{t.cart.requestWhatsApp}</Button>
         </div>
       </aside>
