@@ -151,6 +151,7 @@
         }
       ]
     },
+    "available": false,
     "badge": {
       "es": null,
       "en": null
@@ -1258,9 +1259,10 @@
     "images": [
       "placeholder-coming-soon.webp"
     ],
-    "marbling": null,
     "available": false,
     "sku": "390286",
+    "mayoreo": 380,
+    "menudeo": 680,
     "badge": {
       "es": "Black Angus",
       "en": "Black Angus"
@@ -1276,12 +1278,7 @@
       "description": "Hanging Tender BA · Australian Black Angus.\n\nA tender cut with a deep beef flavor. Ideal for high-heat searing and slicing against the grain.",
       "origin": "Origin: Australia\n\nAustralian Black Angus sourced from Australia.",
       "cooking": "Cooking recommendations\n\nHigh heat, 2–3 min per side to medium-rare. Remove the membrane and slice thin."
-    },
-    "mayoreo": 380,
-    "menudeo": 680,
-    "marcas": [
-      "mackas"
-    ]
+    }
   },
   {
     "id": "lengua Black Angus",
@@ -1290,7 +1287,9 @@
     "images": [
       "whatsapp-image-2026-07-28-at-15-21-03-ms581ira2995.webp"
     ],
-    "marbling": null,
+    "sku": "390285",
+    "mayoreo": 385,
+    "menudeo": 685,
     "badge": {
       "es": "Black Angus",
       "en": "Black Angus"
@@ -1306,13 +1305,7 @@
       "description": "Tongue BA Macka's · Australian Black Angus.\n\nBeef tongue develops a soft texture with extended cooking. Ideal for tacos, stews or seared slices.",
       "origin": "Origin: Australia\n\nAustralian Black Angus sourced from Australia.",
       "cooking": "Cooking recommendations\n\nSimmer 2.5–3 h until tender, peel the skin and sear or braise in its sauce."
-    },
-    "sku": "390285",
-    "mayoreo": 385,
-    "menudeo": 685,
-    "marcas": [
-      "mackas"
-    ]
+    }
   },
   {
     "id": "picana black angus",
@@ -2798,8 +2791,9 @@
       "whatsapp-image-2026-07-15-at-11-47-57-1-mrmjt4s81691.webp",
       "whatsapp-image-2026-07-15-at-11-47-57-mrmjt6d21539.webp"
     ],
-    "marbling": null,
     "sku": "43565-2",
+    "mayoreo": 250,
+    "menudeo": 550,
     "badge": {
       "es": "Cross Americano",
       "en": "American Cross"
@@ -2815,12 +2809,7 @@
       "description": "Marrow Femur Bones Cross · American Wagyu.\n\nFemur bones with marrow for roasting or making stock. Serve the marrow warm with salt and fresh accompaniments.",
       "origin": "Origin: the United States\n\nAmerican Wagyu sourced from the United States.",
       "cooking": "Cooking recommendations\n\nRoast at 200 °C for 15–20 min until the marrow bubbles."
-    },
-    "mayoreo": 250,
-    "menudeo": 550,
-    "marcas": [
-      "abattiranch"
-    ]
+    }
   },
   {
     "id": "New-york-A5-Japones",
